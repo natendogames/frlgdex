@@ -24,7 +24,11 @@ function freshSave() { return { caught: {}, checks: {}, team: [], starter: 'Bulb
 function loadProgress() {
   try {
     const p = JSON.parse(localStorage.getItem(STORE_KEY));
-    if (p && p.saves) { for (const v of ['FR', 'LG']) p.saves[v] = Object.assign(freshSave(), p.saves[v]); return p; }
+    if (p && p.saves) {
+      for (const v of ['FR', 'LG']) p.saves[v] = Object.assign(freshSave(), p.saves[v]);
+      if (!['FR', 'LG'].includes(p.version)) p.version = 'FR';
+      return p;
+    }
   } catch (e) { /* fall through to a fresh save */ }
   return { version: 'FR', hideDone: false, saves: { FR: freshSave(), LG: freshSave() } };
 }
@@ -65,6 +69,7 @@ function availability(n) {
     if (['catch', 'evolve'].includes(availability(p).kind)) return { kind: 'evolve', from: p, how: (EVO_LABEL[e.method] || (() => e.method))(e.param) };
   }
   if (f.length) return { kind: 'other', where: f };
+  if (p && availability(p).kind === 'other') return { kind: 'other', where: [], via: p };
   if (EVENT_ONLY.has(n)) return { kind: 'event' };
   return { kind: 'none' };
 }
@@ -76,7 +81,7 @@ function availText(n) {
     return uniq.slice(0, 4).map(w => `<a href="#/loc/${w.loc}">${esc(w.name)}</a> <span class="note">(${esc(METHOD_LABEL[w.method] || w.method)})</span>`).join(', ') + (uniq.length > 4 ? ` +${uniq.length - 4} more` : '');
   }
   if (a.kind === 'evolve') return `Evolve ${esc(mon(a.from).name)}: ${esc(a.how)}`;
-  if (a.kind === 'other') return `<span class="bad">Not in ${VNAME[V()]}.</span> Trade from ${VNAME[OTHER[V()]]}.`;
+  if (a.kind === 'other') return `<span class="bad">Not in ${VNAME[V()]}.</span> Trade from ${VNAME[OTHER[V()]]}${a.via ? ` (or trade for ${esc(mon(a.via).name)} and evolve it)` : ''}.`;
   if (a.kind === 'event') return 'Event only (Nintendo distribution).';
   return n > 151 ? 'Trade from Ruby, Sapphire, Emerald, Colosseum or XD.' : 'Not obtainable in this version.';
 }
@@ -261,19 +266,27 @@ function renderBreeding() {
   const p = mon(sel);
   const groups = p.eggGroups || [];
   const undiscovered = groups.includes('Undiscovered');
-  const partners = undiscovered ? [] : state.dex.filter(q => q.dex !== sel && q.eggGroups?.some(g => groups.includes(g)) && q.gender !== 'genderless');
-  const hatch = baseForm(sel);
-  const genderText = { genderless: 'Genderless', male: 'Always male', female: 'Always female' }[p.gender] || p.gender;
+  const isDitto = groups.includes('Ditto');
+  // A pair needs one male and one female, so drop partners that can only be the same gender.
+  const partners = undiscovered || isDitto ? [] : state.dex.filter(q => q.dex !== sel && q.eggGroups?.some(g => groups.includes(g))
+    && !['genderless'].includes(q.gender) && !(q.gender === p.gender && ['male', 'female'].includes(p.gender)));
+  // In Gen 3, Azurill and Wynaut only hatch if a parent holds Sea Incense or Lax Incense.
+  const INCENSE = { 298: [183, 'Sea Incense'], 360: [202, 'Lax Incense'] }; // baby: [normal hatch, item]
+  const base = baseForm(sel);
+  const incense = INCENSE[base] && [base, INCENSE[base][1]];
+  const hatch = incense ? INCENSE[base][0] : base;
+  const genderText = { genderless: 'Genderless', male: 'Always male', female: 'Always female' }[p.gender] || p.gender.replace('% F', '% female');
   let html = `<div class="card"><input type="search" id="breedq" placeholder="Pick a Pokémon" list="monlist2" value="${esc(p.name)}">
     <datalist id="monlist2">${state.dex.map(x => `<option value="${esc(x.name)}">`).join('')}</datalist></div>
     <div class="card"><b>#${p.dex} ${esc(p.name)}</b> ${types(sel)}
     <table class="mini" style="margin-top:8px">
       <tr><td>Egg groups</td><td>${groups.map(esc).join(', ')}</td></tr>
       <tr><td>Gender</td><td>${esc(genderText)}</td></tr>
-      <tr><td>Egg hatches into</td><td>${undiscovered ? '—' : esc(mon(hatch).name)}</td></tr>
-      <tr><td>Steps to hatch</td><td>${undiscovered ? '—' : `${(p.eggCycles * 256).toLocaleString()}`}</td></tr>
+      <tr><td>Egg hatches into</td><td>${undiscovered ? '—' : isDitto ? "The partner's baby form" : esc(mon(hatch).name)}${incense ? ` <span class="note">(${esc(mon(incense[0]).name)} if a parent holds ${incense[1]})</span>` : ''}</td></tr>
+      <tr><td>Steps to hatch</td><td>${undiscovered || isDitto ? '—' : `${(p.eggCycles * 256).toLocaleString()}`}</td></tr>
     </table></div>`;
   if (undiscovered) html += `<div class="card bad">This Pokémon can't breed.</div>`;
+  else if (isDitto) html += `<div class="card">Ditto can breed with any Pokémon that can breed, including genderless ones, but not with another Ditto.</div>`;
   else if (p.gender === 'genderless') html += `<div class="card">Genderless: it can only breed with <b>Ditto</b>.</div>`;
   else html += `<div class="card"><b>Can breed with</b> Ditto, or any of these with the opposite gender:<p class="note">${partners.map(q => esc(q.name)).join(', ')}</p></div>`;
   html += `<div class="card note">Breeding happens at the Day Care on Four Island (post-game). The Route 5 Day Care only raises one Pokémon and can't make eggs. The baby learns any move both parents know that's in its level-up set, plus the father's TMs and egg moves.</div>`;
@@ -299,11 +312,16 @@ function renderTypes() {
   });
 }
 
+function exclusiveWhere(n) {
+  const a = availability(n);
+  if (a.via) return `Evolve ${esc(mon(a.via).name)} (in ${VNAME[OTHER[V()]]})`;
+  return [...new Set((state.found[n] || []).map(w => w.name))].slice(0, 3).map(esc).join(', ') + ` (in ${VNAME[OTHER[V()]]})`;
+}
 function renderExclusives() {
   const rows = state.dex.filter(p => availability(p.dex).kind === 'other');
   view.innerHTML = `<div class="card note">Pokémon you can't catch or evolve in ${VNAME[V()]} but can in ${VNAME[OTHER[V()]]}. Trade for them, or evolve one you trade over.</div>
     <div class="card">${rows.map(p => checkRow(`dex:${p.dex}`, isCaught(p.dex), `#${String(p.dex).padStart(3, '0')} ${esc(p.name)} ${types(p.dex)}`,
-      [...new Set((state.found[p.dex] || []).map(w => w.name))].slice(0, 3).map(esc).join(', ') + ` (in ${VNAME[OTHER[V()]]})`)).join('') || '<div class="empty">None.</div>'}</div>`;
+      exclusiveWhere(p.dex))).join('') || '<div class="empty">None.</div>'}</div>`;
 }
 
 function renderSettings() {
@@ -326,10 +344,12 @@ function renderSettings() {
   document.getElementById('import').onchange = async e => {
     try {
       const p = JSON.parse(await e.target.files[0].text());
-      if (!p.saves) throw new Error('not a backup');
+      if (!p || typeof p.saves !== 'object' || !p.saves) throw new Error('not a backup');
       for (const v of ['FR', 'LG']) p.saves[v] = Object.assign(freshSave(), p.saves[v]);
-      state.progress = p; save(); applyVersion(); alert('Backup restored.');
+      if (!['FR', 'LG'].includes(p.version)) p.version = 'FR';
+      state.progress = p; save(); applyVersion(); renderSettings(); alert('Backup restored.');
     } catch (err) { alert('That file is not a valid backup.'); }
+    e.target.value = '';
   };
   document.getElementById('reset').onclick = () => {
     if (confirm(`Erase all ${VNAME[V()]} progress? This cannot be undone.`)) { state.progress.saves[V()] = freshSave(); save(); alert('Progress reset.'); }

@@ -63,7 +63,7 @@ def mon(const):
     return {'dex': natdex[key], 'name': species_const[key]}
 
 items = {i['itemId']: i for i in json.load(open(P('src/data/items.json')))['items']}
-ITEM_FIX = {'ITEM_PARALYZE_HEAL': 'Parlyz Heal'}
+ITEM_FIX = {'ITEM_PARALYZE_HEAL': 'Parlyz Heal', 'ITEM_TEACHY_TV': 'Teachy TV', 'ITEM_COIN': 'Coins', 'ITEM_NONE': 'Coins'}  # Game Corner hidden coins have no item
 
 def item_name(c):
     if c in ITEM_FIX: return ITEM_FIX[c]
