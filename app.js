@@ -320,7 +320,7 @@ function renderLocation(id) {
         const sub = [METHOD_LABEL[e.method] || e.method, e.levels && `Lv ${esc(e.levels)}`, e.rate && esc(e.rate), e.notes && esc(e.notes),
           later && `Needs ${esc(UNLOCK[e.method].need)}`].filter(Boolean).join(' · ');
         const excl = e.versions.length === 1 ? `<span class="tag">${e.versions[0]} only</span>` : '';
-        return checkRow(`dex:${e.dex}`, s.caught[e.dex], `#${String(e.dex).padStart(3, '0')} ${esc(e.name)} ${types(e.dex)}`, sub, excl + infoLink(e.dex));
+        return checkRow(`dex:${e.dex}`, s.caught[e.dex], `#${String(e.dex).padStart(3, '0')} ${esc(e.name)} ${types(e.dex)}`, sub, excl + infoLink(e.dex) + (typeof catchLink === 'function' && !['gift', 'trade', 'game-corner'].includes(e.method) ? catchLink(id, e.dex, e.method) : ''));
       }).join('');
     }
     return out;
@@ -863,7 +863,7 @@ function renderPlan() {
     const lk = legKeys(leg), ld = lk.filter(k => s.checks[k]).length, b = leg.battle;
     html += `<details class="card leg ${ld === lk.length ? 'checked' : ''}" data-leg="${i}"${i === firstOpen ? ' open' : ''}>
       <summary>${i + 1}. ${esc(b.name)} <span class="note">· ${esc(b.where)} · ace Lv ${b.ace}</span> <span class="tag legcount">${ld}/${lk.length}</span></summary>`;
-    for (const x of leg.steps) html += checkRow(planKey(x.id), !!s.checks[planKey(x.id)], esc(x.text), esc(x.sub), ` <span class="tag">${STEP_TAG[x.kind]}</span>`);
+    for (const x of leg.steps) html += checkRow(planKey(x.id), !!s.checks[planKey(x.id)], esc(x.text), esc(x.sub), ` <span class="tag">${STEP_TAG[x.kind]}</span>` + (x.kind === 'catch' && x.loc && typeof catchLink === 'function' ? catchLink(x.loc, x.dex) : ''));
     const tk = trainerKey(b.loc, b);
     html += checkRow(tk, !!s.checks[tk], `Beat ${esc(b.name)}`, `${esc(b.where)}${b.loc ? ` · <a href="#/loc/${b.loc}">route page</a>` : ''}`, ' <span class="tag">Battle</span>');
     html += `<table class="mini lineup"><tr><th>Lineup</th><th>Lv</th><th>Moves</th></tr>${leg.team.map(m => `<tr><td>${esc(mon(m.dex).name)}</td><td>${m.level}</td><td>${esc(m.moves.join(', '))}</td></tr>`).join('')}</table>
@@ -1142,7 +1142,7 @@ function route(keepScroll) {
   else if (page === 'plan') renderPlan();
   else if (page === 'tools') renderTools(id, arg && decodeURIComponent(arg));
   else if (page === 'settings') renderSettings();
-  else if (PAGES[page]) PAGES[page](id ? decodeURIComponent(id) : id);
+  else if (PAGES[page]) PAGES[page](id ? decodeURIComponent(id) : id, arg && decodeURIComponent(arg));
   else renderHome();
   for (const f of AFTER_RENDER) f(page, id);
   window.scrollTo(0, keepScroll ? y : 0);

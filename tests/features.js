@@ -121,6 +121,43 @@ const strip = h => String(h).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
     if (tm && !state.tms[tm].sources.some(x => x.how === 'buy' || x.how === 'prize')) fail(`${tm} sold at Celadon but not a buy/prize source`);
   }
 
+  // catch plans: every catchable encounter renders, with and without a team, using only shop balls by then and never
+  // the Master Ball; the route page links each one
+  {
+    const sv = app.cur(), keepTeam = sv.team, keepMeta = sv.teamMeta, keepHere = sv.here;
+    delete sv.here;
+    const ballsBy = g('ballsBy'), sh = g('ballShops')(), stg = g('stageOf');
+    const names = st => ballsBy(st).map(b => b.name);
+    if (names(stg('route-1')).join() !== 'Poké Ball') fail(`Route 1 balls: ${names(stg('route-1'))}`);
+    if (names(stg('lavender-town') - 1).includes('Great Ball')) fail('Great Ball before Lavender Town');
+    if (!names(stg('lavender-town')).includes('Great Ball')) fail('no Great Ball at Lavender Town');
+    if (names(stg('fuchsia-city') - 1).includes('Ultra Ball')) fail('Ultra Ball before Fuchsia City');
+    if (names(stg('pokemon-league')).some(b => /Repeat|Timer/.test(b))) fail('Repeat/Timer Ball before linking with Ruby or Sapphire');
+    if (!sh['Timer Ball'] || !sh['Repeat Ball']) fail('Two Island Repeat/Timer Balls missing from shop data');
+    for (const team of [[], [12, 16, 25, 39, 83]]) {
+      sv.team = team; sv.teamMeta = {};
+      for (const V of ['FR', 'LG']) {
+        state.progress.version = V;
+        for (const l of state.index) for (const e of state.locations[l.id].encounters) {
+          if (!g('inVersion')(e) || ['gift', 'trade', 'game-corner'].includes(e.method)) continue;
+          const h = render(`#/catch/${l.id}/${e.dex}.${e.method}`), txt = strip(h);
+          if (/Master Ball/.test(txt)) fail(`catch plan ${l.id}/${e.dex} mentions the Master Ball`);
+          const allowed = names(Math.max(g('encStage')(l.id, e), g('currentStage')()));
+          for (const b of ['Great Ball', 'Ultra Ball', 'Repeat Ball', 'Timer Ball']) if (!allowed.includes(b) && new RegExp(`With ${b}s|Use ${b}s`).test(txt)) fail(`catch plan ${l.id}/${e.dex} plans with ${b} before it's sold`);
+          if (l.id !== 'safari-zone' && !/If you only have Poké Balls/.test(txt)) fail(`catch plan ${l.id}/${e.dex} has no Poké Ball plan`);
+        }
+      }
+    }
+    state.progress.version = 'FR';
+    if (!render('#/loc/route-1').includes('#/catch/route-1/16.grass')) fail('Route 1 page has no catch plan link for Pidgey');
+    // Abra teleports: with no faster sleep move, the plan is to throw at once
+    sv.team = []; if (!/Throw on your very first turn/.test(strip(render('#/catch/route-24/63')))) fail('Abra plan should say throw on the first turn');
+    // False Swipe on the team takes it to 1 HP
+    sv.team = [83]; sv.teamMeta = { 83: { level: 30, moves: ['False Swipe', 'Peck', '', ''] } };
+    if (!/False Swipe until it's at 1 HP/.test(strip(render('#/catch/safari-zone/128') + render('#/catch/route-12/143')))) fail('False Swipe plan missing for Snorlax');
+    sv.team = keepTeam; sv.teamMeta = keepMeta; if (keepHere) sv.here = keepHere;
+  }
+
   if (fails.length) { console.log(`FAIL (${fails.length})\n` + fails.slice(0, 60).map(f => ' - ' + f).join('\n')); process.exit(1); }
   console.log('OK: feature pages and data checks passed');
 })().catch(e => { console.error(e); process.exit(1); });
