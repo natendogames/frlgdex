@@ -210,8 +210,10 @@ for line in open(P('data/scripts/item_ball_scripts.inc')):
     m = re.match(r'\s*finditem (ITEM_\w+)(?:,\s*(\d+))?', line)
     if m and cur: balls[cur] = (m.group(1), int(m.group(2) or 1))
 
-def add_item(loc, name, qty, hidden, where, ident):
+item_flags = {}  # checklist key -> the save flag set when you pick it up (for save file import)
+def add_item(loc, name, qty, hidden, where, ident, flag=None):
     loc['items'].append({'id': ident, 'name': name + (f' ×{qty}' if qty > 1 else ''), 'hidden': hidden, 'where': where})
+    if flag: item_flags[f"{loc['id']}:item:{ident}"] = flag
 
 seen_ids = collections.Counter()
 def uid(loc, base):
@@ -227,11 +229,11 @@ for name in sorted(maps):
     for ev in m.get('object_events') or []:
         if ev.get('script') in balls:
             it, q = balls[ev['script']]
-            add_item(loc, item_name(it), q, False, area, uid(loc, f'{area}-{item_name(it)}'))
+            add_item(loc, item_name(it), q, False, area, uid(loc, f'{area}-{item_name(it)}'), ev.get('flag'))
     for ev in m.get('bg_events') or []:
         if ev.get('type') == 'hidden_item':
             add_item(loc, item_name(ev['item']), int(ev.get('quantity') or 1), True,
-                     area + (' (underfoot)' if ev.get('underfoot') else ''), uid(loc, f'hidden-{area}-{item_name(ev["item"])}'))
+                     area + (' (underfoot)' if ev.get('underfoot') else ''), uid(loc, f'hidden-{area}-{item_name(ev["item"])}'), ev.get('flag'))
 
 # NPC gifts, static encounters, trades
 trades_src = open(P('src/data/ingame_trades.h')).read()
@@ -556,6 +558,7 @@ def area_sort(lid, area):
     return (2, 0, area)
 
 per_loc = collections.defaultdict(list)
+trainer_consts = {}
 for (mapname, key), b in found_battles.items():
     sec = maps[mapname]['region_map_section']
     lid = loc_id(sec); area = area_name(mapname, sec)
@@ -570,6 +573,7 @@ for (mapname, key), b in found_battles.items():
     rewards = list(dict.fromkeys(r for l in b['labels'] for r in label_rewards(l)))
     if rewards: rec['rewards'] = rewards
     rec['id'] = re.sub(r'[^a-z0-9]+', '-', key.replace('TRAINER_', '').lower()).strip('-')
+    trainer_consts[(lid, rec['id'])] = list(b['consts'].values())
     rec['area'] = area
     st = STAGE.get(mapname) or next((v for k, v in STAGE.items() if k in key), None)
     if st: rec['stage'] = st
@@ -830,3 +834,56 @@ unown = {'monean': 'A ?', 'liptoo': 'C D H U O', 'weepth': 'N S I E', 'dilford':
 json.dump({'shops': shops, 'tutors': tutors, 'rematches': rematches, 'unown': {k.title() + ' Chamber': v.split() for k, v in unown.items()}},
           open(os.path.join(OUT, 'extras.json'), 'w'), ensure_ascii=False, indent=1)
 print('shops', sum(len(v) for v in shops.values()), 'tutors', len(tutors), 'rematch trainers', sum(len(v) for v in rematches.values()))
+
+# ---------- save file import map ----------
+# What the app needs to read a FireRed/LeafGreen .sav: the save flag behind each item and trainer checklist row,
+# the game's internal species numbers (Hoenn Pokémon are out of National Dex order) and move numbers.
+def defines(*files):
+    out = {}
+    for f in files:
+        for name, val in re.findall(r'^#define\s+(\w+)\s+(.+?)\s*(?://.*)?$', open(P(f)).read(), re.M): out[name] = val
+    return out
+DEF = defines('include/constants/flags.h', 'include/constants/opponents.h', 'include/constants/species.h', 'include/constants/moves.h')
+_ev = {}
+def ev(name):
+    if name in _ev: return _ev[name]
+    expr = DEF[name]
+    expr = re.sub(r'\b([A-Za-z_]\w*)\b', lambda m: str(ev(m.group(1))) if m.group(1) in DEF else m.group(1), expr)
+    _ev[name] = int(eval(expr.replace('/', '//'), {'__builtins__': {}}))
+    return _ev[name]
+flag_map = {}
+for k, f in item_flags.items():
+    if f in DEF: flag_map[k] = ev(f)
+TFS = ev('TRAINER_FLAGS_START')
+for (lid, tid), consts in trainer_consts.items():
+    flag_map[f'{lid}:trainer:{tid}'] = [TFS + ev(c) for c in consts if c in DEF]
+species_index = [0] * (max(ev(k) for k in DEF if k.startswith('SPECIES_') and re.match(r'^\d+$', DEF[k])) + 1)
+for k in DEF:
+    if k.startswith('SPECIES_') and k[8:] in natdex and re.match(r'^\d+$', DEF[k]): species_index[ev(k)] = natdex[k[8:]]
+moves_by_id = {}
+for k in DEF:
+    if k.startswith('MOVE_') and k[5:] in move_names and re.match(r'^\d+$', DEF[k]): moves_by_id[ev(k)] = move_names[k[5:]]
+move_list = [moves_by_id.get(i, '') for i in range(max(moves_by_id) + 1)]
+badges = [ev(f'FLAG_BADGE0{i}_GET') for i in range(1, 9)]
+json.dump({'flags': flag_map, 'species': species_index, 'moves': move_list, 'badges': badges},
+          open(os.path.join(OUT, 'save-map.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
+print('save map:', len(flag_map), 'flags,', sum(1 for x in species_index if x), 'species')
+
+# ---------- region map grid (for the tappable map) ----------
+# The game's own town-map layout: a 22x15 grid per region, each cell naming a map section, with a second layer for
+# caves and buildings. Cells are mapped to app locations; Pokémon Center stubs count as their route.
+region_maps = {}
+for key, f in (('Kanto', 'kanto'), ('Sevii Islands 1–3', 'sevii_123'), ('Sevii Islands 4–5', 'sevii_45'), ('Sevii Islands 6–7', 'sevii_67')):
+    src = open(P(f'src/data/region_map/region_map_layout_{f}.h')).read()
+    cells = []
+    for layer in ('MAP', 'DUNGEON'):
+        body = re.search(r'\[LAYER_' + layer + r'\]\s*=\s*\{(.*?)\n    \}', src, re.S).group(1)
+        for y, row in enumerate(re.findall(r'\{([^{}]*)\}', body)):
+            for x, sec in enumerate(c.strip() for c in row.split(',')):
+                if sec == 'MAPSEC_NONE': continue
+                lid = loc_id(re.sub(r'_POKECENTER$', '', sec))
+                if lid in locs: cells.append([x, y, lid, layer.lower()])
+    region_maps[key] = cells
+json.dump(region_maps, open(os.path.join(OUT, 'region-map.json'), 'w'), separators=(',', ':'))
+mapped = {c[2] for cs in region_maps.values() for c in cs}
+print('region map: unplaced locations', sorted(set(x['id'] for x in index) - mapped))

@@ -261,6 +261,7 @@ function renderHome() {
   const g = globalStats();
   const stat = (label, [a, b]) => `<div class="stat"><b>${a}/${b}</b><span>${label}</span>${bar(a, b)}</div>`;
   let html = `<a class="card stats linkcard" href="#/progress">${stat('Kanto Dex', g.dex)}${stat('Items', g.items)}${stat('NPC gifts', g.gifts)}${stat('Trainers', g.trainers)}</a>`;
+  html += `<div class="chips" style="margin-bottom:4px"><a class="chip" href="#/map">Town map</a><a class="chip" href="#/missing">Still missing</a><a class="chip" href="#/progress">Progress</a>${typeof nuzOn === 'function' && nuzOn() ? '<a class="chip" href="#/nuzlocke">Nuzlocke</a>' : ''}</div>`;
   let region = '';
   for (const l of state.index) {
     const loc = state.locations[l.id];

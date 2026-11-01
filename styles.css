@@ -162,3 +162,9 @@ input[type=number] { font: inherit; padding: 4px 6px; border-radius: 6px; border
 .cell.evolve, .lv.evolve { box-shadow: inset 0 -3px 0 #d69e2e; } .cell.trade, .lv.trade { box-shadow: inset 0 -3px 0 #5b84e8; } .cell.event, .lv.event { box-shadow: inset 0 -3px 0 #93409a; }
 .cell.catch, .lv.catch { box-shadow: inset 0 -3px 0 var(--line); }
 .lv { padding: 0 4px; border-radius: 4px; }
+/* town map */
+.mapcard { padding: 8px; }
+svg.townmap { width: 100%; height: auto; display: block; }
+svg.townmap rect { cursor: pointer; }
+svg.townmap rect:focus { outline: none; stroke: var(--accent); stroke-width: 2; }
+svg.townmap .maplbl { font-size: 6.5px; font-weight: 700; fill: var(--text); text-anchor: middle; pointer-events: none; paint-order: stroke; stroke: var(--card); stroke-width: 1.5px; }
