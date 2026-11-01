@@ -491,92 +491,6 @@
    "area": "Gym"
   },
   {
-   "class": "Burglar",
-   "name": "Quinn",
-   "prize": 3168,
-   "party": [
-    {
-     "dex": 58,
-     "name": "Growlithe",
-     "level": 36,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Leer",
-       "type": "Normal"
-      },
-      {
-       "name": "Odor Sleuth",
-       "type": "Normal"
-      },
-      {
-       "name": "Take Down",
-       "type": "Normal",
-       "power": 90
-      },
-      {
-       "name": "Flame Wheel",
-       "type": "Fire",
-       "power": 60
-      }
-     ]
-    },
-    {
-     "dex": 37,
-     "name": "Vulpix",
-     "level": 36,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Confuse Ray",
-       "type": "Ghost"
-      },
-      {
-       "name": "Imprison",
-       "type": "Psychic"
-      },
-      {
-       "name": "Flamethrower",
-       "type": "Fire",
-       "power": 95
-      },
-      {
-       "name": "Safeguard",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 38,
-     "name": "Ninetales",
-     "level": 36,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Ember",
-       "type": "Fire",
-       "power": 40
-      },
-      {
-       "name": "Quick Attack",
-       "type": "Normal",
-       "power": 40
-      },
-      {
-       "name": "Confuse Ray",
-       "type": "Ghost"
-      },
-      {
-       "name": "Safeguard",
-       "type": "Normal"
-      }
-     ]
-    }
-   ],
-   "id": "burglar-quinn",
-   "area": "Gym"
-  },
-  {
    "class": "Super Nerd",
    "name": "Avery",
    "prize": 816,
@@ -773,6 +687,92 @@
     }
    ],
    "id": "super-nerd-erik",
+   "area": "Gym"
+  },
+  {
+   "class": "Burglar",
+   "name": "Quinn",
+   "prize": 3168,
+   "party": [
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 36,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Flame Wheel",
+       "type": "Fire",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 37,
+     "name": "Vulpix",
+     "level": 36,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Imprison",
+       "type": "Psychic"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 38,
+     "name": "Ninetales",
+     "level": 36,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "burglar-quinn",
    "area": "Gym"
   },
   {

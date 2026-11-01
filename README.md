@@ -7,7 +7,10 @@ A phone-friendly, offline-capable 100% completion guide for Pokémon FireRed and
 - **Pokédex**: Kanto 151 or National 386, showing where to catch each one, what to evolve it from, or which version to trade from.
 - **Battle plan**: enter your team to see who to send out against each Gym Leader, rival battle, Giovanni, the Elite Four and the Champion (rival teams depend on your starter).
 - **Team plan**: the best team at every point of the game for your version and starter. Before each key battle it lists who to catch or box, who evolves, which moves and TMs to teach, the lineup and who to lead with, all as checkboxes. The battle checkbox is the same one as on the route page, and a button copies the lineup into the Battle plan.
-- **Tools**: breeding helper (egg groups, partners, what hatches, steps), type matchup lookup and full chart, version exclusives list.
+- **Reference pages**: every Pokémon (stats, abilities, catch rate, EV yield, where to get it, evolutions, level-up/TM/tutor moves), TM, item and move, plus search (🔍) across all of them.
+- **Progress**: completion by category and part of the game, badges, "still missing" Pokémon with the earliest place to get each, and a tappable town map shaded by completion.
+- **Shops and tutors**: buy-only TMs and Game Corner prizes as checklist rows; every move tutor on its location page.
+- **Tools**: breeding helper, type matchups, version exclusives, TM list, stats/IV calculator, catch odds, level forecast, EV training and counter, one-time Pokémon, move tutors, Unown forms, Sevii story checklist, Nuzlocke run tracker (level cap, dupes clause), shiny hunt counters, living dex boxes, and .sav import (ticks caught Pokémon, items and trainers, and loads your party).
 - Separate FireRed and LeafGreen saves, stored on the device, with backup export and import.
 - Optional cloud sync between devices keyed by an email address (no password). Needs the small Cloudflare Worker in `worker/`; see `worker/README.md`.
 
@@ -30,10 +33,13 @@ python3 -I scripts/build_data.py /tmp/pokefirered data
 |---|---|
 | `locations.json` | Story-order list of locations with their section |
 | `locations/<id>.json` | `encounters[]` (dex, name, method, versions, levels, rate, area, notes), `items[]` (id, name, hidden, where), `gifts[]` (id, name, from, where, versions?), `trainers[]` (id, class, name, prize, party or byStarter, rewards?, uses?, double?, area?, stage?) |
-| `pokedex.json` | 386 species: types, base stats, egg groups, gender ratio, egg cycles, evolutions |
+| `pokedex.json` | 386 species: types, base stats, abilities, catch rate, EXP yield, growth rate, EV yield, wild held items, egg groups, gender ratio, egg cycles, evolutions, learnsets, TM/HM and tutor compatibility |
 | `trainers.json` | Key battles for the Battle plan tab (Gym Leaders, rivals, Giovanni, Elite Four, Champion), same shape as route trainers |
 | `types.json` | Gen 3 type chart (attacker → defender → multiplier) |
 | `moves.json` | Move name → type, power and special damage effect, for the damage estimates |
+| `extras.json` | Shops (stock and prices), move tutors (where, who can learn), VS Seeker rematch teams, Unown letters per Tanoby chamber |
+| `save-map.json` | For .sav import: the save flag behind each item and trainer row, internal species and move numbers, badge flags |
+| `region-map.json` | The game's town-map grid per region, cell → location |
 | `tms.json` | TM/HM number → move, whether it can be reused (HMs, Department Store and Game Corner TMs) and every place you get one; `pokedex.json` lists each species' `tmhm` |
 
 ## Team planner

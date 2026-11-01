@@ -591,68 +591,6 @@
    "area": "1F"
   },
   {
-   "class": "Poké Maniac",
-   "name": "Ashton",
-   "prize": 1104,
-   "party": [
-    {
-     "dex": 104,
-     "name": "Cubone",
-     "level": 23,
-     "iv": 3,
-     "moves": [
-      {
-       "name": "Bone Club",
-       "type": "Ground",
-       "power": 65
-      },
-      {
-       "name": "Headbutt",
-       "type": "Normal",
-       "power": 70
-      },
-      {
-       "name": "Leer",
-       "type": "Normal"
-      },
-      {
-       "name": "Focus Energy",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 79,
-     "name": "Slowpoke",
-     "level": 23,
-     "iv": 3,
-     "moves": [
-      {
-       "name": "Tackle",
-       "type": "Normal",
-       "power": 35
-      },
-      {
-       "name": "Growl",
-       "type": "Normal"
-      },
-      {
-       "name": "Water Gun",
-       "type": "Water",
-       "power": 40
-      },
-      {
-       "name": "Confusion",
-       "type": "Psychic",
-       "power": 50
-      }
-     ]
-    }
-   ],
-   "id": "pokemaniac-ashton",
-   "area": "1F"
-  },
-  {
    "class": "Hiker",
    "name": "Lenny",
    "prize": 684,
@@ -767,133 +705,13 @@
   },
   {
    "class": "Poké Maniac",
-   "name": "Winston",
-   "prize": 1200,
+   "name": "Ashton",
+   "prize": 1104,
    "party": [
-    {
-     "dex": 79,
-     "name": "Slowpoke",
-     "level": 25,
-     "iv": 3,
-     "moves": [
-      {
-       "name": "Growl",
-       "type": "Normal"
-      },
-      {
-       "name": "Water Gun",
-       "type": "Water",
-       "power": 40
-      },
-      {
-       "name": "Confusion",
-       "type": "Psychic",
-       "power": 50
-      },
-      {
-       "name": "Disable",
-       "type": "Normal"
-      }
-     ]
-    }
-   ],
-   "id": "pokemaniac-winston",
-   "area": "B1F"
-  },
-  {
-   "class": "Picnicker",
-   "name": "Martha",
-   "prize": 440,
-   "party": [
-    {
-     "dex": 43,
-     "name": "Oddish",
-     "level": 22,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Sweet Scent",
-       "type": "Normal"
-      },
-      {
-       "name": "Poisonpowder",
-       "type": "Poison"
-      },
-      {
-       "name": "Stun Spore",
-       "type": "Grass"
-      },
-      {
-       "name": "Sleep Powder",
-       "type": "Grass"
-      }
-     ]
-    },
-    {
-     "dex": 1,
-     "name": "Bulbasaur",
-     "level": 22,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Vine Whip",
-       "type": "Grass",
-       "power": 35
-      },
-      {
-       "name": "Poisonpowder",
-       "type": "Poison"
-      },
-      {
-       "name": "Sleep Powder",
-       "type": "Grass"
-      },
-      {
-       "name": "Razor Leaf",
-       "type": "Grass",
-       "power": 55
-      }
-     ]
-    }
-   ],
-   "id": "picnicker-martha",
-   "area": "B1F"
-  },
-  {
-   "class": "Poké Maniac",
-   "name": "Steve",
-   "prize": 1056,
-   "party": [
-    {
-     "dex": 4,
-     "name": "Charmander",
-     "level": 22,
-     "iv": 3,
-     "moves": [
-      {
-       "name": "Growl",
-       "type": "Normal"
-      },
-      {
-       "name": "Ember",
-       "type": "Fire",
-       "power": 40
-      },
-      {
-       "name": "Metal Claw",
-       "type": "Steel",
-       "power": 50
-      },
-      {
-       "name": "Smokescreen",
-       "type": "Normal"
-      }
-     ]
-    },
     {
      "dex": 104,
      "name": "Cubone",
-     "level": 22,
+     "level": 23,
      "iv": 3,
      "moves": [
       {
@@ -915,10 +733,37 @@
        "type": "Normal"
       }
      ]
+    },
+    {
+     "dex": 79,
+     "name": "Slowpoke",
+     "level": 23,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      }
+     ]
     }
    ],
-   "id": "pokemaniac-steve",
-   "area": "B1F"
+   "id": "pokemaniac-ashton",
+   "area": "1F"
   },
   {
    "class": "Picnicker",
@@ -1099,42 +944,6 @@
    "area": "B1F"
   },
   {
-   "class": "Hiker",
-   "name": "Allen",
-   "prize": 900,
-   "party": [
-    {
-     "dex": 74,
-     "name": "Geodude",
-     "level": 25,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Mud Sport",
-       "type": "Ground"
-      },
-      {
-       "name": "Rock Throw",
-       "type": "Rock",
-       "power": 50
-      },
-      {
-       "name": "Magnitude",
-       "type": "Ground",
-       "power": 1
-      },
-      {
-       "name": "Selfdestruct",
-       "type": "Normal",
-       "power": 200
-      }
-     ]
-    }
-   ],
-   "id": "hiker-allen",
-   "area": "B1F"
-  },
-  {
    "class": "Poké Maniac",
    "name": "Cooper",
    "prize": 960,
@@ -1222,6 +1031,197 @@
     }
    ],
    "id": "pokemaniac-cooper",
+   "area": "B1F"
+  },
+  {
+   "class": "Poké Maniac",
+   "name": "Winston",
+   "prize": 1200,
+   "party": [
+    {
+     "dex": 79,
+     "name": "Slowpoke",
+     "level": 25,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "pokemaniac-winston",
+   "area": "B1F"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Martha",
+   "prize": 440,
+   "party": [
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 1,
+     "name": "Bulbasaur",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-martha",
+   "area": "B1F"
+  },
+  {
+   "class": "Poké Maniac",
+   "name": "Steve",
+   "prize": 1056,
+   "party": [
+    {
+     "dex": 4,
+     "name": "Charmander",
+     "level": 22,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Metal Claw",
+       "type": "Steel",
+       "power": 50
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 104,
+     "name": "Cubone",
+     "level": 22,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Bone Club",
+       "type": "Ground",
+       "power": 65
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "pokemaniac-steve",
+   "area": "B1F"
+  },
+  {
+   "class": "Hiker",
+   "name": "Allen",
+   "prize": 900,
+   "party": [
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 25,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    }
+   ],
+   "id": "hiker-allen",
    "area": "B1F"
   },
   {

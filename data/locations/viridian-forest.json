@@ -214,31 +214,6 @@
   },
   {
    "class": "Bug Catcher",
-   "name": "Sammy",
-   "prize": 108,
-   "party": [
-    {
-     "dex": 13,
-     "name": "Weedle",
-     "level": 9,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Poison Sting",
-       "type": "Poison",
-       "power": 15
-      },
-      {
-       "name": "String Shot",
-       "type": "Bug"
-      }
-     ]
-    }
-   ],
-   "id": "bug-catcher-sammy"
-  },
-  {
-   "class": "Bug Catcher",
    "name": "Anthony",
    "prize": 96,
    "party": [
@@ -327,6 +302,31 @@
     }
    ],
    "id": "bug-catcher-charlie"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Sammy",
+   "prize": 108,
+   "party": [
+    {
+     "dex": 13,
+     "name": "Weedle",
+     "level": 9,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-sammy"
   }
  ],
  "verified": true,

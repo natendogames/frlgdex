@@ -894,69 +894,6 @@
    "area": "3F"
   },
   {
-   "class": "Burglar",
-   "name": "Lewis",
-   "prize": 2992,
-   "party": [
-    {
-     "dex": 58,
-     "name": "Growlithe",
-     "level": 34,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Leer",
-       "type": "Normal"
-      },
-      {
-       "name": "Odor Sleuth",
-       "type": "Normal"
-      },
-      {
-       "name": "Take Down",
-       "type": "Normal",
-       "power": 90
-      },
-      {
-       "name": "Flame Wheel",
-       "type": "Fire",
-       "power": 60
-      }
-     ]
-    },
-    {
-     "dex": 77,
-     "name": "Ponyta",
-     "level": 34,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Ember",
-       "type": "Fire",
-       "power": 40
-      },
-      {
-       "name": "Stomp",
-       "type": "Normal",
-       "power": 65
-      },
-      {
-       "name": "Fire Spin",
-       "type": "Fire",
-       "power": 15
-      },
-      {
-       "name": "Take Down",
-       "type": "Normal",
-       "power": 90
-      }
-     ]
-    }
-   ],
-   "id": "burglar-lewis",
-   "area": "B1F"
-  },
-  {
    "class": "Scientist",
    "name": "Ivan",
    "prize": 1632,
@@ -1017,6 +954,69 @@
     }
    ],
    "id": "scientist-ivan",
+   "area": "B1F"
+  },
+  {
+   "class": "Burglar",
+   "name": "Lewis",
+   "prize": 2992,
+   "party": [
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 34,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Flame Wheel",
+       "type": "Fire",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 77,
+     "name": "Ponyta",
+     "level": 34,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Fire Spin",
+       "type": "Fire",
+       "power": 15
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "id": "burglar-lewis",
    "area": "B1F"
   }
  ],

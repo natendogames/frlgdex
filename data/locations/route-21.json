@@ -789,6 +789,117 @@
   },
   {
    "class": "Fisherman",
+   "name": "Wade",
+   "prize": 972,
+   "party": [
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    },
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    },
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    },
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    },
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    },
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-wade",
+   "area": "North"
+  },
+  {
+   "class": "Fisherman",
    "name": "Ronald",
    "prize": 1008,
    "party": [
@@ -898,117 +1009,6 @@
     }
    ],
    "id": "fisherman-ronald",
-   "area": "North"
-  },
-  {
-   "class": "Fisherman",
-   "name": "Wade",
-   "prize": 972,
-   "party": [
-    {
-     "dex": 129,
-     "name": "Magikarp",
-     "level": 27,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Splash",
-       "type": "Normal"
-      },
-      {
-       "name": "Tackle",
-       "type": "Normal",
-       "power": 35
-      }
-     ]
-    },
-    {
-     "dex": 129,
-     "name": "Magikarp",
-     "level": 27,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Splash",
-       "type": "Normal"
-      },
-      {
-       "name": "Tackle",
-       "type": "Normal",
-       "power": 35
-      }
-     ]
-    },
-    {
-     "dex": 129,
-     "name": "Magikarp",
-     "level": 27,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Splash",
-       "type": "Normal"
-      },
-      {
-       "name": "Tackle",
-       "type": "Normal",
-       "power": 35
-      }
-     ]
-    },
-    {
-     "dex": 129,
-     "name": "Magikarp",
-     "level": 27,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Splash",
-       "type": "Normal"
-      },
-      {
-       "name": "Tackle",
-       "type": "Normal",
-       "power": 35
-      }
-     ]
-    },
-    {
-     "dex": 129,
-     "name": "Magikarp",
-     "level": 27,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Splash",
-       "type": "Normal"
-      },
-      {
-       "name": "Tackle",
-       "type": "Normal",
-       "power": 35
-      }
-     ]
-    },
-    {
-     "dex": 129,
-     "name": "Magikarp",
-     "level": 27,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Splash",
-       "type": "Normal"
-      },
-      {
-       "name": "Tackle",
-       "type": "Normal",
-       "power": 35
-      }
-     ]
-    }
-   ],
-   "id": "fisherman-wade",
    "area": "North"
   }
  ],

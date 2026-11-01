@@ -122,3 +122,49 @@ details.leg > summary { padding: 2px 0; }
 details.leg.checked > summary { color: var(--muted); }
 table.lineup { margin: 10px 0 4px; }
 @media (max-width: 360px) { .tabs a { padding-left: 1px; padding-right: 1px; font-size: 12px; white-space: nowrap; letter-spacing: -0.2px; } }
+
+/* reference pages */
+a.info { text-decoration: none; font-size: 15px; margin-left: 4px; color: var(--muted); }
+a.linkrow, a.linkcard { text-decoration: none; color: inherit; }
+a.linkrow > span:last-child { color: var(--muted); }
+.stats-bars .sb { display: grid; grid-template-columns: 40px 40px 1fr; align-items: center; gap: 6px; font-size: 13px; }
+.stats-bars .sb .bar { margin-top: 0; }
+.prog { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; padding: 6px 0; font-size: 14px; }
+.prog .bar { grid-column: 1 / -1; margin-top: 2px; }
+ul.evo, ul.evo ul { list-style: none; padding-left: 14px; margin: 0; }
+ul.evo { padding-left: 0; }
+ul.evo li { margin: 3px 0; }
+a.mv { text-decoration: none; color: inherit; }
+.stat span + span { display: block; }
+select { margin-top: 4px; }
+.chip { text-decoration: none; }
+.scrollx { overflow-x: auto; }
+input[type=number] { font: inherit; padding: 4px 6px; border-radius: 6px; border: 1px solid var(--line); background: var(--card); color: var(--text); }
+.toolbar label.note { display: inline-flex; align-items: center; gap: 6px; }
+.rematch { margin-top: 8px; }
+/* theme override, hide ticked rows, undo toast */
+:root[data-theme="light"] { --bg: #f4f4f6; --card: #fff; --text: #1b1b1f; --muted: #6b6b75; --line: #e2e2e8; }
+:root[data-theme="dark"] { --bg: #1b1b1f; --card: #26262c; --text: #f1f1f4; --muted: #a0a0ab; --line: #34343c; }
+:root[data-theme="light"] { color-scheme: light; } :root[data-theme="dark"] { color-scheme: dark; }
+.hide-rows #view .card > .row.checked { display: none; }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(64px + env(safe-area-inset-bottom)); z-index: 5; display: flex; gap: 10px; align-items: center;
+  background: var(--text); color: var(--bg); padding: 8px 12px; border-radius: 10px; font-size: 14px; max-width: calc(100% - 32px); box-shadow: 0 4px 16px #0004; }
+.toast .btn { margin: 0; }
+.toast[hidden] { display: none; }
+/* Nuzlocke, shiny, living dex */
+.card.nuz { border-color: var(--accent); }
+.shcount { font-size: 40px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.btn.big { font-size: 20px; padding: 10px 22px; }
+.boxgrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; }
+.cell { border: 1px solid var(--line); border-radius: 6px; padding: 4px 2px; font-size: 12px; font-weight: 700; background: var(--card); color: var(--text); line-height: 1.1; }
+.cell small { display: block; font-size: 9px; font-weight: 400; color: var(--muted); overflow: hidden; white-space: nowrap; }
+.cell.on { background: var(--done); color: #fff; border-color: var(--done); } .cell.on small { color: #fffc; }
+.cell.evolve, .lv.evolve { box-shadow: inset 0 -3px 0 #d69e2e; } .cell.trade, .lv.trade { box-shadow: inset 0 -3px 0 #5b84e8; } .cell.event, .lv.event { box-shadow: inset 0 -3px 0 #93409a; }
+.cell.catch, .lv.catch { box-shadow: inset 0 -3px 0 var(--line); }
+.lv { padding: 0 4px; border-radius: 4px; }
+/* town map */
+.mapcard { padding: 8px; }
+svg.townmap { width: 100%; height: auto; display: block; }
+svg.townmap rect { cursor: pointer; }
+svg.townmap rect:focus { outline: none; stroke: var(--accent); stroke-width: 2; }
+svg.townmap .maplbl { font-size: 6.5px; font-weight: 700; fill: var(--text); text-anchor: middle; pointer-events: none; paint-order: stroke; stroke: var(--card); stroke-width: 1.5px; }

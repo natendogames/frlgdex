@@ -341,6 +341,69 @@
    "area": "Outcast Island"
   },
   {
+   "class": "Fisherman",
+   "name": "Tylor",
+   "prize": 1764,
+   "party": [
+    {
+     "dex": 211,
+     "name": "Qwilfish",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      },
+      {
+       "name": "Destiny Bond",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 211,
+     "name": "Qwilfish",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      },
+      {
+       "name": "Destiny Bond",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-tylor",
+   "area": "Outcast Island"
+  },
+  {
    "class": "Team Rocket",
    "name": "Grunt",
    "prize": 1536,
@@ -425,69 +488,6 @@
     }
    ],
    "id": "team-rocket-grunt-46",
-   "area": "Outcast Island"
-  },
-  {
-   "class": "Fisherman",
-   "name": "Tylor",
-   "prize": 1764,
-   "party": [
-    {
-     "dex": 211,
-     "name": "Qwilfish",
-     "level": 49,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Revenge",
-       "type": "Fighting",
-       "power": 60
-      },
-      {
-       "name": "Take Down",
-       "type": "Normal",
-       "power": 90
-      },
-      {
-       "name": "Hydro Pump",
-       "type": "Water",
-       "power": 120
-      },
-      {
-       "name": "Destiny Bond",
-       "type": "Ghost"
-      }
-     ]
-    },
-    {
-     "dex": 211,
-     "name": "Qwilfish",
-     "level": 49,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Revenge",
-       "type": "Fighting",
-       "power": 60
-      },
-      {
-       "name": "Take Down",
-       "type": "Normal",
-       "power": 90
-      },
-      {
-       "name": "Hydro Pump",
-       "type": "Water",
-       "power": 120
-      },
-      {
-       "name": "Destiny Bond",
-       "type": "Ghost"
-      }
-     ]
-    }
-   ],
-   "id": "fisherman-tylor",
    "area": "Outcast Island"
   }
  ],

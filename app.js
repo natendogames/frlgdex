@@ -145,8 +145,8 @@ const trainerKey = (locId, t) => `${locId}:trainer:${t.id}`;
 
 const getJSON = url => fetch(url).then(r => { if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); });
 async function loadData() {
-  const [idx, dex, trainers, types, walk, moves] = await Promise.all(['data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json'].map(getJSON));
-  Object.assign(state, { index: idx.locations, dex, trainers, types, walk, moves });
+  const [idx, dex, trainers, types, walk, moves, tms, extras] = await Promise.all(['data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json', 'data/tms.json', 'data/extras.json'].map(getJSON));
+  Object.assign(state, { index: idx.locations, dex, trainers, types, walk, moves, tms, extras });
   await Promise.all(state.index.map(async l => { state.locations[l.id] = await getJSON('data/' + l.file); }));
   state.stage = Object.fromEntries(state.index.map((l, i) => [l.id, i]));
   for (const l of state.index) for (const e of state.locations[l.id].encounters) {
@@ -235,21 +235,24 @@ function availText(n) {
 function locStats(loc) {
   const s = cur(), v = locView(loc);
   const dex = [...new Set(v.encs.map(e => e.dex))];
-  const keys = [...loc.items.map(i => `${loc.id}:item:${i.id}`), ...v.gifts.map(g => `${loc.id}:gift:${g.id}`), ...v.trainers.map(t => trainerKey(loc.id, t))];
+  const keys = [...loc.items.map(i => `${loc.id}:item:${i.id}`), ...v.gifts.map(g => `${loc.id}:gift:${g.id}`), ...v.trainers.map(t => trainerKey(loc.id, t)), ...extraKeys(loc)];
   return { total: dex.length + keys.length + v.choices.length,
     done: dex.filter(d => s.caught[d]).length + keys.filter(k => s.checks[k]).length + v.choices.filter(c => pickOf(c.id)).length };
 }
+// Checklist rows added by features.js (shop TMs and prizes); none until it has loaded
+const extraKeys = loc => (typeof shopRows === 'function' ? shopRows(loc) : []);
 function globalStats() {
-  const s = cur(); let items = 0, itemsDone = 0, gifts = 0, giftsDone = 0, trs = 0, trsDone = 0;
+  const s = cur(); let items = 0, itemsDone = 0, gifts = 0, giftsDone = 0, trs = 0, trsDone = 0, shop = 0, shopDone = 0;
   for (const loc of Object.values(state.locations)) {
     const v = locView(loc);
+    for (const k of extraKeys(loc)) { shop++; if (s.checks[k]) shopDone++; }
     for (const i of loc.items) { items++; if (s.checks[`${loc.id}:item:${i.id}`]) itemsDone++; }
     for (const g of v.gifts) { gifts++; if (s.checks[`${loc.id}:gift:${g.id}`]) giftsDone++; }
     for (const c of v.choices) { gifts++; if (pickOf(c.id)) giftsDone++; }
     for (const t of v.trainers) { trs++; if (s.checks[trainerKey(loc.id, t)]) trsDone++; }
   }
   let kanto = 0; for (let n = 1; n <= 151; n++) if (s.caught[n]) kanto++;
-  return { dex: [kanto, 151], items: [itemsDone, items], gifts: [giftsDone, gifts], trainers: [trsDone, trs] };
+  return { dex: [kanto, 151], items: [itemsDone, items], gifts: [giftsDone, gifts], trainers: [trsDone, trs], shop: [shopDone, shop] };
 }
 
 // ---------- views ----------
@@ -257,7 +260,8 @@ function renderHome() {
   setHeader('FRLG Completion Dex', false, 'routes');
   const g = globalStats();
   const stat = (label, [a, b]) => `<div class="stat"><b>${a}/${b}</b><span>${label}</span>${bar(a, b)}</div>`;
-  let html = `<div class="card stats">${stat('Kanto Dex', g.dex)}${stat('Items', g.items)}${stat('NPC gifts', g.gifts)}${stat('Trainers', g.trainers)}</div>`;
+  let html = `<a class="card stats linkcard" href="#/progress">${stat('Kanto Dex', g.dex)}${stat('Items', g.items)}${stat('NPC gifts', g.gifts)}${stat('Trainers', g.trainers)}</a>`;
+  html += `<div class="chips" style="margin-bottom:4px"><a class="chip" href="#/map">Town map</a><a class="chip" href="#/missing">Still missing</a><a class="chip" href="#/progress">Progress</a>${typeof nuzOn === 'function' && nuzOn() ? '<a class="chip" href="#/nuzlocke">Nuzlocke</a>' : ''}</div>`;
   let region = '';
   for (const l of state.index) {
     const loc = state.locations[l.id];
@@ -316,7 +320,7 @@ function renderLocation(id) {
         const sub = [METHOD_LABEL[e.method] || e.method, e.levels && `Lv ${esc(e.levels)}`, e.rate && esc(e.rate), e.notes && esc(e.notes),
           later && `Needs ${esc(UNLOCK[e.method].need)}`].filter(Boolean).join(' · ');
         const excl = e.versions.length === 1 ? `<span class="tag">${e.versions[0]} only</span>` : '';
-        return checkRow(`dex:${e.dex}`, s.caught[e.dex], `#${String(e.dex).padStart(3, '0')} ${esc(e.name)} ${types(e.dex)}`, sub, excl);
+        return checkRow(`dex:${e.dex}`, s.caught[e.dex], `#${String(e.dex).padStart(3, '0')} ${esc(e.name)} ${types(e.dex)}`, sub, excl + infoLink(e.dex));
       }).join('');
     }
     return out;
@@ -340,9 +344,13 @@ function renderLocation(id) {
   section('Items', loc.items.filter(i => !i.hidden), 'item', () => 'On the ground');
   section('Hidden items', loc.items.filter(i => i.hidden), 'item', () => 'Hidden: use the Itemfinder');
   section('NPC gifts &amp; trades', v.gifts, 'gift', g => [g.from && esc(g.from), esc(g.where)].filter(Boolean).join(' · '));
+  for (const f of LOC_SECTIONS) html += f(loc);
   view.innerHTML = html;
 }
 
+// Extra location page sections (shops, move tutors...) registered by features.js and friends: loc -> html
+const LOC_SECTIONS = [];
+const infoLink = n => ` <a class="info" href="#/mon/${n}" aria-label="About ${esc(mon(n).name)}">ⓘ</a>`;
 function choiceCard(c) {
   const p = pickOf(c.id), nm = `pick-${c.id}-${rowSeq++}`;
   const opt = o => {
@@ -405,8 +413,9 @@ function renderDex() {
       <button class="chip ${f.missing ? 'on' : ''}" data-f="missing">Missing only</button>
     </div>
     <input type="search" id="dexq" placeholder="Search name or number" value="${esc(f.q)}" style="margin-top:10px"></div>
+    <p class="note"><a href="#/missing">Still missing: what you can catch now and where</a></p>
     <div class="card">${list.map(p => checkRow(`dex:${p.dex}`, isCaught(p.dex),
-      `#${String(p.dex).padStart(3, '0')} ${esc(p.name)} ${types(p.dex)}`, availText(p.dex))).join('') || '<div class="empty">Nothing matches.</div>'}</div>`;
+      `#${String(p.dex).padStart(3, '0')} ${esc(p.name)} ${types(p.dex)}`, availText(p.dex), infoLink(p.dex))).join('') || '<div class="empty">Nothing matches.</div>'}</div>`;
   view.querySelectorAll('[data-f]').forEach(b => b.onclick = () => {
     const [k, v] = b.dataset.f.split(':');
     if (k === 'scope') f.scope = v; else f.missing = !f.missing;
@@ -418,7 +427,8 @@ function renderDex() {
 
 // ---------- battle engine (route trainers and the Battle plan tab) ----------
 // Estimates real damage with the Gen 3 formula: levels, base stats, IVs, move power, STAB and type effectiveness.
-// Gen 3 decides physical or special by the move's type. Critical hits, abilities, held items and stat changes are ignored.
+// Gen 3 decides physical or special by the move's type. Abilities a species is sure to have, type-boosting held items
+// and healing berries are counted; critical hits and stat-changing moves are flagged as warnings.
 const PHYSICAL = new Set(['Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel']);
 const VARIES_POWER = { Return: 102, 'Hidden Power': 70, Magnitude: 70, Flail: 40, Present: 40, Revenge: 60 };
 const PLAYER_IV = 15; // average IVs for your Pokémon; no EVs
@@ -479,9 +489,37 @@ function moveScore(dex, level, name) {
   }
   return m.effect === 'charge' || m.effect === 'recharge' ? power / 2 : power;
 }
-function bestMoves(dex, level, from, relearn) {
+// TMs and HMs you can have by a point in the story: found or given at a location you've reached, bought at the
+// Celadon Department Store or won at the Game Corner. One handed over after a battle ("after winning") only counts
+// once that battle is behind you, so Misty's TM03 is never planned for the fight with Misty.
+const tmCache = {};
+function tmStage(src, tm) {
+  // the Cerulean City burglar is behind the house you can only get through after visiting Bill on Route 25
+  if (src.loc === 'cerulean-city' && /Rocket Grunt/.test(src.from || '')) return stageOf('route-25') + 0.5;
+  // a trainer who hands it over as a battle reward (Gym Leaders, Giovanni...): only after that battle
+  const t = (state.locations[src.loc]?.trainers || []).find(x => (x.rewards || []).some(r => r.split(' ')[0] === tm));
+  if (t) return battleStage(t, src.loc) + 0.5;
+  return stageOf(src.loc) + (/after (winning|beating)/i.test(src.from || '') ? 0.5 : 0);
+}
+function tmsBy(stage) {
+  if (tmCache[stage]) return tmCache[stage];
+  const out = [];
+  for (const [tm, t] of Object.entries(state.tms || {})) {
+    const src = (t.sources || []).map(x => ({ ...x, stage: tmStage(x, tm) })).filter(x => x.stage <= stage).sort((a, b) => a.stage - b.stage)[0];
+    if (src) out.push({ tm, move: t.move, src });
+  }
+  return (tmCache[stage] = out);
+}
+// Moves this Pokémon could be taught from the TMs and HMs you can have by then: move -> { tm, src }
+function tmMovesBy(dex, stage) {
+  const can = new Set(mon(dex).tmhm || []), out = new Map();
+  for (const t of tmsBy(stage)) if (can.has(t.tm)) out.set(t.move, { tm: t.tm, src: t.src });
+  return out;
+}
+const tmSourceText = x => `${x.tm} (${x.src.how === 'buy' ? `buy at ${state.locations[x.src.loc]?.name}` : x.src.how === 'prize' ? 'Game Corner prize' : state.locations[x.src.loc]?.name || x.src.loc})`;
+function bestMoves(dex, level, from, relearn, extra) {
   const best = {};
-  for (const name of learnedBy(dex, level, from, relearn).keys()) {
+  for (const name of new Set([...learnedBy(dex, level, from, relearn).keys(), ...(extra ? extra.keys() : [])])) {
     // Low Kick's power depends on the target's weight, so it doesn't crowd out the other Fighting move
     const sc = moveScore(dex, level, name), t = name === 'Low Kick' ? name : state.moves[name]?.type;
     if (sc && (!best[t] || sc > best[t].sc)) best[t] = { name, sc };
@@ -490,10 +528,29 @@ function bestMoves(dex, level, from, relearn) {
   // a Pokémon that knows no attack yet still has whatever it learned
   return out.length ? out : defaultMoves(dex, level);
 }
-function battler(dex, level, iv, moves) {
+function battler(dex, level, iv, moves, item) {
   const st = calcStats(dex, level, iv);
-  return { dex, level, iv, moves: moves.filter(m => state.moves[m]), hp: st[0], st };
+  return { dex, level, iv, moves: moves.filter(m => state.moves[m]), hp: st[0], st, ...(item ? { item } : {}) };
 }
+// Abilities that change damage. A Pokémon whose species has two abilities could have either, so only a species with
+// one possible ability is counted for sure; the other cases get a "may have" warning instead (abilityNote).
+const soleAbility = dex => { const a = mon(dex).abilities || []; return a.length === 1 ? a[0] : null; };
+const IMMUNE_AB = { Levitate: 'Ground', 'Flash Fire': 'Fire', 'Water Absorb': 'Water', 'Volt Absorb': 'Electric' };
+// Held items that boost one type's moves by 10% in Gen 3
+const TYPE_ITEM = { 'Black Belt': 'Fighting', Charcoal: 'Fire', 'Mystic Water': 'Water', 'Miracle Seed': 'Grass', Magnet: 'Electric',
+  'Never-melt Ice': 'Ice', 'Poison Barb': 'Poison', 'Soft Sand': 'Ground', 'Sharp Beak': 'Flying', Twistedspoon: 'Psychic',
+  Silverpowder: 'Bug', 'Hard Stone': 'Rock', 'Spell Tag': 'Ghost', 'Dragon Fang': 'Dragon', Blackglasses: 'Dark', 'Metal Coat': 'Steel', 'Silk Scarf': 'Normal' };
+const BERRY_HEAL = { 'Sitrus Berry': 30, 'Oran Berry': 10 };
+// Moves that change stats, so a long fight can swing: shown as a warning, not counted in the damage
+const STAT_MOVES = { Growl: 'lowers your Attack', 'Tail Whip': 'lowers your Defense', Leer: 'lowers your Defense', Screech: 'sharply lowers your Defense',
+  Charm: 'sharply lowers your Attack', 'Feather Dance': 'sharply lowers your Attack', 'Metal Sound': 'sharply lowers your Sp. Def', 'Fake Tears': 'sharply lowers your Sp. Def',
+  'Swords Dance': 'sharply raises its Attack', 'Dragon Dance': 'raises its Attack and Speed', 'Bulk Up': 'raises its Attack and Defense', 'Calm Mind': 'raises its Sp. Atk and Sp. Def',
+  Growth: 'raises its Sp. Atk', Meditate: 'raises its Attack', Sharpen: 'raises its Attack', 'Howl': 'raises its Attack', 'Belly Drum': 'maximises its Attack',
+  Harden: 'raises its Defense', Withdraw: 'raises its Defense', 'Defense Curl': 'raises its Defense', 'Iron Defense': 'sharply raises its Defense',
+  Barrier: 'sharply raises its Defense', 'Acid Armor': 'sharply raises its Defense', Amnesia: 'sharply raises its Sp. Def', Agility: 'sharply raises its Speed',
+  'Double Team': 'raises its evasion', Minimize: 'raises its evasion', 'Sand-attack': 'lowers your accuracy', Smokescreen: 'lowers your accuracy',
+  Flash: 'lowers your accuracy', Kinesis: 'lowers your accuracy', 'Cotton Spore': 'sharply lowers your Speed', 'String Shot': 'lowers your Speed', 'Scary Face': 'sharply lowers your Speed' };
+const HIGH_CRIT = new Set(['Karate Chop', 'Razor Leaf', 'Crabhammer', 'Slash', 'Aeroblast', 'Cross Chop', 'Sky Attack', 'Blaze Kick', 'Poison Tail', 'Leaf Blade', 'Air Cutter']);
 const teamMeta = n => (cur().teamMeta ||= {})[n] || {};
 function myBattler(n, foeLevel) {
   const meta = teamMeta(n);
@@ -501,13 +558,15 @@ function myBattler(n, foeLevel) {
   const moves = (meta.moves || []).filter(Boolean);
   return { ...battler(n, level, PLAYER_IV, moves.length ? moves : bestMoves(n, level)), guessedLevel: !meta.level, guessedMoves: !moves.length };
 }
-const foeBattler = p => ({ ...battler(p.dex, p.level, p.iv ?? 0, (p.moves || []).map(m => m.name)), foe: true });
+const foeBattler = p => ({ ...battler(p.dex, p.level, p.iv ?? 0, (p.moves || []).map(m => m.name), p.item), foe: true });
 
 // Damage range of one move, in HP. null for moves that don't deal direct damage.
-function hit(att, def, name) {
+function hit(att, def, name, crit = false) {
   const m = state.moves[name];
   if (!m || !m.power || ['counter', 'dream', 'ohko'].includes(m.effect)) return null;
-  const mult = eff(m.type, mon(def.dex).types);
+  const aAb = soleAbility(att.dex), dAb = soleAbility(def.dex);
+  let mult = eff(m.type, mon(def.dex).types);
+  if (IMMUNE_AB[dAb] === m.type || (dAb === 'Wonder Guard' && mult < 2)) mult = 0;
   const out = (min, max) => ({ name, type: m.type, mult, min, max });
   if (mult === 0) return out(0, 0);
   if (m.effect === 'level') return out(att.level, att.level);
@@ -519,9 +578,16 @@ function hit(att, def, name) {
   const power = name === 'Low Kick' ? (w < 100 ? 20 : w < 250 ? 40 : w < 500 ? 60 : w < 1000 ? 80 : w < 2000 ? 100 : 120) : m.power === 1 ? VARIES_POWER[name] : m.power;
   if (!power) return null;
   const phys = PHYSICAL.has(m.type);
-  const A = att.st[phys ? 1 : 3];
+  let A = att.st[phys ? 1 : 3];
+  if (phys && ['Huge Power', 'Pure Power'].includes(aAb)) A *= 2;
+  if (phys && aAb === 'Hustle') A = Math.floor(A * 1.5);
+  if (phys && dAb === 'Intimidate' && !crit) A = Math.floor(A * 2 / 3); // their Intimidate on the way in: your Attack -1
+  if (dAb === 'Thick Fat' && (m.type === 'Fire' || m.type === 'Ice')) A = Math.floor(A / 2);
   const D = Math.max(1, Math.floor(def.st[phys ? 2 : 4] / (m.effect === 'explode' ? 2 : 1)));
-  let dmg = Math.floor(Math.floor(Math.floor(2 * att.level / 5 + 2) * power * A / D) / 50) + 2;
+  const pw = TYPE_ITEM[att.item] === m.type ? Math.floor(power * 1.1) : power;
+  let dmg = Math.floor(Math.floor(Math.floor(2 * att.level / 5 + 2) * pw * A / D) / 50);
+  if (crit) dmg *= 2;
+  dmg += 2;
   if (mon(att.dex).types.includes(m.type)) dmg = Math.floor(dmg * 1.5);
   dmg = Math.floor(dmg * mult);
   const hits = HITS[m.effect] || 1;
@@ -542,15 +608,30 @@ function bestHit(att, def) {
     .sort((a, b) => turnsToKO(a, def.hp, low) - turnsToKO(b, def.hp, low) || b.min + b.max - a.min - a.max)[0] || null;
 }
 // How a battle between one of your Pokémon and one of theirs goes, one-on-one.
+// HP a Pokémon effectively has: a held Sitrus or Oran Berry heals it once
+const effHP = b => b.hp + (BERRY_HEAL[b.item] || 0);
 function duel(me, foe) {
   const mine = bestHit(me, foe), theirs = bestHit(foe, me);
-  const myHits = turnsToKO(mine, foe.hp, true);
-  const theirHits = turnsToKO(theirs, me.hp, false);
+  const myHits = turnsToKO(mine, effHP(foe), true);
+  const theirHits = turnsToKO(theirs, effHP(me), false);
   const faster = me.st[5] > foe.st[5];
   const wins = myHits < theirHits || (myHits === theirHits && faster && myHits !== Infinity);
   const se = me.moves.filter(n => { const h = hit(me, foe, n); return h && h.mult >= 2; });
   const threats = foe.moves.filter(n => { const h = hit(foe, me, n); return h && h.mult >= 2; });
-  return { me, mine, theirs, myHits, theirHits, faster, wins, se, threats };
+  // a critical hit (1 in 16, 1 in 8 for high-crit moves) doubles damage: could it KO you sooner?
+  const critHit = theirs && hit(foe, me, theirs.name, true);
+  const critHits = critHit ? turnsToKO(critHit, effHP(me), false) : Infinity;
+  return { me, mine, theirs, myHits, theirHits, faster, wins, se, threats, critHits: critHits < theirHits ? critHits : null };
+}
+// What the damage numbers don't count for this foe: possible abilities, held items, stat moves
+function foeNotes(p) {
+  const out = [], abs = mon(p.dex).abilities || [];
+  if (abs.length === 1) { if (['Levitate', 'Flash Fire', 'Water Absorb', 'Volt Absorb', 'Wonder Guard', 'Thick Fat', 'Intimidate', 'Huge Power', 'Hustle', 'Sturdy', 'Static', 'Poison Point', 'Flame Body', 'Effect Spore', 'Shed Skin', 'Swift Swim', 'Chlorophyll', 'Speed Boost'].includes(abs[0])) out.push(`Ability: ${abs[0]}`); }
+  else if (abs.length > 1) out.push(`Ability: ${abs.join(' or ')}`);
+  if (p.item) out.push(`Holding ${p.item}${BERRY_HEAL[p.item] ? ` (heals ${BERRY_HEAL[p.item]} HP once)` : TYPE_ITEM[p.item] ? ` (${TYPE_ITEM[p.item]} moves +10%)` : ''}`);
+  const st = (p.moves || []).filter(m => STAT_MOVES[m.name]).map(m => `${m.name} ${STAT_MOVES[m.name]}`);
+  if (st.length) out.push(`Watch for ${st.join('; ')}`);
+  return out;
 }
 const rankDuels = (a, b) => b.wins - a.wins || a.myHits - b.myHits || (a.theirs?.max || 0) / a.me.hp - (b.theirs?.max || 0) / b.me.hp;
 
@@ -565,11 +646,13 @@ function bestTypesAgainst(party) {
 // Pokémon you could have caught by a point in the story: one entry per species, at the earliest place you can get it.
 const catchCache = {};
 function catchableBy(stage) {
-  const key = V() + ':' + stage + ':' + JSON.stringify(cur().picks || {});
+  // Nuzlocke mode (modes.js) limits each area to its first encounter
+  const nuz = typeof nuzAllows === 'function' && nuzOn() ? nuzAllows : null;
+  const key = V() + ':' + stage + ':' + JSON.stringify(cur().picks || {}) + (nuz ? JSON.stringify(cur().nuz.areas) : '');
   if (catchCache[key]) return catchCache[key];
   const out = [];
   for (const [dex, list] of Object.entries(state.found)) {
-    const w = list.find(x => inVersion(x) && allowed(x, +dex) && x.stage <= stage && !['trade', 'roaming'].includes(x.method) && !(x.loc === 'pallet-town' && x.method === 'gift'));
+    const w = list.find(x => inVersion(x) && allowed(x, +dex) && x.stage <= stage && !['trade', 'roaming'].includes(x.method) && !(x.loc === 'pallet-town' && x.method === 'gift') && (!nuz || nuz(x.loc, +dex)));
     if (w) out.push({ dex: +dex, ...w });
   }
   return (catchCache[key] = out);
@@ -602,8 +685,9 @@ function catchSuggestions(foeMon, foe, stage, party, n = 2) {
     const from = { dex: c.dex, level: catchLevel(c) }, level = Math.max(foe.level, from.level);
     for (const f of evoForms(c.dex, level, stage)) {
       if (seen.has(f.dex)) continue;
-      const learned = learnedBy(f.dex, level, from, relearn);
-      const me = battler(f.dex, level, PLAYER_IV, bestMoves(f.dex, level, from, relearn));
+      const learned = learnedBy(f.dex, level, from, relearn), tmm = tmMovesBy(f.dex, stage);
+      for (const [mv, x] of tmm) if (!learned.has(mv)) learned.set(mv, x);
+      const me = battler(f.dex, level, PLAYER_IV, bestMoves(f.dex, level, from, relearn, tmm));
       const d = duel(me, foe);
       if (!d.se.length || d.myHits === Infinity) continue;
       const risk = [];
@@ -628,7 +712,7 @@ function hitText(h, target, hits) {
 
 function teamHint() {
   const team = cur().team;
-  return `<p class="note">${team.length ? `Picks use your team from <a href="#/planner">Battle plan</a>: ${team.map(n => esc(mon(n).name)).join(', ')}. Set their levels and moves there for exact numbers.`
+  return `${typeof nuzBanner === 'function' ? nuzBanner() : ''}<p class="note">${team.length ? `Picks use your team from <a href="#/planner">Battle plan</a>: ${team.map(n => esc(mon(n).name)).join(', ')}. Set their levels and moves there for exact numbers.`
     : `Add your team in <a href="#/planner">Battle plan</a> to see who to send out against each trainer.`}
     Damage is estimated with the game's formula. When nobody on your team has a super-effective move, you get a Pokémon you could catch by this point in the story.</p>`;
 }
@@ -647,7 +731,7 @@ function foeRow(p, stage, party) {
     pick += `<table class="mini duel"><tr><th>Yours</th><th>Your best hit</th><th>Their best hit on you</th></tr>${duels.map(d => `<tr${d === best ? ' class="best"' : ''}>
         <td><b>${esc(mon(d.me.dex).name)}</b> Lv ${d.me.level}${d.me.guessedLevel ? '*' : ''}${d.faster ? ' <span class="note">faster</span>' : ''}</td>
         <td>${hitText(d.mine, foe, d.myHits)}</td>
-        <td>${hitText(d.theirs, d.me, d.theirHits)}${d.threats.length ? `<div class="bad">Super effective: ${d.threats.map(esc).join(', ')}</div>` : ''}</td></tr>`).join('')}</table>`;
+        <td>${hitText(d.theirs, d.me, d.theirHits)}${d.critHits ? `<div class="meh">A critical hit could KO in ${hitsText(d.critHits).replace('OHKO', 'one hit')}</div>` : ''}${d.threats.length ? `<div class="bad">Super effective: ${d.threats.map(esc).join(', ')}</div>` : ''}</td></tr>`).join('')}</table>`;
   }
   // Suggest a catch when you'd lose, or when nobody is super effective and the fight isn't a quick win anyway
   if (!best || !best.wins || (!duels.some(d => d.se.length) && best.myHits > 2)) {
@@ -657,13 +741,14 @@ function foeRow(p, stage, party) {
       const evo = f.dex !== c.dex ? `${esc(mon(c.dex).name)} and evolve it into <b>${esc(mon(f.dex).name)}</b> (${esc(f.via.join(', then '))})` : `<b>${esc(mon(c.dex).name)}</b>`;
       return `${evo} ${types(f.dex)} on <a href="#/loc/${c.loc}">${esc(c.name)}</a>
         <span class="note">(${esc(METHOD_LABEL[c.method] || c.method)}${c.levels ? `, Lv ${esc(c.levels)}` : ''}${isCaught(c.dex) ? ', you have one' : ''}).
-        At Lv ${level}: ${hitText(d.mine, foe, d.myHits)}${learn && learn.level > catchLevel(c) ? `, ${learn.from !== f.dex ? `${esc(mon(learn.from).name)} ` : ''}learns it at Lv ${learn.level}${learn.from !== f.dex && f.via.length ? ' (before evolving)' : ''}` : ''}${d.wins ? '' : ', but it may lose the one-on-one'}</span>${risk.length ? `<div class="bad">Watch out for ${esc(risk.slice(0, 3).join(', '))}</div>` : ''}`;
+        At Lv ${level}: ${hitText(d.mine, foe, d.myHits)}${learn?.tm ? `, teach it ${esc(tmSourceText(learn))}` : learn && learn.level > catchLevel(c) ? `, ${learn.from !== f.dex ? `${esc(mon(learn.from).name)} ` : ''}learns it at Lv ${learn.level}${learn.from !== f.dex && f.via.length ? ' (before evolving)' : ''}` : ''}${d.wins ? '' : ', but it may lose the one-on-one'}</span>${risk.length ? `<div class="bad">Watch out for ${esc(risk.slice(0, 3).join(', '))}</div>` : ''}`;
     }).join('<br>or ')}</div>`
-      : `<div class="note">Nothing you can catch by ${esc(state.index[stage]?.name || 'now')} learns a super-effective move by Lv ${p.level}.</div>`;
+      : `<div class="note">Nothing you can catch by ${esc(state.index[stage]?.name || 'now')} learns or can be taught (TM/HM) a super-effective move by Lv ${p.level}.</div>`;
   }
-  return `<div class="foe"><div><b>${esc(p.name)}</b> Lv ${p.level} ${types(p.dex)} <span class="note">${foe.hp} HP${p.item ? ` · holding ${esc(p.item)}` : ''}</span></div>
+  return `<div class="foe"><div><b>${esc(p.name)}</b> Lv ${p.level} ${types(p.dex)} <span class="note">${foe.hp} HP</span></div>
     ${p.moves?.length ? `<div class="moves">${p.moves.map(m => `<span class="mv">${esc(m.name)}${m.type ? ` <i class="t-${m.type}"></i>` : ''}${m.power ? ` <small>${m.power === 1 ? '—' : m.power}</small>` : ''}</span>`).join('')}</div>` : ''}
     <div class="note">Weak to: ${weak.length ? weak.map(w => typeTag(w.t) + (w.m === 4 ? '×4' : '')).join(' ') : 'nothing'}</div>
+    ${(() => { const n = foeNotes(p); return n.length ? `<div class="note">${n.map(esc).join(' · ')}</div>` : ''; })()}
     <div class="pick">${pick}</div></div>`;
 }
 
@@ -687,6 +772,7 @@ function trainerCard(t, stage, opts = {}) {
     ${info ? `<p class="note">${info}</p>` : ''}
     ${t.note && !t.byStarter ? `<p class="note">${esc(t.note)}</p>` : ''}${rival}${party ? opts.extra?.(party) || '' : ''}
     ${party ? party.map(p => foeRow(p, stage, party)).join('') : ''}
+    ${opts.loc && typeof rematchBlock === 'function' ? rematchBlock(t, opts.loc) : ''}
     ${party && cur().team.some(n => !teamMeta(n).level) ? '<p class="note">* Level not set in Battle plan, so it is assumed to match theirs.</p>' : ''}</details>`;
 }
 
@@ -710,6 +796,7 @@ function renderPlanner() {
     <datalist id="movelist">${moveNames.map(m => `<option value="${esc(m)}">`).join('')}</datalist>
     <div class="note" style="margin-top:12px">Starter you picked in <a href="#/loc/pallet-town">Professor Oak's Lab</a> (sets your rival's team)${pickOf('starter') ? '' : ': <b class="bad">not picked yet</b>'}</div>
     ${starterChips()}</div>
+    ${typeof hmHelper === 'function' ? hmHelper() : ''}
     <p class="note">Gym Leaders, rival battles, Giovanni, the Elite Four and the Champion in story order. Every other trainer is on its route page.</p>`;
   for (const t of state.trainers) {
     html += trainerCard(t, battleStage(t, t.location), {
@@ -717,7 +804,7 @@ function renderPlanner() {
       extra: party => `<p class="note">Types that hit most of this team: ${bestTypesAgainst(party).map(g => typeTag(g.t)).join(' ')}</p>`
     });
   }
-  html += `<p class="note">Damage uses the Gen 3 formula with your levels and moves, their real moves and IVs, average IVs for yours and no EVs. Critical hits, abilities, held items and stat changes are not counted, so treat close calls with care.</p>`;
+  html += `<p class="note">Damage uses the Gen 3 formula with your levels and moves, their real moves and IVs, average IVs for yours and no EVs. Abilities are counted when the species can only have one (Levitate, Thick Fat, Intimidate...), held type boosters and berries are counted, and a critical hit that could KO you sooner is flagged. Stat-changing moves and two-ability Pokémon are shown as warnings, not counted.</p>`;
   view.innerHTML = html;
   view.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => { s.team.splice(+b.dataset.rm, 1); save(); renderPlanner(); });
   view.querySelectorAll('[data-lvl]').forEach(inp => inp.onchange = () => {
@@ -808,16 +895,21 @@ function updateLegCount(el) {
 }
 
 // ---------- tools ----------
-function renderTools(tool) {
-  setHeader(tool ? { breeding: 'Breeding helper', types: 'Type matchups', exclusives: 'Version exclusives' }[tool] : 'Tools', !!tool, 'tools');
+// More tools registered by other files: { id, title, desc, render(arg) }. An id starting with # is a link to another page.
+const TOOLS = [];
+function renderTools(tool, arg) {
+  const ext = TOOLS.find(t => t.id === tool);
+  setHeader(tool ? ext?.title || { breeding: 'Breeding helper', types: 'Type matchups', exclusives: 'Version exclusives' }[tool] : 'Tools', !!tool, 'tools');
+  if (ext?.render) return ext.render(arg);
   if (tool === 'breeding') return renderBreeding();
   if (tool === 'types') return renderTypes();
   if (tool === 'exclusives') return renderExclusives();
   view.innerHTML = [
     ['breeding', 'Breeding helper', 'Egg groups, compatible partners, what hatches and how many steps it takes'],
     ['types', 'Type matchups', 'Look up weaknesses for any type combination, plus the full chart'],
-    ['exclusives', 'Version exclusives', `Pokémon you need to trade for from ${VNAME[OTHER[V()]]}`]
-  ].map(([id, t, d]) => `<a class="card loc" href="#/tools/${id}"><div class="name">${t}<div class="meta">${d}</div></div><span>&rsaquo;</span></a>`).join('');
+    ['exclusives', 'Version exclusives', `Pokémon you need to trade for from ${VNAME[OTHER[V()]]}`],
+    ...TOOLS.map(t => [t.id, t.title, t.desc])
+  ].map(([id, t, d]) => `<a class="card loc" href="${id.startsWith('#') ? id : `#/tools/${id}`}"><div class="name">${t}<div class="meta">${d}</div></div><span>&rsaquo;</span></a>`).join('');
 }
 
 function renderBreeding() {
@@ -890,7 +982,9 @@ function renderExclusives() {
 function renderSettings() {
   setHeader('Backup & settings', true, '');
   view.innerHTML = `
-    <div class="card"><label class="row"><input type="checkbox" id="hideDone" ${state.progress.hideDone ? 'checked' : ''}><span>Hide completed locations</span></label></div>
+    <div class="card"><label class="row"><input type="checkbox" id="hideDone" ${state.progress.hideDone ? 'checked' : ''}><span>Hide completed locations</span></label>
+      <label class="row"><input type="checkbox" id="hideRows" ${state.progress.hideRows ? 'checked' : ''}><span>Hide ticked-off rows on location pages</span></label>
+      <div class="row"><span>Theme</span><select id="theme" style="width:auto;margin-left:auto">${['auto', 'light', 'dark'].map(t => `<option ${(state.progress.theme || 'auto') === t ? 'selected' : ''}>${t}</option>`).join('')}</select></div></div>
     ${SYNC_URL ? syncCard() : ''}
     <h2>Backup</h2>
     <div class="card"><p class="note">Progress is saved on this device${SYNC_URL ? ' (and in the cloud if you turn on sync above)' : ' only'}. Export a backup file to move it to another phone or keep it safe.</p>
@@ -900,6 +994,8 @@ function renderSettings() {
     <div class="card"><button class="btn" id="reset">Reset ${VNAME[V()]} progress</button></div>
     <p class="note">Pokémon, item, gift and trainer data come from the pret/pokefirered decompilation of the game. Walkthrough steps are written guidance.</p>`;
   document.getElementById('hideDone').onchange = e => { state.progress.hideDone = e.target.checked; save(); };
+  document.getElementById('hideRows').onchange = e => { state.progress.hideRows = e.target.checked; save(); applyVersion(); };
+  document.getElementById('theme').onchange = e => { state.progress.theme = e.target.value; save(); applyVersion(); };
   document.getElementById('export').onclick = () => {
     const blob = new Blob([JSON.stringify(state.progress, null, 2)], { type: 'application/json' });
     const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'frlg-dex-backup.json' });
@@ -1023,6 +1119,9 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('online', () => { if (sync.on()) sync.cfg.dirty ? sync.push() : sync.pull(); });
 
 // ---------- shell ----------
+// Extra pages (features.js and friends) register themselves here: PAGES.mon = id => ..., reached at #/mon/<id>.
+const PAGES = {};
+const AFTER_RENDER = []; // (page, id) => void, run after every page is drawn
 function setHeader(title, back, tab) {
   document.getElementById('title').textContent = title;
   document.getElementById('back').hidden = !back;
@@ -1030,33 +1129,60 @@ function setHeader(title, back, tab) {
 }
 function applyVersion() {
   document.documentElement.dataset.version = V();
+  document.documentElement.dataset.theme = state.progress.theme || 'auto';
+  document.documentElement.classList.toggle('hide-rows', !!state.progress.hideRows);
   document.querySelectorAll('[data-version]').forEach(b => b.classList.toggle('on', b.dataset.version === V()));
 }
 function route(keepScroll) {
   const y = window.scrollY;
-  const [, page, id] = location.hash.split('/');
+  const [, page, id, arg] = location.hash.split('/');
   if (page === 'loc') renderLocation(id);
   else if (page === 'dex') renderDex();
   else if (page === 'planner') renderPlanner();
   else if (page === 'plan') renderPlan();
-  else if (page === 'tools') renderTools(id);
+  else if (page === 'tools') renderTools(id, arg && decodeURIComponent(arg));
   else if (page === 'settings') renderSettings();
+  else if (PAGES[page]) PAGES[page](id ? decodeURIComponent(id) : id);
   else renderHome();
+  for (const f of AFTER_RENDER) f(page, id);
   window.scrollTo(0, keepScroll ? y : 0);
 }
 
+// Undo for the last checkbox: a toast at the bottom for a few seconds
+let undoTimer = null;
+function showUndo(key, was, label) {
+  let t = document.getElementById('toast');
+  if (!t) { t = Object.assign(document.createElement('div'), { id: 'toast', className: 'toast' }); document.body.appendChild(t); }
+  t.innerHTML = `<span>${esc(label)}</span><button class="btn small" id="undoBtn">Undo</button>`;
+  t.hidden = false;
+  clearTimeout(undoTimer); undoTimer = setTimeout(() => { t.hidden = true; }, 5000);
+  document.getElementById('undoBtn').onclick = () => {
+    const s = cur();
+    if (key.startsWith('dex:')) { if (was) s.caught[key.slice(4)] = was; else delete s.caught[key.slice(4)]; }
+    else if (was) s.checks[key] = true; else delete s.checks[key];
+    t.hidden = true; save(); route(true);
+  };
+}
 view.addEventListener('change', e => {
   if (e.target.dataset?.pick) return setPick(e.target.dataset.pick, e.target.value);
   const key = e.target.dataset?.key;
   if (!key) return;
   const s = cur();
+  const was = key.startsWith('dex:') ? s.caught[key.slice(4)] : s.checks[key];
+  try {
+    const box = e.target.closest('.row, .trainer, .chip');
+    const span = box.querySelector('label > span, .tname');
+    const lbl = (span ? [...span.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent).join('') : box.textContent) || 'item';
+    showUndo(key, was, `${e.target.checked ? 'Ticked' : 'Unticked'} ${lbl.trim().slice(0, 40)}`);
+  } catch (err) { /* no toast without a page to show it on */ }
   if (key.startsWith('dex:')) {
     const d = key.slice(4);
     if (e.target.checked) s.caught[d] = true; else delete s.caught[d];
     view.querySelectorAll(`[data-key="dex:${d}"]`).forEach(x => { x.checked = e.target.checked; x.closest('.row').classList.toggle('checked', e.target.checked); });
   } else if (e.target.checked) s.checks[key] = true; else delete s.checks[key];
   save();
-  e.target.closest('.row, .trainer').classList.toggle('checked', e.target.checked);
+  e.target.closest('.row, .trainer')?.classList.toggle('checked', e.target.checked);
+  e.target.closest('.chip')?.classList.toggle('on', e.target.checked);
   updateLegCount(e.target);
   if (key.includes(':trainer:')) { const h = [...view.querySelectorAll('h2')].find(x => x.textContent.startsWith('Trainers (')); if (h) h.textContent = h.textContent.replace(/\(\d+\//, `(${view.querySelectorAll('.tcheck:checked').length}/`); }
 });

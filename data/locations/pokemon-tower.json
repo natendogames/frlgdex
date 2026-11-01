@@ -734,40 +734,6 @@
   },
   {
    "class": "Channeler",
-   "name": "Jody",
-   "prize": 704,
-   "party": [
-    {
-     "dex": 92,
-     "name": "Gastly",
-     "level": 22,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Spite",
-       "type": "Ghost"
-      },
-      {
-       "name": "Curse",
-       "type": "Mystery"
-      },
-      {
-       "name": "Night Shade",
-       "type": "Ghost",
-       "power": 1
-      },
-      {
-       "name": "Confuse Ray",
-       "type": "Ghost"
-      }
-     ]
-    }
-   ],
-   "id": "channeler-jody",
-   "area": "4F"
-  },
-  {
-   "class": "Channeler",
    "name": "Paula",
    "prize": 768,
    "party": [
@@ -798,6 +764,40 @@
     }
    ],
    "id": "channeler-paula",
+   "area": "4F"
+  },
+  {
+   "class": "Channeler",
+   "name": "Jody",
+   "prize": 704,
+   "party": [
+    {
+     "dex": 92,
+     "name": "Gastly",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Spite",
+       "type": "Ghost"
+      },
+      {
+       "name": "Curse",
+       "type": "Mystery"
+      },
+      {
+       "name": "Night Shade",
+       "type": "Ghost",
+       "power": 1
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "id": "channeler-jody",
    "area": "4F"
   },
   {
@@ -861,7 +861,7 @@
   },
   {
    "class": "Channeler",
-   "name": "Janae",
+   "name": "Ruth",
    "prize": 704,
    "party": [
     {
@@ -890,41 +890,7 @@
      ]
     }
    ],
-   "id": "channeler-janae",
-   "area": "5F"
-  },
-  {
-   "class": "Channeler",
-   "name": "Karina",
-   "prize": 768,
-   "party": [
-    {
-     "dex": 92,
-     "name": "Gastly",
-     "level": 24,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Spite",
-       "type": "Ghost"
-      },
-      {
-       "name": "Curse",
-       "type": "Mystery"
-      },
-      {
-       "name": "Night Shade",
-       "type": "Ghost",
-       "power": 1
-      },
-      {
-       "name": "Confuse Ray",
-       "type": "Ghost"
-      }
-     ]
-    }
-   ],
-   "id": "channeler-karina",
+   "id": "channeler-ruth",
    "area": "5F"
   },
   {
@@ -963,7 +929,41 @@
   },
   {
    "class": "Channeler",
-   "name": "Ruth",
+   "name": "Karina",
+   "prize": 768,
+   "party": [
+    {
+     "dex": 92,
+     "name": "Gastly",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Spite",
+       "type": "Ghost"
+      },
+      {
+       "name": "Curse",
+       "type": "Mystery"
+      },
+      {
+       "name": "Night Shade",
+       "type": "Ghost",
+       "power": 1
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "id": "channeler-karina",
+   "area": "5F"
+  },
+  {
+   "class": "Channeler",
+   "name": "Janae",
    "prize": 704,
    "party": [
     {
@@ -992,8 +992,76 @@
      ]
     }
    ],
-   "id": "channeler-ruth",
+   "id": "channeler-janae",
    "area": "5F"
+  },
+  {
+   "class": "Channeler",
+   "name": "Emilia",
+   "prize": 768,
+   "party": [
+    {
+     "dex": 92,
+     "name": "Gastly",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Spite",
+       "type": "Ghost"
+      },
+      {
+       "name": "Curse",
+       "type": "Mystery"
+      },
+      {
+       "name": "Night Shade",
+       "type": "Ghost",
+       "power": 1
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "id": "channeler-emilia",
+   "area": "6F"
+  },
+  {
+   "class": "Channeler",
+   "name": "Jennifer",
+   "prize": 768,
+   "party": [
+    {
+     "dex": 92,
+     "name": "Gastly",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Spite",
+       "type": "Ghost"
+      },
+      {
+       "name": "Curse",
+       "type": "Mystery"
+      },
+      {
+       "name": "Night Shade",
+       "type": "Ghost",
+       "power": 1
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "id": "channeler-jennifer",
+   "area": "6F"
   },
   {
    "class": "Channeler",
@@ -1077,74 +1145,6 @@
     }
    ],
    "id": "channeler-angelica",
-   "area": "6F"
-  },
-  {
-   "class": "Channeler",
-   "name": "Emilia",
-   "prize": 768,
-   "party": [
-    {
-     "dex": 92,
-     "name": "Gastly",
-     "level": 24,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Spite",
-       "type": "Ghost"
-      },
-      {
-       "name": "Curse",
-       "type": "Mystery"
-      },
-      {
-       "name": "Night Shade",
-       "type": "Ghost",
-       "power": 1
-      },
-      {
-       "name": "Confuse Ray",
-       "type": "Ghost"
-      }
-     ]
-    }
-   ],
-   "id": "channeler-emilia",
-   "area": "6F"
-  },
-  {
-   "class": "Channeler",
-   "name": "Jennifer",
-   "prize": 768,
-   "party": [
-    {
-     "dex": 92,
-     "name": "Gastly",
-     "level": 24,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Spite",
-       "type": "Ghost"
-      },
-      {
-       "name": "Curse",
-       "type": "Mystery"
-      },
-      {
-       "name": "Night Shade",
-       "type": "Ghost",
-       "power": 1
-      },
-      {
-       "name": "Confuse Ray",
-       "type": "Ghost"
-      }
-     ]
-    }
-   ],
-   "id": "channeler-jennifer",
    "area": "6F"
   },
   {

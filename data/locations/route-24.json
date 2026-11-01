@@ -507,68 +507,6 @@
   },
   {
    "class": "Camper",
-   "name": "Shane",
-   "prize": 280,
-   "party": [
-    {
-     "dex": 19,
-     "name": "Rattata",
-     "level": 14,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Tackle",
-       "type": "Normal",
-       "power": 35
-      },
-      {
-       "name": "Tail Whip",
-       "type": "Normal"
-      },
-      {
-       "name": "Quick Attack",
-       "type": "Normal",
-       "power": 40
-      },
-      {
-       "name": "Hyper Fang",
-       "type": "Normal",
-       "power": 80
-      }
-     ]
-    },
-    {
-     "dex": 23,
-     "name": "Ekans",
-     "level": 14,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Wrap",
-       "type": "Normal",
-       "power": 15
-      },
-      {
-       "name": "Leer",
-       "type": "Normal"
-      },
-      {
-       "name": "Poison Sting",
-       "type": "Poison",
-       "power": 15
-      },
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      }
-     ]
-    }
-   ],
-   "id": "camper-shane"
-  },
-  {
-   "class": "Camper",
    "name": "Ethan",
    "prize": 360,
    "party": [
@@ -661,6 +599,68 @@
     "Nugget"
    ],
    "id": "team-rocket-grunt-6"
+  },
+  {
+   "class": "Camper",
+   "name": "Shane",
+   "prize": 280,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 14,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 14,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "camper-shane"
   }
  ],
  "verified": true,

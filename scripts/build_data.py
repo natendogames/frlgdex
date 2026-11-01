@@ -210,8 +210,10 @@ for line in open(P('data/scripts/item_ball_scripts.inc')):
     m = re.match(r'\s*finditem (ITEM_\w+)(?:,\s*(\d+))?', line)
     if m and cur: balls[cur] = (m.group(1), int(m.group(2) or 1))
 
-def add_item(loc, name, qty, hidden, where, ident):
+item_flags = {}  # checklist key -> the save flag set when you pick it up (for save file import)
+def add_item(loc, name, qty, hidden, where, ident, flag=None):
     loc['items'].append({'id': ident, 'name': name + (f' ×{qty}' if qty > 1 else ''), 'hidden': hidden, 'where': where})
+    if flag: item_flags[f"{loc['id']}:item:{ident}"] = flag
 
 seen_ids = collections.Counter()
 def uid(loc, base):
@@ -227,11 +229,11 @@ for name in sorted(maps):
     for ev in m.get('object_events') or []:
         if ev.get('script') in balls:
             it, q = balls[ev['script']]
-            add_item(loc, item_name(it), q, False, area, uid(loc, f'{area}-{item_name(it)}'))
+            add_item(loc, item_name(it), q, False, area, uid(loc, f'{area}-{item_name(it)}'), ev.get('flag'))
     for ev in m.get('bg_events') or []:
         if ev.get('type') == 'hidden_item':
             add_item(loc, item_name(ev['item']), int(ev.get('quantity') or 1), True,
-                     area + (' (underfoot)' if ev.get('underfoot') else ''), uid(loc, f'hidden-{area}-{item_name(ev["item"])}'))
+                     area + (' (underfoot)' if ev.get('underfoot') else ''), uid(loc, f'hidden-{area}-{item_name(ev["item"])}'), ev.get('flag'))
 
 # NPC gifts, static encounters, trades
 trades_src = open(P('src/data/ingame_trades.h')).read()
@@ -498,8 +500,51 @@ def position(mapname, lbls):
         if any(l in body for l in lbls): return ev['x'], ev['y']
     return None
 
+# Walking distance from where you come in, on the map's own tile grid (collision and elevation from map.bin), so
+# trainers are listed in the order you reach them even on winding routes. Routes start from the edge you enter by
+# (WALK), buildings and caves from their lowest door. Ledges count as passable both ways; cut trees and boulders are
+# objects, not tiles, so they don't block. Falls back to the plain direction sort when a trainer can't be reached.
+ENTRY = {'RockTunnel_1F': (17, 2), 'DiglettsCave_B1F': (82, 71)}  # you come in at the top of Rock Tunnel; Diglett's Cave from Vermilion's side
+layout_info = {l['id']: l for l in json.load(open(P('data/layouts/layouts.json')))['layouts'] if l.get('id')}
+_dist = {}
+def walk_dist(mapname):
+    if mapname in _dist: return _dist[mapname]
+    m = maps[mapname]; lay = layout_info.get(m['layout'])
+    if not lay: _dist[mapname] = None; return None
+    w, h = lay['width'], lay['height']
+    raw = open(P(lay['blockdata_filepath']), 'rb').read()
+    cells = [int.from_bytes(raw[i:i + 2], 'little') for i in range(0, len(raw), 2)]
+    col = lambda x, y: (cells[y * w + x] >> 10) & 3
+    elev = lambda x, y: cells[y * w + x] >> 12
+    d = WALK.get(mapname)
+    if d:
+        edge = {'N': [(x, h - 1) for x in range(w)], 'S': [(x, 0) for x in range(w)], 'E': [(0, y) for y in range(h)], 'W': [(w - 1, y) for y in range(h)]}[d]
+    else:
+        warps = m.get('warp_events') or []
+        sec = m['region_map_section']
+        # the door in from outside (another location), else any door; the lowest one unless ENTRY says otherwise
+        outside = [wp for wp in warps if wp['dest_map'] in by_const and by_const[wp['dest_map']]['region_map_section'] != sec] or warps
+        edge = [ENTRY[mapname]] if mapname in ENTRY else [max(((wp['x'], wp['y']) for wp in outside), key=lambda p: p[1])] if outside else []
+    start = [(x, y) for x, y in edge if 0 <= x < w and 0 <= y < h and col(x, y) == 0 and elev(x, y) not in (1,)] or [(x, y) for x, y in edge if 0 <= x < w and 0 <= y < h and col(x, y) == 0]
+    dist = {p: 0 for p in start}
+    q = collections.deque(start)
+    while q:
+        x, y = q.popleft()
+        for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+            if not (0 <= nx < w and 0 <= ny < h) or (nx, ny) in dist or col(nx, ny): continue
+            e1, e2 = elev(x, y), elev(nx, ny)
+            if e1 != e2 and e1 not in (0, 15) and e2 not in (0, 15): continue
+            dist[(nx, ny)] = dist[(x, y)] + 1; q.append((nx, ny))
+    _dist[mapname] = dist
+    return dist
+
 def sort_key(mapname, pos):
     if pos is None: return (1, 0)
+    dist = walk_dist(mapname)
+    if dist:
+        x, y = pos
+        near = [dist[p] for p in ((x, y), (x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)) if p in dist]
+        if near: return (0, min(near), 0)
     x, y = pos
     d = WALK.get(mapname, 'N')  # buildings and caves: you enter from the bottom
     return (0, {'N': -y, 'S': y, 'E': x, 'W': -x}[d], {'N': x, 'S': x, 'E': y, 'W': y}[d])
@@ -513,6 +558,7 @@ def area_sort(lid, area):
     return (2, 0, area)
 
 per_loc = collections.defaultdict(list)
+trainer_consts = {}
 for (mapname, key), b in found_battles.items():
     sec = maps[mapname]['region_map_section']
     lid = loc_id(sec); area = area_name(mapname, sec)
@@ -527,6 +573,7 @@ for (mapname, key), b in found_battles.items():
     rewards = list(dict.fromkeys(r for l in b['labels'] for r in label_rewards(l)))
     if rewards: rec['rewards'] = rewards
     rec['id'] = re.sub(r'[^a-z0-9]+', '-', key.replace('TRAINER_', '').lower()).strip('-')
+    trainer_consts[(lid, rec['id'])] = list(b['consts'].values())
     rec['area'] = area
     st = STAGE.get(mapname) or next((v for k, v in STAGE.items() if k in key), None)
     if st: rec['stage'] = st
@@ -691,3 +738,152 @@ for c, coins in re.findall(r'setvar VAR_TEMP_1, ITEM_((?:TM|HM)\d+)\n\tsetvar VA
 json.dump(pokedex, open(os.path.join(OUT, 'pokedex.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
 json.dump(tms, open(os.path.join(OUT, 'tms.json'), 'w'), ensure_ascii=False, indent=1)
 print('tms', len(tms), 'without a source:', [k for k, v in tms.items() if not v['sources']])
+
+# ---------- extra species data: abilities, catch rate, EXP, EV yield, growth rate, wild held items ----------
+ability_names = {}
+for k, v in re.findall(r'\[ABILITY_(\w+)\] = _\("(.*?)"\)', open(P('src/data/text/abilities.h'), encoding='utf-8').read()):
+    ability_names[k] = title(v)
+GROWTH = {'MEDIUM_FAST': 'medium-fast', 'ERRATIC': 'erratic', 'FLUCTUATING': 'fluctuating', 'MEDIUM_SLOW': 'medium-slow', 'FAST': 'fast', 'SLOW': 'slow'}
+extra, cur = {}, None
+for line in open(P('src/data/pokemon/species_info.h')):
+    m = re.match(r'\s*\[SPECIES_(\w+)\]\s*=', line)
+    if m: cur = m.group(1); extra[cur] = {}; continue
+    if not cur: continue
+    m = re.match(r'\s*\.(catchRate|expYield|friendship|safariZoneFleeRate|evYield_\w+) = (\d+)', line)
+    if m: extra[cur][m.group(1)] = int(m.group(2))
+    m = re.match(r'\s*\.growthRate = GROWTH_(\w+)', line)
+    if m: extra[cur]['growth'] = GROWTH[m.group(1)]
+    m = re.match(r'\s*\.abilities = \{ABILITY_(\w+), ABILITY_(\w+)\}', line)
+    if m: extra[cur]['abilities'] = [ability_names[a] for a in dict.fromkeys(m.groups()) if a != 'NONE']
+    m = re.match(r'\s*\.item(Common|Rare) = (ITEM_\w+)', line)
+    if m and m.group(2) != 'ITEM_NONE': extra[cur].setdefault('held', {})[m.group(1).lower()] = item_name(m.group(2))
+tutor_list = re.findall(r'\[TUTOR_MOVE_(\w+)\] = MOVE_(\w+)', open(P('src/data/pokemon/tutor_learnsets.h')).read())
+tutor_by_species = {k: [move_names[mv] for mv in re.findall(r'TUTOR\(MOVE_(\w+)\)', body)]
+                    for k, body in re.findall(r'\[SPECIES_(\w+)\] = ((?:TUTOR\(MOVE_\w+\)\s*\|?\s*)+|0),', open(P('src/data/pokemon/tutor_learnsets.h')).read())}
+for p in pokedex:
+    key = next(k for k, v in natdex.items() if v == p['dex'])
+    x = extra.get(key, {})
+    p['abilities'] = x.get('abilities', [])
+    p['catchRate'] = x.get('catchRate'); p['expYield'] = x.get('expYield'); p['growth'] = x.get('growth')
+    p['ev'] = [x.get(f'evYield_{s}', 0) for s in ('HP', 'Attack', 'Defense', 'SpAttack', 'SpDefense', 'Speed')]
+    if x.get('held'): p['held'] = x['held']
+    if x.get('safariZoneFleeRate'): p['safariFlee'] = x['safariZoneFleeRate']
+    if tutor_by_species.get(key): p['tutor'] = tutor_by_species[key]
+json.dump(pokedex, open(os.path.join(OUT, 'pokedex.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
+
+# ---------- shops, tutors, VS Seeker rematches, Unown chambers ----------
+def map_loc(mapname):
+    return loc_id(maps[mapname]['region_map_section'])
+shops = collections.defaultdict(list)
+SHOP_NOTE = {'TwoIsland_Items_ShopInitial': 'Two Island shop at first', 'TwoIsland_Items_ShopExpanded1': 'After rescuing Lostelle',
+             'TwoIsland_Items_ShopExpanded2': 'After you become Champion', 'TwoIsland_Items_ShopExpanded3': 'After linking with Ruby or Sapphire'}
+for name in sorted(maps):
+    f = os.path.join(maps[name]['_dir'], 'scripts.inc')
+    if not os.path.exists(f) or maps[name]['region_map_section'] in SKIP: continue
+    raw = open(f, encoding='utf-8').read()
+    for lbl in re.findall(r'pokemart (\w+)', raw):
+        body = re.search(re.escape(lbl) + r'::(.*?)ITEM_NONE', raw, re.S).group(1)
+        lst = [{'name': item_name(c), 'price': items[c]['price']} for c in re.findall(r'(ITEM_\w+)', body)]
+        where = SHOP_NOTE.get(lbl) or area_name(name, maps[name]['region_map_section'])
+        if 'TMs' in lbl: where += ' (TMs)'
+        if 'Vitamins' in lbl: where += ' (vitamins)'
+        if 'XItems' in lbl: where += ' (battle items)'
+        shops[map_loc(name)].append({'id': re.sub(r'[^a-z0-9]+', '-', lbl.lower()), 'where': where, 'items': lst})
+shops['celadon-city'].append({'id': 'roof-vending', 'where': 'Department Store Roof (vending machines)', 'items': [
+    {'name': 'Fresh Water', 'price': 200}, {'name': 'Soda Pop', 'price': 300}, {'name': 'Lemonade', 'price': 350}]})
+prize_items = re.findall(r'setvar VAR_TEMP_1, (ITEM_\w+)\n\tsetvar VAR_TEMP_2, (\d+)', prize)
+shops['celadon-city'].append({'id': 'game-corner-prizes', 'where': 'Game Corner Prize Room', 'coins': True,
+    'items': [{'name': item_name(c), 'price': int(n)} for c, n in prize_items]})
+
+TUTOR_WHERE = {'DoubleEdge': ('victory-road', '2F'), 'ThunderWave': ('silph-co', '2F'), 'RockSlide': ('rock-tunnel', 'B1F'),
+    'Explosion': ('mt-ember', 'Exterior'), 'MegaPunch': ('route-4', 'Outside'), 'MegaKick': ('route-4', 'Outside'),
+    'DreamEater': ('viridian-city', 'House'), 'Softboiled': ('celadon-city', 'Outside'), 'Substitute': ('fuchsia-city', 'Outside'),
+    'SwordsDance': ('seven-island', 'Outside'), 'SeismicToss': ('pewter-city', 'Museum 1F'), 'Counter': ('celadon-city', 'Department Store 3F'),
+    'Metronome': ('cinnabar-island', 'Pokémon Lab Research Room'), 'Mimic': ('saffron-city', 'Copycats House 2F'), 'BodySlam': ('four-island', 'House 1')}
+tutor_src = open(P('data/scripts/move_tutors.inc')).read()
+tutors = []
+for label in re.findall(r'^(\w+Tutor)::', tutor_src, re.M):
+    k = re.search(r'EventScript_(\w+)Tutor$', label).group(1)
+    if k not in TUTOR_WHERE: continue
+    mv = re.search(re.escape(label) + r'::.*?MOVETUTOR_(\w+)', tutor_src, re.S).group(1)
+    lid, where = TUTOR_WHERE[k]
+    tutors.append({'id': 'tutor-' + mv.lower().replace('_', '-'), 'move': move_names[mv], 'loc': lid, 'where': where,
+                   'learners': [p['dex'] for p in pokedex if move_names[mv] in p.get('tutor', [])]})
+tutors.sort(key=lambda t: order_pos[t['loc']])
+tutors.append({'id': 'tutor-ultimate', 'move': 'Frenzy Plant / Blast Burn / Hydro Cannon', 'loc': 'cape-brink', 'where': 'House',
+               'learners': [3, 6, 9], 'note': 'Once per starter line: Venusaur, Charizard or Blastoise with maximum friendship. Can be taught to each of the three.'})
+
+rm_src = open(P('src/vs_seeker.c')).read()
+rm_block = re.search(r'sRematches\[\] = \{(.*?)\n\};', rm_src, re.S).group(1)
+TIER = ['First battle', 'After you get the VS Seeker', 'After you reach Celadon City', 'After you reach Fuchsia City', 'After you become Champion', 'After linking with Ruby or Sapphire']
+rematches = collections.defaultdict(list)
+for ids, mp in re.findall(r'\{\s*\{(.*?)\},\s*MAP\((MAP_\w+)\)\s*\}', rm_block, re.S):
+    consts = [c.strip() for c in ids.split(',') if c.strip()]
+    m = by_const.get(mp)
+    if not m: continue
+    lid = loc_id(m['region_map_section'])
+    base = re.sub(r'[^a-z0-9]+', '-', consts[0].replace('TRAINER_', '').lower()).strip('-')
+    tiers, seen_c = [], {consts[0]}
+    for i, c in enumerate(consts[1:], 1):
+        if c == 'SKIP' or c in seen_c or c not in tdefs: continue
+        seen_c.add(c)
+        tiers.append({'after': TIER[i], 'party': trainer_party(c)})
+    if tiers: rematches[lid].append({'id': base, 'tiers': tiers})
+
+unown = {'monean': 'A ?', 'liptoo': 'C D H U O', 'weepth': 'N S I E', 'dilford': 'P L J R Q', 'scufib': 'Y T G F K', 'rixy': 'V W X M B', 'viapois': 'Z !'}
+json.dump({'shops': shops, 'tutors': tutors, 'rematches': rematches, 'unown': {k.title() + ' Chamber': v.split() for k, v in unown.items()}},
+          open(os.path.join(OUT, 'extras.json'), 'w'), ensure_ascii=False, indent=1)
+print('shops', sum(len(v) for v in shops.values()), 'tutors', len(tutors), 'rematch trainers', sum(len(v) for v in rematches.values()))
+
+# ---------- save file import map ----------
+# What the app needs to read a FireRed/LeafGreen .sav: the save flag behind each item and trainer checklist row,
+# the game's internal species numbers (Hoenn Pokémon are out of National Dex order) and move numbers.
+def defines(*files):
+    out = {}
+    for f in files:
+        for name, val in re.findall(r'^#define\s+(\w+)\s+(.+?)\s*(?://.*)?$', open(P(f)).read(), re.M): out[name] = val
+    return out
+DEF = defines('include/constants/flags.h', 'include/constants/opponents.h', 'include/constants/species.h', 'include/constants/moves.h')
+_ev = {}
+def ev(name):
+    if name in _ev: return _ev[name]
+    expr = DEF[name]
+    expr = re.sub(r'\b([A-Za-z_]\w*)\b', lambda m: str(ev(m.group(1))) if m.group(1) in DEF else m.group(1), expr)
+    _ev[name] = int(eval(expr.replace('/', '//'), {'__builtins__': {}}))
+    return _ev[name]
+flag_map = {}
+for k, f in item_flags.items():
+    if f in DEF: flag_map[k] = ev(f)
+TFS = ev('TRAINER_FLAGS_START')
+for (lid, tid), consts in trainer_consts.items():
+    flag_map[f'{lid}:trainer:{tid}'] = [TFS + ev(c) for c in consts if c in DEF]
+species_index = [0] * (max(ev(k) for k in DEF if k.startswith('SPECIES_') and re.match(r'^\d+$', DEF[k])) + 1)
+for k in DEF:
+    if k.startswith('SPECIES_') and k[8:] in natdex and re.match(r'^\d+$', DEF[k]): species_index[ev(k)] = natdex[k[8:]]
+moves_by_id = {}
+for k in DEF:
+    if k.startswith('MOVE_') and k[5:] in move_names and re.match(r'^\d+$', DEF[k]): moves_by_id[ev(k)] = move_names[k[5:]]
+move_list = [moves_by_id.get(i, '') for i in range(max(moves_by_id) + 1)]
+badges = [ev(f'FLAG_BADGE0{i}_GET') for i in range(1, 9)]
+json.dump({'flags': flag_map, 'species': species_index, 'moves': move_list, 'badges': badges},
+          open(os.path.join(OUT, 'save-map.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
+print('save map:', len(flag_map), 'flags,', sum(1 for x in species_index if x), 'species')
+
+# ---------- region map grid (for the tappable map) ----------
+# The game's own town-map layout: a 22x15 grid per region, each cell naming a map section, with a second layer for
+# caves and buildings. Cells are mapped to app locations; Pokémon Center stubs count as their route.
+region_maps = {}
+for key, f in (('Kanto', 'kanto'), ('Sevii Islands 1–3', 'sevii_123'), ('Sevii Islands 4–5', 'sevii_45'), ('Sevii Islands 6–7', 'sevii_67')):
+    src = open(P(f'src/data/region_map/region_map_layout_{f}.h')).read()
+    cells = []
+    for layer in ('MAP', 'DUNGEON'):
+        body = re.search(r'\[LAYER_' + layer + r'\]\s*=\s*\{(.*?)\n    \}', src, re.S).group(1)
+        for y, row in enumerate(re.findall(r'\{([^{}]*)\}', body)):
+            for x, sec in enumerate(c.strip() for c in row.split(',')):
+                if sec == 'MAPSEC_NONE': continue
+                lid = loc_id(re.sub(r'_POKECENTER$', '', sec))
+                if lid in locs: cells.append([x, y, lid, layer.lower()])
+    region_maps[key] = cells
+json.dump(region_maps, open(os.path.join(OUT, 'region-map.json'), 'w'), separators=(',', ':'))
+mapped = {c[2] for cs in region_maps.values() for c in cs}
+print('region map: unplaced locations', sorted(set(x['id'] for x in index) - mapped))

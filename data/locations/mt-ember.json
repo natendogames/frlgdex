@@ -570,94 +570,6 @@
  ],
  "trainers": [
   {
-   "class": "Pokémon Ranger",
-   "name": "Beth",
-   "prize": 1368,
-   "party": [
-    {
-     "dex": 69,
-     "name": "Bellsprout",
-     "level": 38,
-     "iv": 12,
-     "moves": [
-      {
-       "name": "Stun Spore",
-       "type": "Grass"
-      },
-      {
-       "name": "Acid",
-       "type": "Poison",
-       "power": 40
-      },
-      {
-       "name": "Sweet Scent",
-       "type": "Normal"
-      },
-      {
-       "name": "Razor Leaf",
-       "type": "Grass",
-       "power": 55
-      }
-     ]
-    },
-    {
-     "dex": 44,
-     "name": "Gloom",
-     "level": 38,
-     "iv": 12,
-     "moves": [
-      {
-       "name": "Stun Spore",
-       "type": "Grass"
-      },
-      {
-       "name": "Sleep Powder",
-       "type": "Grass"
-      },
-      {
-       "name": "Acid",
-       "type": "Poison",
-       "power": 40
-      },
-      {
-       "name": "Moonlight",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 44,
-     "name": "Gloom",
-     "level": 38,
-     "iv": 12,
-     "moves": [
-      {
-       "name": "Stun Spore",
-       "type": "Grass"
-      },
-      {
-       "name": "Sleep Powder",
-       "type": "Grass"
-      },
-      {
-       "name": "Acid",
-       "type": "Poison",
-       "power": 40
-      },
-      {
-       "name": "Moonlight",
-       "type": "Normal"
-      }
-     ]
-    }
-   ],
-   "uses": [
-    "Full Restore"
-   ],
-   "id": "pkmn-ranger-beth",
-   "area": "Exterior"
-  },
-  {
    "class": "Team Rocket",
    "name": "Grunt",
    "prize": 1184,
@@ -838,70 +750,91 @@
    "area": "Exterior"
   },
   {
-   "class": "Crush Girl",
-   "name": "Jocelyn",
-   "prize": 912,
+   "class": "Pokémon Ranger",
+   "name": "Beth",
+   "prize": 1368,
    "party": [
     {
-     "dex": 107,
-     "name": "Hitmonchan",
+     "dex": 69,
+     "name": "Bellsprout",
      "level": 38,
-     "iv": 6,
+     "iv": 12,
      "moves": [
       {
-       "name": "Ice Punch",
-       "type": "Ice",
-       "power": 75
+       "name": "Stun Spore",
+       "type": "Grass"
       },
       {
-       "name": "Fire Punch",
-       "type": "Fire",
-       "power": 75
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
       },
       {
-       "name": "Sky Uppercut",
-       "type": "Fighting",
-       "power": 85
+       "name": "Sweet Scent",
+       "type": "Normal"
       },
       {
-       "name": "Mega Punch",
-       "type": "Normal",
-       "power": 80
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
       }
-     ],
-     "item": "Black Belt"
+     ]
     },
     {
-     "dex": 107,
-     "name": "Hitmonchan",
+     "dex": 44,
+     "name": "Gloom",
      "level": 38,
-     "iv": 6,
+     "iv": 12,
      "moves": [
       {
-       "name": "Ice Punch",
-       "type": "Ice",
-       "power": 75
+       "name": "Stun Spore",
+       "type": "Grass"
       },
       {
-       "name": "Fire Punch",
-       "type": "Fire",
-       "power": 75
+       "name": "Sleep Powder",
+       "type": "Grass"
       },
       {
-       "name": "Sky Uppercut",
-       "type": "Fighting",
-       "power": 85
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
       },
       {
-       "name": "Mega Punch",
-       "type": "Normal",
-       "power": 80
+       "name": "Moonlight",
+       "type": "Normal"
       }
-     ],
-     "item": "Black Belt"
+     ]
+    },
+    {
+     "dex": 44,
+     "name": "Gloom",
+     "level": 38,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      }
+     ]
     }
    ],
-   "id": "crush-girl-jocelyn",
+   "uses": [
+    "Full Restore"
+   ],
+   "id": "pkmn-ranger-beth",
    "area": "Exterior"
   },
   {
@@ -966,6 +899,73 @@
     "Full Restore"
    ],
    "id": "pkmn-ranger-logan",
+   "area": "Exterior"
+  },
+  {
+   "class": "Crush Girl",
+   "name": "Jocelyn",
+   "prize": 912,
+   "party": [
+    {
+     "dex": 107,
+     "name": "Hitmonchan",
+     "level": 38,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Ice Punch",
+       "type": "Ice",
+       "power": 75
+      },
+      {
+       "name": "Fire Punch",
+       "type": "Fire",
+       "power": 75
+      },
+      {
+       "name": "Sky Uppercut",
+       "type": "Fighting",
+       "power": 85
+      },
+      {
+       "name": "Mega Punch",
+       "type": "Normal",
+       "power": 80
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 107,
+     "name": "Hitmonchan",
+     "level": 38,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Ice Punch",
+       "type": "Ice",
+       "power": 75
+      },
+      {
+       "name": "Fire Punch",
+       "type": "Fire",
+       "power": 75
+      },
+      {
+       "name": "Sky Uppercut",
+       "type": "Fighting",
+       "power": 85
+      },
+      {
+       "name": "Mega Punch",
+       "type": "Normal",
+       "power": 80
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "crush-girl-jocelyn",
    "area": "Exterior"
   }
  ],

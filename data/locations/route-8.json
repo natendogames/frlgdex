@@ -348,192 +348,6 @@
   },
   {
    "class": "Lass",
-   "name": "Paige",
-   "prize": 368,
-   "party": [
-    {
-     "dex": 29,
-     "name": "Nidoran♀",
-     "level": 23,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Double Kick",
-       "type": "Fighting",
-       "power": 30
-      },
-      {
-       "name": "Poison Sting",
-       "type": "Poison",
-       "power": 15
-      },
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      },
-      {
-       "name": "Helping Hand",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 30,
-     "name": "Nidorina",
-     "level": 23,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Tail Whip",
-       "type": "Normal"
-      },
-      {
-       "name": "Double Kick",
-       "type": "Fighting",
-       "power": 30
-      },
-      {
-       "name": "Poison Sting",
-       "type": "Poison",
-       "power": 15
-      },
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      }
-     ]
-    }
-   ],
-   "id": "lass-paige"
-  },
-  {
-   "class": "Super Nerd",
-   "name": "Leslie",
-   "prize": 624,
-   "party": [
-    {
-     "dex": 109,
-     "name": "Koffing",
-     "level": 26,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Smog",
-       "type": "Poison",
-       "power": 20
-      },
-      {
-       "name": "Selfdestruct",
-       "type": "Normal",
-       "power": 200
-      },
-      {
-       "name": "Sludge",
-       "type": "Poison",
-       "power": 65
-      },
-      {
-       "name": "Smokescreen",
-       "type": "Normal"
-      }
-     ]
-    }
-   ],
-   "id": "super-nerd-leslie"
-  },
-  {
-   "class": "Lass",
-   "name": "Andrea",
-   "prize": 384,
-   "party": [
-    {
-     "dex": 52,
-     "name": "Meowth",
-     "level": 24,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Scratch",
-       "type": "Normal",
-       "power": 40
-      },
-      {
-       "name": "Growl",
-       "type": "Normal"
-      },
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      },
-      {
-       "name": "Pay Day",
-       "type": "Normal",
-       "power": 40
-      }
-     ]
-    },
-    {
-     "dex": 52,
-     "name": "Meowth",
-     "level": 24,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Scratch",
-       "type": "Normal",
-       "power": 40
-      },
-      {
-       "name": "Growl",
-       "type": "Normal"
-      },
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      },
-      {
-       "name": "Pay Day",
-       "type": "Normal",
-       "power": 40
-      }
-     ]
-    },
-    {
-     "dex": 52,
-     "name": "Meowth",
-     "level": 24,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Scratch",
-       "type": "Normal",
-       "power": 40
-      },
-      {
-       "name": "Growl",
-       "type": "Normal"
-      },
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      },
-      {
-       "name": "Pay Day",
-       "type": "Normal",
-       "power": 40
-      }
-     ]
-    }
-   ],
-   "id": "lass-andrea"
-  },
-  {
-   "class": "Lass",
    "name": "Megan",
    "prize": 304,
    "party": [
@@ -673,6 +487,192 @@
    "id": "lass-megan"
   },
   {
+   "class": "Lass",
+   "name": "Andrea",
+   "prize": 384,
+   "party": [
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "lass-andrea"
+  },
+  {
+   "class": "Super Nerd",
+   "name": "Leslie",
+   "prize": 624,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "super-nerd-leslie"
+  },
+  {
+   "class": "Lass",
+   "name": "Paige",
+   "prize": 368,
+   "party": [
+    {
+     "dex": 29,
+     "name": "Nidoran♀",
+     "level": 23,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 30,
+     "name": "Nidorina",
+     "level": 23,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "lass-paige"
+  },
+  {
    "class": "Biker",
    "name": "Jaren",
    "prize": 480,
@@ -729,95 +729,6 @@
     }
    ],
    "id": "biker-jaren"
-  },
-  {
-   "class": "Gamer",
-   "name": "Stan",
-   "prize": 1584,
-   "party": [
-    {
-     "dex": 60,
-     "name": "Poliwag",
-     "level": 22,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Bubble",
-       "type": "Water",
-       "power": 20
-      },
-      {
-       "name": "Hypnosis",
-       "type": "Psychic"
-      },
-      {
-       "name": "Water Gun",
-       "type": "Water",
-       "power": 40
-      },
-      {
-       "name": "Doubleslap",
-       "type": "Normal",
-       "power": 15
-      }
-     ]
-    },
-    {
-     "dex": 60,
-     "name": "Poliwag",
-     "level": 22,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Bubble",
-       "type": "Water",
-       "power": 20
-      },
-      {
-       "name": "Hypnosis",
-       "type": "Psychic"
-      },
-      {
-       "name": "Water Gun",
-       "type": "Water",
-       "power": 40
-      },
-      {
-       "name": "Doubleslap",
-       "type": "Normal",
-       "power": 15
-      }
-     ]
-    },
-    {
-     "dex": 61,
-     "name": "Poliwhirl",
-     "level": 22,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Bubble",
-       "type": "Water",
-       "power": 20
-      },
-      {
-       "name": "Hypnosis",
-       "type": "Psychic"
-      },
-      {
-       "name": "Water Gun",
-       "type": "Water",
-       "power": 40
-      },
-      {
-       "name": "Doubleslap",
-       "type": "Normal",
-       "power": 15
-      }
-     ]
-    }
-   ],
-   "id": "gamer-stan"
   },
   {
    "class": "Biker",
@@ -907,6 +818,95 @@
     }
    ],
    "id": "biker-ricardo"
+  },
+  {
+   "class": "Gamer",
+   "name": "Stan",
+   "prize": 1584,
+   "party": [
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 61,
+     "name": "Poliwhirl",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "gamer-stan"
   },
   {
    "class": "Super Nerd",
