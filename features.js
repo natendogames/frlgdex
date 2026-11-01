@@ -109,7 +109,7 @@ function renderMon(id) {
   let html = `<div class="card">${checkRow(`dex:${n}`, isCaught(n), `Caught ${types(n)}`, availText(n))}
     <table class="mini">
       <tr><td>Abilities</td><td>${(p.abilities || []).map(esc).join(' or ') || '—'}</td></tr>
-      <tr><td>Catch rate</td><td>${p.catchRate ?? '—'} <span class="note">(${catchPct(p.catchRate, 'Poké Ball')}% with a Poké Ball at full HP · <a href="#/tools/catch/${n}">catch odds</a>)</span></td></tr>
+      <tr><td>Catch rate</td><td>${p.catchRate ?? '—'} <span class="note">(${catchPct(p.catchRate, 'Poké Ball')}% with a Poké Ball at full HP · <a href="#/tools/catch/${n}">catch odds</a>${state.found[n]?.find(x => inVersion(x) && !["gift", "trade", "game-corner"].includes(x.method)) ? ` · <a href="#/catch/${state.found[n].find(x => inVersion(x) && !["gift", "trade", "game-corner"].includes(x.method)).loc}/${n}">catch plan</a>` : ""})</span></td></tr>
       <tr><td>EV yield</td><td>${evText(p.ev || [])}</td></tr>
       <tr><td>Base EXP · growth</td><td>${p.expYield ?? '—'} · ${esc(GROWTH_LABEL[p.growth] || '—')}</td></tr>
       ${p.held ? `<tr><td>Wild held item</td><td>${[p.held.common && `${esc(p.held.common)} (50%)`, p.held.rare && `${esc(p.held.rare)} (5%)`].filter(Boolean).join(', ')}</td></tr>` : ''}
