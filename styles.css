@@ -91,3 +91,28 @@ main a { color: var(--accent); }
 table.duel { margin-top: 6px; font-size: 12px; }
 table.duel tr.best td { background: color-mix(in srgb, var(--done) 12%, transparent); }
 #syncForm input { flex: 1 1 200px; width: auto; }
+/* either/or picks */
+.choice .row.pick { cursor: pointer; }
+.choice .row.pick input { accent-color: var(--accent); }
+.choice .row.pick.checked > span > span:first-child { font-weight: 700; }
+.choice .tag.good { border-color: var(--done); }
+.btn.small { padding: 4px 10px; font-size: 13px; margin-top: 8px; }
+.chips label.chip { cursor: pointer; }
+.vh { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.chip:has(.vh:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* trainers: defeated checkbox in the header */
+.trainer summary { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; }
+.trainer .tcheck { width: 22px; height: 22px; accent-color: var(--done); flex: none; margin: 0 4px 0 0; }
+.trainer.checked .tname { text-decoration: line-through; color: var(--muted); }
+.trainer.checked { opacity: .85; }
+/* come back later: collapsed section */
+details.later > summary { list-style: none; cursor: pointer; }
+details.later > summary::-webkit-details-marker { display: none; }
+details.later > summary h2 { display: inline-block; }
+details.later > summary h2::before { content: '▸ '; }
+details.later[open] > summary h2::before { content: '▾ '; }
+.trainer summary::after { content: '▾'; margin-left: auto; color: var(--muted); }
+.trainer:not([open]) summary::after { content: '▸'; }
+.stats { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 360px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+.trainer summary .note { font-weight: 400; }
