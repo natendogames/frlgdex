@@ -1,0 +1,18 @@
+# Deploy with: npx wrangler deploy   (see worker/README.md)
+name = "frlg-dex-sync"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+# Only the live site (and local testing) may call the worker.
+ALLOWED_ORIGINS = "https://natendogames.github.io,http://localhost:8000"
+
+[[kv_namespaces]]
+binding = "SAVES"
+id = "e1bcf728b34c475f8d2b4a72c61a15c5"
+
+# Free Cloudflare rate limiter: 20 requests per IP per minute.
+[[ratelimits]]
+name = "LIMITER"
+namespace_id = "1001"
+simple = { limit = 20, period = 60 }
