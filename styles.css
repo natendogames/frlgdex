@@ -38,7 +38,7 @@ h2 { font-size: 14px; text-transform: uppercase; letter-spacing: .05em; color: v
 .tag { font-size: 11px; border: 1px solid var(--line); border-radius: 6px; padding: 1px 5px; margin-left: 4px; color: var(--muted); }
 .note { font-size: 13px; color: var(--muted); }
 .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
-button.btn { border: 1px solid var(--line); background: var(--card); color: var(--text); border-radius: 8px; padding: 8px 12px; font-size: 14px; }
+button.btn, label.btn { border: 1px solid var(--line); background: var(--card); color: var(--text); border-radius: 8px; padding: 8px 12px; font-size: 14px; cursor: pointer; }
 .empty { color: var(--muted); font-style: italic; padding: 6px 0; }
 .top a.icon-btn { text-decoration: none; }
 .tabs { position: fixed; bottom: 0; left: 0; right: 0; display: flex; background: var(--card); border-top: 1px solid var(--line);
@@ -54,7 +54,7 @@ main { padding-bottom: 90px; }
 .t-Ice{background:#6cc3c3}.t-Fighting{background:#b2302a}.t-Poison{background:#93409a}.t-Ground{background:#c9a650}.t-Flying{background:#9580e0}
 .t-Psychic{background:#e8507a}.t-Bug{background:#94a21e}.t-Rock{background:#ad9535}.t-Ghost{background:#6a5694}.t-Dragon{background:#6a3cf0}
 .t-Dark{background:#6b5547}.t-Steel{background:#a8a8c4}
-input[type=search], select { width: 100%; font: inherit; padding: 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--text); }
+input[type=search], input[type=email], select { width: 100%; font: inherit; padding: 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--text); }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip { border: 1px solid var(--line); border-radius: 16px; padding: 4px 10px; font-size: 13px; background: var(--card); color: var(--text); }
 .chip.on { background: var(--accent); color: #fff; border-color: var(--accent); }
@@ -90,3 +90,4 @@ main a { color: var(--accent); }
 .mvgrid input { font: inherit; font-size: 14px; padding: 6px 8px; border-radius: 6px; border: 1px solid var(--line); background: var(--card); color: var(--text); min-width: 0; }
 table.duel { margin-top: 6px; font-size: 12px; }
 table.duel tr.best td { background: color-mix(in srgb, var(--done) 12%, transparent); }
+#syncForm input { flex: 1 1 200px; width: auto; }

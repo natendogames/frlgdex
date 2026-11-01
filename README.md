@@ -8,6 +8,7 @@ A phone-friendly, offline-capable 100% completion guide for Pokémon FireRed and
 - **Battle plan**: enter your team to see who to send out against each Gym Leader, rival battle, Giovanni, the Elite Four and the Champion (rival teams depend on your starter).
 - **Tools**: breeding helper (egg groups, partners, what hatches, steps), type matchup lookup and full chart, version exclusives list.
 - Separate FireRed and LeafGreen saves, stored on the device, with backup export and import.
+- Optional cloud sync between devices keyed by an email address (no password). Needs the small Cloudflare Worker in `worker/`; see `worker/README.md`.
 
 Plain HTML, CSS and JS with no build step. Host the folder on any static host (GitHub Pages works).
 Run locally with `python3 -m http.server` in this folder, then open http://localhost:8000.
