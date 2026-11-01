@@ -24,7 +24,7 @@ async function loadApp() {
   const src = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8')
     // don't render a page; expose the internals instead
     .replace(/loadData\(\)\.then\([^\n]*\n/, '')
-    + '\nglobalThis.app = { state, loadData, cur, mon, stageOf, catchableBy, catchSuggestions, foeRow, foeBattler, myBattler, duel, defaultMoves, bestMoves: typeof bestMoves === "function" ? bestMoves : null, battleStage: typeof battleStage === "function" ? battleStage : null, evoForms, eff, lineOf: typeof lineOf === "function" ? lineOf : null, learnedBy: typeof learnedBy === "function" ? learnedBy : null };';
+    + '\nglobalThis.app = { state, loadData, cur, mon, stageOf, catchableBy, catchSuggestions, foeRow, foeBattler, myBattler, duel, defaultMoves, bestMoves: typeof bestMoves === "function" ? bestMoves : null, battleStage: typeof battleStage === "function" ? battleStage : null, evoForms, eff, lineOf: typeof lineOf === "function" ? lineOf : null, learnedBy: typeof learnedBy === "function" ? learnedBy : null, battler, hit, moveScore, relearnAt, catchLevel, allowed, inVersion, STARTER_BASE };';
   vm.runInContext(src, ctx, { filename: 'app.js' });
   await ctx.app.loadData();
   return ctx.app;

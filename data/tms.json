@@ -1,0 +1,685 @@
+{
+ "HM01": {
+  "move": "Cut",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "ss-anne",
+    "how": "gift",
+    "where": "Captains Office",
+    "from": "S.S. Anne Captain (cure his seasickness)"
+   }
+  ]
+ },
+ "HM02": {
+  "move": "Fly",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "route-16",
+    "how": "gift",
+    "where": "House",
+    "from": "Woman in the house behind a Cut tree"
+   }
+  ]
+ },
+ "HM03": {
+  "move": "Surf",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "safari-zone",
+    "how": "gift",
+    "where": "Secret House",
+    "from": "Reward for reaching the Secret House"
+   }
+  ]
+ },
+ "HM04": {
+  "move": "Strength",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "fuchsia-city",
+    "how": "gift",
+    "where": "Wardens House",
+    "from": "Safari Warden (return his Gold Teeth)"
+   }
+  ]
+ },
+ "HM05": {
+  "move": "Flash",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "route-2",
+    "how": "gift",
+    "where": "East Building",
+    "from": "Professor Oak's aide (needs enough Pokédex entries)"
+   }
+  ]
+ },
+ "HM06": {
+  "move": "Rock Smash",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "ember-spa",
+    "how": "gift",
+    "where": "Kindle Road Ember Spa",
+    "from": "Man at the Ember Spa"
+   }
+  ]
+ },
+ "HM07": {
+  "move": "Waterfall",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "icefall-cave",
+    "how": "found",
+    "where": "Icefall Cave 1F"
+   }
+  ]
+ },
+ "HM08": {
+  "move": "Dive",
+  "reusable": true,
+  "sources": []
+ },
+ "TM01": {
+  "move": "Focus Punch",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "silph-co",
+    "how": "found",
+    "where": "5F"
+   }
+  ]
+ },
+ "TM02": {
+  "move": "Dragon Claw",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "victory-road",
+    "how": "found",
+    "where": "1F"
+   }
+  ]
+ },
+ "TM03": {
+  "move": "Water Pulse",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "cerulean-city",
+    "how": "gift",
+    "where": "Gym",
+    "from": "Misty (after winning)"
+   }
+  ]
+ },
+ "TM04": {
+  "move": "Calm Mind",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "saffron-city",
+    "how": "gift",
+    "where": "Gym",
+    "from": "Sabrina (after winning)"
+   }
+  ]
+ },
+ "TM05": {
+  "move": "Roar",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "route-4",
+    "how": "found",
+    "where": "Outside"
+   },
+   {
+    "loc": "celadon-city",
+    "how": "buy",
+    "where": "Department Store 2F",
+    "cost": "₽1,000"
+   }
+  ]
+ },
+ "TM06": {
+  "move": "Toxic",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "fuchsia-city",
+    "how": "gift",
+    "where": "Gym",
+    "from": "Koga (after winning)"
+   }
+  ]
+ },
+ "TM07": {
+  "move": "Hail",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "victory-road",
+    "how": "found",
+    "where": "2F"
+   }
+  ]
+ },
+ "TM08": {
+  "move": "Bulk Up",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "silph-co",
+    "how": "found",
+    "where": "7F"
+   }
+  ]
+ },
+ "TM09": {
+  "move": "Bullet Seed",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "mt-moon",
+    "how": "found",
+    "where": "1F"
+   }
+  ]
+ },
+ "TM10": {
+  "move": "Hidden Power",
+  "reusable": false,
+  "sources": []
+ },
+ "TM11": {
+  "move": "Sunny Day",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "safari-zone",
+    "how": "found",
+    "where": "East"
+   }
+  ]
+ },
+ "TM12": {
+  "move": "Taunt",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "rocket-hideout",
+    "how": "found",
+    "where": "B2F"
+   }
+  ]
+ },
+ "TM13": {
+  "move": "Ice Beam",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "celadon-city",
+    "how": "prize",
+    "where": "Game Corner Prize Room",
+    "cost": "4,000 coins"
+   }
+  ]
+ },
+ "TM14": {
+  "move": "Blizzard",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "pokemon-mansion",
+    "how": "found",
+    "where": "B1F"
+   }
+  ]
+ },
+ "TM15": {
+  "move": "Hyper Beam",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "celadon-city",
+    "how": "buy",
+    "where": "Department Store 2F",
+    "cost": "₽7,500"
+   }
+  ]
+ },
+ "TM16": {
+  "move": "Light Screen",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "celadon-city",
+    "how": "gift",
+    "where": "Department Store Roof",
+    "from": "Thirsty girl"
+   }
+  ]
+ },
+ "TM17": {
+  "move": "Protect",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "power-plant",
+    "how": "found",
+    "where": "Outside"
+   }
+  ]
+ },
+ "TM18": {
+  "move": "Rain Dance",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "route-15",
+    "how": "found",
+    "where": "Outside"
+   }
+  ]
+ },
+ "TM19": {
+  "move": "Giga Drain",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "celadon-city",
+    "how": "gift",
+    "where": "Gym",
+    "from": "Erika (after winning)"
+   }
+  ]
+ },
+ "TM20": {
+  "move": "Safeguard",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "celadon-city",
+    "how": "gift",
+    "where": "Department Store Roof",
+    "from": "Thirsty girl"
+   }
+  ]
+ },
+ "TM21": {
+  "move": "Frustration",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "rocket-hideout",
+    "how": "found",
+    "where": "B3F"
+   }
+  ]
+ },
+ "TM22": {
+  "move": "Solarbeam",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "pokemon-mansion",
+    "how": "found",
+    "where": "B1F"
+   }
+  ]
+ },
+ "TM23": {
+  "move": "Iron Tail",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "celadon-city",
+    "how": "prize",
+    "where": "Game Corner Prize Room",
+    "cost": "3,500 coins"
+   }
+  ]
+ },
+ "TM24": {
+  "move": "Thunderbolt",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "celadon-city",
+    "how": "prize",
+    "where": "Game Corner Prize Room",
+    "cost": "4,000 coins"
+   }
+  ]
+ },
+ "TM25": {
+  "move": "Thunder",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "power-plant",
+    "how": "found",
+    "where": "Outside"
+   }
+  ]
+ },
+ "TM26": {
+  "move": "Earthquake",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "viridian-city",
+    "how": "gift",
+    "where": "Gym",
+    "from": "Giovanni (after winning)"
+   }
+  ]
+ },
+ "TM27": {
+  "move": "Return",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "route-12",
+    "how": "gift",
+    "where": "North Entrance 2F",
+    "from": "Girl upstairs"
+   }
+  ]
+ },
+ "TM28": {
+  "move": "Dig",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "cerulean-city",
+    "how": "gift",
+    "where": "Outside",
+    "from": "Rocket Grunt (after beating him)"
+   },
+   {
+    "loc": "celadon-city",
+    "how": "buy",
+    "where": "Department Store 2F",
+    "cost": "₽2,000"
+   }
+  ]
+ },
+ "TM29": {
+  "move": "Psychic",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "saffron-city",
+    "how": "gift",
+    "where": "Mr Psychics House",
+    "from": "Mr. Psychic"
+   }
+  ]
+ },
+ "TM30": {
+  "move": "Shadow Ball",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "celadon-city",
+    "how": "prize",
+    "where": "Game Corner Prize Room",
+    "cost": "4,500 coins"
+   }
+  ]
+ },
+ "TM31": {
+  "move": "Brick Break",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "ss-anne",
+    "how": "found",
+    "where": "1F Room 2"
+   },
+   {
+    "loc": "celadon-city",
+    "how": "buy",
+    "where": "Department Store 2F",
+    "cost": "₽3,000"
+   }
+  ]
+ },
+ "TM32": {
+  "move": "Double Team",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "safari-zone",
+    "how": "found",
+    "where": "West"
+   }
+  ]
+ },
+ "TM33": {
+  "move": "Reflect",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "celadon-city",
+    "how": "gift",
+    "where": "Department Store Roof",
+    "from": "Thirsty girl"
+   }
+  ]
+ },
+ "TM34": {
+  "move": "Shock Wave",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "vermilion-city",
+    "how": "gift",
+    "where": "Gym",
+    "from": "Lt. Surge (after winning)"
+   }
+  ]
+ },
+ "TM35": {
+  "move": "Flamethrower",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "celadon-city",
+    "how": "prize",
+    "where": "Game Corner Prize Room",
+    "cost": "4,000 coins"
+   }
+  ]
+ },
+ "TM36": {
+  "move": "Sludge Bomb",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "rocket-warehouse",
+    "how": "found",
+    "where": "Rocket Warehouse"
+   }
+  ]
+ },
+ "TM37": {
+  "move": "Sandstorm",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "victory-road",
+    "how": "found",
+    "where": "2F"
+   }
+  ]
+ },
+ "TM38": {
+  "move": "Fire Blast",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "cinnabar-island",
+    "how": "gift",
+    "where": "Gym",
+    "from": "Blaine (after winning)"
+   }
+  ]
+ },
+ "TM39": {
+  "move": "Rock Tomb",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "pewter-city",
+    "how": "gift",
+    "where": "Gym",
+    "from": "Brock (after winning)"
+   }
+  ]
+ },
+ "TM40": {
+  "move": "Aerial Ace",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "route-9",
+    "how": "found",
+    "where": "Outside"
+   }
+  ]
+ },
+ "TM41": {
+  "move": "Torment",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "silph-co",
+    "how": "found",
+    "where": "4F"
+   }
+  ]
+ },
+ "TM42": {
+  "move": "Facade",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "memorial-pillar",
+    "how": "gift",
+    "where": "Memorial Pillar",
+    "from": "Man at the pillar (after giving Lemonade)"
+   }
+  ]
+ },
+ "TM43": {
+  "move": "Secret Power",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "route-25",
+    "how": "found",
+    "where": "Outside"
+   },
+   {
+    "loc": "celadon-city",
+    "how": "buy",
+    "where": "Department Store 2F",
+    "cost": "₽3,000"
+   }
+  ]
+ },
+ "TM44": {
+  "move": "Rest",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "ss-anne",
+    "how": "found",
+    "where": "B1F Room 2"
+   }
+  ]
+ },
+ "TM45": {
+  "move": "Attract",
+  "reusable": true,
+  "sources": [
+   {
+    "loc": "route-24",
+    "how": "found",
+    "where": "Outside"
+   },
+   {
+    "loc": "celadon-city",
+    "how": "buy",
+    "where": "Department Store 2F",
+    "cost": "₽3,000"
+   }
+  ]
+ },
+ "TM46": {
+  "move": "Thief",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "mt-moon",
+    "how": "found",
+    "where": "B2F"
+   }
+  ]
+ },
+ "TM47": {
+  "move": "Steel Wing",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "safari-zone",
+    "how": "found",
+    "where": "North"
+   }
+  ]
+ },
+ "TM48": {
+  "move": "Skill Swap",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "route-12",
+    "how": "found",
+    "where": "Outside"
+   }
+  ]
+ },
+ "TM49": {
+  "move": "Snatch",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "rocket-hideout",
+    "how": "found",
+    "where": "B4F"
+   }
+  ]
+ },
+ "TM50": {
+  "move": "Overheat",
+  "reusable": false,
+  "sources": [
+   {
+    "loc": "victory-road",
+    "how": "found",
+    "where": "3F"
+   }
+  ]
+ }
+}
