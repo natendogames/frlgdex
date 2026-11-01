@@ -285,10 +285,14 @@ function renderLocation(id) {
   const trs = v.trainers;
   if (trs.length) {
     html += `<h2>Trainers (${trs.filter(t => s.checks[trainerKey(id, t)]).length}/${trs.length})</h2>${teamHint()}`;
-    for (const [area, list] of Object.entries(groupBy(trs, t => t.area))) {
-      if (area) html += `<div class="area">${esc(area)}</div>`;
-      html += list.map(t => trainerCard(t, stageOf(t.stage || id), { loc: id })).join('');
-    }
+    const cards = list => Object.entries(groupBy(list, t => t.area)).map(([area, grp]) =>
+      (area ? `<div class="area">${esc(area)}</div>` : '') + grp.map(t => trainerCard(t, stageOf(t.stage || id), { loc: id, open: !t.later })).join('')).join('');
+    const firstVisit = trs.filter(t => !t.later), laterTrs = trs.filter(t => t.later);
+    html += cards(firstVisit);
+    // Trainers you only fight later in the story: collapsed, planned with what you can have caught by then
+    for (const [stg, list] of Object.entries(groupBy(laterTrs, t => t.stage)))
+      html += `<details class="later"><summary><h2>Trainers: come back later (${list.length})</h2></summary>
+        <p class="note">You fight ${list.length === 1 ? 'this trainer' : 'these trainers'} around ${esc(state.locations[stg]?.name || stg)} in the story, so catch suggestions use everything you can have by then.</p>${cards(list)}</details>`;
   }
 
   const encs = v.encs;
@@ -429,7 +433,7 @@ function myBattler(n, foeLevel) {
   const moves = (meta.moves || []).filter(Boolean);
   return { ...battler(n, level, PLAYER_IV, moves.length ? moves : defaultMoves(n, level)), guessedLevel: !meta.level, guessedMoves: !moves.length };
 }
-const foeBattler = p => battler(p.dex, p.level, p.iv ?? 0, (p.moves || []).map(m => m.name));
+const foeBattler = p => ({ ...battler(p.dex, p.level, p.iv ?? 0, (p.moves || []).map(m => m.name)), foe: true });
 
 // Damage range of one move, in HP. null for moves that don't deal direct damage.
 function hit(att, def, name) {
@@ -456,7 +460,8 @@ function hit(att, def, name) {
   return out(Math.max(1, Math.floor(dmg * 85 / 100)) * hits, dmg * hits);
 }
 function bestHit(att, def) {
-  return att.moves.map(n => hit(att, def, n)).filter(Boolean).sort((a, b) => b.min + b.max - a.min - a.max)[0] || null;
+  // don't plan around Selfdestruct or Explosion for your side
+  return att.moves.filter(n => att.foe || state.moves[n]?.effect !== 'explode').map(n => hit(att, def, n)).filter(Boolean).sort((a, b) => b.min + b.max - a.min - a.max)[0] || null;
 }
 // How a battle between one of your Pokémon and one of theirs goes, one-on-one.
 function duel(me, foe) {
@@ -491,16 +496,43 @@ function catchableBy(stage) {
   }
   return (catchCache[key] = out);
 }
-// Catches that would have a super-effective level-up move if raised to the foe's level, best duel first.
-// Anything the trainer's other Pokémon can hit super effectively is left out, so the pick isn't a liability later in the fight.
+// What a catch can become by the foe's level: level-up evolutions at or below that level, and evolution stones
+// once the Celadon Department Store sells them. Trade and friendship evolutions are left out.
+function evoForms(dex, level, stage) {
+  const out = [{ dex, via: [] }];
+  for (let i = 0; i < out.length; i++) {
+    for (const e of mon(out[i].dex).evolutions || []) {
+      const ok = (e.method === 'level' && e.param <= level) || (e.method === 'item' && /Stone$/.test(e.param) && stage >= stageOf('celadon-city'));
+      if (ok) out.push({ dex: e.into, via: [...out[i].via, e.method === 'level' ? `Lv ${e.param}` : e.param] });
+    }
+  }
+  return out;
+}
+// Pokémon you could catch by the time of this battle that have a super-effective level-up move at the foe's level,
+// evolved where you would have by then. Ones that win the one-on-one come first, and ones the rest of the trainer's
+// team can't hit super effectively are preferred; any that can be are flagged with the move to watch for.
 function catchSuggestions(foeMon, foe, stage, party, n = 2) {
   const team = cur().team;
-  const others = party.map(foeBattler);
-  return catchableBy(stage).filter(c => !team.includes(c.dex)).map(c => {
-    const me = battler(c.dex, foe.level, PLAYER_IV, defaultMoves(c.dex, foe.level));
-    return { c, d: duel(me, foe), exposed: others.some(o => o.moves.some(mv => { const h = hit(o, me, mv); return h && h.mult >= 2; })) };
-  }).filter(x => x.d.se.length && x.d.wins && !x.exposed)
-    .sort((a, b) => isCaught(b.c.dex) - isCaught(a.c.dex) || rankDuels(a.d, b.d)).slice(0, n);
+  const others = party.filter(x => x !== foeMon).map(x => ({ p: x, b: foeBattler(x) }));
+  const seen = new Set(team);
+  const out = [];
+  for (const c of catchableBy(stage)) {
+    for (const f of evoForms(c.dex, foe.level, stage)) {
+      if (seen.has(f.dex)) continue;
+      const me = battler(f.dex, foe.level, PLAYER_IV, defaultMoves(f.dex, foe.level));
+      const d = duel(me, foe);
+      if (!d.se.length || d.myHits === Infinity) continue;
+      const risk = [];
+      for (const o of others) for (const mv of o.b.moves) { const h = hit(o.b, me, mv); if (h && h.mult >= 2) risk.push(`${o.p.name}'s ${mv}`); }
+      out.push({ c, f, d, risk: [...new Set(risk)] });
+    }
+  }
+  const picked = [], used = new Set();
+  for (const x of out.sort((a, b) => b.d.wins - a.d.wins || (a.risk.length > 0) - (b.risk.length > 0) || isCaught(b.c.dex) - isCaught(a.c.dex) || rankDuels(a.d, b.d) || a.c.stage - b.c.stage)) {
+    if (used.has(x.c.dex) || used.has(x.f.dex)) continue;
+    used.add(x.c.dex).add(x.f.dex); picked.push(x);
+  }
+  return picked.slice(0, n);
 }
 
 const hpPct = (h, b) => `${Math.min(100, Math.round(100 * h.min / b.hp))}–${Math.min(100, Math.round(100 * h.max / b.hp))}%`;
@@ -533,15 +565,17 @@ function foeRow(p, stage, party) {
         <td>${hitText(d.mine, foe, d.myHits)}</td>
         <td>${hitText(d.theirs, d.me, d.theirHits)}${d.threats.length ? `<div class="bad">Super effective: ${d.threats.map(esc).join(', ')}</div>` : ''}</td></tr>`).join('')}</table>`;
   }
-  if (!best || !duels.some(d => d.se.length) || !best.wins) {
+  // Suggest a catch when you'd lose, or when nobody is super effective and the fight isn't a quick win anyway
+  if (!best || !best.wins || (!duels.some(d => d.se.length) && best.myHits > 2)) {
     const sug = catchSuggestions(p, foe, stage, party);
-    pick += sug.length ? `<div class="catch">${best ? (duels.some(d => d.se.length) ? 'Or catch' : 'Nobody on your team has a super-effective move. Catch') : 'Good catch'}: ${sug.map(({ c, d }) => {
-      const learn = mon(c.dex).learnset.find(([, mv]) => mv === d.mine?.name);
-      return `<b>${esc(mon(c.dex).name)}</b> ${types(c.dex)} on <a href="#/loc/${c.loc}">${esc(c.name)}</a>
+    pick += sug.length ? `<div class="catch">${best ? (duels.some(d => d.se.length) ? 'Or catch' : 'Nobody on your team has a super-effective move. Catch') : 'Good catch'}: ${sug.map(({ c, f, d, risk }) => {
+      const learn = mon(f.dex).learnset.find(([, mv]) => mv === d.mine?.name);
+      const evo = f.dex !== c.dex ? `${esc(mon(c.dex).name)} and evolve it into <b>${esc(mon(f.dex).name)}</b> (${esc(f.via.join(', then '))})` : `<b>${esc(mon(c.dex).name)}</b>`;
+      return `${evo} ${types(f.dex)} on <a href="#/loc/${c.loc}">${esc(c.name)}</a>
         <span class="note">(${esc(METHOD_LABEL[c.method] || c.method)}${c.levels ? `, Lv ${esc(c.levels)}` : ''}${isCaught(c.dex) ? ', you have one' : ''}).
-        At Lv ${p.level}: ${hitText(d.mine, foe, d.myHits)}${learn && learn[0] > 1 ? `, learned at Lv ${learn[0]}` : ''}</span>`;
-    }).join(' or ')}</div>`
-      : `<div class="note">Nothing you can catch by now has a super-effective move that wins this one-on-one without being weak to another of this trainer's moves.</div>`;
+        At Lv ${p.level}: ${hitText(d.mine, foe, d.myHits)}${learn && learn[0] > 1 ? `, learned at Lv ${learn[0]}` : ''}${d.wins ? '' : ', but it may lose the one-on-one'}</span>${risk.length ? `<div class="bad">Watch out for ${esc(risk.slice(0, 3).join(', '))}</div>` : ''}`;
+    }).join('<br>or ')}</div>`
+      : `<div class="note">Nothing you can catch by ${esc(state.index[stage]?.name || 'now')} learns a super-effective move by Lv ${p.level}.</div>`;
   }
   return `<div class="foe"><div><b>${esc(p.name)}</b> Lv ${p.level} ${types(p.dex)} <span class="note">${foe.hp} HP${p.item ? ` · holding ${esc(p.item)}` : ''}</span></div>
     ${p.moves?.length ? `<div class="moves">${p.moves.map(m => `<span class="mv">${esc(m.name)}${m.type ? ` <i class="t-${m.type}"></i>` : ''}${m.power ? ` <small>${m.power === 1 ? '—' : m.power}</small>` : ''}</span>`).join('')}</div>` : ''}
@@ -565,7 +599,7 @@ function trainerCard(t, stage, opts = {}) {
   const key = trainerKey(opts.loc, t), done = !!s.checks[key];
   const rival = t.byStarter ? (mine ? `<p class="note">You picked ${esc(mine)}, so your rival has ${esc(RIVAL_OF[mine])}. <a href="#/loc/pallet-town">Change it in Oak's Lab</a>.</p>`
     : `<p class="note"><b>Pick your starter to see this team.</b> Your rival takes the one that beats yours. Which did you choose in Professor Oak's Lab?</p>${starterChips()}`) : '';
-  return `<details class="card trainer ${done ? 'checked' : ''}" open><summary><input type="checkbox" class="tcheck" data-key="${esc(key)}" ${done ? 'checked' : ''} aria-label="Defeated ${esc(head)}"><span class="tname">${esc(head)}</span> <span class="note">· ${esc(meta)}</span>${t.double ? ' <span class="tag">Double</span>' : ''}${t.rewards ? ' <span class="tag">Reward</span>' : ''}</summary>
+  return `<details class="card trainer ${done ? 'checked' : ''}"${opts.open === false ? '' : ' open'}><summary><input type="checkbox" class="tcheck" data-key="${esc(key)}" ${done ? 'checked' : ''} aria-label="Defeated ${esc(head)}"><span class="tname">${esc(head)}</span> <span class="note">· ${esc(meta)}</span>${t.double ? ' <span class="tag">Double</span>' : ''}${t.rewards ? ' <span class="tag">Reward</span>' : ''}</summary>
     ${info ? `<p class="note">${info}</p>` : ''}
     ${t.note && !t.byStarter ? `<p class="note">${esc(t.note)}</p>` : ''}${rival}${party ? opts.extra?.(party) || '' : ''}
     ${party ? party.map(p => foeRow(p, stage, party)).join('') : ''}
