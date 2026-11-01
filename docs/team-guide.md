@@ -15,12 +15,25 @@ Answers 961 of 964 trainer Pokémon (100%) one-on-one; key battles 84 of 87.
   - Rival (Pallet Town), Lv 5 Bulbasaur: Tackle
   - Brock (Pewter City), Lv 14 Bulbasaur: Vine Whip, Tackle
   - Rival (Cerulean City), Lv 18 Ivysaur: Vine Whip, Tackle
+  - Rival (S.S. Anne), Lv 21 Ivysaur: Vine Whip, Cut (HM01)
   - Lt. Surge (Vermilion City), Lv 24 Ivysaur: Razor Leaf, Cut (HM01)
-  - Koga (Fuchsia City), Lv 43 Venusaur: Razor Leaf, Strength (HM04)
-  - Blaine (Cinnabar Island), Lv 47 Venusaur: Solarbeam (TM22), Strength (HM04)
+  - Koga (Fuchsia City), Lv 43 Venusaur: Giga Drain (TM19), Cut (HM01)
   - HM01 Cut: S.S. Anne (Captains Office), from S.S. Anne Captain (cure his seasickness)
-  - HM04 Strength: Fuchsia City (Wardens House), from Safari Warden (return his Gold Teeth)
-  - TM22 Solarbeam: Pokémon Mansion (B1F) (single use)
+  - TM19 Giga Drain: Celadon City (Gym), from Erika (after winning) (single use)
+
+### Raticate (Rattata → Raticate)
+
+- Get it: Route 1, grass (Lv 2-4)
+- Evolves: Raticate at Lv 20
+- HMs it can carry: Cut, Strength, Rock Smash
+- Moves over the game:
+  - Rival (Route 22), Lv 9 Rattata: Quick Attack
+  - Brock (Pewter City), Lv 14 Rattata: Hyper Fang
+  - Misty (Cerulean City), Lv 21 Raticate: Hyper Fang
+  - Koga (Fuchsia City), Lv 43 Raticate: Return (TM27), Shadow Ball (TM30), Thunderbolt (TM24), Pursuit
+  - TM27 Return: Route 12 (North Entrance 2F), from Girl upstairs (single use)
+  - TM30 Shadow Ball: Celadon City (Game Corner Prize Room), 4,500 coins (single use)
+  - TM24 Thunderbolt: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
 
 ### Primeape (Mankey → Primeape)
 
@@ -29,15 +42,13 @@ Answers 961 of 964 trainer Pokémon (100%) one-on-one; key battles 84 of 87.
 - HMs it can carry: Strength, Rock Smash
 - Moves over the game:
   - Rival (Route 22), Lv 9 Mankey: Low Kick, Scratch
-  - Brock (Pewter City), Lv 14 Mankey: Low Kick, Karate Chop, Rock Tomb (TM39), Scratch
+  - Brock (Pewter City), Lv 14 Mankey: Low Kick, Karate Chop, Scratch
   - Rival (Cerulean City), Lv 18 Mankey: Low Kick, Karate Chop, Fury Swipes, Rock Tomb (TM39)
-  - Misty (Cerulean City), Lv 21 Mankey: Low Kick, Karate Chop, Secret Power (TM43), Rock Tomb (TM39)
-  - Lt. Surge (Vermilion City), Lv 24 Mankey: Brick Break (TM31), Low Kick, Secret Power (TM43), Rock Tomb (TM39)
+  - Rival (S.S. Anne), Lv 21 Mankey: Brick Break (TM31), Low Kick, Fury Swipes, Rock Tomb (TM39)
   - Koga (Fuchsia City), Lv 43 Primeape: Cross Chop, Low Kick, Hyper Beam (TM15), Aerial Ace (TM40)
   - Sabrina (Saffron City), Lv 43 Primeape: Focus Punch (TM01), Low Kick, Hyper Beam (TM15), Aerial Ace (TM40)
   - Rival (Pokémon League), Lv 63 Primeape: Focus Punch (TM01), Thrash, Low Kick, Aerial Ace (TM40)
   - TM39 Rock Tomb: Pewter City (Gym), from Brock (after winning) (single use)
-  - TM43 Secret Power: Route 25; or Celadon City (Department Store 2F), ₽3,000
   - TM31 Brick Break: S.S. Anne (1F Room 2); or Celadon City (Department Store 2F), ₽3,000
   - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
   - TM40 Aerial Ace: Route 9 (single use)
@@ -49,11 +60,12 @@ Answers 961 of 964 trainer Pokémon (100%) one-on-one; key battles 84 of 87.
 - Evolves: Graveler at Lv 25
 - HMs it can carry: Strength, Rock Smash
 - Moves over the game:
-  - when you get it, Lv 11 Geodude: Rock Throw, Tackle
+  - when you get it, Lv 14 Geodude: Rock Throw, Tackle
   - Rival (Cerulean City), Lv 18 Geodude: Magnitude, Rock Throw, Tackle
-  - Lt. Surge (Vermilion City), Lv 24 Geodude: Magnitude, Rock Throw, Brick Break (TM31), Tackle
+  - Rival (S.S. Anne), Lv 21 Geodude: Magnitude, Rock Throw, Brick Break (TM31), Tackle
   - Koga (Fuchsia City), Lv 43 Graveler: Rock Blast, Magnitude, Brick Break (TM31), Flamethrower (TM35)
-  - Blaine (Cinnabar Island), Lv 47 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Fire Blast (TM38)
+  - Blaine (Cinnabar Island), Lv 47 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Flamethrower (TM35)
+  - Giovanni (Viridian City), Lv 50 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Fire Blast (TM38)
   - Rival (Pokémon League), Lv 63 Graveler: Earthquake, Double-edge, Rock Blast, Brick Break (TM31)
   - TM31 Brick Break: S.S. Anne (1F Room 2); or Celadon City (Department Store 2F), ₽3,000
   - TM35 Flamethrower: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
@@ -65,154 +77,8 @@ Answers 961 of 964 trainer Pokémon (100%) one-on-one; key battles 84 of 87.
 - Evolves: Kadabra at Lv 16
 - HMs it can carry: Flash
 - Moves over the game:
-  - when you get it, Lv 10 Abra: Teleport
+  - when you get it, Lv 18 Kadabra: Confusion
   - Misty (Cerulean City), Lv 21 Kadabra: Psybeam
-  - Lt. Surge (Vermilion City), Lv 24 Kadabra: Psybeam, Shock Wave (TM34)
-  - Koga (Fuchsia City), Lv 43 Kadabra: Psychic, Shock Wave (TM34), Shadow Ball (TM30)
-  - TM34 Shock Wave: Vermilion City (Gym), from Lt. Surge (after winning) (single use)
-  - TM30 Shadow Ball: Celadon City (Game Corner Prize Room), 4,500 coins (single use)
-
-### Electrode (Voltorb → Electrode)
-
-- Get it: Route 10, grass (Lv 14-17)
-- Evolves: Electrode at Lv 30
-- HMs it can carry: Flash
-- Moves over the game:
-  - when you get it, Lv 20 Voltorb: Tackle
-  - Koga (Fuchsia City), Lv 43 Electrode: Thunderbolt (TM24), Tackle, Rollout
-  - Blaine (Cinnabar Island), Lv 47 Electrode: Thunder (TM25), Tackle, Rollout
-  - Giovanni (Viridian City), Lv 50 Electrode: Thunder (TM25), Swift, Rollout
-  - TM24 Thunderbolt: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
-  - TM25 Thunder: Power Plant (single use)
-
-### Vaporeon (Eevee → Vaporeon)
-
-- Get it: Celadon City, gift (Lv 25)
-- Evolves: Vaporeon at Water Stone
-- HMs it can carry: Surf, Waterfall
-- Moves over the game:
-  - when you get it, Lv 31 Vaporeon: Ice Beam (TM13), Bite, Hyper Beam (TM15), Dig (TM28)
-  - Sabrina (Saffron City), Lv 43 Vaporeon: Surf (HM03), Ice Beam (TM13), Bite, Hyper Beam (TM15)
-  - Blaine (Cinnabar Island), Lv 47 Vaporeon: Surf (HM03), Blizzard (TM14), Bite, Hyper Beam (TM15)
-  - Rival (Route 22), Lv 53 Vaporeon: Hydro Pump, Blizzard (TM14), Bite, Hyper Beam (TM15)
-  - TM13 Ice Beam: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
-  - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
-  - TM28 Dig: Cerulean City, from Rocket Grunt (after beating him); or Celadon City (Department Store 2F), ₽2,000
-  - HM03 Surf: Safari Zone (Secret House), from Reward for reaching the Secret House
-  - TM14 Blizzard: Pokémon Mansion (B1F) (single use)
-
-Key battles (best lead per Pokémon):
-
-- Rival (Pallet Town): Charmander 5 → Bulbasaur (no clean win) Tackle
-- Rival (Route 22): Pidgey 9 → Mankey (no clean win) Scratch; Charmander 9 → Mankey Scratch
-- Brock (Pewter City): Geodude 12 → Bulbasaur Vine Whip; Onix 14 → Bulbasaur Vine Whip
-- Rival (Cerulean City): Pidgeotto 17 → Geodude Rock Throw; Abra 16 → Geodude Magnitude; Rattata 15 → Geodude Magnitude; Charmander 18 → Geodude Magnitude
-- Misty (Cerulean City): Staryu 18 → Kadabra Psybeam; Starmie 21 → Ivysaur Vine Whip
-- Rival (S.S. Anne): Pidgeotto 19 → Geodude Rock Throw; Raticate 16 → Geodude Brick Break; Kadabra 18 → Geodude Magnitude; Charmeleon 20 → Geodude Magnitude
-- Lt. Surge (Vermilion City): Voltorb 21 → Geodude Magnitude; Pikachu 18 → Geodude Magnitude; Raichu 24 → Geodude Magnitude
-- Erika (Celadon City): Victreebel 29 → Kadabra Psybeam; Tangela 24 → Kadabra Psybeam; Vileplume 29 → Vaporeon Ice Beam
-- Giovanni (Rocket Hideout): Onix 25 → Primeape Low Kick; Rhyhorn 24 → Vaporeon Ice Beam; Kangaskhan 29 → Graveler Brick Break
-- Rival (Pokémon Tower): Pidgeotto 25 → Vaporeon Ice Beam; Exeggcute 23 → Vaporeon Ice Beam; Gyarados 22 → Voltorb Thunderbolt; Kadabra 20 → Vaporeon Hyper Beam; Charmeleon 25 → Graveler Magnitude
-- Koga (Fuchsia City): Koffing 37 → Graveler Magnitude; Muk 39 → Graveler Magnitude; Koffing 37 → Graveler Magnitude; Weezing 43 → Kadabra Psychic
-- Sabrina (Saffron City): Kadabra 38 → Vaporeon Hyper Beam; Mr. Mime 37 → Primeape Hyper Beam; Venomoth 38 → Graveler Rock Blast; Alakazam 43 → Kadabra Shadow Ball
-- Rival (Silph Co.): Pidgeot 37 → Electrode Thunderbolt; Exeggcute 38 → Vaporeon Ice Beam; Gyarados 35 → Electrode Thunderbolt; Alakazam 35 → Primeape Hyper Beam; Charizard 40 → Graveler Rock Blast
-- Giovanni (Silph Co.): Nidorino 37 → Kadabra Psychic; Kangaskhan 35 → Primeape Focus Punch; Rhyhorn 37 → Primeape Focus Punch; Nidoqueen 41 → Vaporeon Surf
-- Blaine (Cinnabar Island): Growlithe 42 → Graveler Earthquake; Ponyta 40 → Graveler Earthquake; Rapidash 42 → Graveler Earthquake; Arcanine 47 → Vaporeon Surf
-- Giovanni (Viridian City): Rhyhorn 45 → Graveler Earthquake; Dugtrio 42 → Vaporeon Surf; Nidoqueen 44 → Vaporeon Surf; Nidoking 45 → Graveler Earthquake; Rhyhorn 50 → Primeape Focus Punch
-- Rival (Route 22): Pidgeot 47 → Vaporeon Blizzard; Rhyhorn 45 → Graveler Earthquake; Exeggcute 45 → Vaporeon Blizzard; Gyarados 45 → Electrode Thunder; Alakazam 47 → Vaporeon Hydro Pump; Charizard 53 → Vaporeon Hydro Pump
-- Lorelei (Pokémon League): Dewgong 52 → Primeape Focus Punch; Cloyster 51 → Electrode Thunder; Slowbro 52 → Electrode Thunder; Jynx 54 → Primeape Focus Punch; Lapras 54 → Primeape Focus Punch
-- Bruno (Pokémon League): Onix 51 → Vaporeon Hydro Pump; Hitmonchan 53 → Vaporeon Hydro Pump; Hitmonlee 53 → Primeape Focus Punch; Onix 54 → Vaporeon Hydro Pump; Machamp 56 → Kadabra (no clean win) Psychic
-- Agatha (Pokémon League): Gengar 54 → Graveler Earthquake; Golbat 54 → Electrode Thunder; Haunter 53 → Graveler Earthquake; Arbok 56 → Graveler Earthquake; Gengar 58 → Graveler Earthquake
-- Lance (Pokémon League): Gyarados 56 → Electrode Thunder; Dragonair 54 → Vaporeon Blizzard; Dragonair 54 → Vaporeon Blizzard; Aerodactyl 58 → Vaporeon Hydro Pump; Dragonite 60 → Vaporeon Blizzard
-- Rival (Pokémon League): Pidgeot 59 → Graveler Rock Blast; Alakazam 57 → Vaporeon Hydro Pump; Rhydon 59 → Vaporeon Hydro Pump; Exeggutor 59 → Vaporeon Blizzard; Gyarados 61 → Electrode Thunder; Charizard 63 → Vaporeon Hydro Pump
-
-Not answered one-on-one: Charmander 5 (Rival, Pallet Town); Pidgey 9 (Rival, Route 22); Machamp 56 (Elite Four Bruno, Pokémon League)
-
-Closest alternative for each slot: Cloyster for Kadabra (−18.4); Raticate for Primeape (−3.9); Marowak for Graveler (−6.1); Tauros for Vaporeon (−1.4); Raticate for Electrode (−0.4)
-
-## FireRed, Charmander
-
-Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
-
-### Charizard (Charmander → Charmeleon → Charizard)
-
-- Get it: Professor Oak's Lab (your starter)
-- Evolves: Charmeleon at Lv 16, Charizard at Lv 36
-- HMs it can carry: Cut, Fly, Strength, Rock Smash
-- Moves over the game:
-  - Rival (Pallet Town), Lv 5 Charmander: Scratch
-  - Rival (Route 22), Lv 9 Charmander: Ember, Scratch
-  - Brock (Pewter City), Lv 14 Charmander: Ember, Metal Claw, Scratch
-  - Rival (Cerulean City), Lv 18 Charmeleon: Ember, Metal Claw, Scratch
-  - Lt. Surge (Vermilion City), Lv 24 Charmeleon: Ember, Cut (HM01), Metal Claw
-  - Koga (Fuchsia City), Lv 43 Charizard: Flamethrower, Wing Attack, Strength (HM04), Steel Wing (TM47)
-  - Giovanni (Viridian City), Lv 50 Charizard: Heat Wave, Wing Attack, Strength (HM04), Steel Wing (TM47)
-  - Lorelei (Pokémon League), Lv 54 Charizard: Overheat (TM50), Wing Attack, Strength (HM04), Dragon Rage
-  - HM01 Cut: S.S. Anne (Captains Office), from S.S. Anne Captain (cure his seasickness)
-  - HM04 Strength: Fuchsia City (Wardens House), from Safari Warden (return his Gold Teeth)
-  - TM47 Steel Wing: Safari Zone (North) (single use)
-  - TM50 Overheat: Victory Road (3F) (single use)
-
-### Primeape (Mankey → Primeape)
-
-- Get it: Route 22, grass (Lv 2-5)
-- Evolves: Primeape at Lv 28
-- HMs it can carry: Strength, Rock Smash
-- Moves over the game:
-  - Rival (Route 22), Lv 9 Mankey: Low Kick, Scratch
-  - Brock (Pewter City), Lv 14 Mankey: Low Kick, Karate Chop, Scratch
-  - Rival (Cerulean City), Lv 18 Mankey: Low Kick, Karate Chop, Fury Swipes
-  - Lt. Surge (Vermilion City), Lv 24 Mankey: Brick Break (TM31), Low Kick, Fury Swipes
-  - Koga (Fuchsia City), Lv 43 Primeape: Cross Chop, Low Kick, Hyper Beam (TM15)
-  - Sabrina (Saffron City), Lv 43 Primeape: Focus Punch (TM01), Low Kick, Hyper Beam (TM15)
-  - Blaine (Cinnabar Island), Lv 47 Primeape: Focus Punch (TM01), Low Kick, Hyper Beam (TM15), Thunder (TM25)
-  - Rival (Pokémon League), Lv 63 Primeape: Focus Punch (TM01), Thrash, Low Kick, Thunder (TM25)
-  - TM31 Brick Break: S.S. Anne (1F Room 2); or Celadon City (Department Store 2F), ₽3,000
-  - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
-  - TM01 Focus Punch: Silph Co. (5F) (single use)
-  - TM25 Thunder: Power Plant (single use)
-
-### Graveler (Geodude → Graveler)
-
-- Get it: Mt. Moon, grass (Lv 7-9)
-- Evolves: Graveler at Lv 25
-- HMs it can carry: Strength, Rock Smash
-- Moves over the game:
-  - when you get it, Lv 11 Geodude: Rock Throw, Tackle
-  - Rival (Cerulean City), Lv 18 Geodude: Magnitude, Rock Throw, Tackle
-  - Lt. Surge (Vermilion City), Lv 24 Geodude: Magnitude, Rock Throw, Brick Break (TM31), Tackle
-  - Koga (Fuchsia City), Lv 43 Graveler: Rock Blast, Magnitude, Brick Break (TM31), Flamethrower (TM35)
-  - Blaine (Cinnabar Island), Lv 47 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Fire Blast (TM38)
-  - Rival (Pokémon League), Lv 63 Graveler: Earthquake, Double-edge, Rock Blast, Brick Break (TM31)
-  - TM31 Brick Break: S.S. Anne (1F Room 2); or Celadon City (Department Store 2F), ₽3,000
-  - TM35 Flamethrower: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
-  - TM38 Fire Blast: Cinnabar Island (Gym), from Blaine (after winning) (single use)
-
-### Vileplume (Oddish → Gloom → Vileplume)
-
-- Get it: Route 24, grass (Lv 12-14)
-- Evolves: Gloom at Lv 21, Vileplume at Leaf Stone
-- HMs it can carry: Cut, Flash
-- Moves over the game:
-  - when you get it, Lv 12 Oddish: Bullet Seed (TM09)
-  - Misty (Cerulean City), Lv 21 Gloom: Bullet Seed (TM09)
-  - Lt. Surge (Vermilion City), Lv 24 Gloom: Acid, Bullet Seed (TM09), Cut (HM01)
-  - Koga (Fuchsia City), Lv 43 Vileplume: Giga Drain (TM19), Hyper Beam (TM15), Acid
-  - Blaine (Cinnabar Island), Lv 47 Vileplume: Petal Dance, Hyper Beam (TM15), Acid
-  - TM09 Bullet Seed: Mt. Moon (1F) (single use)
-  - HM01 Cut: S.S. Anne (Captains Office), from S.S. Anne Captain (cure his seasickness)
-  - TM19 Giga Drain: Celadon City (Gym), from Erika (after winning) (single use)
-  - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
-
-### Kadabra (Abra → Kadabra)
-
-- Get it: Route 24, grass (Lv 8-12)
-- Evolves: Kadabra at Lv 16
-- HMs it can carry: Flash
-- Moves over the game:
-  - when you get it, Lv 10 Abra: Teleport
-  - Misty (Cerulean City), Lv 21 Kadabra: Psybeam
-  - Lt. Surge (Vermilion City), Lv 24 Kadabra: Psybeam, Shock Wave (TM34)
   - Koga (Fuchsia City), Lv 43 Kadabra: Psychic, Shock Wave (TM34)
   - TM34 Shock Wave: Vermilion City (Gym), from Lt. Surge (after winning) (single use)
 
@@ -234,32 +100,157 @@ Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
 
 Key battles (best lead per Pokémon):
 
+- Rival (Pallet Town): Charmander 5 → Bulbasaur (no clean win) Tackle
+- Rival (Route 22): Pidgey 9 → Rattata Quick Attack; Charmander 9 → Rattata Quick Attack
+- Brock (Pewter City): Geodude 12 → Bulbasaur Vine Whip; Onix 14 → Bulbasaur Vine Whip
+- Rival (Cerulean City): Pidgeotto 17 → Geodude Rock Throw; Abra 16 → Rattata Hyper Fang; Rattata 15 → Geodude Magnitude; Charmander 18 → Geodude Magnitude
+- Misty (Cerulean City): Staryu 18 → Raticate Hyper Fang; Starmie 21 → Ivysaur Vine Whip
+- Rival (S.S. Anne): Pidgeotto 19 → Geodude Rock Throw; Raticate 16 → Geodude Brick Break; Kadabra 18 → Raticate Hyper Fang; Charmeleon 20 → Raticate Hyper Fang
+- Lt. Surge (Vermilion City): Voltorb 21 → Geodude Magnitude; Pikachu 18 → Geodude Magnitude; Raichu 24 → Geodude Magnitude
+- Erika (Celadon City): Victreebel 29 → Kadabra Psybeam; Tangela 24 → Kadabra Psybeam; Vileplume 29 → Vaporeon Ice Beam
+- Giovanni (Rocket Hideout): Onix 25 → Primeape Low Kick; Rhyhorn 24 → Vaporeon Water Pulse; Kangaskhan 29 → Graveler Brick Break
+- Rival (Pokémon Tower): Pidgeotto 25 → Vaporeon Ice Beam; Exeggcute 23 → Vaporeon Ice Beam; Gyarados 22 → Kadabra Shock Wave; Kadabra 20 → Vaporeon Hyper Beam; Charmeleon 25 → Vaporeon Water Pulse
+- Koga (Fuchsia City): Koffing 37 → Graveler Magnitude; Muk 39 → Graveler Magnitude; Koffing 37 → Graveler Magnitude; Weezing 43 → Kadabra Psychic
+- Sabrina (Saffron City): Kadabra 38 → Vaporeon Hyper Beam; Mr. Mime 37 → Raticate Shadow Ball; Venomoth 38 → Graveler Rock Blast; Alakazam 43 → Raticate Shadow Ball
+- Rival (Silph Co.): Pidgeot 37 → Primeape Focus Punch; Exeggcute 38 → Vaporeon Ice Beam; Gyarados 35 → Kadabra Shock Wave; Alakazam 35 → Raticate Shadow Ball; Charizard 40 → Vaporeon Surf
+- Giovanni (Silph Co.): Nidorino 37 → Graveler Magnitude; Kangaskhan 35 → Primeape Focus Punch; Rhyhorn 37 → Primeape Focus Punch; Nidoqueen 41 → Vaporeon Surf
+- Blaine (Cinnabar Island): Growlithe 42 → Graveler Earthquake; Ponyta 40 → Graveler Earthquake; Rapidash 42 → Graveler Earthquake; Arcanine 47 → Vaporeon Surf
+- Giovanni (Viridian City): Rhyhorn 45 → Graveler Earthquake; Dugtrio 42 → Vaporeon Surf; Nidoqueen 44 → Vaporeon Surf; Nidoking 45 → Graveler Earthquake; Rhyhorn 50 → Venusaur Giga Drain
+- Rival (Route 22): Pidgeot 47 → Vaporeon Blizzard; Rhyhorn 45 → Graveler Earthquake; Exeggcute 45 → Vaporeon Blizzard; Gyarados 45 → Raticate Thunderbolt; Alakazam 47 → Vaporeon Hydro Pump; Charizard 53 → Vaporeon Hydro Pump
+- Lorelei (Pokémon League): Dewgong 52 → Primeape Focus Punch; Cloyster 51 → Venusaur Giga Drain; Slowbro 52 → Vaporeon Bite; Jynx 54 → Primeape Focus Punch; Lapras 54 → Primeape Focus Punch
+- Bruno (Pokémon League): Onix 51 → Vaporeon Hydro Pump; Hitmonchan 53 → Vaporeon Hydro Pump; Hitmonlee 53 → Primeape Focus Punch; Onix 54 → Vaporeon Hydro Pump; Machamp 56 → Kadabra (no clean win) Psychic
+- Agatha (Pokémon League): Gengar 54 → Graveler Earthquake; Golbat 54 → Kadabra Psychic; Haunter 53 → Graveler Earthquake; Arbok 56 → Graveler Earthquake; Gengar 58 → Graveler Earthquake
+- Lance (Pokémon League): Gyarados 56 → Raticate Thunderbolt; Dragonair 54 → Vaporeon Blizzard; Dragonair 54 → Vaporeon Blizzard; Aerodactyl 58 → Vaporeon Hydro Pump; Dragonite 60 → Vaporeon Blizzard
+- Rival (Pokémon League): Pidgeot 59 → Graveler Rock Blast; Alakazam 57 → Vaporeon Hydro Pump; Rhydon 59 → Venusaur Giga Drain; Exeggutor 59 → Vaporeon Blizzard; Gyarados 61 → Kadabra (no clean win) Shock Wave; Charizard 63 → Vaporeon Hydro Pump
+
+Not answered one-on-one: Charmander 5 (Rival, Pallet Town); Machamp 56 (Elite Four Bruno, Pokémon League); Gyarados 61 (Champion Rival, Pokémon League)
+
+Closest alternative for each slot: Haunter for Kadabra (−10.9); Haunter for Primeape (−2.6); Kangaskhan for Raticate (−1.5); Fearow for Graveler (−1.5); Electrode for Vaporeon (−1.9)
+
+## FireRed, Charmander
+
+Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
+
+### Charizard (Charmander → Charmeleon → Charizard)
+
+- Get it: Professor Oak's Lab (your starter)
+- Evolves: Charmeleon at Lv 16, Charizard at Lv 36
+- HMs it can carry: Cut, Fly, Strength, Rock Smash
+- Moves over the game:
+  - Rival (Pallet Town), Lv 5 Charmander: Scratch
+  - Rival (Route 22), Lv 9 Charmander: Ember, Scratch
+  - Brock (Pewter City), Lv 14 Charmander: Ember, Metal Claw, Scratch
+  - Rival (Cerulean City), Lv 18 Charmeleon: Ember, Metal Claw, Scratch
+  - Rival (S.S. Anne), Lv 21 Charmeleon: Ember, Cut (HM01), Metal Claw
+  - Koga (Fuchsia City), Lv 43 Charizard: Flamethrower, Wing Attack, Hyper Beam (TM15), Steel Wing (TM47)
+  - Giovanni (Viridian City), Lv 50 Charizard: Heat Wave, Wing Attack, Hyper Beam (TM15), Steel Wing (TM47)
+  - Lorelei (Pokémon League), Lv 54 Charizard: Heat Wave, Wing Attack, Dragon Rage, Hyper Beam (TM15)
+  - HM01 Cut: S.S. Anne (Captains Office), from S.S. Anne Captain (cure his seasickness)
+  - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
+  - TM47 Steel Wing: Safari Zone (North) (single use)
+
+### Primeape (Mankey → Primeape)
+
+- Get it: Route 22, grass (Lv 2-5)
+- Evolves: Primeape at Lv 28
+- HMs it can carry: Strength, Rock Smash
+- Moves over the game:
+  - Rival (Route 22), Lv 9 Mankey: Low Kick, Scratch
+  - Brock (Pewter City), Lv 14 Mankey: Low Kick, Karate Chop, Scratch
+  - Rival (Cerulean City), Lv 18 Mankey: Low Kick, Karate Chop, Fury Swipes, Rock Tomb (TM39)
+  - Rival (S.S. Anne), Lv 21 Mankey: Brick Break (TM31), Low Kick, Fury Swipes, Rock Tomb (TM39)
+  - Koga (Fuchsia City), Lv 43 Primeape: Cross Chop, Low Kick, Hyper Beam (TM15), Rock Tomb (TM39)
+  - Sabrina (Saffron City), Lv 43 Primeape: Focus Punch (TM01), Low Kick, Hyper Beam (TM15), Rock Tomb (TM39)
+  - Rival (Pokémon League), Lv 63 Primeape: Focus Punch (TM01), Thrash, Low Kick, Rock Tomb (TM39)
+  - TM39 Rock Tomb: Pewter City (Gym), from Brock (after winning) (single use)
+  - TM31 Brick Break: S.S. Anne (1F Room 2); or Celadon City (Department Store 2F), ₽3,000
+  - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
+  - TM01 Focus Punch: Silph Co. (5F) (single use)
+
+### Graveler (Geodude → Graveler)
+
+- Get it: Mt. Moon, grass (Lv 7-9)
+- Evolves: Graveler at Lv 25
+- HMs it can carry: Strength, Rock Smash
+- Moves over the game:
+  - when you get it, Lv 14 Geodude: Rock Throw, Tackle
+  - Rival (Cerulean City), Lv 18 Geodude: Magnitude, Rock Throw, Tackle
+  - Rival (S.S. Anne), Lv 21 Geodude: Magnitude, Rock Throw, Brick Break (TM31), Tackle
+  - Koga (Fuchsia City), Lv 43 Graveler: Rock Blast, Magnitude, Brick Break (TM31), Tackle
+  - Blaine (Cinnabar Island), Lv 47 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Tackle
+  - Rival (Pokémon League), Lv 63 Graveler: Earthquake, Double-edge, Rock Blast, Brick Break (TM31)
+  - TM31 Brick Break: S.S. Anne (1F Room 2); or Celadon City (Department Store 2F), ₽3,000
+
+### Gyarados (Magikarp → Gyarados)
+
+- Get it: Route 4, gift (Lv 5)
+- Evolves: Gyarados at Lv 20
+- HMs it can carry: Surf, Strength, Rock Smash, Waterfall
+- Moves over the game:
+  - when you get it, Lv 17 Magikarp: Tackle
+  - Misty (Cerulean City), Lv 21 Gyarados: Secret Power (TM43), Bite
+  - Rival (S.S. Anne), Lv 21 Gyarados: Secret Power (TM43), Water Pulse (TM03), Bite
+  - Koga (Fuchsia City), Lv 43 Gyarados: Return (TM27), Hydro Pump, Bite, Dragon Rage
+  - Blaine (Cinnabar Island), Lv 47 Gyarados: Return (TM27), Hydro Pump, Thunder (TM25), Bite
+  - Giovanni (Viridian City), Lv 50 Gyarados: Return (TM27), Hydro Pump, Thunder (TM25), Fire Blast (TM38)
+  - TM43 Secret Power: Route 25; or Celadon City (Department Store 2F), ₽3,000
+  - TM03 Water Pulse: Cerulean City (Gym), from Misty (after winning) (single use)
+  - TM27 Return: Route 12 (North Entrance 2F), from Girl upstairs (single use)
+  - TM25 Thunder: Power Plant (single use)
+  - TM38 Fire Blast: Cinnabar Island (Gym), from Blaine (after winning) (single use)
+
+### Kadabra (Abra → Kadabra)
+
+- Get it: Route 24, grass (Lv 8-12)
+- Evolves: Kadabra at Lv 16
+- HMs it can carry: Flash
+- Moves over the game:
+  - when you get it, Lv 18 Kadabra: Confusion
+  - Misty (Cerulean City), Lv 21 Kadabra: Psybeam
+  - Koga (Fuchsia City), Lv 43 Kadabra: Psychic, Shock Wave (TM34)
+  - TM34 Shock Wave: Vermilion City (Gym), from Lt. Surge (after winning) (single use)
+
+### Haunter (Gastly → Haunter)
+
+- Get it: Pokémon Tower, grass (Lv 13-19)
+- Evolves: Haunter at Lv 25
+- HMs it can carry: none
+- Moves over the game:
+  - Rival (Pokémon Tower), Lv 29 Haunter: Thunderbolt (TM24), Giga Drain (TM19), Shadow Punch
+  - Sabrina (Saffron City), Lv 43 Haunter: Thunderbolt (TM24), Psychic (TM29), Giga Drain (TM19), Shadow Punch
+  - Blaine (Cinnabar Island), Lv 47 Haunter: Thunderbolt (TM24), Psychic (TM29), Giga Drain (TM19), Shadow Ball
+  - TM24 Thunderbolt: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
+  - TM19 Giga Drain: Celadon City (Gym), from Erika (after winning) (single use)
+  - TM29 Psychic: Saffron City (Mr Psychics House), from Mr. Psychic (single use)
+
+Key battles (best lead per Pokémon):
+
 - Rival (Pallet Town): Squirtle 5 → Charmander (no clean win) Scratch
 - Rival (Route 22): Pidgey 9 → Charmander Ember; Squirtle 9 → Mankey (no clean win) Low Kick
 - Brock (Pewter City): Geodude 12 → Mankey Karate Chop; Onix 14 → Mankey Low Kick
 - Rival (Cerulean City): Pidgeotto 17 → Geodude Rock Throw; Abra 16 → Geodude Magnitude; Rattata 15 → Geodude Magnitude; Squirtle 18 → Mankey Karate Chop
-- Misty (Cerulean City): Staryu 18 → Kadabra Psybeam; Starmie 21 → Gloom Bullet Seed
-- Rival (S.S. Anne): Pidgeotto 19 → Geodude Rock Throw; Raticate 16 → Geodude Brick Break; Kadabra 18 → Geodude Magnitude; Wartortle 20 → Mankey Brick Break
+- Misty (Cerulean City): Staryu 18 → Kadabra Psybeam; Starmie 21 → Gyarados Secret Power
+- Rival (S.S. Anne): Pidgeotto 19 → Geodude Rock Throw; Raticate 16 → Geodude Brick Break; Kadabra 18 → Gyarados Secret Power; Wartortle 20 → Gyarados Secret Power
 - Lt. Surge (Vermilion City): Voltorb 21 → Geodude Magnitude; Pikachu 18 → Geodude Magnitude; Raichu 24 → Geodude Magnitude
 - Erika (Celadon City): Victreebel 29 → Charmeleon Flamethrower; Tangela 24 → Charmeleon Flamethrower; Vileplume 29 → Charmeleon Flamethrower
-- Giovanni (Rocket Hideout): Onix 25 → Primeape Low Kick; Rhyhorn 24 → Vaporeon Water Pulse; Kangaskhan 29 → Graveler Brick Break
-- Rival (Pokémon Tower): Pidgeotto 25 → Vaporeon Ice Beam; Growlithe 23 → Vaporeon Water Pulse; Exeggcute 22 → Vaporeon Ice Beam; Kadabra 20 → Vaporeon Hyper Beam; Wartortle 25 → Vileplume Giga Drain
-- Koga (Fuchsia City): Koffing 37 → Graveler Magnitude; Muk 39 → Graveler Magnitude; Koffing 37 → Graveler Magnitude; Weezing 43 → Kadabra Psychic
-- Sabrina (Saffron City): Kadabra 38 → Vaporeon Hyper Beam; Mr. Mime 37 → Primeape Hyper Beam; Venomoth 38 → Charizard Flamethrower; Alakazam 43 → Vaporeon Surf
-- Rival (Silph Co.): Pidgeot 37 → Graveler Rock Blast; Growlithe 38 → Graveler Rock Blast; Exeggcute 35 → Vaporeon Ice Beam; Alakazam 35 → Vileplume Hyper Beam; Blastoise 40 → Primeape Focus Punch
-- Giovanni (Silph Co.): Nidorino 37 → Kadabra Psychic; Kangaskhan 35 → Primeape Focus Punch; Rhyhorn 37 → Vileplume Giga Drain; Nidoqueen 41 → Vaporeon Surf
-- Blaine (Cinnabar Island): Growlithe 42 → Graveler Earthquake; Ponyta 40 → Graveler Earthquake; Rapidash 42 → Graveler Earthquake; Arcanine 47 → Vaporeon Surf
-- Giovanni (Viridian City): Rhyhorn 45 → Graveler Earthquake; Dugtrio 42 → Vileplume Petal Dance; Nidoqueen 44 → Vaporeon Surf; Nidoking 45 → Graveler Earthquake; Rhyhorn 50 → Vileplume Petal Dance
-- Rival (Route 22): Pidgeot 47 → Vaporeon Blizzard; Rhyhorn 45 → Graveler Earthquake; Growlithe 45 → Graveler Earthquake; Exeggcute 45 → Charizard Heat Wave; Alakazam 47 → Vaporeon Hydro Pump; Blastoise 53 → Primeape Focus Punch
-- Lorelei (Pokémon League): Dewgong 52 → Primeape Focus Punch; Cloyster 51 → Charizard Overheat; Slowbro 52 → Vileplume Petal Dance; Jynx 54 → Charizard Overheat; Lapras 54 → Primeape Focus Punch
-- Bruno (Pokémon League): Onix 51 → Vaporeon Hydro Pump; Hitmonchan 53 → Charizard Overheat; Hitmonlee 53 → Primeape Focus Punch; Onix 54 → Vaporeon Hydro Pump; Machamp 56 → Charizard Overheat
-- Agatha (Pokémon League): Gengar 54 → Graveler Earthquake; Golbat 54 → Kadabra Psychic; Haunter 53 → Charizard Overheat; Arbok 56 → Graveler Earthquake; Gengar 58 → Graveler Earthquake
-- Lance (Pokémon League): Gyarados 56 → Primeape Thunder; Dragonair 54 → Vaporeon Blizzard; Dragonair 54 → Vaporeon Blizzard; Aerodactyl 58 → Vaporeon Hydro Pump; Dragonite 60 → Vaporeon Blizzard
-- Rival (Pokémon League): Pidgeot 59 → Graveler Rock Blast; Alakazam 57 → Vaporeon Hydro Pump; Rhydon 59 → Vileplume Petal Dance; Arcanine 59 → Vaporeon Hydro Pump; Exeggutor 61 → Charizard Overheat; Blastoise 63 → Primeape Focus Punch
+- Giovanni (Rocket Hideout): Onix 25 → Primeape Low Kick; Rhyhorn 24 → Gyarados Water Pulse; Kangaskhan 29 → Graveler Brick Break
+- Rival (Pokémon Tower): Pidgeotto 25 → Gyarados Hyper Beam; Growlithe 23 → Gyarados Hyper Beam; Exeggcute 22 → Gyarados Hyper Beam; Kadabra 20 → Gyarados Hyper Beam; Wartortle 25 → Haunter Thunderbolt
+- Koga (Fuchsia City): Koffing 37 → Haunter Thunderbolt; Muk 39 → Graveler Magnitude; Koffing 37 → Haunter Thunderbolt; Weezing 43 → Kadabra Psychic
+- Sabrina (Saffron City): Kadabra 38 → Charizard Hyper Beam; Mr. Mime 37 → Charizard Hyper Beam; Venomoth 38 → Charizard Flamethrower; Alakazam 43 → Gyarados Return
+- Rival (Silph Co.): Pidgeot 37 → Haunter Thunderbolt; Growlithe 38 → Gyarados Hydro Pump; Exeggcute 35 → Charizard Flamethrower; Alakazam 35 → Gyarados Return; Blastoise 40 → Primeape Focus Punch
+- Giovanni (Silph Co.): Nidorino 37 → Haunter Psychic; Kangaskhan 35 → Primeape Focus Punch; Rhyhorn 37 → Primeape Focus Punch; Nidoqueen 41 → Haunter Psychic
+- Blaine (Cinnabar Island): Growlithe 42 → Gyarados Hydro Pump; Ponyta 40 → Graveler Earthquake; Rapidash 42 → Graveler Earthquake; Arcanine 47 → Gyarados Hydro Pump
+- Giovanni (Viridian City): Rhyhorn 45 → Graveler Earthquake; Dugtrio 42 → Gyarados Hydro Pump; Nidoqueen 44 → Graveler Earthquake; Nidoking 45 → Gyarados Hydro Pump; Rhyhorn 50 → Primeape Focus Punch
+- Rival (Route 22): Pidgeot 47 → Graveler Rock Blast; Rhyhorn 45 → Graveler Earthquake; Growlithe 45 → Charizard Hyper Beam; Exeggcute 45 → Charizard Heat Wave; Alakazam 47 → Charizard Heat Wave; Blastoise 53 → Primeape Focus Punch
+- Lorelei (Pokémon League): Dewgong 52 → Primeape Focus Punch; Cloyster 51 → Haunter Thunderbolt; Slowbro 52 → Gyarados Thunder; Jynx 54 → Primeape Focus Punch; Lapras 54 → Primeape Focus Punch
+- Bruno (Pokémon League): Onix 51 → Gyarados Hydro Pump; Hitmonchan 53 → Haunter Psychic; Hitmonlee 53 → Primeape Focus Punch; Onix 54 → Gyarados Hydro Pump; Machamp 56 → Haunter Psychic
+- Agatha (Pokémon League): Gengar 54 → Graveler Earthquake; Golbat 54 → Kadabra Psychic; Haunter 53 → Graveler Earthquake; Arbok 56 → Graveler Earthquake; Gengar 58 → Graveler Earthquake
+- Lance (Pokémon League): Gyarados 56 → Haunter Thunderbolt; Dragonair 54 → Primeape Focus Punch; Dragonair 54 → Primeape Focus Punch; Aerodactyl 58 → Graveler Rock Blast; Dragonite 60 → Graveler Rock Blast
+- Rival (Pokémon League): Pidgeot 59 → Graveler Rock Blast; Alakazam 57 → Gyarados Return; Rhydon 59 → Gyarados Hydro Pump; Arcanine 59 → Graveler Earthquake; Exeggutor 61 → Charizard Heat Wave; Blastoise 63 → Primeape Focus Punch
 
 Not answered one-on-one: Squirtle 5 (Rival, Pallet Town); Squirtle 9 (Rival, Route 22)
 
-Closest alternative for each slot: Bellossom for Vileplume (−0.4); Haunter for Kadabra (−16.3); Electrode for Primeape (−8.2); Marowak for Graveler (−4.8); Snorlax for Vaporeon (−0.8)
+Closest alternative for each slot: Snorlax for Kadabra (−10.6); Snorlax for Primeape (−9.7); Snorlax for Gyarados (−1.8); Dugtrio for Graveler (−2.6); Haunter for Haunter (−0.0)
 
 ## FireRed, Squirtle
 
@@ -275,13 +266,16 @@ Answers 963 of 964 trainer Pokémon (100%) one-on-one; key battles 86 of 87.
   - Rival (Route 22), Lv 9 Squirtle: Tackle, Bubble
   - Brock (Pewter City), Lv 14 Squirtle: Water Gun, Tackle
   - Rival (Cerulean City), Lv 18 Wartortle: Water Gun, Tackle
-  - Misty (Cerulean City), Lv 21 Wartortle: Water Pulse (TM03), Bite, Tackle
+  - Misty (Cerulean City), Lv 21 Wartortle: Water Gun, Bite, Tackle
+  - Rival (S.S. Anne), Lv 21 Wartortle: Water Pulse (TM03), Bite, Tackle
   - Koga (Fuchsia City), Lv 43 Blastoise: Ice Beam (TM13), Water Pulse (TM03), Hyper Beam (TM15), Bite
-  - Sabrina (Saffron City), Lv 43 Blastoise: Surf (HM03), Ice Beam (TM13), Hyper Beam (TM15), Bite
+  - Blaine (Cinnabar Island), Lv 47 Blastoise: Blizzard (TM14), Water Pulse (TM03), Hyper Beam (TM15), Bite
+  - Rival (Route 22), Lv 53 Blastoise: Blizzard (TM14), Earthquake (TM26), Water Pulse (TM03), Hyper Beam (TM15)
   - TM03 Water Pulse: Cerulean City (Gym), from Misty (after winning) (single use)
   - TM13 Ice Beam: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
   - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
-  - HM03 Surf: Safari Zone (Secret House), from Reward for reaching the Secret House
+  - TM14 Blizzard: Pokémon Mansion (B1F) (single use)
+  - TM26 Earthquake: Viridian City (Gym), from Giovanni (after winning) (single use)
 
 ### Raticate (Rattata → Raticate)
 
@@ -293,15 +287,10 @@ Answers 963 of 964 trainer Pokémon (100%) one-on-one; key battles 86 of 87.
   - Brock (Pewter City), Lv 14 Rattata: Hyper Fang
   - Misty (Cerulean City), Lv 21 Raticate: Hyper Fang
   - Koga (Fuchsia City), Lv 43 Raticate: Return (TM27), Shadow Ball (TM30), Pursuit
-  - Blaine (Cinnabar Island), Lv 47 Raticate: Return (TM27), Blizzard (TM14), Shadow Ball (TM30), Pursuit
-  - Rival (Route 22), Lv 53 Raticate: Return (TM27), Shadow Ball (TM30), Blizzard (TM14), Pursuit
-  - Lorelei (Pokémon League), Lv 54 Raticate: Return (TM27), Blizzard (TM14), Shadow Ball (TM30), Pursuit
-  - Bruno (Pokémon League), Lv 56 Raticate: Return (TM27), Shadow Ball (TM30), Blizzard (TM14), Pursuit
-  - Lance (Pokémon League), Lv 60 Raticate: Return (TM27), Blizzard (TM14), Shadow Ball (TM30), Pursuit
-  - Rival (Pokémon League), Lv 63 Raticate: Return (TM27), Shadow Ball (TM30), Blizzard (TM14), Pursuit
+  - Giovanni (Viridian City), Lv 50 Raticate: Return (TM27), Shadow Ball (TM30), Pursuit, Rock Smash (HM06)
   - TM27 Return: Route 12 (North Entrance 2F), from Girl upstairs (single use)
   - TM30 Shadow Ball: Celadon City (Game Corner Prize Room), 4,500 coins (single use)
-  - TM14 Blizzard: Pokémon Mansion (B1F) (single use)
+  - HM06 Rock Smash: Ember Spa (Kindle Road Ember Spa), from Man at the Ember Spa
 
 ### Primeape (Mankey → Primeape)
 
@@ -310,9 +299,9 @@ Answers 963 of 964 trainer Pokémon (100%) one-on-one; key battles 86 of 87.
 - HMs it can carry: Strength, Rock Smash
 - Moves over the game:
   - Rival (Route 22), Lv 9 Mankey: Low Kick, Scratch
-  - Brock (Pewter City), Lv 14 Mankey: Low Kick, Karate Chop, Rock Tomb (TM39), Scratch
+  - Brock (Pewter City), Lv 14 Mankey: Low Kick, Karate Chop, Scratch
   - Rival (Cerulean City), Lv 18 Mankey: Low Kick, Karate Chop, Fury Swipes, Rock Tomb (TM39)
-  - Lt. Surge (Vermilion City), Lv 24 Mankey: Brick Break (TM31), Low Kick, Fury Swipes, Rock Tomb (TM39)
+  - Rival (S.S. Anne), Lv 21 Mankey: Brick Break (TM31), Low Kick, Fury Swipes, Rock Tomb (TM39)
   - Koga (Fuchsia City), Lv 43 Primeape: Cross Chop, Low Kick, Hyper Beam (TM15), Aerial Ace (TM40)
   - Sabrina (Saffron City), Lv 43 Primeape: Focus Punch (TM01), Low Kick, Hyper Beam (TM15), Aerial Ace (TM40)
   - Rival (Pokémon League), Lv 63 Primeape: Focus Punch (TM01), Thrash, Low Kick, Aerial Ace (TM40)
@@ -328,11 +317,12 @@ Answers 963 of 964 trainer Pokémon (100%) one-on-one; key battles 86 of 87.
 - Evolves: Graveler at Lv 25
 - HMs it can carry: Strength, Rock Smash
 - Moves over the game:
-  - when you get it, Lv 11 Geodude: Rock Throw, Tackle
+  - when you get it, Lv 14 Geodude: Rock Throw, Tackle
   - Rival (Cerulean City), Lv 18 Geodude: Magnitude, Rock Throw, Tackle
-  - Lt. Surge (Vermilion City), Lv 24 Geodude: Magnitude, Rock Throw, Brick Break (TM31), Tackle
+  - Rival (S.S. Anne), Lv 21 Geodude: Magnitude, Rock Throw, Brick Break (TM31), Tackle
   - Koga (Fuchsia City), Lv 43 Graveler: Rock Blast, Magnitude, Brick Break (TM31), Flamethrower (TM35)
-  - Blaine (Cinnabar Island), Lv 47 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Fire Blast (TM38)
+  - Blaine (Cinnabar Island), Lv 47 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Flamethrower (TM35)
+  - Giovanni (Viridian City), Lv 50 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Fire Blast (TM38)
   - Rival (Pokémon League), Lv 63 Graveler: Earthquake, Double-edge, Rock Blast, Brick Break (TM31)
   - TM31 Brick Break: S.S. Anne (1F Room 2); or Celadon City (Department Store 2F), ₽3,000
   - TM35 Flamethrower: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
@@ -344,57 +334,56 @@ Answers 963 of 964 trainer Pokémon (100%) one-on-one; key battles 86 of 87.
 - Evolves: Kadabra at Lv 16
 - HMs it can carry: Flash
 - Moves over the game:
-  - when you get it, Lv 10 Abra: Teleport
+  - when you get it, Lv 18 Kadabra: Confusion
   - Misty (Cerulean City), Lv 21 Kadabra: Psybeam
-  - Lt. Surge (Vermilion City), Lv 24 Kadabra: Psybeam, Shock Wave (TM34)
   - Koga (Fuchsia City), Lv 43 Kadabra: Psychic, Shock Wave (TM34)
   - TM34 Shock Wave: Vermilion City (Gym), from Lt. Surge (after winning) (single use)
 
-### Electrode (Voltorb → Electrode)
+### Haunter (Gastly → Haunter)
 
-- Get it: Route 10, grass (Lv 14-17)
-- Evolves: Electrode at Lv 30
-- HMs it can carry: Flash
+- Get it: Pokémon Tower, grass (Lv 13-19)
+- Evolves: Haunter at Lv 25
+- HMs it can carry: none
 - Moves over the game:
-  - when you get it, Lv 20 Voltorb: Tackle
-  - Koga (Fuchsia City), Lv 43 Electrode: Thunderbolt (TM24), Tackle, Rollout
-  - Blaine (Cinnabar Island), Lv 47 Electrode: Thunder (TM25), Tackle, Rollout
-  - Giovanni (Viridian City), Lv 50 Electrode: Thunder (TM25), Swift, Rollout
+  - Rival (Pokémon Tower), Lv 29 Haunter: Thunderbolt (TM24), Giga Drain (TM19), Shadow Punch
+  - Sabrina (Saffron City), Lv 43 Haunter: Thunderbolt (TM24), Psychic (TM29), Giga Drain (TM19), Shadow Punch
+  - Blaine (Cinnabar Island), Lv 47 Haunter: Thunderbolt (TM24), Psychic (TM29), Giga Drain (TM19), Shadow Ball
   - TM24 Thunderbolt: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
-  - TM25 Thunder: Power Plant (single use)
+  - TM19 Giga Drain: Celadon City (Gym), from Erika (after winning) (single use)
+  - TM29 Psychic: Saffron City (Mr Psychics House), from Mr. Psychic (single use)
 
 Key battles (best lead per Pokémon):
 
 - Rival (Pallet Town): Bulbasaur 5 → Squirtle Tackle
 - Rival (Route 22): Pidgey 9 → Rattata Quick Attack; Bulbasaur 9 → Rattata Quick Attack
 - Brock (Pewter City): Geodude 12 → Squirtle Water Gun; Onix 14 → Squirtle Water Gun
-- Rival (Cerulean City): Pidgeotto 17 → Geodude Rock Throw; Abra 16 → Geodude Magnitude; Rattata 15 → Geodude Magnitude; Bulbasaur 18 → Rattata Hyper Fang
+- Rival (Cerulean City): Pidgeotto 17 → Geodude Rock Throw; Abra 16 → Rattata Hyper Fang; Rattata 15 → Geodude Magnitude; Bulbasaur 18 → Rattata Hyper Fang
 - Misty (Cerulean City): Staryu 18 → Raticate Hyper Fang; Starmie 21 → Wartortle Bite
 - Rival (S.S. Anne): Pidgeotto 19 → Geodude Rock Throw; Raticate 16 → Geodude Brick Break; Kadabra 18 → Raticate Hyper Fang; Ivysaur 20 → Raticate Hyper Fang
 - Lt. Surge (Vermilion City): Voltorb 21 → Geodude Magnitude; Pikachu 18 → Geodude Magnitude; Raichu 24 → Geodude Magnitude
 - Erika (Celadon City): Victreebel 29 → Kadabra Psybeam; Tangela 24 → Kadabra Psybeam; Vileplume 29 → Kadabra Psybeam
 - Giovanni (Rocket Hideout): Onix 25 → Primeape Low Kick; Rhyhorn 24 → Wartortle Water Pulse; Kangaskhan 29 → Graveler Brick Break
-- Rival (Pokémon Tower): Pidgeotto 25 → Graveler Rock Throw; Gyarados 23 → Voltorb Thunderbolt; Growlithe 22 → Graveler Magnitude; Kadabra 20 → Raticate Shadow Ball; Ivysaur 25 → Kadabra Psybeam
-- Koga (Fuchsia City): Koffing 37 → Graveler Magnitude; Muk 39 → Graveler Magnitude; Koffing 37 → Graveler Magnitude; Weezing 43 → Kadabra Psychic
+- Rival (Pokémon Tower): Pidgeotto 25 → Haunter Thunderbolt; Gyarados 23 → Haunter Thunderbolt; Growlithe 22 → Wartortle Water Pulse; Kadabra 20 → Raticate Shadow Ball; Ivysaur 25 → Kadabra Psybeam
+- Koga (Fuchsia City): Koffing 37 → Haunter Thunderbolt; Muk 39 → Graveler Magnitude; Koffing 37 → Haunter Thunderbolt; Weezing 43 → Kadabra Psychic
 - Sabrina (Saffron City): Kadabra 38 → Blastoise Hyper Beam; Mr. Mime 37 → Blastoise Hyper Beam; Venomoth 38 → Graveler Rock Blast; Alakazam 43 → Raticate Shadow Ball
-- Rival (Silph Co.): Pidgeot 37 → Electrode Thunderbolt; Gyarados 38 → Electrode Thunderbolt; Growlithe 35 → Blastoise Surf; Alakazam 35 → Blastoise Hyper Beam; Venusaur 40 → Kadabra Psychic
-- Giovanni (Silph Co.): Nidorino 37 → Kadabra Psychic; Kangaskhan 35 → Primeape Focus Punch; Rhyhorn 37 → Blastoise Surf; Nidoqueen 41 → Blastoise Surf
-- Blaine (Cinnabar Island): Growlithe 42 → Blastoise Surf; Ponyta 40 → Graveler Earthquake; Rapidash 42 → Graveler Earthquake; Arcanine 47 → Blastoise Surf
-- Giovanni (Viridian City): Rhyhorn 45 → Graveler Earthquake; Dugtrio 42 → Blastoise Surf; Nidoqueen 44 → Blastoise Surf; Nidoking 45 → Blastoise Surf; Rhyhorn 50 → Blastoise Surf
-- Rival (Route 22): Pidgeot 47 → Electrode Thunder; Rhyhorn 45 → Graveler Earthquake; Gyarados 45 → Electrode Thunder; Growlithe 45 → Blastoise Surf; Alakazam 47 → Blastoise Surf; Venusaur 53 → Kadabra Psychic
-- Lorelei (Pokémon League): Dewgong 52 → Primeape Focus Punch; Cloyster 51 → Electrode Thunder; Slowbro 52 → Electrode Thunder; Jynx 54 → Primeape Focus Punch; Lapras 54 → Primeape Focus Punch
-- Bruno (Pokémon League): Onix 51 → Blastoise Surf; Hitmonchan 53 → Kadabra Psychic; Hitmonlee 53 → Primeape Focus Punch; Onix 54 → Blastoise Surf; Machamp 56 → Kadabra (no clean win) Psychic
-- Agatha (Pokémon League): Gengar 54 → Graveler Earthquake; Golbat 54 → Electrode Thunder; Haunter 53 → Graveler Earthquake; Arbok 56 → Graveler Earthquake; Gengar 58 → Graveler Earthquake
-- Lance (Pokémon League): Gyarados 56 → Electrode Thunder; Dragonair 54 → Primeape Focus Punch; Dragonair 54 → Primeape Focus Punch; Aerodactyl 58 → Graveler Rock Blast; Dragonite 60 → Graveler Rock Blast
-- Rival (Pokémon League): Pidgeot 59 → Graveler Rock Blast; Alakazam 57 → Electrode Thunder; Rhydon 59 → Blastoise Surf; Gyarados 59 → Electrode Thunder; Arcanine 61 → Graveler Earthquake; Venusaur 63 → Kadabra Psychic
+- Rival (Silph Co.): Pidgeot 37 → Haunter Thunderbolt; Gyarados 38 → Haunter Thunderbolt; Growlithe 35 → Blastoise Water Pulse; Alakazam 35 → Blastoise Hyper Beam; Venusaur 40 → Haunter Psychic
+- Giovanni (Silph Co.): Nidorino 37 → Haunter Psychic; Kangaskhan 35 → Primeape Focus Punch; Rhyhorn 37 → Primeape Focus Punch; Nidoqueen 41 → Haunter Psychic
+- Blaine (Cinnabar Island): Growlithe 42 → Blastoise Water Pulse; Ponyta 40 → Graveler Earthquake; Rapidash 42 → Graveler Earthquake; Arcanine 47 → Blastoise Water Pulse
+- Giovanni (Viridian City): Rhyhorn 45 → Graveler Earthquake; Dugtrio 42 → Blastoise Blizzard; Nidoqueen 44 → Graveler Earthquake; Nidoking 45 → Graveler Earthquake; Rhyhorn 50 → Blastoise Water Pulse
+- Rival (Route 22): Pidgeot 47 → Graveler Rock Blast; Rhyhorn 45 → Graveler Earthquake; Gyarados 45 → Haunter Thunderbolt; Growlithe 45 → Blastoise Earthquake; Alakazam 47 → Blastoise Earthquake; Venusaur 53 → Kadabra Psychic
+- Lorelei (Pokémon League): Dewgong 52 → Primeape Focus Punch; Cloyster 51 → Haunter Thunderbolt; Slowbro 52 → Haunter (no clean win) Thunderbolt; Jynx 54 → Primeape Focus Punch; Lapras 54 → Primeape Focus Punch
+- Bruno (Pokémon League): Onix 51 → Blastoise Water Pulse; Hitmonchan 53 → Haunter Psychic; Hitmonlee 53 → Primeape Focus Punch; Onix 54 → Blastoise Water Pulse; Machamp 56 → Haunter Psychic
+- Agatha (Pokémon League): Gengar 54 → Graveler Earthquake; Golbat 54 → Kadabra Psychic; Haunter 53 → Blastoise Earthquake; Arbok 56 → Graveler Earthquake; Gengar 58 → Graveler Earthquake
+- Lance (Pokémon League): Gyarados 56 → Haunter Thunderbolt; Dragonair 54 → Primeape Focus Punch; Dragonair 54 → Primeape Focus Punch; Aerodactyl 58 → Graveler Rock Blast; Dragonite 60 → Graveler Rock Blast
+- Rival (Pokémon League): Pidgeot 59 → Graveler Rock Blast; Alakazam 57 → Blastoise Earthquake; Rhydon 59 → Blastoise Water Pulse; Gyarados 59 → Haunter Thunderbolt; Arcanine 61 → Graveler Earthquake; Venusaur 63 → Kadabra Psychic
 
-Not answered one-on-one: Machamp 56 (Elite Four Bruno, Pokémon League)
+Not answered one-on-one: Slowbro 52 (Elite Four Lorelei, Pokémon League)
 
-Closest alternative for each slot: Haunter for Kadabra (−20.0); Zapdos for Primeape (−3.4); Marowak for Graveler (−3.7); Zapdos for Electrode (−0.7); Scyther for Raticate (−1.3)
+Closest alternative for each slot: Fearow for Kadabra (−8.2); Fearow for Raticate (−1.4); Haunter for Haunter (−0.0); Fearow for Primeape (−2.4); Flareon for Graveler (−0.9)
 
 ## LeafGreen, Bulbasaur
 
-Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
+Answers 963 of 964 trainer Pokémon (100%) one-on-one; key battles 86 of 87.
 
 ### Venusaur (Bulbasaur → Ivysaur → Venusaur)
 
@@ -405,12 +394,26 @@ Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
   - Rival (Pallet Town), Lv 5 Bulbasaur: Tackle
   - Brock (Pewter City), Lv 14 Bulbasaur: Vine Whip, Tackle
   - Rival (Cerulean City), Lv 18 Ivysaur: Vine Whip, Tackle
+  - Rival (S.S. Anne), Lv 21 Ivysaur: Vine Whip, Cut (HM01)
   - Lt. Surge (Vermilion City), Lv 24 Ivysaur: Razor Leaf, Cut (HM01)
-  - Koga (Fuchsia City), Lv 43 Venusaur: Razor Leaf, Strength (HM04)
-  - Blaine (Cinnabar Island), Lv 47 Venusaur: Solarbeam (TM22), Strength (HM04)
+  - Koga (Fuchsia City), Lv 43 Venusaur: Razor Leaf, Cut (HM01)
+  - Blaine (Cinnabar Island), Lv 47 Venusaur: Solarbeam (TM22), Cut (HM01)
   - HM01 Cut: S.S. Anne (Captains Office), from S.S. Anne Captain (cure his seasickness)
-  - HM04 Strength: Fuchsia City (Wardens House), from Safari Warden (return his Gold Teeth)
   - TM22 Solarbeam: Pokémon Mansion (B1F) (single use)
+
+### Raticate (Rattata → Raticate)
+
+- Get it: Route 1, grass (Lv 2-4)
+- Evolves: Raticate at Lv 20
+- HMs it can carry: Cut, Strength, Rock Smash
+- Moves over the game:
+  - Rival (Route 22), Lv 9 Rattata: Quick Attack
+  - Brock (Pewter City), Lv 14 Rattata: Hyper Fang
+  - Misty (Cerulean City), Lv 21 Raticate: Hyper Fang
+  - Koga (Fuchsia City), Lv 43 Raticate: Return (TM27), Pursuit
+  - Giovanni (Viridian City), Lv 50 Raticate: Return (TM27), Pursuit, Rock Smash (HM06)
+  - TM27 Return: Route 12 (North Entrance 2F), from Girl upstairs (single use)
+  - HM06 Rock Smash: Ember Spa (Kindle Road Ember Spa), from Man at the Ember Spa
 
 ### Primeape (Mankey → Primeape)
 
@@ -419,18 +422,16 @@ Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
 - HMs it can carry: Strength, Rock Smash
 - Moves over the game:
   - Rival (Route 22), Lv 9 Mankey: Low Kick, Scratch
-  - Brock (Pewter City), Lv 14 Mankey: Low Kick, Karate Chop, Rock Tomb (TM39), Scratch
+  - Brock (Pewter City), Lv 14 Mankey: Low Kick, Karate Chop, Scratch
   - Rival (Cerulean City), Lv 18 Mankey: Low Kick, Karate Chop, Fury Swipes, Rock Tomb (TM39)
-  - Misty (Cerulean City), Lv 21 Mankey: Low Kick, Karate Chop, Secret Power (TM43), Rock Tomb (TM39)
-  - Lt. Surge (Vermilion City), Lv 24 Mankey: Brick Break (TM31), Low Kick, Secret Power (TM43), Rock Tomb (TM39)
-  - Koga (Fuchsia City), Lv 43 Primeape: Cross Chop, Low Kick, Hyper Beam (TM15), Thunderbolt (TM24)
-  - Sabrina (Saffron City), Lv 43 Primeape: Focus Punch (TM01), Low Kick, Hyper Beam (TM15), Thunderbolt (TM24)
-  - Rival (Pokémon League), Lv 63 Primeape: Focus Punch (TM01), Thrash, Low Kick, Thunderbolt (TM24)
+  - Rival (S.S. Anne), Lv 21 Mankey: Brick Break (TM31), Low Kick, Fury Swipes, Rock Tomb (TM39)
+  - Koga (Fuchsia City), Lv 43 Primeape: Cross Chop, Low Kick, Hyper Beam (TM15), Aerial Ace (TM40)
+  - Sabrina (Saffron City), Lv 43 Primeape: Focus Punch (TM01), Low Kick, Hyper Beam (TM15), Aerial Ace (TM40)
+  - Rival (Pokémon League), Lv 63 Primeape: Focus Punch (TM01), Thrash, Low Kick, Aerial Ace (TM40)
   - TM39 Rock Tomb: Pewter City (Gym), from Brock (after winning) (single use)
-  - TM43 Secret Power: Route 25; or Celadon City (Department Store 2F), ₽3,000
   - TM31 Brick Break: S.S. Anne (1F Room 2); or Celadon City (Department Store 2F), ₽3,000
   - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
-  - TM24 Thunderbolt: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
+  - TM40 Aerial Ace: Route 9 (single use)
   - TM01 Focus Punch: Silph Co. (5F) (single use)
 
 ### Graveler (Geodude → Graveler)
@@ -439,11 +440,12 @@ Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
 - Evolves: Graveler at Lv 25
 - HMs it can carry: Strength, Rock Smash
 - Moves over the game:
-  - when you get it, Lv 11 Geodude: Rock Throw, Tackle
+  - when you get it, Lv 14 Geodude: Rock Throw, Tackle
   - Rival (Cerulean City), Lv 18 Geodude: Magnitude, Rock Throw, Tackle
-  - Lt. Surge (Vermilion City), Lv 24 Geodude: Magnitude, Rock Throw, Brick Break (TM31), Tackle
+  - Rival (S.S. Anne), Lv 21 Geodude: Magnitude, Rock Throw, Brick Break (TM31), Tackle
   - Koga (Fuchsia City), Lv 43 Graveler: Rock Blast, Magnitude, Brick Break (TM31), Flamethrower (TM35)
-  - Blaine (Cinnabar Island), Lv 47 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Fire Blast (TM38)
+  - Blaine (Cinnabar Island), Lv 47 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Flamethrower (TM35)
+  - Giovanni (Viridian City), Lv 50 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Fire Blast (TM38)
   - Rival (Pokémon League), Lv 63 Graveler: Earthquake, Double-edge, Rock Blast, Brick Break (TM31)
   - TM31 Brick Break: S.S. Anne (1F Room 2); or Celadon City (Department Store 2F), ₽3,000
   - TM35 Flamethrower: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
@@ -455,25 +457,12 @@ Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
 - Evolves: Kadabra at Lv 16
 - HMs it can carry: Flash
 - Moves over the game:
-  - when you get it, Lv 10 Abra: Teleport
-  - Misty (Cerulean City), Lv 21 Kadabra: Psybeam
-  - Lt. Surge (Vermilion City), Lv 24 Kadabra: Psybeam, Shock Wave (TM34)
-  - Koga (Fuchsia City), Lv 43 Kadabra: Psychic, Shock Wave (TM34), Shadow Ball (TM30)
+  - when you get it, Lv 18 Kadabra: Confusion, Thief (TM46)
+  - Misty (Cerulean City), Lv 21 Kadabra: Psybeam, Thief (TM46)
+  - Koga (Fuchsia City), Lv 43 Kadabra: Psychic, Shock Wave (TM34), Thief (TM46), Shadow Ball (TM30)
+  - TM46 Thief: Mt. Moon (B2F) (single use)
   - TM34 Shock Wave: Vermilion City (Gym), from Lt. Surge (after winning) (single use)
   - TM30 Shadow Ball: Celadon City (Game Corner Prize Room), 4,500 coins (single use)
-
-### Flareon (Eevee → Flareon)
-
-- Get it: Celadon City, gift (Lv 25)
-- Evolves: Flareon at Fire Stone
-- HMs it can carry: none
-- Moves over the game:
-  - when you get it, Lv 31 Flareon: Flamethrower (TM35), Hyper Beam (TM15), Bite
-  - Koga (Fuchsia City), Lv 43 Flareon: Flamethrower (TM35), Hyper Beam (TM15), Bite, Smog
-  - Blaine (Cinnabar Island), Lv 47 Flareon: Fire Blast (TM38), Hyper Beam (TM15), Bite, Smog
-  - TM35 Flamethrower: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
-  - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
-  - TM38 Fire Blast: Cinnabar Island (Gym), from Blaine (after winning) (single use)
 
 ### Starmie (Staryu → Starmie)
 
@@ -481,43 +470,45 @@ Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
 - Evolves: Starmie at Water Stone
 - HMs it can carry: Surf, Flash, Waterfall
 - Moves over the game:
-  - when you get it, Lv 22 Starmie: Thunderbolt (TM24), Water Gun, Hyper Beam (TM15)
-  - Sabrina (Saffron City), Lv 43 Starmie: Surf (HM03), Thunderbolt (TM24), Hyper Beam (TM15)
-  - Blaine (Cinnabar Island), Lv 47 Starmie: Surf (HM03), Blizzard (TM14), Thunder (TM25), Hyper Beam (TM15)
+  - when you get it, Lv 29 Starmie: Bubblebeam, Ice Beam (TM13), Thunderbolt (TM24), Hyper Beam (TM15)
+  - Sabrina (Saffron City), Lv 43 Starmie: Surf (HM03), Psychic (TM29), Ice Beam (TM13), Thunderbolt (TM24)
+  - Blaine (Cinnabar Island), Lv 47 Starmie: Surf (HM03), Psychic (TM29), Blizzard (TM14), Thunder (TM25)
+  - TM13 Ice Beam: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
   - TM24 Thunderbolt: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
   - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
   - HM03 Surf: Safari Zone (Secret House), from Reward for reaching the Secret House
+  - TM29 Psychic: Saffron City (Mr Psychics House), from Mr. Psychic (single use)
   - TM14 Blizzard: Pokémon Mansion (B1F) (single use)
   - TM25 Thunder: Power Plant (single use)
 
 Key battles (best lead per Pokémon):
 
 - Rival (Pallet Town): Charmander 5 → Bulbasaur (no clean win) Tackle
-- Rival (Route 22): Pidgey 9 → Mankey (no clean win) Scratch; Charmander 9 → Mankey Scratch
+- Rival (Route 22): Pidgey 9 → Rattata Quick Attack; Charmander 9 → Rattata Quick Attack
 - Brock (Pewter City): Geodude 12 → Bulbasaur Vine Whip; Onix 14 → Bulbasaur Vine Whip
 - Rival (Cerulean City): Pidgeotto 17 → Geodude Rock Throw; Abra 16 → Geodude Magnitude; Rattata 15 → Geodude Magnitude; Charmander 18 → Geodude Magnitude
-- Misty (Cerulean City): Staryu 18 → Kadabra Psybeam; Starmie 21 → Ivysaur Vine Whip
-- Rival (S.S. Anne): Pidgeotto 19 → Geodude Rock Throw; Raticate 16 → Geodude Brick Break; Kadabra 18 → Geodude Magnitude; Charmeleon 20 → Geodude Magnitude
+- Misty (Cerulean City): Staryu 18 → Raticate Hyper Fang; Starmie 21 → Ivysaur Vine Whip
+- Rival (S.S. Anne): Pidgeotto 19 → Geodude Rock Throw; Raticate 16 → Geodude Brick Break; Kadabra 18 → Raticate Hyper Fang; Charmeleon 20 → Geodude Magnitude
 - Lt. Surge (Vermilion City): Voltorb 21 → Geodude Magnitude; Pikachu 18 → Geodude Magnitude; Raichu 24 → Geodude Magnitude
-- Erika (Celadon City): Victreebel 29 → Flareon Flamethrower; Tangela 24 → Flareon Flamethrower; Vileplume 29 → Flareon Flamethrower
+- Erika (Celadon City): Victreebel 29 → Kadabra Psybeam; Tangela 24 → Kadabra Psybeam; Vileplume 29 → Kadabra Psybeam
 - Giovanni (Rocket Hideout): Onix 25 → Primeape Low Kick; Rhyhorn 24 → Ivysaur Razor Leaf; Kangaskhan 29 → Graveler Brick Break
-- Rival (Pokémon Tower): Pidgeotto 25 → Graveler Rock Throw; Exeggcute 23 → Flareon Flamethrower; Gyarados 22 → Graveler Rock Throw; Kadabra 20 → Flareon Hyper Beam; Charmeleon 25 → Graveler Magnitude
+- Rival (Pokémon Tower): Pidgeotto 25 → Graveler Rock Throw; Exeggcute 23 → Kadabra Thief; Gyarados 22 → Kadabra Shock Wave; Kadabra 20 → Kadabra Shadow Ball; Charmeleon 25 → Graveler Magnitude
 - Koga (Fuchsia City): Koffing 37 → Graveler Magnitude; Muk 39 → Graveler Magnitude; Koffing 37 → Graveler Magnitude; Weezing 43 → Kadabra Psychic
-- Sabrina (Saffron City): Kadabra 38 → Starmie Hyper Beam; Mr. Mime 37 → Flareon Hyper Beam; Venomoth 38 → Flareon Flamethrower; Alakazam 43 → Flareon Hyper Beam
-- Rival (Silph Co.): Pidgeot 37 → Graveler Rock Blast; Exeggcute 38 → Flareon Flamethrower; Gyarados 35 → Starmie Thunderbolt; Alakazam 35 → Flareon Hyper Beam; Charizard 40 → Graveler Rock Blast
-- Giovanni (Silph Co.): Nidorino 37 → Kadabra Psychic; Kangaskhan 35 → Primeape Focus Punch; Rhyhorn 37 → Primeape Focus Punch; Nidoqueen 41 → Starmie Surf
+- Sabrina (Saffron City): Kadabra 38 → Starmie Surf; Mr. Mime 37 → Raticate Return; Venomoth 38 → Starmie Psychic; Alakazam 43 → Kadabra Shadow Ball
+- Rival (Silph Co.): Pidgeot 37 → Primeape Focus Punch; Exeggcute 38 → Starmie Ice Beam; Gyarados 35 → Kadabra Shock Wave; Alakazam 35 → Graveler Rock Blast; Charizard 40 → Graveler Rock Blast
+- Giovanni (Silph Co.): Nidorino 37 → Graveler Magnitude; Kangaskhan 35 → Primeape Focus Punch; Rhyhorn 37 → Primeape Focus Punch; Nidoqueen 41 → Starmie Surf
 - Blaine (Cinnabar Island): Growlithe 42 → Graveler Earthquake; Ponyta 40 → Graveler Earthquake; Rapidash 42 → Graveler Earthquake; Arcanine 47 → Primeape Focus Punch
 - Giovanni (Viridian City): Rhyhorn 45 → Graveler Earthquake; Dugtrio 42 → Starmie Surf; Nidoqueen 44 → Starmie Surf; Nidoking 45 → Graveler Earthquake; Rhyhorn 50 → Primeape Focus Punch
-- Rival (Route 22): Pidgeot 47 → Graveler Rock Blast; Rhyhorn 45 → Graveler Earthquake; Exeggcute 45 → Flareon Fire Blast; Gyarados 45 → Starmie Thunder; Alakazam 47 → Flareon Hyper Beam; Charizard 53 → Graveler Rock Blast
-- Lorelei (Pokémon League): Dewgong 52 → Primeape Focus Punch; Cloyster 51 → Starmie Thunder; Slowbro 52 → Starmie Thunder; Jynx 54 → Flareon Hyper Beam; Lapras 54 → Primeape Focus Punch
-- Bruno (Pokémon League): Onix 51 → Starmie Surf; Hitmonchan 53 → Kadabra Psychic; Hitmonlee 53 → Primeape Focus Punch; Onix 54 → Starmie Surf; Machamp 56 → Starmie Surf
+- Rival (Route 22): Pidgeot 47 → Graveler Rock Blast; Rhyhorn 45 → Graveler Earthquake; Exeggcute 45 → Starmie Blizzard; Gyarados 45 → Starmie Thunder; Alakazam 47 → Starmie Surf; Charizard 53 → Graveler Rock Blast
+- Lorelei (Pokémon League): Dewgong 52 → Primeape Focus Punch; Cloyster 51 → Starmie Thunder; Slowbro 52 → Starmie Thunder; Jynx 54 → Primeape Focus Punch; Lapras 54 → Primeape Focus Punch
+- Bruno (Pokémon League): Onix 51 → Starmie Surf; Hitmonchan 53 → Starmie Psychic; Hitmonlee 53 → Primeape Focus Punch; Onix 54 → Starmie Surf; Machamp 56 → Starmie Psychic
 - Agatha (Pokémon League): Gengar 54 → Graveler Earthquake; Golbat 54 → Kadabra Psychic; Haunter 53 → Graveler Earthquake; Arbok 56 → Graveler Earthquake; Gengar 58 → Graveler Earthquake
 - Lance (Pokémon League): Gyarados 56 → Starmie Thunder; Dragonair 54 → Primeape Focus Punch; Dragonair 54 → Primeape Focus Punch; Aerodactyl 58 → Graveler Rock Blast; Dragonite 60 → Starmie Blizzard
-- Rival (Pokémon League): Pidgeot 59 → Graveler Rock Blast; Alakazam 57 → Flareon Hyper Beam; Rhydon 59 → Starmie Surf; Exeggutor 59 → Flareon Fire Blast; Gyarados 61 → Starmie Thunder; Charizard 63 → Graveler Rock Blast
+- Rival (Pokémon League): Pidgeot 59 → Graveler Rock Blast; Alakazam 57 → Starmie Surf; Rhydon 59 → Starmie Surf; Exeggutor 59 → Starmie Blizzard; Gyarados 61 → Starmie Thunder; Charizard 63 → Graveler Rock Blast
 
-Not answered one-on-one: Charmander 5 (Rival, Pallet Town); Pidgey 9 (Rival, Route 22)
+Not answered one-on-one: Charmander 5 (Rival, Pallet Town)
 
-Closest alternative for each slot: Raticate for Kadabra (−10.2); Raticate for Primeape (−4.1); Lapras for Starmie (−3.4); Marowak for Graveler (−6.7); Raticate for Flareon (−0.6)
+Closest alternative for each slot: Flareon for Kadabra (−13.8); Flareon for Primeape (−2.6); Vaporeon for Starmie (−4.0); Fearow for Graveler (−2.5); Flareon for Raticate (−1.4)
 
 ## LeafGreen, Charmander
 
@@ -533,13 +524,26 @@ Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
   - Rival (Route 22), Lv 9 Charmander: Ember, Scratch
   - Brock (Pewter City), Lv 14 Charmander: Ember, Metal Claw, Scratch
   - Rival (Cerulean City), Lv 18 Charmeleon: Ember, Metal Claw, Scratch
-  - Lt. Surge (Vermilion City), Lv 24 Charmeleon: Ember, Cut (HM01), Metal Claw
-  - Koga (Fuchsia City), Lv 43 Charizard: Flamethrower, Wing Attack, Strength (HM04), Steel Wing (TM47)
-  - Giovanni (Viridian City), Lv 50 Charizard: Heat Wave, Wing Attack, Strength (HM04), Steel Wing (TM47)
-  - Lorelei (Pokémon League), Lv 54 Charizard: Heat Wave, Wing Attack, Strength (HM04), Dragon Rage
+  - Rival (S.S. Anne), Lv 21 Charmeleon: Ember, Cut (HM01), Metal Claw
+  - Koga (Fuchsia City), Lv 43 Charizard: Flamethrower, Wing Attack, Hyper Beam (TM15), Steel Wing (TM47)
+  - Giovanni (Viridian City), Lv 50 Charizard: Heat Wave, Wing Attack, Hyper Beam (TM15), Steel Wing (TM47)
+  - Lorelei (Pokémon League), Lv 54 Charizard: Overheat (TM50), Wing Attack, Dragon Rage, Hyper Beam (TM15)
   - HM01 Cut: S.S. Anne (Captains Office), from S.S. Anne Captain (cure his seasickness)
-  - HM04 Strength: Fuchsia City (Wardens House), from Safari Warden (return his Gold Teeth)
+  - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
   - TM47 Steel Wing: Safari Zone (North) (single use)
+  - TM50 Overheat: Victory Road (3F) (single use)
+
+### Raticate (Rattata → Raticate)
+
+- Get it: Route 1, grass (Lv 2-4)
+- Evolves: Raticate at Lv 20
+- HMs it can carry: Cut, Strength, Rock Smash
+- Moves over the game:
+  - Rival (Route 22), Lv 9 Rattata: Quick Attack
+  - Brock (Pewter City), Lv 14 Rattata: Hyper Fang
+  - Misty (Cerulean City), Lv 21 Raticate: Hyper Fang
+  - Koga (Fuchsia City), Lv 43 Raticate: Return (TM27), Pursuit
+  - TM27 Return: Route 12 (North Entrance 2F), from Girl upstairs (single use)
 
 ### Primeape (Mankey → Primeape)
 
@@ -549,11 +553,12 @@ Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
 - Moves over the game:
   - Rival (Route 22), Lv 9 Mankey: Low Kick, Scratch
   - Brock (Pewter City), Lv 14 Mankey: Low Kick, Karate Chop, Scratch
-  - Rival (Cerulean City), Lv 18 Mankey: Low Kick, Karate Chop, Fury Swipes
-  - Lt. Surge (Vermilion City), Lv 24 Mankey: Brick Break (TM31), Low Kick, Fury Swipes
-  - Koga (Fuchsia City), Lv 43 Primeape: Cross Chop, Low Kick, Hyper Beam (TM15)
-  - Sabrina (Saffron City), Lv 43 Primeape: Focus Punch (TM01), Low Kick, Hyper Beam (TM15)
-  - Rival (Pokémon League), Lv 63 Primeape: Focus Punch (TM01), Thrash, Low Kick
+  - Rival (Cerulean City), Lv 18 Mankey: Low Kick, Karate Chop, Fury Swipes, Rock Tomb (TM39)
+  - Rival (S.S. Anne), Lv 21 Mankey: Brick Break (TM31), Low Kick, Fury Swipes, Rock Tomb (TM39)
+  - Koga (Fuchsia City), Lv 43 Primeape: Cross Chop, Low Kick, Hyper Beam (TM15), Rock Tomb (TM39)
+  - Sabrina (Saffron City), Lv 43 Primeape: Focus Punch (TM01), Low Kick, Hyper Beam (TM15), Rock Tomb (TM39)
+  - Rival (Pokémon League), Lv 63 Primeape: Focus Punch (TM01), Thrash, Low Kick, Rock Tomb (TM39)
+  - TM39 Rock Tomb: Pewter City (Gym), from Brock (after winning) (single use)
   - TM31 Brick Break: S.S. Anne (1F Room 2); or Celadon City (Department Store 2F), ₽3,000
   - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
   - TM01 Focus Punch: Silph Co. (5F) (single use)
@@ -564,14 +569,14 @@ Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
 - Evolves: Graveler at Lv 25
 - HMs it can carry: Strength, Rock Smash
 - Moves over the game:
-  - when you get it, Lv 11 Geodude: Rock Throw, Tackle
+  - when you get it, Lv 14 Geodude: Rock Throw, Tackle
   - Rival (Cerulean City), Lv 18 Geodude: Magnitude, Rock Throw, Tackle
-  - Lt. Surge (Vermilion City), Lv 24 Geodude: Magnitude, Rock Throw, Brick Break (TM31), Tackle
-  - Koga (Fuchsia City), Lv 43 Graveler: Rock Blast, Magnitude, Brick Break (TM31), Flamethrower (TM35)
-  - Blaine (Cinnabar Island), Lv 47 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Fire Blast (TM38)
+  - Rival (S.S. Anne), Lv 21 Geodude: Magnitude, Rock Throw, Brick Break (TM31), Tackle
+  - Koga (Fuchsia City), Lv 43 Graveler: Rock Blast, Magnitude, Brick Break (TM31), Tackle
+  - Blaine (Cinnabar Island), Lv 47 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Tackle
+  - Giovanni (Viridian City), Lv 50 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Fire Blast (TM38)
   - Rival (Pokémon League), Lv 63 Graveler: Earthquake, Double-edge, Rock Blast, Brick Break (TM31)
   - TM31 Brick Break: S.S. Anne (1F Room 2); or Celadon City (Department Store 2F), ₽3,000
-  - TM35 Flamethrower: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
   - TM38 Fire Blast: Cinnabar Island (Gym), from Blaine (after winning) (single use)
 
 ### Kadabra (Abra → Kadabra)
@@ -580,26 +585,10 @@ Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
 - Evolves: Kadabra at Lv 16
 - HMs it can carry: Flash
 - Moves over the game:
-  - when you get it, Lv 10 Abra: Teleport
+  - when you get it, Lv 18 Kadabra: Confusion
   - Misty (Cerulean City), Lv 21 Kadabra: Psybeam
-  - Lt. Surge (Vermilion City), Lv 24 Kadabra: Psybeam, Shock Wave (TM34)
   - Koga (Fuchsia City), Lv 43 Kadabra: Psychic, Shock Wave (TM34)
   - TM34 Shock Wave: Vermilion City (Gym), from Lt. Surge (after winning) (single use)
-
-### Victreebel (Bellsprout → Weepinbell → Victreebel)
-
-- Get it: Route 24, grass (Lv 12-14)
-- Evolves: Weepinbell at Lv 21, Victreebel at Leaf Stone
-- HMs it can carry: Cut, Flash
-- Moves over the game:
-  - when you get it, Lv 12 Bellsprout: Vine Whip, Wrap
-  - Misty (Cerulean City), Lv 21 Weepinbell: Vine Whip, Wrap
-  - Lt. Surge (Vermilion City), Lv 24 Weepinbell: Acid, Vine Whip, Cut (HM01)
-  - Koga (Fuchsia City), Lv 43 Victreebel: Giga Drain (TM19), Hyper Beam (TM15), Acid
-  - Giovanni (Viridian City), Lv 50 Victreebel: Spit Up, Giga Drain (TM19), Acid
-  - HM01 Cut: S.S. Anne (Captains Office), from S.S. Anne Captain (cure his seasickness)
-  - TM19 Giga Drain: Celadon City (Gym), from Erika (after winning) (single use)
-  - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
 
 ### Starmie (Staryu → Starmie)
 
@@ -607,12 +596,13 @@ Answers 962 of 964 trainer Pokémon (100%) one-on-one; key battles 85 of 87.
 - Evolves: Starmie at Water Stone
 - HMs it can carry: Surf, Flash, Waterfall
 - Moves over the game:
-  - when you get it, Lv 22 Starmie: Ice Beam (TM13), Water Gun, Hyper Beam (TM15)
-  - Sabrina (Saffron City), Lv 43 Starmie: Surf (HM03), Ice Beam (TM13), Hyper Beam (TM15)
-  - Blaine (Cinnabar Island), Lv 47 Starmie: Surf (HM03), Blizzard (TM14), Thunder (TM25), Hyper Beam (TM15)
-  - TM13 Ice Beam: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
+  - when you get it, Lv 29 Starmie: Bubblebeam, Thunderbolt (TM24), Hyper Beam (TM15)
+  - Sabrina (Saffron City), Lv 43 Starmie: Surf (HM03), Psychic (TM29), Thunderbolt (TM24), Hyper Beam (TM15)
+  - Blaine (Cinnabar Island), Lv 47 Starmie: Surf (HM03), Psychic (TM29), Blizzard (TM14), Thunder (TM25)
+  - TM24 Thunderbolt: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
   - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
   - HM03 Surf: Safari Zone (Secret House), from Reward for reaching the Secret House
+  - TM29 Psychic: Saffron City (Mr Psychics House), from Mr. Psychic (single use)
   - TM14 Blizzard: Pokémon Mansion (B1F) (single use)
   - TM25 Thunder: Power Plant (single use)
 
@@ -621,29 +611,29 @@ Key battles (best lead per Pokémon):
 - Rival (Pallet Town): Squirtle 5 → Charmander (no clean win) Scratch
 - Rival (Route 22): Pidgey 9 → Charmander Ember; Squirtle 9 → Mankey (no clean win) Low Kick
 - Brock (Pewter City): Geodude 12 → Mankey Karate Chop; Onix 14 → Mankey Low Kick
-- Rival (Cerulean City): Pidgeotto 17 → Geodude Rock Throw; Abra 16 → Geodude Magnitude; Rattata 15 → Geodude Magnitude; Squirtle 18 → Mankey Karate Chop
-- Misty (Cerulean City): Staryu 18 → Kadabra Psybeam; Starmie 21 → Weepinbell Vine Whip
-- Rival (S.S. Anne): Pidgeotto 19 → Geodude Rock Throw; Raticate 16 → Geodude Brick Break; Kadabra 18 → Geodude Magnitude; Wartortle 20 → Mankey Brick Break
+- Rival (Cerulean City): Pidgeotto 17 → Geodude Rock Throw; Abra 16 → Geodude Magnitude; Rattata 15 → Geodude Magnitude; Squirtle 18 → Rattata Hyper Fang
+- Misty (Cerulean City): Staryu 18 → Raticate Hyper Fang; Starmie 21 → Raticate Hyper Fang
+- Rival (S.S. Anne): Pidgeotto 19 → Geodude Rock Throw; Raticate 16 → Geodude Brick Break; Kadabra 18 → Raticate Hyper Fang; Wartortle 20 → Raticate Hyper Fang
 - Lt. Surge (Vermilion City): Voltorb 21 → Geodude Magnitude; Pikachu 18 → Geodude Magnitude; Raichu 24 → Geodude Magnitude
 - Erika (Celadon City): Victreebel 29 → Charmeleon Flamethrower; Tangela 24 → Charmeleon Flamethrower; Vileplume 29 → Charmeleon Flamethrower
 - Giovanni (Rocket Hideout): Onix 25 → Primeape Low Kick; Rhyhorn 24 → Primeape Low Kick; Kangaskhan 29 → Graveler Brick Break
-- Rival (Pokémon Tower): Pidgeotto 25 → Graveler Rock Throw; Growlithe 23 → Graveler Magnitude; Exeggcute 22 → Charmeleon Flamethrower; Kadabra 20 → Graveler Magnitude; Wartortle 25 → Victreebel Giga Drain
+- Rival (Pokémon Tower): Pidgeotto 25 → Graveler Rock Throw; Growlithe 23 → Graveler Magnitude; Exeggcute 22 → Charmeleon Flamethrower; Kadabra 20 → Charmeleon Flamethrower; Wartortle 25 → Primeape Brick Break
 - Koga (Fuchsia City): Koffing 37 → Graveler Magnitude; Muk 39 → Graveler Magnitude; Koffing 37 → Graveler Magnitude; Weezing 43 → Kadabra Psychic
-- Sabrina (Saffron City): Kadabra 38 → Starmie Hyper Beam; Mr. Mime 37 → Primeape Hyper Beam; Venomoth 38 → Charizard Flamethrower; Alakazam 43 → Starmie Surf
-- Rival (Silph Co.): Pidgeot 37 → Graveler Rock Blast; Growlithe 38 → Graveler Rock Blast; Exeggcute 35 → Starmie Ice Beam; Alakazam 35 → Primeape Hyper Beam; Blastoise 40 → Primeape Focus Punch
-- Giovanni (Silph Co.): Nidorino 37 → Kadabra Psychic; Kangaskhan 35 → Primeape Focus Punch; Rhyhorn 37 → Primeape Focus Punch; Nidoqueen 41 → Starmie Surf
-- Blaine (Cinnabar Island): Growlithe 42 → Graveler Earthquake; Ponyta 40 → Graveler Earthquake; Rapidash 42 → Graveler Earthquake; Arcanine 47 → Primeape Focus Punch
-- Giovanni (Viridian City): Rhyhorn 45 → Graveler Earthquake; Dugtrio 42 → Charizard Heat Wave; Nidoqueen 44 → Starmie Surf; Nidoking 45 → Graveler Earthquake; Rhyhorn 50 → Primeape Focus Punch
-- Rival (Route 22): Pidgeot 47 → Graveler Rock Blast; Rhyhorn 45 → Graveler Earthquake; Growlithe 45 → Graveler Earthquake; Exeggcute 45 → Charizard Heat Wave; Alakazam 47 → Starmie Surf; Blastoise 53 → Primeape Focus Punch
-- Lorelei (Pokémon League): Dewgong 52 → Primeape Focus Punch; Cloyster 51 → Starmie Thunder; Slowbro 52 → Starmie Thunder; Jynx 54 → Primeape Focus Punch; Lapras 54 → Primeape Focus Punch
-- Bruno (Pokémon League): Onix 51 → Starmie Surf; Hitmonchan 53 → Charizard Wing Attack; Hitmonlee 53 → Primeape Focus Punch; Onix 54 → Starmie Surf; Machamp 56 → Charizard Wing Attack
-- Agatha (Pokémon League): Gengar 54 → Graveler Earthquake; Golbat 54 → Kadabra Psychic; Haunter 53 → Graveler Earthquake; Arbok 56 → Graveler Earthquake; Gengar 58 → Graveler Earthquake
+- Sabrina (Saffron City): Kadabra 38 → Starmie Hyper Beam; Mr. Mime 37 → Charizard Hyper Beam; Venomoth 38 → Starmie Psychic; Alakazam 43 → Starmie Surf
+- Rival (Silph Co.): Pidgeot 37 → Primeape Focus Punch; Growlithe 38 → Graveler Rock Blast; Exeggcute 35 → Charizard Flamethrower; Alakazam 35 → Starmie Hyper Beam; Blastoise 40 → Primeape Focus Punch
+- Giovanni (Silph Co.): Nidorino 37 → Graveler Magnitude; Kangaskhan 35 → Primeape Focus Punch; Rhyhorn 37 → Primeape Focus Punch; Nidoqueen 41 → Starmie Surf
+- Blaine (Cinnabar Island): Growlithe 42 → Charizard Hyper Beam; Ponyta 40 → Graveler Earthquake; Rapidash 42 → Graveler Earthquake; Arcanine 47 → Primeape Focus Punch
+- Giovanni (Viridian City): Rhyhorn 45 → Graveler Earthquake; Dugtrio 42 → Charizard Hyper Beam; Nidoqueen 44 → Starmie Surf; Nidoking 45 → Graveler Earthquake; Rhyhorn 50 → Primeape Focus Punch
+- Rival (Route 22): Pidgeot 47 → Graveler Rock Blast; Rhyhorn 45 → Graveler Earthquake; Growlithe 45 → Charizard Hyper Beam; Exeggcute 45 → Charizard Heat Wave; Alakazam 47 → Starmie Surf; Blastoise 53 → Primeape Focus Punch
+- Lorelei (Pokémon League): Dewgong 52 → Primeape Focus Punch; Cloyster 51 → Starmie Thunder; Slowbro 52 → Starmie Thunder; Jynx 54 → Charizard Overheat; Lapras 54 → Primeape Focus Punch
+- Bruno (Pokémon League): Onix 51 → Starmie Surf; Hitmonchan 53 → Charizard Overheat; Hitmonlee 53 → Primeape Focus Punch; Onix 54 → Starmie Surf; Machamp 56 → Charizard Overheat
+- Agatha (Pokémon League): Gengar 54 → Graveler Earthquake; Golbat 54 → Kadabra Psychic; Haunter 53 → Charizard Overheat; Arbok 56 → Graveler Earthquake; Gengar 58 → Graveler Earthquake
 - Lance (Pokémon League): Gyarados 56 → Starmie Thunder; Dragonair 54 → Primeape Focus Punch; Dragonair 54 → Primeape Focus Punch; Aerodactyl 58 → Graveler Rock Blast; Dragonite 60 → Starmie Blizzard
-- Rival (Pokémon League): Pidgeot 59 → Graveler Rock Blast; Alakazam 57 → Starmie Surf; Rhydon 59 → Starmie Surf; Arcanine 59 → Graveler Earthquake; Exeggutor 61 → Charizard Heat Wave; Blastoise 63 → Primeape Focus Punch
+- Rival (Pokémon League): Pidgeot 59 → Graveler Rock Blast; Alakazam 57 → Starmie Surf; Rhydon 59 → Starmie Surf; Arcanine 59 → Graveler Earthquake; Exeggutor 61 → Charizard Overheat; Blastoise 63 → Primeape Focus Punch
 
 Not answered one-on-one: Squirtle 5 (Rival, Pallet Town); Squirtle 9 (Rival, Route 22)
 
-Closest alternative for each slot: Flareon for Kadabra (−16.2); Raticate for Primeape (−7.7); Marowak for Graveler (−4.9); Vaporeon for Starmie (−0.5); Beedrill for Victreebel (−2.7)
+Closest alternative for each slot: Dugtrio for Graveler (−2.6); Haunter for Kadabra (−14.1); Hitmonlee for Primeape (−8.0); Vaporeon for Starmie (−1.8); Beedrill for Raticate (−0.5)
 
 ## LeafGreen, Squirtle
 
@@ -659,13 +649,16 @@ Answers 963 of 964 trainer Pokémon (100%) one-on-one; key battles 86 of 87.
   - Rival (Route 22), Lv 9 Squirtle: Tackle, Bubble
   - Brock (Pewter City), Lv 14 Squirtle: Water Gun, Tackle
   - Rival (Cerulean City), Lv 18 Wartortle: Water Gun, Tackle
-  - Misty (Cerulean City), Lv 21 Wartortle: Water Pulse (TM03), Bite, Tackle
+  - Misty (Cerulean City), Lv 21 Wartortle: Water Gun, Bite, Tackle
+  - Rival (S.S. Anne), Lv 21 Wartortle: Water Pulse (TM03), Bite, Tackle
   - Koga (Fuchsia City), Lv 43 Blastoise: Ice Beam (TM13), Water Pulse (TM03), Hyper Beam (TM15), Bite
-  - Sabrina (Saffron City), Lv 43 Blastoise: Surf (HM03), Ice Beam (TM13), Hyper Beam (TM15), Bite
+  - Blaine (Cinnabar Island), Lv 47 Blastoise: Blizzard (TM14), Water Pulse (TM03), Hyper Beam (TM15), Bite
+  - Rival (Route 22), Lv 53 Blastoise: Blizzard (TM14), Earthquake (TM26), Water Pulse (TM03), Hyper Beam (TM15)
   - TM03 Water Pulse: Cerulean City (Gym), from Misty (after winning) (single use)
   - TM13 Ice Beam: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
   - TM15 Hyper Beam: Celadon City (Department Store 2F), ₽7,500
-  - HM03 Surf: Safari Zone (Secret House), from Reward for reaching the Secret House
+  - TM14 Blizzard: Pokémon Mansion (B1F) (single use)
+  - TM26 Earthquake: Viridian City (Gym), from Giovanni (after winning) (single use)
 
 ### Raticate (Rattata → Raticate)
 
@@ -677,15 +670,10 @@ Answers 963 of 964 trainer Pokémon (100%) one-on-one; key battles 86 of 87.
   - Brock (Pewter City), Lv 14 Rattata: Hyper Fang
   - Misty (Cerulean City), Lv 21 Raticate: Hyper Fang
   - Koga (Fuchsia City), Lv 43 Raticate: Return (TM27), Shadow Ball (TM30), Pursuit
-  - Blaine (Cinnabar Island), Lv 47 Raticate: Return (TM27), Blizzard (TM14), Shadow Ball (TM30), Pursuit
-  - Rival (Route 22), Lv 53 Raticate: Return (TM27), Shadow Ball (TM30), Blizzard (TM14), Pursuit
-  - Lorelei (Pokémon League), Lv 54 Raticate: Return (TM27), Blizzard (TM14), Shadow Ball (TM30), Pursuit
-  - Bruno (Pokémon League), Lv 56 Raticate: Return (TM27), Shadow Ball (TM30), Blizzard (TM14), Pursuit
-  - Lance (Pokémon League), Lv 60 Raticate: Return (TM27), Blizzard (TM14), Shadow Ball (TM30), Pursuit
-  - Rival (Pokémon League), Lv 63 Raticate: Return (TM27), Shadow Ball (TM30), Blizzard (TM14), Pursuit
+  - Giovanni (Viridian City), Lv 50 Raticate: Return (TM27), Shadow Ball (TM30), Pursuit, Rock Smash (HM06)
   - TM27 Return: Route 12 (North Entrance 2F), from Girl upstairs (single use)
   - TM30 Shadow Ball: Celadon City (Game Corner Prize Room), 4,500 coins (single use)
-  - TM14 Blizzard: Pokémon Mansion (B1F) (single use)
+  - HM06 Rock Smash: Ember Spa (Kindle Road Ember Spa), from Man at the Ember Spa
 
 ### Primeape (Mankey → Primeape)
 
@@ -694,9 +682,9 @@ Answers 963 of 964 trainer Pokémon (100%) one-on-one; key battles 86 of 87.
 - HMs it can carry: Strength, Rock Smash
 - Moves over the game:
   - Rival (Route 22), Lv 9 Mankey: Low Kick, Scratch
-  - Brock (Pewter City), Lv 14 Mankey: Low Kick, Karate Chop, Rock Tomb (TM39), Scratch
+  - Brock (Pewter City), Lv 14 Mankey: Low Kick, Karate Chop, Scratch
   - Rival (Cerulean City), Lv 18 Mankey: Low Kick, Karate Chop, Fury Swipes, Rock Tomb (TM39)
-  - Lt. Surge (Vermilion City), Lv 24 Mankey: Brick Break (TM31), Low Kick, Fury Swipes, Rock Tomb (TM39)
+  - Rival (S.S. Anne), Lv 21 Mankey: Brick Break (TM31), Low Kick, Fury Swipes, Rock Tomb (TM39)
   - Koga (Fuchsia City), Lv 43 Primeape: Cross Chop, Low Kick, Hyper Beam (TM15), Aerial Ace (TM40)
   - Sabrina (Saffron City), Lv 43 Primeape: Focus Punch (TM01), Low Kick, Hyper Beam (TM15), Aerial Ace (TM40)
   - Rival (Pokémon League), Lv 63 Primeape: Focus Punch (TM01), Thrash, Low Kick, Aerial Ace (TM40)
@@ -712,11 +700,12 @@ Answers 963 of 964 trainer Pokémon (100%) one-on-one; key battles 86 of 87.
 - Evolves: Graveler at Lv 25
 - HMs it can carry: Strength, Rock Smash
 - Moves over the game:
-  - when you get it, Lv 11 Geodude: Rock Throw, Tackle
+  - when you get it, Lv 14 Geodude: Rock Throw, Tackle
   - Rival (Cerulean City), Lv 18 Geodude: Magnitude, Rock Throw, Tackle
-  - Lt. Surge (Vermilion City), Lv 24 Geodude: Magnitude, Rock Throw, Brick Break (TM31), Tackle
+  - Rival (S.S. Anne), Lv 21 Geodude: Magnitude, Rock Throw, Brick Break (TM31), Tackle
   - Koga (Fuchsia City), Lv 43 Graveler: Rock Blast, Magnitude, Brick Break (TM31), Flamethrower (TM35)
-  - Blaine (Cinnabar Island), Lv 47 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Fire Blast (TM38)
+  - Blaine (Cinnabar Island), Lv 47 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Flamethrower (TM35)
+  - Giovanni (Viridian City), Lv 50 Graveler: Earthquake, Rock Blast, Brick Break (TM31), Fire Blast (TM38)
   - Rival (Pokémon League), Lv 63 Graveler: Earthquake, Double-edge, Rock Blast, Brick Break (TM31)
   - TM31 Brick Break: S.S. Anne (1F Room 2); or Celadon City (Department Store 2F), ₽3,000
   - TM35 Flamethrower: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
@@ -728,50 +717,49 @@ Answers 963 of 964 trainer Pokémon (100%) one-on-one; key battles 86 of 87.
 - Evolves: Kadabra at Lv 16
 - HMs it can carry: Flash
 - Moves over the game:
-  - when you get it, Lv 10 Abra: Teleport
+  - when you get it, Lv 18 Kadabra: Confusion
   - Misty (Cerulean City), Lv 21 Kadabra: Psybeam
-  - Lt. Surge (Vermilion City), Lv 24 Kadabra: Psybeam, Shock Wave (TM34)
   - Koga (Fuchsia City), Lv 43 Kadabra: Psychic, Shock Wave (TM34)
   - TM34 Shock Wave: Vermilion City (Gym), from Lt. Surge (after winning) (single use)
 
-### Electrode (Voltorb → Electrode)
+### Haunter (Gastly → Haunter)
 
-- Get it: Route 10, grass (Lv 14-17)
-- Evolves: Electrode at Lv 30
-- HMs it can carry: Flash
+- Get it: Pokémon Tower, grass (Lv 13-19)
+- Evolves: Haunter at Lv 25
+- HMs it can carry: none
 - Moves over the game:
-  - when you get it, Lv 20 Voltorb: Tackle
-  - Koga (Fuchsia City), Lv 43 Electrode: Thunderbolt (TM24), Tackle, Rollout
-  - Blaine (Cinnabar Island), Lv 47 Electrode: Thunder (TM25), Tackle, Rollout
-  - Giovanni (Viridian City), Lv 50 Electrode: Thunder (TM25), Swift, Rollout
+  - Rival (Pokémon Tower), Lv 29 Haunter: Thunderbolt (TM24), Giga Drain (TM19), Shadow Punch
+  - Sabrina (Saffron City), Lv 43 Haunter: Thunderbolt (TM24), Psychic (TM29), Giga Drain (TM19), Shadow Punch
+  - Blaine (Cinnabar Island), Lv 47 Haunter: Thunderbolt (TM24), Psychic (TM29), Giga Drain (TM19), Shadow Ball
   - TM24 Thunderbolt: Celadon City (Game Corner Prize Room), 4,000 coins (single use)
-  - TM25 Thunder: Power Plant (single use)
+  - TM19 Giga Drain: Celadon City (Gym), from Erika (after winning) (single use)
+  - TM29 Psychic: Saffron City (Mr Psychics House), from Mr. Psychic (single use)
 
 Key battles (best lead per Pokémon):
 
 - Rival (Pallet Town): Bulbasaur 5 → Squirtle Tackle
 - Rival (Route 22): Pidgey 9 → Rattata Quick Attack; Bulbasaur 9 → Rattata Quick Attack
 - Brock (Pewter City): Geodude 12 → Squirtle Water Gun; Onix 14 → Squirtle Water Gun
-- Rival (Cerulean City): Pidgeotto 17 → Geodude Rock Throw; Abra 16 → Geodude Magnitude; Rattata 15 → Geodude Magnitude; Bulbasaur 18 → Rattata Hyper Fang
+- Rival (Cerulean City): Pidgeotto 17 → Geodude Rock Throw; Abra 16 → Rattata Hyper Fang; Rattata 15 → Geodude Magnitude; Bulbasaur 18 → Rattata Hyper Fang
 - Misty (Cerulean City): Staryu 18 → Raticate Hyper Fang; Starmie 21 → Wartortle Bite
 - Rival (S.S. Anne): Pidgeotto 19 → Geodude Rock Throw; Raticate 16 → Geodude Brick Break; Kadabra 18 → Raticate Hyper Fang; Ivysaur 20 → Raticate Hyper Fang
 - Lt. Surge (Vermilion City): Voltorb 21 → Geodude Magnitude; Pikachu 18 → Geodude Magnitude; Raichu 24 → Geodude Magnitude
 - Erika (Celadon City): Victreebel 29 → Kadabra Psybeam; Tangela 24 → Kadabra Psybeam; Vileplume 29 → Kadabra Psybeam
 - Giovanni (Rocket Hideout): Onix 25 → Primeape Low Kick; Rhyhorn 24 → Wartortle Water Pulse; Kangaskhan 29 → Graveler Brick Break
-- Rival (Pokémon Tower): Pidgeotto 25 → Graveler Rock Throw; Gyarados 23 → Voltorb Thunderbolt; Growlithe 22 → Graveler Magnitude; Kadabra 20 → Raticate Shadow Ball; Ivysaur 25 → Kadabra Psybeam
-- Koga (Fuchsia City): Koffing 37 → Graveler Magnitude; Muk 39 → Graveler Magnitude; Koffing 37 → Graveler Magnitude; Weezing 43 → Kadabra Psychic
+- Rival (Pokémon Tower): Pidgeotto 25 → Haunter Thunderbolt; Gyarados 23 → Haunter Thunderbolt; Growlithe 22 → Wartortle Water Pulse; Kadabra 20 → Raticate Shadow Ball; Ivysaur 25 → Kadabra Psybeam
+- Koga (Fuchsia City): Koffing 37 → Haunter Thunderbolt; Muk 39 → Graveler Magnitude; Koffing 37 → Haunter Thunderbolt; Weezing 43 → Kadabra Psychic
 - Sabrina (Saffron City): Kadabra 38 → Blastoise Hyper Beam; Mr. Mime 37 → Blastoise Hyper Beam; Venomoth 38 → Graveler Rock Blast; Alakazam 43 → Raticate Shadow Ball
-- Rival (Silph Co.): Pidgeot 37 → Electrode Thunderbolt; Gyarados 38 → Electrode Thunderbolt; Growlithe 35 → Blastoise Surf; Alakazam 35 → Blastoise Hyper Beam; Venusaur 40 → Kadabra Psychic
-- Giovanni (Silph Co.): Nidorino 37 → Kadabra Psychic; Kangaskhan 35 → Primeape Focus Punch; Rhyhorn 37 → Blastoise Surf; Nidoqueen 41 → Blastoise Surf
-- Blaine (Cinnabar Island): Growlithe 42 → Blastoise Surf; Ponyta 40 → Graveler Earthquake; Rapidash 42 → Graveler Earthquake; Arcanine 47 → Blastoise Surf
-- Giovanni (Viridian City): Rhyhorn 45 → Graveler Earthquake; Dugtrio 42 → Blastoise Surf; Nidoqueen 44 → Blastoise Surf; Nidoking 45 → Blastoise Surf; Rhyhorn 50 → Blastoise Surf
-- Rival (Route 22): Pidgeot 47 → Electrode Thunder; Rhyhorn 45 → Graveler Earthquake; Gyarados 45 → Electrode Thunder; Growlithe 45 → Blastoise Surf; Alakazam 47 → Blastoise Surf; Venusaur 53 → Kadabra Psychic
-- Lorelei (Pokémon League): Dewgong 52 → Primeape Focus Punch; Cloyster 51 → Electrode Thunder; Slowbro 52 → Electrode Thunder; Jynx 54 → Primeape Focus Punch; Lapras 54 → Primeape Focus Punch
-- Bruno (Pokémon League): Onix 51 → Blastoise Surf; Hitmonchan 53 → Kadabra Psychic; Hitmonlee 53 → Primeape Focus Punch; Onix 54 → Blastoise Surf; Machamp 56 → Kadabra (no clean win) Psychic
-- Agatha (Pokémon League): Gengar 54 → Graveler Earthquake; Golbat 54 → Electrode Thunder; Haunter 53 → Graveler Earthquake; Arbok 56 → Graveler Earthquake; Gengar 58 → Graveler Earthquake
-- Lance (Pokémon League): Gyarados 56 → Electrode Thunder; Dragonair 54 → Primeape Focus Punch; Dragonair 54 → Primeape Focus Punch; Aerodactyl 58 → Graveler Rock Blast; Dragonite 60 → Graveler Rock Blast
-- Rival (Pokémon League): Pidgeot 59 → Graveler Rock Blast; Alakazam 57 → Electrode Thunder; Rhydon 59 → Blastoise Surf; Gyarados 59 → Electrode Thunder; Arcanine 61 → Graveler Earthquake; Venusaur 63 → Kadabra Psychic
+- Rival (Silph Co.): Pidgeot 37 → Haunter Thunderbolt; Gyarados 38 → Haunter Thunderbolt; Growlithe 35 → Blastoise Water Pulse; Alakazam 35 → Blastoise Hyper Beam; Venusaur 40 → Haunter Psychic
+- Giovanni (Silph Co.): Nidorino 37 → Haunter Psychic; Kangaskhan 35 → Primeape Focus Punch; Rhyhorn 37 → Primeape Focus Punch; Nidoqueen 41 → Haunter Psychic
+- Blaine (Cinnabar Island): Growlithe 42 → Blastoise Water Pulse; Ponyta 40 → Graveler Earthquake; Rapidash 42 → Graveler Earthquake; Arcanine 47 → Blastoise Water Pulse
+- Giovanni (Viridian City): Rhyhorn 45 → Graveler Earthquake; Dugtrio 42 → Blastoise Blizzard; Nidoqueen 44 → Graveler Earthquake; Nidoking 45 → Graveler Earthquake; Rhyhorn 50 → Blastoise Water Pulse
+- Rival (Route 22): Pidgeot 47 → Graveler Rock Blast; Rhyhorn 45 → Graveler Earthquake; Gyarados 45 → Haunter Thunderbolt; Growlithe 45 → Blastoise Earthquake; Alakazam 47 → Blastoise Earthquake; Venusaur 53 → Kadabra Psychic
+- Lorelei (Pokémon League): Dewgong 52 → Primeape Focus Punch; Cloyster 51 → Haunter Thunderbolt; Slowbro 52 → Haunter (no clean win) Thunderbolt; Jynx 54 → Primeape Focus Punch; Lapras 54 → Primeape Focus Punch
+- Bruno (Pokémon League): Onix 51 → Blastoise Water Pulse; Hitmonchan 53 → Haunter Psychic; Hitmonlee 53 → Primeape Focus Punch; Onix 54 → Blastoise Water Pulse; Machamp 56 → Haunter Psychic
+- Agatha (Pokémon League): Gengar 54 → Graveler Earthquake; Golbat 54 → Kadabra Psychic; Haunter 53 → Blastoise Earthquake; Arbok 56 → Graveler Earthquake; Gengar 58 → Graveler Earthquake
+- Lance (Pokémon League): Gyarados 56 → Haunter Thunderbolt; Dragonair 54 → Primeape Focus Punch; Dragonair 54 → Primeape Focus Punch; Aerodactyl 58 → Graveler Rock Blast; Dragonite 60 → Graveler Rock Blast
+- Rival (Pokémon League): Pidgeot 59 → Graveler Rock Blast; Alakazam 57 → Blastoise Earthquake; Rhydon 59 → Blastoise Water Pulse; Gyarados 59 → Haunter Thunderbolt; Arcanine 61 → Graveler Earthquake; Venusaur 63 → Kadabra Psychic
 
-Not answered one-on-one: Machamp 56 (Elite Four Bruno, Pokémon League)
+Not answered one-on-one: Slowbro 52 (Elite Four Lorelei, Pokémon League)
 
-Closest alternative for each slot: Haunter for Kadabra (−20.0); Zapdos for Primeape (−3.4); Marowak for Graveler (−3.7); Zapdos for Electrode (−0.7); Fearow for Raticate (−1.7)
+Closest alternative for each slot: Fearow for Kadabra (−8.2); Fearow for Raticate (−1.4); Haunter for Haunter (−0.0); Fearow for Primeape (−2.4); Flareon for Graveler (−0.9)

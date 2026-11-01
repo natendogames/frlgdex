@@ -38,6 +38,7 @@ python3 -I scripts/build_data.py /tmp/pokefirered data
 ## Team planner
 
 `node scripts/team_planner.js --out docs/team-guide.md` scores candidate teams against every trainer up to the Champion with the Battle plan's damage engine (plus TMs and HMs, with single-use TMs handed to one member) and writes the most viable six for each version and starter, with where to get each member, evolutions and moves over the game. The model and scoring are described at the top of the script.
+Add `--stages-out docs/team-stages.md` for the stage-by-stage version: before every key battle, who to catch, box, evolve and what to teach, with temporary members filling slots until the end-game six can be caught.
 
 ## Tests
 

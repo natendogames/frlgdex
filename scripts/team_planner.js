@@ -11,7 +11,8 @@
 // - Moves: the strongest attack of each type it can know by then (level-up moves, the Move Reminder from Two Island,
 //   and TMs/HMs you can have by then), best four. Found and gifted TMs are single use, so each goes to one member;
 //   bought and Game Corner TMs can go to everyone.
-// - A team "answers" a foe Pokémon when one member wins the one-on-one damage race (engine duel()).
+// - A team "answers" a foe Pokémon when one member wins the one-on-one damage race (engine duel()); a clean win
+//   (few turns, little damage taken, moving first) counts for more.
 // Scoring: share of each trainer's Pokémon answered (Gym Leaders, rivals, Giovanni, Elite Four and Champion count
 // 4×), a bonus for answering in one hit, a penalty for any type that hits three or more members super effectively,
 // and a bonus for covering the HMs the story needs (Cut, Strength, Surf, Rock Smash) without a spare HM user.
@@ -36,12 +37,12 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
   // When each TM is first in hand. Surf is handed over in the Safari Zone; the Game Corner and the Department
   // Store open at Celadon.
   const tmStage = {}, tmSource = {};
-  // A Gym Leader's TM comes when you can beat them (Giovanni's Earthquake is the eighth badge, not Viridian on day one).
+  // A Gym Leader's TM comes after you beat them (Giovanni's Earthquake is the eighth badge, not Viridian on day one).
   // The Cerulean Rocket Grunt only shows up after you visit Bill on Route 25.
   function srcStage(x) {
     if (x.loc === 'cerulean-city' && /Rocket Grunt/.test(x.from || '')) return stageOf('route-25');
     const t = x.from && (state.locations[x.loc].trainers || []).find(t => t.class === 'Leader' && x.from.startsWith(t.name));
-    return t ? battleStage(t, x.loc) : stageOf(x.loc);
+    return t ? battleStage(t, x.loc) + 0.25 : stageOf(x.loc); // in hand only after the win
   }
   for (const [k, t] of Object.entries(tms)) {
     const s = t.sources.map(x => ({ ...x, stage: srcStage(x) })).sort((a, b) => a.stage - b.stage)[0];
@@ -56,6 +57,7 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
 
   for (const V of ['FR', 'LG']) for (const starter of Object.keys(STARTER_BASE)) await plan(V, starter);
   if (opt('--json')) fs.writeFileSync(opt('--json'), JSON.stringify(RESULTS, null, 1));
+  if (opt('--stages-out')) fs.writeFileSync(opt('--stages-out'), stageGuide());
   if (opt('--out')) fs.writeFileSync(opt('--out'), guide());
   else console.log(guide());
 
@@ -74,6 +76,9 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
       }
     });
     battles.sort((a, b) => a.stage - b.stage || a.order - b.order);
+    // your team never gets weaker: plan at least at the level of the last key battle's ace (the Pokémon Tower rival's
+    // Lv 25 team comes after Giovanni's Lv 29 Kangaskhan)
+    { let run = 0; for (const b of battles) { b.level = Math.max(b.level, run); if (b.key) run = b.level; } }
     const foes = [];
     battles.forEach((b, bi) => b.party.forEach(p => foes.push({ bi, p, b: foeBattler(p), w: (b.key ? KEY_WEIGHT : 1) / b.party.length })));
 
@@ -147,7 +152,10 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
         const s = at(cd, battles[f.bi], banned);
         if (!s) return 0;
         const d = duel(s.me, f.b);
-        return d.wins ? 1 + (d.myHits === 1 ? 0.25 : 0) + (d.faster ? 0.1 : 0) : 0;
+        if (!d.wins) return 0;
+        // how cleanly it wins: fewer turns, less damage taken (their hits land before your KO unless you're faster)
+        const taken = Math.min(1, (d.theirs?.max || 0) * Math.max(0, d.myHits - (d.faster ? 1 : 0)) / s.me.hp);
+        return 1 + 0.4 / d.myHits + 0.4 * (1 - taken) + (d.faster ? 0.1 : 0);
       });
     }
     const V0 = cands.map(cd => values(cd));
@@ -203,6 +211,7 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
       for (const k of best.team) for (const b of battles) { const s = at(cands[k], b, banned[k]); if (s) for (const m of s.moves) { const src = s.src[m]; if (src.how === 'tm' && !tms[src.tm].reusable) (use[src.tm] ||= new Set()).add(k); } }
       return use;
     };
+    function settleTms() {
     for (let guard = 0; guard < 40; guard++) {
       const conflict = Object.entries(tmUse()).find(([, ks]) => ks.size > 1);
       if (!conflict) break;
@@ -218,6 +227,8 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
       }
       for (const k of ks) if (k !== keep) banned[k].add(tm);
     }
+    }
+    settleTms();
     // drop TMs that don't change any result, most expensive first, so the plan only spends coins and single-use TMs
     // where they matter (the engine otherwise fills empty move slots with any attack of a new type)
     const cost = k => tms[k].sources.some(x => x.how === 'prize') ? 0 : !tms[k].reusable ? 1 : k.startsWith('TM') ? 2 : 3;
@@ -231,6 +242,7 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
         if (score(best.team, Object.assign([], { ...curVals, [k]: trial })) >= before - 0.05) { banned[k] = trialBan; curVals[k] = trial; }
       }
     }
+    settleTms(); // pruning can free a slot that then takes a TM someone else has
     const finalVals = []; for (const k of best.team) finalVals[k] = values(cands[k], banned[k]);
     const total = score(best.team, finalVals);
     // per battle report
@@ -264,7 +276,138 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
       const hms = ['HM01', 'HM02', 'HM03', 'HM04', 'HM05', 'HM06', 'HM07'].filter(h => cd.path.some(d => mon(d).tmhm?.includes(h)));
       return { cd, steps, final, hms, vals: finalVals[k] };
     });
-    RESULTS.push({ V, starter, total, best, members, keyRows, misses, answered, foeCount, keyAnswered, keyCount, battles,
+    // ---------- stage by stage: the best six before each key battle ----------
+    // The game is cut into legs, each ending at a key battle (Gym Leader, rival, Giovanni, Elite Four, Champion).
+    // A temporary member is swapped for another only when that wins more than SWAP_COST (training a new member up);
+    // filling an empty slot costs ADD_COST. Each leg is scored on itself plus the next two legs at half and quarter
+    // weight, so a catch that pays off soon is kept.
+    const SWAP_COST = 3, ADD_COST = 0.5; // Nate is fine with short-term members that get replaced later
+    const legs = [];
+    { let cur = [];
+      battles.forEach((b, bi) => { cur.push(bi); if (b.key) { legs.push({ bis: cur, key: b }); cur = []; } });
+      if (cur.length) legs[legs.length - 1].bis.push(...cur); }
+    const legOfBattle = [];
+    legs.forEach((l, li) => { for (const bi of l.bis) legOfBattle[bi] = li; });
+    const legFoes = legs.map(() => []);
+    foes.forEach((f, j) => legFoes[legOfBattle[f.bi]].push(j));
+    function legScore(team, li, vals = V0) {
+      if (li >= legs.length) return 0;
+      let s = 0;
+      for (const j of legFoes[li]) { let m = 0; for (const k of team) if (vals[k][j] > m) m = vals[k][j]; s += m * foes[j].w; }
+      const end = legs[li].key;
+      let pen = 0;
+      for (const ty of Object.keys(state.types)) {
+        const n = team.filter(k => { const s2 = at(cands[k], end); return s2 && eff(ty, mon(s2.dex).types) > 1; }).length;
+        if (n >= 3) pen += (n - 2) * 0.5;
+      }
+      return s - pen;
+    }
+    const windowScore = (team, li) => legScore(team, li) + 0.5 * legScore(team, li + 1) + 0.25 * legScore(team, li + 2);
+    // The end-game team is the best fixed six found above. Each of its members joins as soon as you can catch it;
+    // until all six are in, the open slots go to temporary members, picked leg by leg and boxed when a core member
+    // needs the slot (or when a better temporary is worth the training).
+    const core = best.team;
+    const stages = [];
+    let lineup = [core[0]];
+    legs.forEach((leg, li) => {
+      const coreNow = core.filter(k => at(cands[k], leg.key));
+      let temps = lineup.filter(k => !core.includes(k));
+      const room = 6 - coreNow.length;
+      // keep the temporaries worth most over the next legs
+      while (temps.length > room) {
+        const drop = temps.map(k => ({ k, s: windowScore([...coreNow, ...temps.filter(x => x !== k)], li) })).sort((x, y) => y.s - x.s)[0].k;
+        temps = temps.filter(x => x !== drop);
+      }
+      const okTemp = (team, cd) => !cd.starter && !core.includes(cd.id) && ok(team, cd.id) && ok(core, cd.id);
+      const pool = cands.filter(cd => at(cd, leg.key));
+      for (let guard = 0; guard < 12 && room > 0; guard++) {
+        const team = [...coreNow, ...temps], base = windowScore(team, li);
+        let pick = null;
+        for (const cd of pool) {
+          if (team.includes(cd.id)) continue;
+          if (temps.length < room && okTemp(team, cd)) {
+            const g = windowScore([...team, cd.id], li) - base - ADD_COST;
+            if (g > 0 && (!pick || g > pick.g)) pick = { g, out: null, in: cd.id };
+          }
+          for (const t of temps) {
+            const rest = team.filter(x => x !== t);
+            if (!okTemp(rest, cd)) continue;
+            const g = windowScore([...rest, cd.id], li) - base - SWAP_COST;
+            if (g > 0 && (!pick || g > pick.g)) pick = { g, out: t, in: cd.id };
+          }
+        }
+        if (!pick) break;
+        temps = pick.out === null ? [...temps, pick.in] : temps.map(k => k === pick.out ? pick.in : k);
+      }
+      const team = [...coreNow, ...temps];
+      stages.push({ leg, team, added: team.filter(k => !lineup.includes(k)), dropped: lineup.filter(k => !team.includes(k)) });
+      lineup = team;
+    });
+    // single-use TMs across the changing lineup: a member only "uses" a TM in legs where it is on the team
+    const sBanned = Object.fromEntries(cands.map(cd => [cd.id, new Set()]));
+    const everOn = [...new Set(stages.flatMap(s => s.team))];
+    const usesIn = (k, ban) => { const u = new Set(); stages.forEach(st => { if (!st.team.includes(k)) return; for (const bi of st.leg.bis) { const s = at(cands[k], battles[bi], ban); if (s) for (const m of s.moves) if (s.src[m].how === 'tm') u.add(s.src[m].tm); } }); return u; };
+    const stagesTotal = vals => stages.reduce((a, st, li) => a + legScore(st.team, li, vals), 0);
+    function settleStageTms() {
+      let sGuard = 0;
+      for (; sGuard < 400; sGuard++) {
+      const use = {};
+      for (const k of everOn) for (const tm of usesIn(k, sBanned[k])) if (!tms[tm].reusable) (use[tm] ||= new Set()).add(k);
+      const conflict = Object.entries(use).find(([, ks]) => ks.size > 1);
+      if (!conflict) break;
+      const [tm, ks] = conflict;
+      const vals = []; for (const k of everOn) vals[k] = values(cands[k], sBanned[k]);
+      let keep = null, keepS = -Infinity;
+      for (const k of ks) {
+        const trial = [...vals];
+        for (const o of ks) if (o !== k) trial[o] = values(cands[o], new Set([...sBanned[o], tm]));
+        const s = stagesTotal(trial);
+        if (s > keepS) { keepS = s; keep = k; }
+      }
+      for (const k of ks) if (k !== keep) sBanned[k].add(tm);
+    }
+      if (sGuard >= 400) throw new Error('TM hand-out did not settle');
+    }
+    settleStageTms();
+    // drop TMs that change nothing, most expensive first
+    { const vals = []; for (const k of everOn) vals[k] = values(cands[k], sBanned[k]);
+      const cost = k => tms[k].sources.some(x => x.how === 'prize') ? 0 : !tms[k].reusable ? 1 : k.startsWith('TM') ? 2 : 3;
+      for (const k of everOn) for (const tm of [...usesIn(k, sBanned[k])].sort((a, b) => cost(a) - cost(b))) {
+        const before = stagesTotal(vals), ban = new Set([...sBanned[k], tm]), trial = [...vals];
+        trial[k] = values(cands[k], ban);
+        if (stagesTotal(trial) >= before - 0.05) { sBanned[k] = ban; vals[k] = trial[k]; }
+      } }
+    settleStageTms(); // pruning can free a slot that then takes a TM someone else has
+    // describe each leg: who's on the team at the key battle, their form, level and moves, and the best lead per foe
+    const stageOut = [];
+    let prevState = {};
+    let won = 0, tot = 0;
+    stages.forEach((st, li) => {
+      const b = st.leg.key;
+      const members = st.team.map(k => {
+        const s = at(cands[k], b, sBanned[k]);
+        const p = prevState[k];
+        const newMoves = s && p ? s.moves.filter(m => !p.moves.includes(m)) : s && st.added.includes(k) ? s.moves.filter(m => s.src[m].how === 'tm') : [];
+        return { k, cd: cands[k], s, evolved: p && s && p.dex !== s.dex ? s.dex : null, evolvedFrom: p?.dex,
+          teach: newMoves.map(m => ({ m, ...s.src[m] })) };
+      });
+      const leads = b.party.map(p => {
+        const fb = foeBattler(p);
+        const o = members.filter(m => m.s).map(m => ({ m, d: duel(at(cands[m.k], b, sBanned[m.k]).me, fb) }))
+          .sort((x, y) => y.d.wins - x.d.wins || x.d.myHits - y.d.myHits || y.d.theirHits - x.d.theirHits)[0];
+        return { p, o };
+      });
+      let legWon = 0, legTot = 0;
+      for (const bi of st.leg.bis) for (const p of battles[bi].party) {
+        const fb = foeBattler(p); legTot++;
+        if (st.team.some(k => { const s = at(cands[k], battles[bi], sBanned[k]); return s && duel(s.me, fb).wins; })) legWon++;
+      }
+      won += legWon; tot += legTot;
+      stageOut.push({ st, b, members, leads, legWon, legTot, from: battles[st.leg.bis[0]] });
+      prevState = Object.fromEntries(members.filter(m => m.s).map(m => [m.k, m.s]));
+    });
+    const stagePlanOut = { stageOut, won, tot };
+    RESULTS.push({ stagePlan: stagePlanOut, cands, tmsBanned: sBanned, V, starter, total, best, members, keyRows, misses, answered, foeCount, keyAnswered, keyCount, battles,
       runnersUp: runnerUps(best.team) });
 
     function runnerUps(team) {
@@ -277,6 +420,40 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
     }
   }
 
+  // The stage-by-stage plan: before each key battle, who to catch, swap out, evolve and what to teach.
+  function stageGuide() {
+    const out = [], nm = d => mon(d).name;
+    const getIt = c => c.method === 'gift' && c.loc === 'pallet-town' ? "Professor Oak's Lab" : `${locName(c.loc)}, ${c.method === 'gift' ? 'gift' : c.method}${c.levels ? ' (Lv ' + c.levels + ')' : ''}`;
+    const trainerName = t => t.class === 'Rival' ? 'Rival' : t.class === 'Leader' || t.class === 'Champion' ? t.name : `${t.class} ${t.name || ''}`.trim();
+    out.push('# Best team at every stage: FireRed and LeafGreen', '',
+      'Generated by `node scripts/team_planner.js --stages-out docs/team-stages.md`. The game is cut into legs that each end at a key battle. ' +
+      'For each leg the lineup changes one slot at a time when that pays for itself (a swap has to be clearly better, since a new member needs training), ' +
+      'looking two legs ahead. Levels are each key battle\'s ace level.', '');
+    for (const r of RESULTS) {
+      const { stageOut, won, tot } = r.stagePlan;
+      out.push(`## ${r.V === 'FR' ? 'FireRed' : 'LeafGreen'}, ${r.starter}`, '', `Wins ${won} of ${tot} trainer Pokémon one-on-one with the lineup you have at that point.`, '');
+      stageOut.forEach((x, i) => {
+        out.push(`### ${i + 1}. ${trainerName(x.b.t)} (${locName(x.b.loc)}), ace Lv ${x.b.level}`, '');
+        const ch = [];
+        for (const k of x.st.added) ch.push(`Add ${nm(r.cands[k].c.dex)}: ${getIt(r.cands[k].c)}`);
+        for (const k of x.st.dropped) ch.push(`Box ${nm(x.members.find(m => m.k === k)?.s?.dex || r.cands[k].c.dex)}`);
+        for (const m of x.members) {
+          if (!m.s) continue;
+          if (m.evolved) ch.push(`Evolve ${nm(m.evolvedFrom)} into ${nm(m.evolved)}`);
+          for (const t of m.teach) {
+            if (t.how === 'tm') ch.push(`Teach ${t.tm} ${t.m} to ${nm(m.s.dex)} (${tmWhere(t.tm)})`);
+            else if (!x.st.added.includes(m.k)) ch.push(`${nm(m.s.dex)} learns ${t.m}${t.level > 1 ? ' (Lv ' + t.level + ')' : ''}`);
+          }
+        }
+        if (ch.length) out.push('Changes:', '', ...ch.map(c => '- ' + c), '');
+        out.push('| Pokémon | Lv | Moves |', '| --- | --- | --- |');
+        for (const m of x.members) if (m.s) out.push(`| ${nm(m.s.dex)} | ${m.s.level} | ${m.s.moves.join(', ')} |`);
+        out.push('', 'Lead against each Pokémon: ' + x.leads.map(l => `${l.p.name} ${l.p.level} → ${l.o ? nm(l.o.m.s.dex) + ' (' + (l.o.d.mine?.name || '-') + ')' + (l.o.d.wins ? '' : ', no clean win') : 'nobody yet'}`).join('; '),
+          '', `This leg: ${x.legWon} of ${x.legTot} trainer Pokémon won.`, '');
+      });
+    }
+    return out.join('\n');
+  }
   function guide() {
     const out = [];
     const nm = d => mon(d).name;
