@@ -645,11 +645,13 @@ function bestTypesAgainst(party) {
 // Pokémon you could have caught by a point in the story: one entry per species, at the earliest place you can get it.
 const catchCache = {};
 function catchableBy(stage) {
-  const key = V() + ':' + stage + ':' + JSON.stringify(cur().picks || {});
+  // Nuzlocke mode (modes.js) limits each area to its first encounter
+  const nuz = typeof nuzAllows === 'function' && nuzOn() ? nuzAllows : null;
+  const key = V() + ':' + stage + ':' + JSON.stringify(cur().picks || {}) + (nuz ? JSON.stringify(cur().nuz.areas) : '');
   if (catchCache[key]) return catchCache[key];
   const out = [];
   for (const [dex, list] of Object.entries(state.found)) {
-    const w = list.find(x => inVersion(x) && allowed(x, +dex) && x.stage <= stage && !['trade', 'roaming'].includes(x.method) && !(x.loc === 'pallet-town' && x.method === 'gift'));
+    const w = list.find(x => inVersion(x) && allowed(x, +dex) && x.stage <= stage && !['trade', 'roaming'].includes(x.method) && !(x.loc === 'pallet-town' && x.method === 'gift') && (!nuz || nuz(x.loc, +dex)));
     if (w) out.push({ dex: +dex, ...w });
   }
   return (catchCache[key] = out);
@@ -709,7 +711,7 @@ function hitText(h, target, hits) {
 
 function teamHint() {
   const team = cur().team;
-  return `<p class="note">${team.length ? `Picks use your team from <a href="#/planner">Battle plan</a>: ${team.map(n => esc(mon(n).name)).join(', ')}. Set their levels and moves there for exact numbers.`
+  return `${typeof nuzBanner === 'function' ? nuzBanner() : ''}<p class="note">${team.length ? `Picks use your team from <a href="#/planner">Battle plan</a>: ${team.map(n => esc(mon(n).name)).join(', ')}. Set their levels and moves there for exact numbers.`
     : `Add your team in <a href="#/planner">Battle plan</a> to see who to send out against each trainer.`}
     Damage is estimated with the game's formula. When nobody on your team has a super-effective move, you get a Pokémon you could catch by this point in the story.</p>`;
 }
@@ -979,7 +981,9 @@ function renderExclusives() {
 function renderSettings() {
   setHeader('Backup & settings', true, '');
   view.innerHTML = `
-    <div class="card"><label class="row"><input type="checkbox" id="hideDone" ${state.progress.hideDone ? 'checked' : ''}><span>Hide completed locations</span></label></div>
+    <div class="card"><label class="row"><input type="checkbox" id="hideDone" ${state.progress.hideDone ? 'checked' : ''}><span>Hide completed locations</span></label>
+      <label class="row"><input type="checkbox" id="hideRows" ${state.progress.hideRows ? 'checked' : ''}><span>Hide ticked-off rows on location pages</span></label>
+      <div class="row"><span>Theme</span><select id="theme" style="width:auto;margin-left:auto">${['auto', 'light', 'dark'].map(t => `<option ${(state.progress.theme || 'auto') === t ? 'selected' : ''}>${t}</option>`).join('')}</select></div></div>
     ${SYNC_URL ? syncCard() : ''}
     <h2>Backup</h2>
     <div class="card"><p class="note">Progress is saved on this device${SYNC_URL ? ' (and in the cloud if you turn on sync above)' : ' only'}. Export a backup file to move it to another phone or keep it safe.</p>
@@ -989,6 +993,8 @@ function renderSettings() {
     <div class="card"><button class="btn" id="reset">Reset ${VNAME[V()]} progress</button></div>
     <p class="note">Pokémon, item, gift and trainer data come from the pret/pokefirered decompilation of the game. Walkthrough steps are written guidance.</p>`;
   document.getElementById('hideDone').onchange = e => { state.progress.hideDone = e.target.checked; save(); };
+  document.getElementById('hideRows').onchange = e => { state.progress.hideRows = e.target.checked; save(); applyVersion(); };
+  document.getElementById('theme').onchange = e => { state.progress.theme = e.target.value; save(); applyVersion(); };
   document.getElementById('export').onclick = () => {
     const blob = new Blob([JSON.stringify(state.progress, null, 2)], { type: 'application/json' });
     const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'frlg-dex-backup.json' });
@@ -1114,6 +1120,7 @@ window.addEventListener('online', () => { if (sync.on()) sync.cfg.dirty ? sync.p
 // ---------- shell ----------
 // Extra pages (features.js and friends) register themselves here: PAGES.mon = id => ..., reached at #/mon/<id>.
 const PAGES = {};
+const AFTER_RENDER = []; // (page, id) => void, run after every page is drawn
 function setHeader(title, back, tab) {
   document.getElementById('title').textContent = title;
   document.getElementById('back').hidden = !back;
@@ -1121,6 +1128,8 @@ function setHeader(title, back, tab) {
 }
 function applyVersion() {
   document.documentElement.dataset.version = V();
+  document.documentElement.dataset.theme = state.progress.theme || 'auto';
+  document.documentElement.classList.toggle('hide-rows', !!state.progress.hideRows);
   document.querySelectorAll('[data-version]').forEach(b => b.classList.toggle('on', b.dataset.version === V()));
 }
 function route(keepScroll) {
@@ -1134,14 +1143,37 @@ function route(keepScroll) {
   else if (page === 'settings') renderSettings();
   else if (PAGES[page]) PAGES[page](id ? decodeURIComponent(id) : id);
   else renderHome();
+  for (const f of AFTER_RENDER) f(page, id);
   window.scrollTo(0, keepScroll ? y : 0);
 }
 
+// Undo for the last checkbox: a toast at the bottom for a few seconds
+let undoTimer = null;
+function showUndo(key, was, label) {
+  let t = document.getElementById('toast');
+  if (!t) { t = Object.assign(document.createElement('div'), { id: 'toast', className: 'toast' }); document.body.appendChild(t); }
+  t.innerHTML = `<span>${esc(label)}</span><button class="btn small" id="undoBtn">Undo</button>`;
+  t.hidden = false;
+  clearTimeout(undoTimer); undoTimer = setTimeout(() => { t.hidden = true; }, 5000);
+  document.getElementById('undoBtn').onclick = () => {
+    const s = cur();
+    if (key.startsWith('dex:')) { if (was) s.caught[key.slice(4)] = was; else delete s.caught[key.slice(4)]; }
+    else if (was) s.checks[key] = true; else delete s.checks[key];
+    t.hidden = true; save(); route(true);
+  };
+}
 view.addEventListener('change', e => {
   if (e.target.dataset?.pick) return setPick(e.target.dataset.pick, e.target.value);
   const key = e.target.dataset?.key;
   if (!key) return;
   const s = cur();
+  const was = key.startsWith('dex:') ? s.caught[key.slice(4)] : s.checks[key];
+  try {
+    const box = e.target.closest('.row, .trainer, .chip');
+    const span = box.querySelector('label > span, .tname');
+    const lbl = (span ? [...span.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent).join('') : box.textContent) || 'item';
+    showUndo(key, was, `${e.target.checked ? 'Ticked' : 'Unticked'} ${lbl.trim().slice(0, 40)}`);
+  } catch (err) { /* no toast without a page to show it on */ }
   if (key.startsWith('dex:')) {
     const d = key.slice(4);
     if (e.target.checked) s.caught[d] = true; else delete s.caught[d];

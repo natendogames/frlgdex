@@ -9,7 +9,7 @@ async function loadApp(extra = []) {
   const store = {};
   const ctx = {
     console, setTimeout, clearTimeout, Promise, JSON, Math, Object, Array, Set, Map, String, Number,
-    document: { getElementById: id => (els[id] ||= el()), querySelectorAll: () => [], documentElement: { dataset: {} }, addEventListener() {} },
+    document: { getElementById: id => (els[id] ||= el()), querySelectorAll: () => [], documentElement: { dataset: {}, classList: { toggle() {} } }, body: { appendChild() {} }, createElement: () => el(), addEventListener() {} },
     localStorage: { getItem: k => store[k] ?? null, setItem: (k, v) => { store[k] = String(v); }, removeItem: k => { delete store[k]; } },
     location: { hash: '#/none' }, history: { length: 1 }, navigator: {},
     fetch: async url => {
