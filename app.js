@@ -353,6 +353,7 @@ function starterChips() {
 function setPick(id, key) {
   const s = cur(), c = CHOICES.find(x => x.id === id);
   const prev = pickedOption(c), next = c.options.find(o => o.key === key);
+  if ((prev?.key || null) === (next?.key || null)) return;
   // a pick marks the Pokémon you got as caught; undo that if the pick changes
   if (prev?.dex && s.caught[prev.dex] === 'pick') delete s.caught[prev.dex];
   s.picks ||= {};
@@ -361,19 +362,22 @@ function setPick(id, key) {
   for (const k in catchCache) delete catchCache[k];
   save(); route(true);
 }
-// Keep the Battle plan team in step with the starter: swap the old starter's line for the new one,
-// or add the new starter when the team has none yet.
+// Keep the Battle plan team in step with the starter pick. Changing the pick swaps the old starter
+// (or whatever it evolved into) for the same stage of the new one, keeping its level; clearing the pick takes it
+// off the team. A slot you've changed to a Pokémon outside the old starter's line is left alone.
+const starterLine = k => (STARTER_BASE[k] ? [0, 1, 2].map(i => STARTER_BASE[k] + i) : []);
+const starterKeyOf = n => Object.keys(STARTER_BASE).find(k => starterLine(k).includes(n)) || null;
 function starterToTeam(prev, next) {
-  if (!next) return;
-  const s = cur(), lineOf = k => [0, 1, 2].map(i => STARTER_BASE[k] + i);
-  const i = prev ? s.team.findIndex(n => lineOf(prev).includes(n)) : -1;
+  const s = cur();
+  const i = prev ? s.team.findIndex(n => starterLine(prev).includes(n)) : -1;
   if (i >= 0) {
-    const old = s.team[i], nn = STARTER_BASE[next] + (old - STARTER_BASE[prev]);
-    if (s.team.includes(nn)) return;
+    const old = s.team[i];
+    const nn = next ? STARTER_BASE[next] + (old - STARTER_BASE[prev]) : null;
+    if (!nn || s.team.includes(nn)) { s.team.splice(i, 1); return; }
     s.team[i] = nn;
     const lvl = s.teamMeta?.[old]?.level;
     if (lvl) (s.teamMeta[nn] ||= {}).level ||= lvl;
-  } else if (!s.team.some(n => n >= 1 && n <= 9) && s.team.length < 6) s.team.unshift(STARTER_BASE[next]);
+  } else if (next && !s.team.some(starterKeyOf) && s.team.length < 6) s.team.unshift(STARTER_BASE[next]);
 }
 
 function renderDex() {
@@ -650,7 +654,12 @@ function renderPlanner() {
   const q = document.getElementById('teamq');
   q.onchange = () => {
     const p = state.dex.find(x => x.name.toLowerCase() === q.value.trim().toLowerCase());
-    if (p && s.team.length < 6 && !s.team.includes(p.dex)) { s.team.push(p.dex); save(); renderPlanner(); }
+    if (!p || s.team.length >= 6 || s.team.includes(p.dex)) return;
+    s.team.push(p.dex);
+    // the first starter-line Pokémon added with no starter picked yet is taken to be your starter
+    const k = starterKeyOf(p.dex);
+    if (k && !pickOf('starter') && s.team.filter(starterKeyOf).length === 1) return setPick('starter', k);
+    save(); renderPlanner();
   };
 }
 
