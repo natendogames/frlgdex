@@ -9,6 +9,7 @@
      "dex": 4,
      "name": "Charmander",
      "level": 5,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -27,6 +28,7 @@
      "dex": 7,
      "name": "Squirtle",
      "level": 5,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -45,6 +47,7 @@
      "dex": 1,
      "name": "Bulbasaur",
      "level": 5,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -78,6 +81,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 9,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -94,6 +98,7 @@
      "dex": 4,
      "name": "Charmander",
      "level": 9,
+     "iv": 6,
      "moves": [
       {
        "name": "Scratch",
@@ -112,6 +117,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 9,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -128,6 +134,7 @@
      "dex": 7,
      "name": "Squirtle",
      "level": 9,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -146,6 +153,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 9,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -162,6 +170,7 @@
      "dex": 1,
      "name": "Bulbasaur",
      "level": 9,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -193,6 +202,7 @@
     "dex": 74,
     "name": "Geodude",
     "level": 12,
+    "iv": 0,
     "moves": [
      {
       "name": "Tackle",
@@ -209,6 +219,7 @@
     "dex": 95,
     "name": "Onix",
     "level": 14,
+    "iv": 0,
     "moves": [
      {
       "name": "Tackle",
@@ -250,6 +261,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 17,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -276,6 +288,7 @@
      "dex": 63,
      "name": "Abra",
      "level": 16,
+     "iv": 6,
      "moves": [
       {
        "name": "Teleport",
@@ -287,6 +300,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 15,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -308,6 +322,7 @@
      "dex": 4,
      "name": "Charmander",
      "level": 18,
+     "iv": 12,
      "moves": [
       {
        "name": "Scratch",
@@ -336,6 +351,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 17,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -362,6 +378,7 @@
      "dex": 63,
      "name": "Abra",
      "level": 16,
+     "iv": 6,
      "moves": [
       {
        "name": "Teleport",
@@ -373,6 +390,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 15,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -394,6 +412,7 @@
      "dex": 7,
      "name": "Squirtle",
      "level": 18,
+     "iv": 12,
      "moves": [
       {
        "name": "Bubble",
@@ -422,6 +441,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 17,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -448,6 +468,7 @@
      "dex": 63,
      "name": "Abra",
      "level": 16,
+     "iv": 6,
      "moves": [
       {
        "name": "Teleport",
@@ -459,6 +480,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 15,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -480,6 +502,7 @@
      "dex": 1,
      "name": "Bulbasaur",
      "level": 18,
+     "iv": 12,
      "moves": [
       {
        "name": "Leech Seed",
@@ -520,6 +543,7 @@
     "dex": 120,
     "name": "Staryu",
     "level": 18,
+    "iv": 0,
     "moves": [
      {
       "name": "Harden",
@@ -545,6 +569,7 @@
     "dex": 121,
     "name": "Starmie",
     "level": 21,
+    "iv": 0,
     "moves": [
      {
       "name": "Water Gun",
@@ -593,6 +618,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 19,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -619,6 +645,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 16,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -645,6 +672,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 18,
+     "iv": 6,
      "moves": [
       {
        "name": "Teleport",
@@ -669,6 +697,7 @@
      "dex": 5,
      "name": "Charmeleon",
      "level": 20,
+     "iv": 12,
      "moves": [
       {
        "name": "Growl",
@@ -696,6 +725,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 19,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -722,6 +752,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 16,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -748,6 +779,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 18,
+     "iv": 6,
      "moves": [
       {
        "name": "Teleport",
@@ -772,6 +804,7 @@
      "dex": 8,
      "name": "Wartortle",
      "level": 20,
+     "iv": 12,
      "moves": [
       {
        "name": "Bubble",
@@ -800,6 +833,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 19,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -826,6 +860,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 16,
+     "iv": 6,
      "moves": [
       {
        "name": "Tackle",
@@ -852,6 +887,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 18,
+     "iv": 6,
      "moves": [
       {
        "name": "Teleport",
@@ -876,6 +912,7 @@
      "dex": 2,
      "name": "Ivysaur",
      "level": 20,
+     "iv": 12,
      "moves": [
       {
        "name": "Leech Seed",
@@ -916,6 +953,7 @@
     "dex": 100,
     "name": "Voltorb",
     "level": 21,
+    "iv": 0,
     "moves": [
      {
       "name": "Tackle",
@@ -942,6 +980,7 @@
     "dex": 25,
     "name": "Pikachu",
     "level": 18,
+    "iv": 0,
     "moves": [
      {
       "name": "Tail Whip",
@@ -966,6 +1005,7 @@
     "dex": 26,
     "name": "Raichu",
     "level": 24,
+    "iv": 0,
     "moves": [
      {
       "name": "Thundershock",
@@ -1014,6 +1054,7 @@
     "dex": 71,
     "name": "Victreebel",
     "level": 29,
+    "iv": 0,
     "moves": [
      {
       "name": "Vine Whip",
@@ -1039,6 +1080,7 @@
     "dex": 114,
     "name": "Tangela",
     "level": 24,
+    "iv": 0,
     "moves": [
      {
       "name": "Absorb",
@@ -1064,6 +1106,7 @@
     "dex": 45,
     "name": "Vileplume",
     "level": 29,
+    "iv": 0,
     "moves": [
      {
       "name": "Absorb",
@@ -1111,6 +1154,7 @@
     "dex": 95,
     "name": "Onix",
     "level": 25,
+    "iv": 30,
     "moves": [
      {
       "name": "Bind",
@@ -1137,6 +1181,7 @@
     "dex": 111,
     "name": "Rhyhorn",
     "level": 24,
+    "iv": 30,
     "moves": [
      {
       "name": "Tail Whip",
@@ -1162,6 +1207,7 @@
     "dex": 115,
     "name": "Kangaskhan",
     "level": 29,
+    "iv": 30,
     "moves": [
      {
       "name": "Bite",
@@ -1203,6 +1249,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 25,
+     "iv": 12,
      "moves": [
       {
        "name": "Sand-attack",
@@ -1228,6 +1275,7 @@
      "dex": 102,
      "name": "Exeggcute",
      "level": 23,
+     "iv": 12,
      "moves": [
       {
        "name": "Hypnosis",
@@ -1252,6 +1300,7 @@
      "dex": 130,
      "name": "Gyarados",
      "level": 22,
+     "iv": 12,
      "moves": [
       {
        "name": "Thrash",
@@ -1269,6 +1318,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 20,
+     "iv": 12,
      "moves": [
       {
        "name": "Teleport",
@@ -1293,6 +1343,7 @@
      "dex": 5,
      "name": "Charmeleon",
      "level": 25,
+     "iv": 12,
      "moves": [
       {
        "name": "Growl",
@@ -1320,6 +1371,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 25,
+     "iv": 12,
      "moves": [
       {
        "name": "Sand-attack",
@@ -1345,6 +1397,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 23,
+     "iv": 12,
      "moves": [
       {
        "name": "Roar",
@@ -1369,6 +1422,7 @@
      "dex": 102,
      "name": "Exeggcute",
      "level": 22,
+     "iv": 12,
      "moves": [
       {
        "name": "Hypnosis",
@@ -1393,6 +1447,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 20,
+     "iv": 12,
      "moves": [
       {
        "name": "Teleport",
@@ -1417,6 +1472,7 @@
      "dex": 8,
      "name": "Wartortle",
      "level": 25,
+     "iv": 12,
      "moves": [
       {
        "name": "Withdraw",
@@ -1445,6 +1501,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 25,
+     "iv": 12,
      "moves": [
       {
        "name": "Sand-attack",
@@ -1470,6 +1527,7 @@
      "dex": 130,
      "name": "Gyarados",
      "level": 23,
+     "iv": 12,
      "moves": [
       {
        "name": "Thrash",
@@ -1487,6 +1545,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 22,
+     "iv": 12,
      "moves": [
       {
        "name": "Roar",
@@ -1511,6 +1570,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 20,
+     "iv": 12,
      "moves": [
       {
        "name": "Teleport",
@@ -1535,6 +1595,7 @@
      "dex": 2,
      "name": "Ivysaur",
      "level": 25,
+     "iv": 12,
      "moves": [
       {
        "name": "Vine Whip",
@@ -1576,6 +1637,7 @@
     "dex": 109,
     "name": "Koffing",
     "level": 37,
+    "iv": 0,
     "moves": [
      {
       "name": "Selfdestruct",
@@ -1601,6 +1663,7 @@
     "dex": 89,
     "name": "Muk",
     "level": 39,
+    "iv": 0,
     "moves": [
      {
       "name": "Sludge",
@@ -1625,6 +1688,7 @@
     "dex": 109,
     "name": "Koffing",
     "level": 37,
+    "iv": 0,
     "moves": [
      {
       "name": "Selfdestruct",
@@ -1650,6 +1714,7 @@
     "dex": 110,
     "name": "Weezing",
     "level": 43,
+    "iv": 0,
     "moves": [
      {
       "name": "Selfdestruct",
@@ -1698,6 +1763,7 @@
      "dex": 18,
      "name": "Pidgeot",
      "level": 37,
+     "iv": 12,
      "moves": [
       {
        "name": "Quick Attack",
@@ -1723,6 +1789,7 @@
      "dex": 102,
      "name": "Exeggcute",
      "level": 38,
+     "iv": 12,
      "moves": [
       {
        "name": "Confusion",
@@ -1747,6 +1814,7 @@
      "dex": 130,
      "name": "Gyarados",
      "level": 35,
+     "iv": 12,
      "moves": [
       {
        "name": "Bite",
@@ -1773,6 +1841,7 @@
      "dex": 65,
      "name": "Alakazam",
      "level": 35,
+     "iv": 12,
      "moves": [
       {
        "name": "Reflect",
@@ -1797,6 +1866,7 @@
      "dex": 6,
      "name": "Charizard",
      "level": 40,
+     "iv": 18,
      "moves": [
       {
        "name": "Smokescreen",
@@ -1824,6 +1894,7 @@
      "dex": 18,
      "name": "Pidgeot",
      "level": 37,
+     "iv": 12,
      "moves": [
       {
        "name": "Quick Attack",
@@ -1849,6 +1920,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 38,
+     "iv": 12,
      "moves": [
       {
        "name": "Odor Sleuth",
@@ -1874,6 +1946,7 @@
      "dex": 102,
      "name": "Exeggcute",
      "level": 35,
+     "iv": 12,
      "moves": [
       {
        "name": "Leech Seed",
@@ -1898,6 +1971,7 @@
      "dex": 65,
      "name": "Alakazam",
      "level": 35,
+     "iv": 12,
      "moves": [
       {
        "name": "Reflect",
@@ -1922,6 +1996,7 @@
      "dex": 9,
      "name": "Blastoise",
      "level": 40,
+     "iv": 18,
      "moves": [
       {
        "name": "Water Gun",
@@ -1950,6 +2025,7 @@
      "dex": 18,
      "name": "Pidgeot",
      "level": 37,
+     "iv": 12,
      "moves": [
       {
        "name": "Quick Attack",
@@ -1975,6 +2051,7 @@
      "dex": 130,
      "name": "Gyarados",
      "level": 38,
+     "iv": 12,
      "moves": [
       {
        "name": "Bite",
@@ -2001,6 +2078,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 35,
+     "iv": 12,
      "moves": [
       {
        "name": "Leer",
@@ -2026,6 +2104,7 @@
      "dex": 65,
      "name": "Alakazam",
      "level": 35,
+     "iv": 12,
      "moves": [
       {
        "name": "Reflect",
@@ -2050,6 +2129,7 @@
      "dex": 3,
      "name": "Venusaur",
      "level": 40,
+     "iv": 18,
      "moves": [
       {
        "name": "Poisonpowder",
@@ -2090,6 +2170,7 @@
     "dex": 33,
     "name": "Nidorino",
     "level": 37,
+    "iv": 30,
     "moves": [
      {
       "name": "Poison Sting",
@@ -2116,6 +2197,7 @@
     "dex": 115,
     "name": "Kangaskhan",
     "level": 35,
+    "iv": 30,
     "moves": [
      {
       "name": "Tail Whip",
@@ -2142,6 +2224,7 @@
     "dex": 111,
     "name": "Rhyhorn",
     "level": 37,
+    "iv": 30,
     "moves": [
      {
       "name": "Stomp",
@@ -2168,6 +2251,7 @@
     "dex": 31,
     "name": "Nidoqueen",
     "level": 41,
+    "iv": 30,
     "moves": [
      {
       "name": "Tail Whip",
@@ -2208,6 +2292,7 @@
     "dex": 64,
     "name": "Kadabra",
     "level": 38,
+    "iv": 0,
     "moves": [
      {
       "name": "Recover",
@@ -2233,6 +2318,7 @@
     "dex": 122,
     "name": "Mr. Mime",
     "level": 37,
+    "iv": 0,
     "moves": [
      {
       "name": "Encore",
@@ -2257,6 +2343,7 @@
     "dex": 49,
     "name": "Venomoth",
     "level": 38,
+    "iv": 0,
     "moves": [
      {
       "name": "Leech Life",
@@ -2283,6 +2370,7 @@
     "dex": 65,
     "name": "Alakazam",
     "level": 43,
+    "iv": 0,
     "moves": [
      {
       "name": "Future Sight",
@@ -2330,6 +2418,7 @@
     "dex": 58,
     "name": "Growlithe",
     "level": 42,
+    "iv": 0,
     "moves": [
      {
       "name": "Odor Sleuth",
@@ -2355,6 +2444,7 @@
     "dex": 77,
     "name": "Ponyta",
     "level": 40,
+    "iv": 0,
     "moves": [
      {
       "name": "Stomp",
@@ -2381,6 +2471,7 @@
     "dex": 78,
     "name": "Rapidash",
     "level": 42,
+    "iv": 0,
     "moves": [
      {
       "name": "Fire Spin",
@@ -2407,6 +2498,7 @@
     "dex": 59,
     "name": "Arcanine",
     "level": 47,
+    "iv": 0,
     "moves": [
      {
       "name": "Bite",
@@ -2454,6 +2546,7 @@
     "dex": 111,
     "name": "Rhyhorn",
     "level": 45,
+    "iv": 0,
     "moves": [
      {
       "name": "Scary Face",
@@ -2480,6 +2573,7 @@
     "dex": 51,
     "name": "Dugtrio",
     "level": 42,
+    "iv": 0,
     "moves": [
      {
       "name": "Fury Swipes",
@@ -2507,6 +2601,7 @@
     "dex": 31,
     "name": "Nidoqueen",
     "level": 44,
+    "iv": 0,
     "moves": [
      {
       "name": "Double Kick",
@@ -2534,6 +2629,7 @@
     "dex": 34,
     "name": "Nidoking",
     "level": 45,
+    "iv": 0,
     "moves": [
      {
       "name": "Double Kick",
@@ -2561,6 +2657,7 @@
     "dex": 111,
     "name": "Rhyhorn",
     "level": 50,
+    "iv": 0,
     "moves": [
      {
       "name": "Scary Face",
@@ -2611,6 +2708,7 @@
      "dex": 18,
      "name": "Pidgeot",
      "level": 47,
+     "iv": 18,
      "moves": [
       {
        "name": "Quick Attack",
@@ -2636,6 +2734,7 @@
      "dex": 111,
      "name": "Rhyhorn",
      "level": 45,
+     "iv": 18,
      "moves": [
       {
        "name": "Scary Face",
@@ -2662,6 +2761,7 @@
      "dex": 102,
      "name": "Exeggcute",
      "level": 45,
+     "iv": 18,
      "moves": [
       {
        "name": "Stun Spore",
@@ -2686,6 +2786,7 @@
      "dex": 130,
      "name": "Gyarados",
      "level": 45,
+     "iv": 18,
      "moves": [
       {
        "name": "Leer",
@@ -2711,6 +2812,7 @@
      "dex": 65,
      "name": "Alakazam",
      "level": 47,
+     "iv": 18,
      "moves": [
       {
        "name": "Future Sight",
@@ -2736,6 +2838,7 @@
      "dex": 6,
      "name": "Charizard",
      "level": 53,
+     "iv": 30,
      "moves": [
       {
        "name": "Scary Face",
@@ -2764,6 +2867,7 @@
      "dex": 18,
      "name": "Pidgeot",
      "level": 47,
+     "iv": 18,
      "moves": [
       {
        "name": "Quick Attack",
@@ -2789,6 +2893,7 @@
      "dex": 111,
      "name": "Rhyhorn",
      "level": 45,
+     "iv": 18,
      "moves": [
       {
        "name": "Scary Face",
@@ -2815,6 +2920,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 45,
+     "iv": 18,
      "moves": [
       {
        "name": "Take Down",
@@ -2840,6 +2946,7 @@
      "dex": 102,
      "name": "Exeggcute",
      "level": 45,
+     "iv": 18,
      "moves": [
       {
        "name": "Stun Spore",
@@ -2864,6 +2971,7 @@
      "dex": 65,
      "name": "Alakazam",
      "level": 47,
+     "iv": 18,
      "moves": [
       {
        "name": "Future Sight",
@@ -2889,6 +2997,7 @@
      "dex": 9,
      "name": "Blastoise",
      "level": 53,
+     "iv": 30,
      "moves": [
       {
        "name": "Bite",
@@ -2916,6 +3025,7 @@
      "dex": 18,
      "name": "Pidgeot",
      "level": 47,
+     "iv": 18,
      "moves": [
       {
        "name": "Quick Attack",
@@ -2941,6 +3051,7 @@
      "dex": 111,
      "name": "Rhyhorn",
      "level": 45,
+     "iv": 18,
      "moves": [
       {
        "name": "Scary Face",
@@ -2967,6 +3078,7 @@
      "dex": 130,
      "name": "Gyarados",
      "level": 45,
+     "iv": 18,
      "moves": [
       {
        "name": "Leer",
@@ -2992,6 +3104,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 45,
+     "iv": 18,
      "moves": [
       {
        "name": "Take Down",
@@ -3017,6 +3130,7 @@
      "dex": 65,
      "name": "Alakazam",
      "level": 47,
+     "iv": 18,
      "moves": [
       {
        "name": "Future Sight",
@@ -3042,6 +3156,7 @@
      "dex": 3,
      "name": "Venusaur",
      "level": 53,
+     "iv": 30,
      "moves": [
       {
        "name": "Razor Leaf",
@@ -3082,6 +3197,7 @@
     "dex": 87,
     "name": "Dewgong",
     "level": 52,
+    "iv": 30,
     "moves": [
      {
       "name": "Rest",
@@ -3108,6 +3224,7 @@
     "dex": 91,
     "name": "Cloyster",
     "level": 51,
+    "iv": 30,
     "moves": [
      {
       "name": "Aurora Beam",
@@ -3133,6 +3250,7 @@
     "dex": 80,
     "name": "Slowbro",
     "level": 52,
+    "iv": 30,
     "moves": [
      {
       "name": "Headbutt",
@@ -3158,6 +3276,7 @@
     "dex": 124,
     "name": "Jynx",
     "level": 54,
+    "iv": 30,
     "moves": [
      {
       "name": "Ice Punch",
@@ -3183,6 +3302,7 @@
     "dex": 131,
     "name": "Lapras",
     "level": 54,
+    "iv": 30,
     "moves": [
      {
       "name": "Ice Beam",
@@ -3226,6 +3346,7 @@
     "dex": 95,
     "name": "Onix",
     "level": 51,
+    "iv": 30,
     "moves": [
      {
       "name": "Dragonbreath",
@@ -3252,6 +3373,7 @@
     "dex": 107,
     "name": "Hitmonchan",
     "level": 53,
+    "iv": 30,
     "moves": [
      {
       "name": "Sky Uppercut",
@@ -3278,6 +3400,7 @@
     "dex": 106,
     "name": "Hitmonlee",
     "level": 53,
+    "iv": 30,
     "moves": [
      {
       "name": "Foresight",
@@ -3303,6 +3426,7 @@
     "dex": 95,
     "name": "Onix",
     "level": 54,
+    "iv": 30,
     "moves": [
      {
       "name": "Sandstorm",
@@ -3329,6 +3453,7 @@
     "dex": 68,
     "name": "Machamp",
     "level": 56,
+    "iv": 30,
     "moves": [
      {
       "name": "Vital Throw",
@@ -3373,6 +3498,7 @@
     "dex": 94,
     "name": "Gengar",
     "level": 54,
+    "iv": 30,
     "moves": [
      {
       "name": "Dream Eater",
@@ -3398,6 +3524,7 @@
     "dex": 42,
     "name": "Golbat",
     "level": 54,
+    "iv": 30,
     "moves": [
      {
       "name": "Confuse Ray",
@@ -3423,6 +3550,7 @@
     "dex": 93,
     "name": "Haunter",
     "level": 53,
+    "iv": 30,
     "moves": [
      {
       "name": "Dream Eater",
@@ -3448,6 +3576,7 @@
     "dex": 24,
     "name": "Arbok",
     "level": 56,
+    "iv": 30,
     "moves": [
      {
       "name": "Stockpile",
@@ -3472,6 +3601,7 @@
     "dex": 94,
     "name": "Gengar",
     "level": 58,
+    "iv": 30,
     "moves": [
      {
       "name": "Dream Eater",
@@ -3515,6 +3645,7 @@
     "dex": 130,
     "name": "Gyarados",
     "level": 56,
+    "iv": 30,
     "moves": [
      {
       "name": "Hydro Pump",
@@ -3540,6 +3671,7 @@
     "dex": 148,
     "name": "Dragonair",
     "level": 54,
+    "iv": 30,
     "moves": [
      {
       "name": "Dragon Rage",
@@ -3565,6 +3697,7 @@
     "dex": 148,
     "name": "Dragonair",
     "level": 54,
+    "iv": 30,
     "moves": [
      {
       "name": "Dragon Rage",
@@ -3590,6 +3723,7 @@
     "dex": 142,
     "name": "Aerodactyl",
     "level": 58,
+    "iv": 30,
     "moves": [
      {
       "name": "Ancientpower",
@@ -3616,6 +3750,7 @@
     "dex": 149,
     "name": "Dragonite",
     "level": 60,
+    "iv": 30,
     "moves": [
      {
       "name": "Slam",
@@ -3663,6 +3798,7 @@
      "dex": 18,
      "name": "Pidgeot",
      "level": 59,
+     "iv": 31,
      "moves": [
       {
        "name": "Whirlwind",
@@ -3687,6 +3823,7 @@
      "dex": 65,
      "name": "Alakazam",
      "level": 57,
+     "iv": 31,
      "moves": [
       {
        "name": "Future Sight",
@@ -3712,6 +3849,7 @@
      "dex": 112,
      "name": "Rhydon",
      "level": 59,
+     "iv": 31,
      "moves": [
       {
        "name": "Rock Blast",
@@ -3739,6 +3877,7 @@
      "dex": 103,
      "name": "Exeggutor",
      "level": 59,
+     "iv": 31,
      "moves": [
       {
        "name": "Hypnosis",
@@ -3765,6 +3904,7 @@
      "dex": 130,
      "name": "Gyarados",
      "level": 61,
+     "iv": 31,
      "moves": [
       {
        "name": "Hydro Pump",
@@ -3790,6 +3930,7 @@
      "dex": 6,
      "name": "Charizard",
      "level": 63,
+     "iv": 31,
      "moves": [
       {
        "name": "Flamethrower",
@@ -3820,6 +3961,7 @@
      "dex": 18,
      "name": "Pidgeot",
      "level": 59,
+     "iv": 31,
      "moves": [
       {
        "name": "Whirlwind",
@@ -3844,6 +3986,7 @@
      "dex": 65,
      "name": "Alakazam",
      "level": 57,
+     "iv": 31,
      "moves": [
       {
        "name": "Future Sight",
@@ -3869,6 +4012,7 @@
      "dex": 112,
      "name": "Rhydon",
      "level": 59,
+     "iv": 31,
      "moves": [
       {
        "name": "Rock Blast",
@@ -3896,6 +4040,7 @@
      "dex": 59,
      "name": "Arcanine",
      "level": 59,
+     "iv": 31,
      "moves": [
       {
        "name": "Roar",
@@ -3921,6 +4066,7 @@
      "dex": 103,
      "name": "Exeggutor",
      "level": 61,
+     "iv": 31,
      "moves": [
       {
        "name": "Hypnosis",
@@ -3947,6 +4093,7 @@
      "dex": 9,
      "name": "Blastoise",
      "level": 63,
+     "iv": 31,
      "moves": [
       {
        "name": "Rapid Spin",
@@ -3975,6 +4122,7 @@
      "dex": 18,
      "name": "Pidgeot",
      "level": 59,
+     "iv": 31,
      "moves": [
       {
        "name": "Whirlwind",
@@ -3999,6 +4147,7 @@
      "dex": 65,
      "name": "Alakazam",
      "level": 57,
+     "iv": 31,
      "moves": [
       {
        "name": "Future Sight",
@@ -4024,6 +4173,7 @@
      "dex": 112,
      "name": "Rhydon",
      "level": 59,
+     "iv": 31,
      "moves": [
       {
        "name": "Rock Blast",
@@ -4051,6 +4201,7 @@
      "dex": 130,
      "name": "Gyarados",
      "level": 59,
+     "iv": 31,
      "moves": [
       {
        "name": "Hydro Pump",
@@ -4076,6 +4227,7 @@
      "dex": 59,
      "name": "Arcanine",
      "level": 61,
+     "iv": 31,
      "moves": [
       {
        "name": "Roar",
@@ -4101,6 +4253,7 @@
      "dex": 3,
      "name": "Venusaur",
      "level": 63,
+     "iv": 31,
      "moves": [
       {
        "name": "Razor Leaf",

@@ -88,6 +88,7 @@
      "dex": 43,
      "name": "Oddish",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Sweet Scent",
@@ -111,6 +112,7 @@
      "dex": 69,
      "name": "Bellsprout",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Growth",
@@ -135,6 +137,7 @@
      "dex": 43,
      "name": "Oddish",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Sweet Scent",
@@ -158,6 +161,7 @@
      "dex": 69,
      "name": "Bellsprout",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Growth",
@@ -190,6 +194,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -215,6 +220,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -248,6 +254,7 @@
      "dex": 15,
      "name": "Beedrill",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Fury Attack",
@@ -264,6 +271,7 @@
      "dex": 15,
      "name": "Beedrill",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Fury Attack",
@@ -288,6 +296,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Roar",
@@ -312,6 +321,7 @@
      "dex": 4,
      "name": "Charmander",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -345,6 +355,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -371,6 +382,7 @@
      "dex": 27,
      "name": "Sandshrew",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -396,6 +408,7 @@
      "dex": 23,
      "name": "Ekans",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Wrap",
@@ -422,6 +435,7 @@
      "dex": 27,
      "name": "Sandshrew",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -455,6 +469,7 @@
      "dex": 10,
      "name": "Caterpie",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -471,6 +486,7 @@
      "dex": 13,
      "name": "Weedle",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -487,6 +503,7 @@
      "dex": 48,
      "name": "Venonat",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Foresight",
@@ -519,6 +536,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Defense Curl",
@@ -544,6 +562,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -569,6 +588,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Defense Curl",
@@ -602,6 +622,7 @@
      "dex": 52,
      "name": "Meowth",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -636,6 +657,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Mud Sport",
@@ -662,6 +684,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",

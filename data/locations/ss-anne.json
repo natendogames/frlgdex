@@ -239,6 +239,7 @@
      "dex": 32,
      "name": "Nidoran♂",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Focus Energy",
@@ -274,6 +275,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -300,6 +302,7 @@
      "dex": 29,
      "name": "Nidoran♀",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -335,6 +338,7 @@
      "dex": 32,
      "name": "Nidoran♂",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Peck",
@@ -361,6 +365,7 @@
      "dex": 29,
      "name": "Nidoran♀",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -396,6 +401,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Bite",
@@ -421,6 +427,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Bite",
@@ -456,6 +463,7 @@
       "dex": 17,
       "name": "Pidgeotto",
       "level": 19,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -482,6 +490,7 @@
       "dex": 20,
       "name": "Raticate",
       "level": 16,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -508,6 +517,7 @@
       "dex": 64,
       "name": "Kadabra",
       "level": 18,
+      "iv": 6,
       "moves": [
        {
         "name": "Teleport",
@@ -532,6 +542,7 @@
       "dex": 5,
       "name": "Charmeleon",
       "level": 20,
+      "iv": 12,
       "moves": [
        {
         "name": "Growl",
@@ -559,6 +570,7 @@
       "dex": 17,
       "name": "Pidgeotto",
       "level": 19,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -585,6 +597,7 @@
       "dex": 20,
       "name": "Raticate",
       "level": 16,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -611,6 +624,7 @@
       "dex": 64,
       "name": "Kadabra",
       "level": 18,
+      "iv": 6,
       "moves": [
        {
         "name": "Teleport",
@@ -635,6 +649,7 @@
       "dex": 8,
       "name": "Wartortle",
       "level": 20,
+      "iv": 12,
       "moves": [
        {
         "name": "Bubble",
@@ -663,6 +678,7 @@
       "dex": 17,
       "name": "Pidgeotto",
       "level": 19,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -689,6 +705,7 @@
       "dex": 20,
       "name": "Raticate",
       "level": 16,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -715,6 +732,7 @@
       "dex": 64,
       "name": "Kadabra",
       "level": 18,
+      "iv": 6,
       "moves": [
        {
         "name": "Teleport",
@@ -739,6 +757,7 @@
       "dex": 2,
       "name": "Ivysaur",
       "level": 20,
+      "iv": 12,
       "moves": [
        {
         "name": "Leech Seed",
@@ -773,6 +792,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -797,6 +817,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -818,6 +839,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -851,6 +873,7 @@
      "dex": 25,
      "name": "Pikachu",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Thunder Wave",
@@ -885,6 +908,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Bite",
@@ -910,6 +934,7 @@
      "dex": 77,
      "name": "Ponyta",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Quick Attack",
@@ -944,6 +969,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -970,6 +996,7 @@
      "dex": 25,
      "name": "Pikachu",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -1003,6 +1030,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -1037,6 +1065,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -1058,6 +1087,7 @@
      "dex": 120,
      "name": "Staryu",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -1083,6 +1113,7 @@
      "dex": 90,
      "name": "Shellder",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -1117,6 +1148,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -1138,6 +1170,7 @@
      "dex": 120,
      "name": "Staryu",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -1172,6 +1205,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -1192,6 +1226,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -1212,6 +1247,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -1241,6 +1277,7 @@
      "dex": 90,
      "name": "Shellder",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -1275,6 +1312,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -1295,6 +1333,7 @@
      "dex": 90,
      "name": "Shellder",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -1320,6 +1359,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -1350,6 +1390,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Low Kick",
@@ -1375,6 +1416,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -1405,6 +1447,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Low Kick",
@@ -1430,6 +1473,7 @@
      "dex": 90,
      "name": "Shellder",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",

@@ -198,6 +198,7 @@
      "dex": 25,
      "name": "Pikachu",
      "level": 48,
+     "iv": 3,
      "moves": [
       {
        "name": "Slam",
@@ -224,6 +225,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 48,
+     "iv": 3,
      "moves": [
       {
        "name": "Cosmic Power",
@@ -248,6 +250,7 @@
      "dex": 183,
      "name": "Marill",
      "level": 48,
+     "iv": 3,
      "moves": [
       {
        "name": "Bubblebeam",

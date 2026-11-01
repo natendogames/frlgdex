@@ -263,6 +263,7 @@
       "dex": 4,
       "name": "Charmander",
       "level": 5,
+      "iv": 0,
       "moves": [
        {
         "name": "Scratch",
@@ -281,6 +282,7 @@
       "dex": 7,
       "name": "Squirtle",
       "level": 5,
+      "iv": 0,
       "moves": [
        {
         "name": "Tackle",
@@ -299,6 +301,7 @@
       "dex": 1,
       "name": "Bulbasaur",
       "level": 5,
+      "iv": 0,
       "moves": [
        {
         "name": "Tackle",

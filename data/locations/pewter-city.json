@@ -34,6 +34,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -50,6 +51,7 @@
      "dex": 27,
      "name": "Sandshrew",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -79,6 +81,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 12,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -95,6 +98,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 14,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",

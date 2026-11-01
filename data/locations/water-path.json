@@ -323,6 +323,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Dragonbreath",
@@ -349,6 +350,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Revenge",
@@ -385,6 +387,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 46,
+     "iv": 0,
      "moves": [
       {
        "name": "Rollout",
@@ -411,6 +414,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 46,
+     "iv": 0,
      "moves": [
       {
        "name": "Rollout",
@@ -437,6 +441,7 @@
      "dex": 101,
      "name": "Electrode",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Spark",
@@ -463,6 +468,7 @@
      "dex": 122,
      "name": "Mr. Mime",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Trick",
@@ -496,6 +502,7 @@
      "dex": 170,
      "name": "Chinchou",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Confuse Ray",
@@ -521,6 +528,7 @@
      "dex": 171,
      "name": "Lanturn",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Gun",
@@ -556,6 +564,7 @@
      "dex": 130,
      "name": "Gyarados",
      "level": 50,
+     "iv": 0,
      "moves": [
       {
        "name": "Twister",
@@ -590,6 +599,7 @@
      "dex": 25,
      "name": "Pikachu",
      "level": 50,
+     "iv": 0,
      "moves": [
       {
        "name": "Thunderbolt",
@@ -615,6 +625,7 @@
      "dex": 25,
      "name": "Pikachu",
      "level": 50,
+     "iv": 0,
      "moves": [
       {
        "name": "Thunderbolt",
@@ -650,6 +661,7 @@
      "dex": 191,
      "name": "Sunkern",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Endeavor",
@@ -675,6 +687,7 @@
      "dex": 192,
      "name": "Sunflora",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Bullet Seed",

@@ -206,6 +206,7 @@
      "dex": 235,
      "name": "Smeargle",
      "level": 50,
+     "iv": 6,
      "moves": [
       {
        "name": "Sketch",
@@ -226,6 +227,7 @@
      "dex": 235,
      "name": "Smeargle",
      "level": 50,
+     "iv": 6,
      "moves": [
       {
        "name": "Sketch",
@@ -246,6 +248,7 @@
      "dex": 235,
      "name": "Smeargle",
      "level": 50,
+     "iv": 6,
      "moves": [
       {
        "name": "Sketch",
@@ -266,6 +269,7 @@
      "dex": 187,
      "name": "Hoppip",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -291,6 +295,7 @@
      "dex": 188,
      "name": "Skiploom",
      "level": 50,
+     "iv": 0,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -328,6 +333,7 @@
      "dex": 179,
      "name": "Mareep",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Thunder Wave",
@@ -353,6 +359,7 @@
      "dex": 179,
      "name": "Mareep",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Thunder Wave",
@@ -378,6 +385,7 @@
      "dex": 180,
      "name": "Flaaffy",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Thunder Wave",
@@ -415,6 +423,7 @@
      "dex": 61,
      "name": "Poliwhirl",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Doubleslap",
@@ -440,6 +449,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubblebeam",
@@ -465,6 +475,7 @@
      "dex": 73,
      "name": "Tentacruel",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubblebeam",
@@ -499,6 +510,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Hyper Fang",
@@ -525,6 +537,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Whirlwind",

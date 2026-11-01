@@ -14,6 +14,7 @@
      "dex": 87,
      "name": "Dewgong",
      "level": 52,
+     "iv": 30,
      "moves": [
       {
        "name": "Rest",
@@ -40,6 +41,7 @@
      "dex": 91,
      "name": "Cloyster",
      "level": 51,
+     "iv": 30,
      "moves": [
       {
        "name": "Aurora Beam",
@@ -65,6 +67,7 @@
      "dex": 80,
      "name": "Slowbro",
      "level": 52,
+     "iv": 30,
      "moves": [
       {
        "name": "Headbutt",
@@ -90,6 +93,7 @@
      "dex": 124,
      "name": "Jynx",
      "level": 54,
+     "iv": 30,
      "moves": [
       {
        "name": "Ice Punch",
@@ -115,6 +119,7 @@
      "dex": 131,
      "name": "Lapras",
      "level": 54,
+     "iv": 30,
      "moves": [
       {
        "name": "Ice Beam",
@@ -153,6 +158,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 51,
+     "iv": 30,
      "moves": [
       {
        "name": "Dragonbreath",
@@ -179,6 +185,7 @@
      "dex": 107,
      "name": "Hitmonchan",
      "level": 53,
+     "iv": 30,
      "moves": [
       {
        "name": "Sky Uppercut",
@@ -205,6 +212,7 @@
      "dex": 106,
      "name": "Hitmonlee",
      "level": 53,
+     "iv": 30,
      "moves": [
       {
        "name": "Foresight",
@@ -230,6 +238,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 54,
+     "iv": 30,
      "moves": [
       {
        "name": "Sandstorm",
@@ -256,6 +265,7 @@
      "dex": 68,
      "name": "Machamp",
      "level": 56,
+     "iv": 30,
      "moves": [
       {
        "name": "Vital Throw",
@@ -295,6 +305,7 @@
      "dex": 94,
      "name": "Gengar",
      "level": 54,
+     "iv": 30,
      "moves": [
       {
        "name": "Dream Eater",
@@ -320,6 +331,7 @@
      "dex": 42,
      "name": "Golbat",
      "level": 54,
+     "iv": 30,
      "moves": [
       {
        "name": "Confuse Ray",
@@ -345,6 +357,7 @@
      "dex": 93,
      "name": "Haunter",
      "level": 53,
+     "iv": 30,
      "moves": [
       {
        "name": "Dream Eater",
@@ -370,6 +383,7 @@
      "dex": 24,
      "name": "Arbok",
      "level": 56,
+     "iv": 30,
      "moves": [
       {
        "name": "Stockpile",
@@ -394,6 +408,7 @@
      "dex": 94,
      "name": "Gengar",
      "level": 58,
+     "iv": 30,
      "moves": [
       {
        "name": "Dream Eater",
@@ -432,6 +447,7 @@
      "dex": 130,
      "name": "Gyarados",
      "level": 56,
+     "iv": 30,
      "moves": [
       {
        "name": "Hydro Pump",
@@ -457,6 +473,7 @@
      "dex": 148,
      "name": "Dragonair",
      "level": 54,
+     "iv": 30,
      "moves": [
       {
        "name": "Dragon Rage",
@@ -482,6 +499,7 @@
      "dex": 148,
      "name": "Dragonair",
      "level": 54,
+     "iv": 30,
      "moves": [
       {
        "name": "Dragon Rage",
@@ -507,6 +525,7 @@
      "dex": 142,
      "name": "Aerodactyl",
      "level": 58,
+     "iv": 30,
      "moves": [
       {
        "name": "Ancientpower",
@@ -533,6 +552,7 @@
      "dex": 149,
      "name": "Dragonite",
      "level": 60,
+     "iv": 30,
      "moves": [
       {
        "name": "Slam",
@@ -575,6 +595,7 @@
       "dex": 18,
       "name": "Pidgeot",
       "level": 59,
+      "iv": 31,
       "moves": [
        {
         "name": "Whirlwind",
@@ -599,6 +620,7 @@
       "dex": 65,
       "name": "Alakazam",
       "level": 57,
+      "iv": 31,
       "moves": [
        {
         "name": "Future Sight",
@@ -624,6 +646,7 @@
       "dex": 112,
       "name": "Rhydon",
       "level": 59,
+      "iv": 31,
       "moves": [
        {
         "name": "Rock Blast",
@@ -651,6 +674,7 @@
       "dex": 103,
       "name": "Exeggutor",
       "level": 59,
+      "iv": 31,
       "moves": [
        {
         "name": "Hypnosis",
@@ -677,6 +701,7 @@
       "dex": 130,
       "name": "Gyarados",
       "level": 61,
+      "iv": 31,
       "moves": [
        {
         "name": "Hydro Pump",
@@ -702,6 +727,7 @@
       "dex": 6,
       "name": "Charizard",
       "level": 63,
+      "iv": 31,
       "moves": [
        {
         "name": "Flamethrower",
@@ -732,6 +758,7 @@
       "dex": 18,
       "name": "Pidgeot",
       "level": 59,
+      "iv": 31,
       "moves": [
        {
         "name": "Whirlwind",
@@ -756,6 +783,7 @@
       "dex": 65,
       "name": "Alakazam",
       "level": 57,
+      "iv": 31,
       "moves": [
        {
         "name": "Future Sight",
@@ -781,6 +809,7 @@
       "dex": 112,
       "name": "Rhydon",
       "level": 59,
+      "iv": 31,
       "moves": [
        {
         "name": "Rock Blast",
@@ -808,6 +837,7 @@
       "dex": 59,
       "name": "Arcanine",
       "level": 59,
+      "iv": 31,
       "moves": [
        {
         "name": "Roar",
@@ -833,6 +863,7 @@
       "dex": 103,
       "name": "Exeggutor",
       "level": 61,
+      "iv": 31,
       "moves": [
        {
         "name": "Hypnosis",
@@ -859,6 +890,7 @@
       "dex": 9,
       "name": "Blastoise",
       "level": 63,
+      "iv": 31,
       "moves": [
        {
         "name": "Rapid Spin",
@@ -887,6 +919,7 @@
       "dex": 18,
       "name": "Pidgeot",
       "level": 59,
+      "iv": 31,
       "moves": [
        {
         "name": "Whirlwind",
@@ -911,6 +944,7 @@
       "dex": 65,
       "name": "Alakazam",
       "level": 57,
+      "iv": 31,
       "moves": [
        {
         "name": "Future Sight",
@@ -936,6 +970,7 @@
       "dex": 112,
       "name": "Rhydon",
       "level": 59,
+      "iv": 31,
       "moves": [
        {
         "name": "Rock Blast",
@@ -963,6 +998,7 @@
       "dex": 130,
       "name": "Gyarados",
       "level": 59,
+      "iv": 31,
       "moves": [
        {
         "name": "Hydro Pump",
@@ -988,6 +1024,7 @@
       "dex": 59,
       "name": "Arcanine",
       "level": 61,
+      "iv": 31,
       "moves": [
        {
         "name": "Roar",
@@ -1013,6 +1050,7 @@
       "dex": 3,
       "name": "Venusaur",
       "level": 63,
+      "iv": 31,
       "moves": [
        {
         "name": "Razor Leaf",

@@ -257,6 +257,7 @@
       "dex": 17,
       "name": "Pidgeotto",
       "level": 25,
+      "iv": 12,
       "moves": [
        {
         "name": "Sand-attack",
@@ -282,6 +283,7 @@
       "dex": 102,
       "name": "Exeggcute",
       "level": 23,
+      "iv": 12,
       "moves": [
        {
         "name": "Hypnosis",
@@ -306,6 +308,7 @@
       "dex": 130,
       "name": "Gyarados",
       "level": 22,
+      "iv": 12,
       "moves": [
        {
         "name": "Thrash",
@@ -323,6 +326,7 @@
       "dex": 64,
       "name": "Kadabra",
       "level": 20,
+      "iv": 12,
       "moves": [
        {
         "name": "Teleport",
@@ -347,6 +351,7 @@
       "dex": 5,
       "name": "Charmeleon",
       "level": 25,
+      "iv": 12,
       "moves": [
        {
         "name": "Growl",
@@ -374,6 +379,7 @@
       "dex": 17,
       "name": "Pidgeotto",
       "level": 25,
+      "iv": 12,
       "moves": [
        {
         "name": "Sand-attack",
@@ -399,6 +405,7 @@
       "dex": 58,
       "name": "Growlithe",
       "level": 23,
+      "iv": 12,
       "moves": [
        {
         "name": "Roar",
@@ -423,6 +430,7 @@
       "dex": 102,
       "name": "Exeggcute",
       "level": 22,
+      "iv": 12,
       "moves": [
        {
         "name": "Hypnosis",
@@ -447,6 +455,7 @@
       "dex": 64,
       "name": "Kadabra",
       "level": 20,
+      "iv": 12,
       "moves": [
        {
         "name": "Teleport",
@@ -471,6 +480,7 @@
       "dex": 8,
       "name": "Wartortle",
       "level": 25,
+      "iv": 12,
       "moves": [
        {
         "name": "Withdraw",
@@ -499,6 +509,7 @@
       "dex": 17,
       "name": "Pidgeotto",
       "level": 25,
+      "iv": 12,
       "moves": [
        {
         "name": "Sand-attack",
@@ -524,6 +535,7 @@
       "dex": 130,
       "name": "Gyarados",
       "level": 23,
+      "iv": 12,
       "moves": [
        {
         "name": "Thrash",
@@ -541,6 +553,7 @@
       "dex": 58,
       "name": "Growlithe",
       "level": 22,
+      "iv": 12,
       "moves": [
        {
         "name": "Roar",
@@ -565,6 +578,7 @@
       "dex": 64,
       "name": "Kadabra",
       "level": 20,
+      "iv": 12,
       "moves": [
        {
         "name": "Teleport",
@@ -589,6 +603,7 @@
       "dex": 2,
       "name": "Ivysaur",
       "level": 25,
+      "iv": 12,
       "moves": [
        {
         "name": "Vine Whip",
@@ -624,6 +639,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -657,6 +673,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -690,6 +707,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -723,6 +741,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -756,6 +775,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -789,6 +809,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -813,6 +834,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -846,6 +868,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -879,6 +902,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -912,6 +936,7 @@
      "dex": 93,
      "name": "Haunter",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -945,6 +970,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -978,6 +1004,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -1002,6 +1029,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -1026,6 +1054,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -1059,6 +1088,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -1092,6 +1122,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Spite",
@@ -1125,6 +1156,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",
@@ -1151,6 +1183,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",
@@ -1177,6 +1210,7 @@
      "dex": 42,
      "name": "Golbat",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",
@@ -1212,6 +1246,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -1238,6 +1273,7 @@
      "dex": 96,
      "name": "Drowzee",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -1272,6 +1308,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",
@@ -1298,6 +1335,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -1323,6 +1361,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -1348,6 +1387,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",

@@ -108,6 +108,7 @@
      "dex": 55,
      "name": "Golduck",
      "level": 50,
+     "iv": 0,
      "moves": [
       {
        "name": "Confusion",
@@ -133,6 +134,7 @@
      "dex": 54,
      "name": "Psyduck",
      "level": 50,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -168,6 +170,7 @@
      "dex": 44,
      "name": "Gloom",
      "level": 51,
+     "iv": 12,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -193,6 +196,7 @@
      "dex": 45,
      "name": "Vileplume",
      "level": 51,
+     "iv": 12,
      "moves": [
       {
        "name": "Aromatherapy",
@@ -230,6 +234,7 @@
      "dex": 70,
      "name": "Weepinbell",
      "level": 51,
+     "iv": 12,
      "moves": [
       {
        "name": "Stun Spore",
@@ -255,6 +260,7 @@
      "dex": 71,
      "name": "Victreebel",
      "level": 51,
+     "iv": 12,
      "moves": [
       {
        "name": "Vine Whip",
@@ -292,6 +298,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Rollout",
@@ -318,6 +325,7 @@
      "dex": 204,
      "name": "Pineco",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Rapid Spin",
@@ -344,6 +352,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Rollout",
@@ -370,6 +379,7 @@
      "dex": 204,
      "name": "Pineco",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Rapid Spin",
@@ -405,6 +415,7 @@
      "dex": 182,
      "name": "Bellossom",
      "level": 50,
+     "iv": 0,
      "moves": [
       {
        "name": "Sweet Scent",
@@ -430,6 +441,7 @@
      "dex": 182,
      "name": "Bellossom",
      "level": 50,
+     "iv": 0,
      "moves": [
       {
        "name": "Sweet Scent",

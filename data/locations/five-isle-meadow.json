@@ -280,6 +280,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Haze",
@@ -304,6 +305,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Sludge",
@@ -338,6 +340,7 @@
      "dex": 23,
      "name": "Ekans",
      "level": 48,
+     "iv": 6,
      "moves": [
       {
        "name": "Stockpile",
@@ -362,6 +365,7 @@
      "dex": 44,
      "name": "Gloom",
      "level": 48,
+     "iv": 6,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -387,6 +391,7 @@
      "dex": 44,
      "name": "Gloom",
      "level": 48,
+     "iv": 6,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -421,6 +426,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Focus Energy",
@@ -447,6 +453,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Minimize",
@@ -471,6 +478,7 @@
      "dex": 89,
      "name": "Muk",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Minimize",

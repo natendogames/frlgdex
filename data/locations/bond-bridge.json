@@ -284,6 +284,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Defense Curl",
@@ -307,6 +308,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Defense Curl",
@@ -340,6 +342,7 @@
      "dex": 1,
      "name": "Bulbasaur",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -364,6 +367,7 @@
      "dex": 2,
      "name": "Ivysaur",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Poisonpowder",
@@ -388,6 +392,7 @@
      "dex": 2,
      "name": "Ivysaur",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Poisonpowder",
@@ -421,6 +426,7 @@
      "dex": 120,
      "name": "Staryu",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Camouflage",
@@ -446,6 +452,7 @@
      "dex": 120,
      "name": "Staryu",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Camouflage",
@@ -471,6 +478,7 @@
      "dex": 98,
      "name": "Krabby",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -497,6 +505,7 @@
      "dex": 98,
      "name": "Krabby",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -532,6 +541,7 @@
      "dex": 99,
      "name": "Kingler",
      "level": 38,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -567,6 +577,7 @@
      "dex": 60,
      "name": "Poliwag",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Gun",
@@ -593,6 +604,7 @@
      "dex": 61,
      "name": "Poliwhirl",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Gun",
@@ -619,6 +631,7 @@
      "dex": 60,
      "name": "Poliwag",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Gun",
@@ -654,6 +667,7 @@
      "dex": 69,
      "name": "Bellsprout",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Stun Spore",
@@ -679,6 +693,7 @@
      "dex": 70,
      "name": "Weepinbell",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Poisonpowder",

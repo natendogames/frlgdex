@@ -315,6 +315,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Rock Blast",
@@ -342,6 +343,7 @@
      "dex": 75,
      "name": "Graveler",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Selfdestruct",
@@ -369,6 +371,7 @@
      "dex": 75,
      "name": "Graveler",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Selfdestruct",
@@ -405,6 +408,7 @@
      "dex": 105,
      "name": "Marowak",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Bonemerang",
@@ -432,6 +436,7 @@
      "dex": 55,
      "name": "Golduck",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Confusion",
@@ -466,6 +471,7 @@
      "dex": 235,
      "name": "Smeargle",
      "level": 50,
+     "iv": 6,
      "moves": [
       {
        "name": "Sketch",
@@ -486,6 +492,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 50,
+     "iv": 0,
      "moves": [
       {
        "name": "Dragonbreath",

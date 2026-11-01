@@ -90,6 +90,7 @@
      "dex": 78,
      "name": "Rapidash",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -116,6 +117,7 @@
      "dex": 38,
      "name": "Ninetales",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Ember",
@@ -150,6 +152,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -174,6 +177,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -208,6 +212,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -234,6 +239,7 @@
      "dex": 56,
      "name": "Mankey",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -260,6 +266,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -294,6 +301,7 @@
      "dex": 56,
      "name": "Mankey",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -320,6 +328,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -354,6 +363,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Selfdestruct",
@@ -387,6 +397,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -413,6 +424,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -439,6 +451,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -473,6 +486,7 @@
      "dex": 56,
      "name": "Mankey",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -499,6 +513,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",

@@ -219,6 +219,7 @@
      "dex": 25,
      "name": "Pikachu",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Thunder Wave",
@@ -244,6 +245,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Encore",
@@ -276,6 +278,7 @@
      "dex": 111,
      "name": "Rhyhorn",
      "level": 29,
+     "iv": 3,
      "moves": [
       {
        "name": "Stomp",
@@ -302,6 +305,7 @@
      "dex": 108,
      "name": "Lickitung",
      "level": 29,
+     "iv": 3,
      "moves": [
       {
        "name": "Defense Curl",
@@ -336,6 +340,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Sand-attack",
@@ -361,6 +366,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Sand-attack",
@@ -394,6 +400,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Mud Sport",
@@ -420,6 +427,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -453,6 +461,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -478,6 +487,7 @@
      "dex": 75,
      "name": "Graveler",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Defense Curl",
@@ -511,6 +521,7 @@
      "dex": 104,
      "name": "Cubone",
      "level": 20,
+     "iv": 3,
      "moves": [
       {
        "name": "Tail Whip",
@@ -536,6 +547,7 @@
      "dex": 79,
      "name": "Slowpoke",
      "level": 20,
+     "iv": 3,
      "moves": [
       {
        "name": "Tackle",

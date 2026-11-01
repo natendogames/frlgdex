@@ -676,6 +676,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 38,
+     "iv": 0,
      "moves": [
       {
        "name": "Wing Attack",
@@ -701,6 +702,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 38,
+     "iv": 0,
      "moves": [
       {
        "name": "Wing Attack",
@@ -726,6 +728,7 @@
      "dex": 42,
      "name": "Golbat",
      "level": 38,
+     "iv": 0,
      "moves": [
       {
        "name": "Bite",

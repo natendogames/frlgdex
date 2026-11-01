@@ -578,6 +578,7 @@
      "dex": 69,
      "name": "Bellsprout",
      "level": 38,
+     "iv": 12,
      "moves": [
       {
        "name": "Stun Spore",
@@ -603,6 +604,7 @@
      "dex": 44,
      "name": "Gloom",
      "level": 38,
+     "iv": 12,
      "moves": [
       {
        "name": "Stun Spore",
@@ -627,6 +629,7 @@
      "dex": 44,
      "name": "Gloom",
      "level": 38,
+     "iv": 12,
      "moves": [
       {
        "name": "Stun Spore",
@@ -663,6 +666,7 @@
      "dex": 104,
      "name": "Cubone",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Bonemerang",
@@ -690,6 +694,7 @@
      "dex": 105,
      "name": "Marowak",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -724,6 +729,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Hyper Fang",
@@ -750,6 +756,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Quick Attack",
@@ -776,6 +783,7 @@
      "dex": 27,
      "name": "Sandshrew",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Sand-attack",
@@ -802,6 +810,7 @@
      "dex": 28,
      "name": "Sandslash",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Sand-attack",
@@ -837,6 +846,7 @@
      "dex": 107,
      "name": "Hitmonchan",
      "level": 38,
+     "iv": 6,
      "moves": [
       {
        "name": "Ice Punch",
@@ -865,6 +875,7 @@
      "dex": 107,
      "name": "Hitmonchan",
      "level": 38,
+     "iv": 6,
      "moves": [
       {
        "name": "Ice Punch",
@@ -902,6 +913,7 @@
      "dex": 102,
      "name": "Exeggcute",
      "level": 37,
+     "iv": 12,
      "moves": [
       {
        "name": "Confusion",
@@ -926,6 +938,7 @@
      "dex": 103,
      "name": "Exeggutor",
      "level": 40,
+     "iv": 12,
      "moves": [
       {
        "name": "Hypnosis",

@@ -39,8 +39,8 @@ const inVersion = x => !x.versions || x.versions.includes(V());
 
 const getJSON = url => fetch(url).then(r => { if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); });
 async function loadData() {
-  const [idx, dex, trainers, types, walk] = await Promise.all(['data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json'].map(getJSON));
-  Object.assign(state, { index: idx.locations, dex, trainers, types, walk });
+  const [idx, dex, trainers, types, walk, moves] = await Promise.all(['data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json'].map(getJSON));
+  Object.assign(state, { index: idx.locations, dex, trainers, types, walk, moves });
   await Promise.all(state.index.map(async l => { state.locations[l.id] = await getJSON('data/' + l.file); }));
   state.stage = Object.fromEntries(state.index.map((l, i) => [l.id, i]));
   for (const l of state.index) for (const e of state.locations[l.id].encounters) {
@@ -230,19 +230,79 @@ function renderDex() {
 }
 
 // ---------- battle engine (route trainers and the Battle plan tab) ----------
-// Matchups use type effectiveness only: your Pokémon's own types against theirs, and their damaging moves against yours.
+// Estimates real damage with the Gen 3 formula: levels, base stats, IVs, move power, STAB and type effectiveness.
+// Gen 3 decides physical or special by the move's type. Critical hits, abilities, held items and stat changes are ignored.
+const PHYSICAL = new Set(['Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel']);
+const VARIES_POWER = { Return: 102, 'Hidden Power': 70, Magnitude: 70, Flail: 40, Present: 40, Revenge: 60 };
+const PLAYER_IV = 15; // average IVs for your Pokémon; no EVs
 const ALL_TYPES = () => Object.keys(state.types);
-function attackTypes(foe) {
-  const dmg = (foe.moves || []).filter(m => m.power && m.type).map(m => m.type);
-  return new Set(dmg.length ? dmg : (foe.moves?.length ? [] : mon(foe.dex).types));
+
+function calcStats(dex, level, iv) {
+  return mon(dex).stats.map((b, i) => Math.floor((2 * b + iv) * level / 100) + (i === 0 ? level + 10 : 5));
 }
-function matchupTypes(myTypes, foe) {
-  const ft = mon(foe.dex).types;
-  const offense = Math.max(...myTypes.map(t => eff(t, ft)));
-  const defense = Math.max(0, ...[...attackTypes(foe)].map(t => eff(t, myTypes)));
-  return { offense, defense, score: offense / Math.max(defense, 0.25) };
+function defaultMoves(dex, level) {
+  const out = [];
+  for (const [l, mv] of mon(dex).learnset || []) {
+    if (l > level) break;
+    if (out.includes(mv)) continue;
+    if (out.length === 4) out.shift();
+    out.push(mv);
+  }
+  return out;
 }
-const matchup = (member, foe) => matchupTypes(mon(member).types, foe);
+function battler(dex, level, iv, moves) {
+  const st = calcStats(dex, level, iv);
+  return { dex, level, iv, moves: moves.filter(m => state.moves[m]), hp: st[0], st };
+}
+const teamMeta = n => (cur().teamMeta ||= {})[n] || {};
+function myBattler(n, foeLevel) {
+  const meta = teamMeta(n);
+  const level = meta.level || foeLevel;
+  const moves = (meta.moves || []).filter(Boolean);
+  return { ...battler(n, level, PLAYER_IV, moves.length ? moves : defaultMoves(n, level)), guessedLevel: !meta.level, guessedMoves: !moves.length };
+}
+const foeBattler = p => battler(p.dex, p.level, p.iv ?? 0, (p.moves || []).map(m => m.name));
+
+// Damage range of one move, in HP. null for moves that don't deal direct damage.
+function hit(att, def, name) {
+  const m = state.moves[name];
+  if (!m || !m.power || ['counter', 'dream', 'ohko'].includes(m.effect)) return null;
+  const mult = eff(m.type, mon(def.dex).types);
+  const out = (min, max) => ({ name, type: m.type, mult, min, max });
+  if (mult === 0) return out(0, 0);
+  if (m.effect === 'level') return out(att.level, att.level);
+  if (m.effect === 'fixed20') return out(20, 20);
+  if (m.effect === 'fixed40') return out(40, 40);
+  if (m.effect === 'half') return out(Math.floor(def.hp / 2), Math.floor(def.hp / 2));
+  // Low Kick's power depends on the target's weight (in 0.1 kg)
+  const w = mon(def.dex).weight || 0;
+  const power = name === 'Low Kick' ? (w < 100 ? 20 : w < 250 ? 40 : w < 500 ? 60 : w < 1000 ? 80 : w < 2000 ? 100 : 120) : m.power === 1 ? VARIES_POWER[name] : m.power;
+  if (!power) return null;
+  const phys = PHYSICAL.has(m.type);
+  const A = att.st[phys ? 1 : 3];
+  const D = Math.max(1, Math.floor(def.st[phys ? 2 : 4] / (m.effect === 'explode' ? 2 : 1)));
+  let dmg = Math.floor(Math.floor(Math.floor(2 * att.level / 5 + 2) * power * A / D) / 50) + 2;
+  if (mon(att.dex).types.includes(m.type)) dmg = Math.floor(dmg * 1.5);
+  dmg = Math.floor(dmg * mult);
+  const hits = m.effect === 'multi' ? 3 : m.effect === 'double' ? 2 : 1; // 2-5 hit moves average about 3
+  return out(Math.max(1, Math.floor(dmg * 85 / 100)) * hits, dmg * hits);
+}
+function bestHit(att, def) {
+  return att.moves.map(n => hit(att, def, n)).filter(Boolean).sort((a, b) => b.min + b.max - a.min - a.max)[0] || null;
+}
+// How a battle between one of your Pokémon and one of theirs goes, one-on-one.
+function duel(me, foe) {
+  const mine = bestHit(me, foe), theirs = bestHit(foe, me);
+  const myHits = mine && mine.max ? Math.ceil(foe.hp / Math.max(1, mine.min)) : Infinity;
+  const theirHits = theirs && theirs.max ? Math.ceil(me.hp / Math.max(1, theirs.max)) : Infinity;
+  const faster = me.st[5] > foe.st[5];
+  const wins = myHits < theirHits || (myHits === theirHits && faster && myHits !== Infinity);
+  const se = me.moves.filter(n => { const h = hit(me, foe, n); return h && h.mult >= 2; });
+  const threats = foe.moves.filter(n => { const h = hit(foe, me, n); return h && h.mult >= 2; });
+  return { me, mine, theirs, myHits, theirHits, faster, wins, se, threats };
+}
+const rankDuels = (a, b) => b.wins - a.wins || a.myHits - b.myHits || (a.theirs?.max || 0) / a.me.hp - (b.theirs?.max || 0) / b.me.hp;
+
 function weaknesses(dex) {
   return ALL_TYPES().map(t => ({ t, m: eff(t, mon(dex).types) })).filter(x => x.m > 1).sort((a, b) => b.m - a.m);
 }
@@ -263,43 +323,62 @@ function catchableBy(stage) {
   }
   return (catchCache[key] = out);
 }
-function catchSuggestions(foe, stage, n = 2) {
+// Catches that would have a super-effective level-up move if raised to the foe's level, best duel first.
+// Anything the trainer's other Pokémon can hit super effectively is left out, so the pick isn't a liability later in the fight.
+function catchSuggestions(foeMon, foe, stage, party, n = 2) {
   const team = cur().team;
-  return catchableBy(stage).filter(c => !team.includes(c.dex))
-    .map(c => ({ ...c, ...matchupTypes(mon(c.dex).types, foe), have: isCaught(c.dex), bst: mon(c.dex).stats.reduce((a, b) => a + b, 0) }))
-    .filter(c => c.offense >= 2)
-    .sort((a, b) => (a.defense >= 2) - (b.defense >= 2) || b.have - a.have || b.offense - a.offense || a.defense - b.defense || b.bst - a.bst)
-    .slice(0, n);
+  const others = party.map(foeBattler);
+  return catchableBy(stage).filter(c => !team.includes(c.dex)).map(c => {
+    const me = battler(c.dex, foe.level, PLAYER_IV, defaultMoves(c.dex, foe.level));
+    return { c, d: duel(me, foe), exposed: others.some(o => o.moves.some(mv => { const h = hit(o, me, mv); return h && h.mult >= 2; })) };
+  }).filter(x => x.d.se.length && x.d.wins && !x.exposed)
+    .sort((a, b) => isCaught(b.c.dex) - isCaught(a.c.dex) || rankDuels(a.d, b.d)).slice(0, n);
+}
+
+const hpPct = (h, b) => `${Math.min(100, Math.round(100 * h.min / b.hp))}–${Math.min(100, Math.round(100 * h.max / b.hp))}%`;
+const multTag = m => m >= 2 ? ` <span class="good">${m}×</span>` : m === 0 ? ' <span class="bad">no effect</span>' : m < 1 ? ` <span class="note">${m === 0.25 ? '¼' : '½'}×</span>` : '';
+const hitsText = n => n === Infinity ? "can't KO" : n === 1 ? 'OHKO' : `${n} hits`;
+function hitText(h, target, hits) {
+  return h ? `${esc(h.name)}${multTag(h.mult)} ${hpPct(h, target)} (${hitsText(hits)})` : '<span class="note">no damaging move</span>';
 }
 
 function teamHint() {
   const team = cur().team;
-  return `<p class="note">${team.length ? `Picks use your team from <a href="#/planner">Battle plan</a>: ${team.map(n => esc(mon(n).name)).join(', ')}.`
+  return `<p class="note">${team.length ? `Picks use your team from <a href="#/planner">Battle plan</a>: ${team.map(n => esc(mon(n).name)).join(', ')}. Set their levels and moves there for exact numbers.`
     : `Add your team in <a href="#/planner">Battle plan</a> to see who to send out against each trainer.`}
-    When nobody on your team hits super effectively, you get a Pokémon you could catch by this point in the story.</p>`;
+    Damage is estimated with the game's formula. When nobody on your team has a super-effective move, you get a Pokémon you could catch by this point in the story.</p>`;
 }
 
-function foeRow(p, stage) {
+function foeRow(p, stage, party) {
   const team = cur().team;
-  const name = n => esc(mon(n).name);
+  const foe = foeBattler(p);
   const weak = weaknesses(p.dex);
-  const ranked = team.map(n => ({ n, ...matchup(n, p) })).sort((a, b) => b.score - a.score || b.offense - a.offense);
-  const best = ranked[0];
+  const duels = team.map(n => duel(myBattler(n, p.level), foe)).sort(rankDuels);
+  const best = duels[0];
   let pick = '';
-  if (best && best.offense >= 2) {
-    pick = `Send out <b class="good">${name(best.n)}</b>${best.defense >= 2 ? ' <span class="note">(it can hit back super effectively)</span>' : ''}`;
-  } else {
-    if (best) pick = best.score >= 1 ? `<span class="meh">No super-effective hit. Best even match: ${name(best.n)}</span>` : `<span class="bad">Nobody on your team is super effective</span>`;
-    const sug = catchSuggestions(p, stage);
-    pick += sug.length ? `<div class="catch">${best ? 'Catch' : 'Good catch'}: ${sug.map(c => `<b>${esc(mon(c.dex).name)}</b> ${types(c.dex)} on <a href="#/loc/${c.loc}">${esc(c.name)}</a>
-        <span class="note">(${esc(METHOD_LABEL[c.method] || c.method)}${c.levels ? `, Lv ${esc(c.levels)}` : ''}${c.have ? ', you have one' : ''})</span>`).join(' or ')}</div>`
-      : `<div class="note">Nothing you can catch by now hits it super effectively.</div>`;
+  if (best) {
+    const nm = esc(mon(best.me.dex).name);
+    pick = best.wins ? `Send out <b class="good">${nm}</b>: ${hitText(best.mine, foe, best.myHits)}`
+      : `<span class="${best.myHits < Infinity ? 'meh' : 'bad'}">No sure win. Best bet: ${nm}</span>: ${hitText(best.mine, foe, best.myHits)}`;
+    pick += `<table class="mini duel"><tr><th>Yours</th><th>Your best hit</th><th>Their best hit on you</th></tr>${duels.map(d => `<tr${d === best ? ' class="best"' : ''}>
+        <td><b>${esc(mon(d.me.dex).name)}</b> Lv ${d.me.level}${d.me.guessedLevel ? '*' : ''}${d.faster ? ' <span class="note">faster</span>' : ''}</td>
+        <td>${hitText(d.mine, foe, d.myHits)}</td>
+        <td>${hitText(d.theirs, d.me, d.theirHits)}${d.threats.length ? `<div class="bad">Super effective: ${d.threats.map(esc).join(', ')}</div>` : ''}</td></tr>`).join('')}</table>`;
   }
-  const threats = team.filter(n => matchup(n, p).defense >= 2).map(n => mon(n).name);
-  return `<div class="foe"><div><b>${esc(p.name)}</b> Lv ${p.level} ${types(p.dex)}${p.item ? ` <span class="note">holding ${esc(p.item)}</span>` : ''}</div>
-    ${p.moves?.length ? `<div class="moves">${p.moves.map(m => `<span class="mv">${esc(m.name)}${m.type ? ` <i class="t-${m.type}"></i>` : ''}</span>`).join('')}</div>` : ''}
+  if (!best || !duels.some(d => d.se.length) || !best.wins) {
+    const sug = catchSuggestions(p, foe, stage, party);
+    pick += sug.length ? `<div class="catch">${best ? (duels.some(d => d.se.length) ? 'Or catch' : 'Nobody on your team has a super-effective move. Catch') : 'Good catch'}: ${sug.map(({ c, d }) => {
+      const learn = mon(c.dex).learnset.find(([, mv]) => mv === d.mine?.name);
+      return `<b>${esc(mon(c.dex).name)}</b> ${types(c.dex)} on <a href="#/loc/${c.loc}">${esc(c.name)}</a>
+        <span class="note">(${esc(METHOD_LABEL[c.method] || c.method)}${c.levels ? `, Lv ${esc(c.levels)}` : ''}${isCaught(c.dex) ? ', you have one' : ''}).
+        At Lv ${p.level}: ${hitText(d.mine, foe, d.myHits)}${learn && learn[0] > 1 ? `, learned at Lv ${learn[0]}` : ''}</span>`;
+    }).join(' or ')}</div>`
+      : `<div class="note">Nothing you can catch by now has a super-effective move that wins this one-on-one without being weak to another of this trainer's moves.</div>`;
+  }
+  return `<div class="foe"><div><b>${esc(p.name)}</b> Lv ${p.level} ${types(p.dex)} <span class="note">${foe.hp} HP${p.item ? ` · holding ${esc(p.item)}` : ''}</span></div>
+    ${p.moves?.length ? `<div class="moves">${p.moves.map(m => `<span class="mv">${esc(m.name)}${m.type ? ` <i class="t-${m.type}"></i>` : ''}${m.power ? ` <small>${m.power === 1 ? '—' : m.power}</small>` : ''}</span>`).join('')}</div>` : ''}
     <div class="note">Weak to: ${weak.length ? weak.map(w => typeTag(w.t) + (w.m === 4 ? '×4' : '')).join(' ') : 'nothing'}</div>
-    <div class="pick">${pick}${threats.length ? `<div class="note">Hits hard: ${esc(threats.join(', '))}</div>` : ''}</div></div>`;
+    <div class="pick">${pick}</div></div>`;
 }
 
 const money = n => '₽' + Number(n).toLocaleString();
@@ -315,23 +394,31 @@ function trainerCard(t, stage, opts = {}) {
   return `<details class="card trainer"><summary>${esc(head)} <span class="note">· ${esc(meta)}</span>${t.double ? ' <span class="tag">Double</span>' : ''}${t.rewards ? ' <span class="tag">Reward</span>' : ''}</summary>
     ${info ? `<p class="note">${info}</p>` : ''}
     ${t.note ? `<p class="note">${esc(t.note)}</p>` : ''}${opts.extra || ''}
-    ${party.map(p => foeRow(p, stage)).join('')}</details>`;
+    ${party.map(p => foeRow(p, stage, party)).join('')}
+    ${cur().team.some(n => !teamMeta(n).level) ? '<p class="note">* Level not set in Battle plan, so it is assumed to match theirs.</p>' : ''}</details>`;
 }
 
 function renderPlanner() {
   setHeader('Battle plan', false, 'planner');
   const s = cur();
-  let html = `<div class="card"><b>Your team</b> <span class="note">(add up to 6)</span>
-    <div class="team" style="margin-top:8px">${[0, 1, 2, 3, 4, 5].map(i => {
-      const n = s.team[i];
-      return n ? `<div class="slot"><button data-rm="${i}" aria-label="Remove">&times;</button><b>${esc(mon(n).name)}</b>${types(n)}</div>` : `<div class="slot note">Empty</div>`;
-    }).join('')}</div>
-    <input type="search" id="teamq" placeholder="Add a Pokémon by name" list="monlist" style="margin-top:10px">
+  s.teamMeta ||= {};
+  const moveNames = Object.keys(state.moves).sort();
+  let html = `<div class="card"><b>Your team</b> <span class="note">(up to 6). Set each one's level and moves for exact damage; blank moves use what it learns by level up.</span>
+    ${s.team.map((n, i) => {
+      const meta = s.teamMeta[n] || {};
+      const lvl = meta.level || '';
+      const defaults = defaultMoves(n, meta.level || 100);
+      return `<div class="member"><div class="mhead"><b>${esc(mon(n).name)}</b> ${types(n)}
+          <label class="note">Lv <input type="number" min="1" max="100" inputmode="numeric" data-lvl="${n}" value="${lvl}" placeholder="?"></label>
+          <button class="icon-x" data-rm="${i}" aria-label="Remove ${esc(mon(n).name)}">&times;</button></div>
+        <div class="mvgrid">${[0, 1, 2, 3].map(k => `<input list="movelist" data-mv="${n}:${k}" value="${esc(meta.moves?.[k] || '')}" placeholder="${meta.level ? esc(defaults[k] || 'Move') : 'Move'}">`).join('')}</div></div>`;
+    }).join('') || '<p class="note">No Pokémon yet.</p>'}
+    <input type="search" id="teamq" placeholder="Add a Pokémon by name" list="monlist" style="margin-top:10px" ${s.team.length >= 6 ? 'disabled' : ''}>
     <datalist id="monlist">${state.dex.map(p => `<option value="${esc(p.name)}">`).join('')}</datalist>
+    <datalist id="movelist">${moveNames.map(m => `<option value="${esc(m)}">`).join('')}</datalist>
     <label class="note" style="display:block;margin-top:10px">Starter you picked (sets your rival's team):
       <select id="starter">${['Bulbasaur', 'Charmander', 'Squirtle'].map(x => `<option ${s.starter === x ? 'selected' : ''}>${x}</option>`).join('')}</select></label></div>
-    <p class="note">Gym Leaders, rival battles, Giovanni, the Elite Four and the Champion in story order. Every other trainer is on its route page.
-      When nobody on your team is super effective, you get a Pokémon you could catch by that point in the story.</p>`;
+    <p class="note">Gym Leaders, rival battles, Giovanni, the Elite Four and the Champion in story order. Every other trainer is on its route page.</p>`;
   for (const t of state.trainers) {
     const party = t.party || t.byStarter[s.starter];
     const ace = Math.max(...party.map(p => p.level));
@@ -340,9 +427,20 @@ function renderPlanner() {
       extra: `<p class="note">Types that hit most of this team: ${bestTypesAgainst(party).map(g => typeTag(g.t)).join(' ')}</p>`
     });
   }
-  html += `<p class="note">Matchups use type effectiveness only: your Pokémon's own types against theirs, and their damaging moves against yours. Levels and stats are not counted.</p>`;
+  html += `<p class="note">Damage uses the Gen 3 formula with your levels and moves, their real moves and IVs, average IVs for yours and no EVs. Critical hits, abilities, held items and stat changes are not counted, so treat close calls with care.</p>`;
   view.innerHTML = html;
   view.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => { s.team.splice(+b.dataset.rm, 1); save(); renderPlanner(); });
+  view.querySelectorAll('[data-lvl]').forEach(inp => inp.onchange = () => {
+    const n = inp.dataset.lvl, v = Math.max(0, Math.min(100, parseInt(inp.value, 10) || 0));
+    (s.teamMeta[n] ||= {}).level = v || undefined; save(); renderPlanner();
+  });
+  view.querySelectorAll('[data-mv]').forEach(inp => inp.onchange = () => {
+    const [n, k] = inp.dataset.mv.split(':');
+    const name = moveNames.find(m => m.toLowerCase() === inp.value.trim().toLowerCase()) || '';
+    const meta = (s.teamMeta[n] ||= {});
+    meta.moves = [0, 1, 2, 3].map(i => (meta.moves || [])[i] || '');
+    meta.moves[k] = name; save(); renderPlanner();
+  });
   document.getElementById('starter').onchange = e => { s.starter = e.target.value; save(); renderPlanner(); };
   const q = document.getElementById('teamq');
   q.onchange = () => {

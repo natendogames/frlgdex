@@ -304,6 +304,7 @@
      "dex": 37,
      "name": "Vulpix",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Imprison",
@@ -328,6 +329,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Odor Sleuth",
@@ -362,6 +364,7 @@
      "dex": 78,
      "name": "Rapidash",
      "level": 41,
+     "iv": 0,
      "moves": [
       {
        "name": "Fire Spin",
@@ -397,6 +400,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Odor Sleuth",
@@ -422,6 +426,7 @@
      "dex": 37,
      "name": "Vulpix",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Imprison",
@@ -455,6 +460,7 @@
      "dex": 77,
      "name": "Ponyta",
      "level": 41,
+     "iv": 0,
      "moves": [
       {
        "name": "Stomp",
@@ -490,6 +496,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -515,6 +522,7 @@
      "dex": 37,
      "name": "Vulpix",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Confuse Ray",
@@ -539,6 +547,7 @@
      "dex": 38,
      "name": "Ninetales",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Ember",
@@ -573,6 +582,7 @@
      "dex": 77,
      "name": "Ponyta",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Ember",
@@ -600,6 +610,7 @@
      "dex": 4,
      "name": "Charmander",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Metal Claw",
@@ -625,6 +636,7 @@
      "dex": 37,
      "name": "Vulpix",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Confuse Ray",
@@ -649,6 +661,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -683,6 +696,7 @@
      "dex": 37,
      "name": "Vulpix",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Confuse Ray",
@@ -707,6 +721,7 @@
      "dex": 37,
      "name": "Vulpix",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Confuse Ray",
@@ -731,6 +746,7 @@
      "dex": 38,
      "name": "Ninetales",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Ember",
@@ -765,6 +781,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 42,
+     "iv": 0,
      "moves": [
       {
        "name": "Odor Sleuth",
@@ -790,6 +807,7 @@
      "dex": 77,
      "name": "Ponyta",
      "level": 40,
+     "iv": 0,
      "moves": [
       {
        "name": "Stomp",
@@ -816,6 +834,7 @@
      "dex": 78,
      "name": "Rapidash",
      "level": 42,
+     "iv": 0,
      "moves": [
       {
        "name": "Fire Spin",
@@ -842,6 +861,7 @@
      "dex": 59,
      "name": "Arcanine",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Bite",

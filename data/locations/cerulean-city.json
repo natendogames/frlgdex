@@ -206,6 +206,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Low Kick",
@@ -231,6 +232,7 @@
      "dex": 96,
      "name": "Drowzee",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -269,6 +271,7 @@
       "dex": 17,
       "name": "Pidgeotto",
       "level": 17,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -295,6 +298,7 @@
       "dex": 63,
       "name": "Abra",
       "level": 16,
+      "iv": 6,
       "moves": [
        {
         "name": "Teleport",
@@ -306,6 +310,7 @@
       "dex": 19,
       "name": "Rattata",
       "level": 15,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -327,6 +332,7 @@
       "dex": 4,
       "name": "Charmander",
       "level": 18,
+      "iv": 12,
       "moves": [
        {
         "name": "Scratch",
@@ -355,6 +361,7 @@
       "dex": 17,
       "name": "Pidgeotto",
       "level": 17,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -381,6 +388,7 @@
       "dex": 63,
       "name": "Abra",
       "level": 16,
+      "iv": 6,
       "moves": [
        {
         "name": "Teleport",
@@ -392,6 +400,7 @@
       "dex": 19,
       "name": "Rattata",
       "level": 15,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -413,6 +422,7 @@
       "dex": 7,
       "name": "Squirtle",
       "level": 18,
+      "iv": 12,
       "moves": [
        {
         "name": "Bubble",
@@ -441,6 +451,7 @@
       "dex": 17,
       "name": "Pidgeotto",
       "level": 17,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -467,6 +478,7 @@
       "dex": 63,
       "name": "Abra",
       "level": 16,
+      "iv": 6,
       "moves": [
        {
         "name": "Teleport",
@@ -478,6 +490,7 @@
       "dex": 19,
       "name": "Rattata",
       "level": 15,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -499,6 +512,7 @@
       "dex": 1,
       "name": "Bulbasaur",
       "level": 18,
+      "iv": 12,
       "moves": [
        {
         "name": "Leech Seed",
@@ -533,6 +547,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 16,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -553,6 +568,7 @@
      "dex": 90,
      "name": "Shellder",
      "level": 16,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -587,6 +603,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -620,6 +637,7 @@
      "dex": 120,
      "name": "Staryu",
      "level": 18,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -645,6 +663,7 @@
      "dex": 121,
      "name": "Starmie",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Gun",

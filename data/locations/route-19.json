@@ -159,6 +159,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Constrict",
@@ -186,6 +187,7 @@
      "dex": 90,
      "name": "Shellder",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Icicle Spear",
@@ -219,6 +221,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -245,6 +248,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Smokescreen",
@@ -270,6 +274,7 @@
      "dex": 120,
      "name": "Staryu",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Recover",
@@ -303,6 +308,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Smokescreen",
@@ -328,6 +334,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Smokescreen",
@@ -361,6 +368,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -387,6 +395,7 @@
      "dex": 90,
      "name": "Shellder",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Icicle Spear",
@@ -412,6 +421,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -446,6 +456,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -471,6 +482,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -497,6 +509,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -523,6 +536,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Sport",
@@ -556,6 +570,7 @@
      "dex": 60,
      "name": "Poliwag",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -581,6 +596,7 @@
      "dex": 61,
      "name": "Poliwhirl",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -614,6 +630,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -640,6 +657,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -675,6 +693,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -701,6 +720,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -727,6 +747,7 @@
      "dex": 120,
      "name": "Staryu",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Rapid Spin",
@@ -752,6 +773,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -777,6 +799,7 @@
      "dex": 73,
      "name": "Tentacruel",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -811,6 +834,7 @@
      "dex": 60,
      "name": "Poliwag",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -836,6 +860,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Sport",
@@ -861,6 +886,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Sport",
@@ -886,6 +912,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Sport",
@@ -911,6 +938,7 @@
      "dex": 60,
      "name": "Poliwag",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -944,6 +972,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -970,6 +999,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -1004,6 +1034,7 @@
      "dex": 120,
      "name": "Staryu",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Recover",
@@ -1029,6 +1060,7 @@
      "dex": 120,
      "name": "Staryu",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Recover",
@@ -1054,6 +1086,7 @@
      "dex": 120,
      "name": "Staryu",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Recover",

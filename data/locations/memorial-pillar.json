@@ -230,6 +230,7 @@
      "dex": 163,
      "name": "Hoothoot",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -255,6 +256,7 @@
      "dex": 164,
      "name": "Noctowl",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -289,6 +291,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Aerial Ace",
@@ -314,6 +317,7 @@
      "dex": 22,
      "name": "Fearow",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Pursuit",
@@ -348,6 +352,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Wing Attack",
@@ -372,6 +377,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Whirlwind",

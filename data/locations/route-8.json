@@ -96,6 +96,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Sing",
@@ -120,6 +121,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Sing",
@@ -152,6 +154,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Roar",
@@ -176,6 +179,7 @@
      "dex": 37,
      "name": "Vulpix",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Roar",
@@ -208,6 +212,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -232,6 +237,7 @@
      "dex": 89,
      "name": "Muk",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -256,6 +262,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -288,6 +295,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Sing",
@@ -312,6 +320,7 @@
      "dex": 39,
      "name": "Jigglypuff",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Defense Curl",
@@ -346,6 +355,7 @@
      "dex": 29,
      "name": "Nidoran♀",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Double Kick",
@@ -372,6 +382,7 @@
      "dex": 30,
      "name": "Nidorina",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -406,6 +417,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -440,6 +452,7 @@
      "dex": 52,
      "name": "Meowth",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -466,6 +479,7 @@
      "dex": 52,
      "name": "Meowth",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -492,6 +506,7 @@
      "dex": 52,
      "name": "Meowth",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -526,6 +541,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Sand-attack",
@@ -551,6 +567,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -577,6 +594,7 @@
      "dex": 32,
      "name": "Nidoran♂",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Peck",
@@ -603,6 +621,7 @@
      "dex": 52,
      "name": "Meowth",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -629,6 +648,7 @@
      "dex": 25,
      "name": "Pikachu",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -661,6 +681,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -685,6 +706,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -717,6 +739,7 @@
      "dex": 60,
      "name": "Poliwag",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -743,6 +766,7 @@
      "dex": 60,
      "name": "Poliwag",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -769,6 +793,7 @@
      "dex": 61,
      "name": "Poliwhirl",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -803,6 +828,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -830,6 +856,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -857,6 +884,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -889,6 +917,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Charge",
@@ -914,6 +943,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Gas",
@@ -940,6 +970,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Charge",
@@ -965,6 +996,7 @@
      "dex": 81,
      "name": "Magnemite",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",

@@ -208,6 +208,7 @@
      "dex": 177,
      "name": "Natu",
      "level": 48,
+     "iv": 12,
      "moves": [
       {
        "name": "Teleport",
@@ -232,6 +233,7 @@
      "dex": 96,
      "name": "Drowzee",
      "level": 48,
+     "iv": 12,
      "moves": [
       {
        "name": "Psychic",
@@ -257,6 +259,7 @@
      "dex": 97,
      "name": "Hypno",
      "level": 50,
+     "iv": 12,
      "moves": [
       {
        "name": "Meditate",
@@ -290,6 +293,7 @@
      "dex": 203,
      "name": "Girafarig",
      "level": 52,
+     "iv": 12,
      "moves": [
       {
        "name": "Agility",

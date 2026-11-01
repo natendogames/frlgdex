@@ -186,6 +186,7 @@
      "dex": 53,
      "name": "Persian",
      "level": 47,
+     "iv": 12,
      "moves": [
       {
        "name": "Pay Day",
@@ -212,6 +213,7 @@
      "dex": 87,
      "name": "Dewgong",
      "level": 47,
+     "iv": 12,
      "moves": [
       {
        "name": "Aurora Beam",
@@ -238,6 +240,7 @@
      "dex": 38,
      "name": "Ninetales",
      "level": 48,
+     "iv": 12,
      "moves": [
       {
        "name": "Quick Attack",
@@ -263,6 +266,7 @@
      "dex": 78,
      "name": "Rapidash",
      "level": 48,
+     "iv": 12,
      "moves": [
       {
        "name": "Fire Spin",
@@ -289,6 +293,7 @@
      "dex": 203,
      "name": "Girafarig",
      "level": 50,
+     "iv": 12,
      "moves": [
       {
        "name": "Agility",
@@ -326,6 +331,7 @@
      "dex": 112,
      "name": "Rhydon",
      "level": 47,
+     "iv": 12,
      "moves": [
       {
        "name": "Scary Face",
@@ -352,6 +358,7 @@
      "dex": 80,
      "name": "Slowbro",
      "level": 48,
+     "iv": 12,
      "moves": [
       {
        "name": "Headbutt",
@@ -377,6 +384,7 @@
      "dex": 115,
      "name": "Kangaskhan",
      "level": 47,
+     "iv": 12,
      "moves": [
       {
        "name": "Mega Punch",
@@ -403,6 +411,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 48,
+     "iv": 12,
      "moves": [
       {
        "name": "Revenge",
@@ -430,6 +439,7 @@
      "dex": 217,
      "name": "Ursaring",
      "level": 50,
+     "iv": 12,
      "moves": [
       {
        "name": "Rest",
@@ -468,6 +478,7 @@
      "dex": 57,
      "name": "Primeape",
      "level": 48,
+     "iv": 6,
      "moves": [
       {
        "name": "Seismic Toss",
@@ -495,6 +506,7 @@
      "dex": 237,
      "name": "Hitmontop",
      "level": 48,
+     "iv": 6,
      "moves": [
       {
        "name": "Rapid Spin",
@@ -521,6 +533,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 48,
+     "iv": 6,
      "moves": [
       {
        "name": "Revenge",
@@ -558,6 +571,7 @@
      "dex": 113,
      "name": "Chansey",
      "level": 52,
+     "iv": 12,
      "moves": [
       {
        "name": "Sing",
@@ -594,6 +608,7 @@
      "dex": 28,
      "name": "Sandslash",
      "level": 48,
+     "iv": 4,
      "moves": [
       {
        "name": "Poison Sting",
@@ -621,6 +636,7 @@
      "dex": 108,
      "name": "Lickitung",
      "level": 48,
+     "iv": 4,
      "moves": [
       {
        "name": "Wrap",
@@ -646,6 +662,7 @@
      "dex": 217,
      "name": "Ursaring",
      "level": 49,
+     "iv": 4,
      "moves": [
       {
        "name": "Rest",
@@ -681,6 +698,7 @@
      "dex": 114,
      "name": "Tangela",
      "level": 49,
+     "iv": 12,
      "moves": [
       {
        "name": "Mega Drain",
@@ -706,6 +724,7 @@
      "dex": 102,
      "name": "Exeggcute",
      "level": 49,
+     "iv": 12,
      "moves": [
       {
        "name": "Stun Spore",
@@ -730,6 +749,7 @@
      "dex": 103,
      "name": "Exeggutor",
      "level": 49,
+     "iv": 12,
      "moves": [
       {
        "name": "Hypnosis",
@@ -768,6 +788,7 @@
      "dex": 241,
      "name": "Miltank",
      "level": 52,
+     "iv": 12,
      "moves": [
       {
        "name": "Milk Drink",
@@ -794,6 +815,7 @@
      "dex": 128,
      "name": "Tauros",
      "level": 52,
+     "iv": 12,
      "moves": [
       {
        "name": "Pursuit",

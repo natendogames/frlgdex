@@ -288,6 +288,7 @@
      "dex": 54,
      "name": "Psyduck",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -312,6 +313,7 @@
      "dex": 54,
      "name": "Psyduck",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -336,6 +338,7 @@
      "dex": 55,
      "name": "Golduck",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -369,6 +372,7 @@
      "dex": 52,
      "name": "Meowth",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Bite",
@@ -395,6 +399,7 @@
      "dex": 52,
      "name": "Meowth",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Bite",
@@ -421,6 +426,7 @@
      "dex": 25,
      "name": "Pikachu",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Double Team",
@@ -446,6 +452,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Minimize",
@@ -478,6 +485,7 @@
      "dex": 106,
      "name": "Hitmonlee",
      "level": 38,
+     "iv": 6,
      "moves": [
       {
        "name": "Focus Energy",
@@ -503,6 +511,7 @@
      "dex": 107,
      "name": "Hitmonchan",
      "level": 38,
+     "iv": 6,
      "moves": [
       {
        "name": "Ice Punch",
@@ -540,6 +549,7 @@
      "dex": 33,
      "name": "Nidorino",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -566,6 +576,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Quick Attack",
@@ -592,6 +603,7 @@
      "dex": 28,
      "name": "Sandslash",
      "level": 36,
+     "iv": 0,
      "moves": [
       {
        "name": "Sand-attack",
@@ -627,6 +639,7 @@
      "dex": 90,
      "name": "Shellder",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Icicle Spear",
@@ -652,6 +665,7 @@
      "dex": 91,
      "name": "Cloyster",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Withdraw",
@@ -676,6 +690,7 @@
      "dex": 8,
      "name": "Wartortle",
      "level": 38,
+     "iv": 0,
      "moves": [
       {
        "name": "Bite",
@@ -710,6 +725,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 39,
+     "iv": 6,
      "moves": [
       {
        "name": "Seismic Toss",
@@ -737,6 +753,7 @@
      "dex": 57,
      "name": "Primeape",
      "level": 39,
+     "iv": 6,
      "moves": [
       {
        "name": "Focus Energy",
@@ -774,6 +791,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 37,
+     "iv": 12,
      "moves": [
       {
        "name": "Foresight",
@@ -801,6 +819,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 37,
+     "iv": 12,
      "moves": [
       {
        "name": "Seismic Toss",
@@ -837,6 +856,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 38,
+     "iv": 12,
      "moves": [
       {
        "name": "Foresight",
@@ -864,6 +884,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 38,
+     "iv": 12,
      "moves": [
       {
        "name": "Seismic Toss",
@@ -900,6 +921,7 @@
      "dex": 56,
      "name": "Mankey",
      "level": 37,
+     "iv": 6,
      "moves": [
       {
        "name": "Focus Energy",
@@ -926,6 +948,7 @@
      "dex": 57,
      "name": "Primeape",
      "level": 37,
+     "iv": 6,
      "moves": [
       {
        "name": "Focus Energy",
@@ -962,6 +985,7 @@
      "dex": 121,
      "name": "Starmie",
      "level": 38,
+     "iv": 0,
      "moves": [
       {
        "name": "Rapid Spin",
@@ -996,6 +1020,7 @@
      "dex": 117,
      "name": "Seadra",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Smokescreen",
@@ -1021,6 +1046,7 @@
      "dex": 117,
      "name": "Seadra",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Smokescreen",
@@ -1055,6 +1081,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -1081,6 +1108,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -1107,6 +1135,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -1133,6 +1162,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -1159,6 +1189,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",

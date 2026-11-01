@@ -166,6 +166,7 @@
       "dex": 16,
       "name": "Pidgey",
       "level": 9,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -182,6 +183,7 @@
       "dex": 4,
       "name": "Charmander",
       "level": 9,
+      "iv": 6,
       "moves": [
        {
         "name": "Scratch",
@@ -200,6 +202,7 @@
       "dex": 16,
       "name": "Pidgey",
       "level": 9,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -216,6 +219,7 @@
       "dex": 7,
       "name": "Squirtle",
       "level": 9,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -234,6 +238,7 @@
       "dex": 16,
       "name": "Pidgey",
       "level": 9,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -250,6 +255,7 @@
       "dex": 1,
       "name": "Bulbasaur",
       "level": 9,
+      "iv": 6,
       "moves": [
        {
         "name": "Tackle",
@@ -276,6 +282,7 @@
       "dex": 18,
       "name": "Pidgeot",
       "level": 47,
+      "iv": 18,
       "moves": [
        {
         "name": "Quick Attack",
@@ -301,6 +308,7 @@
       "dex": 111,
       "name": "Rhyhorn",
       "level": 45,
+      "iv": 18,
       "moves": [
        {
         "name": "Scary Face",
@@ -327,6 +335,7 @@
       "dex": 102,
       "name": "Exeggcute",
       "level": 45,
+      "iv": 18,
       "moves": [
        {
         "name": "Stun Spore",
@@ -351,6 +360,7 @@
       "dex": 130,
       "name": "Gyarados",
       "level": 45,
+      "iv": 18,
       "moves": [
        {
         "name": "Leer",
@@ -376,6 +386,7 @@
       "dex": 65,
       "name": "Alakazam",
       "level": 47,
+      "iv": 18,
       "moves": [
        {
         "name": "Future Sight",
@@ -401,6 +412,7 @@
       "dex": 6,
       "name": "Charizard",
       "level": 53,
+      "iv": 30,
       "moves": [
        {
         "name": "Scary Face",
@@ -429,6 +441,7 @@
       "dex": 18,
       "name": "Pidgeot",
       "level": 47,
+      "iv": 18,
       "moves": [
        {
         "name": "Quick Attack",
@@ -454,6 +467,7 @@
       "dex": 111,
       "name": "Rhyhorn",
       "level": 45,
+      "iv": 18,
       "moves": [
        {
         "name": "Scary Face",
@@ -480,6 +494,7 @@
       "dex": 58,
       "name": "Growlithe",
       "level": 45,
+      "iv": 18,
       "moves": [
        {
         "name": "Take Down",
@@ -505,6 +520,7 @@
       "dex": 102,
       "name": "Exeggcute",
       "level": 45,
+      "iv": 18,
       "moves": [
        {
         "name": "Stun Spore",
@@ -529,6 +545,7 @@
       "dex": 65,
       "name": "Alakazam",
       "level": 47,
+      "iv": 18,
       "moves": [
        {
         "name": "Future Sight",
@@ -554,6 +571,7 @@
       "dex": 9,
       "name": "Blastoise",
       "level": 53,
+      "iv": 30,
       "moves": [
        {
         "name": "Bite",
@@ -581,6 +599,7 @@
       "dex": 18,
       "name": "Pidgeot",
       "level": 47,
+      "iv": 18,
       "moves": [
        {
         "name": "Quick Attack",
@@ -606,6 +625,7 @@
       "dex": 111,
       "name": "Rhyhorn",
       "level": 45,
+      "iv": 18,
       "moves": [
        {
         "name": "Scary Face",
@@ -632,6 +652,7 @@
       "dex": 130,
       "name": "Gyarados",
       "level": 45,
+      "iv": 18,
       "moves": [
        {
         "name": "Leer",
@@ -657,6 +678,7 @@
       "dex": 58,
       "name": "Growlithe",
       "level": 45,
+      "iv": 18,
       "moves": [
        {
         "name": "Take Down",
@@ -682,6 +704,7 @@
       "dex": 65,
       "name": "Alakazam",
       "level": 47,
+      "iv": 18,
       "moves": [
        {
         "name": "Future Sight",
@@ -707,6 +730,7 @@
       "dex": 3,
       "name": "Venusaur",
       "level": 53,
+      "iv": 30,
       "moves": [
        {
         "name": "Razor Leaf",

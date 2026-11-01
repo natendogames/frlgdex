@@ -177,6 +177,7 @@
      "dex": 177,
      "name": "Natu",
      "level": 48,
+     "iv": 12,
      "moves": [
       {
        "name": "Teleport",
@@ -201,6 +202,7 @@
      "dex": 80,
      "name": "Slowbro",
      "level": 48,
+     "iv": 12,
      "moves": [
       {
        "name": "Headbutt",
@@ -226,6 +228,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 49,
+     "iv": 12,
      "moves": [
       {
        "name": "Future Sight",

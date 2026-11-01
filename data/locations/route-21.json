@@ -362,6 +362,7 @@
      "dex": 120,
      "name": "Staryu",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Camouflage",
@@ -387,6 +388,7 @@
      "dex": 8,
      "name": "Wartortle",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Gun",
@@ -422,6 +424,7 @@
      "dex": 61,
      "name": "Poliwhirl",
      "level": 32,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -447,6 +450,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 32,
+     "iv": 0,
      "moves": [
       {
        "name": "Constrict",
@@ -474,6 +478,7 @@
      "dex": 117,
      "name": "Seadra",
      "level": 32,
+     "iv": 0,
      "moves": [
       {
        "name": "Smokescreen",
@@ -508,6 +513,7 @@
      "dex": 121,
      "name": "Starmie",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Rapid Spin",
@@ -542,6 +548,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -568,6 +575,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -603,6 +611,7 @@
      "dex": 90,
      "name": "Shellder",
      "level": 31,
+     "iv": 0,
      "moves": [
       {
        "name": "Icicle Spear",
@@ -628,6 +637,7 @@
      "dex": 91,
      "name": "Cloyster",
      "level": 31,
+     "iv": 0,
      "moves": [
       {
        "name": "Withdraw",
@@ -661,6 +671,7 @@
      "dex": 117,
      "name": "Seadra",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Smokescreen",
@@ -686,6 +697,7 @@
      "dex": 73,
      "name": "Tentacruel",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Constrict",
@@ -722,6 +734,7 @@
      "dex": 117,
      "name": "Seadra",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Smokescreen",
@@ -747,6 +760,7 @@
      "dex": 121,
      "name": "Starmie",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Rapid Spin",
@@ -782,6 +796,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Sport",
@@ -807,6 +822,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Sport",
@@ -832,6 +848,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Sport",
@@ -857,6 +874,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Sport",
@@ -891,6 +909,7 @@
      "dex": 129,
      "name": "Magikarp",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Splash",
@@ -907,6 +926,7 @@
      "dex": 129,
      "name": "Magikarp",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Splash",
@@ -923,6 +943,7 @@
      "dex": 129,
      "name": "Magikarp",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Splash",
@@ -939,6 +960,7 @@
      "dex": 129,
      "name": "Magikarp",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Splash",
@@ -955,6 +977,7 @@
      "dex": 129,
      "name": "Magikarp",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Splash",
@@ -971,6 +994,7 @@
      "dex": 129,
      "name": "Magikarp",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Splash",

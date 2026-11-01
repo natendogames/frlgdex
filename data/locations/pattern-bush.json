@@ -110,6 +110,7 @@
      "dex": 46,
      "name": "Paras",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Spore",
@@ -135,6 +136,7 @@
      "dex": 46,
      "name": "Paras",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Spore",
@@ -160,6 +162,7 @@
      "dex": 47,
      "name": "Parasect",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Leech Life",
@@ -194,6 +197,7 @@
      "dex": 48,
      "name": "Venonat",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Stun Spore",
@@ -219,6 +223,7 @@
      "dex": 49,
      "name": "Venomoth",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Stun Spore",
@@ -253,6 +258,7 @@
      "dex": 187,
      "name": "Hoppip",
      "level": 46,
+     "iv": 0,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -277,6 +283,7 @@
      "dex": 187,
      "name": "Hoppip",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -301,6 +308,7 @@
      "dex": 188,
      "name": "Skiploom",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -325,6 +333,7 @@
      "dex": 188,
      "name": "Skiploom",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -358,6 +367,7 @@
      "dex": 83,
      "name": "Farfetch'd",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Swords Dance",
@@ -383,6 +393,7 @@
      "dex": 83,
      "name": "Farfetch'd",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Swords Dance",
@@ -417,6 +428,7 @@
      "dex": 28,
      "name": "Sandslash",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -444,6 +456,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Dragonbreath",
@@ -470,6 +483,7 @@
      "dex": 28,
      "name": "Sandslash",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -506,6 +520,7 @@
      "dex": 113,
      "name": "Chansey",
      "level": 50,
+     "iv": 3,
      "moves": [
       {
        "name": "Sing",
@@ -539,6 +554,7 @@
      "dex": 193,
      "name": "Yanma",
      "level": 45,
+     "iv": 0,
      "moves": [
       {
        "name": "Detect",
@@ -564,6 +580,7 @@
      "dex": 15,
      "name": "Beedrill",
      "level": 45,
+     "iv": 0,
      "moves": [
       {
        "name": "Pursuit",
@@ -590,6 +607,7 @@
      "dex": 193,
      "name": "Yanma",
      "level": 46,
+     "iv": 0,
      "moves": [
       {
        "name": "Detect",
@@ -615,6 +633,7 @@
      "dex": 15,
      "name": "Beedrill",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Pursuit",
@@ -650,6 +669,7 @@
      "dex": 127,
      "name": "Pinsir",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Brick Break",
@@ -676,6 +696,7 @@
      "dex": 214,
      "name": "Heracross",
      "level": 50,
+     "iv": 0,
      "moves": [
       {
        "name": "Brick Break",
@@ -712,6 +733,7 @@
      "dex": 209,
      "name": "Snubbull",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Lick",
@@ -747,6 +769,7 @@
      "dex": 214,
      "name": "Heracross",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Brick Break",
@@ -783,6 +806,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 48,
+     "iv": 3,
      "moves": [
       {
        "name": "Cosmic Power",
@@ -807,6 +831,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 48,
+     "iv": 3,
      "moves": [
       {
        "name": "Cosmic Power",
@@ -831,6 +856,7 @@
      "dex": 36,
      "name": "Clefable",
      "level": 48,
+     "iv": 3,
      "moves": [
       {
        "name": "Sing",
@@ -864,6 +890,7 @@
      "dex": 70,
      "name": "Weepinbell",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Stun Spore",
@@ -889,6 +916,7 @@
      "dex": 70,
      "name": "Weepinbell",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Stun Spore",
@@ -914,6 +942,7 @@
      "dex": 71,
      "name": "Victreebel",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Vine Whip",

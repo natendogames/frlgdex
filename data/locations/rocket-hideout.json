@@ -124,6 +124,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -150,6 +151,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -176,6 +178,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -202,6 +205,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 19,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -237,6 +241,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -261,6 +266,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 22,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -297,6 +303,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -321,6 +328,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -342,6 +350,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -372,6 +381,7 @@
      "dex": 96,
      "name": "Drowzee",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -397,6 +407,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -431,6 +442,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -456,6 +468,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -490,6 +503,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Leech Life",
@@ -516,6 +530,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -537,6 +552,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Pound",
@@ -562,6 +578,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Leech Life",
@@ -588,6 +605,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -623,6 +641,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -648,6 +667,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -673,6 +693,7 @@
      "dex": 96,
      "name": "Drowzee",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -707,6 +728,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -732,6 +754,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -766,6 +789,7 @@
      "dex": 27,
      "name": "Sandshrew",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Defense Curl",
@@ -791,6 +815,7 @@
      "dex": 23,
      "name": "Ekans",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -816,6 +841,7 @@
      "dex": 28,
      "name": "Sandslash",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -850,6 +876,7 @@
      "dex": 23,
      "name": "Ekans",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -875,6 +902,7 @@
      "dex": 27,
      "name": "Sandshrew",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Defense Curl",
@@ -900,6 +928,7 @@
      "dex": 24,
      "name": "Arbok",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -934,6 +963,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 25,
+     "iv": 30,
      "moves": [
       {
        "name": "Bind",
@@ -960,6 +990,7 @@
      "dex": 111,
      "name": "Rhyhorn",
      "level": 24,
+     "iv": 30,
      "moves": [
       {
        "name": "Tail Whip",
@@ -985,6 +1016,7 @@
      "dex": 115,
      "name": "Kangaskhan",
      "level": 29,
+     "iv": 30,
      "moves": [
       {
        "name": "Bite",
@@ -1020,6 +1052,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -1047,6 +1080,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",

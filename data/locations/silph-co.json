@@ -213,6 +213,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -237,6 +238,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -263,6 +265,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -289,6 +292,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -324,6 +328,7 @@
      "dex": 81,
      "name": "Magnemite",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -349,6 +354,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -375,6 +381,7 @@
      "dex": 82,
      "name": "Magneton",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -409,6 +416,7 @@
      "dex": 104,
      "name": "Cubone",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -434,6 +442,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -468,6 +477,7 @@
      "dex": 42,
      "name": "Golbat",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",
@@ -494,6 +504,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",
@@ -520,6 +531,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",
@@ -546,6 +558,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -571,6 +584,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",
@@ -606,6 +620,7 @@
      "dex": 101,
      "name": "Electrode",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -632,6 +647,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -667,6 +683,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -692,6 +709,7 @@
      "dex": 97,
      "name": "Hypno",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -717,6 +735,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -751,6 +770,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -777,6 +797,7 @@
      "dex": 96,
      "name": "Drowzee",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Confusion",
@@ -811,6 +832,7 @@
      "dex": 23,
      "name": "Ekans",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -836,6 +858,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -861,6 +884,7 @@
      "dex": 104,
      "name": "Cubone",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Headbutt",
@@ -895,6 +919,7 @@
      "dex": 101,
      "name": "Electrode",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -930,6 +955,7 @@
      "dex": 24,
      "name": "Arbok",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -964,6 +990,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -988,6 +1015,7 @@
      "dex": 122,
      "name": "Mr. Mime",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Reflect",
@@ -1022,6 +1050,7 @@
      "dex": 97,
      "name": "Hypno",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Confusion",
@@ -1056,6 +1085,7 @@
      "dex": 82,
      "name": "Magneton",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -1081,6 +1111,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -1107,6 +1138,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -1133,6 +1165,7 @@
      "dex": 81,
      "name": "Magnemite",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -1167,6 +1200,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -1192,6 +1226,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -1217,6 +1252,7 @@
      "dex": 42,
      "name": "Golbat",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -1251,6 +1287,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -1277,6 +1314,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -1303,6 +1341,7 @@
      "dex": 82,
      "name": "Magneton",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Thundershock",
@@ -1328,6 +1367,7 @@
      "dex": 81,
      "name": "Magnemite",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Thundershock",
@@ -1353,6 +1393,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -1388,6 +1429,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -1414,6 +1456,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -1449,6 +1492,7 @@
      "dex": 27,
      "name": "Sandshrew",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Defense Curl",
@@ -1474,6 +1518,7 @@
      "dex": 28,
      "name": "Sandslash",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Defense Curl",
@@ -1508,6 +1553,7 @@
      "dex": 101,
      "name": "Electrode",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -1534,6 +1580,7 @@
      "dex": 89,
      "name": "Muk",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -1567,6 +1614,7 @@
      "dex": 104,
      "name": "Cubone",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -1592,6 +1640,7 @@
      "dex": 104,
      "name": "Cubone",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -1626,6 +1675,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -1651,6 +1701,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -1676,6 +1727,7 @@
      "dex": 42,
      "name": "Golbat",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",
@@ -1702,6 +1754,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -1737,6 +1790,7 @@
       "dex": 18,
       "name": "Pidgeot",
       "level": 37,
+      "iv": 12,
       "moves": [
        {
         "name": "Quick Attack",
@@ -1762,6 +1816,7 @@
       "dex": 102,
       "name": "Exeggcute",
       "level": 38,
+      "iv": 12,
       "moves": [
        {
         "name": "Confusion",
@@ -1786,6 +1841,7 @@
       "dex": 130,
       "name": "Gyarados",
       "level": 35,
+      "iv": 12,
       "moves": [
        {
         "name": "Bite",
@@ -1812,6 +1868,7 @@
       "dex": 65,
       "name": "Alakazam",
       "level": 35,
+      "iv": 12,
       "moves": [
        {
         "name": "Reflect",
@@ -1836,6 +1893,7 @@
       "dex": 6,
       "name": "Charizard",
       "level": 40,
+      "iv": 18,
       "moves": [
        {
         "name": "Smokescreen",
@@ -1863,6 +1921,7 @@
       "dex": 18,
       "name": "Pidgeot",
       "level": 37,
+      "iv": 12,
       "moves": [
        {
         "name": "Quick Attack",
@@ -1888,6 +1947,7 @@
       "dex": 58,
       "name": "Growlithe",
       "level": 38,
+      "iv": 12,
       "moves": [
        {
         "name": "Odor Sleuth",
@@ -1913,6 +1973,7 @@
       "dex": 102,
       "name": "Exeggcute",
       "level": 35,
+      "iv": 12,
       "moves": [
        {
         "name": "Leech Seed",
@@ -1937,6 +1998,7 @@
       "dex": 65,
       "name": "Alakazam",
       "level": 35,
+      "iv": 12,
       "moves": [
        {
         "name": "Reflect",
@@ -1961,6 +2023,7 @@
       "dex": 9,
       "name": "Blastoise",
       "level": 40,
+      "iv": 18,
       "moves": [
        {
         "name": "Water Gun",
@@ -1989,6 +2052,7 @@
       "dex": 18,
       "name": "Pidgeot",
       "level": 37,
+      "iv": 12,
       "moves": [
        {
         "name": "Quick Attack",
@@ -2014,6 +2078,7 @@
       "dex": 130,
       "name": "Gyarados",
       "level": 38,
+      "iv": 12,
       "moves": [
        {
         "name": "Bite",
@@ -2040,6 +2105,7 @@
       "dex": 58,
       "name": "Growlithe",
       "level": 35,
+      "iv": 12,
       "moves": [
        {
         "name": "Leer",
@@ -2065,6 +2131,7 @@
       "dex": 65,
       "name": "Alakazam",
       "level": 35,
+      "iv": 12,
       "moves": [
        {
         "name": "Reflect",
@@ -2089,6 +2156,7 @@
       "dex": 3,
       "name": "Venusaur",
       "level": 40,
+      "iv": 18,
       "moves": [
        {
         "name": "Poisonpowder",
@@ -2123,6 +2191,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -2149,6 +2218,7 @@
      "dex": 42,
      "name": "Golbat",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -2174,6 +2244,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -2209,6 +2280,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -2234,6 +2306,7 @@
      "dex": 24,
      "name": "Arbok",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -2259,6 +2332,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -2285,6 +2359,7 @@
      "dex": 42,
      "name": "Golbat",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",
@@ -2320,6 +2395,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -2344,6 +2420,7 @@
      "dex": 101,
      "name": "Electrode",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -2379,6 +2456,7 @@
      "dex": 42,
      "name": "Golbat",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -2404,6 +2482,7 @@
      "dex": 96,
      "name": "Drowzee",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Confusion",
@@ -2429,6 +2508,7 @@
      "dex": 97,
      "name": "Hypno",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -2463,6 +2543,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -2489,6 +2570,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -2515,6 +2597,7 @@
      "dex": 82,
      "name": "Magneton",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -2549,6 +2632,7 @@
      "dex": 96,
      "name": "Drowzee",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Confusion",
@@ -2574,6 +2658,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -2598,6 +2683,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -2633,6 +2719,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Seismic Toss",
@@ -2668,6 +2755,7 @@
      "dex": 81,
      "name": "Magnemite",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -2693,6 +2781,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -2728,6 +2817,7 @@
      "dex": 104,
      "name": "Cubone",
      "level": 32,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -2753,6 +2843,7 @@
      "dex": 96,
      "name": "Drowzee",
      "level": 32,
+     "iv": 0,
      "moves": [
       {
        "name": "Headbutt",
@@ -2778,6 +2869,7 @@
      "dex": 105,
      "name": "Marowak",
      "level": 32,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -2812,6 +2904,7 @@
      "dex": 33,
      "name": "Nidorino",
      "level": 37,
+     "iv": 30,
      "moves": [
       {
        "name": "Poison Sting",
@@ -2838,6 +2931,7 @@
      "dex": 115,
      "name": "Kangaskhan",
      "level": 35,
+     "iv": 30,
      "moves": [
       {
        "name": "Tail Whip",
@@ -2864,6 +2958,7 @@
      "dex": 111,
      "name": "Rhyhorn",
      "level": 37,
+     "iv": 30,
      "moves": [
       {
        "name": "Stomp",
@@ -2890,6 +2985,7 @@
      "dex": 31,
      "name": "Nidoqueen",
      "level": 41,
+     "iv": 30,
      "moves": [
       {
        "name": "Tail Whip",
@@ -2925,6 +3021,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -2950,6 +3047,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -2975,6 +3073,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Astonish",
@@ -3001,6 +3100,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -3026,6 +3126,7 @@
      "dex": 23,
      "name": "Ekans",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",

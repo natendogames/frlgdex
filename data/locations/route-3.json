@@ -106,6 +106,7 @@
      "dex": 10,
      "name": "Caterpie",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -122,6 +123,7 @@
      "dex": 13,
      "name": "Weedle",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -138,6 +140,7 @@
      "dex": 10,
      "name": "Caterpie",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -162,6 +165,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -183,6 +187,7 @@
      "dex": 23,
      "name": "Ekans",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Wrap",
@@ -212,6 +217,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 9,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -233,6 +239,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 9,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -262,6 +269,7 @@
      "dex": 13,
      "name": "Weedle",
      "level": 9,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -278,6 +286,7 @@
      "dex": 14,
      "name": "Kakuna",
      "level": 9,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -289,6 +298,7 @@
      "dex": 10,
      "name": "Caterpie",
      "level": 9,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -305,6 +315,7 @@
      "dex": 11,
      "name": "Metapod",
      "level": 9,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -324,6 +335,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 14,
+     "iv": 0,
      "moves": [
       {
        "name": "Peck",
@@ -357,6 +369,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -378,6 +391,7 @@
      "dex": 29,
      "name": "Nidoran♀",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -406,6 +420,7 @@
      "dex": 10,
      "name": "Caterpie",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -422,6 +437,7 @@
      "dex": 11,
      "name": "Metapod",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -441,6 +457,7 @@
      "dex": 39,
      "name": "Jigglypuff",
      "level": 14,
+     "iv": 0,
      "moves": [
       {
        "name": "Sing",

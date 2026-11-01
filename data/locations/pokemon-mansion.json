@@ -566,6 +566,7 @@
      "dex": 101,
      "name": "Electrode",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -592,6 +593,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -627,6 +629,7 @@
      "dex": 23,
      "name": "Ekans",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Bite",
@@ -652,6 +655,7 @@
      "dex": 23,
      "name": "Ekans",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Bite",
@@ -677,6 +681,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Quick Attack",
@@ -712,6 +717,7 @@
      "dex": 4,
      "name": "Charmander",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Metal Claw",
@@ -737,6 +743,7 @@
      "dex": 5,
      "name": "Charmeleon",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Metal Claw",
@@ -771,6 +778,7 @@
      "dex": 38,
      "name": "Ninetales",
      "level": 38,
+     "iv": 0,
      "moves": [
       {
        "name": "Ember",
@@ -805,6 +813,7 @@
      "dex": 81,
      "name": "Magnemite",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Sonicboom",
@@ -830,6 +839,7 @@
      "dex": 82,
      "name": "Magneton",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -855,6 +865,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Sonicboom",
@@ -891,6 +902,7 @@
      "dex": 58,
      "name": "Growlithe",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -916,6 +928,7 @@
      "dex": 77,
      "name": "Ponyta",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Ember",
@@ -952,6 +965,7 @@
      "dex": 81,
      "name": "Magnemite",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Sonicboom",
@@ -977,6 +991,7 @@
      "dex": 101,
      "name": "Electrode",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Sonicboom",

@@ -406,6 +406,7 @@
      "dex": 53,
      "name": "Persian",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Pay Day",
@@ -432,6 +433,7 @@
      "dex": 77,
      "name": "Ponyta",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Stomp",
@@ -458,6 +460,7 @@
      "dex": 78,
      "name": "Rapidash",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Fire Spin",
@@ -484,6 +487,7 @@
      "dex": 37,
      "name": "Vulpix",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Flamethrower",
@@ -509,6 +513,7 @@
      "dex": 38,
      "name": "Ninetales",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Ember",
@@ -546,6 +551,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Hyper Fang",
@@ -572,6 +578,7 @@
      "dex": 2,
      "name": "Ivysaur",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -596,6 +603,7 @@
      "dex": 8,
      "name": "Wartortle",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Bite",
@@ -621,6 +629,7 @@
      "dex": 5,
      "name": "Charmeleon",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Smokescreen",
@@ -646,6 +655,7 @@
      "dex": 6,
      "name": "Charizard",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Smokescreen",
@@ -683,6 +693,7 @@
      "dex": 96,
      "name": "Drowzee",
      "level": 41,
+     "iv": 0,
      "moves": [
       {
        "name": "Meditate",
@@ -707,6 +718,7 @@
      "dex": 97,
      "name": "Hypno",
      "level": 41,
+     "iv": 0,
      "moves": [
       {
        "name": "Headbutt",
@@ -732,6 +744,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 41,
+     "iv": 0,
      "moves": [
       {
        "name": "Recover",
@@ -757,6 +770,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 41,
+     "iv": 0,
      "moves": [
       {
        "name": "Recover",
@@ -791,6 +805,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 43,
+     "iv": 12,
      "moves": [
       {
        "name": "Foresight",
@@ -818,6 +833,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 43,
+     "iv": 12,
      "moves": [
       {
        "name": "Vital Throw",
@@ -845,6 +861,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 43,
+     "iv": 12,
      "moves": [
       {
        "name": "Foresight",
@@ -881,6 +898,7 @@
      "dex": 53,
      "name": "Persian",
      "level": 44,
+     "iv": 4,
      "moves": [
       {
        "name": "Pay Day",
@@ -907,6 +925,7 @@
      "dex": 55,
      "name": "Golduck",
      "level": 44,
+     "iv": 4,
      "moves": [
       {
        "name": "Confusion",
@@ -941,6 +960,7 @@
      "dex": 122,
      "name": "Mr. Mime",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Trick",
@@ -974,6 +994,7 @@
      "dex": 5,
      "name": "Charmeleon",
      "level": 40,
+     "iv": 3,
      "moves": [
       {
        "name": "Metal Claw",
@@ -999,6 +1020,7 @@
      "dex": 131,
      "name": "Lapras",
      "level": 40,
+     "iv": 3,
      "moves": [
       {
        "name": "Confuse Ray",
@@ -1023,6 +1045,7 @@
      "dex": 108,
      "name": "Lickitung",
      "level": 40,
+     "iv": 3,
      "moves": [
       {
        "name": "Stomp",
@@ -1058,6 +1081,7 @@
      "dex": 99,
      "name": "Kingler",
      "level": 41,
+     "iv": 12,
      "moves": [
       {
        "name": "Harden",
@@ -1084,6 +1108,7 @@
      "dex": 61,
      "name": "Poliwhirl",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Water Gun",
@@ -1110,6 +1135,7 @@
      "dex": 73,
      "name": "Tentacruel",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Acid",
@@ -1136,6 +1162,7 @@
      "dex": 117,
      "name": "Seadra",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Leer",
@@ -1161,6 +1188,7 @@
      "dex": 9,
      "name": "Blastoise",
      "level": 43,
+     "iv": 12,
      "moves": [
       {
        "name": "Bite",
@@ -1198,6 +1226,7 @@
      "dex": 69,
      "name": "Bellsprout",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Stun Spore",
@@ -1223,6 +1252,7 @@
      "dex": 70,
      "name": "Weepinbell",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Stun Spore",
@@ -1248,6 +1278,7 @@
      "dex": 71,
      "name": "Victreebel",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Vine Whip",
@@ -1273,6 +1304,7 @@
      "dex": 46,
      "name": "Paras",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Leech Life",
@@ -1298,6 +1330,7 @@
      "dex": 47,
      "name": "Parasect",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Poisonpowder",
@@ -1335,6 +1368,7 @@
      "dex": 31,
      "name": "Nidoqueen",
      "level": 45,
+     "iv": 12,
      "moves": [
       {
        "name": "Double Kick",
@@ -1362,6 +1396,7 @@
      "dex": 34,
      "name": "Nidoking",
      "level": 45,
+     "iv": 12,
      "moves": [
       {
        "name": "Double Kick",
@@ -1399,6 +1434,7 @@
      "dex": 103,
      "name": "Exeggutor",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Hypnosis",
@@ -1425,6 +1461,7 @@
      "dex": 28,
      "name": "Sandslash",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Poison Sting",
@@ -1452,6 +1489,7 @@
      "dex": 91,
      "name": "Cloyster",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Supersonic",
@@ -1476,6 +1514,7 @@
      "dex": 101,
      "name": "Electrode",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Spark",
@@ -1502,6 +1541,7 @@
      "dex": 59,
      "name": "Arcanine",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Bite",
@@ -1539,6 +1579,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Metronome",
@@ -1562,6 +1603,7 @@
      "dex": 39,
      "name": "Jigglypuff",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Doubleslap",
@@ -1587,6 +1629,7 @@
      "dex": 53,
      "name": "Persian",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Pay Day",
@@ -1613,6 +1656,7 @@
      "dex": 87,
      "name": "Dewgong",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Aurora Beam",
@@ -1639,6 +1683,7 @@
      "dex": 113,
      "name": "Chansey",
      "level": 42,
+     "iv": 12,
      "moves": [
       {
        "name": "Minimize",

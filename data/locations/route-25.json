@@ -274,6 +274,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 15,
+     "iv": 0,
      "moves": [
       {
        "name": "Low Kick",
@@ -299,6 +300,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 15,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -332,6 +334,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -366,6 +369,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 15,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -392,6 +396,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 15,
+     "iv": 0,
      "moves": [
       {
        "name": "Peck",
@@ -425,6 +430,7 @@
      "dex": 79,
      "name": "Slowpoke",
      "level": 17,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -459,6 +465,7 @@
      "dex": 32,
      "name": "Nidoran♂",
      "level": 15,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -484,6 +491,7 @@
      "dex": 29,
      "name": "Nidoran♀",
      "level": 15,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -517,6 +525,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 13,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -542,6 +551,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 13,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -567,6 +577,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 13,
+     "iv": 0,
      "moves": [
       {
        "name": "Low Kick",
@@ -592,6 +603,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 13,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -625,6 +637,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 14,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -651,6 +664,7 @@
      "dex": 23,
      "name": "Ekans",
      "level": 14,
+     "iv": 0,
      "moves": [
       {
        "name": "Wrap",
@@ -685,6 +699,7 @@
      "dex": 23,
      "name": "Ekans",
      "level": 14,
+     "iv": 0,
      "moves": [
       {
        "name": "Wrap",
@@ -711,6 +726,7 @@
      "dex": 27,
      "name": "Sandshrew",
      "level": 14,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -739,6 +755,7 @@
      "dex": 43,
      "name": "Oddish",
      "level": 13,
+     "iv": 0,
      "moves": [
       {
        "name": "Absorb",
@@ -755,6 +772,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 13,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -781,6 +799,7 @@
      "dex": 43,
      "name": "Oddish",
      "level": 13,
+     "iv": 0,
      "moves": [
       {
        "name": "Absorb",

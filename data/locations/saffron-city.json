@@ -67,6 +67,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 32,
+     "iv": 12,
      "moves": [
       {
        "name": "Seismic Toss",
@@ -94,6 +95,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 32,
+     "iv": 12,
      "moves": [
       {
        "name": "Karate Chop",
@@ -130,6 +132,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 31,
+     "iv": 12,
      "moves": [
       {
        "name": "Seismic Toss",
@@ -157,6 +160,7 @@
      "dex": 56,
      "name": "Mankey",
      "level": 31,
+     "iv": 12,
      "moves": [
       {
        "name": "Fury Swipes",
@@ -184,6 +188,7 @@
      "dex": 57,
      "name": "Primeape",
      "level": 31,
+     "iv": 12,
      "moves": [
       {
        "name": "Fury Swipes",
@@ -220,6 +225,7 @@
      "dex": 56,
      "name": "Mankey",
      "level": 31,
+     "iv": 12,
      "moves": [
       {
        "name": "Fury Swipes",
@@ -247,6 +253,7 @@
      "dex": 56,
      "name": "Mankey",
      "level": 31,
+     "iv": 12,
      "moves": [
       {
        "name": "Fury Swipes",
@@ -274,6 +281,7 @@
      "dex": 57,
      "name": "Primeape",
      "level": 31,
+     "iv": 12,
      "moves": [
       {
        "name": "Fury Swipes",
@@ -310,6 +318,7 @@
      "dex": 57,
      "name": "Primeape",
      "level": 36,
+     "iv": 12,
      "moves": [
       {
        "name": "Focus Energy",
@@ -346,6 +355,7 @@
      "dex": 106,
      "name": "Hitmonlee",
      "level": 37,
+     "iv": 12,
      "moves": [
       {
        "name": "Focus Energy",
@@ -371,6 +381,7 @@
      "dex": 107,
      "name": "Hitmonchan",
      "level": 37,
+     "iv": 12,
      "moves": [
       {
        "name": "Thunderpunch",
@@ -408,6 +419,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Night Shade",
@@ -433,6 +445,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Night Shade",
@@ -458,6 +471,7 @@
      "dex": 93,
      "name": "Haunter",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Night Shade",
@@ -493,6 +507,7 @@
      "dex": 79,
      "name": "Slowpoke",
      "level": 33,
+     "iv": 6,
      "moves": [
       {
        "name": "Water Gun",
@@ -519,6 +534,7 @@
      "dex": 79,
      "name": "Slowpoke",
      "level": 33,
+     "iv": 6,
      "moves": [
       {
        "name": "Water Gun",
@@ -545,6 +561,7 @@
      "dex": 80,
      "name": "Slowbro",
      "level": 33,
+     "iv": 6,
      "moves": [
       {
        "name": "Water Gun",
@@ -580,6 +597,7 @@
      "dex": 93,
      "name": "Haunter",
      "level": 38,
+     "iv": 0,
      "moves": [
       {
        "name": "Night Shade",
@@ -615,6 +633,7 @@
      "dex": 122,
      "name": "Mr. Mime",
      "level": 34,
+     "iv": 6,
      "moves": [
       {
        "name": "Magical Leaf",
@@ -640,6 +659,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 34,
+     "iv": 6,
      "moves": [
       {
        "name": "Reflect",
@@ -673,6 +693,7 @@
      "dex": 80,
      "name": "Slowbro",
      "level": 38,
+     "iv": 6,
      "moves": [
       {
        "name": "Disable",
@@ -706,6 +727,7 @@
      "dex": 92,
      "name": "Gastly",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Night Shade",
@@ -731,6 +753,7 @@
      "dex": 93,
      "name": "Haunter",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Night Shade",
@@ -766,6 +789,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 31,
+     "iv": 6,
      "moves": [
       {
        "name": "Psybeam",
@@ -791,6 +815,7 @@
      "dex": 79,
      "name": "Slowpoke",
      "level": 31,
+     "iv": 6,
      "moves": [
       {
        "name": "Water Gun",
@@ -817,6 +842,7 @@
      "dex": 122,
      "name": "Mr. Mime",
      "level": 31,
+     "iv": 6,
      "moves": [
       {
        "name": "Reflect",
@@ -842,6 +868,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 31,
+     "iv": 6,
      "moves": [
       {
        "name": "Psybeam",
@@ -876,6 +903,7 @@
      "dex": 64,
      "name": "Kadabra",
      "level": 38,
+     "iv": 0,
      "moves": [
       {
        "name": "Recover",
@@ -901,6 +929,7 @@
      "dex": 122,
      "name": "Mr. Mime",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Encore",
@@ -925,6 +954,7 @@
      "dex": 49,
      "name": "Venomoth",
      "level": 38,
+     "iv": 0,
      "moves": [
       {
        "name": "Leech Life",
@@ -951,6 +981,7 @@
      "dex": 65,
      "name": "Alakazam",
      "level": 43,
+     "iv": 0,
      "moves": [
       {
        "name": "Future Sight",

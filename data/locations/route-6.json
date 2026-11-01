@@ -187,6 +187,7 @@
      "dex": 13,
      "name": "Weedle",
      "level": 16,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -203,6 +204,7 @@
      "dex": 10,
      "name": "Caterpie",
      "level": 16,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -219,6 +221,7 @@
      "dex": 13,
      "name": "Weedle",
      "level": 16,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -243,6 +246,7 @@
      "dex": 7,
      "name": "Squirtle",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -277,6 +281,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 16,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -303,6 +308,7 @@
      "dex": 25,
      "name": "Pikachu",
      "level": 16,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -335,6 +341,7 @@
      "dex": 12,
      "name": "Butterfree",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Poisonpowder",
@@ -366,6 +373,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 16,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -392,6 +400,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 16,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -418,6 +427,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 16,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -452,6 +462,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 16,
+     "iv": 0,
      "moves": [
       {
        "name": "Peck",
@@ -477,6 +488,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 16,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",

@@ -112,6 +112,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -138,6 +139,7 @@
      "dex": 84,
      "name": "Doduo",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Pursuit",
@@ -165,6 +167,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -199,6 +202,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -225,6 +229,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -251,6 +256,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -277,6 +283,7 @@
      "dex": 22,
      "name": "Fearow",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -310,6 +317,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -336,6 +344,7 @@
      "dex": 22,
      "name": "Fearow",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -369,6 +378,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -395,6 +405,7 @@
      "dex": 84,
      "name": "Doduo",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Pursuit",
@@ -422,6 +433,7 @@
      "dex": 22,
      "name": "Fearow",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -455,6 +467,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -479,6 +492,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -503,6 +517,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -537,6 +552,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -563,6 +579,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -595,6 +612,7 @@
      "dex": 83,
      "name": "Farfetch'd",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Fury Attack",
@@ -629,6 +647,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -655,6 +674,7 @@
      "dex": 89,
      "name": "Muk",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -687,6 +707,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -713,6 +734,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -739,6 +761,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -763,6 +786,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -797,6 +821,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -823,6 +848,7 @@
      "dex": 22,
      "name": "Fearow",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -856,6 +882,7 @@
      "dex": 4,
      "name": "Charmander",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Ember",
@@ -881,6 +908,7 @@
      "dex": 7,
      "name": "Squirtle",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Gun",

@@ -166,6 +166,7 @@
      "dex": 90,
      "name": "Shellder",
      "level": 31,
+     "iv": 0,
      "moves": [
       {
        "name": "Icicle Spear",
@@ -191,6 +192,7 @@
      "dex": 91,
      "name": "Cloyster",
      "level": 31,
+     "iv": 0,
      "moves": [
       {
        "name": "Withdraw",
@@ -223,6 +225,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -248,6 +251,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -273,6 +277,7 @@
      "dex": 117,
      "name": "Seadra",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -298,6 +303,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -331,6 +337,7 @@
      "dex": 117,
      "name": "Seadra",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Smokescreen",
@@ -356,6 +363,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Smokescreen",
@@ -381,6 +389,7 @@
      "dex": 117,
      "name": "Seadra",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Smokescreen",
@@ -414,6 +423,7 @@
      "dex": 72,
      "name": "Tentacool",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Constrict",
@@ -441,6 +451,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Smokescreen",
@@ -466,6 +477,7 @@
      "dex": 86,
      "name": "Seel",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -499,6 +511,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -533,6 +546,7 @@
      "dex": 22,
      "name": "Fearow",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -558,6 +572,7 @@
      "dex": 22,
      "name": "Fearow",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -583,6 +598,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -617,6 +633,7 @@
      "dex": 90,
      "name": "Shellder",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Icicle Spear",
@@ -642,6 +659,7 @@
      "dex": 90,
      "name": "Shellder",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Icicle Spear",
@@ -667,6 +685,7 @@
      "dex": 91,
      "name": "Cloyster",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Withdraw",
@@ -699,6 +718,7 @@
      "dex": 120,
      "name": "Staryu",
      "level": 35,
+     "iv": 0,
      "moves": [
       {
        "name": "Camouflage",
@@ -732,6 +752,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 31,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -758,6 +779,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 31,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",
@@ -792,6 +814,7 @@
      "dex": 60,
      "name": "Poliwag",
      "level": 31,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Gun",
@@ -818,6 +841,7 @@
      "dex": 119,
      "name": "Seaking",
      "level": 31,
+     "iv": 0,
      "moves": [
       {
        "name": "Supersonic",

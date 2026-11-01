@@ -1026,6 +1026,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 47,
+     "iv": 0,
      "moves": [
       {
        "name": "Dragonbreath",
@@ -1052,6 +1053,7 @@
      "dex": 75,
      "name": "Graveler",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Selfdestruct",
@@ -1079,6 +1081,7 @@
      "dex": 105,
      "name": "Marowak",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Bonemerang",
@@ -1115,6 +1118,7 @@
      "dex": 53,
      "name": "Persian",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Faint Attack",
@@ -1142,6 +1146,7 @@
      "dex": 53,
      "name": "Persian",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Faint Attack",
@@ -1181,6 +1186,7 @@
      "dex": 177,
      "name": "Natu",
      "level": 48,
+     "iv": 12,
      "moves": [
       {
        "name": "Teleport",
@@ -1205,6 +1211,7 @@
      "dex": 177,
      "name": "Natu",
      "level": 48,
+     "iv": 12,
      "moves": [
       {
        "name": "Teleport",
@@ -1229,6 +1236,7 @@
      "dex": 178,
      "name": "Xatu",
      "level": 49,
+     "iv": 12,
      "moves": [
       {
        "name": "Night Shade",

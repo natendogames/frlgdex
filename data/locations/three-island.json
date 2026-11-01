@@ -34,6 +34,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Selfdestruct",
@@ -59,6 +60,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 37,
+     "iv": 0,
      "moves": [
       {
        "name": "Sludge",
@@ -91,6 +93,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 38,
+     "iv": 0,
      "moves": [
       {
        "name": "Selfdestruct",
@@ -124,6 +127,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 38,
+     "iv": 0,
      "moves": [
       {
        "name": "Sludge",
@@ -156,6 +160,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 39,
+     "iv": 6,
      "moves": [
       {
        "name": "Selfdestruct",
@@ -181,6 +186,7 @@
      "dex": 89,
      "name": "Muk",
      "level": 39,
+     "iv": 6,
      "moves": [
       {
        "name": "Sludge",

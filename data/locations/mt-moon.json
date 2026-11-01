@@ -245,6 +245,7 @@
      "dex": 81,
      "name": "Magnemite",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Metal Sound",
@@ -270,6 +271,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Charge",
@@ -299,6 +301,7 @@
      "dex": 10,
      "name": "Caterpie",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -315,6 +318,7 @@
      "dex": 11,
      "name": "Metapod",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -326,6 +330,7 @@
      "dex": 10,
      "name": "Caterpie",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -351,6 +356,7 @@
      "dex": 13,
      "name": "Weedle",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -367,6 +373,7 @@
      "dex": 14,
      "name": "Kakuna",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -387,6 +394,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 14,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -420,6 +428,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -441,6 +450,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -462,6 +472,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Leech Life",
@@ -488,6 +499,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -508,6 +520,7 @@
      "dex": 74,
      "name": "Geodude",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -528,6 +541,7 @@
      "dex": 95,
      "name": "Onix",
      "level": 10,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -558,6 +572,7 @@
      "dex": 43,
      "name": "Oddish",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Absorb",
@@ -574,6 +589,7 @@
      "dex": 69,
      "name": "Bellsprout",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Vine Whip",
@@ -604,6 +620,7 @@
      "dex": 27,
      "name": "Sandshrew",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -624,6 +641,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -645,6 +663,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Leech Life",
@@ -675,6 +694,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 13,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -701,6 +721,7 @@
      "dex": 27,
      "name": "Sandshrew",
      "level": 13,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -730,6 +751,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 13,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -756,6 +778,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 13,
+     "iv": 0,
      "moves": [
       {
        "name": "Leech Life",
@@ -786,6 +809,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Leech Life",
@@ -807,6 +831,7 @@
      "dex": 23,
      "name": "Ekans",
      "level": 11,
+     "iv": 0,
      "moves": [
       {
        "name": "Wrap",
@@ -837,6 +862,7 @@
      "dex": 88,
      "name": "Grimer",
      "level": 12,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Gas",
@@ -861,6 +887,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 12,
+     "iv": 0,
      "moves": [
       {
        "name": "Charge",
@@ -881,6 +908,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 12,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Gas",

@@ -125,6 +125,7 @@
      "dex": 13,
      "name": "Weedle",
      "level": 6,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -141,6 +142,7 @@
      "dex": 10,
      "name": "Caterpie",
      "level": 6,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -165,6 +167,7 @@
      "dex": 13,
      "name": "Weedle",
      "level": 7,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -181,6 +184,7 @@
      "dex": 14,
      "name": "Kakuna",
      "level": 7,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -192,6 +196,7 @@
      "dex": 13,
      "name": "Weedle",
      "level": 7,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -216,6 +221,7 @@
      "dex": 13,
      "name": "Weedle",
      "level": 9,
+     "iv": 0,
      "moves": [
       {
        "name": "Poison Sting",
@@ -240,6 +246,7 @@
      "dex": 10,
      "name": "Caterpie",
      "level": 7,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -256,6 +263,7 @@
      "dex": 10,
      "name": "Caterpie",
      "level": 8,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -280,6 +288,7 @@
      "dex": 11,
      "name": "Metapod",
      "level": 7,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",
@@ -291,6 +300,7 @@
      "dex": 10,
      "name": "Caterpie",
      "level": 7,
+     "iv": 0,
      "moves": [
       {
        "name": "Tackle",
@@ -307,6 +317,7 @@
      "dex": 11,
      "name": "Metapod",
      "level": 7,
+     "iv": 0,
      "moves": [
       {
        "name": "Harden",

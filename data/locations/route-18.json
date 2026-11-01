@@ -114,6 +114,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -140,6 +141,7 @@
      "dex": 22,
      "name": "Fearow",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -174,6 +176,7 @@
      "dex": 85,
      "name": "Dodrio",
      "level": 34,
+     "iv": 0,
      "moves": [
       {
        "name": "Pursuit",
@@ -210,6 +213,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -236,6 +240,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -262,6 +267,7 @@
      "dex": 22,
      "name": "Fearow",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -287,6 +293,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",

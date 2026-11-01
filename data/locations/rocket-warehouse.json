@@ -58,6 +58,7 @@
      "dex": 89,
      "name": "Muk",
      "level": 52,
+     "iv": 18,
      "moves": [
       {
        "name": "Minimize",
@@ -82,6 +83,7 @@
      "dex": 24,
      "name": "Arbok",
      "level": 53,
+     "iv": 18,
      "moves": [
       {
        "name": "Acid",
@@ -107,6 +109,7 @@
      "dex": 45,
      "name": "Vileplume",
      "level": 54,
+     "iv": 18,
      "moves": [
       {
        "name": "Aromatherapy",
@@ -144,6 +147,7 @@
      "dex": 97,
      "name": "Hypno",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Meditate",
@@ -168,6 +172,7 @@
      "dex": 97,
      "name": "Hypno",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Meditate",
@@ -201,6 +206,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Vital Throw",
@@ -227,6 +233,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Vital Throw",
@@ -253,6 +260,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 48,
+     "iv": 0,
      "moves": [
       {
        "name": "Revenge",
@@ -289,6 +297,7 @@
      "dex": 42,
      "name": "Golbat",
      "level": 53,
+     "iv": 24,
      "moves": [
       {
        "name": "Confuse Ray",
@@ -314,6 +323,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 54,
+     "iv": 24,
      "moves": [
       {
        "name": "Smokescreen",
@@ -338,6 +348,7 @@
      "dex": 229,
      "name": "Houndoom",
      "level": 55,
+     "iv": 24,
      "moves": [
       {
        "name": "Bite",
@@ -376,6 +387,7 @@
      "dex": 228,
      "name": "Houndour",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Odor Sleuth",
@@ -402,6 +414,7 @@
      "dex": 228,
      "name": "Houndour",
      "level": 49,
+     "iv": 0,
      "moves": [
       {
        "name": "Odor Sleuth",
@@ -437,6 +450,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 46,
+     "iv": 0,
      "moves": [
       {
        "name": "Rollout",
@@ -463,6 +477,7 @@
      "dex": 101,
      "name": "Electrode",
      "level": 46,
+     "iv": 0,
      "moves": [
       {
        "name": "Spark",
@@ -489,6 +504,7 @@
      "dex": 81,
      "name": "Magnemite",
      "level": 46,
+     "iv": 0,
      "moves": [
       {
        "name": "Spark",
@@ -514,6 +530,7 @@
      "dex": 82,
      "name": "Magneton",
      "level": 46,
+     "iv": 0,
      "moves": [
       {
        "name": "Thunder Wave",
@@ -539,6 +556,7 @@
      "dex": 137,
      "name": "Porygon",
      "level": 46,
+     "iv": 0,
      "moves": [
       {
        "name": "Sharpen",

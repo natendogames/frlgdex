@@ -101,6 +101,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -127,6 +128,7 @@
      "dex": 68,
      "name": "Machamp",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -161,6 +163,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -187,6 +190,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -213,6 +217,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -247,6 +252,7 @@
      "dex": 56,
      "name": "Mankey",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -273,6 +279,7 @@
      "dex": 57,
      "name": "Primeape",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Fury Swipes",
@@ -307,6 +314,7 @@
      "dex": 89,
      "name": "Muk",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -339,6 +347,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -365,6 +374,7 @@
      "dex": 100,
      "name": "Voltorb",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Screech",
@@ -399,6 +409,7 @@
      "dex": 56,
      "name": "Mankey",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -425,6 +436,7 @@
      "dex": 56,
      "name": "Mankey",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -451,6 +463,7 @@
      "dex": 68,
      "name": "Machamp",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -477,6 +490,7 @@
      "dex": 66,
      "name": "Machop",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -511,6 +525,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 33,
+     "iv": 0,
      "moves": [
       {
        "name": "Seismic Toss",
@@ -545,6 +560,7 @@
      "dex": 57,
      "name": "Primeape",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Fury Swipes",
@@ -571,6 +587,7 @@
      "dex": 67,
      "name": "Machoke",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Karate Chop",
@@ -605,6 +622,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -631,6 +649,7 @@
      "dex": 89,
      "name": "Muk",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Disable",
@@ -663,6 +682,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -689,6 +709,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -715,6 +736,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -741,6 +763,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -767,6 +790,7 @@
      "dex": 110,
      "name": "Weezing",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",

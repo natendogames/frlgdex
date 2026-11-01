@@ -230,6 +230,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -256,6 +257,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -290,6 +292,7 @@
      "dex": 118,
      "name": "Goldeen",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Water Sport",
@@ -315,6 +318,7 @@
      "dex": 60,
      "name": "Poliwag",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -340,6 +344,7 @@
      "dex": 116,
      "name": "Horsea",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Bubble",
@@ -373,6 +378,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Sand-attack",
@@ -398,6 +404,7 @@
      "dex": 52,
      "name": "Meowth",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -424,6 +431,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -449,6 +457,7 @@
      "dex": 25,
      "name": "Pikachu",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Thunder Wave",
@@ -474,6 +483,7 @@
      "dex": 52,
      "name": "Meowth",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Scratch",
@@ -508,6 +518,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Quick Attack",
@@ -534,6 +545,7 @@
      "dex": 25,
      "name": "Pikachu",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Quick Attack",
@@ -560,6 +572,7 @@
      "dex": 19,
      "name": "Rattata",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Quick Attack",
@@ -594,6 +607,7 @@
      "dex": 35,
      "name": "Clefairy",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Follow Me",
@@ -617,6 +631,7 @@
      "dex": 52,
      "name": "Meowth",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -651,6 +666,7 @@
      "dex": 60,
      "name": "Poliwag",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -676,6 +692,7 @@
      "dex": 60,
      "name": "Poliwag",
      "level": 30,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -709,6 +726,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -735,6 +753,7 @@
      "dex": 52,
      "name": "Meowth",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",
@@ -761,6 +780,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -787,6 +807,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 27,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -821,6 +842,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -847,6 +869,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -873,6 +896,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -899,6 +923,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -925,6 +950,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 25,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -959,6 +985,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -985,6 +1012,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -1011,6 +1039,7 @@
      "dex": 109,
      "name": "Koffing",
      "level": 28,
+     "iv": 0,
      "moves": [
       {
        "name": "Smog",
@@ -1045,6 +1074,7 @@
      "dex": 16,
      "name": "Pidgey",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Gust",
@@ -1071,6 +1101,7 @@
      "dex": 17,
      "name": "Pidgeotto",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Sand-attack",
@@ -1096,6 +1127,7 @@
      "dex": 21,
      "name": "Spearow",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Leer",
@@ -1122,6 +1154,7 @@
      "dex": 22,
      "name": "Fearow",
      "level": 26,
+     "iv": 0,
      "moves": [
       {
        "name": "Growl",

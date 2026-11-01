@@ -426,6 +426,7 @@
      "dex": 20,
      "name": "Raticate",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Tail Whip",
@@ -451,6 +452,7 @@
      "dex": 41,
      "name": "Zubat",
      "level": 20,
+     "iv": 0,
      "moves": [
       {
        "name": "Leech Life",
@@ -486,6 +488,7 @@
      "dex": 69,
      "name": "Bellsprout",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -510,6 +513,7 @@
      "dex": 70,
      "name": "Weepinbell",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Wrap",
@@ -543,6 +547,7 @@
      "dex": 43,
      "name": "Oddish",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Sweet Scent",
@@ -566,6 +571,7 @@
      "dex": 69,
      "name": "Bellsprout",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Wrap",
@@ -590,6 +596,7 @@
      "dex": 43,
      "name": "Oddish",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Sweet Scent",
@@ -613,6 +620,7 @@
      "dex": 69,
      "name": "Bellsprout",
      "level": 21,
+     "iv": 0,
      "moves": [
       {
        "name": "Wrap",
@@ -646,6 +654,7 @@
      "dex": 69,
      "name": "Bellsprout",
      "level": 22,
+     "iv": 12,
      "moves": [
       {
        "name": "Wrap",
@@ -670,6 +679,7 @@
      "dex": 43,
      "name": "Oddish",
      "level": 22,
+     "iv": 12,
      "moves": [
       {
        "name": "Sweet Scent",
@@ -693,6 +703,7 @@
      "dex": 70,
      "name": "Weepinbell",
      "level": 22,
+     "iv": 12,
      "moves": [
       {
        "name": "Wrap",
@@ -717,6 +728,7 @@
      "dex": 44,
      "name": "Gloom",
      "level": 22,
+     "iv": 12,
      "moves": [
       {
        "name": "Sweet Scent",
@@ -740,6 +752,7 @@
      "dex": 2,
      "name": "Ivysaur",
      "level": 22,
+     "iv": 12,
      "moves": [
       {
        "name": "Vine Whip",
@@ -777,6 +790,7 @@
      "dex": 1,
      "name": "Bulbasaur",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Vine Whip",
@@ -802,6 +816,7 @@
      "dex": 2,
      "name": "Ivysaur",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Vine Whip",
@@ -836,6 +851,7 @@
      "dex": 69,
      "name": "Bellsprout",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -860,6 +876,7 @@
      "dex": 69,
      "name": "Bellsprout",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Sleep Powder",
@@ -893,6 +910,7 @@
      "dex": 102,
      "name": "Exeggcute",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Hypnosis",
@@ -926,6 +944,7 @@
      "dex": 43,
      "name": "Oddish",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Poisonpowder",
@@ -950,6 +969,7 @@
      "dex": 44,
      "name": "Gloom",
      "level": 23,
+     "iv": 0,
      "moves": [
       {
        "name": "Sweet Scent",
@@ -982,6 +1002,7 @@
      "dex": 71,
      "name": "Victreebel",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Vine Whip",
@@ -1007,6 +1028,7 @@
      "dex": 114,
      "name": "Tangela",
      "level": 24,
+     "iv": 0,
      "moves": [
       {
        "name": "Absorb",
@@ -1032,6 +1054,7 @@
      "dex": 45,
      "name": "Vileplume",
      "level": 29,
+     "iv": 0,
      "moves": [
       {
        "name": "Absorb",

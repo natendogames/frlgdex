@@ -77,7 +77,7 @@ move_names = {}
 for line in open(P('src/data/text/move_names.h')):
     m = re.match(r'\s*\[MOVE_(\w+)\]\s*=\s*_\("(.*)"\)', line)
     if m: move_names[m.group(1)] = title(m.group(2))
-move_types = {}
+move_types, move_effects = {}, {}
 cur = None
 for line in open(P('src/data/battle_moves.h')):
     m = re.match(r'\s*\[MOVE_(\w+)\]', line)
@@ -86,6 +86,8 @@ for line in open(P('src/data/battle_moves.h')):
     if m and cur: move_types[cur] = m.group(1).capitalize()
     m = re.match(r'\s*\.power = (\d+)', line)
     if m and cur: move_types.setdefault('_power', {})[cur] = int(m.group(1))
+    m = re.match(r'\s*\.effect = EFFECT_(\w+)', line)
+    if m and cur: move_effects[cur] = m.group(1)
 
 # ---------- pokedex ----------
 info, cur = {}, None
@@ -403,7 +405,8 @@ def trainer_party(tconst):
         mv = re.search(r'\.moves = \[(.*?)\]', body)
         held = re.search(r'\.heldItem = (ITEM_\w+)', body)
         moves = [x.strip().replace('MOVE_', '') for x in mv.group(1).split(',')] if mv else default_moves(sp.group(1), lvl)
-        mons.append({**mon('SPECIES_' + sp.group(1)), 'level': lvl,
+        iv = re.search(r'\.iv = (\d+)', body)
+        mons.append({**mon('SPECIES_' + sp.group(1)), 'level': lvl, 'iv': int(iv.group(1)) * 31 // 255 if iv else 0,
                      'moves': [move_info(x) for x in moves if x and x != 'NONE'],
                      **({'item': item_name(held.group(1))} if held and held.group(1) != 'ITEM_NONE' else {})})
     return mons
@@ -574,6 +577,23 @@ for loc in locs.values():
     loc['verified'] = True
     loc['sources'] = ['https://github.com/pret/pokefirered']
     json.dump(loc, open(os.path.join(OUT, 'locations', loc['id'] + '.json'), 'w'), ensure_ascii=False, indent=1)
+# level-up learnsets (for default moves), weight (for Low Kick) and a move table for the damage estimates
+weights = {natdex[k]: int(w) for k, w in re.findall(r'\[NATIONAL_DEX_(\w+)\]\s*=\s*\{[^}]*?\.weight = (\d+)', open(P('src/data/pokemon/pokedex_entries.h')).read(), re.S) if k in natdex}
+for p in pokedex:
+    p['weight'] = weights.get(p['dex'])
+    key = next(k for k, v in natdex.items() if v == p['dex'])
+    p['learnset'] = [[l, move_names[mv]] for l, mv in learnsets[learnset_ptr[key]]]
+EFFECT_KEEP = {'LEVEL_DAMAGE': 'level', 'SONICBOOM': 'fixed20', 'DRAGON_RAGE': 'fixed40', 'SUPER_FANG': 'half', 'OHKO': 'ohko',
+               'MULTI_HIT': 'multi', 'DOUBLE_HIT': 'double', 'TWINEEDLE': 'double', 'PSYWAVE': 'level', 'COUNTER': 'counter', 'MIRROR_COAT': 'counter',
+               'EXPLOSION': 'explode', 'RECHARGE': 'recharge', 'SOLARBEAM': 'charge', 'RAZOR_WIND': 'charge', 'SKY_ATTACK': 'charge', 'SKULL_BASH': 'charge',
+               'DREAM_EATER': 'dream', 'FLAIL': 'varies', 'RETURN': 'varies', 'FRUSTRATION': 'varies', 'HIDDEN_POWER': 'varies', 'MAGNITUDE': 'varies',
+               'PRESENT': 'varies', 'LOW_KICK': 'varies', 'SPIT_UP': 'varies', 'ERUPTION': 'varies', 'REVENGE': 'varies', 'FOCUS_PUNCH': 'varies'}
+moves_out = {}
+for k, nm in move_names.items():
+    if k == 'NONE': continue
+    e = EFFECT_KEEP.get(move_effects.get(k))
+    moves_out[nm] = {'type': move_types.get(k), 'power': move_power.get(k, 0), **({'effect': e} if e else {})}
+json.dump(moves_out, open(os.path.join(OUT, 'moves.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
 json.dump(pokedex, open(os.path.join(OUT, 'pokedex.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
 json.dump(type_chart, open(os.path.join(OUT, 'types.json'), 'w'), indent=1)
 json.dump(trainers, open(os.path.join(OUT, 'trainers.json'), 'w'), ensure_ascii=False, indent=1)
