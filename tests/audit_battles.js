@@ -48,7 +48,7 @@ const MUST_SPECIES = [
   ['FR', 'Brock', 'Onix', ['Mankey', 'Nidoran♂', 'Nidoran♀']]
 ];
 
-const fails = [], report = [];
+const fails = [], report = [], counts = { trainers: 0 };
 const fail = msg => fails.push(msg);
 const strip = h => h.replace(/<table[\s\S]*?<\/table>/g, ' [duel table] ').replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 
@@ -99,12 +99,17 @@ const strip = h => h.replace(/<table[\s\S]*?<\/table>/g, ' [duel table] ').repla
     state.progress.version = V;
     const save = app.cur();
     save.picks = { starter }; save.team = []; save.teamMeta = {}; save.caught = {};
-    for (const t of state.trainers) {
+    // key battles (Battle plan tab) plus every trainer on every route, cave, building and Sevii Island page
+    const all = [...state.trainers.map(t => ({ t, loc: t.location, key: true })),
+      ...state.index.flatMap(l => (state.locations[l.id].trainers || []).map(t => ({ t, loc: l.id })))];
+    for (const { t, loc, key } of all) {
       const party = t.party || t.byStarter[starter];
       if (!party) continue;
       if (t.party && starter !== 'Bulbasaur') continue; // non-rival teams don't depend on the starter
-      const stage = app.battleStage(t, t.location);
-      const tag = `${V} ${t.name}${t.byStarter ? ` (${starter})` : ''}`;
+      const stage = app.battleStage(t, loc);
+      if (stage < app.stageOf(loc)) fail(`${t.id} on ${loc} is planned before you can reach ${loc}`);
+      const tag = `${V} ${key ? t.name : `${loc} ${t.class} ${t.name}`}${t.byStarter ? ` (${starter})` : ''}`;
+      if (!key) counts.trainers++;
       const hitTypes = new Set();
       for (const p of party) {
         save.team = [];
@@ -141,10 +146,17 @@ const strip = h => h.replace(/<table[\s\S]*?<\/table>/g, ' [duel table] ').repla
         if (/undefined|NaN/.test(row)) fail(`${tag} vs ${p.name}: row shows undefined/NaN: ${row.slice(0, 200)}`);
         report.push(`   with ${save.team.map(n => mon(n).name).join(' + ')}: ${row.replace(/^.*?Weak to:/, 'Weak to:').slice(0, 400)}`);
       }
-      const want = MUST[t.name.replace(/ \(.*\)$/, '')];
+      const want = key && MUST[t.name.replace(/ \(.*\)$/, '')];
       if (want && !want.some(x => hitTypes.has(x))) fail(`${tag}: no suggestion hits with ${want.join('/')}`);
     }
   }
+  // Trainers you can only reach with an HM or later in the story must not be planned before you can get there
+  const AFTER = [[/^(route-19|route-20|route-21|seafoam-islands|cinnabar-island|pokemon-mansion|power-plant)$/, 'safari-zone', 'Surf (after Koga)'],
+    [/^(route-9|route-10|rock-tunnel)$/, 'ss-anne', 'Cut'], [/^(route-12|route-13|route-14|route-15)$/, 'pokemon-tower', 'the Poké Flute'],
+    [/^(four-island|icefall-cave|five-island|five-isle-meadow|memorial-pillar|water-labyrinth|resort-gorgeous|rocket-warehouse|lost-cave|six-island|water-path|ruin-valley|green-path|pattern-bush|outcast-island|altering-cave|seven-island|trainer-tower|canyon-entrance|sevault-canyon|tanoby-ruins|cerulean-cave)$/, 'pokemon-league', 'becoming Champion']];
+  for (const l of state.index) for (const t of state.locations[l.id].trainers || []) for (const [re, after, why] of AFTER)
+    if (re.test(l.id) && app.battleStage(t, l.id) <= app.stageOf(after)) fail(`${l.id} ${t.id} is planned before ${why}`);
+
   // Surf encounters must not count before Koga; Old Rod not before Vermilion
   state.progress.version = 'FR';
   const koga = state.trainers.find(t => t.name === 'Koga');
@@ -154,5 +166,5 @@ const strip = h => h.replace(/<table[\s\S]*?<\/table>/g, ' [duel table] ').repla
   const i = process.argv.indexOf('--report');
   if (i > 0) fs.writeFileSync(process.argv[i + 1], report.join('\n') + '\n');
   if (fails.length) { console.log(`FAIL (${fails.length})\n` + fails.map(f => ' - ' + f).join('\n')); process.exit(1); }
-  console.log(`OK: ${report.filter(r => !r.startsWith(' ')).length} foe Pokémon checked across both versions and all starters.`);
+  console.log(`OK: ${report.filter(r => !r.startsWith(' ')).length} foe Pokémon checked (key battles plus ${counts.trainers} route trainer battles) across both versions and all starters.`);
 })().catch(e => { console.error(e); process.exit(1); });
