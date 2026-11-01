@@ -337,7 +337,10 @@ for k, vs in gifts.items():
     if kind in GMETHOD and k[5]:
         sp = k[5]
         method = 'game-corner' if 'coins' in nm else GMETHOD[kind]
-        loc['encounters'].append({**mon('SPECIES_' + sp), 'method': method, 'versions': sorted(vs, key=VERSIONS.index), 'area': area, 'notes': nm + ' · ' + frm})
+        lv = re.search(r'Lv (\d+)', nm)
+        lvl = lv.group(1) if lv else '5' if 'Egg' in nm else None  # eggs hatch at Lv 5
+        loc['encounters'].append({**mon('SPECIES_' + sp), 'method': method, 'versions': sorted(vs, key=VERSIONS.index), 'area': area,
+                                  **({'levels': lvl} if lvl else {}), 'notes': nm + ' · ' + frm})
 for sp in ('BULBASAUR', 'CHARMANDER', 'SQUIRTLE'):
     locs['pallet-town']['encounters'].append({**mon('SPECIES_' + sp), 'method': 'gift', 'versions': list(VERSIONS), 'levels': '5', 'area': 'Professor Oaks Lab',
                                               'notes': 'Starter: choose one. Get the other two by trading or breeding.'})
@@ -585,9 +588,10 @@ for p in pokedex:
     p['learnset'] = [[l, move_names[mv]] for l, mv in learnsets[learnset_ptr[key]]]
 EFFECT_KEEP = {'LEVEL_DAMAGE': 'level', 'SONICBOOM': 'fixed20', 'DRAGON_RAGE': 'fixed40', 'SUPER_FANG': 'half', 'OHKO': 'ohko',
                'MULTI_HIT': 'multi', 'DOUBLE_HIT': 'double', 'TWINEEDLE': 'double', 'PSYWAVE': 'level', 'COUNTER': 'counter', 'MIRROR_COAT': 'counter',
-               'EXPLOSION': 'explode', 'RECHARGE': 'recharge', 'SOLARBEAM': 'charge', 'RAZOR_WIND': 'charge', 'SKY_ATTACK': 'charge', 'SKULL_BASH': 'charge',
+               'EXPLOSION': 'explode', 'RECHARGE': 'recharge', 'SOLAR_BEAM': 'charge', 'SEMI_INVULNERABLE': 'charge', 'FUTURE_SIGHT': 'charge', 'RAZOR_WIND': 'charge', 'SKY_ATTACK': 'charge', 'SKULL_BASH': 'charge',
                'DREAM_EATER': 'dream', 'FLAIL': 'varies', 'RETURN': 'varies', 'FRUSTRATION': 'varies', 'HIDDEN_POWER': 'varies', 'MAGNITUDE': 'varies',
-               'PRESENT': 'varies', 'LOW_KICK': 'varies', 'SPIT_UP': 'varies', 'ERUPTION': 'varies', 'REVENGE': 'varies', 'FOCUS_PUNCH': 'varies'}
+               'PRESENT': 'varies', 'LOW_KICK': 'varies', 'SPIT_UP': 'varies', 'ERUPTION': 'varies', 'REVENGE': 'varies', 'FOCUS_PUNCH': 'varies',
+               'FAKE_OUT': 'fakeout', 'SNORE': 'dream', 'TRIPLE_KICK': 'triple'}  # 'dream': only works on (or while) asleep
 moves_out = {}
 for k, nm in move_names.items():
     if k == 'NONE': continue
