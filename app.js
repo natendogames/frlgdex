@@ -22,12 +22,82 @@ const EVENT_ONLY = new Set([151, 251, 385, 386]);
 const OTHER = { FR: 'LG', LG: 'FR' };
 const VNAME = { FR: 'FireRed', LG: 'LeafGreen' };
 
+// Either/or picks: the game lets you take only one option. Each choice counts as a single checklist item on its location,
+// and the options you pass up can then only be had by trading. "linked" entries elsewhere only exist for one option
+// (the Cinnabar lab revives the fossil you took; the roaming beast follows your starter).
+const STARTER_BASE = { Bulbasaur: 1, Charmander: 4, Squirtle: 7 };
+const RIVAL_OF = { Bulbasaur: 'Charmander', Charmander: 'Squirtle', Squirtle: 'Bulbasaur' };
+const CHOICES = [
+  { id: 'starter', loc: 'pallet-town', title: 'Starter Pokémon', where: "Professor Oak's Lab",
+    note: 'You can only take one. Your rival takes the one that beats yours, and it decides which legendary beast roams Kanto after the game.',
+    gifts: ['mon-professor-oaks-lab-starter-pok-mon-bulbasaur-charmander-or-squirtle'],
+    options: [
+      { key: 'Bulbasaur', dex: 1, linked: [{ loc: 'roaming', dex: 244 }] },
+      { key: 'Charmander', dex: 4, linked: [{ loc: 'roaming', dex: 245 }] },
+      { key: 'Squirtle', dex: 7, linked: [{ loc: 'roaming', dex: 243 }] }],
+    linkedNote: { roaming: "Entei, Suicune or Raikou: which one roams depends on the starter you picked in Professor Oak's Lab." } },
+  { id: 'fossil', loc: 'mt-moon', title: 'Fossil', where: 'B2F, after beating the Super Nerd',
+    note: 'Take one and the Super Nerd keeps the other. Revive it at the Pokémon Lab on Cinnabar Island.',
+    options: [
+      { key: 'Helix', label: 'Helix Fossil', gift: 'item-b2f-helix-fossil', becomes: 138,
+        linked: [{ loc: 'cinnabar-island', dex: 138, gift: 'mon-pok-mon-lab-experiment-room-omanyte-lv-5' }] },
+      { key: 'Dome', label: 'Dome Fossil', gift: 'item-b2f-dome-fossil', becomes: 140,
+        linked: [{ loc: 'cinnabar-island', dex: 140, gift: 'mon-pok-mon-lab-experiment-room-kabuto-lv-5' }] }],
+    linkedNote: { 'cinnabar-island': 'Omanyte or Kabuto: the lab revives the fossil you picked at Mt. Moon.' } },
+  { id: 'dojo', loc: 'saffron-city', title: 'Fighting Dojo prize', where: 'Dojo, after beating the Karate Master',
+    note: 'You can only take one of the two.',
+    options: [
+      { key: 'Hitmonlee', dex: 106, gift: 'mon-dojo-hitmonlee-lv-25-choose-one' },
+      { key: 'Hitmonchan', dex: 107, gift: 'mon-dojo-hitmonchan-lv-25-choose-one' }] }
+];
+for (const c of CHOICES) for (const o of c.options) o.label ||= o.key;
+// `${loc}:dex:${n}` / `${loc}:gift:${id}` -> the choice (and option) that entry belongs to
+const CHOICE_OF = {};
+for (const c of CHOICES) {
+  for (const g of c.gifts || []) CHOICE_OF[`${c.loc}:gift:${g}`] = { c };
+  for (const o of c.options) {
+    if (o.dex) CHOICE_OF[`${c.loc}:dex:${o.dex}`] = { c, o };
+    if (o.gift) CHOICE_OF[`${c.loc}:gift:${o.gift}`] = { c, o };
+    for (const l of o.linked || []) {
+      if (l.dex) CHOICE_OF[`${l.loc}:dex:${l.dex}`] = { c, o, linked: true };
+      if (l.gift) CHOICE_OF[`${l.loc}:gift:${l.gift}`] = { c, o, linked: true };
+    }
+  }
+}
+
 const state = { index: [], locations: {}, dex: [], trainers: [], types: {}, walk: {}, found: {}, progress: loadProgress(), dexFilter: { scope: 'kanto', missing: false, q: '' } };
 
-function freshSave() { return { caught: {}, checks: {}, team: [], starter: 'Bulbasaur' }; }
+function freshSave() { return { caught: {}, checks: {}, team: [], picks: {} }; }
+// Saves from before choices existed kept a `starter` setting (always defaulting to Bulbasaur) and separate
+// checkboxes for each option. Work out each pick from those, and leave it unpicked when the old save is ambiguous.
+function migratePicks(s) {
+  const picks = {}, caught = s.caught || {}, checks = s.checks || {};
+  const one = list => (list.length === 1 ? list[0].key : null);
+  for (const c of CHOICES) {
+    const tiers = [
+      o => o.gift && checks[`${c.loc}:gift:${o.gift}`],
+      o => (o.linked || []).some(l => l.gift && checks[`${l.loc}:gift:${l.gift}`]),
+      o => (o.dex ? caught[o.dex] : (o.linked || []).some(l => l.dex && caught[l.dex]))
+    ];
+    if (c.id === 'starter') {
+      const line = n => Object.keys(STARTER_BASE).find(k => n >= STARTER_BASE[k] && n < STARTER_BASE[k] + 3);
+      const onTeam = [...new Set((s.team || []).map(line).filter(Boolean))];
+      // only a starter someone actually changed is a real answer; Bulbasaur was the default
+      tiers.unshift(o => s.starter && s.starter !== 'Bulbasaur' && o.key === s.starter, o => onTeam.length === 1 && onTeam[0] === o.key);
+    }
+    for (const t of tiers) { const k = one(c.options.filter(t)); if (k) { picks[c.id] = k; break; } }
+  }
+  s.picks = picks;
+  delete s.starter;
+}
 function normaliseProgress(p) {
   if (!p || typeof p.saves !== 'object' || !p.saves) return null;
-  for (const v of ['FR', 'LG']) p.saves[v] = Object.assign(freshSave(), p.saves[v]);
+  for (const v of ['FR', 'LG']) {
+    const old = p.saves[v] && typeof p.saves[v] === 'object' ? p.saves[v] : {};
+    if (!old.picks) migratePicks(old);
+    p.saves[v] = Object.assign(freshSave(), old);
+    delete p.saves[v].starter;
+  }
   if (!['FR', 'LG'].includes(p.version)) p.version = 'FR';
   return p;
 }
@@ -43,6 +113,35 @@ function save() { writeLocal(); sync.changed(); }
 const V = () => state.progress.version;
 const cur = () => state.progress.saves[V()];
 const inVersion = x => !x.versions || x.versions.includes(V());
+const pickOf = id => cur().picks?.[id] || null;
+const pickedOption = c => c.options.find(o => o.key === pickOf(c.id)) || null;
+// Is this location entry an ordinary checklist row? Options at a choice are shown on the choice card instead,
+// and linked entries only appear once their option is picked.
+function freeRow(locId, kind, key) {
+  const m = CHOICE_OF[`${locId}:${kind}:${key}`];
+  return !m || (m.linked && pickOf(m.c.id) === m.o.key);
+}
+// Can you get this Pokémon from this entry, given what you picked? Unpicked choices are still open.
+function allowed(w, dex) {
+  const m = CHOICE_OF[`${w.loc}:dex:${dex}`];
+  return !m?.o || !pickOf(m.c.id) || pickOf(m.c.id) === m.o.key;
+}
+function condText(w, dex) {
+  const m = CHOICE_OF[`${w.loc}:dex:${dex}`];
+  if (!m?.o || pickOf(m.c.id)) return '';
+  return m.linked ? `if you pick ${m.o.label} at ${state.locations[m.c.loc].name}` : 'choose one';
+}
+// What a location's checklist holds once choices are folded in.
+function locView(loc) {
+  return {
+    encs: loc.encounters.filter(e => inVersion(e) && freeRow(loc.id, 'dex', e.dex)),
+    gifts: loc.gifts.filter(g => inVersion(g) && freeRow(loc.id, 'gift', g.id)),
+    choices: CHOICES.filter(c => c.loc === loc.id),
+    pending: CHOICES.filter(c => c.linkedNote?.[loc.id] && !pickOf(c.id)),
+    trainers: loc.trainers || []
+  };
+}
+const trainerKey = (locId, t) => `${locId}:trainer:${t.id}`;
 
 const getJSON = url => fetch(url).then(r => { if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); });
 async function loadData() {
@@ -85,27 +184,37 @@ const isCaught = n => !!cur().caught[n];
 
 function availability(n) {
   const f = (state.found[n] || []);
-  const here = f.filter(inVersion);
+  const ver = f.filter(inVersion);
+  const here = ver.filter(w => allowed(w, n));
   if (here.length) return { kind: 'catch', where: here };
   const p = mon(n).evolvesFrom;
+  const pa = p && availability(p);
   if (p) {
     const e = mon(p).evolutions.find(x => x.into === n);
-    if (['catch', 'evolve'].includes(availability(p).kind)) return { kind: 'evolve', from: p, how: (EVO_LABEL[e.method] || (() => e.method))(e.param) };
+    if (['catch', 'evolve'].includes(pa.kind)) return { kind: 'evolve', from: p, how: (EVO_LABEL[e.method] || (() => e.method))(e.param) };
   }
+  // passed up because of a choice you made (the other starter, fossil or Dojo prize)
+  if (ver.length) return { kind: 'missed', choice: CHOICE_OF[`${ver[0].loc}:dex:${n}`].c };
+  if (pa?.kind === 'missed') return { kind: 'missed', choice: pa.choice, via: pa.via || p };
   if (f.length) return { kind: 'other', where: f };
   if (p && availability(p).kind === 'other') return { kind: 'other', where: [], via: p };
   if (EVENT_ONLY.has(n)) return { kind: 'event' };
   return { kind: 'none' };
 }
 
+function missedText(a) {
+  const c = a.choice, o = pickedOption(c);
+  return `<span class="bad">Passed up:</span> you picked ${esc(o.label)} at <a href="#/loc/${c.loc}">${esc(state.locations[c.loc].name)}</a>. Trade for ${a.via ? `${esc(mon(a.via).name)} and evolve it` : 'one'} from another game.`;
+}
 function availText(n) {
   const a = availability(n);
   if (a.kind === 'catch') {
     // a.where is sorted by when you can first catch it there, so the earliest chance comes first
     const uniq = [...new Map([...a.where].reverse().map(w => [w.loc, w])).values()].sort((x, y) => x.stage - y.stage);
-    return uniq.slice(0, 4).map(w => `<a href="#/loc/${w.loc}">${esc(w.name)}</a> <span class="note">(${esc(METHOD_LABEL[w.method] || w.method)}${w.later ? `, after ${esc(unlockName(w.method))}` : ''})</span>`).join(', ') + (uniq.length > 4 ? ` +${uniq.length - 4} more` : '');
+    return uniq.slice(0, 4).map(w => `<a href="#/loc/${w.loc}">${esc(w.name)}</a> <span class="note">(${esc(METHOD_LABEL[w.method] || w.method)}${w.later ? `, after ${esc(unlockName(w.method))}` : ''}${condText(w, n) ? `, ${esc(condText(w, n))}` : ''})</span>`).join(', ') + (uniq.length > 4 ? ` +${uniq.length - 4} more` : '');
   }
   if (a.kind === 'evolve') return `Evolve ${esc(mon(a.from).name)}: ${esc(a.how)}`;
+  if (a.kind === 'missed') return missedText(a);
   if (a.kind === 'other') return `<span class="bad">Not in ${VNAME[V()]}.</span> Trade from ${VNAME[OTHER[V()]]}${a.via ? ` (or trade for ${esc(mon(a.via).name)} and evolve it)` : ''}.`;
   if (a.kind === 'event') return 'Event only (Nintendo distribution).';
   return n > 151 ? 'Trade from Ruby, Sapphire, Emerald, Colosseum or XD.' : 'Not obtainable in this version.';
@@ -113,19 +222,23 @@ function availText(n) {
 
 // ---------- progress maths ----------
 function locStats(loc) {
-  const s = cur();
-  const dex = [...new Set(loc.encounters.filter(inVersion).map(e => e.dex))];
-  const keys = [...loc.items.map(i => `${loc.id}:item:${i.id}`), ...loc.gifts.filter(inVersion).map(g => `${loc.id}:gift:${g.id}`)];
-  return { total: dex.length + keys.length, done: dex.filter(d => s.caught[d]).length + keys.filter(k => s.checks[k]).length };
+  const s = cur(), v = locView(loc);
+  const dex = [...new Set(v.encs.map(e => e.dex))];
+  const keys = [...loc.items.map(i => `${loc.id}:item:${i.id}`), ...v.gifts.map(g => `${loc.id}:gift:${g.id}`), ...v.trainers.map(t => trainerKey(loc.id, t))];
+  return { total: dex.length + keys.length + v.choices.length,
+    done: dex.filter(d => s.caught[d]).length + keys.filter(k => s.checks[k]).length + v.choices.filter(c => pickOf(c.id)).length };
 }
 function globalStats() {
-  const s = cur(); let items = 0, itemsDone = 0, gifts = 0, giftsDone = 0;
+  const s = cur(); let items = 0, itemsDone = 0, gifts = 0, giftsDone = 0, trs = 0, trsDone = 0;
   for (const loc of Object.values(state.locations)) {
+    const v = locView(loc);
     for (const i of loc.items) { items++; if (s.checks[`${loc.id}:item:${i.id}`]) itemsDone++; }
-    for (const g of loc.gifts.filter(inVersion)) { gifts++; if (s.checks[`${loc.id}:gift:${g.id}`]) giftsDone++; }
+    for (const g of v.gifts) { gifts++; if (s.checks[`${loc.id}:gift:${g.id}`]) giftsDone++; }
+    for (const c of v.choices) { gifts++; if (pickOf(c.id)) giftsDone++; }
+    for (const t of v.trainers) { trs++; if (s.checks[trainerKey(loc.id, t)]) trsDone++; }
   }
   let kanto = 0; for (let n = 1; n <= 151; n++) if (s.caught[n]) kanto++;
-  return { dex: [kanto, 151], items: [itemsDone, items], gifts: [giftsDone, gifts] };
+  return { dex: [kanto, 151], items: [itemsDone, items], gifts: [giftsDone, gifts], trainers: [trsDone, trs] };
 }
 
 // ---------- views ----------
@@ -133,7 +246,7 @@ function renderHome() {
   setHeader('FRLG Completion Dex', false, 'routes');
   const g = globalStats();
   const stat = (label, [a, b]) => `<div class="stat"><b>${a}/${b}</b><span>${label}</span>${bar(a, b)}</div>`;
-  let html = `<div class="card stats">${stat('Kanto Dex', g.dex)}${stat('Items', g.items)}${stat('NPC gifts', g.gifts)}</div>`;
+  let html = `<div class="card stats">${stat('Kanto Dex', g.dex)}${stat('Items', g.items)}${stat('NPC gifts', g.gifts)}${stat('Trainers', g.trainers)}</div>`;
   let region = '';
   for (const l of state.index) {
     const loc = state.locations[l.id];
@@ -165,16 +278,20 @@ function renderLocation(id) {
   if (loc.notes) html += `<div class="card note">${esc(loc.notes)}</div>`;
   if (steps?.length) html += `<h2>Walkthrough</h2><div class="card"><ol class="steps">${steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol></div>`;
 
-  const trs = loc.trainers || [];
+  const v = locView(loc);
+  if (v.choices.length) html += `<h2>Choose one</h2>${v.choices.map(choiceCard).join('')}`;
+  for (const c of v.pending) html += `<div class="card note">${esc(c.linkedNote[id])} <a href="#/loc/${c.loc}">Pick it on the ${esc(state.locations[c.loc].name)} page</a> and the right one shows up here.</div>`;
+
+  const trs = v.trainers;
   if (trs.length) {
-    html += `<h2>Trainers (${trs.length})</h2>${teamHint()}`;
+    html += `<h2>Trainers (${trs.filter(t => s.checks[trainerKey(id, t)]).length}/${trs.length})</h2>${teamHint()}`;
     for (const [area, list] of Object.entries(groupBy(trs, t => t.area))) {
       if (area) html += `<div class="area">${esc(area)}</div>`;
-      html += list.map(t => trainerCard(t, stageOf(t.stage || id))).join('');
+      html += list.map(t => trainerCard(t, stageOf(t.stage || id), { loc: id })).join('');
     }
   }
 
-  const encs = loc.encounters.filter(inVersion);
+  const encs = v.encs;
   const here = stageOf(id);
   const encList = (list, later) => {
     let out = '';
@@ -194,7 +311,7 @@ function renderLocation(id) {
   if (!encs.length) html += '<div class="empty">No Pokémon to catch here.</div>';
   else if (!now.length) html += '<div class="empty">Nothing to catch on your first visit.</div>';
   html += encList(now, false) + `</div>`;
-  if (later.length) html += `<h2>Pokémon: come back later</h2><div class="card"><p class="note">You can't fish, Surf or Rock Smash here on your first visit. These open up later in the story.</p>${encList(later, true)}</div>`;
+  if (later.length) html += `<details class="later"><summary><h2>Pokémon: come back later (${new Set(later.map(e => e.dex)).size})</h2></summary><div class="card"><p class="note">You can't fish, Surf or Rock Smash here on your first visit. These open up later in the story.</p>${encList(later, true)}</div></details>`;
 
   const section = (title, list, kind, subFn) => {
     html += `<h2>${title} (${list.filter(x => s.checks[`${loc.id}:${kind}:${x.id}`]).length}/${list.length})</h2><div class="card">`;
@@ -207,8 +324,52 @@ function renderLocation(id) {
   };
   section('Items', loc.items.filter(i => !i.hidden), 'item', () => 'On the ground');
   section('Hidden items', loc.items.filter(i => i.hidden), 'item', () => 'Hidden: use the Itemfinder');
-  section('NPC gifts &amp; trades', loc.gifts.filter(inVersion), 'gift', g => [g.from && esc(g.from), esc(g.where)].filter(Boolean).join(' · '));
+  section('NPC gifts &amp; trades', v.gifts, 'gift', g => [g.from && esc(g.from), esc(g.where)].filter(Boolean).join(' · '));
   view.innerHTML = html;
+}
+
+function choiceCard(c) {
+  const p = pickOf(c.id), nm = `pick-${c.id}-${rowSeq++}`;
+  const opt = o => {
+    const title = o.dex ? `#${String(o.dex).padStart(3, '0')} ${esc(mon(o.dex).name)} ${types(o.dex)}`
+      : `${esc(o.label)}${o.becomes ? ` <span class="note">revives into ${esc(mon(o.becomes).name)}</span>` : ''}`;
+    const sub = [c.id === 'starter' && `Your rival takes ${RIVAL_OF[o.key]}`, p && p !== o.key && 'Not picked: trade for it'].filter(Boolean).join(' · ');
+    return `<label class="row pick ${p === o.key ? 'checked' : ''}"><input type="radio" name="${nm}" data-pick="${c.id}" value="${esc(o.key)}" ${p === o.key ? 'checked' : ''}>
+      <span><span>${title}</span>${sub ? `<span class="sub">${sub}</span>` : ''}</span></label>`;
+  };
+  return `<div class="card choice"><div><b>${esc(c.title)}</b> ${p ? '<span class="tag good">Picked</span>' : '<span class="tag">Not picked yet</span>'}</div>
+    <p class="note">${esc(c.where)}. ${esc(c.note)}</p>${c.options.map(opt).join('')}
+    ${p ? `<button class="btn small" data-unpick="${c.id}">Clear pick</button>` : ''}</div>`;
+}
+// The three starters as tap-to-pick chips (Battle plan and rival cards share the Oak's Lab pick).
+function starterChips() {
+  const p = pickOf('starter'), nm = `pick-starter-${rowSeq++}`;
+  return `<div class="chips">${Object.keys(STARTER_BASE).map(k => `<label class="chip ${p === k ? 'on' : ''}"><input type="radio" class="vh" name="${nm}" data-pick="starter" value="${k}" ${p === k ? 'checked' : ''}>${k}</label>`).join('')}</div>`;
+}
+function setPick(id, key) {
+  const s = cur(), c = CHOICES.find(x => x.id === id);
+  const prev = pickedOption(c), next = c.options.find(o => o.key === key);
+  // a pick marks the Pokémon you got as caught; undo that if the pick changes
+  if (prev?.dex && s.caught[prev.dex] === 'pick') delete s.caught[prev.dex];
+  s.picks ||= {};
+  if (next) { s.picks[id] = next.key; if (next.dex && !s.caught[next.dex]) s.caught[next.dex] = 'pick'; } else delete s.picks[id];
+  if (id === 'starter') starterToTeam(prev?.key, next?.key);
+  for (const k in catchCache) delete catchCache[k];
+  save(); route(true);
+}
+// Keep the Battle plan team in step with the starter: swap the old starter's line for the new one,
+// or add the new starter when the team has none yet.
+function starterToTeam(prev, next) {
+  if (!next) return;
+  const s = cur(), lineOf = k => [0, 1, 2].map(i => STARTER_BASE[k] + i);
+  const i = prev ? s.team.findIndex(n => lineOf(prev).includes(n)) : -1;
+  if (i >= 0) {
+    const old = s.team[i], nn = STARTER_BASE[next] + (old - STARTER_BASE[prev]);
+    if (s.team.includes(nn)) return;
+    s.team[i] = nn;
+    const lvl = s.teamMeta?.[old]?.level;
+    if (lvl) (s.teamMeta[nn] ||= {}).level ||= lvl;
+  } else if (!s.team.some(n => n >= 1 && n <= 9) && s.team.length < 6) s.team.unshift(STARTER_BASE[next]);
 }
 
 function renderDex() {
@@ -321,11 +482,11 @@ function bestTypesAgainst(party) {
 // Pokémon you could have caught by a point in the story: one entry per species, at the earliest place you can get it.
 const catchCache = {};
 function catchableBy(stage) {
-  const key = V() + ':' + stage;
+  const key = V() + ':' + stage + ':' + JSON.stringify(cur().picks || {});
   if (catchCache[key]) return catchCache[key];
   const out = [];
   for (const [dex, list] of Object.entries(state.found)) {
-    const w = list.find(x => inVersion(x) && x.stage <= stage && !['trade', 'roaming'].includes(x.method) && !(x.loc === 'pallet-town' && x.method === 'gift'));
+    const w = list.find(x => inVersion(x) && allowed(x, +dex) && x.stage <= stage && !['trade', 'roaming'].includes(x.method) && !(x.loc === 'pallet-town' && x.method === 'gift'));
     if (w) out.push({ dex: +dex, ...w });
   }
   return (catchCache[key] = out);
@@ -389,20 +550,26 @@ function foeRow(p, stage, party) {
 }
 
 const money = n => '₽' + Number(n).toLocaleString();
+// One trainer, open by default, with a "defeated" checkbox that counts toward the route's progress.
+// Rival battles depend on the starter you picked in Oak's Lab; with no pick yet the card asks for it.
 function trainerCard(t, stage, opts = {}) {
-  const s = cur();
-  const party = t.party || t.byStarter[s.starter];
-  const prize = typeof t.prize === 'object' ? t.prize[s.starter] : t.prize;
-  const ace = Math.max(...party.map(p => p.level));
-  const head = opts.title || `${t.class} ${t.name}`;
-  const meta = opts.meta || `${party.length} Pokémon · Lv ${ace} · ${money(prize)}`;
+  const s = cur(), mine = pickOf('starter');
+  const party = t.party || (mine && t.byStarter[mine]);
+  const prize = typeof t.prize === 'object' ? (mine ? t.prize[mine] : null) : t.prize;
+  const ace = party ? Math.max(...party.map(p => p.level)) : null;
+  const head = opts.title || (t.class === t.name ? t.name : `${t.class} ${t.name}`);
+  const meta = opts.where ? [opts.where, ace && `ace Lv ${ace}`].filter(Boolean).join(' · ')
+    : party ? `${party.length} Pokémon · Lv ${ace} · ${money(prize)}` : 'Team depends on your starter';
   const info = [t.rewards && `Reward: ${t.rewards.map(esc).join(', ')}`, t.uses && `Uses ${t.uses.map(esc).join(', ')}`,
     t.double && 'Double battle'].filter(Boolean).join(' · ');
-  return `<details class="card trainer"><summary>${esc(head)} <span class="note">· ${esc(meta)}</span>${t.double ? ' <span class="tag">Double</span>' : ''}${t.rewards ? ' <span class="tag">Reward</span>' : ''}</summary>
+  const key = trainerKey(opts.loc, t), done = !!s.checks[key];
+  const rival = t.byStarter ? (mine ? `<p class="note">You picked ${esc(mine)}, so your rival has ${esc(RIVAL_OF[mine])}. <a href="#/loc/pallet-town">Change it in Oak's Lab</a>.</p>`
+    : `<p class="note"><b>Pick your starter to see this team.</b> Your rival takes the one that beats yours. Which did you choose in Professor Oak's Lab?</p>${starterChips()}`) : '';
+  return `<details class="card trainer ${done ? 'checked' : ''}" open><summary><input type="checkbox" class="tcheck" data-key="${esc(key)}" ${done ? 'checked' : ''} aria-label="Defeated ${esc(head)}"><span class="tname">${esc(head)}</span> <span class="note">· ${esc(meta)}</span>${t.double ? ' <span class="tag">Double</span>' : ''}${t.rewards ? ' <span class="tag">Reward</span>' : ''}</summary>
     ${info ? `<p class="note">${info}</p>` : ''}
-    ${t.note ? `<p class="note">${esc(t.note)}</p>` : ''}${opts.extra || ''}
-    ${party.map(p => foeRow(p, stage, party)).join('')}
-    ${cur().team.some(n => !teamMeta(n).level) ? '<p class="note">* Level not set in Battle plan, so it is assumed to match theirs.</p>' : ''}</details>`;
+    ${t.note && !t.byStarter ? `<p class="note">${esc(t.note)}</p>` : ''}${rival}${party ? opts.extra?.(party) || '' : ''}
+    ${party ? party.map(p => foeRow(p, stage, party)).join('') : ''}
+    ${party && cur().team.some(n => !teamMeta(n).level) ? '<p class="note">* Level not set in Battle plan, so it is assumed to match theirs.</p>' : ''}</details>`;
 }
 
 function renderPlanner() {
@@ -423,15 +590,13 @@ function renderPlanner() {
     <input type="search" id="teamq" placeholder="Add a Pokémon by name" list="monlist" style="margin-top:10px" ${s.team.length >= 6 ? 'disabled' : ''}>
     <datalist id="monlist">${state.dex.map(p => `<option value="${esc(p.name)}">`).join('')}</datalist>
     <datalist id="movelist">${moveNames.map(m => `<option value="${esc(m)}">`).join('')}</datalist>
-    <label class="note" style="display:block;margin-top:10px">Starter you picked (sets your rival's team):
-      <select id="starter">${['Bulbasaur', 'Charmander', 'Squirtle'].map(x => `<option ${s.starter === x ? 'selected' : ''}>${x}</option>`).join('')}</select></label></div>
+    <div class="note" style="margin-top:12px">Starter you picked in <a href="#/loc/pallet-town">Professor Oak's Lab</a> (sets your rival's team)${pickOf('starter') ? '' : ': <b class="bad">not picked yet</b>'}</div>
+    ${starterChips()}</div>
     <p class="note">Gym Leaders, rival battles, Giovanni, the Elite Four and the Champion in story order. Every other trainer is on its route page.</p>`;
   for (const t of state.trainers) {
-    const party = t.party || t.byStarter[s.starter];
-    const ace = Math.max(...party.map(p => p.level));
     html += trainerCard(t, stageOf(t.stage || t.location), {
-      title: t.name, meta: `${t.where} · ${t.specialty} · ace Lv ${ace}`,
-      extra: `<p class="note">Types that hit most of this team: ${bestTypesAgainst(party).map(g => typeTag(g.t)).join(' ')}</p>`
+      title: t.name, where: `${t.where} · ${t.specialty}`, loc: t.location,
+      extra: party => `<p class="note">Types that hit most of this team: ${bestTypesAgainst(party).map(g => typeTag(g.t)).join(' ')}</p>`
     });
   }
   html += `<p class="note">Damage uses the Gen 3 formula with your levels and moves, their real moves and IVs, average IVs for yours and no EVs. Critical hits, abilities, held items and stat changes are not counted, so treat close calls with care.</p>`;
@@ -448,7 +613,6 @@ function renderPlanner() {
     meta.moves = [0, 1, 2, 3].map(i => (meta.moves || [])[i] || '');
     meta.moves[k] = name; save(); renderPlanner();
   });
-  document.getElementById('starter').onchange = e => { s.starter = e.target.value; save(); renderPlanner(); };
   const q = document.getElementById('teamq');
   q.onchange = () => {
     const p = state.dex.find(x => x.name.toLowerCase() === q.value.trim().toLowerCase());
@@ -527,9 +691,13 @@ function exclusiveWhere(n) {
 }
 function renderExclusives() {
   const rows = state.dex.filter(p => availability(p.dex).kind === 'other');
+  const missed = state.dex.filter(p => availability(p.dex).kind === 'missed');
   view.innerHTML = `<div class="card note">Pokémon you can't catch or evolve in ${VNAME[V()]} but can in ${VNAME[OTHER[V()]]}. Trade for them, or evolve one you trade over.</div>
     <div class="card">${rows.map(p => checkRow(`dex:${p.dex}`, isCaught(p.dex), `#${String(p.dex).padStart(3, '0')} ${esc(p.name)} ${types(p.dex)}`,
-      exclusiveWhere(p.dex))).join('') || '<div class="empty">None.</div>'}</div>`;
+      exclusiveWhere(p.dex))).join('') || '<div class="empty">None.</div>'}</div>
+    <h2>Passed up by your picks</h2>
+    <div class="card"><p class="note">The starters, fossil and Dojo prize you didn't take. Trade for these from another game.</p>${missed.map(p => checkRow(`dex:${p.dex}`, isCaught(p.dex), `#${String(p.dex).padStart(3, '0')} ${esc(p.name)} ${types(p.dex)}`,
+      missedText(availability(p.dex)))).join('') || '<div class="empty">Nothing yet. Picks you make in the game show up here.</div>'}</div>`;
 }
 
 function renderSettings() {
@@ -677,7 +845,8 @@ function applyVersion() {
   document.documentElement.dataset.version = V();
   document.querySelectorAll('[data-version]').forEach(b => b.classList.toggle('on', b.dataset.version === V()));
 }
-function route() {
+function route(keepScroll) {
+  const y = window.scrollY;
   const [, page, id] = location.hash.split('/');
   if (page === 'loc') renderLocation(id);
   else if (page === 'dex') renderDex();
@@ -685,10 +854,11 @@ function route() {
   else if (page === 'tools') renderTools(id);
   else if (page === 'settings') renderSettings();
   else renderHome();
-  window.scrollTo(0, 0);
+  window.scrollTo(0, keepScroll ? y : 0);
 }
 
 view.addEventListener('change', e => {
+  if (e.target.dataset?.pick) return setPick(e.target.dataset.pick, e.target.value);
   const key = e.target.dataset?.key;
   if (!key) return;
   const s = cur();
@@ -698,7 +868,12 @@ view.addEventListener('change', e => {
     view.querySelectorAll(`[data-key="dex:${d}"]`).forEach(x => { x.checked = e.target.checked; x.closest('.row').classList.toggle('checked', e.target.checked); });
   } else if (e.target.checked) s.checks[key] = true; else delete s.checks[key];
   save();
-  e.target.closest('.row').classList.toggle('checked', e.target.checked);
+  e.target.closest('.row, .trainer').classList.toggle('checked', e.target.checked);
+  if (key.includes(':trainer:')) { const h = [...view.querySelectorAll('h2')].find(x => x.textContent.startsWith('Trainers (')); if (h) h.textContent = h.textContent.replace(/\(\d+\//, `(${view.querySelectorAll('.tcheck:checked').length}/`); }
+});
+view.addEventListener('click', e => {
+  const id = e.target.dataset?.unpick;
+  if (id) setPick(id, null);
 });
 document.querySelectorAll('[data-version]').forEach(b => b.onclick = () => { state.progress.version = b.dataset.version; save(); applyVersion(); route(); });
 document.getElementById('back').onclick = () => { if (history.length > 1) history.back(); else location.hash = '#/'; };

@@ -569,7 +569,7 @@ for lid, tid, nm, badge, spec in KEY_BATTLES:
     t = find_trainer(lid, tid)
     trainers.append({**t, 'id': tid, 'name': nm, 'trainerName': t['name'], 'where': (locs[lid]['name'] + (f" {t['area']}" if t.get('area') and t['area'] != 'Outside' else '')),
                      'badge': badge, 'specialty': spec, 'location': lid,
-                     **({'note': 'Your rival picks the starter that beats yours. Set the starter you picked above.'} if 'byStarter' in t else {})})
+                     **({'note': 'Your rival takes the starter that beats yours.'} if 'byStarter' in t else {})})
 
 # ---------- write ----------
 os.makedirs(os.path.join(OUT, 'locations'), exist_ok=True)

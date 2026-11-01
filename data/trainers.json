@@ -69,7 +69,7 @@
   "badge": null,
   "specialty": "Mixed",
   "location": "pallet-town",
-  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+  "note": "Your rival takes the starter that beats yours."
  },
  {
   "class": "Rival",
@@ -191,7 +191,7 @@
   "badge": null,
   "specialty": "Mixed",
   "location": "route-22",
-  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+  "note": "Your rival takes the starter that beats yours."
  },
  {
   "class": "Leader",
@@ -532,7 +532,7 @@
   "badge": null,
   "specialty": "Mixed",
   "location": "cerulean-city",
-  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+  "note": "Your rival takes the starter that beats yours."
  },
  {
   "class": "Leader",
@@ -942,7 +942,7 @@
   "badge": null,
   "specialty": "Mixed",
   "location": "ss-anne",
-  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+  "note": "Your rival takes the starter that beats yours."
  },
  {
   "class": "Leader",
@@ -1626,7 +1626,7 @@
   "badge": null,
   "specialty": "Mixed",
   "location": "pokemon-tower",
-  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+  "note": "Your rival takes the starter that beats yours."
  },
  {
   "class": "Leader",
@@ -2159,7 +2159,7 @@
   "badge": null,
   "specialty": "Mixed",
   "location": "silph-co",
-  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+  "note": "Your rival takes the starter that beats yours."
  },
  {
   "class": "Boss",
@@ -3186,7 +3186,7 @@
   "badge": null,
   "specialty": "Mixed",
   "location": "route-22",
-  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+  "note": "Your rival takes the starter that beats yours."
  },
  {
   "class": "Elite Four",
@@ -4284,6 +4284,6 @@
   "badge": null,
   "specialty": "Mixed",
   "location": "pokemon-league",
-  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+  "note": "Your rival takes the starter that beats yours."
  }
 ]
