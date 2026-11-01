@@ -1,0 +1,11 @@
+{
+ "id": "seven-island",
+ "name": "Seven Island",
+ "encounters": [],
+ "items": [],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

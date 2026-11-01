@@ -1,0 +1,558 @@
+[
+ {
+  "id": "brock",
+  "name": "Brock",
+  "where": "Pewter City Gym",
+  "badge": "Boulder Badge",
+  "specialty": "Rock",
+  "location": "pewter-city",
+  "party": [
+   {
+    "dex": 74,
+    "name": "Geodude",
+    "level": 12,
+    "moves": [
+     {
+      "name": "Tackle",
+      "type": "Normal"
+     },
+     {
+      "name": "Defense Curl",
+      "type": "Normal"
+     }
+    ]
+   },
+   {
+    "dex": 95,
+    "name": "Onix",
+    "level": 14,
+    "moves": [
+     {
+      "name": "Tackle",
+      "type": "Normal"
+     },
+     {
+      "name": "Bind",
+      "type": "Normal"
+     },
+     {
+      "name": "Rock Tomb",
+      "type": "Rock"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "misty",
+  "name": "Misty",
+  "where": "Cerulean City Gym",
+  "badge": "Cascade Badge",
+  "specialty": "Water",
+  "location": "cerulean-city",
+  "party": [
+   {
+    "dex": 120,
+    "name": "Staryu",
+    "level": 18,
+    "moves": []
+   },
+   {
+    "dex": 121,
+    "name": "Starmie",
+    "level": 21,
+    "moves": []
+   }
+  ]
+ },
+ {
+  "id": "lt-surge",
+  "name": "Lt. Surge",
+  "where": "Vermilion City Gym",
+  "badge": "Thunder Badge",
+  "specialty": "Electric",
+  "location": "vermilion-city",
+  "party": [
+   {
+    "dex": 100,
+    "name": "Voltorb",
+    "level": 21,
+    "moves": []
+   },
+   {
+    "dex": 25,
+    "name": "Pikachu",
+    "level": 18,
+    "moves": []
+   },
+   {
+    "dex": 26,
+    "name": "Raichu",
+    "level": 24,
+    "moves": []
+   }
+  ]
+ },
+ {
+  "id": "erika",
+  "name": "Erika",
+  "where": "Celadon City Gym",
+  "badge": "Rainbow Badge",
+  "specialty": "Grass",
+  "location": "celadon-city",
+  "party": [
+   {
+    "dex": 71,
+    "name": "Victreebel",
+    "level": 29,
+    "moves": []
+   },
+   {
+    "dex": 114,
+    "name": "Tangela",
+    "level": 24,
+    "moves": []
+   },
+   {
+    "dex": 45,
+    "name": "Vileplume",
+    "level": 29,
+    "moves": []
+   }
+  ]
+ },
+ {
+  "id": "koga",
+  "name": "Koga",
+  "where": "Fuchsia City Gym",
+  "badge": "Soul Badge",
+  "specialty": "Poison",
+  "location": "fuchsia-city",
+  "party": [
+   {
+    "dex": 109,
+    "name": "Koffing",
+    "level": 37,
+    "moves": []
+   },
+   {
+    "dex": 89,
+    "name": "Muk",
+    "level": 39,
+    "moves": []
+   },
+   {
+    "dex": 109,
+    "name": "Koffing",
+    "level": 37,
+    "moves": []
+   },
+   {
+    "dex": 110,
+    "name": "Weezing",
+    "level": 43,
+    "moves": []
+   }
+  ]
+ },
+ {
+  "id": "sabrina",
+  "name": "Sabrina",
+  "where": "Saffron City Gym",
+  "badge": "Marsh Badge",
+  "specialty": "Psychic",
+  "location": "saffron-city",
+  "party": [
+   {
+    "dex": 64,
+    "name": "Kadabra",
+    "level": 38,
+    "moves": []
+   },
+   {
+    "dex": 122,
+    "name": "Mr. Mime",
+    "level": 37,
+    "moves": []
+   },
+   {
+    "dex": 49,
+    "name": "Venomoth",
+    "level": 38,
+    "moves": []
+   },
+   {
+    "dex": 65,
+    "name": "Alakazam",
+    "level": 43,
+    "moves": []
+   }
+  ]
+ },
+ {
+  "id": "blaine",
+  "name": "Blaine",
+  "where": "Cinnabar Island Gym",
+  "badge": "Volcano Badge",
+  "specialty": "Fire",
+  "location": "cinnabar-island",
+  "party": [
+   {
+    "dex": 58,
+    "name": "Growlithe",
+    "level": 42,
+    "moves": []
+   },
+   {
+    "dex": 77,
+    "name": "Ponyta",
+    "level": 40,
+    "moves": []
+   },
+   {
+    "dex": 78,
+    "name": "Rapidash",
+    "level": 42,
+    "moves": []
+   },
+   {
+    "dex": 59,
+    "name": "Arcanine",
+    "level": 47,
+    "moves": []
+   }
+  ]
+ },
+ {
+  "id": "giovanni",
+  "name": "Giovanni",
+  "where": "Viridian City Gym",
+  "badge": "Earth Badge",
+  "specialty": "Ground",
+  "location": "viridian-city",
+  "party": [
+   {
+    "dex": 111,
+    "name": "Rhyhorn",
+    "level": 45,
+    "moves": []
+   },
+   {
+    "dex": 51,
+    "name": "Dugtrio",
+    "level": 42,
+    "moves": []
+   },
+   {
+    "dex": 31,
+    "name": "Nidoqueen",
+    "level": 44,
+    "moves": []
+   },
+   {
+    "dex": 34,
+    "name": "Nidoking",
+    "level": 45,
+    "moves": []
+   },
+   {
+    "dex": 111,
+    "name": "Rhyhorn",
+    "level": 50,
+    "moves": []
+   }
+  ]
+ },
+ {
+  "id": "lorelei",
+  "name": "Lorelei",
+  "where": "Elite Four",
+  "badge": null,
+  "specialty": "Ice",
+  "location": "pokemon-league",
+  "party": [
+   {
+    "dex": 87,
+    "name": "Dewgong",
+    "level": 52,
+    "moves": []
+   },
+   {
+    "dex": 91,
+    "name": "Cloyster",
+    "level": 51,
+    "moves": []
+   },
+   {
+    "dex": 80,
+    "name": "Slowbro",
+    "level": 52,
+    "moves": []
+   },
+   {
+    "dex": 124,
+    "name": "Jynx",
+    "level": 54,
+    "moves": []
+   },
+   {
+    "dex": 131,
+    "name": "Lapras",
+    "level": 54,
+    "moves": [],
+    "item": "Sitrus Berry"
+   }
+  ]
+ },
+ {
+  "id": "bruno",
+  "name": "Bruno",
+  "where": "Elite Four",
+  "badge": null,
+  "specialty": "Fighting",
+  "location": "pokemon-league",
+  "party": [
+   {
+    "dex": 95,
+    "name": "Onix",
+    "level": 51,
+    "moves": []
+   },
+   {
+    "dex": 107,
+    "name": "Hitmonchan",
+    "level": 53,
+    "moves": []
+   },
+   {
+    "dex": 106,
+    "name": "Hitmonlee",
+    "level": 53,
+    "moves": []
+   },
+   {
+    "dex": 95,
+    "name": "Onix",
+    "level": 54,
+    "moves": []
+   },
+   {
+    "dex": 68,
+    "name": "Machamp",
+    "level": 56,
+    "moves": [],
+    "item": "Sitrus Berry"
+   }
+  ]
+ },
+ {
+  "id": "agatha",
+  "name": "Agatha",
+  "where": "Elite Four",
+  "badge": null,
+  "specialty": "Ghost",
+  "location": "pokemon-league",
+  "party": [
+   {
+    "dex": 94,
+    "name": "Gengar",
+    "level": 54,
+    "moves": []
+   },
+   {
+    "dex": 42,
+    "name": "Golbat",
+    "level": 54,
+    "moves": []
+   },
+   {
+    "dex": 93,
+    "name": "Haunter",
+    "level": 53,
+    "moves": []
+   },
+   {
+    "dex": 24,
+    "name": "Arbok",
+    "level": 56,
+    "moves": []
+   },
+   {
+    "dex": 94,
+    "name": "Gengar",
+    "level": 58,
+    "moves": [],
+    "item": "Sitrus Berry"
+   }
+  ]
+ },
+ {
+  "id": "lance",
+  "name": "Lance",
+  "where": "Elite Four",
+  "badge": null,
+  "specialty": "Dragon",
+  "location": "pokemon-league",
+  "party": [
+   {
+    "dex": 130,
+    "name": "Gyarados",
+    "level": 56,
+    "moves": []
+   },
+   {
+    "dex": 148,
+    "name": "Dragonair",
+    "level": 54,
+    "moves": []
+   },
+   {
+    "dex": 148,
+    "name": "Dragonair",
+    "level": 54,
+    "moves": []
+   },
+   {
+    "dex": 142,
+    "name": "Aerodactyl",
+    "level": 58,
+    "moves": []
+   },
+   {
+    "dex": 149,
+    "name": "Dragonite",
+    "level": 60,
+    "moves": [],
+    "item": "Sitrus Berry"
+   }
+  ]
+ },
+ {
+  "id": "champion",
+  "name": "Champion (your rival)",
+  "where": "Pokémon League",
+  "badge": null,
+  "specialty": "Mixed",
+  "location": "pokemon-league",
+  "byStarter": {
+   "Bulbasaur": [
+    {
+     "dex": 18,
+     "name": "Pidgeot",
+     "level": 59,
+     "moves": []
+    },
+    {
+     "dex": 65,
+     "name": "Alakazam",
+     "level": 57,
+     "moves": []
+    },
+    {
+     "dex": 112,
+     "name": "Rhydon",
+     "level": 59,
+     "moves": []
+    },
+    {
+     "dex": 103,
+     "name": "Exeggutor",
+     "level": 59,
+     "moves": []
+    },
+    {
+     "dex": 130,
+     "name": "Gyarados",
+     "level": 61,
+     "moves": []
+    },
+    {
+     "dex": 6,
+     "name": "Charizard",
+     "level": 63,
+     "moves": [],
+     "item": "Sitrus Berry"
+    }
+   ],
+   "Charmander": [
+    {
+     "dex": 18,
+     "name": "Pidgeot",
+     "level": 59,
+     "moves": []
+    },
+    {
+     "dex": 65,
+     "name": "Alakazam",
+     "level": 57,
+     "moves": []
+    },
+    {
+     "dex": 112,
+     "name": "Rhydon",
+     "level": 59,
+     "moves": []
+    },
+    {
+     "dex": 59,
+     "name": "Arcanine",
+     "level": 59,
+     "moves": []
+    },
+    {
+     "dex": 103,
+     "name": "Exeggutor",
+     "level": 61,
+     "moves": []
+    },
+    {
+     "dex": 9,
+     "name": "Blastoise",
+     "level": 63,
+     "moves": [],
+     "item": "Sitrus Berry"
+    }
+   ],
+   "Squirtle": [
+    {
+     "dex": 18,
+     "name": "Pidgeot",
+     "level": 59,
+     "moves": []
+    },
+    {
+     "dex": 65,
+     "name": "Alakazam",
+     "level": 57,
+     "moves": []
+    },
+    {
+     "dex": 112,
+     "name": "Rhydon",
+     "level": 59,
+     "moves": []
+    },
+    {
+     "dex": 130,
+     "name": "Gyarados",
+     "level": 59,
+     "moves": []
+    },
+    {
+     "dex": 59,
+     "name": "Arcanine",
+     "level": 61,
+     "moves": []
+    },
+    {
+     "dex": 3,
+     "name": "Venusaur",
+     "level": 63,
+     "moves": [],
+     "item": "Sitrus Berry"
+    }
+   ]
+  },
+  "note": "Your rival picks the starter that beats yours; choose the party for the starter YOU picked."
+ }
+]

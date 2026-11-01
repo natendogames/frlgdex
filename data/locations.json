@@ -1,0 +1,550 @@
+{
+ "locations": [
+  {
+   "id": "pallet-town",
+   "name": "Pallet Town",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/pallet-town.json"
+  },
+  {
+   "id": "route-1",
+   "name": "Route 1",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/route-1.json"
+  },
+  {
+   "id": "viridian-city",
+   "name": "Viridian City",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/viridian-city.json"
+  },
+  {
+   "id": "route-22",
+   "name": "Route 22",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/route-22.json"
+  },
+  {
+   "id": "route-2",
+   "name": "Route 2",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/route-2.json"
+  },
+  {
+   "id": "viridian-forest",
+   "name": "Viridian Forest",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/viridian-forest.json"
+  },
+  {
+   "id": "pewter-city",
+   "name": "Pewter City",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/pewter-city.json"
+  },
+  {
+   "id": "route-3",
+   "name": "Route 3",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/route-3.json"
+  },
+  {
+   "id": "mt-moon",
+   "name": "Mt. Moon",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/mt-moon.json"
+  },
+  {
+   "id": "route-4",
+   "name": "Route 4",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/route-4.json"
+  },
+  {
+   "id": "cerulean-city",
+   "name": "Cerulean City",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/cerulean-city.json"
+  },
+  {
+   "id": "route-24",
+   "name": "Route 24",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/route-24.json"
+  },
+  {
+   "id": "route-25",
+   "name": "Route 25",
+   "region": "Kanto: Badges 1–2",
+   "file": "locations/route-25.json"
+  },
+  {
+   "id": "route-5",
+   "name": "Route 5",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/route-5.json"
+  },
+  {
+   "id": "underground-path-north-south",
+   "name": "Underground Path (Routes 5–6)",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/underground-path-north-south.json"
+  },
+  {
+   "id": "route-6",
+   "name": "Route 6",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/route-6.json"
+  },
+  {
+   "id": "vermilion-city",
+   "name": "Vermilion City",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/vermilion-city.json"
+  },
+  {
+   "id": "ss-anne",
+   "name": "S.S. Anne",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/ss-anne.json"
+  },
+  {
+   "id": "route-11",
+   "name": "Route 11",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/route-11.json"
+  },
+  {
+   "id": "digletts-cave",
+   "name": "Diglett's Cave",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/digletts-cave.json"
+  },
+  {
+   "id": "route-9",
+   "name": "Route 9",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/route-9.json"
+  },
+  {
+   "id": "route-10",
+   "name": "Route 10",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/route-10.json"
+  },
+  {
+   "id": "rock-tunnel",
+   "name": "Rock Tunnel",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/rock-tunnel.json"
+  },
+  {
+   "id": "lavender-town",
+   "name": "Lavender Town",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/lavender-town.json"
+  },
+  {
+   "id": "route-8",
+   "name": "Route 8",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/route-8.json"
+  },
+  {
+   "id": "underground-path-east-west",
+   "name": "Underground Path (Routes 7–8)",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/underground-path-east-west.json"
+  },
+  {
+   "id": "route-7",
+   "name": "Route 7",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/route-7.json"
+  },
+  {
+   "id": "celadon-city",
+   "name": "Celadon City",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/celadon-city.json"
+  },
+  {
+   "id": "rocket-hideout",
+   "name": "Rocket Hideout",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/rocket-hideout.json"
+  },
+  {
+   "id": "pokemon-tower",
+   "name": "Pokémon Tower",
+   "region": "Kanto: Badges 3–4",
+   "file": "locations/pokemon-tower.json"
+  },
+  {
+   "id": "route-12",
+   "name": "Route 12",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/route-12.json"
+  },
+  {
+   "id": "route-13",
+   "name": "Route 13",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/route-13.json"
+  },
+  {
+   "id": "route-14",
+   "name": "Route 14",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/route-14.json"
+  },
+  {
+   "id": "route-15",
+   "name": "Route 15",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/route-15.json"
+  },
+  {
+   "id": "route-16",
+   "name": "Route 16",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/route-16.json"
+  },
+  {
+   "id": "route-17",
+   "name": "Route 17",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/route-17.json"
+  },
+  {
+   "id": "route-18",
+   "name": "Route 18",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/route-18.json"
+  },
+  {
+   "id": "fuchsia-city",
+   "name": "Fuchsia City",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/fuchsia-city.json"
+  },
+  {
+   "id": "safari-zone",
+   "name": "Safari Zone",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/safari-zone.json"
+  },
+  {
+   "id": "saffron-city",
+   "name": "Saffron City",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/saffron-city.json"
+  },
+  {
+   "id": "silph-co",
+   "name": "Silph Co.",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/silph-co.json"
+  },
+  {
+   "id": "power-plant",
+   "name": "Power Plant",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/power-plant.json"
+  },
+  {
+   "id": "route-19",
+   "name": "Route 19",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/route-19.json"
+  },
+  {
+   "id": "route-20",
+   "name": "Route 20",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/route-20.json"
+  },
+  {
+   "id": "seafoam-islands",
+   "name": "Seafoam Islands",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/seafoam-islands.json"
+  },
+  {
+   "id": "cinnabar-island",
+   "name": "Cinnabar Island",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/cinnabar-island.json"
+  },
+  {
+   "id": "pokemon-mansion",
+   "name": "Pokémon Mansion",
+   "region": "Kanto: Badges 5–7",
+   "file": "locations/pokemon-mansion.json"
+  },
+  {
+   "id": "one-island",
+   "name": "One Island",
+   "region": "Sevii Islands 1–3",
+   "file": "locations/one-island.json"
+  },
+  {
+   "id": "kindle-road",
+   "name": "Kindle Road",
+   "region": "Sevii Islands 1–3",
+   "file": "locations/kindle-road.json"
+  },
+  {
+   "id": "ember-spa",
+   "name": "Ember Spa",
+   "region": "Sevii Islands 1–3",
+   "file": "locations/ember-spa.json"
+  },
+  {
+   "id": "treasure-beach",
+   "name": "Treasure Beach",
+   "region": "Sevii Islands 1–3",
+   "file": "locations/treasure-beach.json"
+  },
+  {
+   "id": "mt-ember",
+   "name": "Mt. Ember",
+   "region": "Sevii Islands 1–3",
+   "file": "locations/mt-ember.json"
+  },
+  {
+   "id": "two-island",
+   "name": "Two Island",
+   "region": "Sevii Islands 1–3",
+   "file": "locations/two-island.json"
+  },
+  {
+   "id": "cape-brink",
+   "name": "Cape Brink",
+   "region": "Sevii Islands 1–3",
+   "file": "locations/cape-brink.json"
+  },
+  {
+   "id": "three-island",
+   "name": "Three Island",
+   "region": "Sevii Islands 1–3",
+   "file": "locations/three-island.json"
+  },
+  {
+   "id": "bond-bridge",
+   "name": "Bond Bridge",
+   "region": "Sevii Islands 1–3",
+   "file": "locations/bond-bridge.json"
+  },
+  {
+   "id": "berry-forest",
+   "name": "Berry Forest",
+   "region": "Sevii Islands 1–3",
+   "file": "locations/berry-forest.json"
+  },
+  {
+   "id": "three-isle-port",
+   "name": "Three Isle Port",
+   "region": "Sevii Islands 1–3",
+   "file": "locations/three-isle-port.json"
+  },
+  {
+   "id": "route-21",
+   "name": "Route 21",
+   "region": "Kanto: Badge 8 & League",
+   "file": "locations/route-21.json"
+  },
+  {
+   "id": "route-23",
+   "name": "Route 23",
+   "region": "Kanto: Badge 8 & League",
+   "file": "locations/route-23.json"
+  },
+  {
+   "id": "victory-road",
+   "name": "Victory Road",
+   "region": "Kanto: Badge 8 & League",
+   "file": "locations/victory-road.json"
+  },
+  {
+   "id": "indigo-plateau",
+   "name": "Indigo Plateau",
+   "region": "Kanto: Badge 8 & League",
+   "file": "locations/indigo-plateau.json"
+  },
+  {
+   "id": "pokemon-league",
+   "name": "Pokémon League",
+   "region": "Kanto: Badge 8 & League",
+   "file": "locations/pokemon-league.json"
+  },
+  {
+   "id": "cerulean-cave",
+   "name": "Cerulean Cave",
+   "region": "Post-game",
+   "file": "locations/cerulean-cave.json"
+  },
+  {
+   "id": "roaming",
+   "name": "Roaming Legendary",
+   "region": "Post-game",
+   "file": "locations/roaming.json"
+  },
+  {
+   "id": "three-isle-path",
+   "name": "Three Isle Path",
+   "region": "Post-game",
+   "file": "locations/three-isle-path.json"
+  },
+  {
+   "id": "four-island",
+   "name": "Four Island",
+   "region": "Post-game",
+   "file": "locations/four-island.json"
+  },
+  {
+   "id": "icefall-cave",
+   "name": "Icefall Cave",
+   "region": "Post-game",
+   "file": "locations/icefall-cave.json"
+  },
+  {
+   "id": "five-island",
+   "name": "Five Island",
+   "region": "Post-game",
+   "file": "locations/five-island.json"
+  },
+  {
+   "id": "five-isle-meadow",
+   "name": "Five Isle Meadow",
+   "region": "Post-game",
+   "file": "locations/five-isle-meadow.json"
+  },
+  {
+   "id": "memorial-pillar",
+   "name": "Memorial Pillar",
+   "region": "Post-game",
+   "file": "locations/memorial-pillar.json"
+  },
+  {
+   "id": "water-labyrinth",
+   "name": "Water Labyrinth",
+   "region": "Post-game",
+   "file": "locations/water-labyrinth.json"
+  },
+  {
+   "id": "resort-gorgeous",
+   "name": "Resort Gorgeous",
+   "region": "Post-game",
+   "file": "locations/resort-gorgeous.json"
+  },
+  {
+   "id": "rocket-warehouse",
+   "name": "Rocket Warehouse",
+   "region": "Post-game",
+   "file": "locations/rocket-warehouse.json"
+  },
+  {
+   "id": "lost-cave",
+   "name": "Lost Cave",
+   "region": "Post-game",
+   "file": "locations/lost-cave.json"
+  },
+  {
+   "id": "six-island",
+   "name": "Six Island",
+   "region": "Post-game",
+   "file": "locations/six-island.json"
+  },
+  {
+   "id": "water-path",
+   "name": "Water Path",
+   "region": "Post-game",
+   "file": "locations/water-path.json"
+  },
+  {
+   "id": "ruin-valley",
+   "name": "Ruin Valley",
+   "region": "Post-game",
+   "file": "locations/ruin-valley.json"
+  },
+  {
+   "id": "dotted-hole",
+   "name": "Dotted Hole",
+   "region": "Post-game",
+   "file": "locations/dotted-hole.json"
+  },
+  {
+   "id": "green-path",
+   "name": "Green Path",
+   "region": "Post-game",
+   "file": "locations/green-path.json"
+  },
+  {
+   "id": "pattern-bush",
+   "name": "Pattern Bush",
+   "region": "Post-game",
+   "file": "locations/pattern-bush.json"
+  },
+  {
+   "id": "outcast-island",
+   "name": "Outcast Island",
+   "region": "Post-game",
+   "file": "locations/outcast-island.json"
+  },
+  {
+   "id": "altering-cave",
+   "name": "Altering Cave",
+   "region": "Post-game",
+   "file": "locations/altering-cave.json"
+  },
+  {
+   "id": "seven-island",
+   "name": "Seven Island",
+   "region": "Post-game",
+   "file": "locations/seven-island.json"
+  },
+  {
+   "id": "trainer-tower",
+   "name": "Trainer Tower",
+   "region": "Post-game",
+   "file": "locations/trainer-tower.json"
+  },
+  {
+   "id": "canyon-entrance",
+   "name": "Canyon Entrance",
+   "region": "Post-game",
+   "file": "locations/canyon-entrance.json"
+  },
+  {
+   "id": "sevault-canyon",
+   "name": "Sevault Canyon",
+   "region": "Post-game",
+   "file": "locations/sevault-canyon.json"
+  },
+  {
+   "id": "tanoby-key",
+   "name": "Tanoby Key",
+   "region": "Post-game",
+   "file": "locations/tanoby-key.json"
+  },
+  {
+   "id": "tanoby-ruins",
+   "name": "Tanoby Ruins",
+   "region": "Post-game",
+   "file": "locations/tanoby-ruins.json"
+  },
+  {
+   "id": "navel-rock",
+   "name": "Navel Rock",
+   "region": "Event islands",
+   "file": "locations/navel-rock.json"
+  },
+  {
+   "id": "birth-island",
+   "name": "Birth Island",
+   "region": "Event islands",
+   "file": "locations/birth-island.json"
+  }
+ ]
+}

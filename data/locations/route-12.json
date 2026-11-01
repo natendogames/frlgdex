@@ -1,0 +1,259 @@
+{
+ "id": "route-12",
+ "name": "Route 12",
+ "encounters": [
+  {
+   "dex": 43,
+   "name": "Oddish",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22-26",
+   "rate": "35%"
+  },
+  {
+   "dex": 69,
+   "name": "Bellsprout",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22-26",
+   "rate": "35%"
+  },
+  {
+   "dex": 16,
+   "name": "Pidgey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "23-27",
+   "rate": "30%"
+  },
+  {
+   "dex": 48,
+   "name": "Venonat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "24-26",
+   "rate": "30%"
+  },
+  {
+   "dex": 44,
+   "name": "Gloom",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "28-30",
+   "rate": "5%"
+  },
+  {
+   "dex": 70,
+   "name": "Weepinbell",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "28-30",
+   "rate": "5%"
+  },
+  {
+   "dex": 72,
+   "name": "Tentacool",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-40",
+   "rate": "100%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "60%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "84%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "84%"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "1%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%"
+  },
+  {
+   "dex": 143,
+   "name": "Snorlax",
+   "method": "static",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30",
+   "notes": "One chance: save first"
+  }
+ ],
+ "items": [
+  {
+   "id": "outside-tm48",
+   "name": "TM48",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "outside-iron",
+   "name": "Iron",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-hyper-potion",
+   "name": "Hyper Potion",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-leftovers",
+   "name": "Leftovers",
+   "hidden": true,
+   "where": "Outside (underfoot)"
+  },
+  {
+   "id": "hidden-outside-rare-candy",
+   "name": "Rare Candy",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-fishing-house-super-rod",
+   "name": "Super Rod",
+   "from": "Fishing Guru",
+   "where": "Fishing House"
+  },
+  {
+   "id": "item-fishing-house-net-ball",
+   "name": "Net Ball",
+   "from": "Fishing Guru (show a record-size Magikarp)",
+   "where": "Fishing House"
+  },
+  {
+   "id": "item-north-entrance-2f-tm27",
+   "name": "TM27",
+   "from": "Girl upstairs",
+   "where": "North Entrance 2F"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

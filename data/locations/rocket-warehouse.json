@@ -1,0 +1,55 @@
+{
+ "id": "rocket-warehouse",
+ "name": "Rocket Warehouse",
+ "encounters": [],
+ "items": [
+  {
+   "id": "rocket-warehouse-big-pearl",
+   "name": "Big Pearl",
+   "hidden": false,
+   "where": "Rocket Warehouse"
+  },
+  {
+   "id": "rocket-warehouse-tm36",
+   "name": "TM36",
+   "hidden": false,
+   "where": "Rocket Warehouse"
+  },
+  {
+   "id": "rocket-warehouse-pearl",
+   "name": "Pearl",
+   "hidden": false,
+   "where": "Rocket Warehouse"
+  },
+  {
+   "id": "rocket-warehouse-up-grade",
+   "name": "Up-grade",
+   "hidden": false,
+   "where": "Rocket Warehouse"
+  },
+  {
+   "id": "hidden-rocket-warehouse-nest-ball",
+   "name": "Nest Ball",
+   "hidden": true,
+   "where": "Rocket Warehouse"
+  },
+  {
+   "id": "hidden-rocket-warehouse-net-ball",
+   "name": "Net Ball",
+   "hidden": true,
+   "where": "Rocket Warehouse"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-rocket-warehouse-sapphire",
+   "name": "Sapphire",
+   "from": "Gideon (after beating him)",
+   "where": "Rocket Warehouse"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "id": "underground-path-north-south",
+ "name": "Underground Path (Routes 5–6)",
+ "encounters": [
+  {
+   "dex": 29,
+   "name": "Nidoran♀",
+   "method": "trade",
+   "versions": [
+    "FR"
+   ],
+   "notes": "Trade: give Nidoran♂, get Nidoran♀ (\"Ms. Nido\") · Saige"
+  },
+  {
+   "dex": 32,
+   "name": "Nidoran♂",
+   "method": "trade",
+   "versions": [
+    "LG"
+   ],
+   "notes": "Trade: give Nidoran♀, get Nidoran♂ (\"Mr. Nido\") · Saige"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-north-south-tunnel-potion",
+   "name": "Potion",
+   "hidden": true,
+   "where": "North South Tunnel"
+  },
+  {
+   "id": "hidden-north-south-tunnel-antidote",
+   "name": "Antidote",
+   "hidden": true,
+   "where": "North South Tunnel"
+  },
+  {
+   "id": "hidden-north-south-tunnel-burn-heal",
+   "name": "Burn Heal",
+   "hidden": true,
+   "where": "North South Tunnel"
+  },
+  {
+   "id": "hidden-north-south-tunnel-awakening",
+   "name": "Awakening",
+   "hidden": true,
+   "where": "North South Tunnel"
+  },
+  {
+   "id": "hidden-north-south-tunnel-ice-heal",
+   "name": "Ice Heal",
+   "hidden": true,
+   "where": "North South Tunnel"
+  },
+  {
+   "id": "hidden-north-south-tunnel-parlyz-heal",
+   "name": "Parlyz Heal",
+   "hidden": true,
+   "where": "North South Tunnel"
+  },
+  {
+   "id": "hidden-north-south-tunnel-ether",
+   "name": "Ether",
+   "hidden": true,
+   "where": "North South Tunnel"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "trade-north-entrance-trade-give-nidoran-get-nidoran-ms-nido",
+   "name": "Trade: give Nidoran♂, get Nidoran♀ (\"Ms. Nido\")",
+   "from": "Saige",
+   "where": "North Entrance",
+   "versions": [
+    "FR"
+   ]
+  },
+  {
+   "id": "trade-north-entrance-trade-give-nidoran-get-nidoran-mr-nido",
+   "name": "Trade: give Nidoran♀, get Nidoran♂ (\"Mr. Nido\")",
+   "from": "Saige",
+   "where": "North Entrance",
+   "versions": [
+    "LG"
+   ]
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

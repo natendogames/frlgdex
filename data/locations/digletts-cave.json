@@ -1,0 +1,34 @@
+{
+ "id": "digletts-cave",
+ "name": "Diglett's Cave",
+ "encounters": [
+  {
+   "dex": 50,
+   "name": "Diglett",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-22",
+   "rate": "95%"
+  },
+  {
+   "dex": 51,
+   "name": "Dugtrio",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "29-31",
+   "rate": "5%"
+  }
+ ],
+ "items": [],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

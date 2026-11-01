@@ -1,0 +1,18 @@
+{
+ "id": "six-island",
+ "name": "Six Island",
+ "encounters": [],
+ "items": [
+  {
+   "id": "hidden-outside-leppa-berry",
+   "name": "Leppa Berry",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

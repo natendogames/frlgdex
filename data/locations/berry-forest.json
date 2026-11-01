@@ -1,0 +1,401 @@
+{
+ "id": "berry-forest",
+ "name": "Berry Forest",
+ "encounters": [
+  {
+   "dex": 17,
+   "name": "Pidgeotto",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%"
+  },
+  {
+   "dex": 44,
+   "name": "Gloom",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "35",
+   "rate": "20%"
+  },
+  {
+   "dex": 70,
+   "name": "Weepinbell",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "35",
+   "rate": "20%"
+  },
+  {
+   "dex": 16,
+   "name": "Pidgey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "10%"
+  },
+  {
+   "dex": 43,
+   "name": "Oddish",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30",
+   "rate": "10%"
+  },
+  {
+   "dex": 48,
+   "name": "Venonat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "34",
+   "rate": "10%"
+  },
+  {
+   "dex": 69,
+   "name": "Bellsprout",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30",
+   "rate": "10%"
+  },
+  {
+   "dex": 96,
+   "name": "Drowzee",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "34",
+   "rate": "10%"
+  },
+  {
+   "dex": 49,
+   "name": "Venomoth",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37-40",
+   "rate": "5%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "31",
+   "rate": "5%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "31",
+   "rate": "5%"
+  },
+  {
+   "dex": 97,
+   "name": "Hypno",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37-40",
+   "rate": "5%"
+  },
+  {
+   "dex": 102,
+   "name": "Exeggcute",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "35",
+   "rate": "5%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-40",
+   "rate": "95%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-40",
+   "rate": "95%"
+  },
+  {
+   "dex": 55,
+   "name": "Golduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "35-40",
+   "rate": "5%"
+  },
+  {
+   "dex": 80,
+   "name": "Slowbro",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "35-40",
+   "rate": "5%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%"
+  },
+  {
+   "dex": 119,
+   "name": "Seaking",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20-30",
+   "rate": "40%"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "5%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "5%"
+  },
+  {
+   "dex": 97,
+   "name": "Hypno",
+   "method": "static",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30",
+   "notes": "One chance: save first"
+  }
+ ],
+ "items": [
+  {
+   "id": "berry-forest-max-ether",
+   "name": "Max Ether",
+   "hidden": false,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "berry-forest-full-heal",
+   "name": "Full Heal",
+   "hidden": false,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "berry-forest-max-elixir",
+   "name": "Max Elixir",
+   "hidden": false,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-razz-berry",
+   "name": "Razz Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-bluk-berry",
+   "name": "Bluk Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-nanab-berry",
+   "name": "Nanab Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-wepear-berry",
+   "name": "Wepear Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-oran-berry",
+   "name": "Oran Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-cheri-berry",
+   "name": "Cheri Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-chesto-berry",
+   "name": "Chesto Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-pecha-berry",
+   "name": "Pecha Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-rawst-berry",
+   "name": "Rawst Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-aspear-berry",
+   "name": "Aspear Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-persim-berry",
+   "name": "Persim Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-pinap-berry",
+   "name": "Pinap Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  },
+  {
+   "id": "hidden-berry-forest-lum-berry",
+   "name": "Lum Berry",
+   "hidden": true,
+   "where": "Berry Forest"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-berry-forest-iapapa-berry",
+   "name": "Iapapa Berry",
+   "from": "Lostelle (when you find her)",
+   "where": "Berry Forest"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

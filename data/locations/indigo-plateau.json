@@ -1,0 +1,11 @@
+{
+ "id": "indigo-plateau",
+ "name": "Indigo Plateau",
+ "encounters": [],
+ "items": [],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

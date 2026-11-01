@@ -1,0 +1,253 @@
+{
+ "id": "pokemon-tower",
+ "name": "Pokémon Tower",
+ "encounters": [
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "13-19",
+   "rate": "90%",
+   "area": "3F"
+  },
+  {
+   "dex": 104,
+   "name": "Cubone",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-17",
+   "rate": "9%",
+   "area": "3F"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20",
+   "rate": "1%",
+   "area": "3F"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "13-19",
+   "rate": "86%",
+   "area": "4F"
+  },
+  {
+   "dex": 104,
+   "name": "Cubone",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-17",
+   "rate": "9%",
+   "area": "4F"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20",
+   "rate": "5%",
+   "area": "4F"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "13-19",
+   "rate": "86%",
+   "area": "5F"
+  },
+  {
+   "dex": 104,
+   "name": "Cubone",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-17",
+   "rate": "9%",
+   "area": "5F"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20",
+   "rate": "5%",
+   "area": "5F"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "14-19",
+   "rate": "85%",
+   "area": "6F"
+  },
+  {
+   "dex": 104,
+   "name": "Cubone",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "17-19",
+   "rate": "9%",
+   "area": "6F"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "21-23",
+   "rate": "6%",
+   "area": "6F"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-19",
+   "rate": "75%",
+   "area": "7F"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "23-25",
+   "rate": "15%",
+   "area": "7F"
+  },
+  {
+   "dex": 104,
+   "name": "Cubone",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "17-19",
+   "rate": "10%",
+   "area": "7F"
+  }
+ ],
+ "items": [
+  {
+   "id": "3f-escape-rope",
+   "name": "Escape Rope",
+   "hidden": false,
+   "where": "3F"
+  },
+  {
+   "id": "4f-elixir",
+   "name": "Elixir",
+   "hidden": false,
+   "where": "4F"
+  },
+  {
+   "id": "4f-awakening",
+   "name": "Awakening",
+   "hidden": false,
+   "where": "4F"
+  },
+  {
+   "id": "4f-great-ball",
+   "name": "Great Ball",
+   "hidden": false,
+   "where": "4F"
+  },
+  {
+   "id": "5f-nugget",
+   "name": "Nugget",
+   "hidden": false,
+   "where": "5F"
+  },
+  {
+   "id": "5f-cleanse-tag",
+   "name": "Cleanse Tag",
+   "hidden": false,
+   "where": "5F"
+  },
+  {
+   "id": "hidden-5f-big-mushroom",
+   "name": "Big Mushroom",
+   "hidden": true,
+   "where": "5F"
+  },
+  {
+   "id": "6f-rare-candy",
+   "name": "Rare Candy",
+   "hidden": false,
+   "where": "6F"
+  },
+  {
+   "id": "6f-x-accuracy",
+   "name": "X Accuracy",
+   "hidden": false,
+   "where": "6F"
+  },
+  {
+   "id": "hidden-7f-soothe-bell",
+   "name": "Soothe Bell",
+   "hidden": true,
+   "where": "7F (underfoot)"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

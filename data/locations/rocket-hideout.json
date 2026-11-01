@@ -1,0 +1,121 @@
+{
+ "id": "rocket-hideout",
+ "name": "Rocket Hideout",
+ "encounters": [],
+ "items": [
+  {
+   "id": "b1f-escape-rope",
+   "name": "Escape Rope",
+   "hidden": false,
+   "where": "B1F"
+  },
+  {
+   "id": "b1f-hyper-potion",
+   "name": "Hyper Potion",
+   "hidden": false,
+   "where": "B1F"
+  },
+  {
+   "id": "hidden-b1f-pp-up",
+   "name": "PP Up",
+   "hidden": true,
+   "where": "B1F"
+  },
+  {
+   "id": "b2f-x-speed",
+   "name": "X Speed",
+   "hidden": false,
+   "where": "B2F"
+  },
+  {
+   "id": "b2f-moon-stone",
+   "name": "Moon Stone",
+   "hidden": false,
+   "where": "B2F"
+  },
+  {
+   "id": "b2f-tm12",
+   "name": "TM12",
+   "hidden": false,
+   "where": "B2F"
+  },
+  {
+   "id": "b2f-super-potion",
+   "name": "Super Potion",
+   "hidden": false,
+   "where": "B2F"
+  },
+  {
+   "id": "b3f-rare-candy",
+   "name": "Rare Candy",
+   "hidden": false,
+   "where": "B3F"
+  },
+  {
+   "id": "b3f-tm21",
+   "name": "TM21",
+   "hidden": false,
+   "where": "B3F"
+  },
+  {
+   "id": "b3f-blackglasses",
+   "name": "Blackglasses",
+   "hidden": false,
+   "where": "B3F"
+  },
+  {
+   "id": "hidden-b3f-nugget",
+   "name": "Nugget",
+   "hidden": true,
+   "where": "B3F"
+  },
+  {
+   "id": "b4f-tm49",
+   "name": "TM49",
+   "hidden": false,
+   "where": "B4F"
+  },
+  {
+   "id": "b4f-max-ether",
+   "name": "Max Ether",
+   "hidden": false,
+   "where": "B4F"
+  },
+  {
+   "id": "b4f-calcium",
+   "name": "Calcium",
+   "hidden": false,
+   "where": "B4F"
+  },
+  {
+   "id": "hidden-b4f-nest-ball",
+   "name": "Nest Ball",
+   "hidden": true,
+   "where": "B4F"
+  },
+  {
+   "id": "hidden-b4f-net-ball",
+   "name": "Net Ball",
+   "hidden": true,
+   "where": "B4F"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-b4f-silph-scope",
+   "name": "Silph Scope",
+   "from": "Giovanni drops it",
+   "where": "B4F"
+  },
+  {
+   "id": "item-b4f-lift-key",
+   "name": "Lift Key",
+   "from": "Rocket Grunt drops it",
+   "where": "B4F"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

@@ -1,0 +1,260 @@
+{
+ "id": "route-24",
+ "name": "Route 24",
+ "encounters": [
+  {
+   "dex": 43,
+   "name": "Oddish",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "12-14",
+   "rate": "25%"
+  },
+  {
+   "dex": 69,
+   "name": "Bellsprout",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "12-14",
+   "rate": "25%"
+  },
+  {
+   "dex": 10,
+   "name": "Caterpie",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "7",
+   "rate": "20%"
+  },
+  {
+   "dex": 13,
+   "name": "Weedle",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "7",
+   "rate": "20%"
+  },
+  {
+   "dex": 16,
+   "name": "Pidgey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "11-13",
+   "rate": "15%"
+  },
+  {
+   "dex": 63,
+   "name": "Abra",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "8-12",
+   "rate": "15%"
+  },
+  {
+   "dex": 11,
+   "name": "Metapod",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "8",
+   "rate": "4%"
+  },
+  {
+   "dex": 14,
+   "name": "Kakuna",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "8",
+   "rate": "4%"
+  },
+  {
+   "dex": 11,
+   "name": "Metapod",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "8",
+   "rate": "1%"
+  },
+  {
+   "dex": 14,
+   "name": "Kakuna",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "8",
+   "rate": "1%"
+  },
+  {
+   "dex": 72,
+   "name": "Tentacool",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-40",
+   "rate": "100%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "60%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "84%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "84%"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "1%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%"
+  }
+ ],
+ "items": [
+  {
+   "id": "outside-tm45",
+   "name": "TM45",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-pecha-berry",
+   "name": "Pecha Berry",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-outside-nugget",
+   "name": "Nugget",
+   "from": "Rocket at the end of Nugget Bridge (after beating him)",
+   "where": "Outside"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

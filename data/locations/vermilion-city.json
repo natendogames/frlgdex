@@ -1,0 +1,224 @@
+{
+ "id": "vermilion-city",
+ "name": "Vermilion City",
+ "encounters": [
+  {
+   "dex": 72,
+   "name": "Tentacool",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-40",
+   "rate": "100%",
+   "area": "Outside"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "Outside"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "Outside"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Outside"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "44%",
+   "area": "Outside"
+  },
+  {
+   "dex": 90,
+   "name": "Shellder",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "Outside"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "Outside"
+  },
+  {
+   "dex": 120,
+   "name": "Staryu",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "Outside"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "4%",
+   "area": "Outside"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "Outside"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "Outside"
+  },
+  {
+   "dex": 83,
+   "name": "Farfetch'd",
+   "method": "trade",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "area": "House 2",
+   "notes": "Trade: give Spearow, get Farfetch'd (\"Ch'ding\") · Elyssa"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-outside-max-ether",
+   "name": "Max Ether",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-gym-tm34",
+   "name": "TM34",
+   "from": "Lt. Surge (after winning)",
+   "where": "Gym"
+  },
+  {
+   "id": "item-house-1-old-rod",
+   "name": "Old Rod",
+   "from": "Fishing Guru",
+   "where": "House 1"
+  },
+  {
+   "id": "trade-house-2-trade-give-spearow-get-farfetch-d-ch-ding",
+   "name": "Trade: give Spearow, get Farfetch'd (\"Ch'ding\")",
+   "from": "Elyssa",
+   "where": "House 2"
+  },
+  {
+   "id": "item-pok-mon-fan-club-bike-voucher",
+   "name": "Bike Voucher",
+   "from": "Fan Club Chairman (listen to his story)",
+   "where": "Pokémon Fan Club"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

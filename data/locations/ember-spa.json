@@ -1,0 +1,18 @@
+{
+ "id": "ember-spa",
+ "name": "Ember Spa",
+ "encounters": [],
+ "items": [],
+ "gifts": [
+  {
+   "id": "item-kindle-road-ember-spa-hm06",
+   "name": "HM06",
+   "from": "Man at the Ember Spa",
+   "where": "Kindle Road Ember Spa"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

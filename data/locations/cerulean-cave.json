@@ -1,0 +1,739 @@
+{
+ "id": "cerulean-cave",
+ "name": "Cerulean Cave",
+ "encounters": [
+  {
+   "dex": 47,
+   "name": "Parasect",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "49-58",
+   "rate": "25%",
+   "area": "1F"
+  },
+  {
+   "dex": 82,
+   "name": "Magneton",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "49",
+   "rate": "20%",
+   "area": "1F"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "46-55",
+   "rate": "14%",
+   "area": "1F"
+  },
+  {
+   "dex": 57,
+   "name": "Primeape",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "52-61",
+   "rate": "11%",
+   "area": "1F"
+  },
+  {
+   "dex": 132,
+   "name": "Ditto",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "52-61",
+   "rate": "11%",
+   "area": "1F"
+  },
+  {
+   "dex": 67,
+   "name": "Machoke",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "46",
+   "rate": "10%",
+   "area": "1F"
+  },
+  {
+   "dex": 101,
+   "name": "Electrode",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "58",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 202,
+   "name": "Wobbuffet",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "55",
+   "rate": "4%",
+   "area": "1F"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30-50",
+   "rate": "65%",
+   "area": "1F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30-50",
+   "rate": "65%",
+   "area": "1F"
+  },
+  {
+   "dex": 55,
+   "name": "Golduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "40-55",
+   "rate": "35%",
+   "area": "1F"
+  },
+  {
+   "dex": 80,
+   "name": "Slowbro",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "40-55",
+   "rate": "35%",
+   "area": "1F"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "1F"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "1F"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "1F"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "1F"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "1F"
+  },
+  {
+   "dex": 61,
+   "name": "Poliwhirl",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20-30",
+   "rate": "40%",
+   "area": "1F"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%",
+   "area": "1F"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30-50",
+   "rate": "65%",
+   "area": "1F"
+  },
+  {
+   "dex": 75,
+   "name": "Graveler",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "40-55",
+   "rate": "35%",
+   "area": "1F"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "49-58",
+   "rate": "25%",
+   "area": "2F"
+  },
+  {
+   "dex": 67,
+   "name": "Machoke",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "49",
+   "rate": "20%",
+   "area": "2F"
+  },
+  {
+   "dex": 47,
+   "name": "Parasect",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "52-61",
+   "rate": "14%",
+   "area": "2F"
+  },
+  {
+   "dex": 64,
+   "name": "Kadabra",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "55-64",
+   "rate": "11%",
+   "area": "2F"
+  },
+  {
+   "dex": 132,
+   "name": "Ditto",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "55-64",
+   "rate": "11%",
+   "area": "2F"
+  },
+  {
+   "dex": 82,
+   "name": "Magneton",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "52",
+   "rate": "10%",
+   "area": "2F"
+  },
+  {
+   "dex": 202,
+   "name": "Wobbuffet",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "58",
+   "rate": "5%",
+   "area": "2F"
+  },
+  {
+   "dex": 101,
+   "name": "Electrode",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "61",
+   "rate": "4%",
+   "area": "2F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "35-55",
+   "rate": "65%",
+   "area": "2F"
+  },
+  {
+   "dex": 75,
+   "name": "Graveler",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "45-60",
+   "rate": "35%",
+   "area": "2F"
+  },
+  {
+   "dex": 64,
+   "name": "Kadabra",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "58-67",
+   "rate": "25%",
+   "area": "B1F"
+  },
+  {
+   "dex": 132,
+   "name": "Ditto",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "58-67",
+   "rate": "25%",
+   "area": "B1F"
+  },
+  {
+   "dex": 47,
+   "name": "Parasect",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "55-64",
+   "rate": "14%",
+   "area": "B1F"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "52-61",
+   "rate": "11%",
+   "area": "B1F"
+  },
+  {
+   "dex": 67,
+   "name": "Machoke",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "52",
+   "rate": "10%",
+   "area": "B1F"
+  },
+  {
+   "dex": 82,
+   "name": "Magneton",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "55",
+   "rate": "10%",
+   "area": "B1F"
+  },
+  {
+   "dex": 101,
+   "name": "Electrode",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "64",
+   "rate": "4%",
+   "area": "B1F"
+  },
+  {
+   "dex": 202,
+   "name": "Wobbuffet",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "61",
+   "rate": "1%",
+   "area": "B1F"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "40-60",
+   "rate": "65%",
+   "area": "B1F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "40-60",
+   "rate": "65%",
+   "area": "B1F"
+  },
+  {
+   "dex": 55,
+   "name": "Golduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "50-65",
+   "rate": "35%",
+   "area": "B1F"
+  },
+  {
+   "dex": 80,
+   "name": "Slowbro",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "50-65",
+   "rate": "35%",
+   "area": "B1F"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "B1F"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "B1F"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "B1F"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "B1F"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "B1F"
+  },
+  {
+   "dex": 61,
+   "name": "Poliwhirl",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20-30",
+   "rate": "40%",
+   "area": "B1F"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "16%",
+   "area": "B1F"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-25",
+   "rate": "4%",
+   "area": "B1F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "4%",
+   "area": "B1F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "40-60",
+   "rate": "65%",
+   "area": "B1F"
+  },
+  {
+   "dex": 75,
+   "name": "Graveler",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "50-65",
+   "rate": "35%",
+   "area": "B1F"
+  },
+  {
+   "dex": 150,
+   "name": "Mewtwo",
+   "method": "static",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "70",
+   "area": "B1F",
+   "notes": "One chance: save first"
+  }
+ ],
+ "items": [
+  {
+   "id": "1f-nugget",
+   "name": "Nugget",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "1f-full-restore",
+   "name": "Full Restore",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "1f-max-elixir",
+   "name": "Max Elixir",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "hidden-1f-ultra-ball",
+   "name": "Ultra Ball",
+   "hidden": true,
+   "where": "1F"
+  },
+  {
+   "id": "2f-pp-up",
+   "name": "PP Up",
+   "hidden": false,
+   "where": "2F"
+  },
+  {
+   "id": "2f-ultra-ball",
+   "name": "Ultra Ball",
+   "hidden": false,
+   "where": "2F"
+  },
+  {
+   "id": "2f-full-restore",
+   "name": "Full Restore",
+   "hidden": false,
+   "where": "2F"
+  },
+  {
+   "id": "b1f-ultra-ball",
+   "name": "Ultra Ball",
+   "hidden": false,
+   "where": "B1F"
+  },
+  {
+   "id": "b1f-max-revive",
+   "name": "Max Revive",
+   "hidden": false,
+   "where": "B1F"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

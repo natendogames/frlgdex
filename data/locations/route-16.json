@@ -1,0 +1,87 @@
+{
+ "id": "route-16",
+ "name": "Route 16",
+ "encounters": [
+  {
+   "dex": 84,
+   "name": "Doduo",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "18-22",
+   "rate": "35%"
+  },
+  {
+   "dex": 19,
+   "name": "Rattata",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "18-22",
+   "rate": "30%"
+  },
+  {
+   "dex": 21,
+   "name": "Spearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20-22",
+   "rate": "30%"
+  },
+  {
+   "dex": 20,
+   "name": "Raticate",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "23-25",
+   "rate": "5%"
+  },
+  {
+   "dex": 143,
+   "name": "Snorlax",
+   "method": "static",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30",
+   "notes": "One chance: save first"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-outside-leftovers",
+   "name": "Leftovers",
+   "hidden": true,
+   "where": "Outside (underfoot)"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-house-hm02",
+   "name": "HM02",
+   "from": "Woman in the house behind a Cut tree",
+   "where": "House"
+  },
+  {
+   "id": "item-north-entrance-2f-amulet-coin",
+   "name": "Amulet Coin",
+   "from": "Professor Oak's aide (needs enough Pokédex entries)",
+   "where": "North Entrance 2F"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

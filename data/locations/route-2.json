@@ -1,0 +1,97 @@
+{
+ "id": "route-2",
+ "name": "Route 2",
+ "encounters": [
+  {
+   "dex": 16,
+   "name": "Pidgey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "2-5",
+   "rate": "45%",
+   "area": "Outside"
+  },
+  {
+   "dex": 19,
+   "name": "Rattata",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "2-5",
+   "rate": "45%",
+   "area": "Outside"
+  },
+  {
+   "dex": 10,
+   "name": "Caterpie",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "4-5",
+   "rate": "5%",
+   "area": "Outside"
+  },
+  {
+   "dex": 13,
+   "name": "Weedle",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "4-5",
+   "rate": "5%",
+   "area": "Outside"
+  },
+  {
+   "dex": 122,
+   "name": "Mr. Mime",
+   "method": "trade",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "area": "House",
+   "notes": "Trade: give Abra, get Mr. Mime (\"Mimien\") · Reyley"
+  }
+ ],
+ "items": [
+  {
+   "id": "outside-ether",
+   "name": "Ether",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "outside-parlyz-heal",
+   "name": "Parlyz Heal",
+   "hidden": false,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-east-building-hm05",
+   "name": "HM05",
+   "from": "Professor Oak's aide (needs enough Pokédex entries)",
+   "where": "East Building"
+  },
+  {
+   "id": "trade-house-trade-give-abra-get-mr-mime-mimien",
+   "name": "Trade: give Abra, get Mr. Mime (\"Mimien\")",
+   "from": "Reyley",
+   "where": "House"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

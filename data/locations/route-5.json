@@ -1,0 +1,54 @@
+{
+ "id": "route-5",
+ "name": "Route 5",
+ "encounters": [
+  {
+   "dex": 16,
+   "name": "Pidgey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "13-16",
+   "rate": "40%"
+  },
+  {
+   "dex": 52,
+   "name": "Meowth",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "10-16",
+   "rate": "35%"
+  },
+  {
+   "dex": 43,
+   "name": "Oddish",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "13-16",
+   "rate": "25%"
+  },
+  {
+   "dex": 69,
+   "name": "Bellsprout",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "13-16",
+   "rate": "25%"
+  }
+ ],
+ "items": [],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

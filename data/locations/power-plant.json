@@ -1,0 +1,140 @@
+{
+ "id": "power-plant",
+ "name": "Power Plant",
+ "encounters": [
+  {
+   "dex": 81,
+   "name": "Magnemite",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "22-25",
+   "rate": "30%"
+  },
+  {
+   "dex": 100,
+   "name": "Voltorb",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "22-25",
+   "rate": "30%"
+  },
+  {
+   "dex": 25,
+   "name": "Pikachu",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "22-26",
+   "rate": "25%"
+  },
+  {
+   "dex": 82,
+   "name": "Magneton",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "31-34",
+   "rate": "15%"
+  },
+  {
+   "dex": 82,
+   "name": "Magneton",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "31-34",
+   "rate": "10%"
+  },
+  {
+   "dex": 125,
+   "name": "Electabuzz",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "32-35",
+   "rate": "5%"
+  },
+  {
+   "dex": 145,
+   "name": "Zapdos",
+   "method": "static",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "50",
+   "notes": "One chance: save first"
+  },
+  {
+   "dex": 101,
+   "name": "Electrode",
+   "method": "static",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "34",
+   "notes": "One chance: save first"
+  }
+ ],
+ "items": [
+  {
+   "id": "outside-max-potion",
+   "name": "Max Potion",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "outside-tm17",
+   "name": "TM17",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "outside-tm25",
+   "name": "TM25",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "outside-thunderstone",
+   "name": "Thunderstone",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "outside-elixir",
+   "name": "Elixir",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-max-elixir",
+   "name": "Max Elixir",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-thunderstone",
+   "name": "Thunderstone",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "id": "mt-moon",
+ "name": "Mt. Moon",
+ "encounters": [
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "7-10",
+   "rate": "69%",
+   "area": "1F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "7-9",
+   "rate": "25%",
+   "area": "1F"
+  },
+  {
+   "dex": 46,
+   "name": "Paras",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "8",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 35,
+   "name": "Clefairy",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "8",
+   "rate": "1%",
+   "area": "1F"
+  },
+  {
+   "dex": 46,
+   "name": "Paras",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-10",
+   "rate": "100%",
+   "area": "B1F"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "8-11",
+   "rate": "49%",
+   "area": "B2F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "9-10",
+   "rate": "30%",
+   "area": "B2F"
+  },
+  {
+   "dex": 46,
+   "name": "Paras",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "10-12",
+   "rate": "15%",
+   "area": "B2F"
+  },
+  {
+   "dex": 35,
+   "name": "Clefairy",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "10-12",
+   "rate": "6%",
+   "area": "B2F"
+  }
+ ],
+ "items": [
+  {
+   "id": "1f-parlyz-heal",
+   "name": "Parlyz Heal",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "1f-tm09",
+   "name": "TM09",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "1f-potion",
+   "name": "Potion",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "1f-rare-candy",
+   "name": "Rare Candy",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "1f-escape-rope",
+   "name": "Escape Rope",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "1f-moon-stone",
+   "name": "Moon Stone",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "hidden-b1f-tinymushroom",
+   "name": "Tinymushroom",
+   "hidden": true,
+   "where": "B1F"
+  },
+  {
+   "id": "hidden-b1f-tinymushroom-2",
+   "name": "Tinymushroom",
+   "hidden": true,
+   "where": "B1F"
+  },
+  {
+   "id": "hidden-b1f-tinymushroom-3",
+   "name": "Tinymushroom",
+   "hidden": true,
+   "where": "B1F"
+  },
+  {
+   "id": "hidden-b1f-big-mushroom",
+   "name": "Big Mushroom",
+   "hidden": true,
+   "where": "B1F"
+  },
+  {
+   "id": "hidden-b1f-big-mushroom-2",
+   "name": "Big Mushroom",
+   "hidden": true,
+   "where": "B1F"
+  },
+  {
+   "id": "hidden-b1f-big-mushroom-3",
+   "name": "Big Mushroom",
+   "hidden": true,
+   "where": "B1F"
+  },
+  {
+   "id": "b2f-star-piece",
+   "name": "Star Piece",
+   "hidden": false,
+   "where": "B2F"
+  },
+  {
+   "id": "b2f-tm46",
+   "name": "TM46",
+   "hidden": false,
+   "where": "B2F"
+  },
+  {
+   "id": "b2f-revive",
+   "name": "Revive",
+   "hidden": false,
+   "where": "B2F"
+  },
+  {
+   "id": "b2f-antidote",
+   "name": "Antidote",
+   "hidden": false,
+   "where": "B2F"
+  },
+  {
+   "id": "hidden-b2f-moon-stone",
+   "name": "Moon Stone",
+   "hidden": true,
+   "where": "B2F"
+  },
+  {
+   "id": "hidden-b2f-ether",
+   "name": "Ether",
+   "hidden": true,
+   "where": "B2F"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-b2f-dome-fossil",
+   "name": "Dome Fossil",
+   "from": "Pick one fossil after beating the Super Nerd",
+   "where": "B2F"
+  },
+  {
+   "id": "item-b2f-helix-fossil",
+   "name": "Helix Fossil",
+   "from": "Pick one fossil after beating the Super Nerd",
+   "where": "B2F"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

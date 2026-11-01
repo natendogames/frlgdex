@@ -1,0 +1,23 @@
+{
+ "id": "birth-island",
+ "name": "Birth Island",
+ "encounters": [
+  {
+   "dex": 386,
+   "name": "Deoxys",
+   "method": "static",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30",
+   "notes": "One chance: save first"
+  }
+ ],
+ "items": [],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

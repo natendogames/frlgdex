@@ -1,0 +1,110 @@
+{
+ "id": "route-15",
+ "name": "Route 15",
+ "encounters": [
+  {
+   "dex": 43,
+   "name": "Oddish",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22-26",
+   "rate": "35%"
+  },
+  {
+   "dex": 69,
+   "name": "Bellsprout",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22-26",
+   "rate": "35%"
+  },
+  {
+   "dex": 48,
+   "name": "Venonat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "24-26",
+   "rate": "30%"
+  },
+  {
+   "dex": 16,
+   "name": "Pidgey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-27",
+   "rate": "20%"
+  },
+  {
+   "dex": 17,
+   "name": "Pidgeotto",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "29",
+   "rate": "5%"
+  },
+  {
+   "dex": 44,
+   "name": "Gloom",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "28-30",
+   "rate": "5%"
+  },
+  {
+   "dex": 70,
+   "name": "Weepinbell",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "28-30",
+   "rate": "5%"
+  },
+  {
+   "dex": 132,
+   "name": "Ditto",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25",
+   "rate": "5%"
+  }
+ ],
+ "items": [
+  {
+   "id": "outside-tm18",
+   "name": "TM18",
+   "hidden": false,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-west-entrance-2f-exp-share",
+   "name": "Exp. Share",
+   "from": "Professor Oak's aide (needs enough Pokédex entries)",
+   "where": "West Entrance 2F"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

@@ -1,0 +1,312 @@
+{
+ "id": "tanoby-ruins",
+ "name": "Tanoby Ruins",
+ "encounters": [
+  {
+   "dex": 72,
+   "name": "Tentacool",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-40",
+   "rate": "95%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 72,
+   "name": "Tentacool",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-35",
+   "rate": "90%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 73,
+   "name": "Tentacruel",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "35-40",
+   "rate": "5%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 226,
+   "name": "Mantine",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "35-40",
+   "rate": "5%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "80%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "80%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 211,
+   "name": "Qwilfish",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 223,
+   "name": "Remoraid",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 99,
+   "name": "Kingler",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "4%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 117,
+   "name": "Seadra",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "4%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "dex": 201,
+   "name": "Unown",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25",
+   "rate": "100%",
+   "area": "Tanoby Ruins Dilford Chamber"
+  },
+  {
+   "dex": 201,
+   "name": "Unown",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25",
+   "rate": "100%",
+   "area": "Tanoby Ruins Liptoo Chamber"
+  },
+  {
+   "dex": 201,
+   "name": "Unown",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25",
+   "rate": "100%",
+   "area": "Tanoby Ruins Monean Chamber"
+  },
+  {
+   "dex": 201,
+   "name": "Unown",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25",
+   "rate": "100%",
+   "area": "Tanoby Ruins Rixy Chamber"
+  },
+  {
+   "dex": 201,
+   "name": "Unown",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25",
+   "rate": "100%",
+   "area": "Tanoby Ruins Scufib Chamber"
+  },
+  {
+   "dex": 201,
+   "name": "Unown",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25",
+   "rate": "100%",
+   "area": "Tanoby Ruins Viapois Chamber"
+  },
+  {
+   "dex": 201,
+   "name": "Unown",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25",
+   "rate": "100%",
+   "area": "Tanoby Ruins Weepth Chamber"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-tanoby-ruins-heart-scale",
+   "name": "Heart Scale",
+   "hidden": true,
+   "where": "Tanoby Ruins"
+  },
+  {
+   "id": "hidden-tanoby-ruins-heart-scale-2",
+   "name": "Heart Scale",
+   "hidden": true,
+   "where": "Tanoby Ruins"
+  },
+  {
+   "id": "hidden-tanoby-ruins-heart-scale-3",
+   "name": "Heart Scale",
+   "hidden": true,
+   "where": "Tanoby Ruins"
+  },
+  {
+   "id": "hidden-tanoby-ruins-heart-scale-4",
+   "name": "Heart Scale",
+   "hidden": true,
+   "where": "Tanoby Ruins"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

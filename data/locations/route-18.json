@@ -1,0 +1,111 @@
+{
+ "id": "route-18",
+ "name": "Route 18",
+ "encounters": [
+  {
+   "dex": 84,
+   "name": "Doduo",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "24-28",
+   "rate": "35%",
+   "area": "Outside"
+  },
+  {
+   "dex": 21,
+   "name": "Spearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20-22",
+   "rate": "30%",
+   "area": "Outside"
+  },
+  {
+   "dex": 20,
+   "name": "Raticate",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-29",
+   "rate": "15%",
+   "area": "Outside"
+  },
+  {
+   "dex": 22,
+   "name": "Fearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-29",
+   "rate": "15%",
+   "area": "Outside"
+  },
+  {
+   "dex": 19,
+   "name": "Rattata",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Outside"
+  },
+  {
+   "dex": 108,
+   "name": "Lickitung",
+   "method": "trade",
+   "versions": [
+    "FR"
+   ],
+   "area": "East Entrance 2F",
+   "notes": "Trade: give Golduck, get Lickitung (\"Marc\") · Haden"
+  },
+  {
+   "dex": 108,
+   "name": "Lickitung",
+   "method": "trade",
+   "versions": [
+    "LG"
+   ],
+   "area": "East Entrance 2F",
+   "notes": "Trade: give Slowbro, get Lickitung (\"Marc\") · Haden"
+  }
+ ],
+ "items": [],
+ "gifts": [
+  {
+   "id": "trade-east-entrance-2f-trade-give-golduck-get-lickitung-marc",
+   "name": "Trade: give Golduck, get Lickitung (\"Marc\")",
+   "from": "Haden",
+   "where": "East Entrance 2F",
+   "versions": [
+    "FR"
+   ]
+  },
+  {
+   "id": "trade-east-entrance-2f-trade-give-slowbro-get-lickitung-marc",
+   "name": "Trade: give Slowbro, get Lickitung (\"Marc\")",
+   "from": "Haden",
+   "where": "East Entrance 2F",
+   "versions": [
+    "LG"
+   ]
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

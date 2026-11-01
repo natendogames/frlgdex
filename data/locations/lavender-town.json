@@ -1,0 +1,18 @@
+{
+ "id": "lavender-town",
+ "name": "Lavender Town",
+ "encounters": [],
+ "items": [],
+ "gifts": [
+  {
+   "id": "item-volunteer-pok-mon-house-pok-flute",
+   "name": "Poké Flute",
+   "from": "Mr. Fuji",
+   "where": "Volunteer Pokémon House"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

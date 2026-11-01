@@ -1,0 +1,107 @@
+{
+ "id": "pattern-bush",
+ "name": "Pattern Bush",
+ "encounters": [
+  {
+   "dex": 165,
+   "name": "Ledyba",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "9-14",
+   "rate": "30%"
+  },
+  {
+   "dex": 167,
+   "name": "Spinarak",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "9-14",
+   "rate": "30%"
+  },
+  {
+   "dex": 14,
+   "name": "Kakuna",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "9",
+   "rate": "20%"
+  },
+  {
+   "dex": 214,
+   "name": "Heracross",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-30",
+   "rate": "20%"
+  },
+  {
+   "dex": 10,
+   "name": "Caterpie",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "6",
+   "rate": "10%"
+  },
+  {
+   "dex": 13,
+   "name": "Weedle",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "6",
+   "rate": "10%"
+  },
+  {
+   "dex": 11,
+   "name": "Metapod",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "9",
+   "rate": "5%"
+  },
+  {
+   "dex": 165,
+   "name": "Ledyba",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "9-14",
+   "rate": "5%"
+  },
+  {
+   "dex": 167,
+   "name": "Spinarak",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "9-14",
+   "rate": "5%"
+  }
+ ],
+ "items": [],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "id": "route-7",
+ "name": "Route 7",
+ "encounters": [
+  {
+   "dex": 52,
+   "name": "Meowth",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "17-20",
+   "rate": "40%"
+  },
+  {
+   "dex": 16,
+   "name": "Pidgey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "19-22",
+   "rate": "30%"
+  },
+  {
+   "dex": 43,
+   "name": "Oddish",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "19-22",
+   "rate": "20%"
+  },
+  {
+   "dex": 69,
+   "name": "Bellsprout",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "19-22",
+   "rate": "20%"
+  },
+  {
+   "dex": 37,
+   "name": "Vulpix",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "18-20",
+   "rate": "10%"
+  },
+  {
+   "dex": 58,
+   "name": "Growlithe",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "18-20",
+   "rate": "10%"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-outside-wepear-berry",
+   "name": "Wepear Berry",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

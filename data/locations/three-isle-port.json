@@ -1,0 +1,23 @@
+{
+ "id": "three-isle-port",
+ "name": "Three Isle Port",
+ "encounters": [
+  {
+   "dex": 206,
+   "name": "Dunsparce",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-35",
+   "rate": "100%"
+  }
+ ],
+ "items": [],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

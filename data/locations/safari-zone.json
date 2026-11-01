@@ -1,0 +1,1236 @@
+{
+ "id": "safari-zone",
+ "name": "Safari Zone",
+ "encounters": [
+  {
+   "dex": 29,
+   "name": "Nidoran♀",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "20%",
+   "area": "Center"
+  },
+  {
+   "dex": 32,
+   "name": "Nidoran♂",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22",
+   "rate": "20%",
+   "area": "Center"
+  },
+  {
+   "dex": 102,
+   "name": "Exeggcute",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "24-25",
+   "rate": "20%",
+   "area": "Center"
+  },
+  {
+   "dex": 111,
+   "name": "Rhyhorn",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25",
+   "rate": "20%",
+   "area": "Center"
+  },
+  {
+   "dex": 48,
+   "name": "Venonat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "15%",
+   "area": "Center"
+  },
+  {
+   "dex": 30,
+   "name": "Nidorina",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "31",
+   "rate": "10%",
+   "area": "Center"
+  },
+  {
+   "dex": 33,
+   "name": "Nidorino",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "31",
+   "rate": "10%",
+   "area": "Center"
+  },
+  {
+   "dex": 30,
+   "name": "Nidorina",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "31",
+   "rate": "5%",
+   "area": "Center"
+  },
+  {
+   "dex": 33,
+   "name": "Nidorino",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "31",
+   "rate": "5%",
+   "area": "Center"
+  },
+  {
+   "dex": 47,
+   "name": "Parasect",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30",
+   "rate": "5%",
+   "area": "Center"
+  },
+  {
+   "dex": 123,
+   "name": "Scyther",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "23",
+   "rate": "4%",
+   "area": "Center"
+  },
+  {
+   "dex": 127,
+   "name": "Pinsir",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "23",
+   "rate": "4%",
+   "area": "Center"
+  },
+  {
+   "dex": 113,
+   "name": "Chansey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "23",
+   "rate": "1%",
+   "area": "Center"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "20-40",
+   "rate": "100%",
+   "area": "Center"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "20-40",
+   "rate": "100%",
+   "area": "Center"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "Center"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "Center"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Center"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Center"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "Center"
+  },
+  {
+   "dex": 119,
+   "name": "Seaking",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20-30",
+   "rate": "40%",
+   "area": "Center"
+  },
+  {
+   "dex": 147,
+   "name": "Dratini",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%",
+   "area": "Center"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "4%",
+   "area": "Center"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "4%",
+   "area": "Center"
+  },
+  {
+   "dex": 148,
+   "name": "Dragonair",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "Center"
+  },
+  {
+   "dex": 29,
+   "name": "Nidoran♀",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "24",
+   "rate": "20%",
+   "area": "East"
+  },
+  {
+   "dex": 32,
+   "name": "Nidoran♂",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "24",
+   "rate": "20%",
+   "area": "East"
+  },
+  {
+   "dex": 84,
+   "name": "Doduo",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26",
+   "rate": "20%",
+   "area": "East"
+  },
+  {
+   "dex": 102,
+   "name": "Exeggcute",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "23-25",
+   "rate": "20%",
+   "area": "East"
+  },
+  {
+   "dex": 46,
+   "name": "Paras",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "15%",
+   "area": "East"
+  },
+  {
+   "dex": 30,
+   "name": "Nidorina",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "33",
+   "rate": "10%",
+   "area": "East"
+  },
+  {
+   "dex": 33,
+   "name": "Nidorino",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "33",
+   "rate": "10%",
+   "area": "East"
+  },
+  {
+   "dex": 29,
+   "name": "Nidoran♀",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "24",
+   "rate": "5%",
+   "area": "East"
+  },
+  {
+   "dex": 32,
+   "name": "Nidoran♂",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "24",
+   "rate": "5%",
+   "area": "East"
+  },
+  {
+   "dex": 47,
+   "name": "Parasect",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25",
+   "rate": "5%",
+   "area": "East"
+  },
+  {
+   "dex": 115,
+   "name": "Kangaskhan",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25",
+   "rate": "4%",
+   "area": "East"
+  },
+  {
+   "dex": 123,
+   "name": "Scyther",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "28",
+   "rate": "1%",
+   "area": "East"
+  },
+  {
+   "dex": 127,
+   "name": "Pinsir",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "28",
+   "rate": "1%",
+   "area": "East"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "20-40",
+   "rate": "100%",
+   "area": "East"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "20-40",
+   "rate": "100%",
+   "area": "East"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "East"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "East"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "East"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "East"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "East"
+  },
+  {
+   "dex": 119,
+   "name": "Seaking",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20-30",
+   "rate": "40%",
+   "area": "East"
+  },
+  {
+   "dex": 147,
+   "name": "Dratini",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%",
+   "area": "East"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "4%",
+   "area": "East"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "4%",
+   "area": "East"
+  },
+  {
+   "dex": 148,
+   "name": "Dragonair",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "East"
+  },
+  {
+   "dex": 29,
+   "name": "Nidoran♀",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30",
+   "rate": "20%",
+   "area": "North"
+  },
+  {
+   "dex": 32,
+   "name": "Nidoran♂",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30",
+   "rate": "20%",
+   "area": "North"
+  },
+  {
+   "dex": 102,
+   "name": "Exeggcute",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-27",
+   "rate": "20%",
+   "area": "North"
+  },
+  {
+   "dex": 111,
+   "name": "Rhyhorn",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26",
+   "rate": "20%",
+   "area": "North"
+  },
+  {
+   "dex": 46,
+   "name": "Paras",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "23",
+   "rate": "15%",
+   "area": "North"
+  },
+  {
+   "dex": 30,
+   "name": "Nidorina",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30",
+   "rate": "10%",
+   "area": "North"
+  },
+  {
+   "dex": 33,
+   "name": "Nidorino",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30",
+   "rate": "10%",
+   "area": "North"
+  },
+  {
+   "dex": 30,
+   "name": "Nidorina",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30",
+   "rate": "5%",
+   "area": "North"
+  },
+  {
+   "dex": 33,
+   "name": "Nidorino",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30",
+   "rate": "5%",
+   "area": "North"
+  },
+  {
+   "dex": 49,
+   "name": "Venomoth",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "5%",
+   "area": "North"
+  },
+  {
+   "dex": 113,
+   "name": "Chansey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26",
+   "rate": "4%",
+   "area": "North"
+  },
+  {
+   "dex": 128,
+   "name": "Tauros",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "28",
+   "rate": "1%",
+   "area": "North"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "20-40",
+   "rate": "100%",
+   "area": "North"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "20-40",
+   "rate": "100%",
+   "area": "North"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "North"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "North"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "North"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "North"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "North"
+  },
+  {
+   "dex": 119,
+   "name": "Seaking",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20-30",
+   "rate": "40%",
+   "area": "North"
+  },
+  {
+   "dex": 147,
+   "name": "Dratini",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%",
+   "area": "North"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "4%",
+   "area": "North"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "4%",
+   "area": "North"
+  },
+  {
+   "dex": 148,
+   "name": "Dragonair",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "North"
+  },
+  {
+   "dex": 29,
+   "name": "Nidoran♀",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "20%",
+   "area": "West"
+  },
+  {
+   "dex": 32,
+   "name": "Nidoran♂",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22",
+   "rate": "20%",
+   "area": "West"
+  },
+  {
+   "dex": 84,
+   "name": "Doduo",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26",
+   "rate": "20%",
+   "area": "West"
+  },
+  {
+   "dex": 102,
+   "name": "Exeggcute",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-27",
+   "rate": "20%",
+   "area": "West"
+  },
+  {
+   "dex": 48,
+   "name": "Venonat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "23",
+   "rate": "15%",
+   "area": "West"
+  },
+  {
+   "dex": 30,
+   "name": "Nidorina",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30",
+   "rate": "10%",
+   "area": "West"
+  },
+  {
+   "dex": 33,
+   "name": "Nidorino",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30",
+   "rate": "10%",
+   "area": "West"
+  },
+  {
+   "dex": 29,
+   "name": "Nidoran♀",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30",
+   "rate": "5%",
+   "area": "West"
+  },
+  {
+   "dex": 32,
+   "name": "Nidoran♂",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30",
+   "rate": "5%",
+   "area": "West"
+  },
+  {
+   "dex": 49,
+   "name": "Venomoth",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "5%",
+   "area": "West"
+  },
+  {
+   "dex": 128,
+   "name": "Tauros",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25",
+   "rate": "4%",
+   "area": "West"
+  },
+  {
+   "dex": 115,
+   "name": "Kangaskhan",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "28",
+   "rate": "1%",
+   "area": "West"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "20-40",
+   "rate": "100%",
+   "area": "West"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "20-40",
+   "rate": "100%",
+   "area": "West"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "West"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "West"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "West"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "West"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "West"
+  },
+  {
+   "dex": 119,
+   "name": "Seaking",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20-30",
+   "rate": "40%",
+   "area": "West"
+  },
+  {
+   "dex": 147,
+   "name": "Dratini",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%",
+   "area": "West"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "4%",
+   "area": "West"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "4%",
+   "area": "West"
+  },
+  {
+   "dex": 148,
+   "name": "Dragonair",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "West"
+  }
+ ],
+ "items": [
+  {
+   "id": "center-nugget",
+   "name": "Nugget",
+   "hidden": false,
+   "where": "Center"
+  },
+  {
+   "id": "hidden-center-leaf-stone",
+   "name": "Leaf Stone",
+   "hidden": true,
+   "where": "Center"
+  },
+  {
+   "id": "east-max-potion",
+   "name": "Max Potion",
+   "hidden": false,
+   "where": "East"
+  },
+  {
+   "id": "east-full-restore",
+   "name": "Full Restore",
+   "hidden": false,
+   "where": "East"
+  },
+  {
+   "id": "east-tm11",
+   "name": "TM11",
+   "hidden": false,
+   "where": "East"
+  },
+  {
+   "id": "east-leaf-stone",
+   "name": "Leaf Stone",
+   "hidden": false,
+   "where": "East"
+  },
+  {
+   "id": "north-protein",
+   "name": "Protein",
+   "hidden": false,
+   "where": "North"
+  },
+  {
+   "id": "north-tm47",
+   "name": "TM47",
+   "hidden": false,
+   "where": "North"
+  },
+  {
+   "id": "north-quick-claw",
+   "name": "Quick Claw",
+   "hidden": false,
+   "where": "North"
+  },
+  {
+   "id": "west-gold-teeth",
+   "name": "Gold Teeth",
+   "hidden": false,
+   "where": "West"
+  },
+  {
+   "id": "west-tm32",
+   "name": "TM32",
+   "hidden": false,
+   "where": "West"
+  },
+  {
+   "id": "west-max-potion",
+   "name": "Max Potion",
+   "hidden": false,
+   "where": "West"
+  },
+  {
+   "id": "west-max-revive",
+   "name": "Max Revive",
+   "hidden": false,
+   "where": "West"
+  },
+  {
+   "id": "hidden-west-revive",
+   "name": "Revive",
+   "hidden": true,
+   "where": "West"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-secret-house-hm03",
+   "name": "HM03",
+   "from": "Reward for reaching the Secret House",
+   "where": "Secret House"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

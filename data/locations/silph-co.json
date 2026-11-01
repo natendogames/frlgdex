@@ -1,0 +1,210 @@
+{
+ "id": "silph-co",
+ "name": "Silph Co.",
+ "encounters": [
+  {
+   "dex": 131,
+   "name": "Lapras",
+   "method": "gift",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "notes": "Lapras (Lv 25) · Silph employee"
+  }
+ ],
+ "items": [
+  {
+   "id": "10f-carbos",
+   "name": "Carbos",
+   "hidden": false,
+   "where": "10F"
+  },
+  {
+   "id": "10f-ultra-ball",
+   "name": "Ultra Ball",
+   "hidden": false,
+   "where": "10F"
+  },
+  {
+   "id": "10f-rare-candy",
+   "name": "Rare Candy",
+   "hidden": false,
+   "where": "10F"
+  },
+  {
+   "id": "hidden-10f-hp-up",
+   "name": "HP Up",
+   "hidden": true,
+   "where": "10F"
+  },
+  {
+   "id": "11f-zinc",
+   "name": "Zinc",
+   "hidden": false,
+   "where": "11F"
+  },
+  {
+   "id": "hidden-11f-revive",
+   "name": "Revive",
+   "hidden": true,
+   "where": "11F"
+  },
+  {
+   "id": "hidden-2f-ultra-ball",
+   "name": "Ultra Ball",
+   "hidden": true,
+   "where": "2F"
+  },
+  {
+   "id": "3f-hyper-potion",
+   "name": "Hyper Potion",
+   "hidden": false,
+   "where": "3F"
+  },
+  {
+   "id": "hidden-3f-protein",
+   "name": "Protein",
+   "hidden": true,
+   "where": "3F"
+  },
+  {
+   "id": "4f-max-revive",
+   "name": "Max Revive",
+   "hidden": false,
+   "where": "4F"
+  },
+  {
+   "id": "4f-escape-rope",
+   "name": "Escape Rope",
+   "hidden": false,
+   "where": "4F"
+  },
+  {
+   "id": "4f-full-heal",
+   "name": "Full Heal",
+   "hidden": false,
+   "where": "4F"
+  },
+  {
+   "id": "4f-tm41",
+   "name": "TM41",
+   "hidden": false,
+   "where": "4F"
+  },
+  {
+   "id": "hidden-4f-iron",
+   "name": "Iron",
+   "hidden": true,
+   "where": "4F"
+  },
+  {
+   "id": "5f-protein",
+   "name": "Protein",
+   "hidden": false,
+   "where": "5F"
+  },
+  {
+   "id": "5f-tm01",
+   "name": "TM01",
+   "hidden": false,
+   "where": "5F"
+  },
+  {
+   "id": "5f-card-key",
+   "name": "Card Key",
+   "hidden": false,
+   "where": "5F"
+  },
+  {
+   "id": "hidden-5f-elixir",
+   "name": "Elixir",
+   "hidden": true,
+   "where": "5F"
+  },
+  {
+   "id": "hidden-5f-pp-up",
+   "name": "PP Up",
+   "hidden": true,
+   "where": "5F"
+  },
+  {
+   "id": "6f-hp-up",
+   "name": "HP Up",
+   "hidden": false,
+   "where": "6F"
+  },
+  {
+   "id": "6f-x-special",
+   "name": "X Special",
+   "hidden": false,
+   "where": "6F"
+  },
+  {
+   "id": "hidden-6f-carbos",
+   "name": "Carbos",
+   "hidden": true,
+   "where": "6F"
+  },
+  {
+   "id": "7f-calcium",
+   "name": "Calcium",
+   "hidden": false,
+   "where": "7F"
+  },
+  {
+   "id": "7f-tm08",
+   "name": "TM08",
+   "hidden": false,
+   "where": "7F"
+  },
+  {
+   "id": "hidden-7f-zinc",
+   "name": "Zinc",
+   "hidden": true,
+   "where": "7F"
+  },
+  {
+   "id": "8f-iron",
+   "name": "Iron",
+   "hidden": false,
+   "where": "8F"
+  },
+  {
+   "id": "hidden-8f-nugget",
+   "name": "Nugget",
+   "hidden": true,
+   "where": "8F"
+  },
+  {
+   "id": "hidden-9f-max-potion",
+   "name": "Max Potion",
+   "hidden": true,
+   "where": "9F"
+  },
+  {
+   "id": "hidden-9f-calcium",
+   "name": "Calcium",
+   "hidden": true,
+   "where": "9F"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-11f-master-ball",
+   "name": "Master Ball",
+   "from": "Silph President (after beating Giovanni)",
+   "where": "11F"
+  },
+  {
+   "id": "mon-7f-lapras-lv-25",
+   "name": "Lapras (Lv 25)",
+   "from": "Silph employee",
+   "where": "7F"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

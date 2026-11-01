@@ -1,0 +1,54 @@
+{
+ "id": "underground-path-east-west",
+ "name": "Underground Path (Routes 7–8)",
+ "encounters": [],
+ "items": [
+  {
+   "id": "hidden-east-west-tunnel-potion",
+   "name": "Potion",
+   "hidden": true,
+   "where": "East West Tunnel"
+  },
+  {
+   "id": "hidden-east-west-tunnel-parlyz-heal",
+   "name": "Parlyz Heal",
+   "hidden": true,
+   "where": "East West Tunnel"
+  },
+  {
+   "id": "hidden-east-west-tunnel-awakening",
+   "name": "Awakening",
+   "hidden": true,
+   "where": "East West Tunnel"
+  },
+  {
+   "id": "hidden-east-west-tunnel-burn-heal",
+   "name": "Burn Heal",
+   "hidden": true,
+   "where": "East West Tunnel"
+  },
+  {
+   "id": "hidden-east-west-tunnel-ice-heal",
+   "name": "Ice Heal",
+   "hidden": true,
+   "where": "East West Tunnel"
+  },
+  {
+   "id": "hidden-east-west-tunnel-ether",
+   "name": "Ether",
+   "hidden": true,
+   "where": "East West Tunnel"
+  },
+  {
+   "id": "hidden-east-west-tunnel-antidote",
+   "name": "Antidote",
+   "hidden": true,
+   "where": "East West Tunnel"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

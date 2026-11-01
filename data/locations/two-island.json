@@ -1,0 +1,25 @@
+{
+ "id": "two-island",
+ "name": "Two Island",
+ "encounters": [],
+ "items": [
+  {
+   "id": "outside-revive",
+   "name": "Revive",
+   "hidden": false,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-joyful-game-corner-moon-stone",
+   "name": "Moon Stone",
+   "from": "Owner (after rescuing his granddaughter Lostelle)",
+   "where": "Joyful Game Corner"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

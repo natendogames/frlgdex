@@ -1,0 +1,162 @@
+{
+ "id": "route-22",
+ "name": "Route 22",
+ "encounters": [
+  {
+   "dex": 19,
+   "name": "Rattata",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "2-5",
+   "rate": "45%"
+  },
+  {
+   "dex": 56,
+   "name": "Mankey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "2-5",
+   "rate": "45%"
+  },
+  {
+   "dex": 21,
+   "name": "Spearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "3-5",
+   "rate": "10%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "20-40",
+   "rate": "100%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "20-40",
+   "rate": "100%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%"
+  },
+  {
+   "dex": 61,
+   "name": "Poliwhirl",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20-30",
+   "rate": "40%"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "5%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "5%"
+  }
+ ],
+ "items": [],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

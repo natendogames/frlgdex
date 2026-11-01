@@ -1,0 +1,187 @@
+{
+ "id": "rock-tunnel",
+ "name": "Rock Tunnel",
+ "encounters": [
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-17",
+   "rate": "35%",
+   "area": "1F"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-16",
+   "rate": "30%",
+   "area": "1F"
+  },
+  {
+   "dex": 56,
+   "name": "Mankey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "16-17",
+   "rate": "15%",
+   "area": "1F"
+  },
+  {
+   "dex": 66,
+   "name": "Machop",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "16-17",
+   "rate": "15%",
+   "area": "1F"
+  },
+  {
+   "dex": 95,
+   "name": "Onix",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "13-15",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-17",
+   "rate": "35%",
+   "area": "B1F"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-16",
+   "rate": "30%",
+   "area": "B1F"
+  },
+  {
+   "dex": 56,
+   "name": "Mankey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "16-17",
+   "rate": "15%",
+   "area": "B1F"
+  },
+  {
+   "dex": 66,
+   "name": "Machop",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "17",
+   "rate": "10%",
+   "area": "B1F"
+  },
+  {
+   "dex": 95,
+   "name": "Onix",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "13-17",
+   "rate": "10%",
+   "area": "B1F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-30",
+   "rate": "95%",
+   "area": "B1F"
+  },
+  {
+   "dex": 75,
+   "name": "Graveler",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-40",
+   "rate": "5%",
+   "area": "B1F"
+  }
+ ],
+ "items": [
+  {
+   "id": "1f-repel",
+   "name": "Repel",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "1f-pearl",
+   "name": "Pearl",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "1f-escape-rope",
+   "name": "Escape Rope",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "b1f-revive",
+   "name": "Revive",
+   "hidden": false,
+   "where": "B1F"
+  },
+  {
+   "id": "b1f-max-ether",
+   "name": "Max Ether",
+   "hidden": false,
+   "where": "B1F"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

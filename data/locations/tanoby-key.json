@@ -1,0 +1,11 @@
+{
+ "id": "tanoby-key",
+ "name": "Tanoby Key",
+ "encounters": [],
+ "items": [],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

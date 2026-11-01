@@ -1,0 +1,320 @@
+{
+ "id": "water-path",
+ "name": "Water Path",
+ "encounters": [
+  {
+   "dex": 161,
+   "name": "Sentret",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "10-15",
+   "rate": "30%"
+  },
+  {
+   "dex": 21,
+   "name": "Spearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44",
+   "rate": "20%"
+  },
+  {
+   "dex": 22,
+   "name": "Fearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "48-50",
+   "rate": "15%"
+  },
+  {
+   "dex": 43,
+   "name": "Oddish",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "44",
+   "rate": "10%"
+  },
+  {
+   "dex": 52,
+   "name": "Meowth",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41",
+   "rate": "10%"
+  },
+  {
+   "dex": 69,
+   "name": "Bellsprout",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "44",
+   "rate": "10%"
+  },
+  {
+   "dex": 44,
+   "name": "Gloom",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "48",
+   "rate": "5%"
+  },
+  {
+   "dex": 53,
+   "name": "Persian",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "47-50",
+   "rate": "5%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "41",
+   "rate": "5%"
+  },
+  {
+   "dex": 70,
+   "name": "Weepinbell",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "48",
+   "rate": "5%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "41",
+   "rate": "5%"
+  },
+  {
+   "dex": 72,
+   "name": "Tentacool",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-40",
+   "rate": "95%"
+  },
+  {
+   "dex": 73,
+   "name": "Tentacruel",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "35-40",
+   "rate": "5%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "80%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "80%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-25",
+   "rate": "40%"
+  },
+  {
+   "dex": 211,
+   "name": "Qwilfish",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-25",
+   "rate": "40%"
+  },
+  {
+   "dex": 223,
+   "name": "Remoraid",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%"
+  },
+  {
+   "dex": 99,
+   "name": "Kingler",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "4%"
+  },
+  {
+   "dex": 117,
+   "name": "Seadra",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "4%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "1%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%"
+  }
+ ],
+ "items": [
+  {
+   "id": "water-path-elixir",
+   "name": "Elixir",
+   "hidden": false,
+   "where": "Water Path"
+  },
+  {
+   "id": "water-path-dragon-scale",
+   "name": "Dragon Scale",
+   "hidden": false,
+   "where": "Water Path"
+  },
+  {
+   "id": "hidden-water-path-aspear-berry",
+   "name": "Aspear Berry",
+   "hidden": true,
+   "where": "Water Path"
+  },
+  {
+   "id": "hidden-water-path-oran-berry",
+   "name": "Oran Berry",
+   "hidden": true,
+   "where": "Water Path"
+  },
+  {
+   "id": "hidden-water-path-pinap-berry",
+   "name": "Pinap Berry",
+   "hidden": true,
+   "where": "Water Path"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-water-path-house-1-nest-ball",
+   "name": "Nest Ball",
+   "from": "Boy (show him a Heracross)",
+   "where": "Water Path House 1"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

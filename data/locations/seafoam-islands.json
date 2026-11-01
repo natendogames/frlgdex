@@ -1,0 +1,873 @@
+{
+ "id": "seafoam-islands",
+ "name": "Seafoam Islands",
+ "encounters": [
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "26-33",
+   "rate": "55%",
+   "area": "1F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "26-33",
+   "rate": "55%",
+   "area": "1F"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "22-26",
+   "rate": "34%",
+   "area": "1F"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26-30",
+   "rate": "11%",
+   "area": "1F"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "29-31",
+   "rate": "40%",
+   "area": "B1F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "29-31",
+   "rate": "40%",
+   "area": "B1F"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "22-26",
+   "rate": "34%",
+   "area": "B1F"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26-30",
+   "rate": "11%",
+   "area": "B1F"
+  },
+  {
+   "dex": 86,
+   "name": "Seel",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "28",
+   "rate": "10%",
+   "area": "B1F"
+  },
+  {
+   "dex": 55,
+   "name": "Golduck",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "33-35",
+   "rate": "5%",
+   "area": "B1F"
+  },
+  {
+   "dex": 80,
+   "name": "Slowbro",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "33-35",
+   "rate": "5%",
+   "area": "B1F"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30-32",
+   "rate": "40%",
+   "area": "B2F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30-32",
+   "rate": "40%",
+   "area": "B2F"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "22-24",
+   "rate": "20%",
+   "area": "B2F"
+  },
+  {
+   "dex": 86,
+   "name": "Seel",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30-32",
+   "rate": "20%",
+   "area": "B2F"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26-30",
+   "rate": "10%",
+   "area": "B2F"
+  },
+  {
+   "dex": 55,
+   "name": "Golduck",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "32-34",
+   "rate": "10%",
+   "area": "B2F"
+  },
+  {
+   "dex": 80,
+   "name": "Slowbro",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "32-34",
+   "rate": "10%",
+   "area": "B2F"
+  },
+  {
+   "dex": 86,
+   "name": "Seel",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30-32",
+   "rate": "40%",
+   "area": "B3F"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30-32",
+   "rate": "20%",
+   "area": "B3F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30-32",
+   "rate": "20%",
+   "area": "B3F"
+  },
+  {
+   "dex": 55,
+   "name": "Golduck",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "32-34",
+   "rate": "15%",
+   "area": "B3F"
+  },
+  {
+   "dex": 80,
+   "name": "Slowbro",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "32-34",
+   "rate": "15%",
+   "area": "B3F"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "24",
+   "rate": "10%",
+   "area": "B3F"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26-30",
+   "rate": "10%",
+   "area": "B3F"
+  },
+  {
+   "dex": 87,
+   "name": "Dewgong",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32-34",
+   "rate": "5%",
+   "area": "B3F"
+  },
+  {
+   "dex": 86,
+   "name": "Seel",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "60%",
+   "area": "B3F"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-30",
+   "rate": "30%",
+   "area": "B3F"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-30",
+   "rate": "30%",
+   "area": "B3F"
+  },
+  {
+   "dex": 87,
+   "name": "Dewgong",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "35-40",
+   "rate": "5%",
+   "area": "B3F"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30-40",
+   "rate": "4%",
+   "area": "B3F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30-40",
+   "rate": "4%",
+   "area": "B3F"
+  },
+  {
+   "dex": 55,
+   "name": "Golduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "35-40",
+   "rate": "1%",
+   "area": "B3F"
+  },
+  {
+   "dex": 80,
+   "name": "Slowbro",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "35-40",
+   "rate": "1%",
+   "area": "B3F"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "B3F"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "B3F"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "B3F"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "B3F"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "B3F"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "B3F"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-30",
+   "rate": "80%",
+   "area": "B3F"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-30",
+   "rate": "80%",
+   "area": "B3F"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "16%",
+   "area": "B3F"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-25",
+   "rate": "4%",
+   "area": "B3F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "4%",
+   "area": "B3F"
+  },
+  {
+   "dex": 86,
+   "name": "Seel",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30-34",
+   "rate": "50%",
+   "area": "B4F"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26-30",
+   "rate": "15%",
+   "area": "B4F"
+  },
+  {
+   "dex": 55,
+   "name": "Golduck",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "32-34",
+   "rate": "15%",
+   "area": "B4F"
+  },
+  {
+   "dex": 80,
+   "name": "Slowbro",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "32-34",
+   "rate": "15%",
+   "area": "B4F"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "32",
+   "rate": "10%",
+   "area": "B4F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "10%",
+   "area": "B4F"
+  },
+  {
+   "dex": 87,
+   "name": "Dewgong",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "34-36",
+   "rate": "10%",
+   "area": "B4F"
+  },
+  {
+   "dex": 86,
+   "name": "Seel",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "60%",
+   "area": "B4F"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-30",
+   "rate": "30%",
+   "area": "B4F"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-30",
+   "rate": "30%",
+   "area": "B4F"
+  },
+  {
+   "dex": 87,
+   "name": "Dewgong",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "35-40",
+   "rate": "5%",
+   "area": "B4F"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30-40",
+   "rate": "4%",
+   "area": "B4F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30-40",
+   "rate": "4%",
+   "area": "B4F"
+  },
+  {
+   "dex": 55,
+   "name": "Golduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "35-40",
+   "rate": "1%",
+   "area": "B4F"
+  },
+  {
+   "dex": 80,
+   "name": "Slowbro",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "35-40",
+   "rate": "1%",
+   "area": "B4F"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "B4F"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "B4F"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "B4F"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "B4F"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "B4F"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "B4F"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-30",
+   "rate": "80%",
+   "area": "B4F"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-30",
+   "rate": "80%",
+   "area": "B4F"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "16%",
+   "area": "B4F"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-25",
+   "rate": "4%",
+   "area": "B4F"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "4%",
+   "area": "B4F"
+  },
+  {
+   "dex": 144,
+   "name": "Articuno",
+   "method": "static",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "50",
+   "area": "B4F",
+   "notes": "One chance: save first"
+  }
+ ],
+ "items": [
+  {
+   "id": "1f-ice-heal",
+   "name": "Ice Heal",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "b1f-water-stone",
+   "name": "Water Stone",
+   "hidden": false,
+   "where": "B1F"
+  },
+  {
+   "id": "b1f-revive",
+   "name": "Revive",
+   "hidden": false,
+   "where": "B1F"
+  },
+  {
+   "id": "b2f-big-pearl",
+   "name": "Big Pearl",
+   "hidden": false,
+   "where": "B2F"
+  },
+  {
+   "id": "hidden-b3f-nugget",
+   "name": "Nugget",
+   "hidden": true,
+   "where": "B3F"
+  },
+  {
+   "id": "b4f-ultra-ball",
+   "name": "Ultra Ball",
+   "hidden": false,
+   "where": "B4F"
+  },
+  {
+   "id": "hidden-b4f-water-stone",
+   "name": "Water Stone",
+   "hidden": true,
+   "where": "B4F"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "id": "route-3",
+ "name": "Route 3",
+ "encounters": [
+  {
+   "dex": 21,
+   "name": "Spearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "6-8",
+   "rate": "35%"
+  },
+  {
+   "dex": 16,
+   "name": "Pidgey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "6-7",
+   "rate": "30%"
+  },
+  {
+   "dex": 29,
+   "name": "Nidoran♀",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "6-7",
+   "rate": "14%"
+  },
+  {
+   "dex": 32,
+   "name": "Nidoran♂",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "6-7",
+   "rate": "14%"
+  },
+  {
+   "dex": 39,
+   "name": "Jigglypuff",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "3-7",
+   "rate": "10%"
+  },
+  {
+   "dex": 56,
+   "name": "Mankey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "7",
+   "rate": "10%"
+  },
+  {
+   "dex": 29,
+   "name": "Nidoran♀",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "6",
+   "rate": "1%"
+  },
+  {
+   "dex": 32,
+   "name": "Nidoran♂",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "6",
+   "rate": "1%"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-outside-oran-berry",
+   "name": "Oran Berry",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

@@ -1,0 +1,203 @@
+{
+ "id": "cerulean-city",
+ "name": "Cerulean City",
+ "encounters": [
+  {
+   "dex": 72,
+   "name": "Tentacool",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-40",
+   "rate": "100%",
+   "area": "Outside"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "Outside"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "Outside"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Outside"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Outside"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "84%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "84%",
+   "area": "Outside"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%",
+   "area": "Outside"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "Outside"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "Outside"
+  },
+  {
+   "dex": 124,
+   "name": "Jynx",
+   "method": "trade",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "area": "House 3",
+   "notes": "Trade: give Poliwhirl, get Jynx (\"Zynx\") · Dontae"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-outside-rare-candy",
+   "name": "Rare Candy",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-outside-fame-checker",
+   "name": "Fame Checker",
+   "from": "Your rival (after battling him)",
+   "where": "Outside"
+  },
+  {
+   "id": "item-outside-tm28",
+   "name": "TM28",
+   "from": "Rocket Grunt (after beating him)",
+   "where": "Outside"
+  },
+  {
+   "id": "item-bike-shop-bicycle",
+   "name": "Bicycle",
+   "from": "Bike Shop owner (trade the Bike Voucher)",
+   "where": "Bike Shop"
+  },
+  {
+   "id": "item-gym-tm03",
+   "name": "TM03",
+   "from": "Misty (after winning)",
+   "where": "Gym"
+  },
+  {
+   "id": "trade-house-3-trade-give-poliwhirl-get-jynx-zynx",
+   "name": "Trade: give Poliwhirl, get Jynx (\"Zynx\")",
+   "from": "Dontae",
+   "where": "House 3"
+  },
+  {
+   "id": "item-house-5-powder-jar",
+   "name": "Powder Jar",
+   "from": "Berry Powder man",
+   "where": "House 5"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

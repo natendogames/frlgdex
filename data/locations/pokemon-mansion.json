@@ -1,0 +1,563 @@
+{
+ "id": "pokemon-mansion",
+ "name": "Pokémon Mansion",
+ "encounters": [
+  {
+   "dex": 20,
+   "name": "Raticate",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32-36",
+   "rate": "30%",
+   "area": "1F"
+  },
+  {
+   "dex": 88,
+   "name": "Grimer",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "28-30",
+   "rate": "30%",
+   "area": "1F"
+  },
+  {
+   "dex": 109,
+   "name": "Koffing",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "28-30",
+   "rate": "30%",
+   "area": "1F"
+  },
+  {
+   "dex": 19,
+   "name": "Rattata",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26-28",
+   "rate": "15%",
+   "area": "1F"
+  },
+  {
+   "dex": 37,
+   "name": "Vulpix",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30-32",
+   "rate": "15%",
+   "area": "1F"
+  },
+  {
+   "dex": 58,
+   "name": "Growlithe",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30-32",
+   "rate": "15%",
+   "area": "1F"
+  },
+  {
+   "dex": 88,
+   "name": "Grimer",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "28",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 89,
+   "name": "Muk",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 109,
+   "name": "Koffing",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "28",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 110,
+   "name": "Weezing",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "32",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 20,
+   "name": "Raticate",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32-36",
+   "rate": "30%",
+   "area": "2F"
+  },
+  {
+   "dex": 88,
+   "name": "Grimer",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "28-30",
+   "rate": "30%",
+   "area": "2F"
+  },
+  {
+   "dex": 109,
+   "name": "Koffing",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "28-30",
+   "rate": "30%",
+   "area": "2F"
+  },
+  {
+   "dex": 19,
+   "name": "Rattata",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26-28",
+   "rate": "15%",
+   "area": "2F"
+  },
+  {
+   "dex": 37,
+   "name": "Vulpix",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30-32",
+   "rate": "15%",
+   "area": "2F"
+  },
+  {
+   "dex": 58,
+   "name": "Growlithe",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30-32",
+   "rate": "15%",
+   "area": "2F"
+  },
+  {
+   "dex": 88,
+   "name": "Grimer",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "28",
+   "rate": "5%",
+   "area": "2F"
+  },
+  {
+   "dex": 89,
+   "name": "Muk",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "5%",
+   "area": "2F"
+  },
+  {
+   "dex": 109,
+   "name": "Koffing",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "28",
+   "rate": "5%",
+   "area": "2F"
+  },
+  {
+   "dex": 110,
+   "name": "Weezing",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "32",
+   "rate": "5%",
+   "area": "2F"
+  },
+  {
+   "dex": 20,
+   "name": "Raticate",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32-36",
+   "rate": "30%",
+   "area": "3F"
+  },
+  {
+   "dex": 88,
+   "name": "Grimer",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "28-30",
+   "rate": "30%",
+   "area": "3F"
+  },
+  {
+   "dex": 109,
+   "name": "Koffing",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "28-30",
+   "rate": "30%",
+   "area": "3F"
+  },
+  {
+   "dex": 19,
+   "name": "Rattata",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26-28",
+   "rate": "15%",
+   "area": "3F"
+  },
+  {
+   "dex": 37,
+   "name": "Vulpix",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30-32",
+   "rate": "15%",
+   "area": "3F"
+  },
+  {
+   "dex": 58,
+   "name": "Growlithe",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30-32",
+   "rate": "15%",
+   "area": "3F"
+  },
+  {
+   "dex": 88,
+   "name": "Grimer",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "28",
+   "rate": "5%",
+   "area": "3F"
+  },
+  {
+   "dex": 89,
+   "name": "Muk",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "5%",
+   "area": "3F"
+  },
+  {
+   "dex": 109,
+   "name": "Koffing",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "28",
+   "rate": "5%",
+   "area": "3F"
+  },
+  {
+   "dex": 110,
+   "name": "Weezing",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "32",
+   "rate": "5%",
+   "area": "3F"
+  },
+  {
+   "dex": 20,
+   "name": "Raticate",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "34-38",
+   "rate": "30%",
+   "area": "B1F"
+  },
+  {
+   "dex": 88,
+   "name": "Grimer",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "28-30",
+   "rate": "30%",
+   "area": "B1F"
+  },
+  {
+   "dex": 109,
+   "name": "Koffing",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "28-30",
+   "rate": "30%",
+   "area": "B1F"
+  },
+  {
+   "dex": 37,
+   "name": "Vulpix",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30-32",
+   "rate": "15%",
+   "area": "B1F"
+  },
+  {
+   "dex": 58,
+   "name": "Growlithe",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30-32",
+   "rate": "15%",
+   "area": "B1F"
+  },
+  {
+   "dex": 132,
+   "name": "Ditto",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30",
+   "rate": "10%",
+   "area": "B1F"
+  },
+  {
+   "dex": 19,
+   "name": "Rattata",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "26",
+   "rate": "5%",
+   "area": "B1F"
+  },
+  {
+   "dex": 88,
+   "name": "Grimer",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "28",
+   "rate": "5%",
+   "area": "B1F"
+  },
+  {
+   "dex": 89,
+   "name": "Muk",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "34",
+   "rate": "5%",
+   "area": "B1F"
+  },
+  {
+   "dex": 109,
+   "name": "Koffing",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "28",
+   "rate": "5%",
+   "area": "B1F"
+  },
+  {
+   "dex": 110,
+   "name": "Weezing",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "34",
+   "rate": "5%",
+   "area": "B1F"
+  }
+ ],
+ "items": [
+  {
+   "id": "1f-carbos",
+   "name": "Carbos",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "1f-escape-rope",
+   "name": "Escape Rope",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "1f-protein",
+   "name": "Protein",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "hidden-1f-moon-stone",
+   "name": "Moon Stone",
+   "hidden": true,
+   "where": "1F"
+  },
+  {
+   "id": "2f-calcium",
+   "name": "Calcium",
+   "hidden": false,
+   "where": "2F"
+  },
+  {
+   "id": "2f-zinc",
+   "name": "Zinc",
+   "hidden": false,
+   "where": "2F"
+  },
+  {
+   "id": "2f-hp-up",
+   "name": "HP Up",
+   "hidden": false,
+   "where": "2F"
+  },
+  {
+   "id": "3f-max-potion",
+   "name": "Max Potion",
+   "hidden": false,
+   "where": "3F"
+  },
+  {
+   "id": "3f-iron",
+   "name": "Iron",
+   "hidden": false,
+   "where": "3F"
+  },
+  {
+   "id": "hidden-3f-rare-candy",
+   "name": "Rare Candy",
+   "hidden": true,
+   "where": "3F"
+  },
+  {
+   "id": "b1f-tm22",
+   "name": "TM22",
+   "hidden": false,
+   "where": "B1F"
+  },
+  {
+   "id": "b1f-tm14",
+   "name": "TM14",
+   "hidden": false,
+   "where": "B1F"
+  },
+  {
+   "id": "b1f-full-restore",
+   "name": "Full Restore",
+   "hidden": false,
+   "where": "B1F"
+  },
+  {
+   "id": "b1f-secret-key",
+   "name": "Secret Key",
+   "hidden": false,
+   "where": "B1F"
+  },
+  {
+   "id": "hidden-b1f-elixir",
+   "name": "Elixir",
+   "hidden": true,
+   "where": "B1F"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

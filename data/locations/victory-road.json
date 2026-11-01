@@ -1,0 +1,403 @@
+{
+ "id": "victory-road",
+ "name": "Victory Road",
+ "encounters": [
+  {
+   "dex": 95,
+   "name": "Onix",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "40-46",
+   "rate": "30%",
+   "area": "1F"
+  },
+  {
+   "dex": 66,
+   "name": "Machop",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "20%",
+   "area": "1F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "20%",
+   "area": "1F"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "10%",
+   "area": "1F"
+  },
+  {
+   "dex": 24,
+   "name": "Arbok",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "44",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 28,
+   "name": "Sandslash",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "44",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 67,
+   "name": "Machoke",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-46",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 105,
+   "name": "Marowak",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-46",
+   "rate": "5%",
+   "area": "1F"
+  },
+  {
+   "dex": 66,
+   "name": "Machop",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "34",
+   "rate": "20%",
+   "area": "2F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "34",
+   "rate": "20%",
+   "area": "2F"
+  },
+  {
+   "dex": 95,
+   "name": "Onix",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "45-48",
+   "rate": "20%",
+   "area": "2F"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "34",
+   "rate": "10%",
+   "area": "2F"
+  },
+  {
+   "dex": 57,
+   "name": "Primeape",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "42",
+   "rate": "10%",
+   "area": "2F"
+  },
+  {
+   "dex": 24,
+   "name": "Arbok",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "46",
+   "rate": "5%",
+   "area": "2F"
+  },
+  {
+   "dex": 28,
+   "name": "Sandslash",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "46",
+   "rate": "5%",
+   "area": "2F"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "46",
+   "rate": "5%",
+   "area": "2F"
+  },
+  {
+   "dex": 67,
+   "name": "Machoke",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "46-48",
+   "rate": "5%",
+   "area": "2F"
+  },
+  {
+   "dex": 105,
+   "name": "Marowak",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "46-48",
+   "rate": "5%",
+   "area": "2F"
+  },
+  {
+   "dex": 95,
+   "name": "Onix",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "40-46",
+   "rate": "30%",
+   "area": "3F"
+  },
+  {
+   "dex": 66,
+   "name": "Machop",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "20%",
+   "area": "3F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "20%",
+   "area": "3F"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "10%",
+   "area": "3F"
+  },
+  {
+   "dex": 24,
+   "name": "Arbok",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "44",
+   "rate": "5%",
+   "area": "3F"
+  },
+  {
+   "dex": 28,
+   "name": "Sandslash",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "44",
+   "rate": "5%",
+   "area": "3F"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44",
+   "rate": "5%",
+   "area": "3F"
+  },
+  {
+   "dex": 67,
+   "name": "Machoke",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-46",
+   "rate": "5%",
+   "area": "3F"
+  },
+  {
+   "dex": 105,
+   "name": "Marowak",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-46",
+   "rate": "5%",
+   "area": "3F"
+  }
+ ],
+ "items": [
+  {
+   "id": "1f-rare-candy",
+   "name": "Rare Candy",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "1f-tm02",
+   "name": "TM02",
+   "hidden": false,
+   "where": "1F"
+  },
+  {
+   "id": "hidden-1f-ultra-ball",
+   "name": "Ultra Ball",
+   "hidden": true,
+   "where": "1F"
+  },
+  {
+   "id": "hidden-1f-full-restore",
+   "name": "Full Restore",
+   "hidden": true,
+   "where": "1F"
+  },
+  {
+   "id": "2f-guard-spec",
+   "name": "Guard Spec.",
+   "hidden": false,
+   "where": "2F"
+  },
+  {
+   "id": "2f-tm07",
+   "name": "TM07",
+   "hidden": false,
+   "where": "2F"
+  },
+  {
+   "id": "2f-full-heal",
+   "name": "Full Heal",
+   "hidden": false,
+   "where": "2F"
+  },
+  {
+   "id": "2f-tm37",
+   "name": "TM37",
+   "hidden": false,
+   "where": "2F"
+  },
+  {
+   "id": "3f-max-revive",
+   "name": "Max Revive",
+   "hidden": false,
+   "where": "3F"
+  },
+  {
+   "id": "3f-tm50",
+   "name": "TM50",
+   "hidden": false,
+   "where": "3F"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "id": "route-4",
+ "name": "Route 4",
+ "encounters": [
+  {
+   "dex": 19,
+   "name": "Rattata",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "8-12",
+   "rate": "35%",
+   "area": "Outside"
+  },
+  {
+   "dex": 21,
+   "name": "Spearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "8-12",
+   "rate": "35%",
+   "area": "Outside"
+  },
+  {
+   "dex": 23,
+   "name": "Ekans",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "6-12",
+   "rate": "25%",
+   "area": "Outside"
+  },
+  {
+   "dex": 27,
+   "name": "Sandshrew",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "6-12",
+   "rate": "25%",
+   "area": "Outside"
+  },
+  {
+   "dex": 56,
+   "name": "Mankey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "10-12",
+   "rate": "5%",
+   "area": "Outside"
+  },
+  {
+   "dex": 72,
+   "name": "Tentacool",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-40",
+   "rate": "100%",
+   "area": "Outside"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "Outside"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "Outside"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Outside"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Outside"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "84%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "84%",
+   "area": "Outside"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%",
+   "area": "Outside"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "Outside"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "Outside"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "gift",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "area": "Pokémon Center 1F",
+   "notes": "Magikarp (Lv 5) · Magikarp salesman (500 Poké Dollars)"
+  }
+ ],
+ "items": [
+  {
+   "id": "outside-tm05",
+   "name": "TM05",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-great-ball",
+   "name": "Great Ball",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-persim-berry",
+   "name": "Persim Berry",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-razz-berry",
+   "name": "Razz Berry",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "mon-pok-mon-center-1f-magikarp-lv-5",
+   "name": "Magikarp (Lv 5)",
+   "from": "Magikarp salesman (500 Poké Dollars)",
+   "where": "Pokémon Center 1F"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

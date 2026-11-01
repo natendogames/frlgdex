@@ -1,0 +1,109 @@
+{
+ "id": "route-14",
+ "name": "Route 14",
+ "encounters": [
+  {
+   "dex": 43,
+   "name": "Oddish",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22-26",
+   "rate": "35%"
+  },
+  {
+   "dex": 69,
+   "name": "Bellsprout",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22-26",
+   "rate": "35%"
+  },
+  {
+   "dex": 48,
+   "name": "Venonat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "24-26",
+   "rate": "30%"
+  },
+  {
+   "dex": 132,
+   "name": "Ditto",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "23",
+   "rate": "15%"
+  },
+  {
+   "dex": 16,
+   "name": "Pidgey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "27",
+   "rate": "10%"
+  },
+  {
+   "dex": 17,
+   "name": "Pidgeotto",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "29",
+   "rate": "5%"
+  },
+  {
+   "dex": 44,
+   "name": "Gloom",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30",
+   "rate": "5%"
+  },
+  {
+   "dex": 70,
+   "name": "Weepinbell",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "30",
+   "rate": "5%"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-outside-zinc",
+   "name": "Zinc",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-pinap-berry",
+   "name": "Pinap Berry",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

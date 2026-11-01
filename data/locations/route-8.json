@@ -1,0 +1,93 @@
+{
+ "id": "route-8",
+ "name": "Route 8",
+ "encounters": [
+  {
+   "dex": 16,
+   "name": "Pidgey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "18-20",
+   "rate": "30%"
+  },
+  {
+   "dex": 52,
+   "name": "Meowth",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "18-20",
+   "rate": "30%"
+  },
+  {
+   "dex": 23,
+   "name": "Ekans",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "17-19",
+   "rate": "20%"
+  },
+  {
+   "dex": 27,
+   "name": "Sandshrew",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "17-19",
+   "rate": "20%"
+  },
+  {
+   "dex": 37,
+   "name": "Vulpix",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-18",
+   "rate": "20%"
+  },
+  {
+   "dex": 58,
+   "name": "Growlithe",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-18",
+   "rate": "20%"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-outside-rawst-berry",
+   "name": "Rawst Berry",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-lum-berry",
+   "name": "Lum Berry",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-leppa-berry",
+   "name": "Leppa Berry",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "id": "dotted-hole",
+ "name": "Dotted Hole",
+ "encounters": [],
+ "items": [],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

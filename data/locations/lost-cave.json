@@ -1,0 +1,1023 @@
+{
+ "id": "lost-cave",
+ "name": "Lost Cave",
+ "encounters": [
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 1"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "25%",
+   "area": "Lost Cave Room 1"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 1"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41-43",
+   "rate": "20%",
+   "area": "Lost Cave Room 1"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 1"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 1"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 10"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "25%",
+   "area": "Lost Cave Room 10"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 10"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41-43",
+   "rate": "20%",
+   "area": "Lost Cave Room 10"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 10"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 10"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 11"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 11"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "40",
+   "rate": "20%",
+   "area": "Lost Cave Room 11"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-22",
+   "rate": "20%",
+   "area": "Lost Cave Room 11"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-22",
+   "rate": "20%",
+   "area": "Lost Cave Room 11"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41",
+   "rate": "10%",
+   "area": "Lost Cave Room 11"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 12"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 12"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "40",
+   "rate": "20%",
+   "area": "Lost Cave Room 12"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-22",
+   "rate": "20%",
+   "area": "Lost Cave Room 12"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-22",
+   "rate": "20%",
+   "area": "Lost Cave Room 12"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41",
+   "rate": "10%",
+   "area": "Lost Cave Room 12"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 13"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 13"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "40",
+   "rate": "20%",
+   "area": "Lost Cave Room 13"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-22",
+   "rate": "20%",
+   "area": "Lost Cave Room 13"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-22",
+   "rate": "20%",
+   "area": "Lost Cave Room 13"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41",
+   "rate": "10%",
+   "area": "Lost Cave Room 13"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 14"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 14"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "40",
+   "rate": "20%",
+   "area": "Lost Cave Room 14"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-22",
+   "rate": "20%",
+   "area": "Lost Cave Room 14"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-22",
+   "rate": "20%",
+   "area": "Lost Cave Room 14"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41",
+   "rate": "10%",
+   "area": "Lost Cave Room 14"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 2"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "25%",
+   "area": "Lost Cave Room 2"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 2"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41-43",
+   "rate": "20%",
+   "area": "Lost Cave Room 2"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 2"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 2"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 3"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "25%",
+   "area": "Lost Cave Room 3"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 3"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41-43",
+   "rate": "20%",
+   "area": "Lost Cave Room 3"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 3"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 3"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 4"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "25%",
+   "area": "Lost Cave Room 4"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 4"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41-43",
+   "rate": "20%",
+   "area": "Lost Cave Room 4"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 4"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 4"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 5"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "25%",
+   "area": "Lost Cave Room 5"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 5"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41-43",
+   "rate": "20%",
+   "area": "Lost Cave Room 5"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 5"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 5"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 6"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "25%",
+   "area": "Lost Cave Room 6"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 6"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41-43",
+   "rate": "20%",
+   "area": "Lost Cave Room 6"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 6"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 6"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 7"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "25%",
+   "area": "Lost Cave Room 7"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 7"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41-43",
+   "rate": "20%",
+   "area": "Lost Cave Room 7"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 7"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 7"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 8"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "25%",
+   "area": "Lost Cave Room 8"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 8"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41-43",
+   "rate": "20%",
+   "area": "Lost Cave Room 8"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 8"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 8"
+  },
+  {
+   "dex": 93,
+   "name": "Haunter",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44-52",
+   "rate": "30%",
+   "area": "Lost Cave Room 9"
+  },
+  {
+   "dex": 92,
+   "name": "Gastly",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "25%",
+   "area": "Lost Cave Room 9"
+  },
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "37",
+   "rate": "20%",
+   "area": "Lost Cave Room 9"
+  },
+  {
+   "dex": 42,
+   "name": "Golbat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41-43",
+   "rate": "20%",
+   "area": "Lost Cave Room 9"
+  },
+  {
+   "dex": 198,
+   "name": "Murkrow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 9"
+  },
+  {
+   "dex": 200,
+   "name": "Misdreavus",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "22",
+   "rate": "5%",
+   "area": "Lost Cave Room 9"
+  }
+ ],
+ "items": [
+  {
+   "id": "lost-cave-room-10-silk-scarf",
+   "name": "Silk Scarf",
+   "hidden": false,
+   "where": "Lost Cave Room 10"
+  },
+  {
+   "id": "lost-cave-room-11-lax-incense",
+   "name": "Lax Incense",
+   "hidden": false,
+   "where": "Lost Cave Room 11"
+  },
+  {
+   "id": "lost-cave-room-12-sea-incense",
+   "name": "Sea Incense",
+   "hidden": false,
+   "where": "Lost Cave Room 12"
+  },
+  {
+   "id": "lost-cave-room-13-max-revive",
+   "name": "Max Revive",
+   "hidden": false,
+   "where": "Lost Cave Room 13"
+  },
+  {
+   "id": "lost-cave-room-14-rare-candy",
+   "name": "Rare Candy",
+   "hidden": false,
+   "where": "Lost Cave Room 14"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

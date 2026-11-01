@@ -1,0 +1,41 @@
+{
+ "id": "route-1",
+ "name": "Route 1",
+ "encounters": [
+  {
+   "dex": 16,
+   "name": "Pidgey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "2-5",
+   "rate": "50%"
+  },
+  {
+   "dex": 19,
+   "name": "Rattata",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "2-4",
+   "rate": "50%"
+  }
+ ],
+ "items": [],
+ "gifts": [
+  {
+   "id": "item-outside-potion",
+   "name": "Potion",
+   "from": "Poké Mart employee handing out samples",
+   "where": "Outside"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

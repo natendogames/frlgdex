@@ -1,0 +1,111 @@
+{
+ "id": "altering-cave",
+ "name": "Altering Cave",
+ "encounters": [
+  {
+   "dex": 41,
+   "name": "Zubat",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "6-16",
+   "rate": "100%"
+  },
+  {
+   "dex": 179,
+   "name": "Mareep",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "3-13",
+   "rate": "100%"
+  },
+  {
+   "dex": 190,
+   "name": "Aipom",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "18-28",
+   "rate": "100%"
+  },
+  {
+   "dex": 204,
+   "name": "Pineco",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "19-29",
+   "rate": "100%"
+  },
+  {
+   "dex": 213,
+   "name": "Shuckle",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "18-28",
+   "rate": "100%"
+  },
+  {
+   "dex": 216,
+   "name": "Teddiursa",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "18-28",
+   "rate": "100%"
+  },
+  {
+   "dex": 228,
+   "name": "Houndour",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "12-22",
+   "rate": "100%"
+  },
+  {
+   "dex": 234,
+   "name": "Stantler",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "18-28",
+   "rate": "100%"
+  },
+  {
+   "dex": 235,
+   "name": "Smeargle",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "18-28",
+   "rate": "100%"
+  }
+ ],
+ "items": [],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

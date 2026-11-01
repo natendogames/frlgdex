@@ -1,0 +1,43 @@
+{
+ "id": "navel-rock",
+ "name": "Navel Rock",
+ "encounters": [
+  {
+   "dex": 249,
+   "name": "Lugia",
+   "method": "static",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "70",
+   "area": "Base",
+   "notes": "One chance: save first"
+  },
+  {
+   "dex": 250,
+   "name": "Ho-Oh",
+   "method": "static",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "70",
+   "area": "Summit",
+   "notes": "One chance: save first"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-summit-sacred-ash",
+   "name": "Sacred Ash",
+   "hidden": true,
+   "where": "Summit (underfoot)"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

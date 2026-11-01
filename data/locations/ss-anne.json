@@ -1,0 +1,236 @@
+{
+ "id": "ss-anne",
+ "name": "S.S. Anne",
+ "encounters": [
+  {
+   "dex": 72,
+   "name": "Tentacool",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-40",
+   "rate": "100%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "60%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "44%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "44%"
+  },
+  {
+   "dex": 90,
+   "name": "Shellder",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-25",
+   "rate": "40%"
+  },
+  {
+   "dex": 120,
+   "name": "Staryu",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "1%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%"
+  }
+ ],
+ "items": [
+  {
+   "id": "1f-room-2-tm31",
+   "name": "TM31",
+   "hidden": false,
+   "where": "1F Room 2"
+  },
+  {
+   "id": "2f-room-2-stardust",
+   "name": "Stardust",
+   "hidden": false,
+   "where": "2F Room 2"
+  },
+  {
+   "id": "2f-room-4-x-attack",
+   "name": "X Attack",
+   "hidden": false,
+   "where": "2F Room 4"
+  },
+  {
+   "id": "hidden-b1f-corridor-hyper-potion",
+   "name": "Hyper Potion",
+   "hidden": true,
+   "where": "B1F Corridor"
+  },
+  {
+   "id": "b1f-room-2-tm44",
+   "name": "TM44",
+   "hidden": false,
+   "where": "B1F Room 2"
+  },
+  {
+   "id": "b1f-room-3-ether",
+   "name": "Ether",
+   "hidden": false,
+   "where": "B1F Room 3"
+  },
+  {
+   "id": "b1f-room-5-super-potion",
+   "name": "Super Potion",
+   "hidden": false,
+   "where": "B1F Room 5"
+  },
+  {
+   "id": "hidden-exterior-lava-cookie",
+   "name": "Lava Cookie",
+   "hidden": true,
+   "where": "Exterior"
+  },
+  {
+   "id": "kitchen-great-ball",
+   "name": "Great Ball",
+   "hidden": false,
+   "where": "Kitchen"
+  },
+  {
+   "id": "hidden-kitchen-chesto-berry",
+   "name": "Chesto Berry",
+   "hidden": true,
+   "where": "Kitchen"
+  },
+  {
+   "id": "hidden-kitchen-pecha-berry",
+   "name": "Pecha Berry",
+   "hidden": true,
+   "where": "Kitchen"
+  },
+  {
+   "id": "hidden-kitchen-cheri-berry",
+   "name": "Cheri Berry",
+   "hidden": true,
+   "where": "Kitchen"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-captains-office-hm01",
+   "name": "HM01",
+   "from": "S.S. Anne Captain (cure his seasickness)",
+   "where": "Captains Office"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "id": "pewter-city",
+ "name": "Pewter City",
+ "encounters": [],
+ "items": [
+  {
+   "id": "hidden-outside-pok-ball",
+   "name": "Poké Ball",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-gym-tm39",
+   "name": "TM39",
+   "from": "Brock (after winning)",
+   "where": "Gym"
+  },
+  {
+   "id": "item-museum-1f-old-amber",
+   "name": "Old Amber",
+   "from": "Scientist in the back room (behind a Cut tree)",
+   "where": "Museum 1F"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

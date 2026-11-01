@@ -1,0 +1,575 @@
+{
+ "id": "mt-ember",
+ "name": "Mt. Ember",
+ "encounters": [
+  {
+   "dex": 77,
+   "name": "Ponyta",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30-36",
+   "rate": "35%",
+   "area": "Exterior"
+  },
+  {
+   "dex": 22,
+   "name": "Fearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "25%",
+   "area": "Exterior"
+  },
+  {
+   "dex": 21,
+   "name": "Spearow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30-32",
+   "rate": "15%",
+   "area": "Exterior"
+  },
+  {
+   "dex": 21,
+   "name": "Spearow",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "32",
+   "rate": "10%",
+   "area": "Exterior"
+  },
+  {
+   "dex": 66,
+   "name": "Machop",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "35",
+   "rate": "10%",
+   "area": "Exterior"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "33",
+   "rate": "10%",
+   "area": "Exterior"
+  },
+  {
+   "dex": 78,
+   "name": "Rapidash",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "39-42",
+   "rate": "5%",
+   "area": "Exterior"
+  },
+  {
+   "dex": 126,
+   "name": "Magmar",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "5%",
+   "area": "Exterior"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-30",
+   "rate": "95%",
+   "area": "Exterior"
+  },
+  {
+   "dex": 75,
+   "name": "Graveler",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-40",
+   "rate": "5%",
+   "area": "Exterior"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32-40",
+   "rate": "50%",
+   "area": "Ruby Path 1F"
+  },
+  {
+   "dex": 66,
+   "name": "Machop",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "34-38",
+   "rate": "40%",
+   "area": "Ruby Path 1F"
+  },
+  {
+   "dex": 67,
+   "name": "Machoke",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "40-42",
+   "rate": "10%",
+   "area": "Ruby Path 1F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-40",
+   "rate": "65%",
+   "area": "Ruby Path 1F"
+  },
+  {
+   "dex": 75,
+   "name": "Graveler",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30-50",
+   "rate": "35%",
+   "area": "Ruby Path 1F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "34-42",
+   "rate": "70%",
+   "area": "Ruby Path B1F"
+  },
+  {
+   "dex": 218,
+   "name": "Slugma",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "24-30",
+   "rate": "30%",
+   "area": "Ruby Path B1F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-40",
+   "rate": "65%",
+   "area": "Ruby Path B1F"
+  },
+  {
+   "dex": 75,
+   "name": "Graveler",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30-50",
+   "rate": "35%",
+   "area": "Ruby Path B1F"
+  },
+  {
+   "dex": 218,
+   "name": "Slugma",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "22-32",
+   "rate": "60%",
+   "area": "Ruby Path B1F Stairs"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "40-44",
+   "rate": "40%",
+   "area": "Ruby Path B1F Stairs"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-40",
+   "rate": "65%",
+   "area": "Ruby Path B1F Stairs"
+  },
+  {
+   "dex": 75,
+   "name": "Graveler",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30-50",
+   "rate": "35%",
+   "area": "Ruby Path B1F Stairs"
+  },
+  {
+   "dex": 218,
+   "name": "Slugma",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "22-32",
+   "rate": "60%",
+   "area": "Ruby Path B2F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "40-44",
+   "rate": "40%",
+   "area": "Ruby Path B2F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-40",
+   "rate": "65%",
+   "area": "Ruby Path B2F"
+  },
+  {
+   "dex": 75,
+   "name": "Graveler",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30-50",
+   "rate": "35%",
+   "area": "Ruby Path B2F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "34-42",
+   "rate": "70%",
+   "area": "Ruby Path B2F Stairs"
+  },
+  {
+   "dex": 218,
+   "name": "Slugma",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "24-30",
+   "rate": "30%",
+   "area": "Ruby Path B2F Stairs"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-40",
+   "rate": "65%",
+   "area": "Ruby Path B2F Stairs"
+  },
+  {
+   "dex": 75,
+   "name": "Graveler",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30-50",
+   "rate": "35%",
+   "area": "Ruby Path B2F Stairs"
+  },
+  {
+   "dex": 218,
+   "name": "Slugma",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "18-36",
+   "rate": "100%",
+   "area": "Ruby Path B3F"
+  },
+  {
+   "dex": 218,
+   "name": "Slugma",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "90%",
+   "area": "Ruby Path B3F"
+  },
+  {
+   "dex": 219,
+   "name": "Magcargo",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-45",
+   "rate": "10%",
+   "area": "Ruby Path B3F"
+  },
+  {
+   "dex": 66,
+   "name": "Machop",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "31-39",
+   "rate": "50%",
+   "area": "Summit Path 1F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "29-37",
+   "rate": "50%",
+   "area": "Summit Path 1F"
+  },
+  {
+   "dex": 66,
+   "name": "Machop",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32-36",
+   "rate": "40%",
+   "area": "Summit Path 2F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30-34",
+   "rate": "40%",
+   "area": "Summit Path 2F"
+  },
+  {
+   "dex": 67,
+   "name": "Machoke",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "38-40",
+   "rate": "20%",
+   "area": "Summit Path 2F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-30",
+   "rate": "95%",
+   "area": "Summit Path 2F"
+  },
+  {
+   "dex": 75,
+   "name": "Graveler",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-40",
+   "rate": "5%",
+   "area": "Summit Path 2F"
+  },
+  {
+   "dex": 66,
+   "name": "Machop",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "31-39",
+   "rate": "50%",
+   "area": "Summit Path 3F"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "29-37",
+   "rate": "50%",
+   "area": "Summit Path 3F"
+  },
+  {
+   "dex": 146,
+   "name": "Moltres",
+   "method": "static",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "50",
+   "area": "Summit",
+   "notes": "One chance: save first"
+  }
+ ],
+ "items": [
+  {
+   "id": "exterior-ultra-ball",
+   "name": "Ultra Ball",
+   "hidden": false,
+   "where": "Exterior"
+  },
+  {
+   "id": "exterior-fire-stone",
+   "name": "Fire Stone",
+   "hidden": false,
+   "where": "Exterior"
+  },
+  {
+   "id": "exterior-dire-hit",
+   "name": "Dire Hit",
+   "hidden": false,
+   "where": "Exterior"
+  },
+  {
+   "id": "hidden-exterior-fire-stone",
+   "name": "Fire Stone",
+   "hidden": true,
+   "where": "Exterior"
+  },
+  {
+   "id": "hidden-exterior-ultra-ball",
+   "name": "Ultra Ball",
+   "hidden": true,
+   "where": "Exterior"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-ruby-path-b3f-ruby",
+   "name": "Ruby",
+   "from": "Pick it up at the end of Ruby Path",
+   "where": "Ruby Path B3F"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

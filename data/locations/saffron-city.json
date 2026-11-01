@@ -1,0 +1,64 @@
+{
+ "id": "saffron-city",
+ "name": "Saffron City",
+ "encounters": [
+  {
+   "dex": 106,
+   "name": "Hitmonlee",
+   "method": "gift",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "notes": "Hitmonlee (Lv 25, choose one) · Karate Master (after winning)"
+  },
+  {
+   "dex": 107,
+   "name": "Hitmonchan",
+   "method": "gift",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "notes": "Hitmonchan (Lv 25, choose one) · Karate Master (after winning)"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-copycats-house-2f-nugget",
+   "name": "Nugget",
+   "hidden": true,
+   "where": "Copycats House 2F"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-gym-tm04",
+   "name": "TM04",
+   "from": "Sabrina (after winning)",
+   "where": "Gym"
+  },
+  {
+   "id": "item-mr-psychics-house-tm29",
+   "name": "TM29",
+   "from": "Mr. Psychic",
+   "where": "Mr Psychics House"
+  },
+  {
+   "id": "mon-dojo-hitmonlee-lv-25-choose-one",
+   "name": "Hitmonlee (Lv 25, choose one)",
+   "from": "Karate Master (after winning)",
+   "where": "Dojo"
+  },
+  {
+   "id": "mon-dojo-hitmonchan-lv-25-choose-one",
+   "name": "Hitmonchan (Lv 25, choose one)",
+   "from": "Karate Master (after winning)",
+   "where": "Dojo"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

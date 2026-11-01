@@ -1,0 +1,31 @@
+{
+ "id": "three-island",
+ "name": "Three Island",
+ "encounters": [],
+ "items": [
+  {
+   "id": "outside-zinc",
+   "name": "Zinc",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-pp-up",
+   "name": "PP Up",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-outside-full-restore",
+   "name": "Full Restore",
+   "from": "Grateful resident (after clearing the bikers)",
+   "where": "Outside"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "id": "route-9",
+ "name": "Route 9",
+ "encounters": [
+  {
+   "dex": 19,
+   "name": "Rattata",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "14-17",
+   "rate": "40%"
+  },
+  {
+   "dex": 21,
+   "name": "Spearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "13-17",
+   "rate": "35%"
+  },
+  {
+   "dex": 23,
+   "name": "Ekans",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "11-17",
+   "rate": "25%"
+  },
+  {
+   "dex": 27,
+   "name": "Sandshrew",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "11-17",
+   "rate": "25%"
+  }
+ ],
+ "items": [
+  {
+   "id": "outside-tm40",
+   "name": "TM40",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "outside-burn-heal",
+   "name": "Burn Heal",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-ether",
+   "name": "Ether",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-rare-candy",
+   "name": "Rare Candy",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-chesto-berry",
+   "name": "Chesto Berry",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

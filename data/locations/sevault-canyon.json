@@ -1,0 +1,183 @@
+{
+ "id": "sevault-canyon",
+ "name": "Sevault Canyon",
+ "encounters": [
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "46",
+   "rate": "20%"
+  },
+  {
+   "dex": 231,
+   "name": "Phanpy",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15",
+   "rate": "20%"
+  },
+  {
+   "dex": 22,
+   "name": "Fearow",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "50",
+   "rate": "15%"
+  },
+  {
+   "dex": 22,
+   "name": "Fearow",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "50",
+   "rate": "10%"
+  },
+  {
+   "dex": 52,
+   "name": "Meowth",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "43",
+   "rate": "10%"
+  },
+  {
+   "dex": 104,
+   "name": "Cubone",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "46",
+   "rate": "10%"
+  },
+  {
+   "dex": 105,
+   "name": "Marowak",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "52",
+   "rate": "10%"
+  },
+  {
+   "dex": 53,
+   "name": "Persian",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "49-52",
+   "rate": "5%"
+  },
+  {
+   "dex": 95,
+   "name": "Onix",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "54",
+   "rate": "5%"
+  },
+  {
+   "dex": 227,
+   "name": "Skarmory",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "30",
+   "rate": "5%"
+  },
+  {
+   "dex": 246,
+   "name": "Larvitar",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-20",
+   "rate": "5%"
+  },
+  {
+   "dex": 74,
+   "name": "Geodude",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "25-40",
+   "rate": "65%"
+  },
+  {
+   "dex": 75,
+   "name": "Graveler",
+   "method": "rock-smash",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "30-50",
+   "rate": "35%"
+  }
+ ],
+ "items": [
+  {
+   "id": "sevault-canyon-king-s-rock",
+   "name": "King's Rock",
+   "hidden": false,
+   "where": "Sevault Canyon"
+  },
+  {
+   "id": "sevault-canyon-max-elixir",
+   "name": "Max Elixir",
+   "hidden": false,
+   "where": "Sevault Canyon"
+  },
+  {
+   "id": "sevault-canyon-nugget",
+   "name": "Nugget",
+   "hidden": false,
+   "where": "Sevault Canyon"
+  },
+  {
+   "id": "hidden-sevault-canyon-cheri-berry",
+   "name": "Cheri Berry",
+   "hidden": true,
+   "where": "Sevault Canyon"
+  },
+  {
+   "id": "sevault-canyon-house-lucky-punch",
+   "name": "Lucky Punch",
+   "hidden": false,
+   "where": "Sevault Canyon House"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

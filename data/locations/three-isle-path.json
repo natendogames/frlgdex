@@ -1,0 +1,25 @@
+{
+ "id": "three-isle-path",
+ "name": "Three Isle Path",
+ "encounters": [],
+ "items": [
+  {
+   "id": "hidden-dunsparce-tunnel-nugget",
+   "name": "Nugget",
+   "hidden": true,
+   "where": "Dunsparce Tunnel"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-dunsparce-tunnel-nugget",
+   "name": "Nugget",
+   "from": "Prospector",
+   "where": "Dunsparce Tunnel"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": "route-10",
+ "name": "Route 10",
+ "encounters": [
+  {
+   "dex": 100,
+   "name": "Voltorb",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "14-17",
+   "rate": "40%"
+  },
+  {
+   "dex": 21,
+   "name": "Spearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "13-17",
+   "rate": "35%"
+  },
+  {
+   "dex": 23,
+   "name": "Ekans",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "11-17",
+   "rate": "25%"
+  },
+  {
+   "dex": 27,
+   "name": "Sandshrew",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "11-17",
+   "rate": "25%"
+  },
+  {
+   "dex": 72,
+   "name": "Tentacool",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-40",
+   "rate": "100%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "60%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "84%"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "84%"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "1%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-outside-super-potion",
+   "name": "Super Potion",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-max-ether",
+   "name": "Max Ether",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-cheri-berry",
+   "name": "Cheri Berry",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-persim-berry",
+   "name": "Persim Berry",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-nanab-berry",
+   "name": "Nanab Berry",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-pok-mon-center-1f-everstone",
+   "name": "Everstone",
+   "from": "Professor Oak's aide (needs enough Pokédex entries)",
+   "where": "Pokémon Center 1F"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

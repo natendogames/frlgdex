@@ -1,0 +1,122 @@
+{
+ "id": "viridian-forest",
+ "name": "Viridian Forest",
+ "encounters": [
+  {
+   "dex": 10,
+   "name": "Caterpie",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "3-5",
+   "rate": "40%"
+  },
+  {
+   "dex": 13,
+   "name": "Weedle",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "3-5",
+   "rate": "40%"
+  },
+  {
+   "dex": 11,
+   "name": "Metapod",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "4-6",
+   "rate": "10%"
+  },
+  {
+   "dex": 14,
+   "name": "Kakuna",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "4-6",
+   "rate": "10%"
+  },
+  {
+   "dex": 11,
+   "name": "Metapod",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5",
+   "rate": "5%"
+  },
+  {
+   "dex": 14,
+   "name": "Kakuna",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "5%"
+  },
+  {
+   "dex": 25,
+   "name": "Pikachu",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "3-5",
+   "rate": "5%"
+  }
+ ],
+ "items": [
+  {
+   "id": "outside-pok-ball",
+   "name": "Poké Ball",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "outside-antidote",
+   "name": "Antidote",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "outside-potion",
+   "name": "Potion",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "outside-potion-2",
+   "name": "Potion",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-potion",
+   "name": "Potion",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-antidote",
+   "name": "Antidote",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

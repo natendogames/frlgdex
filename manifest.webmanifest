@@ -1,0 +1,9 @@
+{
+  "name": "FRLG Completion Dex",
+  "short_name": "FRLG Dex",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#1b1b1f",
+  "theme_color": "#c0392b",
+  "icons": [{ "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

@@ -1,0 +1,301 @@
+{
+ "id": "cinnabar-island",
+ "name": "Cinnabar Island",
+ "encounters": [
+  {
+   "dex": 72,
+   "name": "Tentacool",
+   "method": "surf",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-40",
+   "rate": "100%",
+   "area": "Outside"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%",
+   "area": "Outside"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "60%",
+   "area": "Outside"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "good-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "good-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Outside"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%",
+   "area": "Outside"
+  },
+  {
+   "dex": 90,
+   "name": "Shellder",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "Outside"
+  },
+  {
+   "dex": 98,
+   "name": "Krabby",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "Outside"
+  },
+  {
+   "dex": 116,
+   "name": "Horsea",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "Outside"
+  },
+  {
+   "dex": 120,
+   "name": "Staryu",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%",
+   "area": "Outside"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%",
+   "area": "Outside"
+  },
+  {
+   "dex": 80,
+   "name": "Slowbro",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "4%",
+   "area": "Outside"
+  },
+  {
+   "dex": 117,
+   "name": "Seadra",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "4%",
+   "area": "Outside"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "Outside"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "25-35",
+   "rate": "1%",
+   "area": "Outside"
+  },
+  {
+   "dex": 86,
+   "name": "Seel",
+   "method": "trade",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "area": "Pokémon Lab Experiment Room",
+   "notes": "Trade: give Ponyta, get Seel (\"Seelor\") · Garett"
+  },
+  {
+   "dex": 138,
+   "name": "Omanyte",
+   "method": "gift",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "area": "Pokémon Lab Experiment Room",
+   "notes": "Omanyte (Lv 5) · Lab scientist (revives Helix Fossil)"
+  },
+  {
+   "dex": 140,
+   "name": "Kabuto",
+   "method": "gift",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "area": "Pokémon Lab Experiment Room",
+   "notes": "Kabuto (Lv 5) · Lab scientist (revives Dome Fossil)"
+  },
+  {
+   "dex": 142,
+   "name": "Aerodactyl",
+   "method": "gift",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "area": "Pokémon Lab Experiment Room",
+   "notes": "Aerodactyl (Lv 5) · Lab scientist (revives Old Amber)"
+  },
+  {
+   "dex": 101,
+   "name": "Electrode",
+   "method": "trade",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "area": "Pokémon Lab Lounge",
+   "notes": "Trade: give Raichu, get Electrode (\"Esphere\") · Clifton"
+  },
+  {
+   "dex": 114,
+   "name": "Tangela",
+   "method": "trade",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "area": "Pokémon Lab Lounge",
+   "notes": "Trade: give Venonat, get Tangela (\"Tangeny\") · Norma"
+  }
+ ],
+ "items": [],
+ "gifts": [
+  {
+   "id": "item-gym-tm38",
+   "name": "TM38",
+   "from": "Blaine (after winning)",
+   "where": "Gym"
+  },
+  {
+   "id": "trade-pok-mon-lab-experiment-room-trade-give-ponyta-get-seel-seelor",
+   "name": "Trade: give Ponyta, get Seel (\"Seelor\")",
+   "from": "Garett",
+   "where": "Pokémon Lab Experiment Room"
+  },
+  {
+   "id": "mon-pok-mon-lab-experiment-room-omanyte-lv-5",
+   "name": "Omanyte (Lv 5)",
+   "from": "Lab scientist (revives Helix Fossil)",
+   "where": "Pokémon Lab Experiment Room"
+  },
+  {
+   "id": "mon-pok-mon-lab-experiment-room-kabuto-lv-5",
+   "name": "Kabuto (Lv 5)",
+   "from": "Lab scientist (revives Dome Fossil)",
+   "where": "Pokémon Lab Experiment Room"
+  },
+  {
+   "id": "mon-pok-mon-lab-experiment-room-aerodactyl-lv-5",
+   "name": "Aerodactyl (Lv 5)",
+   "from": "Lab scientist (revives Old Amber)",
+   "where": "Pokémon Lab Experiment Room"
+  },
+  {
+   "id": "trade-pok-mon-lab-lounge-trade-give-raichu-get-electrode-esphere",
+   "name": "Trade: give Raichu, get Electrode (\"Esphere\")",
+   "from": "Clifton",
+   "where": "Pokémon Lab Lounge"
+  },
+  {
+   "id": "trade-pok-mon-lab-lounge-trade-give-venonat-get-tangela-tangeny",
+   "name": "Trade: give Venonat, get Tangela (\"Tangeny\")",
+   "from": "Norma",
+   "where": "Pokémon Lab Lounge"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

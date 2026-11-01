@@ -1,0 +1,161 @@
+{
+ "id": "viridian-city",
+ "name": "Viridian City",
+ "encounters": [
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "20-40",
+   "rate": "100%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "20-40",
+   "rate": "100%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%"
+  },
+  {
+   "dex": 61,
+   "name": "Poliwhirl",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20-30",
+   "rate": "40%"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "5%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "5%"
+  }
+ ],
+ "items": [
+  {
+   "id": "outside-potion",
+   "name": "Potion",
+   "hidden": false,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-gym-macho-brace",
+   "name": "Macho Brace",
+   "hidden": true,
+   "where": "Gym (underfoot)"
+  }
+ ],
+ "gifts": [
+  {
+   "id": "item-outside-teachy-tv",
+   "name": "Teachy Tv",
+   "from": "Old man (after the catching tutorial)",
+   "where": "Outside"
+  },
+  {
+   "id": "item-gym-tm26",
+   "name": "TM26",
+   "from": "Giovanni (after winning)",
+   "where": "Gym"
+  },
+  {
+   "id": "item-mart-oak-s-parcel",
+   "name": "Oak's Parcel",
+   "from": "Mart clerk",
+   "where": "Mart"
+  }
+ ],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

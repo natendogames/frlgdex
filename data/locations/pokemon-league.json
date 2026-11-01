@@ -1,0 +1,11 @@
+{
+ "id": "pokemon-league",
+ "name": "Pokémon League",
+ "encounters": [],
+ "items": [],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

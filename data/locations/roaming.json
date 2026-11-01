@@ -1,0 +1,46 @@
+{
+ "id": "roaming",
+ "name": "Roaming Legendary",
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ],
+ "notes": "After you get the National Pokédex and finish the One-Three Island story, one legendary beast roams Kanto routes. Which one depends on your starter.",
+ "encounters": [
+  {
+   "dex": 244,
+   "name": "Entei",
+   "method": "roaming",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "50",
+   "notes": "If you chose Bulbasaur"
+  },
+  {
+   "dex": 245,
+   "name": "Suicune",
+   "method": "roaming",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "50",
+   "notes": "If you chose Charmander"
+  },
+  {
+   "dex": 243,
+   "name": "Raikou",
+   "method": "roaming",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "50",
+   "notes": "If you chose Squirtle"
+  }
+ ],
+ "items": [],
+ "gifts": []
+}

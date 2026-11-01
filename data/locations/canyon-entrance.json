@@ -1,0 +1,105 @@
+{
+ "id": "canyon-entrance",
+ "name": "Canyon Entrance",
+ "encounters": [
+  {
+   "dex": 161,
+   "name": "Sentret",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "10-15",
+   "rate": "30%"
+  },
+  {
+   "dex": 21,
+   "name": "Spearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "44",
+   "rate": "20%"
+  },
+  {
+   "dex": 22,
+   "name": "Fearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "48-50",
+   "rate": "15%"
+  },
+  {
+   "dex": 231,
+   "name": "Phanpy",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "10-15",
+   "rate": "15%"
+  },
+  {
+   "dex": 52,
+   "name": "Meowth",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "41",
+   "rate": "10%"
+  },
+  {
+   "dex": 53,
+   "name": "Persian",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "47-50",
+   "rate": "5%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "41",
+   "rate": "5%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "41",
+   "rate": "5%"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-sevault-canyon-entrance-rawst-berry",
+   "name": "Rawst Berry",
+   "hidden": true,
+   "where": "Sevault Canyon Entrance"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}

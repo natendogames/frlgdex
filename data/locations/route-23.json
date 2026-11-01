@@ -1,0 +1,262 @@
+{
+ "id": "route-23",
+ "name": "Route 23",
+ "encounters": [
+  {
+   "dex": 56,
+   "name": "Mankey",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32-34",
+   "rate": "30%"
+  },
+  {
+   "dex": 22,
+   "name": "Fearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "40-44",
+   "rate": "25%"
+  },
+  {
+   "dex": 23,
+   "name": "Ekans",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "32-34",
+   "rate": "20%"
+  },
+  {
+   "dex": 27,
+   "name": "Sandshrew",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "32-34",
+   "rate": "20%"
+  },
+  {
+   "dex": 21,
+   "name": "Spearow",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "32-34",
+   "rate": "15%"
+  },
+  {
+   "dex": 24,
+   "name": "Arbok",
+   "method": "grass",
+   "versions": [
+    "FR"
+   ],
+   "levels": "44",
+   "rate": "5%"
+  },
+  {
+   "dex": 28,
+   "name": "Sandslash",
+   "method": "grass",
+   "versions": [
+    "LG"
+   ],
+   "levels": "44",
+   "rate": "5%"
+  },
+  {
+   "dex": 57,
+   "name": "Primeape",
+   "method": "grass",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "42",
+   "rate": "5%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "surf",
+   "versions": [
+    "FR"
+   ],
+   "levels": "20-40",
+   "rate": "100%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "surf",
+   "versions": [
+    "LG"
+   ],
+   "levels": "20-40",
+   "rate": "100%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "old-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5",
+   "rate": "100%"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "60%"
+  },
+  {
+   "dex": 118,
+   "name": "Goldeen",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 129,
+   "name": "Magikarp",
+   "method": "good-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "5-15",
+   "rate": "20%"
+  },
+  {
+   "dex": 60,
+   "name": "Poliwag",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "40%"
+  },
+  {
+   "dex": 61,
+   "name": "Poliwhirl",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "20-30",
+   "rate": "40%"
+  },
+  {
+   "dex": 130,
+   "name": "Gyarados",
+   "method": "super-rod",
+   "versions": [
+    "FR",
+    "LG"
+   ],
+   "levels": "15-25",
+   "rate": "15%"
+  },
+  {
+   "dex": 54,
+   "name": "Psyduck",
+   "method": "super-rod",
+   "versions": [
+    "FR"
+   ],
+   "levels": "15-35",
+   "rate": "5%"
+  },
+  {
+   "dex": 79,
+   "name": "Slowpoke",
+   "method": "super-rod",
+   "versions": [
+    "LG"
+   ],
+   "levels": "15-35",
+   "rate": "5%"
+  }
+ ],
+ "items": [
+  {
+   "id": "hidden-outside-full-restore",
+   "name": "Full Restore",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-ultra-ball",
+   "name": "Ultra Ball",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-max-ether",
+   "name": "Max Ether",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-lum-berry",
+   "name": "Lum Berry",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-sitrus-berry",
+   "name": "Sitrus Berry",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-aspear-berry",
+   "name": "Aspear Berry",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-leppa-berry",
+   "name": "Leppa Berry",
+   "hidden": true,
+   "where": "Outside"
+  },
+  {
+   "id": "hidden-outside-max-elixir",
+   "name": "Max Elixir",
+   "hidden": true,
+   "where": "Outside"
+  }
+ ],
+ "gifts": [],
+ "verified": true,
+ "sources": [
+  "https://github.com/pret/pokefirered"
+ ]
+}
