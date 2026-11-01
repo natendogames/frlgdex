@@ -33,6 +33,11 @@ python3 -I scripts/build_data.py /tmp/pokefirered data
 | `trainers.json` | Key battles for the Battle plan tab (Gym Leaders, rivals, Giovanni, Elite Four, Champion), same shape as route trainers |
 | `types.json` | Gen 3 type chart (attacker → defender → multiplier) |
 | `moves.json` | Move name → type, power and special damage effect, for the damage estimates |
+| `tms.json` | TM/HM number → move, whether it can be reused (HMs, Department Store and Game Corner TMs) and every place you get one; `pokedex.json` lists each species' `tmhm` |
+
+## Team planner
+
+`node scripts/team_planner.js --out docs/team-guide.md` scores candidate teams against every trainer up to the Champion with the Battle plan's damage engine (plus TMs and HMs, with single-use TMs handed to one member) and writes the most viable six for each version and starter, with where to get each member, evolutions and moves over the game. The model and scoring are described at the top of the script.
 
 ## Tests
 

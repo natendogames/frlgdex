@@ -658,3 +658,36 @@ for loc in locs.values():
     json.dump(loc, open(os.path.join(OUT, 'locations', loc['id'] + '.json'), 'w'), ensure_ascii=False, indent=1)
 
 print('index', len(index))
+
+# ---------- TMs and HMs ----------
+# Which machines each species can learn (tmhm_learnsets.h), what each one teaches, and every place you get one:
+# found or given (from the location data above), bought at the Celadon Department Store, or won at the Game Corner.
+# Bought and Game Corner TMs can be had again; the rest are single use in Gen 3 (HMs can be reused).
+tm_moves = {}
+tmhm_src = open(P('src/data/pokemon/tmhm_learnsets.h')).read()
+for kind, num, mv in re.findall(r'TMHM\(((?:TM|HM))(\d+)_(\w+)\)', tmhm_src):
+    tm_moves[f'{kind}{num}'] = move_names[mv]
+by_species = {k: re.findall(r'TMHM\(((?:TM|HM)\d+)_', body)
+              for k, body in re.findall(r'\[SPECIES_(\w+)\]\s*=\s*TMHM_LEARNSET\((.*?)\),\n', tmhm_src, re.S)}
+for p in pokedex:
+    key = next(k for k, v in natdex.items() if v == p['dex'])
+    p['tmhm'] = sorted(set(by_species.get(key, [])))
+tms = {k: {'move': tm_moves[k], 'reusable': k.startswith('HM'), 'sources': []} for k in sorted(tm_moves)}
+for x in index:
+    for kind in ('items', 'gifts'):
+        for it in locs[x['id']].get(kind, []):
+            m = re.match(r'((?:TM|HM)\d+)\b', it['name'])
+            if m and m.group(1) in tms:
+                tms[m.group(1)]['sources'].append({'loc': x['id'], 'how': 'gift' if kind == 'gifts' else 'found', 'where': it.get('where'),
+                                                   **({'from': it['from']} if it.get('from') else {})})
+mart = re.search(r'CeladonCity_DepartmentStore_2F_TMs::(.*?)ITEM_NONE', open(P('data/maps/CeladonCity_DepartmentStore_2F/scripts.inc')).read(), re.S).group(1)
+for c in re.findall(r'ITEM_((?:TM|HM)\d+)', mart):
+    tms[c]['reusable'] = True
+    tms[c]['sources'].append({'loc': 'celadon-city', 'how': 'buy', 'where': 'Department Store 2F', 'cost': f"₽{items['ITEM_' + c]['price']:,}"})
+prize = open(P('data/maps/CeladonCity_GameCorner_PrizeRoom/scripts.inc')).read()
+for c, coins in re.findall(r'setvar VAR_TEMP_1, ITEM_((?:TM|HM)\d+)\n\tsetvar VAR_TEMP_2, (\d+)', prize):
+    tms[c]['reusable'] = True
+    tms[c]['sources'].append({'loc': 'celadon-city', 'how': 'prize', 'where': 'Game Corner Prize Room', 'cost': f'{int(coins):,} coins'})
+json.dump(pokedex, open(os.path.join(OUT, 'pokedex.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
+json.dump(tms, open(os.path.join(OUT, 'tms.json'), 'w'), ensure_ascii=False, indent=1)
+print('tms', len(tms), 'without a source:', [k for k, v in tms.items() if not v['sources']])
