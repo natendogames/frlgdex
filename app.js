@@ -1,8 +1,12 @@
 'use strict';
 // FRLG Completion Dex: route checklists, Pokédex tracker, battle planner and tools.
 // Progress is stored in localStorage under STORE_KEY with a separate save for each version.
+// Optional cloud sync (worker/) keys a copy of that progress by email address, with no password.
 
 const STORE_KEY = 'frlg-dex-progress-v1';
+const SYNC_KEY = 'frlg-dex-sync-v1';
+// URL of the deployed sync worker (see worker/README.md). Leave empty to hide cloud sync.
+const SYNC_URL = '';
 const METHOD_LABEL = {
   grass: 'Grass / cave', surf: 'Surf', 'old-rod': 'Old Rod', 'good-rod': 'Good Rod', 'super-rod': 'Super Rod',
   'rock-smash': 'Rock Smash', static: 'Static', gift: 'Gift', trade: 'In-game trade', 'game-corner': 'Game Corner', roaming: 'Roaming'
@@ -21,18 +25,21 @@ const VNAME = { FR: 'FireRed', LG: 'LeafGreen' };
 const state = { index: [], locations: {}, dex: [], trainers: [], types: {}, walk: {}, found: {}, progress: loadProgress(), dexFilter: { scope: 'kanto', missing: false, q: '' } };
 
 function freshSave() { return { caught: {}, checks: {}, team: [], starter: 'Bulbasaur' }; }
+function normaliseProgress(p) {
+  if (!p || typeof p.saves !== 'object' || !p.saves) return null;
+  for (const v of ['FR', 'LG']) p.saves[v] = Object.assign(freshSave(), p.saves[v]);
+  if (!['FR', 'LG'].includes(p.version)) p.version = 'FR';
+  return p;
+}
 function loadProgress() {
   try {
-    const p = JSON.parse(localStorage.getItem(STORE_KEY));
-    if (p && p.saves) {
-      for (const v of ['FR', 'LG']) p.saves[v] = Object.assign(freshSave(), p.saves[v]);
-      if (!['FR', 'LG'].includes(p.version)) p.version = 'FR';
-      return p;
-    }
+    const p = normaliseProgress(JSON.parse(localStorage.getItem(STORE_KEY)));
+    if (p) return p;
   } catch (e) { /* fall through to a fresh save */ }
   return { version: 'FR', hideDone: false, saves: { FR: freshSave(), LG: freshSave() } };
 }
-function save() { try { localStorage.setItem(STORE_KEY, JSON.stringify(state.progress)); } catch (e) { /* storage blocked */ } }
+function writeLocal() { try { localStorage.setItem(STORE_KEY, JSON.stringify(state.progress)); } catch (e) { /* storage blocked */ } }
+function save() { writeLocal(); sync.changed(); }
 const V = () => state.progress.version;
 const cur = () => state.progress.saves[V()];
 const inVersion = x => !x.versions || x.versions.includes(V());
@@ -328,8 +335,9 @@ function renderSettings() {
   setHeader('Backup & settings', true, '');
   view.innerHTML = `
     <div class="card"><label class="row"><input type="checkbox" id="hideDone" ${state.progress.hideDone ? 'checked' : ''}><span>Hide completed locations</span></label></div>
+    ${SYNC_URL ? syncCard() : ''}
     <h2>Backup</h2>
-    <div class="card"><p class="note">Progress is saved on this device only. Export a backup file to move it to another phone or keep it safe.</p>
+    <div class="card"><p class="note">Progress is saved on this device${SYNC_URL ? ' (and in the cloud if you turn on sync above)' : ' only'}. Export a backup file to move it to another phone or keep it safe.</p>
       <div class="toolbar"><button class="btn" id="export">Export backup</button>
       <label class="btn">Import backup<input type="file" id="import" accept="application/json" hidden></label></div></div>
     <h2>Reset</h2>
@@ -343,18 +351,120 @@ function renderSettings() {
   };
   document.getElementById('import').onchange = async e => {
     try {
-      const p = JSON.parse(await e.target.files[0].text());
-      if (!p || typeof p.saves !== 'object' || !p.saves) throw new Error('not a backup');
-      for (const v of ['FR', 'LG']) p.saves[v] = Object.assign(freshSave(), p.saves[v]);
-      if (!['FR', 'LG'].includes(p.version)) p.version = 'FR';
+      const p = normaliseProgress(JSON.parse(await e.target.files[0].text()));
+      if (!p) throw new Error('not a backup');
       state.progress = p; save(); applyVersion(); renderSettings(); alert('Backup restored.');
     } catch (err) { alert('That file is not a valid backup.'); }
     e.target.value = '';
   };
+  if (SYNC_URL) bindSyncCard();
   document.getElementById('reset').onclick = () => {
     if (confirm(`Erase all ${VNAME[V()]} progress? This cannot be undone.`)) { state.progress.saves[V()] = freshSave(); save(); alert('Progress reset.'); }
   };
 }
+
+// ---------- cloud sync ----------
+// Local storage stays the main store. When signed in, every change is pushed a few seconds later,
+// and the cloud copy is pulled on start and whenever the app comes back to the foreground.
+const sync = {
+  cfg: (() => { try { return JSON.parse(localStorage.getItem(SYNC_KEY)) || {}; } catch (e) { return {}; } })(),
+  timer: null, busy: false, status: '',
+  on() { return !!(SYNC_URL && this.cfg.email); },
+  store() { try { localStorage.setItem(SYNC_KEY, JSON.stringify(this.cfg)); } catch (e) { /* storage blocked */ } },
+  setStatus(msg) { this.status = msg; const el = document.getElementById('syncStatus'); if (el) el.textContent = msg; },
+  async call(path, body, keepalive = false) {
+    const res = await fetch(SYNC_URL.replace(/\/$/, '') + path, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), keepalive
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || 'server error ' + res.status);
+    return data;
+  },
+  changed() {
+    if (!this.on()) return;
+    this.cfg.dirty = true; this.store();
+    clearTimeout(this.timer);
+    this.timer = setTimeout(() => this.push(), 4000);
+  },
+  async push(keepalive = false) {
+    if (!this.on() || this.busy) return;
+    clearTimeout(this.timer);
+    this.busy = true; this.setStatus('Saving to cloud…');
+    try {
+      const r = await this.call('/save', { email: this.cfg.email, progress: state.progress }, keepalive);
+      this.cfg.syncedAt = r.updatedAt; this.cfg.dirty = false; this.store();
+      this.setStatus('Saved to cloud ' + new Date(r.updatedAt).toLocaleTimeString());
+    } catch (err) {
+      this.setStatus('Cloud save failed (' + err.message + '). Your progress is still saved on this device.');
+      if (/too often/.test(err.message)) this.timer = setTimeout(() => this.push(), 5000);
+    } finally { this.busy = false; }
+  },
+  apply(remote, updatedAt) {
+    const p = normaliseProgress(remote);
+    if (!p) return false;
+    state.progress = p; writeLocal();
+    this.cfg.syncedAt = updatedAt; this.cfg.dirty = false; this.store();
+    applyVersion(); route();
+    this.setStatus('Loaded cloud save from ' + new Date(updatedAt).toLocaleString());
+    return true;
+  },
+  async pull() {
+    if (!this.on() || this.busy) return;
+    this.busy = true;
+    let r;
+    try { r = await this.call('/load', { email: this.cfg.email }); }
+    catch (err) { this.setStatus('Could not reach cloud save (' + err.message + ').'); return; }
+    finally { this.busy = false; }
+    if (!r.progress) return this.push();
+    if (r.updatedAt === this.cfg.syncedAt) { if (this.cfg.dirty) this.push(); else this.setStatus('Cloud save is up to date.'); return; }
+    if (!this.cfg.dirty || confirm('Your cloud save was changed on another device, and this device also has changes that were not uploaded.\n\nOK: load the cloud save (this device\'s new changes are lost).\nCancel: keep this device and overwrite the cloud save.')) this.apply(r.progress, r.updatedAt);
+    else this.push();
+  },
+  async signIn(email) {
+    email = email.trim().toLowerCase();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { alert('Enter a valid email address.'); return; }
+    this.setStatus('Checking for a cloud save…');
+    let r;
+    try { r = await this.call('/load', { email }); }
+    catch (err) { this.setStatus(''); alert('Could not reach the sync server: ' + err.message); return; }
+    this.cfg = { email, syncedAt: null, dirty: false };
+    if (r.progress && confirm(`Found a cloud save for ${email} from ${new Date(r.updatedAt).toLocaleString()}.\n\nOK: load it onto this device (replaces this device's progress).\nCancel: upload this device's progress over it.`)) {
+      this.store(); this.apply(r.progress, r.updatedAt);
+    } else { this.store(); await this.push(); }
+    if (location.hash.startsWith('#/settings')) renderSettings();
+  },
+  signOut() {
+    this.cfg = {}; this.store(); this.setStatus('');
+    renderSettings();
+  }
+};
+
+function syncCard() {
+  const on = sync.on();
+  return `<h2>Sync across devices</h2>
+    <div class="card">
+      ${on ? `<p>Syncing as <strong>${esc(sync.cfg.email)}</strong></p>
+        <div class="toolbar"><button class="btn" id="syncNow">Sync now</button><button class="btn" id="syncOut">Stop syncing</button></div>`
+      : `<p class="note">Enter an email address to keep your progress in the cloud and load it on another phone or computer by entering the same email there.</p>
+        <form id="syncForm" class="toolbar"><input type="email" id="syncEmail" placeholder="you@example.com" autocomplete="email" required><button class="btn">Start syncing</button></form>`}
+      <p class="note" id="syncStatus">${esc(sync.status)}</p>
+      <p class="note"><strong>There is no password.</strong> Anyone who knows or guesses this email can load or overwrite this save, so don't use it for anything you need to keep private. The email is only used as a key: it is stored as a one-way hash, and no emails are sent.</p>
+    </div>`;
+}
+function bindSyncCard() {
+  const form = document.getElementById('syncForm');
+  if (form) form.onsubmit = e => { e.preventDefault(); sync.signIn(document.getElementById('syncEmail').value); };
+  const now = document.getElementById('syncNow');
+  if (now) now.onclick = () => (sync.cfg.dirty ? sync.push() : sync.pull());
+  const out = document.getElementById('syncOut');
+  if (out) out.onclick = () => { if (confirm('Stop syncing on this device? Your progress stays on this device and in the cloud.')) sync.signOut(); };
+}
+document.addEventListener('visibilitychange', () => {
+  if (!sync.on()) return;
+  if (document.visibilityState === 'hidden') { if (sync.cfg.dirty) sync.push(true); }
+  else sync.pull();
+});
+window.addEventListener('online', () => { if (sync.on()) sync.cfg.dirty ? sync.push() : sync.pull(); });
 
 // ---------- shell ----------
 function setHeader(title, back, tab) {
@@ -394,5 +504,5 @@ document.getElementById('back').onclick = () => { if (history.length > 1) histor
 window.addEventListener('hashchange', route);
 
 applyVersion();
-loadData().then(route).catch(err => { view.innerHTML = `<div class="card">Could not load data: ${esc(err.message)}</div>`; });
+loadData().then(() => { route(); sync.pull(); }).catch(err => { view.innerHTML = `<div class="card">Could not load data: ${esc(err.message)}</div>`; });
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
