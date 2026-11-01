@@ -4,7 +4,7 @@ const fs = require('fs'), path = require('path'), vm = require('vm');
 const ROOT = path.join(__dirname, '..');
 
 async function loadApp() {
-  const el = () => ({ addEventListener() {}, querySelectorAll: () => [], classList: { toggle() {} }, dataset: {}, set innerHTML(v) { this._h = v; }, get innerHTML() { return this._h; } });
+  const el = () => ({ addEventListener(t, f) { (this._l ||= {})[t] = f; }, querySelectorAll: () => [], classList: { toggle() {} }, dataset: {}, set innerHTML(v) { this._h = v; }, get innerHTML() { return this._h; } });
   const els = {};
   const store = {};
   const ctx = {
@@ -24,7 +24,7 @@ async function loadApp() {
   const src = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8')
     // don't render a page; expose the internals instead
     .replace(/loadData\(\)\.then\([^\n]*\n/, '')
-    + '\nglobalThis.app = { state, loadData, cur, mon, stageOf, catchableBy, catchSuggestions, foeRow, foeBattler, myBattler, duel, defaultMoves, bestMoves: typeof bestMoves === "function" ? bestMoves : null, battleStage: typeof battleStage === "function" ? battleStage : null, evoForms, eff, lineOf: typeof lineOf === "function" ? lineOf : null, learnedBy: typeof learnedBy === "function" ? learnedBy : null, battler, hit, moveScore, relearnAt, catchLevel, allowed, inVersion, STARTER_BASE };';
+    + '\nglobalThis.app = { state, loadData, cur, mon, stageOf, catchableBy, catchSuggestions, foeRow, foeBattler, myBattler, duel, defaultMoves, bestMoves: typeof bestMoves === "function" ? bestMoves : null, battleStage: typeof battleStage === "function" ? battleStage : null, evoForms, eff, lineOf: typeof lineOf === "function" ? lineOf : null, learnedBy: typeof learnedBy === "function" ? learnedBy : null, battler, hit, moveScore, relearnAt, catchLevel, allowed, inVersion, STARTER_BASE, route, renderPlan, view, trainerKey, pickOf, planOf, legKeys, copyLineup, TEAM_PLAN_KEY: planKey };';
   vm.runInContext(src, ctx, { filename: 'app.js' });
   await ctx.app.loadData();
   return ctx.app;

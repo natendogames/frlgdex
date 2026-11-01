@@ -743,6 +743,70 @@ function renderPlanner() {
   };
 }
 
+// ---------- team plan ----------
+// The best team at every point of the game, from data/team-plan.json (written by scripts/team_planner.js): before
+// each key battle, who to catch or box, who evolves, what to teach, the lineup and who to lead with. Steps are
+// checkboxes saved per version and starter; the battle row shares its "defeated" check with the route page.
+const planKey = id => `plan:${pickOf('starter')}:${id}`;
+const STEP_TAG = { catch: 'Catch', box: 'Box', evolve: 'Evolve', teach: 'TM/HM', learn: 'Level up' };
+function planOf(version, starter) { return state.teamPlan?.plans[`${version}:${starter}`] || null; }
+function legKeys(leg) { return [...leg.steps.map(x => planKey(x.id)), trainerKey(leg.battle.loc, leg.battle)]; }
+function renderPlan() {
+  setHeader('Team plan', false, 'plan');
+  if (!state.teamPlan) {
+    view.innerHTML = '<div class="card">Loading the plan…</div>';
+    getJSON('data/team-plan.json').then(d => { state.teamPlan = d; if (location.hash.startsWith('#/plan')) renderPlan(); })
+      .catch(err => { view.innerHTML = `<div class="card">Could not load the plan: ${esc(err.message)}</div>`; });
+    return;
+  }
+  const st = pickOf('starter'), s = cur();
+  let html = `<div class="card"><b>The best team at every point of the game</b>
+    <p class="note">Before each key battle: who to catch or box, who evolves, which moves and TMs to teach, your lineup and who to lead with. Tick steps off as you go. Levels assume your team is near the leader's ace level.</p>
+    <div class="note">Your starter from <a href="#/loc/pallet-town">Professor Oak's Lab</a>${st ? '' : ': <b class="bad">not picked yet</b>'}</div>${starterChips()}</div>`;
+  const plan = st && planOf(V(), st);
+  if (!plan) {
+    view.innerHTML = html + '<p class="note">Pick your starter to see its plan. Squirtle gives the strongest run in both versions.</p>';
+    return;
+  }
+  const keys = plan.legs.flatMap(legKeys), done = keys.filter(k => s.checks[k]).length;
+  const firstOpen = plan.legs.findIndex(l => legKeys(l).some(k => !s.checks[k]));
+  html += `<div class="card"><b>End-game team</b><div class="chips" style="margin:6px 0">${plan.end.map(d => `<span class="chip">${esc(mon(d).name)}</span>`).join('')}</div>
+    <div class="note">${done}/${keys.length} steps done · this plan wins ${plan.won} of ${plan.total} trainer Pokémon one-on-one</div>${bar(done, keys.length)}</div>`;
+  plan.legs.forEach((leg, i) => {
+    const lk = legKeys(leg), ld = lk.filter(k => s.checks[k]).length, b = leg.battle;
+    html += `<details class="card leg ${ld === lk.length ? 'checked' : ''}" data-leg="${i}"${i === firstOpen ? ' open' : ''}>
+      <summary>${i + 1}. ${esc(b.name)} <span class="note">· ${esc(b.where)} · ace Lv ${b.ace}</span> <span class="tag legcount">${ld}/${lk.length}</span></summary>`;
+    for (const x of leg.steps) html += checkRow(planKey(x.id), !!s.checks[planKey(x.id)], esc(x.text), esc(x.sub), ` <span class="tag">${STEP_TAG[x.kind]}</span>`);
+    const tk = trainerKey(b.loc, b);
+    html += checkRow(tk, !!s.checks[tk], `Beat ${esc(b.name)}`, `${esc(b.where)}${b.loc ? ` · <a href="#/loc/${b.loc}">route page</a>` : ''}`, ' <span class="tag">Battle</span>');
+    html += `<table class="mini lineup"><tr><th>Lineup</th><th>Lv</th><th>Moves</th></tr>${leg.team.map(m => `<tr><td>${esc(mon(m.dex).name)}</td><td>${m.level}</td><td>${esc(m.moves.join(', '))}</td></tr>`).join('')}</table>
+      <p class="note">Lead with: ${leg.leads.map(l => `${esc(mon(l.foe).name)} ${l.level} → ${l.by ? `<b>${esc(mon(l.by).name)}</b>${l.move ? ` (${esc(l.move)})` : ''}${l.clean ? '' : ' <span class="bad">close</span>'}` : 'nobody yet'}`).join(' · ')}</p>
+      <p class="note">This lineup wins ${leg.won} of ${leg.total} trainer Pokémon on the way.</p>
+      <button class="btn small" data-copyteam="${i}">Use this lineup in the Battle plan</button></details>`;
+  });
+  html += '<p class="note">Made by the same damage engine as the Battle plan, against every trainer up to the Champion. It ignores accuracy, critical hits, abilities, held items and status moves, so treat close calls with care.</p>';
+  view.innerHTML = html;
+  view.querySelectorAll('[data-copyteam]').forEach(btn => btn.onclick = () => copyLineup(plan.legs[+btn.dataset.copyteam]));
+}
+// Put a leg's lineup, levels and moves into the Battle plan team.
+function copyLineup(leg) {
+  const s = cur();
+  s.team = leg.team.map(m => m.dex);
+  s.teamMeta ||= {};
+  for (const m of leg.team) s.teamMeta[m.dex] = { level: m.level, moves: [0, 1, 2, 3].map(k => m.moves[k] || '') };
+  save();
+  location.hash = '#/planner';
+}
+// Keep a leg's done count current when a box is ticked.
+function updateLegCount(el) {
+  const leg = el?.closest?.('details.leg');
+  if (!leg) return;
+  const boxes = [...leg.querySelectorAll('input[type=checkbox]')], n = boxes.filter(x => x.checked).length;
+  const tag = leg.querySelector('.legcount');
+  if (tag) tag.textContent = `${n}/${boxes.length}`;
+  leg.classList.toggle('checked', n === boxes.length);
+}
+
 // ---------- tools ----------
 function renderTools(tool) {
   setHeader(tool ? { breeding: 'Breeding helper', types: 'Type matchups', exclusives: 'Version exclusives' }[tool] : 'Tools', !!tool, 'tools');
@@ -974,6 +1038,7 @@ function route(keepScroll) {
   if (page === 'loc') renderLocation(id);
   else if (page === 'dex') renderDex();
   else if (page === 'planner') renderPlanner();
+  else if (page === 'plan') renderPlan();
   else if (page === 'tools') renderTools(id);
   else if (page === 'settings') renderSettings();
   else renderHome();
@@ -992,6 +1057,7 @@ view.addEventListener('change', e => {
   } else if (e.target.checked) s.checks[key] = true; else delete s.checks[key];
   save();
   e.target.closest('.row, .trainer').classList.toggle('checked', e.target.checked);
+  updateLegCount(e.target);
   if (key.includes(':trainer:')) { const h = [...view.querySelectorAll('h2')].find(x => x.textContent.startsWith('Trainers (')); if (h) h.textContent = h.textContent.replace(/\(\d+\//, `(${view.querySelectorAll('.tcheck:checked').length}/`); }
 });
 view.addEventListener('click', e => {

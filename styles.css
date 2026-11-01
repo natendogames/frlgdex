@@ -116,3 +116,9 @@ details.later[open] > summary h2::before { content: '▾ '; }
 .stats { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 360px) { .stats { grid-template-columns: repeat(2, 1fr); } }
 .trainer summary .note { font-weight: 400; }
+
+/* Team plan */
+details.leg > summary { padding: 2px 0; }
+details.leg.checked > summary { color: var(--muted); }
+table.lineup { margin: 10px 0 4px; }
+@media (max-width: 360px) { .tabs a { padding-left: 1px; padding-right: 1px; font-size: 12px; white-space: nowrap; letter-spacing: -0.2px; } }

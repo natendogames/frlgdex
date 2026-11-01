@@ -58,6 +58,7 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
   for (const V of ['FR', 'LG']) for (const starter of Object.keys(STARTER_BASE)) await plan(V, starter);
   if (opt('--json')) fs.writeFileSync(opt('--json'), JSON.stringify(RESULTS, null, 1));
   if (opt('--stages-out')) fs.writeFileSync(opt('--stages-out'), stageGuide());
+  if (opt('--app-json')) fs.writeFileSync(opt('--app-json'), JSON.stringify(appJson()));
   if (opt('--out')) fs.writeFileSync(opt('--out'), guide());
   else console.log(guide());
 
@@ -389,6 +390,7 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
         const p = prevState[k];
         const newMoves = s && p ? s.moves.filter(m => !p.moves.includes(m)) : s && st.added.includes(k) ? s.moves.filter(m => s.src[m].how === 'tm') : [];
         return { k, cd: cands[k], s, evolved: p && s && p.dex !== s.dex ? s.dex : null, evolvedFrom: p?.dex,
+          forgot: s && p ? p.moves.filter(m => !s.moves.includes(m)) : [],
           teach: newMoves.map(m => ({ m, ...s.src[m] })) };
       });
       const leads = b.party.map(p => {
@@ -420,6 +422,60 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
     }
   }
 
+  // The stage-by-stage plan as app data (data/team-plan.json) for the Team plan page. Step ids are stable per plan
+  // (kind + Pokémon + move/TM), so the page can keep checkbox progress across regenerations.
+  function appJson() {
+    const nm = d => mon(d).name;
+    const getIt = c => c.method === 'gift' && c.loc === 'pallet-town' ? "Professor Oak's Lab" : `${locName(c.loc)}, ${c.method === 'gift' ? 'gift' : c.method}${c.levels ? ' (Lv ' + c.levels + ')' : ''}`;
+    const trainerName = t => t.class === 'Rival' ? 'Rival' : ['Leader', 'Champion', 'Boss'].includes(t.class) ? t.name : `${t.class} ${t.name || ''}`.trim();
+    const plans = {};
+    for (const r of RESULTS) {
+      const { stageOut, won, tot } = r.stagePlan;
+      const lastTeam = stageOut[stageOut.length - 1].members;
+      plans[`${r.V}:${r.starter}`] = {
+        won, total: tot, end: lastTeam.map(m => m.s.dex),
+        legs: stageOut.map(x => {
+          const steps = [];
+          for (const k of x.st.added) {
+            const c = r.cands[k].c;
+            steps.push({ id: `catch-${c.dex}`, kind: 'catch', dex: c.dex, text: `${c.method === 'gift' ? 'Get' : 'Catch'} ${nm(c.dex)}`, sub: getIt(c), loc: c.loc });
+            // a catch that should already have evolved by this battle (Gastly into Haunter at Lv 25)
+            const now = x.members.find(m => m.k === k)?.s?.dex, path = r.cands[k].path;
+            for (let i = 0; now && path[i] !== now && i + 1 < path.length; i++) {
+              const e = mon(path[i]).evolutions.find(v => v.into === path[i + 1]);
+              steps.push({ id: `evolve-${path[i + 1]}`, kind: 'evolve', dex: path[i + 1], text: `Evolve ${nm(path[i])} into ${nm(path[i + 1])}`, sub: e.method === 'level' ? `At Lv ${e.param}` : `Use a ${e.param} (Celadon Dept. Store)` });
+            }
+          }
+          for (const k of x.st.dropped) { const d = r.cands[k].c.dex; steps.push({ id: `box-${d}`, kind: 'box', dex: d, text: `Box ${nm(r.stagePlan.stageOut[stageOut.indexOf(x) - 1].members.find(m => m.k === k)?.s?.dex || d)}`, sub: 'Its slot goes to a better member' }); }
+          for (const m of x.members) {
+            if (!m.s) continue;
+            if (m.evolved) {
+              const e = mon(m.evolvedFrom).evolutions.find(v => v.into === m.evolved) || mon(m.evolvedFrom).evolutions[0];
+              steps.push({ id: `evolve-${m.evolved}`, kind: 'evolve', dex: m.evolved, text: `Evolve ${nm(m.evolvedFrom)} into ${nm(m.evolved)}`, sub: e ? (e.method === 'level' ? `At Lv ${e.param}` : `Use a ${e.param} (Celadon Dept. Store)`) : '' });
+            }
+            const forgot = [...m.forgot];
+            const added = r.stagePlan.stageOut.indexOf(x) > 0 && x.st.added.includes(m.k);
+            for (const t of m.teach) {
+              if (t.how !== 'tm' && added) continue;
+              const rep = forgot.length && m.s.moves.length >= 4 ? forgot.shift() : null;
+              if (t.how === 'tm') steps.push({ id: `teach-${t.tm}-${m.s.dex}`, kind: 'teach', dex: m.s.dex, tm: t.tm, move: t.m,
+                text: `Teach ${t.tm} ${t.m} to ${nm(m.s.dex)}${rep ? ` (replace ${rep})` : ''}`, sub: tmWhere(t.tm) + (tms[t.tm].reusable ? '' : ' · single use') });
+              else steps.push({ id: `learn-${t.m.replace(/\W+/g, '')}-${m.s.dex}`, kind: 'learn', dex: m.s.dex, move: t.m,
+                text: `${nm(m.s.dex)} learns ${t.m}${rep ? ` (replace ${rep})` : ''}`, sub: t.level > 1 ? `Level up, Lv ${t.level}` : 'Level up' });
+            }
+          }
+          return {
+            battle: { id: x.b.t.id, loc: x.b.loc, name: trainerName(x.b.t), where: locName(x.b.loc), ace: Math.max(...x.b.party.map(p => p.level)) },
+            steps,
+            team: x.members.filter(m => m.s).map(m => ({ dex: m.s.dex, level: m.s.level, moves: m.s.moves })),
+            leads: x.leads.map(l => ({ foe: l.p.dex, level: l.p.level, by: l.o ? l.o.m.s.dex : null, move: l.o?.d.mine?.name || null, clean: !!l.o?.d.wins })),
+            won: x.legWon, total: x.legTot
+          };
+        })
+      };
+    }
+    return { generated: 'node scripts/team_planner.js --app-json data/team-plan.json', plans };
+  }
   // The stage-by-stage plan: before each key battle, who to catch, swap out, evolve and what to teach.
   function stageGuide() {
     const out = [], nm = d => mon(d).name;

@@ -12,6 +12,7 @@ jobs:
         with:
           node-version: 20
       - run: node tests/audit_battles.js --report audit-report.txt
+      - run: node tests/team_plan.js
       - uses: actions/upload-artifact@v4
         if: always()
         with:
