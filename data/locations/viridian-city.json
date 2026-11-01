@@ -214,7 +214,8 @@
    ],
    "id": "tamer-cole",
    "area": "Gym",
-   "stage": "route-21"
+   "stage": "route-21",
+   "later": true
   },
   {
    "class": "Black Belt",
@@ -281,7 +282,8 @@
    ],
    "id": "black-belt-atsushi",
    "area": "Gym",
-   "stage": "route-21"
+   "stage": "route-21",
+   "later": true
   },
   {
    "class": "Black Belt",
@@ -319,7 +321,8 @@
    ],
    "id": "black-belt-kiyo",
    "area": "Gym",
-   "stage": "route-21"
+   "stage": "route-21",
+   "later": true
   },
   {
    "class": "Tamer",
@@ -356,7 +359,8 @@
    ],
    "id": "tamer-jason",
    "area": "Gym",
-   "stage": "route-21"
+   "stage": "route-21",
+   "later": true
   },
   {
    "class": "Cool Trainer",
@@ -504,7 +508,8 @@
    ],
    "id": "coolyuji",
    "area": "Gym",
-   "stage": "route-21"
+   "stage": "route-21",
+   "later": true
   },
   {
    "class": "Cool Trainer",
@@ -652,7 +657,8 @@
    ],
    "id": "coolsamuel",
    "area": "Gym",
-   "stage": "route-21"
+   "stage": "route-21",
+   "later": true
   },
   {
    "class": "Cool Trainer",
@@ -798,7 +804,8 @@
    ],
    "id": "coolwarren",
    "area": "Gym",
-   "stage": "route-21"
+   "stage": "route-21",
+   "later": true
   },
   {
    "class": "Black Belt",
@@ -892,7 +899,8 @@
    ],
    "id": "black-belt-takashi",
    "area": "Gym",
-   "stage": "route-21"
+   "stage": "route-21",
+   "later": true
   },
   {
    "class": "Leader",
@@ -1048,7 +1056,8 @@
    ],
    "id": "leader-giovanni",
    "area": "Gym",
-   "stage": "route-21"
+   "stage": "route-21",
+   "later": true
   }
  ],
  "verified": true,

@@ -628,4 +628,29 @@ assert not missing, missing
 for i in walk:
     assert i.startswith('_') or i in locs, i
 json.dump({'locations': index}, open(os.path.join(OUT, 'locations.json'), 'w'), ensure_ascii=False, indent=1)
+
+# ---------- when you actually fight each trainer ----------
+# Some trainers sit on early routes but are only reachable (or only meant to be fought) much later, like the
+# Route 22 rival before Victory Road. Place each trainer at the first key battle (gym, rival, Giovanni, League)
+# whose ace is within 5 levels of the trainer's own ace level, never before the location itself. Trainers placed past the
+# next key battle after the location are marked 'later', so the app collapses them and plans with that point's Pokémon.
+order_pos = {x['id']: i for i, x in enumerate(index)}
+def ace_of(t):
+    parties = [t['party']] if 'party' in t else list(t['byStarter'].values())
+    return max(p['level'] for pty in parties for p in pty)
+keys = sorted(((order_pos[t.get('stage') or t['location']], ace_of(t), t.get('stage') or t['location']) for t in trainers))
+for loc in locs.values():
+    if loc['id'] not in order_pos: continue
+    here = order_pos[loc['id']]
+    nxt = next((k for k in keys if k[0] >= here), None)
+    for t in loc['trainers']:
+        if t.get('stage'):
+            t['later'] = order_pos[t['stage']] > here
+            continue
+        ace = ace_of(t)
+        fit = next((k for k in keys if k[0] >= here and k[1] >= ace - 5), None)
+        if fit and nxt and fit[0] > nxt[0] and fit[2] != loc['id']:
+            t['stage'], t['later'] = fit[2], True
+    json.dump(loc, open(os.path.join(OUT, 'locations', loc['id'] + '.json'), 'w'), ensure_ascii=False, indent=1)
+
 print('index', len(index))

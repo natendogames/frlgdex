@@ -327,7 +327,9 @@
     }
    ],
    "id": "lass-crissy",
-   "area": "Outside"
+   "area": "Outside",
+   "stage": "celadon-city",
+   "later": true
   }
  ],
  "verified": true,
