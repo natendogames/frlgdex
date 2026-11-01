@@ -6,6 +6,7 @@ A phone-friendly, offline-capable 100% completion guide for Pokémon FireRed and
 - **Story progress**: fishing, Surf and Rock Smash encounters are listed under "come back later" until you have the rod or HM. When your team has no super-effective answer to a trainer's Pokémon, the app suggests one you could have caught by that point.
 - **Pokédex**: Kanto 151 or National 386, showing where to catch each one, what to evolve it from, or which version to trade from.
 - **Battle plan**: enter your team to see who to send out against each Gym Leader, rival battle, Giovanni, the Elite Four and the Champion (rival teams depend on your starter).
+- **Team plan**: the best team at every point of the game for your version and starter. Before each key battle it lists who to catch or box, who evolves, which moves and TMs to teach, the lineup and who to lead with, all as checkboxes. The battle checkbox is the same one as on the route page, and a button copies the lineup into the Battle plan.
 - **Tools**: breeding helper (egg groups, partners, what hatches, steps), type matchup lookup and full chart, version exclusives list.
 - Separate FireRed and LeafGreen saves, stored on the device, with backup export and import.
 - Optional cloud sync between devices keyed by an email address (no password). Needs the small Cloudflare Worker in `worker/`; see `worker/README.md`.
@@ -39,6 +40,7 @@ python3 -I scripts/build_data.py /tmp/pokefirered data
 
 `node scripts/team_planner.js --out docs/team-guide.md` scores candidate teams against every trainer up to the Champion with the Battle plan's damage engine (plus TMs and HMs, with single-use TMs handed to one member) and writes the most viable six for each version and starter, with where to get each member, evolutions and moves over the game. The model and scoring are described at the top of the script.
 Add `--stages-out docs/team-stages.md` for the stage-by-stage version: before every key battle, who to catch, box, evolve and what to teach, with temporary members filling slots until the end-game six can be caught.
+Add `--app-json data/team-plan.json` to refresh the Team plan page's data (run all three together after any data or engine change; it takes about a minute).
 
 ## Tests
 
@@ -48,5 +50,7 @@ catchable by then, evolves legally, only uses moves it can really know, and is s
 brute-force search finds a super-effective catch the planner missed. It also checks the type chart against Gen 3, key move
 data, and known answers (Pikachu, Oddish or Bellsprout for Misty; Diglett for Lt. Surge). It also checks trainers behind Surf, Cut, the Poké Flute or the post-game aren't planned before you can reach them. Add `--report out.txt` to dump every
 suggestion. GitHub Actions runs it on every push and pull request.
+
+`node tests/team_plan.js` checks `data/team-plan.json` and the Team plan page: legs in story order with levels that never drop, every catch reachable by then, legal evolutions and moves, TMs in hand by then and single-use TMs taught once, real battles, lead picks re-run through the damage engine, and the page's checkboxes saving and reloading. CI runs it too.
 
 Progress keys are `dex:<number>` for Pokémon and `<location-id>:item:<id>` or `<location-id>:gift:<id>` for checklists, so keep ids stable.
