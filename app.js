@@ -426,7 +426,8 @@ function renderDex() {
 
 // ---------- battle engine (route trainers and the Battle plan tab) ----------
 // Estimates real damage with the Gen 3 formula: levels, base stats, IVs, move power, STAB and type effectiveness.
-// Gen 3 decides physical or special by the move's type. Critical hits, abilities, held items and stat changes are ignored.
+// Gen 3 decides physical or special by the move's type. Abilities a species is sure to have, type-boosting held items
+// and healing berries are counted; critical hits and stat-changing moves are flagged as warnings.
 const PHYSICAL = new Set(['Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel']);
 const VARIES_POWER = { Return: 102, 'Hidden Power': 70, Magnitude: 70, Flail: 40, Present: 40, Revenge: 60 };
 const PLAYER_IV = 15; // average IVs for your Pokémon; no EVs
@@ -492,6 +493,8 @@ function moveScore(dex, level, name) {
 // once that battle is behind you, so Misty's TM03 is never planned for the fight with Misty.
 const tmCache = {};
 function tmStage(src, tm) {
+  // the Cerulean City burglar is behind the house you can only get through after visiting Bill on Route 25
+  if (src.loc === 'cerulean-city' && /Rocket Grunt/.test(src.from || '')) return stageOf('route-25') + 0.5;
   // a trainer who hands it over as a battle reward (Gym Leaders, Giovanni...): only after that battle
   const t = (state.locations[src.loc]?.trainers || []).find(x => (x.rewards || []).some(r => r.split(' ')[0] === tm));
   if (t) return battleStage(t, src.loc) + 0.5;
@@ -524,10 +527,29 @@ function bestMoves(dex, level, from, relearn, extra) {
   // a Pokémon that knows no attack yet still has whatever it learned
   return out.length ? out : defaultMoves(dex, level);
 }
-function battler(dex, level, iv, moves) {
+function battler(dex, level, iv, moves, item) {
   const st = calcStats(dex, level, iv);
-  return { dex, level, iv, moves: moves.filter(m => state.moves[m]), hp: st[0], st };
+  return { dex, level, iv, moves: moves.filter(m => state.moves[m]), hp: st[0], st, ...(item ? { item } : {}) };
 }
+// Abilities that change damage. A Pokémon whose species has two abilities could have either, so only a species with
+// one possible ability is counted for sure; the other cases get a "may have" warning instead (abilityNote).
+const soleAbility = dex => { const a = mon(dex).abilities || []; return a.length === 1 ? a[0] : null; };
+const IMMUNE_AB = { Levitate: 'Ground', 'Flash Fire': 'Fire', 'Water Absorb': 'Water', 'Volt Absorb': 'Electric' };
+// Held items that boost one type's moves by 10% in Gen 3
+const TYPE_ITEM = { 'Black Belt': 'Fighting', Charcoal: 'Fire', 'Mystic Water': 'Water', 'Miracle Seed': 'Grass', Magnet: 'Electric',
+  'Never-melt Ice': 'Ice', 'Poison Barb': 'Poison', 'Soft Sand': 'Ground', 'Sharp Beak': 'Flying', Twistedspoon: 'Psychic',
+  Silverpowder: 'Bug', 'Hard Stone': 'Rock', 'Spell Tag': 'Ghost', 'Dragon Fang': 'Dragon', Blackglasses: 'Dark', 'Metal Coat': 'Steel', 'Silk Scarf': 'Normal' };
+const BERRY_HEAL = { 'Sitrus Berry': 30, 'Oran Berry': 10 };
+// Moves that change stats, so a long fight can swing: shown as a warning, not counted in the damage
+const STAT_MOVES = { Growl: 'lowers your Attack', 'Tail Whip': 'lowers your Defense', Leer: 'lowers your Defense', Screech: 'sharply lowers your Defense',
+  Charm: 'sharply lowers your Attack', 'Feather Dance': 'sharply lowers your Attack', 'Metal Sound': 'sharply lowers your Sp. Def', 'Fake Tears': 'sharply lowers your Sp. Def',
+  'Swords Dance': 'sharply raises its Attack', 'Dragon Dance': 'raises its Attack and Speed', 'Bulk Up': 'raises its Attack and Defense', 'Calm Mind': 'raises its Sp. Atk and Sp. Def',
+  Growth: 'raises its Sp. Atk', Meditate: 'raises its Attack', Sharpen: 'raises its Attack', 'Howl': 'raises its Attack', 'Belly Drum': 'maximises its Attack',
+  Harden: 'raises its Defense', Withdraw: 'raises its Defense', 'Defense Curl': 'raises its Defense', 'Iron Defense': 'sharply raises its Defense',
+  Barrier: 'sharply raises its Defense', 'Acid Armor': 'sharply raises its Defense', Amnesia: 'sharply raises its Sp. Def', Agility: 'sharply raises its Speed',
+  'Double Team': 'raises its evasion', Minimize: 'raises its evasion', 'Sand-attack': 'lowers your accuracy', Smokescreen: 'lowers your accuracy',
+  Flash: 'lowers your accuracy', Kinesis: 'lowers your accuracy', 'Cotton Spore': 'sharply lowers your Speed', 'String Shot': 'lowers your Speed', 'Scary Face': 'sharply lowers your Speed' };
+const HIGH_CRIT = new Set(['Karate Chop', 'Razor Leaf', 'Crabhammer', 'Slash', 'Aeroblast', 'Cross Chop', 'Sky Attack', 'Blaze Kick', 'Poison Tail', 'Leaf Blade', 'Air Cutter']);
 const teamMeta = n => (cur().teamMeta ||= {})[n] || {};
 function myBattler(n, foeLevel) {
   const meta = teamMeta(n);
@@ -535,13 +557,15 @@ function myBattler(n, foeLevel) {
   const moves = (meta.moves || []).filter(Boolean);
   return { ...battler(n, level, PLAYER_IV, moves.length ? moves : bestMoves(n, level)), guessedLevel: !meta.level, guessedMoves: !moves.length };
 }
-const foeBattler = p => ({ ...battler(p.dex, p.level, p.iv ?? 0, (p.moves || []).map(m => m.name)), foe: true });
+const foeBattler = p => ({ ...battler(p.dex, p.level, p.iv ?? 0, (p.moves || []).map(m => m.name), p.item), foe: true });
 
 // Damage range of one move, in HP. null for moves that don't deal direct damage.
-function hit(att, def, name) {
+function hit(att, def, name, crit = false) {
   const m = state.moves[name];
   if (!m || !m.power || ['counter', 'dream', 'ohko'].includes(m.effect)) return null;
-  const mult = eff(m.type, mon(def.dex).types);
+  const aAb = soleAbility(att.dex), dAb = soleAbility(def.dex);
+  let mult = eff(m.type, mon(def.dex).types);
+  if (IMMUNE_AB[dAb] === m.type || (dAb === 'Wonder Guard' && mult < 2)) mult = 0;
   const out = (min, max) => ({ name, type: m.type, mult, min, max });
   if (mult === 0) return out(0, 0);
   if (m.effect === 'level') return out(att.level, att.level);
@@ -553,9 +577,16 @@ function hit(att, def, name) {
   const power = name === 'Low Kick' ? (w < 100 ? 20 : w < 250 ? 40 : w < 500 ? 60 : w < 1000 ? 80 : w < 2000 ? 100 : 120) : m.power === 1 ? VARIES_POWER[name] : m.power;
   if (!power) return null;
   const phys = PHYSICAL.has(m.type);
-  const A = att.st[phys ? 1 : 3];
+  let A = att.st[phys ? 1 : 3];
+  if (phys && ['Huge Power', 'Pure Power'].includes(aAb)) A *= 2;
+  if (phys && aAb === 'Hustle') A = Math.floor(A * 1.5);
+  if (phys && dAb === 'Intimidate' && !crit) A = Math.floor(A * 2 / 3); // their Intimidate on the way in: your Attack -1
+  if (dAb === 'Thick Fat' && (m.type === 'Fire' || m.type === 'Ice')) A = Math.floor(A / 2);
   const D = Math.max(1, Math.floor(def.st[phys ? 2 : 4] / (m.effect === 'explode' ? 2 : 1)));
-  let dmg = Math.floor(Math.floor(Math.floor(2 * att.level / 5 + 2) * power * A / D) / 50) + 2;
+  const pw = TYPE_ITEM[att.item] === m.type ? Math.floor(power * 1.1) : power;
+  let dmg = Math.floor(Math.floor(Math.floor(2 * att.level / 5 + 2) * pw * A / D) / 50);
+  if (crit) dmg *= 2;
+  dmg += 2;
   if (mon(att.dex).types.includes(m.type)) dmg = Math.floor(dmg * 1.5);
   dmg = Math.floor(dmg * mult);
   const hits = HITS[m.effect] || 1;
@@ -576,15 +607,30 @@ function bestHit(att, def) {
     .sort((a, b) => turnsToKO(a, def.hp, low) - turnsToKO(b, def.hp, low) || b.min + b.max - a.min - a.max)[0] || null;
 }
 // How a battle between one of your Pokémon and one of theirs goes, one-on-one.
+// HP a Pokémon effectively has: a held Sitrus or Oran Berry heals it once
+const effHP = b => b.hp + (BERRY_HEAL[b.item] || 0);
 function duel(me, foe) {
   const mine = bestHit(me, foe), theirs = bestHit(foe, me);
-  const myHits = turnsToKO(mine, foe.hp, true);
-  const theirHits = turnsToKO(theirs, me.hp, false);
+  const myHits = turnsToKO(mine, effHP(foe), true);
+  const theirHits = turnsToKO(theirs, effHP(me), false);
   const faster = me.st[5] > foe.st[5];
   const wins = myHits < theirHits || (myHits === theirHits && faster && myHits !== Infinity);
   const se = me.moves.filter(n => { const h = hit(me, foe, n); return h && h.mult >= 2; });
   const threats = foe.moves.filter(n => { const h = hit(foe, me, n); return h && h.mult >= 2; });
-  return { me, mine, theirs, myHits, theirHits, faster, wins, se, threats };
+  // a critical hit (1 in 16, 1 in 8 for high-crit moves) doubles damage: could it KO you sooner?
+  const critHit = theirs && hit(foe, me, theirs.name, true);
+  const critHits = critHit ? turnsToKO(critHit, effHP(me), false) : Infinity;
+  return { me, mine, theirs, myHits, theirHits, faster, wins, se, threats, critHits: critHits < theirHits ? critHits : null };
+}
+// What the damage numbers don't count for this foe: possible abilities, held items, stat moves
+function foeNotes(p) {
+  const out = [], abs = mon(p.dex).abilities || [];
+  if (abs.length === 1) { if (['Levitate', 'Flash Fire', 'Water Absorb', 'Volt Absorb', 'Wonder Guard', 'Thick Fat', 'Intimidate', 'Huge Power', 'Hustle', 'Sturdy', 'Static', 'Poison Point', 'Flame Body', 'Effect Spore', 'Shed Skin', 'Swift Swim', 'Chlorophyll', 'Speed Boost'].includes(abs[0])) out.push(`Ability: ${abs[0]}`); }
+  else if (abs.length > 1) out.push(`Ability: ${abs.join(' or ')}`);
+  if (p.item) out.push(`Holding ${p.item}${BERRY_HEAL[p.item] ? ` (heals ${BERRY_HEAL[p.item]} HP once)` : TYPE_ITEM[p.item] ? ` (${TYPE_ITEM[p.item]} moves +10%)` : ''}`);
+  const st = (p.moves || []).filter(m => STAT_MOVES[m.name]).map(m => `${m.name} ${STAT_MOVES[m.name]}`);
+  if (st.length) out.push(`Watch for ${st.join('; ')}`);
+  return out;
 }
 const rankDuels = (a, b) => b.wins - a.wins || a.myHits - b.myHits || (a.theirs?.max || 0) / a.me.hp - (b.theirs?.max || 0) / b.me.hp;
 
@@ -682,7 +728,7 @@ function foeRow(p, stage, party) {
     pick += `<table class="mini duel"><tr><th>Yours</th><th>Your best hit</th><th>Their best hit on you</th></tr>${duels.map(d => `<tr${d === best ? ' class="best"' : ''}>
         <td><b>${esc(mon(d.me.dex).name)}</b> Lv ${d.me.level}${d.me.guessedLevel ? '*' : ''}${d.faster ? ' <span class="note">faster</span>' : ''}</td>
         <td>${hitText(d.mine, foe, d.myHits)}</td>
-        <td>${hitText(d.theirs, d.me, d.theirHits)}${d.threats.length ? `<div class="bad">Super effective: ${d.threats.map(esc).join(', ')}</div>` : ''}</td></tr>`).join('')}</table>`;
+        <td>${hitText(d.theirs, d.me, d.theirHits)}${d.critHits ? `<div class="meh">A critical hit could KO in ${hitsText(d.critHits).replace('OHKO', 'one hit')}</div>` : ''}${d.threats.length ? `<div class="bad">Super effective: ${d.threats.map(esc).join(', ')}</div>` : ''}</td></tr>`).join('')}</table>`;
   }
   // Suggest a catch when you'd lose, or when nobody is super effective and the fight isn't a quick win anyway
   if (!best || !best.wins || (!duels.some(d => d.se.length) && best.myHits > 2)) {
@@ -696,9 +742,10 @@ function foeRow(p, stage, party) {
     }).join('<br>or ')}</div>`
       : `<div class="note">Nothing you can catch by ${esc(state.index[stage]?.name || 'now')} learns or can be taught (TM/HM) a super-effective move by Lv ${p.level}.</div>`;
   }
-  return `<div class="foe"><div><b>${esc(p.name)}</b> Lv ${p.level} ${types(p.dex)} <span class="note">${foe.hp} HP${p.item ? ` · holding ${esc(p.item)}` : ''}</span></div>
+  return `<div class="foe"><div><b>${esc(p.name)}</b> Lv ${p.level} ${types(p.dex)} <span class="note">${foe.hp} HP</span></div>
     ${p.moves?.length ? `<div class="moves">${p.moves.map(m => `<span class="mv">${esc(m.name)}${m.type ? ` <i class="t-${m.type}"></i>` : ''}${m.power ? ` <small>${m.power === 1 ? '—' : m.power}</small>` : ''}</span>`).join('')}</div>` : ''}
     <div class="note">Weak to: ${weak.length ? weak.map(w => typeTag(w.t) + (w.m === 4 ? '×4' : '')).join(' ') : 'nothing'}</div>
+    ${(() => { const n = foeNotes(p); return n.length ? `<div class="note">${n.map(esc).join(' · ')}</div>` : ''; })()}
     <div class="pick">${pick}</div></div>`;
 }
 
@@ -753,7 +800,7 @@ function renderPlanner() {
       extra: party => `<p class="note">Types that hit most of this team: ${bestTypesAgainst(party).map(g => typeTag(g.t)).join(' ')}</p>`
     });
   }
-  html += `<p class="note">Damage uses the Gen 3 formula with your levels and moves, their real moves and IVs, average IVs for yours and no EVs. Critical hits, abilities, held items and stat changes are not counted, so treat close calls with care.</p>`;
+  html += `<p class="note">Damage uses the Gen 3 formula with your levels and moves, their real moves and IVs, average IVs for yours and no EVs. Abilities are counted when the species can only have one (Levitate, Thick Fat, Intimidate...), held type boosters and berries are counted, and a critical hit that could KO you sooner is flagged. Stat-changing moves and two-ability Pokémon are shown as warnings, not counted.</p>`;
   view.innerHTML = html;
   view.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => { s.team.splice(+b.dataset.rm, 1); save(); renderPlanner(); });
   view.querySelectorAll('[data-lvl]').forEach(inp => inp.onchange = () => {

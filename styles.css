@@ -138,3 +138,6 @@ a.mv { text-decoration: none; color: inherit; }
 .stat span + span { display: block; }
 select { margin-top: 4px; }
 .chip { text-decoration: none; }
+.scrollx { overflow-x: auto; }
+input[type=number] { font: inherit; padding: 4px 6px; border-radius: 6px; border: 1px solid var(--line); background: var(--card); color: var(--text); }
+.toolbar label.note { display: inline-flex; align-items: center; gap: 6px; }

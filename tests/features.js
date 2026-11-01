@@ -51,6 +51,20 @@ const strip = h => String(h).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
   }
   if (cc(3, 1e9) !== 1) fail('a Master Ball always catches');
 
+  // stats: Gen 3 formula, known values (level 100, IV 31, EV 252, neutral/positive nature)
+  const sv = g('statValue');
+  for (const [base, i, lvl, iv, ev, nat, want] of [[108, 0, 100, 31, 252, 'Hardy', 420], [130, 1, 100, 31, 252, 'Adamant', 394], [100, 5, 50, 31, 252, 'Timid', 167], [100, 5, 50, 31, 0, 'Timid', 132], [45, 0, 5, 0, 0, 'Hardy', 19], [1, 0, 50, 31, 252, 'Hardy', 1]])
+    if (sv(base, i, lvl, iv, ev, nat) !== want) fail(`stat base ${base} slot ${i} Lv ${lvl}: ${sv(base, i, lvl, iv, ev, nat)}, expected ${want}`);
+  const ivr = g('ivRange')(130, 1, 100, 394, 252, 'Adamant');
+  if (ivr.join() !== '31') fail(`IV range should be 31, got ${ivr}`);
+  // EXP tables: level 100 totals per growth rate
+  const ea = g('expAt');
+  for (const [gr, want] of [['fast', 800000], ['medium-fast', 1000000], ['medium-slow', 1059860], ['slow', 1250000], ['erratic', 600000], ['fluctuating', 1640000]])
+    if (ea(gr, 100) !== want) fail(`EXP to Lv 100 (${gr}): ${ea(gr, 100)}, expected ${want}`);
+  if (g('levelFor')('medium-slow', g('expAt')('medium-slow', 36)) !== 36) fail('levelFor should invert expAt');
+  // a trainer's Lv 14 Onix (base EXP 108): 108 * 14 / 7 = 216, x1.5 = 324
+  if (g('expFor')(95, 14, true, 1) !== 324) fail(`Onix EXP ${g('expFor')(95, 14, true, 1)}, expected 324`);
+
   // the still-missing list puts each uncaught Pokémon in exactly one group
   render('#/missing');
 
