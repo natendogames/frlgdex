@@ -154,6 +154,874 @@
    "where": "Mart"
   }
  ],
+ "trainers": [
+  {
+   "class": "Tamer",
+   "name": "Cole",
+   "prize": 1560,
+   "party": [
+    {
+     "dex": 24,
+     "name": "Arbok",
+     "level": 39,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Glare",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 128,
+     "name": "Tauros",
+     "level": 39,
+     "moves": [
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Swagger",
+       "type": "Normal"
+      },
+      {
+       "name": "Rest",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "tamer-cole",
+   "area": "Gym",
+   "stage": "route-21"
+  },
+  {
+   "class": "Black Belt",
+   "name": "Atsushi",
+   "prize": 960,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 40,
+     "moves": [
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 40,
+     "moves": [
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "black-belt-atsushi",
+   "area": "Gym",
+   "stage": "route-21"
+  },
+  {
+   "class": "Black Belt",
+   "name": "Kiyo",
+   "prize": 1032,
+   "party": [
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 43,
+     "moves": [
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "black-belt-kiyo",
+   "area": "Gym",
+   "stage": "route-21"
+  },
+  {
+   "class": "Tamer",
+   "name": "Jason",
+   "prize": 1720,
+   "party": [
+    {
+     "dex": 111,
+     "name": "Rhyhorn",
+     "level": 43,
+     "moves": [
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Horn Drill",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "id": "tamer-jason",
+   "area": "Gym",
+   "stage": "route-21"
+  },
+  {
+   "class": "Cool Trainer",
+   "name": "Yuji",
+   "prize": 1368,
+   "party": [
+    {
+     "dex": 28,
+     "name": "Sandslash",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 75,
+     "name": "Graveler",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      }
+     ]
+    },
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Dragonbreath",
+       "type": "Dragon",
+       "power": 60
+      },
+      {
+       "name": "Sandstorm",
+       "type": "Rock"
+      }
+     ]
+    },
+    {
+     "dex": 75,
+     "name": "Graveler",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      }
+     ]
+    },
+    {
+     "dex": 105,
+     "name": "Marowak",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Bonemerang",
+       "type": "Ground",
+       "power": 50
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion"
+   ],
+   "id": "coolyuji",
+   "area": "Gym",
+   "stage": "route-21"
+  },
+  {
+   "class": "Cool Trainer",
+   "name": "Samuel",
+   "prize": 1404,
+   "party": [
+    {
+     "dex": 28,
+     "name": "Sandslash",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 28,
+     "name": "Sandslash",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 111,
+     "name": "Rhyhorn",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Horn Drill",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 33,
+     "name": "Nidorino",
+     "level": 39,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 34,
+     "name": "Nidoking",
+     "level": 39,
+     "moves": [
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Thrash",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Super Potion"
+   ],
+   "id": "coolsamuel",
+   "area": "Gym",
+   "stage": "route-21"
+  },
+  {
+   "class": "Cool Trainer",
+   "name": "Warren",
+   "prize": 1404,
+   "party": [
+    {
+     "dex": 105,
+     "name": "Marowak",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Bonemerang",
+       "type": "Ground",
+       "power": 50
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    },
+    {
+     "dex": 105,
+     "name": "Marowak",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Bonemerang",
+       "type": "Ground",
+       "power": 50
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    },
+    {
+     "dex": 111,
+     "name": "Rhyhorn",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Horn Drill",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 30,
+     "name": "Nidorina",
+     "level": 39,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    },
+    {
+     "dex": 31,
+     "name": "Nidoqueen",
+     "level": 39,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion"
+   ],
+   "id": "coolwarren",
+   "area": "Gym",
+   "stage": "route-21"
+  },
+  {
+   "class": "Black Belt",
+   "name": "Takashi",
+   "prize": 912,
+   "party": [
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "black-belt-takashi",
+   "area": "Gym",
+   "stage": "route-21"
+  },
+  {
+   "class": "Leader",
+   "name": "Giovanni",
+   "prize": 5000,
+   "party": [
+    {
+     "dex": 111,
+     "name": "Rhyhorn",
+     "level": 45,
+     "moves": [
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Horn Drill",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 51,
+     "name": "Dugtrio",
+     "level": 42,
+     "moves": [
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      },
+      {
+       "name": "Mud-slap",
+       "type": "Ground",
+       "power": 20
+      },
+      {
+       "name": "Sand Tomb",
+       "type": "Ground",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      }
+     ]
+    },
+    {
+     "dex": 31,
+     "name": "Nidoqueen",
+     "level": 44,
+     "moves": [
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      },
+      {
+       "name": "Superpower",
+       "type": "Fighting",
+       "power": 120
+      }
+     ]
+    },
+    {
+     "dex": 34,
+     "name": "Nidoking",
+     "level": 45,
+     "moves": [
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Thrash",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Megahorn",
+       "type": "Bug",
+       "power": 120
+      }
+     ]
+    },
+    {
+     "dex": 111,
+     "name": "Rhyhorn",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Horn Drill",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion ×2",
+    "Full Heal"
+   ],
+   "rewards": [
+    "Earth Badge",
+    "TM26"
+   ],
+   "id": "leader-giovanni",
+   "area": "Gym",
+   "stage": "route-21"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

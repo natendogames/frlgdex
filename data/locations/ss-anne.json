@@ -229,6 +229,1233 @@
    "where": "Captains Office"
   }
  ],
+ "trainers": [
+  {
+   "class": "Youngster",
+   "name": "Tyler",
+   "prize": 336,
+   "party": [
+    {
+     "dex": 32,
+     "name": "Nidoran♂",
+     "level": 21,
+     "moves": [
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      }
+     ]
+    }
+   ],
+   "id": "youngster-tyler",
+   "area": "1F Room 2"
+  },
+  {
+   "class": "Lass",
+   "name": "Ann",
+   "prize": 288,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 29,
+     "name": "Nidoran♀",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "lass-ann",
+   "area": "1F Room 2"
+  },
+  {
+   "class": "Gentleman",
+   "name": "Arthur",
+   "prize": 1368,
+   "party": [
+    {
+     "dex": 32,
+     "name": "Nidoran♂",
+     "level": 19,
+     "moves": [
+      {
+       "name": "Peck",
+       "type": "Flying",
+       "power": 35
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 29,
+     "name": "Nidoran♀",
+     "level": 19,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "gentleman-arthur",
+   "area": "1F Room 5"
+  },
+  {
+   "class": "Gentleman",
+   "name": "Thomas",
+   "prize": 1296,
+   "party": [
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "gentleman-thomas",
+   "area": "1F Room 7"
+  },
+  {
+   "class": "Rival",
+   "name": "Rival",
+   "prize": 720,
+   "byStarter": {
+    "Bulbasaur": [
+     {
+      "dex": 17,
+      "name": "Pidgeotto",
+      "level": 19,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Sand-attack",
+        "type": "Ground"
+       },
+       {
+        "name": "Gust",
+        "type": "Flying",
+        "power": 40
+       },
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       }
+      ]
+     },
+     {
+      "dex": 20,
+      "name": "Raticate",
+      "level": 16,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Tail Whip",
+        "type": "Normal"
+       },
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       },
+       {
+        "name": "Hyper Fang",
+        "type": "Normal",
+        "power": 80
+       }
+      ]
+     },
+     {
+      "dex": 64,
+      "name": "Kadabra",
+      "level": 18,
+      "moves": [
+       {
+        "name": "Teleport",
+        "type": "Psychic"
+       },
+       {
+        "name": "Kinesis",
+        "type": "Psychic"
+       },
+       {
+        "name": "Confusion",
+        "type": "Psychic",
+        "power": 50
+       },
+       {
+        "name": "Disable",
+        "type": "Normal"
+       }
+      ]
+     },
+     {
+      "dex": 5,
+      "name": "Charmeleon",
+      "level": 20,
+      "moves": [
+       {
+        "name": "Growl",
+        "type": "Normal"
+       },
+       {
+        "name": "Ember",
+        "type": "Fire",
+        "power": 40
+       },
+       {
+        "name": "Metal Claw",
+        "type": "Steel",
+        "power": 50
+       },
+       {
+        "name": "Smokescreen",
+        "type": "Normal"
+       }
+      ]
+     }
+    ],
+    "Charmander": [
+     {
+      "dex": 17,
+      "name": "Pidgeotto",
+      "level": 19,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Sand-attack",
+        "type": "Ground"
+       },
+       {
+        "name": "Gust",
+        "type": "Flying",
+        "power": 40
+       },
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       }
+      ]
+     },
+     {
+      "dex": 20,
+      "name": "Raticate",
+      "level": 16,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Tail Whip",
+        "type": "Normal"
+       },
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       },
+       {
+        "name": "Hyper Fang",
+        "type": "Normal",
+        "power": 80
+       }
+      ]
+     },
+     {
+      "dex": 64,
+      "name": "Kadabra",
+      "level": 18,
+      "moves": [
+       {
+        "name": "Teleport",
+        "type": "Psychic"
+       },
+       {
+        "name": "Kinesis",
+        "type": "Psychic"
+       },
+       {
+        "name": "Confusion",
+        "type": "Psychic",
+        "power": 50
+       },
+       {
+        "name": "Disable",
+        "type": "Normal"
+       }
+      ]
+     },
+     {
+      "dex": 8,
+      "name": "Wartortle",
+      "level": 20,
+      "moves": [
+       {
+        "name": "Bubble",
+        "type": "Water",
+        "power": 20
+       },
+       {
+        "name": "Withdraw",
+        "type": "Water"
+       },
+       {
+        "name": "Water Gun",
+        "type": "Water",
+        "power": 40
+       },
+       {
+        "name": "Bite",
+        "type": "Dark",
+        "power": 60
+       }
+      ]
+     }
+    ],
+    "Squirtle": [
+     {
+      "dex": 17,
+      "name": "Pidgeotto",
+      "level": 19,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Sand-attack",
+        "type": "Ground"
+       },
+       {
+        "name": "Gust",
+        "type": "Flying",
+        "power": 40
+       },
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       }
+      ]
+     },
+     {
+      "dex": 20,
+      "name": "Raticate",
+      "level": 16,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Tail Whip",
+        "type": "Normal"
+       },
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       },
+       {
+        "name": "Hyper Fang",
+        "type": "Normal",
+        "power": 80
+       }
+      ]
+     },
+     {
+      "dex": 64,
+      "name": "Kadabra",
+      "level": 18,
+      "moves": [
+       {
+        "name": "Teleport",
+        "type": "Psychic"
+       },
+       {
+        "name": "Kinesis",
+        "type": "Psychic"
+       },
+       {
+        "name": "Confusion",
+        "type": "Psychic",
+        "power": 50
+       },
+       {
+        "name": "Disable",
+        "type": "Normal"
+       }
+      ]
+     },
+     {
+      "dex": 2,
+      "name": "Ivysaur",
+      "level": 20,
+      "moves": [
+       {
+        "name": "Leech Seed",
+        "type": "Grass"
+       },
+       {
+        "name": "Vine Whip",
+        "type": "Grass",
+        "power": 35
+       },
+       {
+        "name": "Poisonpowder",
+        "type": "Poison"
+       },
+       {
+        "name": "Sleep Powder",
+        "type": "Grass"
+       }
+      ]
+     }
+    ]
+   },
+   "id": "rival-ss-anne",
+   "area": "2F Corridor"
+  },
+  {
+   "class": "Fisherman",
+   "name": "Dale",
+   "prize": 612,
+   "party": [
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      }
+     ]
+    },
+    {
+     "dex": 72,
+     "name": "Tentacool",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Constrict",
+       "type": "Normal",
+       "power": 10
+      }
+     ]
+    },
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-dale",
+   "area": "2F Room 2"
+  },
+  {
+   "class": "Gentleman",
+   "name": "Brooks",
+   "prize": 1656,
+   "party": [
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 23,
+     "moves": [
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    }
+   ],
+   "id": "gentleman-brooks",
+   "area": "2F Room 2"
+  },
+  {
+   "class": "Gentleman",
+   "name": "Lamar",
+   "prize": 1224,
+   "party": [
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 77,
+     "name": "Ponyta",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "gentleman-lamar",
+   "area": "2F Room 4"
+  },
+  {
+   "class": "Lass",
+   "name": "Dawn",
+   "prize": 288,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "lass-dawn",
+   "area": "2F Room 4"
+  },
+  {
+   "class": "Sailor",
+   "name": "Phillip",
+   "prize": 640,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 20,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "sailor-phillip",
+   "area": "B1F Room 1"
+  },
+  {
+   "class": "Fisherman",
+   "name": "Barny",
+   "prize": 612,
+   "party": [
+    {
+     "dex": 72,
+     "name": "Tentacool",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Constrict",
+       "type": "Normal",
+       "power": 10
+      }
+     ]
+    },
+    {
+     "dex": 120,
+     "name": "Staryu",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 90,
+     "name": "Shellder",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Icicle Spear",
+       "type": "Ice",
+       "power": 10
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-barny",
+   "area": "B1F Room 1"
+  },
+  {
+   "class": "Sailor",
+   "name": "Huey",
+   "prize": 576,
+   "party": [
+    {
+     "dex": 72,
+     "name": "Tentacool",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Constrict",
+       "type": "Normal",
+       "power": 10
+      }
+     ]
+    },
+    {
+     "dex": 120,
+     "name": "Staryu",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "sailor-huey",
+   "area": "B1F Room 2"
+  },
+  {
+   "class": "Sailor",
+   "name": "Dylan",
+   "prize": 544,
+   "party": [
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "sailor-dylan",
+   "area": "B1F Room 3"
+  },
+  {
+   "class": "Sailor",
+   "name": "Leonard",
+   "prize": 672,
+   "party": [
+    {
+     "dex": 90,
+     "name": "Shellder",
+     "level": 21,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Icicle Spear",
+       "type": "Ice",
+       "power": 10
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "sailor-leonard",
+   "area": "B1F Room 4"
+  },
+  {
+   "class": "Sailor",
+   "name": "Duncan",
+   "prize": 544,
+   "party": [
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 90,
+     "name": "Shellder",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Icicle Spear",
+       "type": "Ice",
+       "power": 10
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 72,
+     "name": "Tentacool",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Constrict",
+       "type": "Normal",
+       "power": 10
+      }
+     ]
+    }
+   ],
+   "id": "sailor-duncan",
+   "area": "B1F Room 4"
+  },
+  {
+   "class": "Sailor",
+   "name": "Trevor",
+   "prize": 544,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Low Kick",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      }
+     ]
+    },
+    {
+     "dex": 72,
+     "name": "Tentacool",
+     "level": 17,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Constrict",
+       "type": "Normal",
+       "power": 10
+      }
+     ]
+    }
+   ],
+   "id": "sailor-trevor",
+   "area": "Deck"
+  },
+  {
+   "class": "Sailor",
+   "name": "Edmond",
+   "prize": 576,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Low Kick",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      }
+     ]
+    },
+    {
+     "dex": 90,
+     "name": "Shellder",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Icicle Spear",
+       "type": "Ice",
+       "power": 10
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "sailor-edmond",
+   "area": "Deck"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

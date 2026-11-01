@@ -57,6 +57,934 @@
    "where": "Dojo"
   }
  ],
+ "trainers": [
+  {
+   "class": "Black Belt",
+   "name": "Hideki",
+   "prize": 768,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 32,
+     "moves": [
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 32,
+     "moves": [
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "black-belt-hideki",
+   "area": "Dojo"
+  },
+  {
+   "class": "Black Belt",
+   "name": "Hitoshi",
+   "prize": 744,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 56,
+     "name": "Mankey",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 57,
+     "name": "Primeape",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "black-belt-hitoshi",
+   "area": "Dojo"
+  },
+  {
+   "class": "Black Belt",
+   "name": "Mike",
+   "prize": 744,
+   "party": [
+    {
+     "dex": 56,
+     "name": "Mankey",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 56,
+     "name": "Mankey",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 57,
+     "name": "Primeape",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "black-belt-mike",
+   "area": "Dojo"
+  },
+  {
+   "class": "Black Belt",
+   "name": "Aaron",
+   "prize": 864,
+   "party": [
+    {
+     "dex": 57,
+     "name": "Primeape",
+     "level": 36,
+     "moves": [
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "black-belt-aaron",
+   "area": "Dojo"
+  },
+  {
+   "class": "Black Belt",
+   "name": "Koichi",
+   "prize": 888,
+   "party": [
+    {
+     "dex": 106,
+     "name": "Hitmonlee",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Hi Jump Kick",
+       "type": "Fighting",
+       "power": 85
+      },
+      {
+       "name": "Mind Reader",
+       "type": "Normal"
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 107,
+     "name": "Hitmonchan",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Thunderpunch",
+       "type": "Electric",
+       "power": 75
+      },
+      {
+       "name": "Ice Punch",
+       "type": "Ice",
+       "power": 75
+      },
+      {
+       "name": "Fire Punch",
+       "type": "Fire",
+       "power": 75
+      },
+      {
+       "name": "Sky Uppercut",
+       "type": "Fighting",
+       "power": 85
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "black-belt-koichi",
+   "area": "Dojo"
+  },
+  {
+   "class": "Channeler",
+   "name": "Tasha",
+   "prize": 1056,
+   "party": [
+    {
+     "dex": 92,
+     "name": "Gastly",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Night Shade",
+       "type": "Ghost",
+       "power": 1
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Dream Eater",
+       "type": "Psychic",
+       "power": 100
+      },
+      {
+       "name": "Destiny Bond",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 92,
+     "name": "Gastly",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Night Shade",
+       "type": "Ghost",
+       "power": 1
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Dream Eater",
+       "type": "Psychic",
+       "power": 100
+      },
+      {
+       "name": "Destiny Bond",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 93,
+     "name": "Haunter",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Night Shade",
+       "type": "Ghost",
+       "power": 1
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Shadow Punch",
+       "type": "Ghost",
+       "power": 60
+      },
+      {
+       "name": "Dream Eater",
+       "type": "Psychic",
+       "power": 100
+      }
+     ]
+    }
+   ],
+   "id": "channeler-tasha",
+   "area": "Gym"
+  },
+  {
+   "class": "Psychic",
+   "name": "Cameron",
+   "prize": 660,
+   "party": [
+    {
+     "dex": 79,
+     "name": "Slowpoke",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      }
+     ]
+    },
+    {
+     "dex": 79,
+     "name": "Slowpoke",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      }
+     ]
+    },
+    {
+     "dex": 80,
+     "name": "Slowbro",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      }
+     ]
+    }
+   ],
+   "id": "psychic-cameron",
+   "area": "Gym"
+  },
+  {
+   "class": "Channeler",
+   "name": "Stacy",
+   "prize": 1216,
+   "party": [
+    {
+     "dex": 93,
+     "name": "Haunter",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Night Shade",
+       "type": "Ghost",
+       "power": 1
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Shadow Punch",
+       "type": "Ghost",
+       "power": 60
+      },
+      {
+       "name": "Dream Eater",
+       "type": "Psychic",
+       "power": 100
+      }
+     ]
+    }
+   ],
+   "id": "channeler-stacy",
+   "area": "Gym"
+  },
+  {
+   "class": "Psychic",
+   "name": "Tyron",
+   "prize": 680,
+   "party": [
+    {
+     "dex": 122,
+     "name": "Mr. Mime",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Magical Leaf",
+       "type": "Grass",
+       "power": 60
+      },
+      {
+       "name": "Encore",
+       "type": "Normal"
+      },
+      {
+       "name": "Psybeam",
+       "type": "Psychic",
+       "power": 65
+      },
+      {
+       "name": "Recycle",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Role Play",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "psychic-tyron",
+   "area": "Gym"
+  },
+  {
+   "class": "Psychic",
+   "name": "Preston",
+   "prize": 760,
+   "party": [
+    {
+     "dex": 80,
+     "name": "Slowbro",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Amnesia",
+       "type": "Psychic"
+      },
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      }
+     ]
+    }
+   ],
+   "id": "psychic-preston",
+   "area": "Gym"
+  },
+  {
+   "class": "Channeler",
+   "name": "Amanda",
+   "prize": 1088,
+   "party": [
+    {
+     "dex": 92,
+     "name": "Gastly",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Night Shade",
+       "type": "Ghost",
+       "power": 1
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Dream Eater",
+       "type": "Psychic",
+       "power": 100
+      },
+      {
+       "name": "Destiny Bond",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 93,
+     "name": "Haunter",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Night Shade",
+       "type": "Ghost",
+       "power": 1
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Shadow Punch",
+       "type": "Ghost",
+       "power": 60
+      },
+      {
+       "name": "Dream Eater",
+       "type": "Psychic",
+       "power": 100
+      }
+     ]
+    }
+   ],
+   "id": "channeler-amanda",
+   "area": "Gym"
+  },
+  {
+   "class": "Psychic",
+   "name": "Johan",
+   "prize": 620,
+   "party": [
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Psybeam",
+       "type": "Psychic",
+       "power": 65
+      },
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 79,
+     "name": "Slowpoke",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      }
+     ]
+    },
+    {
+     "dex": 122,
+     "name": "Mr. Mime",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Magical Leaf",
+       "type": "Grass",
+       "power": 60
+      },
+      {
+       "name": "Encore",
+       "type": "Normal"
+      },
+      {
+       "name": "Psybeam",
+       "type": "Psychic",
+       "power": 65
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Psybeam",
+       "type": "Psychic",
+       "power": 65
+      },
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      }
+     ]
+    }
+   ],
+   "id": "psychic-johan",
+   "area": "Gym"
+  },
+  {
+   "class": "Leader",
+   "name": "Sabrina",
+   "prize": 4300,
+   "party": [
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Role Play",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 122,
+     "name": "Mr. Mime",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Encore",
+       "type": "Normal"
+      },
+      {
+       "name": "Psybeam",
+       "type": "Psychic",
+       "power": 65
+      },
+      {
+       "name": "Recycle",
+       "type": "Normal"
+      },
+      {
+       "name": "Trick",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 49,
+     "name": "Venomoth",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Psybeam",
+       "type": "Psychic",
+       "power": 65
+      }
+     ]
+    },
+    {
+     "dex": 65,
+     "name": "Alakazam",
+     "level": 43,
+     "moves": [
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Calm Mind",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Trick",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion ×2",
+    "Full Heal"
+   ],
+   "rewards": [
+    "Marsh Badge",
+    "TM04"
+   ],
+   "id": "leader-sabrina",
+   "area": "Gym"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

@@ -154,6 +154,529 @@
    "where": "Wardens House"
   }
  ],
+ "trainers": [
+  {
+   "class": "Juggler",
+   "name": "Nate",
+   "prize": 1360,
+   "party": [
+    {
+     "dex": 96,
+     "name": "Drowzee",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Role Play",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "juggler-nate",
+   "area": "Gym"
+  },
+  {
+   "class": "Juggler",
+   "name": "Kayden",
+   "prize": 1520,
+   "party": [
+    {
+     "dex": 97,
+     "name": "Hypno",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "id": "juggler-kayden",
+   "area": "Gym"
+  },
+  {
+   "class": "Juggler",
+   "name": "Kirk",
+   "prize": 1240,
+   "party": [
+    {
+     "dex": 96,
+     "name": "Drowzee",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 96,
+     "name": "Drowzee",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Psybeam",
+       "type": "Psychic",
+       "power": 65
+      },
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 96,
+     "name": "Drowzee",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "id": "juggler-kirk",
+   "area": "Gym"
+  },
+  {
+   "class": "Juggler",
+   "name": "Shawn",
+   "prize": 1360,
+   "party": [
+    {
+     "dex": 96,
+     "name": "Drowzee",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 97,
+     "name": "Hypno",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "juggler-shawn",
+   "area": "Gym"
+  },
+  {
+   "class": "Tamer",
+   "name": "Phil",
+   "prize": 1360,
+   "party": [
+    {
+     "dex": 28,
+     "name": "Sandslash",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 24,
+     "name": "Arbok",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Glare",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "tamer-phil",
+   "area": "Gym"
+  },
+  {
+   "class": "Tamer",
+   "name": "Edgar",
+   "prize": 1320,
+   "party": [
+    {
+     "dex": 24,
+     "name": "Arbok",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Glare",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 28,
+     "name": "Sandslash",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 24,
+     "name": "Arbok",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Glare",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "tamer-edgar",
+   "area": "Gym"
+  },
+  {
+   "class": "Leader",
+   "name": "Koga",
+   "prize": 4300,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Haze",
+       "type": "Ice"
+      }
+     ]
+    },
+    {
+     "dex": 89,
+     "name": "Muk",
+     "level": 39,
+     "moves": [
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Acid Armor",
+       "type": "Poison"
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Haze",
+       "type": "Ice"
+      }
+     ]
+    },
+    {
+     "dex": 110,
+     "name": "Weezing",
+     "level": 43,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Haze",
+       "type": "Ice"
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion ×2",
+    "Full Heal"
+   ],
+   "rewards": [
+    "Soul Badge",
+    "TM06"
+   ],
+   "id": "leader-koga",
+   "area": "Gym"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

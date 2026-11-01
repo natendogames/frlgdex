@@ -252,6 +252,71 @@
    "where": "Players House 2F"
   }
  ],
+ "trainers": [
+  {
+   "class": "Rival",
+   "name": "Rival",
+   "prize": 80,
+   "byStarter": {
+    "Bulbasaur": [
+     {
+      "dex": 4,
+      "name": "Charmander",
+      "level": 5,
+      "moves": [
+       {
+        "name": "Scratch",
+        "type": "Normal",
+        "power": 40
+       },
+       {
+        "name": "Growl",
+        "type": "Normal"
+       }
+      ]
+     }
+    ],
+    "Charmander": [
+     {
+      "dex": 7,
+      "name": "Squirtle",
+      "level": 5,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Tail Whip",
+        "type": "Normal"
+       }
+      ]
+     }
+    ],
+    "Squirtle": [
+     {
+      "dex": 1,
+      "name": "Bulbasaur",
+      "level": 5,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Growl",
+        "type": "Normal"
+       }
+      ]
+     }
+    ]
+   },
+   "id": "rival-oaks-lab",
+   "area": "Professor Oaks Lab"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

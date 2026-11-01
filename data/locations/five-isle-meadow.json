@@ -270,6 +270,232 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 1568,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Haze",
+       "type": "Ice"
+      },
+      {
+       "name": "Explosion",
+       "type": "Normal",
+       "power": 250
+      },
+      {
+       "name": "Destiny Bond",
+       "type": "Ghost"
+      },
+      {
+       "name": "Memento",
+       "type": "Dark"
+      }
+     ]
+    },
+    {
+     "dex": 110,
+     "name": "Weezing",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Haze",
+       "type": "Ice"
+      },
+      {
+       "name": "Explosion",
+       "type": "Normal",
+       "power": 250
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-50",
+   "area": "Meadow"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 1536,
+   "party": [
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Stockpile",
+       "type": "Normal"
+      },
+      {
+       "name": "Swallow",
+       "type": "Normal"
+      },
+      {
+       "name": "Spit Up",
+       "type": "Normal",
+       "power": 100
+      },
+      {
+       "name": "Haze",
+       "type": "Ice"
+      }
+     ]
+    },
+    {
+     "dex": 44,
+     "name": "Gloom",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      },
+      {
+       "name": "Petal Dance",
+       "type": "Grass",
+       "power": 70
+      }
+     ]
+    },
+    {
+     "dex": 44,
+     "name": "Gloom",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      },
+      {
+       "name": "Petal Dance",
+       "type": "Grass",
+       "power": 70
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-51",
+   "area": "Meadow"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 1536,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Super Fang",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Endeavor",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Acid Armor",
+       "type": "Poison"
+      },
+      {
+       "name": "Sludge Bomb",
+       "type": "Poison",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 89,
+     "name": "Muk",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Acid Armor",
+       "type": "Poison"
+      },
+      {
+       "name": "Sludge Bomb",
+       "type": "Poison",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-49",
+   "area": "Meadow"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

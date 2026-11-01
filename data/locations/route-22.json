@@ -155,6 +155,584 @@
  ],
  "items": [],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Rival",
+   "name": "Rival",
+   "prize": 144,
+   "byStarter": {
+    "Bulbasaur": [
+     {
+      "dex": 16,
+      "name": "Pidgey",
+      "level": 9,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Sand-attack",
+        "type": "Ground"
+       }
+      ]
+     },
+     {
+      "dex": 4,
+      "name": "Charmander",
+      "level": 9,
+      "moves": [
+       {
+        "name": "Scratch",
+        "type": "Normal",
+        "power": 40
+       },
+       {
+        "name": "Growl",
+        "type": "Normal"
+       }
+      ]
+     }
+    ],
+    "Charmander": [
+     {
+      "dex": 16,
+      "name": "Pidgey",
+      "level": 9,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Sand-attack",
+        "type": "Ground"
+       }
+      ]
+     },
+     {
+      "dex": 7,
+      "name": "Squirtle",
+      "level": 9,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Tail Whip",
+        "type": "Normal"
+       }
+      ]
+     }
+    ],
+    "Squirtle": [
+     {
+      "dex": 16,
+      "name": "Pidgey",
+      "level": 9,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Sand-attack",
+        "type": "Ground"
+       }
+      ]
+     },
+     {
+      "dex": 1,
+      "name": "Bulbasaur",
+      "level": 9,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Growl",
+        "type": "Normal"
+       }
+      ]
+     }
+    ]
+   },
+   "id": "rival-route22-early"
+  },
+  {
+   "class": "Rival",
+   "name": "Rival",
+   "prize": 1908,
+   "byStarter": {
+    "Bulbasaur": [
+     {
+      "dex": 18,
+      "name": "Pidgeot",
+      "level": 47,
+      "moves": [
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       },
+       {
+        "name": "Whirlwind",
+        "type": "Normal"
+       },
+       {
+        "name": "Wing Attack",
+        "type": "Flying",
+        "power": 60
+       },
+       {
+        "name": "Featherdance",
+        "type": "Flying"
+       }
+      ]
+     },
+     {
+      "dex": 111,
+      "name": "Rhyhorn",
+      "level": 45,
+      "moves": [
+       {
+        "name": "Scary Face",
+        "type": "Normal"
+       },
+       {
+        "name": "Rock Blast",
+        "type": "Rock",
+        "power": 25
+       },
+       {
+        "name": "Horn Drill",
+        "type": "Normal",
+        "power": 1
+       },
+       {
+        "name": "Take Down",
+        "type": "Normal",
+        "power": 90
+       }
+      ]
+     },
+     {
+      "dex": 102,
+      "name": "Exeggcute",
+      "level": 45,
+      "moves": [
+       {
+        "name": "Stun Spore",
+        "type": "Grass"
+       },
+       {
+        "name": "Poisonpowder",
+        "type": "Poison"
+       },
+       {
+        "name": "Sleep Powder",
+        "type": "Grass"
+       },
+       {
+        "name": "Solarbeam",
+        "type": "Grass",
+        "power": 120
+       }
+      ]
+     },
+     {
+      "dex": 130,
+      "name": "Gyarados",
+      "level": 45,
+      "moves": [
+       {
+        "name": "Leer",
+        "type": "Normal"
+       },
+       {
+        "name": "Twister",
+        "type": "Dragon",
+        "power": 40
+       },
+       {
+        "name": "Hydro Pump",
+        "type": "Water",
+        "power": 120
+       },
+       {
+        "name": "Rain Dance",
+        "type": "Water"
+       }
+      ]
+     },
+     {
+      "dex": 65,
+      "name": "Alakazam",
+      "level": 47,
+      "moves": [
+       {
+        "name": "Future Sight",
+        "type": "Psychic",
+        "power": 80
+       },
+       {
+        "name": "Calm Mind",
+        "type": "Psychic"
+       },
+       {
+        "name": "Psychic",
+        "type": "Psychic",
+        "power": 90
+       },
+       {
+        "name": "Trick",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 6,
+      "name": "Charizard",
+      "level": 53,
+      "moves": [
+       {
+        "name": "Scary Face",
+        "type": "Normal"
+       },
+       {
+        "name": "Flamethrower",
+        "type": "Fire",
+        "power": 95
+       },
+       {
+        "name": "Wing Attack",
+        "type": "Flying",
+        "power": 60
+       },
+       {
+        "name": "Slash",
+        "type": "Normal",
+        "power": 70
+       }
+      ]
+     }
+    ],
+    "Charmander": [
+     {
+      "dex": 18,
+      "name": "Pidgeot",
+      "level": 47,
+      "moves": [
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       },
+       {
+        "name": "Whirlwind",
+        "type": "Normal"
+       },
+       {
+        "name": "Wing Attack",
+        "type": "Flying",
+        "power": 60
+       },
+       {
+        "name": "Featherdance",
+        "type": "Flying"
+       }
+      ]
+     },
+     {
+      "dex": 111,
+      "name": "Rhyhorn",
+      "level": 45,
+      "moves": [
+       {
+        "name": "Scary Face",
+        "type": "Normal"
+       },
+       {
+        "name": "Rock Blast",
+        "type": "Rock",
+        "power": 25
+       },
+       {
+        "name": "Horn Drill",
+        "type": "Normal",
+        "power": 1
+       },
+       {
+        "name": "Take Down",
+        "type": "Normal",
+        "power": 90
+       }
+      ]
+     },
+     {
+      "dex": 58,
+      "name": "Growlithe",
+      "level": 45,
+      "moves": [
+       {
+        "name": "Take Down",
+        "type": "Normal",
+        "power": 90
+       },
+       {
+        "name": "Flame Wheel",
+        "type": "Fire",
+        "power": 60
+       },
+       {
+        "name": "Helping Hand",
+        "type": "Normal"
+       },
+       {
+        "name": "Agility",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 102,
+      "name": "Exeggcute",
+      "level": 45,
+      "moves": [
+       {
+        "name": "Stun Spore",
+        "type": "Grass"
+       },
+       {
+        "name": "Poisonpowder",
+        "type": "Poison"
+       },
+       {
+        "name": "Sleep Powder",
+        "type": "Grass"
+       },
+       {
+        "name": "Solarbeam",
+        "type": "Grass",
+        "power": 120
+       }
+      ]
+     },
+     {
+      "dex": 65,
+      "name": "Alakazam",
+      "level": 47,
+      "moves": [
+       {
+        "name": "Future Sight",
+        "type": "Psychic",
+        "power": 80
+       },
+       {
+        "name": "Calm Mind",
+        "type": "Psychic"
+       },
+       {
+        "name": "Psychic",
+        "type": "Psychic",
+        "power": 90
+       },
+       {
+        "name": "Trick",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 9,
+      "name": "Blastoise",
+      "level": 53,
+      "moves": [
+       {
+        "name": "Bite",
+        "type": "Dark",
+        "power": 60
+       },
+       {
+        "name": "Rapid Spin",
+        "type": "Normal",
+        "power": 20
+       },
+       {
+        "name": "Protect",
+        "type": "Normal"
+       },
+       {
+        "name": "Rain Dance",
+        "type": "Water"
+       }
+      ]
+     }
+    ],
+    "Squirtle": [
+     {
+      "dex": 18,
+      "name": "Pidgeot",
+      "level": 47,
+      "moves": [
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       },
+       {
+        "name": "Whirlwind",
+        "type": "Normal"
+       },
+       {
+        "name": "Wing Attack",
+        "type": "Flying",
+        "power": 60
+       },
+       {
+        "name": "Featherdance",
+        "type": "Flying"
+       }
+      ]
+     },
+     {
+      "dex": 111,
+      "name": "Rhyhorn",
+      "level": 45,
+      "moves": [
+       {
+        "name": "Scary Face",
+        "type": "Normal"
+       },
+       {
+        "name": "Rock Blast",
+        "type": "Rock",
+        "power": 25
+       },
+       {
+        "name": "Horn Drill",
+        "type": "Normal",
+        "power": 1
+       },
+       {
+        "name": "Take Down",
+        "type": "Normal",
+        "power": 90
+       }
+      ]
+     },
+     {
+      "dex": 130,
+      "name": "Gyarados",
+      "level": 45,
+      "moves": [
+       {
+        "name": "Leer",
+        "type": "Normal"
+       },
+       {
+        "name": "Twister",
+        "type": "Dragon",
+        "power": 40
+       },
+       {
+        "name": "Hydro Pump",
+        "type": "Water",
+        "power": 120
+       },
+       {
+        "name": "Rain Dance",
+        "type": "Water"
+       }
+      ]
+     },
+     {
+      "dex": 58,
+      "name": "Growlithe",
+      "level": 45,
+      "moves": [
+       {
+        "name": "Take Down",
+        "type": "Normal",
+        "power": 90
+       },
+       {
+        "name": "Flame Wheel",
+        "type": "Fire",
+        "power": 60
+       },
+       {
+        "name": "Helping Hand",
+        "type": "Normal"
+       },
+       {
+        "name": "Agility",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 65,
+      "name": "Alakazam",
+      "level": 47,
+      "moves": [
+       {
+        "name": "Future Sight",
+        "type": "Psychic",
+        "power": 80
+       },
+       {
+        "name": "Calm Mind",
+        "type": "Psychic"
+       },
+       {
+        "name": "Psychic",
+        "type": "Psychic",
+        "power": 90
+       },
+       {
+        "name": "Trick",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 3,
+      "name": "Venusaur",
+      "level": 53,
+      "moves": [
+       {
+        "name": "Razor Leaf",
+        "type": "Grass",
+        "power": 55
+       },
+       {
+        "name": "Sweet Scent",
+        "type": "Normal"
+       },
+       {
+        "name": "Growth",
+        "type": "Normal"
+       },
+       {
+        "name": "Synthesis",
+        "type": "Grass"
+       }
+      ]
+     }
+    ]
+   },
+   "id": "rival-route22-late",
+   "stage": "route-23"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

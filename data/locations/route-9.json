@@ -78,6 +78,615 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Picnicker",
+   "name": "Alicia",
+   "prize": 360,
+   "party": [
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Growth",
+       "type": "Normal"
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      }
+     ]
+    },
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Growth",
+       "type": "Normal"
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-alicia"
+  },
+  {
+   "class": "Hiker",
+   "name": "Jeremy",
+   "prize": 720,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 20,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 20,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Bind",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "hiker-jeremy"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Brent",
+   "prize": 228,
+   "party": [
+    {
+     "dex": 15,
+     "name": "Beedrill",
+     "level": 19,
+     "moves": [
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 15,
+     "name": "Beedrill",
+     "level": 19,
+     "moves": [
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-brent"
+  },
+  {
+   "class": "Camper",
+   "name": "Chris",
+   "prize": 420,
+   "party": [
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 21,
+     "moves": [
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 4,
+     "name": "Charmander",
+     "level": 21,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Metal Claw",
+       "type": "Steel",
+       "power": 50
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "camper-chris"
+  },
+  {
+   "class": "Camper",
+   "name": "Drew",
+   "prize": 380,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 19,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 27,
+     "name": "Sandshrew",
+     "level": 19,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 19,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 27,
+     "name": "Sandshrew",
+     "level": 19,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "camper-drew"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Conner",
+   "prize": 240,
+   "party": [
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 20,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 13,
+     "name": "Weedle",
+     "level": 20,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 48,
+     "name": "Venonat",
+     "level": 20,
+     "moves": [
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-conner"
+  },
+  {
+   "class": "Hiker",
+   "name": "Brice",
+   "prize": 720,
+   "party": [
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 20,
+     "moves": [
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 20,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 20,
+     "moves": [
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "hiker-brice"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Caitlin",
+   "prize": 460,
+   "party": [
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 23,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-caitlin"
+  },
+  {
+   "class": "Hiker",
+   "name": "Alan",
+   "prize": 756,
+   "party": [
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 21,
+     "moves": [
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    },
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 21,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Bind",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "hiker-alan"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

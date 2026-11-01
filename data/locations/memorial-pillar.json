@@ -220,6 +220,183 @@
    "where": "Memorial Pillar"
   }
  ],
+ "trainers": [
+  {
+   "class": "Bird Keeper",
+   "name": "Harold",
+   "prize": 1176,
+   "party": [
+    {
+     "dex": 163,
+     "name": "Hoothoot",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      }
+     ]
+    },
+    {
+     "dex": 164,
+     "name": "Noctowl",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-harold",
+   "area": "Memorial Pillar"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Chaz",
+   "prize": 1176,
+   "party": [
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Aerial Ace",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Mirror Move",
+       "type": "Flying"
+      },
+      {
+       "name": "Drill Peck",
+       "type": "Flying",
+       "power": 80
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 22,
+     "name": "Fearow",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Mirror Move",
+       "type": "Flying"
+      },
+      {
+       "name": "Drill Peck",
+       "type": "Flying",
+       "power": 80
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-chaz",
+   "area": "Memorial Pillar"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Milo",
+   "prize": 1176,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Featherdance",
+       "type": "Flying"
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Mirror Move",
+       "type": "Flying"
+      }
+     ]
+    },
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Featherdance",
+       "type": "Flying"
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-milo",
+   "area": "Memorial Pillar"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

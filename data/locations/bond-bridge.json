@@ -274,6 +274,436 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Twins",
+   "name": "Joy & Meg",
+   "prize": 888,
+   "party": [
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Metronome",
+       "type": "Normal"
+      },
+      {
+       "name": "Cosmic Power",
+       "type": "Psychic"
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Metronome",
+       "type": "Normal"
+      },
+      {
+       "name": "Cosmic Power",
+       "type": "Psychic"
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "double": true,
+   "id": "twins-joy-meg",
+   "area": "Bond Bridge"
+  },
+  {
+   "class": "Aroma Lady",
+   "name": "Violet",
+   "prize": 1008,
+   "party": [
+    {
+     "dex": 1,
+     "name": "Bulbasaur",
+     "level": 36,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Growth",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 2,
+     "name": "Ivysaur",
+     "level": 36,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 2,
+     "name": "Ivysaur",
+     "level": 36,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "aroma-lady-violet",
+   "area": "Bond Bridge"
+  },
+  {
+   "class": "Tuber",
+   "name": "Alexis",
+   "prize": 136,
+   "party": [
+    {
+     "dex": 120,
+     "name": "Staryu",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Camouflage",
+       "type": "Normal"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 120,
+     "name": "Staryu",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Camouflage",
+       "type": "Normal"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 98,
+     "name": "Krabby",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Shot",
+       "type": "Ground",
+       "power": 55
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Guillotine",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 98,
+     "name": "Krabby",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Shot",
+       "type": "Ground",
+       "power": 55
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Guillotine",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "tuber-alexis",
+   "area": "Bond Bridge"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Tisha",
+   "prize": 152,
+   "party": [
+    {
+     "dex": 99,
+     "name": "Kingler",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Shot",
+       "type": "Ground",
+       "power": 55
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Guillotine",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-female-tisha",
+   "area": "Bond Bridge"
+  },
+  {
+   "class": "Tuber",
+   "name": "Amira",
+   "prize": 136,
+   "party": [
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      }
+     ]
+    },
+    {
+     "dex": 61,
+     "name": "Poliwhirl",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      }
+     ]
+    },
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      }
+     ]
+    }
+   ],
+   "id": "tuber-amira",
+   "area": "Bond Bridge"
+  },
+  {
+   "class": "Aroma Lady",
+   "name": "Nikki",
+   "prize": 1036,
+   "party": [
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    },
+    {
+     "dex": 70,
+     "name": "Weepinbell",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "aroma-lady-nikki",
+   "area": "Bond Bridge"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

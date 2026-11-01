@@ -198,6 +198,124 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Psychic",
+   "name": "Rodette",
+   "prize": 1000,
+   "party": [
+    {
+     "dex": 177,
+     "name": "Natu",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      },
+      {
+       "name": "Wish",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 96,
+     "name": "Drowzee",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Psych Up",
+       "type": "Normal"
+      },
+      {
+       "name": "Swagger",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 97,
+     "name": "Hypno",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Psych Up",
+       "type": "Normal"
+      },
+      {
+       "name": "Swagger",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "psychic-rodette",
+   "area": "Trainer Tower"
+  },
+  {
+   "class": "Psychic",
+   "name": "Dario",
+   "prize": 1040,
+   "party": [
+    {
+     "dex": 203,
+     "name": "Girafarig",
+     "level": 52,
+     "moves": [
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Baton Pass",
+       "type": "Normal"
+      },
+      {
+       "name": "Psybeam",
+       "type": "Psychic",
+       "power": 65
+      },
+      {
+       "name": "Crunch",
+       "type": "Dark",
+       "power": 80
+      }
+     ]
+    }
+   ],
+   "id": "psychic-dario",
+   "area": "Trainer Tower"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

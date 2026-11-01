@@ -357,45 +357,216 @@ for loc in locs.values():
     if len({x.get('area') for x in loc['encounters']}) == 1:
         for e in loc['encounters']: e.pop('area', None)
 
-# ---------- trainers (gyms, Elite Four, champion, Giovanni) ----------
+# ---------- trainers ----------
+# Every first-time trainer battle in the map scripts, with party, moves, prize money and rewards.
 tsrc = open(P('src/data/trainers.h')).read()
 psrc = open(P('src/data/trainer_parties.h')).read()
-parties = {k: body for k, body in re.findall(r'static const struct \w+ (sParty_\w+)\[\] = \{(.*?)\n\};', psrc, re.S)}
-def party(tconst):
-    t = re.search(r'\[' + tconst + r'\] = \{(.*?)\n    \},', tsrc, re.S).group(1)
+parties = {k: body for k, body in re.findall(r'static const struct \w+ (sParty_\w+)\[\] = \{\n(.*?)\n\};', psrc, re.S)}
+tdefs = {k: body for k, body in re.findall(r'\[(TRAINER_\w+)\] = \{(.*?)\n    \},', tsrc, re.S)}
+class_names = {}
+for line in open(P('src/data/text/trainer_class_names.h'), encoding='utf-8'):
+    m = re.match(r'\s*\[(TRAINER_CLASS_\w+)\]\s*=\s*_\("(.*)"\)', line)
+    if m: class_names[m.group(1)] = m.group(2)
+CLASS_FIX = {'TRAINER_CLASS_PKMN_PROF': 'Pokémon Prof.', 'TRAINER_CLASS_COOLTRAINER': 'Cool Trainer', 'TRAINER_CLASS_PKMN_BREEDER': 'Pokémon Breeder',
+             'TRAINER_CLASS_PKMN_RANGER': 'Pokémon Ranger', 'TRAINER_CLASS_SIS_AND_BRO': 'Sis and Bro', 'TRAINER_CLASS_CRUSH_KIN': 'Crush Kin',
+             'TRAINER_CLASS_ELITE_FOUR': 'Elite Four', 'TRAINER_CLASS_SWIMMER_M': 'Swimmer', 'TRAINER_CLASS_SWIMMER_F': 'Swimmer',
+             'TRAINER_CLASS_TEAM_ROCKET': 'Team Rocket', 'TRAINER_CLASS_POKEMANIAC': 'Poké Maniac', 'TRAINER_CLASS_LEADER': 'Leader',
+             'TRAINER_CLASS_BOSS': 'Boss', 'TRAINER_CLASS_RIVAL_EARLY': 'Rival', 'TRAINER_CLASS_RIVAL_LATE': 'Rival', 'TRAINER_CLASS_CHAMPION': 'Champion'}
+money_table = {c: int(v) for c, v in re.findall(r'\{(TRAINER_CLASS_\w+), (\d+)\}', bm)}
+
+learnset_ptr = dict(re.findall(r'\[SPECIES_(\w+)\] = (s\w+LevelUpLearnset)', open(P('src/data/pokemon/level_up_learnset_pointers.h')).read()))
+learnsets = {k: [(int(l), mv) for l, mv in re.findall(r'LEVEL_UP_MOVE\(\s*(\d+),\s*MOVE_(\w+)\)', body)]
+             for k, body in re.findall(r'static const u16 (s\w+LevelUpLearnset)\[\] = \{(.*?)\};', open(P('src/data/pokemon/level_up_learnsets.h')).read(), re.S)}
+
+def default_moves(sp, lvl):
+    """The game fills a trainer Pokémon's moves with the last four it learns by level up at or below its level."""
+    moves = []
+    for l, mv in learnsets[learnset_ptr[sp]]:
+        if l > lvl: break
+        if mv in moves: continue
+        if len(moves) == 4: moves.pop(0)
+        moves.append(mv)
+    return moves
+
+move_power = move_types.pop('_power')
+def move_info(x):
+    return {'name': move_names[x], 'type': move_types.get(x), **({'power': move_power[x]} if move_power.get(x) else {})}
+
+def trainer_party(tconst):
+    t = tdefs[tconst]
     pk = re.search(r'\.party = \w+\((sParty_\w+)\)', t).group(1)
     mons = []
     for body in re.findall(r'\{(.*?)\}', parties[pk].replace('{MOVE', '[MOVE').replace('NONE}', 'NONE]'), re.S):
         sp = re.search(r'\.species = SPECIES_(\w+)', body)
         if not sp: continue
+        lvl = int(re.search(r'\.lvl = (\d+)', body).group(1))
         mv = re.search(r'\.moves = \[(.*?)\]', body)
         held = re.search(r'\.heldItem = (ITEM_\w+)', body)
-        moves = [x.strip().replace('MOVE_', '') for x in mv.group(1).split(',')] if mv else []
-        mons.append({**mon('SPECIES_' + sp.group(1)), 'level': int(re.search(r'\.lvl = (\d+)', body).group(1)),
-                     'moves': [{'name': move_names[x], 'type': move_types.get(x)} for x in moves if x and x != 'NONE'],
+        moves = [x.strip().replace('MOVE_', '') for x in mv.group(1).split(',')] if mv else default_moves(sp.group(1), lvl)
+        mons.append({**mon('SPECIES_' + sp.group(1)), 'level': lvl,
+                     'moves': [move_info(x) for x in moves if x and x != 'NONE'],
                      **({'item': item_name(held.group(1))} if held and held.group(1) != 'ITEM_NONE' else {})})
     return mons
 
-BOSSES = [
-    ('brock', 'Brock', 'Pewter City Gym', 'Boulder Badge', 'Rock', 'TRAINER_LEADER_BROCK', 'pewter-city'),
-    ('misty', 'Misty', 'Cerulean City Gym', 'Cascade Badge', 'Water', 'TRAINER_LEADER_MISTY', 'cerulean-city'),
-    ('lt-surge', 'Lt. Surge', 'Vermilion City Gym', 'Thunder Badge', 'Electric', 'TRAINER_LEADER_LT_SURGE', 'vermilion-city'),
-    ('erika', 'Erika', 'Celadon City Gym', 'Rainbow Badge', 'Grass', 'TRAINER_LEADER_ERIKA', 'celadon-city'),
-    ('koga', 'Koga', 'Fuchsia City Gym', 'Soul Badge', 'Poison', 'TRAINER_LEADER_KOGA', 'fuchsia-city'),
-    ('sabrina', 'Sabrina', 'Saffron City Gym', 'Marsh Badge', 'Psychic', 'TRAINER_LEADER_SABRINA', 'saffron-city'),
-    ('blaine', 'Blaine', 'Cinnabar Island Gym', 'Volcano Badge', 'Fire', 'TRAINER_LEADER_BLAINE', 'cinnabar-island'),
-    ('giovanni', 'Giovanni', 'Viridian City Gym', 'Earth Badge', 'Ground', 'TRAINER_LEADER_GIOVANNI', 'viridian-city'),
-    ('lorelei', 'Lorelei', 'Elite Four', None, 'Ice', 'TRAINER_ELITE_FOUR_LORELEI', 'pokemon-league'),
-    ('bruno', 'Bruno', 'Elite Four', None, 'Fighting', 'TRAINER_ELITE_FOUR_BRUNO', 'pokemon-league'),
-    ('agatha', 'Agatha', 'Elite Four', None, 'Ghost', 'TRAINER_ELITE_FOUR_AGATHA', 'pokemon-league'),
-    ('lance', 'Lance', 'Elite Four', None, 'Dragon', 'TRAINER_ELITE_FOUR_LANCE', 'pokemon-league'),
+def trainer_record(tconst):
+    t = tdefs[tconst]
+    cls = re.search(r'\.trainerClass = (TRAINER_CLASS_\w+)', t).group(1)
+    name = re.search(r'\.trainerName = _\("(.*?)"\)', t).group(1)
+    double = '.doubleBattle = TRUE' in t
+    used = [item_name(i) for i in re.findall(r'(ITEM_\w+)', re.search(r'\.items = \{(.*?)\}', t).group(1)) if i != 'ITEM_NONE']
+    pty = trainer_party(tconst)
+    prize = 4 * pty[-1]['level'] * money_table.get(cls, 1) * (2 if double else 1)
+    rec = {'class': CLASS_FIX.get(cls) or title(class_names.get(cls, cls.replace('TRAINER_CLASS_', '').replace('_', ' '))),
+           'name': title(name).replace(' & ', ' & '), 'prize': prize, 'party': pty}
+    if double: rec['double'] = True
+    if used: rec['uses'] = [f'{n} ×{c}' if c > 1 else n for n, c in collections.Counter(used).items()]
+    return rec
+
+# Scan scripts: label -> lines, and which trainer battles each label starts.
+script_files = [(os.path.basename(os.path.dirname(f)), f) for f in glob.glob(P('data/maps/*/scripts.inc'))] + [(None, P('data/scripts/trainers.inc'))]
+labels, label_map = {}, {}
+map_names_by_len = sorted(maps, key=len, reverse=True)
+for mapname, f in script_files:
+    cur_label = None
+    for line in open(f, encoding='utf-8'):
+        lm = re.match(r'(\w+)::', line)
+        if lm:
+            cur_label = lm.group(1); labels[cur_label] = []
+            label_map[cur_label] = mapname or next((n for n in map_names_by_len if cur_label.startswith(n + '_')), None)
+            continue
+        if cur_label: labels[cur_label].append(line.strip())
+
+BATTLE_RE = re.compile(r'trainerbattle_(single|double|no_intro|earlyrival)\s+(TRAINER_\w+)(.*)')
+def label_rewards(label, depth=0, seen=None):
+    """Items handed over in a trainer's script and the scripts it jumps to (gym TMs, the Nugget Bridge prize...)."""
+    seen = seen if seen is not None else set()
+    if label in seen or label not in labels or depth > 2: return []
+    seen.add(label)
+    out = []
+    for s in labels[label]:
+        gm = re.match(r'(?:giveitem|giveitem_msg)\s+(?:\w+,\s*)?(ITEM_\w+)(?:,\s*(\d+))?', s)
+        if gm: out.append(item_name(gm.group(1)) + (f' ×{gm.group(2)}' if gm.group(2) and gm.group(2) != '1' else ''))
+        bm_ = re.match(r'setflag FLAG_BADGE0(\d)_GET', s)
+        if bm_: out.append(['Boulder', 'Cascade', 'Thunder', 'Rainbow', 'Soul', 'Marsh', 'Volcano', 'Earth'][int(bm_.group(1)) - 1] + ' Badge')
+        for target in re.findall(r'(?:goto|call)(?:_if\w*)?\s+(?:[^,]+,\s*)*?(\w+_EventScript_\w+)', s):
+            out += label_rewards(target, depth + 1, seen)
+        bt = BATTLE_RE.match(s)
+        if bt:
+            for target in re.findall(r'(\w+_EventScript_\w+)', bt.group(3)):
+                out += label_rewards(target, depth + 1, seen)
+    return out
+
+STARTER_COUNTER = {'Bulbasaur': 'CHARMANDER', 'Charmander': 'SQUIRTLE', 'Squirtle': 'BULBASAUR'}  # your starter -> your rival's
+SKIP_TRAINER = re.compile(r'REMATCH|ELITE_FOUR_\w+_2$')
+# Direction you normally walk each route in, so trainers are listed in the order you meet them.
+WALK = {'Route2': 'N', 'Route3': 'E', 'Route4': 'E', 'Route24': 'N', 'Route25': 'E', 'Route5': 'S', 'Route6': 'S', 'Route11': 'E', 'Route9': 'E',
+        'Route10': 'S', 'Route8': 'W', 'Route7': 'W', 'Route12': 'S', 'Route13': 'W', 'Route14': 'S', 'Route15': 'W', 'Route16': 'W', 'Route17': 'S',
+        'Route18': 'E', 'Route19': 'S', 'Route20': 'W', 'Route21_North': 'N', 'Route21_South': 'N', 'Route22': 'W', 'Route23': 'N',
+        'OneIsland_KindleRoad': 'N', 'OneIsland_TreasureBeach': 'S', 'ThreeIsland_BondBridge': 'W', 'SixIsland_WaterPath': 'N',
+        'SevenIsland_SevaultCanyon': 'N', 'CeruleanCity': 'E', 'SevenIsland_TanobyRuins': 'W', 'FiveIsland_WaterLabyrinth': 'N'}
+AREA_ORDER = {'route-21': ['South', 'North'], 'pokemon-league': ['Loreleis Room', 'Brunos Room', 'Agathas Room', 'Lances Room', 'Champions Room']}
+# Battles that happen later in the story than your first visit to the location.
+STAGE = {'ViridianCity_Gym': 'route-21', 'RIVAL_ROUTE22_LATE': 'route-23'}
+
+found_battles = collections.OrderedDict()  # (map, key) -> info
+for label, lines in labels.items():
+    mapname = label_map.get(label)
+    if not mapname or mapname not in maps or maps[mapname]['region_map_section'] in SKIP: continue
+    for s in lines:
+        bt = BATTLE_RE.match(s)
+        if not bt or SKIP_TRAINER.search(bt.group(2)): continue
+        tconst = bt.group(2)
+        rm = re.match(r'TRAINER_(\w+)_(SQUIRTLE|BULBASAUR|CHARMANDER)$', tconst)
+        key = rm.group(1) if rm else tconst
+        b = found_battles.setdefault((mapname, key), {'consts': {}, 'labels': [], 'rival': bool(rm)})
+        b['consts'][rm.group(2) if rm else None] = tconst
+        b['labels'].append(label)
+
+def position(mapname, lbls):
+    m = maps[mapname]
+    for ev in (m.get('object_events') or []) + (m.get('coord_events') or []):
+        if ev.get('script') in lbls: return ev['x'], ev['y']
+    # rival and Rocket scenes are started from a parent script; find the object or trigger that calls into it
+    for ev in (m.get('object_events') or []) + (m.get('coord_events') or []):
+        body = ' '.join(labels.get(ev.get('script'), []))
+        if any(l in body for l in lbls): return ev['x'], ev['y']
+    return None
+
+def sort_key(mapname, pos):
+    if pos is None: return (1, 0)
+    x, y = pos
+    d = WALK.get(mapname, 'N')  # buildings and caves: you enter from the bottom
+    return (0, {'N': -y, 'S': y, 'E': x, 'W': -x}[d], {'N': x, 'S': x, 'E': y, 'W': y}[d])
+
+def area_sort(lid, area):
+    order = AREA_ORDER.get(lid)
+    if order and area in order: return (0, order.index(area), '')
+    if area == 'Outside': return (0, -1, '')
+    m = re.match(r'(B?)(\d+)F', area)  # floors in walking order: 1F, 2F ... 11F, then B1F, B2F ...
+    if m: return (1, (100 if m.group(1) else 0) + int(m.group(2)), area)
+    return (2, 0, area)
+
+per_loc = collections.defaultdict(list)
+for (mapname, key), b in found_battles.items():
+    sec = maps[mapname]['region_map_section']
+    lid = loc_id(sec); area = area_name(mapname, sec)
+    first = next(iter(b['consts'].values()))
+    rec = trainer_record(first)
+    if b['rival']:
+        rec.pop('party'); rec['name'] = 'Rival'; rec['class'] = 'Rival' if 'CHAMPION' not in key else 'Champion'
+        rec['byStarter'] = {mine: trainer_party(b['consts'][theirs]) for mine, theirs in STARTER_COUNTER.items()}
+        rec['prize'] = {mine: 4 * p[-1]['level'] * money_table[re.search(r'\.trainerClass = (TRAINER_CLASS_\w+)', tdefs[b['consts'][STARTER_COUNTER[mine]]]).group(1)]
+                        for mine, p in rec['byStarter'].items()}
+        if len(set(rec['prize'].values())) == 1: rec['prize'] = next(iter(rec['prize'].values()))
+    rewards = list(dict.fromkeys(r for l in b['labels'] for r in label_rewards(l)))
+    if rewards: rec['rewards'] = rewards
+    rec['id'] = re.sub(r'[^a-z0-9]+', '-', key.replace('TRAINER_', '').lower()).strip('-')
+    rec['area'] = area
+    st = STAGE.get(mapname) or next((v for k, v in STAGE.items() if k in key), None)
+    if st: rec['stage'] = st
+    leader_last = rec['class'] in ('Leader', 'Elite Four', 'Champion')  # gym trainers first, then the leader
+    per_loc[lid].append((area_sort(lid, area), leader_last, sort_key(mapname, position(mapname, b['labels'])), rec))
+for lid, lst in per_loc.items():
+    lst.sort(key=lambda t: t[:3])
+    locs[lid]['trainers'] = [t[3] for t in lst]
+for loc in locs.values():
+    loc.setdefault('trainers', [])
+    if {t['area'] for t in loc['trainers']} <= {'Outside'} and len({e.get('area') for e in loc['encounters'] if e.get('area')}) <= 1:
+        for t in loc['trainers']: t.pop('area', None)
+
+# ---------- key battles for the Battle plan tab (same records as the route pages) ----------
+def find_trainer(lid, tid):
+    return next(t for t in locs[lid]['trainers'] if t['id'] == tid)
+KEY_BATTLES = [
+    ('pallet-town', 'rival-oaks-lab', 'Rival (Oak\'s Lab)', None, 'Mixed'),
+    ('route-22', 'rival-route22-early', 'Rival (Route 22)', None, 'Mixed'),
+    ('pewter-city', 'leader-brock', 'Brock', 'Boulder Badge', 'Rock'),
+    ('cerulean-city', 'rival-cerulean', 'Rival (Cerulean City)', None, 'Mixed'),
+    ('cerulean-city', 'leader-misty', 'Misty', 'Cascade Badge', 'Water'),
+    ('ss-anne', 'rival-ss-anne', 'Rival (S.S. Anne)', None, 'Mixed'),
+    ('vermilion-city', 'leader-lt-surge', 'Lt. Surge', 'Thunder Badge', 'Electric'),
+    ('celadon-city', 'leader-erika', 'Erika', 'Rainbow Badge', 'Grass'),
+    ('rocket-hideout', 'boss-giovanni', 'Giovanni (Rocket Hideout)', None, 'Ground'),
+    ('pokemon-tower', 'rival-pokemon-tower', 'Rival (Pokémon Tower)', None, 'Mixed'),
+    ('fuchsia-city', 'leader-koga', 'Koga', 'Soul Badge', 'Poison'),
+    ('silph-co', 'rival-silph', 'Rival (Silph Co.)', None, 'Mixed'),
+    ('silph-co', 'boss-giovanni-2', 'Giovanni (Silph Co.)', None, 'Ground'),
+    ('saffron-city', 'leader-sabrina', 'Sabrina', 'Marsh Badge', 'Psychic'),
+    ('cinnabar-island', 'leader-blaine', 'Blaine', 'Volcano Badge', 'Fire'),
+    ('viridian-city', 'leader-giovanni', 'Giovanni', 'Earth Badge', 'Ground'),
+    ('route-22', 'rival-route22-late', 'Rival (Route 22, before Victory Road)', None, 'Mixed'),
+    ('pokemon-league', 'elite-four-lorelei', 'Lorelei', None, 'Ice'),
+    ('pokemon-league', 'elite-four-bruno', 'Bruno', None, 'Fighting'),
+    ('pokemon-league', 'elite-four-agatha', 'Agatha', None, 'Ghost'),
+    ('pokemon-league', 'elite-four-lance', 'Lance', None, 'Dragon'),
+    ('pokemon-league', 'champion-first', 'Champion (your rival)', None, 'Mixed'),
 ]
-trainers = [{'id': i, 'name': n, 'where': w, 'badge': b, 'specialty': t, 'location': l, 'party': party(c)} for i, n, w, b, t, c, l in BOSSES]
-champ = {'id': 'champion', 'name': 'Champion (your rival)', 'where': 'Pokémon League', 'badge': None, 'specialty': 'Mixed', 'location': 'pokemon-league',
-         'byStarter': {s: party(f'TRAINER_CHAMPION_FIRST_{s.upper()}') for s in ('Bulbasaur', 'Charmander', 'Squirtle')},
-         'note': 'Your rival picks the starter that beats yours; choose the party for the starter YOU picked.'}
-champ['byStarter'] = {'Bulbasaur': champ['byStarter']['Charmander'], 'Charmander': champ['byStarter']['Squirtle'], 'Squirtle': champ['byStarter']['Bulbasaur']}
-trainers.append(champ)
+trainers = []
+for lid, tid, nm, badge, spec in KEY_BATTLES:
+    t = find_trainer(lid, tid)
+    trainers.append({**t, 'id': tid, 'name': nm, 'trainerName': t['name'], 'where': (locs[lid]['name'] + (f" {t['area']}" if t.get('area') and t['area'] != 'Outside' else '')),
+                     'badge': badge, 'specialty': spec, 'location': lid,
+                     **({'note': 'Your rival picks the starter that beats yours. Set the starter you picked above.'} if 'byStarter' in t else {})})
 
 # ---------- write ----------
 os.makedirs(os.path.join(OUT, 'locations'), exist_ok=True)
@@ -416,7 +587,7 @@ locs['roaming'] = {'id': 'roaming', 'name': 'Roaming Legendary', 'verified': Tru
     'encounters': [{**mon('SPECIES_ENTEI'), 'method': 'roaming', 'versions': list(VERSIONS), 'levels': '50', 'notes': 'If you chose Bulbasaur'},
                    {**mon('SPECIES_SUICUNE'), 'method': 'roaming', 'versions': list(VERSIONS), 'levels': '50', 'notes': 'If you chose Charmander'},
                    {**mon('SPECIES_RAIKOU'), 'method': 'roaming', 'versions': list(VERSIONS), 'levels': '50', 'notes': 'If you chose Squirtle'}],
-    'items': [], 'gifts': []}
+    'items': [], 'gifts': [], 'trainers': []}
 json.dump(locs['roaming'], open(os.path.join(OUT, 'locations', 'roaming.json'), 'w'), ensure_ascii=False, indent=1)
 
 ORDER = [('Kanto: Badges 1–2', 'pallet-town route-1 viridian-city route-22 route-2 viridian-forest pewter-city route-3 mt-moon route-4 cerulean-city route-24 route-25'),

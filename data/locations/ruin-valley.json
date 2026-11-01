@@ -258,6 +258,292 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Poké Maniac",
+   "name": "Hector",
+   "prize": 2352,
+   "party": [
+    {
+     "dex": 111,
+     "name": "Rhyhorn",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Horn Drill",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 115,
+     "name": "Kangaskhan",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Endure",
+       "type": "Normal"
+      },
+      {
+       "name": "Dizzy Punch",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Reversal",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "pokemaniac-hector",
+   "area": "Ruin Valley"
+  },
+  {
+   "class": "Ruin Maniac",
+   "name": "Larry",
+   "prize": 2352,
+   "party": [
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      }
+     ]
+    }
+   ],
+   "id": "ruin-maniac-larry",
+   "area": "Ruin Valley"
+  },
+  {
+   "class": "Ruin Maniac",
+   "name": "Foster",
+   "prize": 2400,
+   "party": [
+    {
+     "dex": 76,
+     "name": "Golem",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Earthquake",
+       "type": "Ground",
+       "power": 100
+      }
+     ]
+    }
+   ],
+   "id": "ruin-maniac-foster",
+   "area": "Ruin Valley"
+  },
+  {
+   "class": "Ruin Maniac",
+   "name": "Stanly",
+   "prize": 2304,
+   "party": [
+    {
+     "dex": 75,
+     "name": "Graveler",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Earthquake",
+       "type": "Ground",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Dragonbreath",
+       "type": "Dragon",
+       "power": 60
+      },
+      {
+       "name": "Sandstorm",
+       "type": "Rock"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Iron Tail",
+       "type": "Steel",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 75,
+     "name": "Graveler",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Earthquake",
+       "type": "Ground",
+       "power": 100
+      }
+     ]
+    }
+   ],
+   "id": "ruin-maniac-stanly",
+   "area": "Ruin Valley"
+  },
+  {
+   "class": "Hiker",
+   "name": "Daryl",
+   "prize": 1800,
+   "party": [
+    {
+     "dex": 185,
+     "name": "Sudowoodo",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Rock Slide",
+       "type": "Rock",
+       "power": 75
+      },
+      {
+       "name": "Block",
+       "type": "Normal"
+      },
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    }
+   ],
+   "id": "hiker-daryl",
+   "area": "Ruin Valley"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

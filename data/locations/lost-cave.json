@@ -1016,6 +1016,245 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Ruin Maniac",
+   "name": "Lawson",
+   "prize": 2352,
+   "party": [
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Dragonbreath",
+       "type": "Dragon",
+       "power": 60
+      },
+      {
+       "name": "Sandstorm",
+       "type": "Rock"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Iron Tail",
+       "type": "Steel",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 75,
+     "name": "Graveler",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Earthquake",
+       "type": "Ground",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 105,
+     "name": "Marowak",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Bonemerang",
+       "type": "Ground",
+       "power": 50
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "False Swipe",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Thrash",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "id": "ruin-maniac-lawson",
+   "area": "Lost Cave Room 1"
+  },
+  {
+   "class": "Lady",
+   "name": "Selphy",
+   "prize": 9800,
+   "party": [
+    {
+     "dex": 53,
+     "name": "Persian",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      }
+     ],
+     "item": "Nugget"
+    },
+    {
+     "dex": 53,
+     "name": "Persian",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      }
+     ],
+     "item": "Nugget"
+    }
+   ],
+   "uses": [
+    "Full Restore"
+   ],
+   "id": "lady-selphy",
+   "area": "Lost Cave Room 10"
+  },
+  {
+   "class": "Psychic",
+   "name": "Laura",
+   "prize": 980,
+   "party": [
+    {
+     "dex": 177,
+     "name": "Natu",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      },
+      {
+       "name": "Wish",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 177,
+     "name": "Natu",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      },
+      {
+       "name": "Wish",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 178,
+     "name": "Xatu",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Night Shade",
+       "type": "Ghost",
+       "power": 1
+      },
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      },
+      {
+       "name": "Wish",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      }
+     ]
+    }
+   ],
+   "id": "psychic-laura",
+   "area": "Lost Cave Room 4"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

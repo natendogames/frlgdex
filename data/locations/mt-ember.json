@@ -568,6 +568,394 @@
    "where": "Ruby Path B3F"
   }
  ],
+ "trainers": [
+  {
+   "class": "Pokémon Ranger",
+   "name": "Beth",
+   "prize": 1368,
+   "party": [
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    },
+    {
+     "dex": 44,
+     "name": "Gloom",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 44,
+     "name": "Gloom",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Full Restore"
+   ],
+   "id": "pkmn-ranger-beth",
+   "area": "Exterior"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 1184,
+   "party": [
+    {
+     "dex": 104,
+     "name": "Cubone",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Bonemerang",
+       "type": "Ground",
+       "power": 50
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "False Swipe",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Thrash",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 105,
+     "name": "Marowak",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Bonemerang",
+       "type": "Ground",
+       "power": 50
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-43",
+   "area": "Exterior"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 1120,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Super Fang",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 27,
+     "name": "Sandshrew",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 28,
+     "name": "Sandslash",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-44",
+   "area": "Exterior"
+  },
+  {
+   "class": "Crush Girl",
+   "name": "Jocelyn",
+   "prize": 912,
+   "party": [
+    {
+     "dex": 107,
+     "name": "Hitmonchan",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Ice Punch",
+       "type": "Ice",
+       "power": 75
+      },
+      {
+       "name": "Fire Punch",
+       "type": "Fire",
+       "power": 75
+      },
+      {
+       "name": "Sky Uppercut",
+       "type": "Fighting",
+       "power": 85
+      },
+      {
+       "name": "Mega Punch",
+       "type": "Normal",
+       "power": 80
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 107,
+     "name": "Hitmonchan",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Ice Punch",
+       "type": "Ice",
+       "power": 75
+      },
+      {
+       "name": "Fire Punch",
+       "type": "Fire",
+       "power": 75
+      },
+      {
+       "name": "Sky Uppercut",
+       "type": "Fighting",
+       "power": 85
+      },
+      {
+       "name": "Mega Punch",
+       "type": "Normal",
+       "power": 80
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "crush-girl-jocelyn",
+   "area": "Exterior"
+  },
+  {
+   "class": "Pokémon Ranger",
+   "name": "Logan",
+   "prize": 1440,
+   "party": [
+    {
+     "dex": 102,
+     "name": "Exeggcute",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 103,
+     "name": "Exeggutor",
+     "level": 40,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Egg Bomb",
+       "type": "Normal",
+       "power": 100
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Full Restore"
+   ],
+   "id": "pkmn-ranger-logan",
+   "area": "Exterior"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

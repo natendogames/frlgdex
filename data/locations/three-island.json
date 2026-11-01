@@ -24,6 +24,187 @@
    "where": "Outside"
   }
  ],
+ "trainers": [
+  {
+   "class": "Biker",
+   "name": "Goon",
+   "prize": 740,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Haze",
+       "type": "Ice"
+      }
+     ]
+    },
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Acid Armor",
+       "type": "Poison"
+      }
+     ]
+    }
+   ],
+   "id": "biker-goon"
+  },
+  {
+   "class": "Biker",
+   "name": "Goon",
+   "prize": 760,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Haze",
+       "type": "Ice"
+      }
+     ]
+    }
+   ],
+   "id": "biker-goon-2"
+  },
+  {
+   "class": "Biker",
+   "name": "Goon",
+   "prize": 760,
+   "party": [
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Acid Armor",
+       "type": "Poison"
+      }
+     ]
+    }
+   ],
+   "id": "biker-goon-3"
+  },
+  {
+   "class": "Cue Ball",
+   "name": "Paxton",
+   "prize": 936,
+   "party": [
+    {
+     "dex": 110,
+     "name": "Weezing",
+     "level": 39,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Haze",
+       "type": "Ice"
+      }
+     ]
+    },
+    {
+     "dex": 89,
+     "name": "Muk",
+     "level": 39,
+     "moves": [
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Acid Armor",
+       "type": "Poison"
+      }
+     ]
+    }
+   ],
+   "id": "cue-ball-paxton"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

@@ -167,6 +167,91 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Psychic",
+   "name": "Jaclyn",
+   "prize": 980,
+   "party": [
+    {
+     "dex": 177,
+     "name": "Natu",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      },
+      {
+       "name": "Wish",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 80,
+     "name": "Slowbro",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Amnesia",
+       "type": "Psychic"
+      },
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Role Play",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Trick",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "psychic-jaclyn",
+   "area": "Green Path"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

@@ -98,6 +98,364 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Young Couple",
+   "name": "Eve & Jon",
+   "prize": 2800,
+   "party": [
+    {
+     "dex": 55,
+     "name": "Golduck",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Psych Up",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    },
+    {
+     "dex": 54,
+     "name": "Psyduck",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Psych Up",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      },
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      }
+     ]
+    }
+   ],
+   "double": true,
+   "id": "young-couple-eve-jon",
+   "area": "Sevault Canyon Entrance"
+  },
+  {
+   "class": "Pokémon Ranger",
+   "name": "Madeline",
+   "prize": 1836,
+   "party": [
+    {
+     "dex": 44,
+     "name": "Gloom",
+     "level": 51,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      },
+      {
+       "name": "Petal Dance",
+       "type": "Grass",
+       "power": 70
+      }
+     ]
+    },
+    {
+     "dex": 45,
+     "name": "Vileplume",
+     "level": 51,
+     "moves": [
+      {
+       "name": "Aromatherapy",
+       "type": "Grass"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Mega Drain",
+       "type": "Grass",
+       "power": 40
+      },
+      {
+       "name": "Petal Dance",
+       "type": "Grass",
+       "power": 70
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Full Restore"
+   ],
+   "id": "pkmn-ranger-madeline",
+   "area": "Sevault Canyon Entrance"
+  },
+  {
+   "class": "Pokémon Ranger",
+   "name": "Nicolas",
+   "prize": 1836,
+   "party": [
+    {
+     "dex": 70,
+     "name": "Weepinbell",
+     "level": 51,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    },
+    {
+     "dex": 71,
+     "name": "Victreebel",
+     "level": 51,
+     "moves": [
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Full Restore"
+   ],
+   "id": "pkmn-ranger-nicolas",
+   "area": "Sevault Canyon Entrance"
+  },
+  {
+   "class": "Juggler",
+   "name": "Mason",
+   "prize": 1880,
+   "party": [
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Explosion",
+       "type": "Normal",
+       "power": 250
+      }
+     ]
+    },
+    {
+     "dex": 204,
+     "name": "Pineco",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Bide",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Explosion",
+       "type": "Normal",
+       "power": 250
+      },
+      {
+       "name": "Spikes",
+       "type": "Ground"
+      }
+     ]
+    },
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Explosion",
+       "type": "Normal",
+       "power": 250
+      }
+     ]
+    },
+    {
+     "dex": 204,
+     "name": "Pineco",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Bide",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Explosion",
+       "type": "Normal",
+       "power": 250
+      },
+      {
+       "name": "Spikes",
+       "type": "Ground"
+      }
+     ]
+    }
+   ],
+   "id": "juggler-mason",
+   "area": "Sevault Canyon Entrance"
+  },
+  {
+   "class": "Aroma Lady",
+   "name": "Miah",
+   "prize": 1400,
+   "party": [
+    {
+     "dex": 182,
+     "name": "Bellossom",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Magical Leaf",
+       "type": "Grass",
+       "power": 60
+      },
+      {
+       "name": "Petal Dance",
+       "type": "Grass",
+       "power": 70
+      }
+     ]
+    },
+    {
+     "dex": 182,
+     "name": "Bellossom",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Magical Leaf",
+       "type": "Grass",
+       "power": 60
+      },
+      {
+       "name": "Petal Dance",
+       "type": "Grass",
+       "power": 70
+      }
+     ]
+    }
+   ],
+   "id": "aroma-lady-miah",
+   "area": "Sevault Canyon Entrance"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

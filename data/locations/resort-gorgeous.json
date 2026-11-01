@@ -196,6 +196,360 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Painter",
+   "name": "Celina",
+   "prize": 800,
+   "party": [
+    {
+     "dex": 235,
+     "name": "Smeargle",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Sketch",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "painter-celina",
+   "area": "Resort Gorgeous"
+  },
+  {
+   "class": "Painter",
+   "name": "Rayna",
+   "prize": 800,
+   "party": [
+    {
+     "dex": 235,
+     "name": "Smeargle",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Sketch",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "painter-rayna",
+   "area": "Resort Gorgeous"
+  },
+  {
+   "class": "Painter",
+   "name": "Daisy",
+   "prize": 800,
+   "party": [
+    {
+     "dex": 235,
+     "name": "Smeargle",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Sketch",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "painter-daisy",
+   "area": "Resort Gorgeous"
+  },
+  {
+   "class": "Lady",
+   "name": "Jacki",
+   "prize": 10000,
+   "party": [
+    {
+     "dex": 187,
+     "name": "Hoppip",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Leech Seed",
+       "type": "Grass"
+      },
+      {
+       "name": "Cotton Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Mega Drain",
+       "type": "Grass",
+       "power": 40
+      }
+     ],
+     "item": "Stardust"
+    },
+    {
+     "dex": 188,
+     "name": "Skiploom",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Leech Seed",
+       "type": "Grass"
+      },
+      {
+       "name": "Cotton Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Mega Drain",
+       "type": "Grass",
+       "power": 40
+      }
+     ],
+     "item": "Stardust"
+    }
+   ],
+   "uses": [
+    "Full Restore"
+   ],
+   "id": "lady-jacki",
+   "area": "Resort Gorgeous"
+  },
+  {
+   "class": "Lady",
+   "name": "Gillian",
+   "prize": 9800,
+   "party": [
+    {
+     "dex": 179,
+     "name": "Mareep",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Cotton Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      },
+      {
+       "name": "Thunder",
+       "type": "Electric",
+       "power": 120
+      }
+     ],
+     "item": "Stardust"
+    },
+    {
+     "dex": 179,
+     "name": "Mareep",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Cotton Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      },
+      {
+       "name": "Thunder",
+       "type": "Electric",
+       "power": 120
+      }
+     ],
+     "item": "Stardust"
+    },
+    {
+     "dex": 180,
+     "name": "Flaaffy",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Cotton Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      },
+      {
+       "name": "Thunder",
+       "type": "Electric",
+       "power": 120
+      }
+     ],
+     "item": "Nugget"
+    }
+   ],
+   "uses": [
+    "Full Restore"
+   ],
+   "id": "lady-gillian",
+   "area": "Resort Gorgeous"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Toby",
+   "prize": 192,
+   "party": [
+    {
+     "dex": 61,
+     "name": "Poliwhirl",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      },
+      {
+       "name": "Belly Drum",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 72,
+     "name": "Tentacool",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Barrier",
+       "type": "Psychic"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 73,
+     "name": "Tentacruel",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Barrier",
+       "type": "Psychic"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-toby",
+   "area": "Resort Gorgeous"
+  },
+  {
+   "class": "Youngster",
+   "name": "Destin",
+   "prize": 768,
+   "party": [
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Super Fang",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Featherdance",
+       "type": "Flying"
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "youngster-destin",
+   "area": "Resort Gorgeous"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

@@ -217,6 +217,254 @@
    "where": "Pokémon Fan Club"
   }
  ],
+ "trainers": [
+  {
+   "class": "Sailor",
+   "name": "Dwayne",
+   "prize": 672,
+   "party": [
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 21,
+     "moves": [
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 21,
+     "moves": [
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    }
+   ],
+   "id": "sailor-dwayne",
+   "area": "Gym"
+  },
+  {
+   "class": "Engineer",
+   "name": "Baily",
+   "prize": 1008,
+   "party": [
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 21,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      }
+     ]
+    },
+    {
+     "dex": 81,
+     "name": "Magnemite",
+     "level": 21,
+     "moves": [
+      {
+       "name": "Thundershock",
+       "type": "Electric",
+       "power": 40
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      }
+     ]
+    }
+   ],
+   "id": "engineer-baily",
+   "area": "Gym"
+  },
+  {
+   "class": "Gentleman",
+   "name": "Tucker",
+   "prize": 1656,
+   "party": [
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 23,
+     "moves": [
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    }
+   ],
+   "id": "gentleman-tucker",
+   "area": "Gym"
+  },
+  {
+   "class": "Leader",
+   "name": "Lt. Surge",
+   "prize": 2400,
+   "party": [
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 21,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      }
+     ]
+    },
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 18,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 26,
+     "name": "Raichu",
+     "level": 24,
+     "moves": [
+      {
+       "name": "Thundershock",
+       "type": "Electric",
+       "power": 40
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Thunderbolt",
+       "type": "Electric",
+       "power": 95
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Super Potion",
+    "Full Heal"
+   ],
+   "rewards": [
+    "Thunder Badge",
+    "TM34"
+   ],
+   "id": "leader-lt-surge",
+   "area": "Gym"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

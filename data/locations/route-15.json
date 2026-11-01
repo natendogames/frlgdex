@@ -103,6 +103,859 @@
    "where": "West Entrance 2F"
   }
  ],
+ "trainers": [
+  {
+   "class": "Biker",
+   "name": "Ernest",
+   "prize": 500,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 25,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 25,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 110,
+     "name": "Weezing",
+     "level": 25,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 25,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 25,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "biker-ernest"
+  },
+  {
+   "class": "Biker",
+   "name": "Alex",
+   "prize": 560,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 110,
+     "name": "Weezing",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "biker-alex"
+  },
+  {
+   "class": "Beauty",
+   "name": "Grace",
+   "prize": 2088,
+   "party": [
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 40,
+     "name": "Wigglytuff",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Sing",
+       "type": "Normal"
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "beauty-grace"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Becky",
+   "prize": 580,
+   "party": [
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Thunderbolt",
+       "type": "Electric",
+       "power": 95
+      }
+     ]
+    },
+    {
+     "dex": 26,
+     "name": "Raichu",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Thundershock",
+       "type": "Electric",
+       "power": 40
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Thunderbolt",
+       "type": "Electric",
+       "power": 95
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-becky"
+  },
+  {
+   "class": "Beauty",
+   "name": "Olivia",
+   "prize": 2088,
+   "party": [
+    {
+     "dex": 1,
+     "name": "Bulbasaur",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 2,
+     "name": "Ivysaur",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "beauty-olivia"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Kindra",
+   "prize": 560,
+   "party": [
+    {
+     "dex": 44,
+     "name": "Gloom",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-kindra"
+  },
+  {
+   "class": "Crush Kin",
+   "name": "Ron & Mya",
+   "prize": 1392,
+   "party": [
+    {
+     "dex": 107,
+     "name": "Hitmonchan",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Mach Punch",
+       "type": "Fighting",
+       "power": 40
+      },
+      {
+       "name": "Thunderpunch",
+       "type": "Electric",
+       "power": 75
+      },
+      {
+       "name": "Ice Punch",
+       "type": "Ice",
+       "power": 75
+      },
+      {
+       "name": "Fire Punch",
+       "type": "Fire",
+       "power": 75
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 106,
+     "name": "Hitmonlee",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Jump Kick",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Brick Break",
+       "type": "Fighting",
+       "power": 75
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Hi Jump Kick",
+       "type": "Fighting",
+       "power": 85
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "double": true,
+   "id": "crush-kin-ron-mya"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Chester",
+   "prize": 672,
+   "party": [
+    {
+     "dex": 85,
+     "name": "Dodrio",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Tri Attack",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    },
+    {
+     "dex": 84,
+     "name": "Doduo",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Tri Attack",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    },
+    {
+     "dex": 84,
+     "name": "Doduo",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Tri Attack",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-chester"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Edwin",
+   "prize": 624,
+   "party": [
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 26,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 83,
+     "name": "Farfetch'd",
+     "level": 26,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Knock Off",
+       "type": "Dark",
+       "power": 20
+      },
+      {
+       "name": "Fury Cutter",
+       "type": "Bug",
+       "power": 10
+      }
+     ]
+    },
+    {
+     "dex": 84,
+     "name": "Doduo",
+     "level": 26,
+     "moves": [
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Tri Attack",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    },
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 26,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-edwin"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Celia",
+   "prize": 660,
+   "party": [
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Metronome",
+       "type": "Normal"
+      },
+      {
+       "name": "Cosmic Power",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-celia"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Yazmin",
+   "prize": 580,
+   "party": [
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 114,
+     "name": "Tangela",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Growth",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Bind",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-yazmin"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

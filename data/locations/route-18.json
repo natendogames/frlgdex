@@ -104,6 +104,216 @@
    ]
   }
  ],
+ "trainers": [
+  {
+   "class": "Bird Keeper",
+   "name": "Wilton",
+   "prize": 696,
+   "party": [
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Aerial Ace",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 22,
+     "name": "Fearow",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-wilton",
+   "area": "Outside"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Ramiro",
+   "prize": 816,
+   "party": [
+    {
+     "dex": 85,
+     "name": "Dodrio",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Tri Attack",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-ramiro",
+   "area": "Outside"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Jacob",
+   "prize": 624,
+   "party": [
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 26,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Aerial Ace",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 26,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Aerial Ace",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 22,
+     "name": "Fearow",
+     "level": 26,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 26,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Aerial Ace",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-jacob",
+   "area": "Outside"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

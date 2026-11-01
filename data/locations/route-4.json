@@ -242,6 +242,91 @@
    "where": "Pokémon Center 1F"
   }
  ],
+ "trainers": [
+  {
+   "class": "Lass",
+   "name": "Crissy",
+   "prize": 496,
+   "party": [
+    {
+     "dex": 46,
+     "name": "Paras",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      }
+     ]
+    },
+    {
+     "dex": 46,
+     "name": "Paras",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      }
+     ]
+    },
+    {
+     "dex": 47,
+     "name": "Parasect",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Spore",
+       "type": "Grass"
+      }
+     ]
+    }
+   ],
+   "id": "lass-crissy",
+   "area": "Outside"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

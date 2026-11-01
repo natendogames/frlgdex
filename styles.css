@@ -74,3 +74,11 @@ details summary { cursor: pointer; font-weight: 600; }
 .grid-chart td, .grid-chart th { width: 26px; height: 24px; text-align: center; border: 1px solid var(--line); }
 .x2 { background: #2e8b5755; } .x05 { background: #c5303033; } .x0 { background: #1b1b1f; color: #fff; }
 main a { color: var(--accent); }
+.trainer summary { line-height: 1.5; }
+.foe { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.foe:last-child { border-bottom: 0; }
+.moves { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0; }
+.mv { font-size: 12px; border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; display: inline-flex; align-items: center; gap: 4px; }
+.mv i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.pick { margin-top: 4px; }
+.catch { margin-top: 2px; }

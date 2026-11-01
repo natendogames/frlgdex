@@ -235,6 +235,674 @@
    "where": "B2F"
   }
  ],
+ "trainers": [
+  {
+   "class": "Super Nerd",
+   "name": "Jovan",
+   "prize": 264,
+   "party": [
+    {
+     "dex": 81,
+     "name": "Magnemite",
+     "level": 11,
+     "moves": [
+      {
+       "name": "Metal Sound",
+       "type": "Steel"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Thundershock",
+       "type": "Electric",
+       "power": 40
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 11,
+     "moves": [
+      {
+       "name": "Charge",
+       "type": "Electric"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "super-nerd-jovan",
+   "area": "1F"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Robby",
+   "prize": 120,
+   "party": [
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 10,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 11,
+     "name": "Metapod",
+     "level": 10,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 10,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-robby",
+   "area": "1F"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Kent",
+   "prize": 132,
+   "party": [
+    {
+     "dex": 13,
+     "name": "Weedle",
+     "level": 11,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 14,
+     "name": "Kakuna",
+     "level": 11,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-kent",
+   "area": "1F"
+  },
+  {
+   "class": "Lass",
+   "name": "Iris",
+   "prize": 224,
+   "party": [
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 14,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Encore",
+       "type": "Normal"
+      },
+      {
+       "name": "Sing",
+       "type": "Normal"
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "lass-iris",
+   "area": "1F"
+  },
+  {
+   "class": "Youngster",
+   "name": "Josh",
+   "prize": 160,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 10,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 10,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 41,
+     "name": "Zubat",
+     "level": 10,
+     "moves": [
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Astonish",
+       "type": "Ghost",
+       "power": 30
+      }
+     ]
+    }
+   ],
+   "id": "youngster-josh",
+   "area": "1F"
+  },
+  {
+   "class": "Hiker",
+   "name": "Marcos",
+   "prize": 360,
+   "party": [
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 10,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      }
+     ]
+    },
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 10,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      }
+     ]
+    },
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 10,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Bind",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "hiker-marcos",
+   "area": "1F"
+  },
+  {
+   "class": "Lass",
+   "name": "Miriam",
+   "prize": 176,
+   "party": [
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 11,
+     "moves": [
+      {
+       "name": "Absorb",
+       "type": "Grass",
+       "power": 20
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 11,
+     "moves": [
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Growth",
+       "type": "Normal"
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "lass-miriam",
+   "area": "1F"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 352,
+   "party": [
+    {
+     "dex": 27,
+     "name": "Sandshrew",
+     "level": 11,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 11,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 41,
+     "name": "Zubat",
+     "level": 11,
+     "moves": [
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Astonish",
+       "type": "Ghost",
+       "power": 30
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-2",
+   "area": "B2F"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 416,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 13,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 27,
+     "name": "Sandshrew",
+     "level": 13,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-4",
+   "area": "B2F"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 416,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 13,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 41,
+     "name": "Zubat",
+     "level": 13,
+     "moves": [
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Astonish",
+       "type": "Ghost",
+       "power": 30
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt",
+   "area": "B2F"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 352,
+   "party": [
+    {
+     "dex": 41,
+     "name": "Zubat",
+     "level": 11,
+     "moves": [
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Astonish",
+       "type": "Ghost",
+       "power": 30
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 11,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-3",
+   "area": "B2F"
+  },
+  {
+   "class": "Super Nerd",
+   "name": "Miguel",
+   "prize": 288,
+   "party": [
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 12,
+     "moves": [
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Pound",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 12,
+     "moves": [
+      {
+       "name": "Charge",
+       "type": "Electric"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 12,
+     "moves": [
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      }
+     ]
+    }
+   ],
+   "id": "super-nerd-miguel",
+   "area": "B2F"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

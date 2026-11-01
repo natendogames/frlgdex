@@ -100,6 +100,846 @@
  ],
  "items": [],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Picnicker",
+   "name": "Marcy",
+   "prize": 980,
+   "party": [
+    {
+     "dex": 46,
+     "name": "Paras",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Growth",
+       "type": "Normal"
+      },
+      {
+       "name": "Giga Drain",
+       "type": "Grass",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 46,
+     "name": "Paras",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Growth",
+       "type": "Normal"
+      },
+      {
+       "name": "Giga Drain",
+       "type": "Grass",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 47,
+     "name": "Parasect",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Growth",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-marcy",
+   "area": "Pattern Bush"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Vance",
+   "prize": 576,
+   "party": [
+    {
+     "dex": 48,
+     "name": "Venonat",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Psybeam",
+       "type": "Psychic",
+       "power": 65
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 49,
+     "name": "Venomoth",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Psybeam",
+       "type": "Psychic",
+       "power": 65
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-vance",
+   "area": "Pattern Bush"
+  },
+  {
+   "class": "Lass",
+   "name": "Dalia",
+   "prize": 768,
+   "party": [
+    {
+     "dex": 187,
+     "name": "Hoppip",
+     "level": 46,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Leech Seed",
+       "type": "Grass"
+      },
+      {
+       "name": "Cotton Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Mega Drain",
+       "type": "Grass",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 187,
+     "name": "Hoppip",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Leech Seed",
+       "type": "Grass"
+      },
+      {
+       "name": "Cotton Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Mega Drain",
+       "type": "Grass",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 188,
+     "name": "Skiploom",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Leech Seed",
+       "type": "Grass"
+      },
+      {
+       "name": "Cotton Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Mega Drain",
+       "type": "Grass",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 188,
+     "name": "Skiploom",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Leech Seed",
+       "type": "Grass"
+      },
+      {
+       "name": "Cotton Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Mega Drain",
+       "type": "Grass",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "lass-dalia",
+   "area": "Pattern Bush"
+  },
+  {
+   "class": "Youngster",
+   "name": "Cordell",
+   "prize": 768,
+   "party": [
+    {
+     "dex": 83,
+     "name": "Farfetch'd",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Swords Dance",
+       "type": "Normal"
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "False Swipe",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 83,
+     "name": "Farfetch'd",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Swords Dance",
+       "type": "Normal"
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "False Swipe",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "youngster-cordell",
+   "area": "Pattern Bush"
+  },
+  {
+   "class": "Ruin Maniac",
+   "name": "Layton",
+   "prize": 2304,
+   "party": [
+    {
+     "dex": 28,
+     "name": "Sandslash",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    },
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Dragonbreath",
+       "type": "Dragon",
+       "power": 60
+      },
+      {
+       "name": "Sandstorm",
+       "type": "Rock"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Iron Tail",
+       "type": "Steel",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 28,
+     "name": "Sandslash",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    }
+   ],
+   "id": "ruin-maniac-layton",
+   "area": "Pattern Bush"
+  },
+  {
+   "class": "Pokémon Breeder",
+   "name": "Bethany",
+   "prize": 1400,
+   "party": [
+    {
+     "dex": 113,
+     "name": "Chansey",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Sing",
+       "type": "Normal"
+      },
+      {
+       "name": "Egg Bomb",
+       "type": "Normal",
+       "power": 100
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "pkmn-breeder-bethany",
+   "area": "Pattern Bush"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Jonah",
+   "prize": 564,
+   "party": [
+    {
+     "dex": 193,
+     "name": "Yanma",
+     "level": 45,
+     "moves": [
+      {
+       "name": "Detect",
+       "type": "Fighting"
+      },
+      {
+       "name": "Uproar",
+       "type": "Normal",
+       "power": 50
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 15,
+     "name": "Beedrill",
+     "level": 45,
+     "moves": [
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Pin Missile",
+       "type": "Bug",
+       "power": 14
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Endeavor",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 193,
+     "name": "Yanma",
+     "level": 46,
+     "moves": [
+      {
+       "name": "Detect",
+       "type": "Fighting"
+      },
+      {
+       "name": "Uproar",
+       "type": "Normal",
+       "power": 50
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 15,
+     "name": "Beedrill",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Pin Missile",
+       "type": "Bug",
+       "power": 14
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Endeavor",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-jonah",
+   "area": "Pattern Bush"
+  },
+  {
+   "class": "Camper",
+   "name": "Riley",
+   "prize": 1000,
+   "party": [
+    {
+     "dex": 127,
+     "name": "Pinsir",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Brick Break",
+       "type": "Fighting",
+       "power": 75
+      },
+      {
+       "name": "Guillotine",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      },
+      {
+       "name": "Swords Dance",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 214,
+     "name": "Heracross",
+     "level": 50,
+     "moves": [
+      {
+       "name": "Brick Break",
+       "type": "Fighting",
+       "power": 75
+      },
+      {
+       "name": "Counter",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Reversal",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "camper-riley",
+   "area": "Pattern Bush"
+  },
+  {
+   "class": "Lass",
+   "name": "Joana",
+   "prize": 784,
+   "party": [
+    {
+     "dex": 209,
+     "name": "Snubbull",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Lick",
+       "type": "Ghost",
+       "power": 20
+      },
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "id": "lass-joana",
+   "area": "Pattern Bush"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Garret",
+   "prize": 588,
+   "party": [
+    {
+     "dex": 214,
+     "name": "Heracross",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Brick Break",
+       "type": "Fighting",
+       "power": 75
+      },
+      {
+       "name": "Counter",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Reversal",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-garret",
+   "area": "Pattern Bush"
+  },
+  {
+   "class": "Pokémon Breeder",
+   "name": "Allison",
+   "prize": 1344,
+   "party": [
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Cosmic Power",
+       "type": "Psychic"
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      },
+      {
+       "name": "Meteor Mash",
+       "type": "Steel",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Cosmic Power",
+       "type": "Psychic"
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      },
+      {
+       "name": "Meteor Mash",
+       "type": "Steel",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 36,
+     "name": "Clefable",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Sing",
+       "type": "Normal"
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Metronome",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "pkmn-breeder-allison",
+   "area": "Pattern Bush"
+  },
+  {
+   "class": "Youngster",
+   "name": "Nash",
+   "prize": 784,
+   "party": [
+    {
+     "dex": 70,
+     "name": "Weepinbell",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    },
+    {
+     "dex": 70,
+     "name": "Weepinbell",
+     "level": 47,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    },
+    {
+     "dex": 71,
+     "name": "Victreebel",
+     "level": 49,
+     "moves": [
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    }
+   ],
+   "id": "youngster-nash",
+   "area": "Pattern Bush"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

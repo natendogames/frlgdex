@@ -188,6 +188,93 @@
    "where": "Water Labyrinth"
   }
  ],
+ "trainers": [
+  {
+   "class": "Pokémon Breeder",
+   "name": "Alize",
+   "prize": 1344,
+   "party": [
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Thunderbolt",
+       "type": "Electric",
+       "power": 95
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Thunder",
+       "type": "Electric",
+       "power": 120
+      }
+     ]
+    },
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Cosmic Power",
+       "type": "Psychic"
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      },
+      {
+       "name": "Meteor Mash",
+       "type": "Steel",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 183,
+     "name": "Marill",
+     "level": 48,
+     "moves": [
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Double-edge",
+       "type": "Normal",
+       "power": 120
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      }
+     ]
+    }
+   ],
+   "id": "pkmn-breeder-alize",
+   "area": "Water Labyrinth"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

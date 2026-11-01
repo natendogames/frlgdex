@@ -278,6 +278,914 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Swimmer",
+   "name": "Abigail",
+   "prize": 148,
+   "party": [
+    {
+     "dex": 54,
+     "name": "Psyduck",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Psych Up",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 54,
+     "name": "Psyduck",
+     "level": 36,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Psych Up",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 55,
+     "name": "Golduck",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Psych Up",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-female-abigail",
+   "area": "Kindle Road"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Claire",
+   "prize": 700,
+   "party": [
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Thunderbolt",
+       "type": "Electric",
+       "power": 95
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Metronome",
+       "type": "Normal"
+      },
+      {
+       "name": "Cosmic Power",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-claire",
+   "area": "Kindle Road"
+  },
+  {
+   "class": "Crush Girl",
+   "name": "Tanya",
+   "prize": 912,
+   "party": [
+    {
+     "dex": 106,
+     "name": "Hitmonlee",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Hi Jump Kick",
+       "type": "Fighting",
+       "power": 85
+      },
+      {
+       "name": "Mind Reader",
+       "type": "Normal"
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 107,
+     "name": "Hitmonchan",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Ice Punch",
+       "type": "Ice",
+       "power": 75
+      },
+      {
+       "name": "Fire Punch",
+       "type": "Fire",
+       "power": 75
+      },
+      {
+       "name": "Sky Uppercut",
+       "type": "Fighting",
+       "power": 85
+      },
+      {
+       "name": "Mega Punch",
+       "type": "Normal",
+       "power": 80
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "crush-girl-tanya",
+   "area": "Kindle Road"
+  },
+  {
+   "class": "Camper",
+   "name": "Bryce",
+   "prize": 720,
+   "party": [
+    {
+     "dex": 33,
+     "name": "Nidorino",
+     "level": 36,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 36,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 28,
+     "name": "Sandslash",
+     "level": 36,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "camper-bryce",
+   "area": "Kindle Road"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Garrett",
+   "prize": 152,
+   "party": [
+    {
+     "dex": 90,
+     "name": "Shellder",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Icicle Spear",
+       "type": "Ice",
+       "power": 10
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 91,
+     "name": "Cloyster",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 8,
+     "name": "Wartortle",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-garrett",
+   "area": "Kindle Road"
+  },
+  {
+   "class": "Crush Kin",
+   "name": "Mik & Kia",
+   "prize": 1872,
+   "party": [
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 39,
+     "moves": [
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 57,
+     "name": "Primeape",
+     "level": 39,
+     "moves": [
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "double": true,
+   "id": "crush-kin-mik-kia",
+   "area": "Kindle Road"
+  },
+  {
+   "class": "Black Belt",
+   "name": "Hugh",
+   "prize": 888,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "black-belt-hugh",
+   "area": "Kindle Road"
+  },
+  {
+   "class": "Black Belt",
+   "name": "Shea",
+   "prize": 912,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "black-belt-shea",
+   "area": "Kindle Road"
+  },
+  {
+   "class": "Crush Girl",
+   "name": "Sharon",
+   "prize": 888,
+   "party": [
+    {
+     "dex": 56,
+     "name": "Mankey",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      },
+      {
+       "name": "Swagger",
+       "type": "Normal"
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 57,
+     "name": "Primeape",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "crush-girl-sharon",
+   "area": "Kindle Road"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Finn",
+   "prize": 152,
+   "party": [
+    {
+     "dex": 121,
+     "name": "Starmie",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-finn",
+   "area": "Kindle Road"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Maria",
+   "prize": 148,
+   "party": [
+    {
+     "dex": 117,
+     "name": "Seadra",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 117,
+     "name": "Seadra",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-female-maria",
+   "area": "Kindle Road"
+  },
+  {
+   "class": "Fisherman",
+   "name": "Tommy",
+   "prize": 1260,
+   "party": [
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 119,
+     "name": "Seaking",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 119,
+     "name": "Seaking",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 119,
+     "name": "Seaking",
+     "level": 35,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-tommy",
+   "area": "Kindle Road"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

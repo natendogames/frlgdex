@@ -24,6 +24,104 @@
    "where": "Museum 1F"
   }
  ],
+ "trainers": [
+  {
+   "class": "Camper",
+   "name": "Liam",
+   "prize": 220,
+   "party": [
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 10,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 27,
+     "name": "Sandshrew",
+     "level": 11,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      }
+     ]
+    }
+   ],
+   "id": "camper-liam",
+   "area": "Gym"
+  },
+  {
+   "class": "Leader",
+   "name": "Brock",
+   "prize": 1400,
+   "party": [
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 12,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 14,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Bind",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rock Tomb",
+       "type": "Rock",
+       "power": 50
+      }
+     ]
+    }
+   ],
+   "rewards": [
+    "Boulder Badge",
+    "TM39"
+   ],
+   "id": "leader-brock",
+   "area": "Gym"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

@@ -264,6 +264,93 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Swimmer",
+   "name": "Amara",
+   "prize": 144,
+   "party": [
+    {
+     "dex": 86,
+     "name": "Seel",
+     "level": 36,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Icy Wind",
+       "type": "Ice",
+       "power": 55
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Rest",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 86,
+     "name": "Seel",
+     "level": 36,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Icy Wind",
+       "type": "Ice",
+       "power": 55
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Rest",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 87,
+     "name": "Dewgong",
+     "level": 36,
+     "moves": [
+      {
+       "name": "Icy Wind",
+       "type": "Ice",
+       "power": 55
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Rest",
+       "type": "Psychic"
+      },
+      {
+       "name": "Sheer Cold",
+       "type": "Ice",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-female-amara",
+   "area": "Treasure Beach"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

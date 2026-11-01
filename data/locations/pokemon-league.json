@@ -4,6 +4,1042 @@
  "encounters": [],
  "items": [],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Elite Four",
+   "name": "Lorelei",
+   "prize": 5400,
+   "party": [
+    {
+     "dex": 87,
+     "name": "Dewgong",
+     "level": 52,
+     "moves": [
+      {
+       "name": "Rest",
+       "type": "Psychic"
+      },
+      {
+       "name": "Sheer Cold",
+       "type": "Ice",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Ice Beam",
+       "type": "Ice",
+       "power": 95
+      }
+     ]
+    },
+    {
+     "dex": 91,
+     "name": "Cloyster",
+     "level": 51,
+     "moves": [
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      },
+      {
+       "name": "Spikes",
+       "type": "Ground"
+      },
+      {
+       "name": "Spike Cannon",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    },
+    {
+     "dex": 80,
+     "name": "Slowbro",
+     "level": 52,
+     "moves": [
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Amnesia",
+       "type": "Psychic"
+      },
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 124,
+     "name": "Jynx",
+     "level": 54,
+     "moves": [
+      {
+       "name": "Ice Punch",
+       "type": "Ice",
+       "power": 75
+      },
+      {
+       "name": "Mean Look",
+       "type": "Normal"
+      },
+      {
+       "name": "Fake Tears",
+       "type": "Dark"
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      }
+     ]
+    },
+    {
+     "dex": 131,
+     "name": "Lapras",
+     "level": 54,
+     "moves": [
+      {
+       "name": "Ice Beam",
+       "type": "Ice",
+       "power": 95
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      },
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      }
+     ],
+     "item": "Sitrus Berry"
+    }
+   ],
+   "uses": [
+    "Full Restore ×2"
+   ],
+   "id": "elite-four-lorelei",
+   "area": "Loreleis Room"
+  },
+  {
+   "class": "Elite Four",
+   "name": "Bruno",
+   "prize": 5600,
+   "party": [
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 51,
+     "moves": [
+      {
+       "name": "Dragonbreath",
+       "type": "Dragon",
+       "power": 60
+      },
+      {
+       "name": "Sandstorm",
+       "type": "Rock"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Iron Tail",
+       "type": "Steel",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 107,
+     "name": "Hitmonchan",
+     "level": 53,
+     "moves": [
+      {
+       "name": "Sky Uppercut",
+       "type": "Fighting",
+       "power": 85
+      },
+      {
+       "name": "Mega Punch",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Detect",
+       "type": "Fighting"
+      },
+      {
+       "name": "Counter",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 106,
+     "name": "Hitmonlee",
+     "level": 53,
+     "moves": [
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Endure",
+       "type": "Normal"
+      },
+      {
+       "name": "Mega Kick",
+       "type": "Normal",
+       "power": 120
+      },
+      {
+       "name": "Reversal",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 54,
+     "moves": [
+      {
+       "name": "Sandstorm",
+       "type": "Rock"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Iron Tail",
+       "type": "Steel",
+       "power": 100
+      },
+      {
+       "name": "Sand Tomb",
+       "type": "Ground",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 68,
+     "name": "Machamp",
+     "level": 56,
+     "moves": [
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      }
+     ],
+     "item": "Sitrus Berry"
+    }
+   ],
+   "uses": [
+    "Full Restore ×2"
+   ],
+   "id": "elite-four-bruno",
+   "area": "Brunos Room"
+  },
+  {
+   "class": "Elite Four",
+   "name": "Agatha",
+   "prize": 5800,
+   "party": [
+    {
+     "dex": 94,
+     "name": "Gengar",
+     "level": 54,
+     "moves": [
+      {
+       "name": "Dream Eater",
+       "type": "Psychic",
+       "power": 100
+      },
+      {
+       "name": "Destiny Bond",
+       "type": "Ghost"
+      },
+      {
+       "name": "Shadow Ball",
+       "type": "Ghost",
+       "power": 80
+      },
+      {
+       "name": "Nightmare",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 42,
+     "name": "Golbat",
+     "level": 54,
+     "moves": [
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Air Cutter",
+       "type": "Flying",
+       "power": 55
+      },
+      {
+       "name": "Mean Look",
+       "type": "Normal"
+      },
+      {
+       "name": "Poison Fang",
+       "type": "Poison",
+       "power": 50
+      }
+     ]
+    },
+    {
+     "dex": 93,
+     "name": "Haunter",
+     "level": 53,
+     "moves": [
+      {
+       "name": "Dream Eater",
+       "type": "Psychic",
+       "power": 100
+      },
+      {
+       "name": "Destiny Bond",
+       "type": "Ghost"
+      },
+      {
+       "name": "Shadow Ball",
+       "type": "Ghost",
+       "power": 80
+      },
+      {
+       "name": "Nightmare",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 24,
+     "name": "Arbok",
+     "level": 56,
+     "moves": [
+      {
+       "name": "Stockpile",
+       "type": "Normal"
+      },
+      {
+       "name": "Swallow",
+       "type": "Normal"
+      },
+      {
+       "name": "Spit Up",
+       "type": "Normal",
+       "power": 100
+      },
+      {
+       "name": "Haze",
+       "type": "Ice"
+      }
+     ]
+    },
+    {
+     "dex": 94,
+     "name": "Gengar",
+     "level": 58,
+     "moves": [
+      {
+       "name": "Dream Eater",
+       "type": "Psychic",
+       "power": 100
+      },
+      {
+       "name": "Destiny Bond",
+       "type": "Ghost"
+      },
+      {
+       "name": "Shadow Ball",
+       "type": "Ghost",
+       "power": 80
+      },
+      {
+       "name": "Nightmare",
+       "type": "Ghost"
+      }
+     ],
+     "item": "Sitrus Berry"
+    }
+   ],
+   "uses": [
+    "Full Restore ×2"
+   ],
+   "id": "elite-four-agatha",
+   "area": "Agathas Room"
+  },
+  {
+   "class": "Elite Four",
+   "name": "Lance",
+   "prize": 6000,
+   "party": [
+    {
+     "dex": 130,
+     "name": "Gyarados",
+     "level": 56,
+     "moves": [
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Dragon Dance",
+       "type": "Dragon"
+      },
+      {
+       "name": "Hyper Beam",
+       "type": "Normal",
+       "power": 150
+      }
+     ]
+    },
+    {
+     "dex": 148,
+     "name": "Dragonair",
+     "level": 54,
+     "moves": [
+      {
+       "name": "Dragon Rage",
+       "type": "Dragon",
+       "power": 1
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 148,
+     "name": "Dragonair",
+     "level": 54,
+     "moves": [
+      {
+       "name": "Dragon Rage",
+       "type": "Dragon",
+       "power": 1
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 142,
+     "name": "Aerodactyl",
+     "level": 58,
+     "moves": [
+      {
+       "name": "Ancientpower",
+       "type": "Rock",
+       "power": 60
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Hyper Beam",
+       "type": "Normal",
+       "power": 150
+      }
+     ]
+    },
+    {
+     "dex": 149,
+     "name": "Dragonite",
+     "level": 60,
+     "moves": [
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ],
+     "item": "Sitrus Berry"
+    }
+   ],
+   "uses": [
+    "Full Restore ×2"
+   ],
+   "id": "elite-four-lance",
+   "area": "Lances Room"
+  },
+  {
+   "class": "Champion",
+   "name": "Rival",
+   "prize": 6300,
+   "uses": [
+    "Full Restore ×4"
+   ],
+   "byStarter": {
+    "Bulbasaur": [
+     {
+      "dex": 18,
+      "name": "Pidgeot",
+      "level": 59,
+      "moves": [
+       {
+        "name": "Whirlwind",
+        "type": "Normal"
+       },
+       {
+        "name": "Wing Attack",
+        "type": "Flying",
+        "power": 60
+       },
+       {
+        "name": "Featherdance",
+        "type": "Flying"
+       },
+       {
+        "name": "Agility",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 65,
+      "name": "Alakazam",
+      "level": 57,
+      "moves": [
+       {
+        "name": "Future Sight",
+        "type": "Psychic",
+        "power": 80
+       },
+       {
+        "name": "Calm Mind",
+        "type": "Psychic"
+       },
+       {
+        "name": "Psychic",
+        "type": "Psychic",
+        "power": 90
+       },
+       {
+        "name": "Trick",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 112,
+      "name": "Rhydon",
+      "level": 59,
+      "moves": [
+       {
+        "name": "Rock Blast",
+        "type": "Rock",
+        "power": 25
+       },
+       {
+        "name": "Horn Drill",
+        "type": "Normal",
+        "power": 1
+       },
+       {
+        "name": "Take Down",
+        "type": "Normal",
+        "power": 90
+       },
+       {
+        "name": "Earthquake",
+        "type": "Ground",
+        "power": 100
+       }
+      ]
+     },
+     {
+      "dex": 103,
+      "name": "Exeggutor",
+      "level": 59,
+      "moves": [
+       {
+        "name": "Hypnosis",
+        "type": "Psychic"
+       },
+       {
+        "name": "Confusion",
+        "type": "Psychic",
+        "power": 50
+       },
+       {
+        "name": "Stomp",
+        "type": "Normal",
+        "power": 65
+       },
+       {
+        "name": "Egg Bomb",
+        "type": "Normal",
+        "power": 100
+       }
+      ]
+     },
+     {
+      "dex": 130,
+      "name": "Gyarados",
+      "level": 61,
+      "moves": [
+       {
+        "name": "Hydro Pump",
+        "type": "Water",
+        "power": 120
+       },
+       {
+        "name": "Rain Dance",
+        "type": "Water"
+       },
+       {
+        "name": "Dragon Dance",
+        "type": "Dragon"
+       },
+       {
+        "name": "Hyper Beam",
+        "type": "Normal",
+        "power": 150
+       }
+      ]
+     },
+     {
+      "dex": 6,
+      "name": "Charizard",
+      "level": 63,
+      "moves": [
+       {
+        "name": "Flamethrower",
+        "type": "Fire",
+        "power": 95
+       },
+       {
+        "name": "Wing Attack",
+        "type": "Flying",
+        "power": 60
+       },
+       {
+        "name": "Slash",
+        "type": "Normal",
+        "power": 70
+       },
+       {
+        "name": "Dragon Rage",
+        "type": "Dragon",
+        "power": 1
+       }
+      ],
+      "item": "Sitrus Berry"
+     }
+    ],
+    "Charmander": [
+     {
+      "dex": 18,
+      "name": "Pidgeot",
+      "level": 59,
+      "moves": [
+       {
+        "name": "Whirlwind",
+        "type": "Normal"
+       },
+       {
+        "name": "Wing Attack",
+        "type": "Flying",
+        "power": 60
+       },
+       {
+        "name": "Featherdance",
+        "type": "Flying"
+       },
+       {
+        "name": "Agility",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 65,
+      "name": "Alakazam",
+      "level": 57,
+      "moves": [
+       {
+        "name": "Future Sight",
+        "type": "Psychic",
+        "power": 80
+       },
+       {
+        "name": "Calm Mind",
+        "type": "Psychic"
+       },
+       {
+        "name": "Psychic",
+        "type": "Psychic",
+        "power": 90
+       },
+       {
+        "name": "Trick",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 112,
+      "name": "Rhydon",
+      "level": 59,
+      "moves": [
+       {
+        "name": "Rock Blast",
+        "type": "Rock",
+        "power": 25
+       },
+       {
+        "name": "Horn Drill",
+        "type": "Normal",
+        "power": 1
+       },
+       {
+        "name": "Take Down",
+        "type": "Normal",
+        "power": 90
+       },
+       {
+        "name": "Earthquake",
+        "type": "Ground",
+        "power": 100
+       }
+      ]
+     },
+     {
+      "dex": 59,
+      "name": "Arcanine",
+      "level": 59,
+      "moves": [
+       {
+        "name": "Roar",
+        "type": "Normal"
+       },
+       {
+        "name": "Ember",
+        "type": "Fire",
+        "power": 40
+       },
+       {
+        "name": "Odor Sleuth",
+        "type": "Normal"
+       },
+       {
+        "name": "Extremespeed",
+        "type": "Normal",
+        "power": 80
+       }
+      ]
+     },
+     {
+      "dex": 103,
+      "name": "Exeggutor",
+      "level": 61,
+      "moves": [
+       {
+        "name": "Hypnosis",
+        "type": "Psychic"
+       },
+       {
+        "name": "Confusion",
+        "type": "Psychic",
+        "power": 50
+       },
+       {
+        "name": "Stomp",
+        "type": "Normal",
+        "power": 65
+       },
+       {
+        "name": "Egg Bomb",
+        "type": "Normal",
+        "power": 100
+       }
+      ]
+     },
+     {
+      "dex": 9,
+      "name": "Blastoise",
+      "level": 63,
+      "moves": [
+       {
+        "name": "Rapid Spin",
+        "type": "Normal",
+        "power": 20
+       },
+       {
+        "name": "Protect",
+        "type": "Normal"
+       },
+       {
+        "name": "Rain Dance",
+        "type": "Water"
+       },
+       {
+        "name": "Skull Bash",
+        "type": "Normal",
+        "power": 100
+       }
+      ],
+      "item": "Sitrus Berry"
+     }
+    ],
+    "Squirtle": [
+     {
+      "dex": 18,
+      "name": "Pidgeot",
+      "level": 59,
+      "moves": [
+       {
+        "name": "Whirlwind",
+        "type": "Normal"
+       },
+       {
+        "name": "Wing Attack",
+        "type": "Flying",
+        "power": 60
+       },
+       {
+        "name": "Featherdance",
+        "type": "Flying"
+       },
+       {
+        "name": "Agility",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 65,
+      "name": "Alakazam",
+      "level": 57,
+      "moves": [
+       {
+        "name": "Future Sight",
+        "type": "Psychic",
+        "power": 80
+       },
+       {
+        "name": "Calm Mind",
+        "type": "Psychic"
+       },
+       {
+        "name": "Psychic",
+        "type": "Psychic",
+        "power": 90
+       },
+       {
+        "name": "Trick",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 112,
+      "name": "Rhydon",
+      "level": 59,
+      "moves": [
+       {
+        "name": "Rock Blast",
+        "type": "Rock",
+        "power": 25
+       },
+       {
+        "name": "Horn Drill",
+        "type": "Normal",
+        "power": 1
+       },
+       {
+        "name": "Take Down",
+        "type": "Normal",
+        "power": 90
+       },
+       {
+        "name": "Earthquake",
+        "type": "Ground",
+        "power": 100
+       }
+      ]
+     },
+     {
+      "dex": 130,
+      "name": "Gyarados",
+      "level": 59,
+      "moves": [
+       {
+        "name": "Hydro Pump",
+        "type": "Water",
+        "power": 120
+       },
+       {
+        "name": "Rain Dance",
+        "type": "Water"
+       },
+       {
+        "name": "Dragon Dance",
+        "type": "Dragon"
+       },
+       {
+        "name": "Hyper Beam",
+        "type": "Normal",
+        "power": 150
+       }
+      ]
+     },
+     {
+      "dex": 59,
+      "name": "Arcanine",
+      "level": 61,
+      "moves": [
+       {
+        "name": "Roar",
+        "type": "Normal"
+       },
+       {
+        "name": "Ember",
+        "type": "Fire",
+        "power": 40
+       },
+       {
+        "name": "Odor Sleuth",
+        "type": "Normal"
+       },
+       {
+        "name": "Extremespeed",
+        "type": "Normal",
+        "power": 80
+       }
+      ]
+     },
+     {
+      "dex": 3,
+      "name": "Venusaur",
+      "level": 63,
+      "moves": [
+       {
+        "name": "Razor Leaf",
+        "type": "Grass",
+        "power": 55
+       },
+       {
+        "name": "Sweet Scent",
+        "type": "Normal"
+       },
+       {
+        "name": "Growth",
+        "type": "Normal"
+       },
+       {
+        "name": "Synthesis",
+        "type": "Grass"
+       }
+      ],
+      "item": "Sitrus Berry"
+     }
+    ]
+   },
+   "id": "champion-first",
+   "area": "Champions Room"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

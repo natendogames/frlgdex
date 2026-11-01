@@ -115,6 +115,209 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Bug Catcher",
+   "name": "Rick",
+   "prize": 72,
+   "party": [
+    {
+     "dex": 13,
+     "name": "Weedle",
+     "level": 6,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-rick"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Doug",
+   "prize": 84,
+   "party": [
+    {
+     "dex": 13,
+     "name": "Weedle",
+     "level": 7,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 14,
+     "name": "Kakuna",
+     "level": 7,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 13,
+     "name": "Weedle",
+     "level": 7,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-doug"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Sammy",
+   "prize": 108,
+   "party": [
+    {
+     "dex": 13,
+     "name": "Weedle",
+     "level": 9,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-sammy"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Anthony",
+   "prize": 96,
+   "party": [
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 7,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 8,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-anthony"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Charlie",
+   "prize": 84,
+   "party": [
+    {
+     "dex": 11,
+     "name": "Metapod",
+     "level": 7,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 7,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 11,
+     "name": "Metapod",
+     "level": 7,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-charlie"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

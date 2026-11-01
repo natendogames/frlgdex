@@ -556,6 +556,455 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Scientist",
+   "name": "Ted",
+   "prize": 1392,
+   "party": [
+    {
+     "dex": 101,
+     "name": "Electrode",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    },
+    {
+     "dex": 110,
+     "name": "Weezing",
+     "level": 29,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "scientist-ted",
+   "area": "1F"
+  },
+  {
+   "class": "Youngster",
+   "name": "Johnson",
+   "prize": 544,
+   "party": [
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Glare",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Glare",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "youngster-johnson",
+   "area": "1F"
+  },
+  {
+   "class": "Burglar",
+   "name": "Arnie",
+   "prize": 2992,
+   "party": [
+    {
+     "dex": 4,
+     "name": "Charmander",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Metal Claw",
+       "type": "Steel",
+       "power": 50
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      }
+     ]
+    },
+    {
+     "dex": 5,
+     "name": "Charmeleon",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Metal Claw",
+       "type": "Steel",
+       "power": 50
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      }
+     ]
+    }
+   ],
+   "id": "burglar-arnie",
+   "area": "2F"
+  },
+  {
+   "class": "Burglar",
+   "name": "Simon",
+   "prize": 3344,
+   "party": [
+    {
+     "dex": 38,
+     "name": "Ninetales",
+     "level": 38,
+     "moves": [
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "burglar-simon",
+   "area": "3F"
+  },
+  {
+   "class": "Scientist",
+   "name": "Braydon",
+   "prize": 1584,
+   "party": [
+    {
+     "dex": 81,
+     "name": "Magnemite",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Lock-on",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 82,
+     "name": "Magneton",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      }
+     ]
+    },
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      }
+     ]
+    }
+   ],
+   "id": "scientist-braydon",
+   "area": "3F"
+  },
+  {
+   "class": "Burglar",
+   "name": "Lewis",
+   "prize": 2992,
+   "party": [
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Flame Wheel",
+       "type": "Fire",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 77,
+     "name": "Ponyta",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Fire Spin",
+       "type": "Fire",
+       "power": 15
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "id": "burglar-lewis",
+   "area": "B1F"
+  },
+  {
+   "class": "Scientist",
+   "name": "Ivan",
+   "prize": 1632,
+   "party": [
+    {
+     "dex": 81,
+     "name": "Magnemite",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Lock-on",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 101,
+     "name": "Electrode",
+     "level": 34,
+     "moves": [
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      }
+     ]
+    }
+   ],
+   "id": "scientist-ivan",
+   "area": "B1F"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

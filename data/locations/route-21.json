@@ -352,6 +352,642 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Swimmer",
+   "name": "Jerome",
+   "prize": 132,
+   "party": [
+    {
+     "dex": 120,
+     "name": "Staryu",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Camouflage",
+       "type": "Normal"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 8,
+     "name": "Wartortle",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-jerome",
+   "area": "South"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Roland",
+   "prize": 128,
+   "party": [
+    {
+     "dex": 61,
+     "name": "Poliwhirl",
+     "level": 32,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      }
+     ]
+    },
+    {
+     "dex": 72,
+     "name": "Tentacool",
+     "level": 32,
+     "moves": [
+      {
+       "name": "Constrict",
+       "type": "Normal",
+       "power": 10
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 117,
+     "name": "Seadra",
+     "level": 32,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-roland",
+   "area": "South"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Jack",
+   "prize": 148,
+   "party": [
+    {
+     "dex": 121,
+     "name": "Starmie",
+     "level": 37,
+     "moves": [
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-jack",
+   "area": "South"
+  },
+  {
+   "class": "Fisherman",
+   "name": "Nolan",
+   "prize": 1188,
+   "party": [
+    {
+     "dex": 119,
+     "name": "Seaking",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-nolan",
+   "area": "South"
+  },
+  {
+   "class": "Fisherman",
+   "name": "Claude",
+   "prize": 1116,
+   "party": [
+    {
+     "dex": 90,
+     "name": "Shellder",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Icicle Spear",
+       "type": "Ice",
+       "power": 10
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 91,
+     "name": "Cloyster",
+     "level": 31,
+     "moves": [
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-claude",
+   "area": "South"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Spencer",
+   "prize": 132,
+   "party": [
+    {
+     "dex": 117,
+     "name": "Seadra",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 73,
+     "name": "Tentacruel",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Constrict",
+       "type": "Normal",
+       "power": 10
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-spencer",
+   "area": "North"
+  },
+  {
+   "class": "Sis and Bro",
+   "name": "Lil & Ian",
+   "prize": 264,
+   "party": [
+    {
+     "dex": 117,
+     "name": "Seadra",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 121,
+     "name": "Starmie",
+     "level": 33,
+     "moves": [
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "double": true,
+   "id": "sis-and-bro-lil-ian",
+   "area": "North"
+  },
+  {
+   "class": "Fisherman",
+   "name": "Ronald",
+   "prize": 1008,
+   "party": [
+    {
+     "dex": 119,
+     "name": "Seaking",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 119,
+     "name": "Seaking",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 119,
+     "name": "Seaking",
+     "level": 28,
+     "moves": [
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-ronald",
+   "area": "North"
+  },
+  {
+   "class": "Fisherman",
+   "name": "Wade",
+   "prize": 972,
+   "party": [
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 27,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    },
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 27,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    },
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 27,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    },
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 27,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    },
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 27,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    },
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 27,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-wade",
+   "area": "North"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
