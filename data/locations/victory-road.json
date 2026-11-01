@@ -1073,6 +1073,72 @@
    "area": "2F"
   },
   {
+   "class": "Cool Couple",
+   "name": "Ray & Tyra",
+   "prize": 2160,
+   "party": [
+    {
+     "dex": 31,
+     "name": "Nidoqueen",
+     "level": 45,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      },
+      {
+       "name": "Superpower",
+       "type": "Fighting",
+       "power": 120
+      }
+     ]
+    },
+    {
+     "dex": 34,
+     "name": "Nidoking",
+     "level": 45,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Thrash",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Megahorn",
+       "type": "Bug",
+       "power": 120
+      }
+     ]
+    }
+   ],
+   "double": true,
+   "id": "cool-couple-ray-tyra",
+   "area": "3F"
+  },
+  {
    "class": "Cool Trainer",
    "name": "Colby",
    "prize": 1548,
@@ -1360,25 +1426,48 @@
    "area": "3F"
   },
   {
-   "class": "Cool Couple",
-   "name": "Ray & Tyra",
-   "prize": 2160,
+   "class": "Cool Trainer",
+   "name": "Alexa",
+   "prize": 1512,
    "party": [
     {
-     "dex": 31,
-     "name": "Nidoqueen",
-     "level": 45,
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 42,
      "iv": 12,
      "moves": [
       {
-       "name": "Double Kick",
-       "type": "Fighting",
-       "power": 30
+       "name": "Metronome",
+       "type": "Normal"
       },
       {
-       "name": "Poison Sting",
-       "type": "Poison",
+       "name": "Cosmic Power",
+       "type": "Psychic"
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 39,
+     "name": "Jigglypuff",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
        "power": 15
+      },
+      {
+       "name": "Rest",
+       "type": "Psychic"
       },
       {
        "name": "Body Slam",
@@ -1386,43 +1475,95 @@
        "power": 85
       },
       {
-       "name": "Superpower",
-       "type": "Fighting",
-       "power": 120
+       "name": "Mimic",
+       "type": "Normal"
       }
      ]
     },
     {
-     "dex": 34,
-     "name": "Nidoking",
-     "level": 45,
+     "dex": 53,
+     "name": "Persian",
+     "level": 42,
      "iv": 12,
      "moves": [
       {
-       "name": "Double Kick",
-       "type": "Fighting",
-       "power": 30
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
       },
       {
-       "name": "Poison Sting",
-       "type": "Poison",
-       "power": 15
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
       },
       {
-       "name": "Thrash",
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    },
+    {
+     "dex": 87,
+     "name": "Dewgong",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Rest",
+       "type": "Psychic"
+      },
+      {
+       "name": "Sheer Cold",
+       "type": "Ice",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
        "type": "Normal",
        "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 113,
+     "name": "Chansey",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Minimize",
+       "type": "Normal"
       },
       {
-       "name": "Megahorn",
-       "type": "Bug",
-       "power": 120
+       "name": "Sing",
+       "type": "Normal"
+      },
+      {
+       "name": "Egg Bomb",
+       "type": "Normal",
+       "power": 100
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
       }
      ]
     }
    ],
-   "double": true,
-   "id": "cool-couple-ray-tyra",
+   "uses": [
+    "Full Restore"
+   ],
+   "id": "coolalexa",
    "area": "3F"
   },
   {
@@ -1568,147 +1709,6 @@
     "Hyper Potion"
    ],
    "id": "coolgeorge",
-   "area": "3F"
-  },
-  {
-   "class": "Cool Trainer",
-   "name": "Alexa",
-   "prize": 1512,
-   "party": [
-    {
-     "dex": 35,
-     "name": "Clefairy",
-     "level": 42,
-     "iv": 12,
-     "moves": [
-      {
-       "name": "Metronome",
-       "type": "Normal"
-      },
-      {
-       "name": "Cosmic Power",
-       "type": "Psychic"
-      },
-      {
-       "name": "Moonlight",
-       "type": "Normal"
-      },
-      {
-       "name": "Light Screen",
-       "type": "Psychic"
-      }
-     ]
-    },
-    {
-     "dex": 39,
-     "name": "Jigglypuff",
-     "level": 42,
-     "iv": 12,
-     "moves": [
-      {
-       "name": "Doubleslap",
-       "type": "Normal",
-       "power": 15
-      },
-      {
-       "name": "Rest",
-       "type": "Psychic"
-      },
-      {
-       "name": "Body Slam",
-       "type": "Normal",
-       "power": 85
-      },
-      {
-       "name": "Mimic",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 53,
-     "name": "Persian",
-     "level": 42,
-     "iv": 12,
-     "moves": [
-      {
-       "name": "Pay Day",
-       "type": "Normal",
-       "power": 40
-      },
-      {
-       "name": "Faint Attack",
-       "type": "Dark",
-       "power": 60
-      },
-      {
-       "name": "Screech",
-       "type": "Normal"
-      },
-      {
-       "name": "Fury Swipes",
-       "type": "Normal",
-       "power": 18
-      }
-     ]
-    },
-    {
-     "dex": 87,
-     "name": "Dewgong",
-     "level": 42,
-     "iv": 12,
-     "moves": [
-      {
-       "name": "Aurora Beam",
-       "type": "Ice",
-       "power": 65
-      },
-      {
-       "name": "Rest",
-       "type": "Psychic"
-      },
-      {
-       "name": "Sheer Cold",
-       "type": "Ice",
-       "power": 1
-      },
-      {
-       "name": "Take Down",
-       "type": "Normal",
-       "power": 90
-      }
-     ]
-    },
-    {
-     "dex": 113,
-     "name": "Chansey",
-     "level": 42,
-     "iv": 12,
-     "moves": [
-      {
-       "name": "Minimize",
-       "type": "Normal"
-      },
-      {
-       "name": "Sing",
-       "type": "Normal"
-      },
-      {
-       "name": "Egg Bomb",
-       "type": "Normal",
-       "power": 100
-      },
-      {
-       "name": "Defense Curl",
-       "type": "Normal"
-      }
-     ]
-    }
-   ],
-   "uses": [
-    "Full Restore"
-   ],
-   "id": "coolalexa",
    "area": "3F"
   }
  ],

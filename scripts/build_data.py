@@ -498,8 +498,51 @@ def position(mapname, lbls):
         if any(l in body for l in lbls): return ev['x'], ev['y']
     return None
 
+# Walking distance from where you come in, on the map's own tile grid (collision and elevation from map.bin), so
+# trainers are listed in the order you reach them even on winding routes. Routes start from the edge you enter by
+# (WALK), buildings and caves from their lowest door. Ledges count as passable both ways; cut trees and boulders are
+# objects, not tiles, so they don't block. Falls back to the plain direction sort when a trainer can't be reached.
+ENTRY = {'RockTunnel_1F': (17, 2), 'DiglettsCave_B1F': (82, 71)}  # you come in at the top of Rock Tunnel; Diglett's Cave from Vermilion's side
+layout_info = {l['id']: l for l in json.load(open(P('data/layouts/layouts.json')))['layouts'] if l.get('id')}
+_dist = {}
+def walk_dist(mapname):
+    if mapname in _dist: return _dist[mapname]
+    m = maps[mapname]; lay = layout_info.get(m['layout'])
+    if not lay: _dist[mapname] = None; return None
+    w, h = lay['width'], lay['height']
+    raw = open(P(lay['blockdata_filepath']), 'rb').read()
+    cells = [int.from_bytes(raw[i:i + 2], 'little') for i in range(0, len(raw), 2)]
+    col = lambda x, y: (cells[y * w + x] >> 10) & 3
+    elev = lambda x, y: cells[y * w + x] >> 12
+    d = WALK.get(mapname)
+    if d:
+        edge = {'N': [(x, h - 1) for x in range(w)], 'S': [(x, 0) for x in range(w)], 'E': [(0, y) for y in range(h)], 'W': [(w - 1, y) for y in range(h)]}[d]
+    else:
+        warps = m.get('warp_events') or []
+        sec = m['region_map_section']
+        # the door in from outside (another location), else any door; the lowest one unless ENTRY says otherwise
+        outside = [wp for wp in warps if wp['dest_map'] in by_const and by_const[wp['dest_map']]['region_map_section'] != sec] or warps
+        edge = [ENTRY[mapname]] if mapname in ENTRY else [max(((wp['x'], wp['y']) for wp in outside), key=lambda p: p[1])] if outside else []
+    start = [(x, y) for x, y in edge if 0 <= x < w and 0 <= y < h and col(x, y) == 0 and elev(x, y) not in (1,)] or [(x, y) for x, y in edge if 0 <= x < w and 0 <= y < h and col(x, y) == 0]
+    dist = {p: 0 for p in start}
+    q = collections.deque(start)
+    while q:
+        x, y = q.popleft()
+        for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+            if not (0 <= nx < w and 0 <= ny < h) or (nx, ny) in dist or col(nx, ny): continue
+            e1, e2 = elev(x, y), elev(nx, ny)
+            if e1 != e2 and e1 not in (0, 15) and e2 not in (0, 15): continue
+            dist[(nx, ny)] = dist[(x, y)] + 1; q.append((nx, ny))
+    _dist[mapname] = dist
+    return dist
+
 def sort_key(mapname, pos):
     if pos is None: return (1, 0)
+    dist = walk_dist(mapname)
+    if dist:
+        x, y = pos
+        near = [dist[p] for p in ((x, y), (x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)) if p in dist]
+        if near: return (0, min(near), 0)
     x, y = pos
     d = WALK.get(mapname, 'N')  # buildings and caves: you enter from the bottom
     return (0, {'N': -y, 'S': y, 'E': x, 'W': -x}[d], {'N': x, 'S': x, 'E': y, 'W': y}[d])

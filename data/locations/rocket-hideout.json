@@ -235,68 +235,6 @@
   {
    "class": "Team Rocket",
    "name": "Grunt",
-   "prize": 704,
-   "party": [
-    {
-     "dex": 88,
-     "name": "Grimer",
-     "level": 22,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Harden",
-       "type": "Normal"
-      },
-      {
-       "name": "Disable",
-       "type": "Normal"
-      },
-      {
-       "name": "Sludge",
-       "type": "Poison",
-       "power": 65
-      },
-      {
-       "name": "Minimize",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 109,
-     "name": "Koffing",
-     "level": 22,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Tackle",
-       "type": "Normal",
-       "power": 35
-      },
-      {
-       "name": "Smog",
-       "type": "Poison",
-       "power": 20
-      },
-      {
-       "name": "Selfdestruct",
-       "type": "Normal",
-       "power": 200
-      },
-      {
-       "name": "Sludge",
-       "type": "Poison",
-       "power": 65
-      }
-     ]
-    }
-   ],
-   "id": "team-rocket-grunt-12",
-   "area": "B1F"
-  },
-  {
-   "class": "Team Rocket",
-   "name": "Grunt",
    "prize": 640,
    "party": [
     {
@@ -378,6 +316,67 @@
    "prize": 672,
    "party": [
     {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-9",
+   "area": "B1F"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 672,
+   "party": [
+    {
      "dex": 96,
      "name": "Drowzee",
      "level": 21,
@@ -436,62 +435,63 @@
   {
    "class": "Team Rocket",
    "name": "Grunt",
-   "prize": 672,
+   "prize": 704,
    "party": [
     {
-     "dex": 20,
-     "name": "Raticate",
-     "level": 21,
+     "dex": 88,
+     "name": "Grimer",
+     "level": 22,
      "iv": 0,
      "moves": [
       {
-       "name": "Tail Whip",
+       "name": "Harden",
        "type": "Normal"
       },
       {
-       "name": "Quick Attack",
-       "type": "Normal",
-       "power": 40
+       "name": "Disable",
+       "type": "Normal"
       },
       {
-       "name": "Hyper Fang",
-       "type": "Normal",
-       "power": 80
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
       },
       {
-       "name": "Scary Face",
+       "name": "Minimize",
        "type": "Normal"
       }
      ]
     },
     {
-     "dex": 20,
-     "name": "Raticate",
-     "level": 21,
+     "dex": 109,
+     "name": "Koffing",
+     "level": 22,
      "iv": 0,
      "moves": [
       {
-       "name": "Tail Whip",
-       "type": "Normal"
-      },
-      {
-       "name": "Quick Attack",
+       "name": "Tackle",
        "type": "Normal",
-       "power": 40
+       "power": 35
       },
       {
-       "name": "Hyper Fang",
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
        "type": "Normal",
-       "power": 80
+       "power": 200
       },
       {
-       "name": "Scary Face",
-       "type": "Normal"
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
       }
      ]
     }
    ],
-   "id": "team-rocket-grunt-9",
+   "id": "team-rocket-grunt-12",
    "area": "B1F"
   },
   {

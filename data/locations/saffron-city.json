@@ -313,43 +313,6 @@
   },
   {
    "class": "Black Belt",
-   "name": "Aaron",
-   "prize": 864,
-   "party": [
-    {
-     "dex": 57,
-     "name": "Primeape",
-     "level": 36,
-     "iv": 12,
-     "moves": [
-      {
-       "name": "Focus Energy",
-       "type": "Normal"
-      },
-      {
-       "name": "Seismic Toss",
-       "type": "Fighting",
-       "power": 1
-      },
-      {
-       "name": "Rage",
-       "type": "Normal",
-       "power": 20
-      },
-      {
-       "name": "Cross Chop",
-       "type": "Fighting",
-       "power": 100
-      }
-     ],
-     "item": "Black Belt"
-    }
-   ],
-   "id": "black-belt-aaron",
-   "area": "Dojo"
-  },
-  {
-   "class": "Black Belt",
    "name": "Koichi",
    "prize": 888,
    "party": [
@@ -410,6 +373,43 @@
     }
    ],
    "id": "black-belt-koichi",
+   "area": "Dojo"
+  },
+  {
+   "class": "Black Belt",
+   "name": "Aaron",
+   "prize": 864,
+   "party": [
+    {
+     "dex": 57,
+     "name": "Primeape",
+     "level": 36,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "black-belt-aaron",
    "area": "Dojo"
   },
   {

@@ -152,68 +152,6 @@
  "trainers": [
   {
    "class": "Swimmer",
-   "name": "Richard",
-   "prize": 120,
-   "party": [
-    {
-     "dex": 72,
-     "name": "Tentacool",
-     "level": 30,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Constrict",
-       "type": "Normal",
-       "power": 10
-      },
-      {
-       "name": "Acid",
-       "type": "Poison",
-       "power": 40
-      },
-      {
-       "name": "Bubblebeam",
-       "type": "Water",
-       "power": 65
-      },
-      {
-       "name": "Wrap",
-       "type": "Normal",
-       "power": 15
-      }
-     ]
-    },
-    {
-     "dex": 90,
-     "name": "Shellder",
-     "level": 30,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Icicle Spear",
-       "type": "Ice",
-       "power": 10
-      },
-      {
-       "name": "Supersonic",
-       "type": "Normal"
-      },
-      {
-       "name": "Aurora Beam",
-       "type": "Ice",
-       "power": 65
-      },
-      {
-       "name": "Protect",
-       "type": "Normal"
-      }
-     ]
-    }
-   ],
-   "id": "swimmer-male-richard"
-  },
-  {
-   "class": "Swimmer",
    "name": "Reece",
    "prize": 116,
    "party": [
@@ -298,6 +236,68 @@
     }
    ],
    "id": "swimmer-male-reece"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Richard",
+   "prize": 120,
+   "party": [
+    {
+     "dex": 72,
+     "name": "Tentacool",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Constrict",
+       "type": "Normal",
+       "power": 10
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 90,
+     "name": "Shellder",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Icicle Spear",
+       "type": "Ice",
+       "power": 10
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-richard"
   },
   {
    "class": "Swimmer",

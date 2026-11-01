@@ -364,129 +364,6 @@
    "area": "Gym"
   },
   {
-   "class": "Juggler",
-   "name": "Shawn",
-   "prize": 1360,
-   "party": [
-    {
-     "dex": 96,
-     "name": "Drowzee",
-     "level": 34,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Headbutt",
-       "type": "Normal",
-       "power": 70
-      },
-      {
-       "name": "Poison Gas",
-       "type": "Poison"
-      },
-      {
-       "name": "Meditate",
-       "type": "Psychic"
-      },
-      {
-       "name": "Psychic",
-       "type": "Psychic",
-       "power": 90
-      }
-     ]
-    },
-    {
-     "dex": 97,
-     "name": "Hypno",
-     "level": 34,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Confusion",
-       "type": "Psychic",
-       "power": 50
-      },
-      {
-       "name": "Headbutt",
-       "type": "Normal",
-       "power": 70
-      },
-      {
-       "name": "Poison Gas",
-       "type": "Poison"
-      },
-      {
-       "name": "Meditate",
-       "type": "Psychic"
-      }
-     ]
-    }
-   ],
-   "id": "juggler-shawn",
-   "area": "Gym"
-  },
-  {
-   "class": "Tamer",
-   "name": "Phil",
-   "prize": 1360,
-   "party": [
-    {
-     "dex": 28,
-     "name": "Sandslash",
-     "level": 34,
-     "iv": 4,
-     "moves": [
-      {
-       "name": "Sand-attack",
-       "type": "Ground"
-      },
-      {
-       "name": "Poison Sting",
-       "type": "Poison",
-       "power": 15
-      },
-      {
-       "name": "Slash",
-       "type": "Normal",
-       "power": 70
-      },
-      {
-       "name": "Swift",
-       "type": "Normal",
-       "power": 60
-      }
-     ]
-    },
-    {
-     "dex": 24,
-     "name": "Arbok",
-     "level": 34,
-     "iv": 4,
-     "moves": [
-      {
-       "name": "Poison Sting",
-       "type": "Poison",
-       "power": 15
-      },
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      },
-      {
-       "name": "Glare",
-       "type": "Normal"
-      },
-      {
-       "name": "Screech",
-       "type": "Normal"
-      }
-     ]
-    }
-   ],
-   "id": "tamer-phil",
-   "area": "Gym"
-  },
-  {
    "class": "Tamer",
    "name": "Edgar",
    "prize": 1320,
@@ -572,6 +449,129 @@
     }
    ],
    "id": "tamer-edgar",
+   "area": "Gym"
+  },
+  {
+   "class": "Tamer",
+   "name": "Phil",
+   "prize": 1360,
+   "party": [
+    {
+     "dex": 28,
+     "name": "Sandslash",
+     "level": 34,
+     "iv": 4,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 24,
+     "name": "Arbok",
+     "level": 34,
+     "iv": 4,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Glare",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "tamer-phil",
+   "area": "Gym"
+  },
+  {
+   "class": "Juggler",
+   "name": "Shawn",
+   "prize": 1360,
+   "party": [
+    {
+     "dex": 96,
+     "name": "Drowzee",
+     "level": 34,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 97,
+     "name": "Hypno",
+     "level": 34,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "juggler-shawn",
    "area": "Gym"
   },
   {

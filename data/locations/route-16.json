@@ -82,68 +82,6 @@
  ],
  "trainers": [
   {
-   "class": "Young Couple",
-   "name": "Lea & Jed",
-   "prize": 1624,
-   "party": [
-    {
-     "dex": 78,
-     "name": "Rapidash",
-     "level": 29,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Tail Whip",
-       "type": "Normal"
-      },
-      {
-       "name": "Ember",
-       "type": "Fire",
-       "power": 40
-      },
-      {
-       "name": "Stomp",
-       "type": "Normal",
-       "power": 65
-      },
-      {
-       "name": "Fire Spin",
-       "type": "Fire",
-       "power": 15
-      }
-     ]
-    },
-    {
-     "dex": 38,
-     "name": "Ninetales",
-     "level": 29,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Ember",
-       "type": "Fire",
-       "power": 40
-      },
-      {
-       "name": "Quick Attack",
-       "type": "Normal",
-       "power": 40
-      },
-      {
-       "name": "Confuse Ray",
-       "type": "Ghost"
-      },
-      {
-       "name": "Safeguard",
-       "type": "Normal"
-      }
-     ]
-    }
-   ],
-   "double": true,
-   "id": "young-couple-lea-jed"
-  },
-  {
    "class": "Biker",
    "name": "Lao",
    "prize": 580,
@@ -538,6 +476,68 @@
     }
    ],
    "id": "cue-ball-camron"
+  },
+  {
+   "class": "Young Couple",
+   "name": "Lea & Jed",
+   "prize": 1624,
+   "party": [
+    {
+     "dex": 78,
+     "name": "Rapidash",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Fire Spin",
+       "type": "Fire",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 38,
+     "name": "Ninetales",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "double": true,
+   "id": "young-couple-lea-jed"
   }
  ],
  "verified": true,

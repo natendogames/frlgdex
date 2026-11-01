@@ -793,6 +793,123 @@
    "area": "Gym"
   },
   {
+   "class": "Beauty",
+   "name": "Tamia",
+   "prize": 1728,
+   "party": [
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "beauty-tamia",
+   "area": "Gym"
+  },
+  {
+   "class": "Lass",
+   "name": "Lisa",
+   "prize": 368,
+   "party": [
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 23,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 44,
+     "name": "Gloom",
+     "level": 23,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    }
+   ],
+   "id": "lass-lisa",
+   "area": "Gym"
+  },
+  {
    "class": "Picnicker",
    "name": "Tina",
    "prize": 480,
@@ -855,65 +972,6 @@
   },
   {
    "class": "Beauty",
-   "name": "Tamia",
-   "prize": 1728,
-   "party": [
-    {
-     "dex": 69,
-     "name": "Bellsprout",
-     "level": 24,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Sleep Powder",
-       "type": "Grass"
-      },
-      {
-       "name": "Poisonpowder",
-       "type": "Poison"
-      },
-      {
-       "name": "Stun Spore",
-       "type": "Grass"
-      },
-      {
-       "name": "Acid",
-       "type": "Poison",
-       "power": 40
-      }
-     ]
-    },
-    {
-     "dex": 69,
-     "name": "Bellsprout",
-     "level": 24,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Sleep Powder",
-       "type": "Grass"
-      },
-      {
-       "name": "Poisonpowder",
-       "type": "Poison"
-      },
-      {
-       "name": "Stun Spore",
-       "type": "Grass"
-      },
-      {
-       "name": "Acid",
-       "type": "Poison",
-       "power": 40
-      }
-     ]
-    }
-   ],
-   "id": "beauty-tamia",
-   "area": "Gym"
-  },
-  {
-   "class": "Beauty",
    "name": "Lori",
    "prize": 1728,
    "party": [
@@ -944,64 +1002,6 @@
     }
    ],
    "id": "beauty-lori",
-   "area": "Gym"
-  },
-  {
-   "class": "Lass",
-   "name": "Lisa",
-   "prize": 368,
-   "party": [
-    {
-     "dex": 43,
-     "name": "Oddish",
-     "level": 23,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Poisonpowder",
-       "type": "Poison"
-      },
-      {
-       "name": "Stun Spore",
-       "type": "Grass"
-      },
-      {
-       "name": "Sleep Powder",
-       "type": "Grass"
-      },
-      {
-       "name": "Acid",
-       "type": "Poison",
-       "power": 40
-      }
-     ]
-    },
-    {
-     "dex": 44,
-     "name": "Gloom",
-     "level": 23,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Sweet Scent",
-       "type": "Normal"
-      },
-      {
-       "name": "Poisonpowder",
-       "type": "Poison"
-      },
-      {
-       "name": "Stun Spore",
-       "type": "Grass"
-      },
-      {
-       "name": "Sleep Powder",
-       "type": "Grass"
-      }
-     ]
-    }
-   ],
-   "id": "lass-lisa",
    "area": "Gym"
   },
   {

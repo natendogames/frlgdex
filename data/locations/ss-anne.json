@@ -900,67 +900,6 @@
    "area": "2F Room 2"
   },
   {
-   "class": "Gentleman",
-   "name": "Lamar",
-   "prize": 1224,
-   "party": [
-    {
-     "dex": 58,
-     "name": "Growlithe",
-     "level": 17,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      },
-      {
-       "name": "Roar",
-       "type": "Normal"
-      },
-      {
-       "name": "Ember",
-       "type": "Fire",
-       "power": 40
-      },
-      {
-       "name": "Leer",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 77,
-     "name": "Ponyta",
-     "level": 17,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Quick Attack",
-       "type": "Normal",
-       "power": 40
-      },
-      {
-       "name": "Growl",
-       "type": "Normal"
-      },
-      {
-       "name": "Tail Whip",
-       "type": "Normal"
-      },
-      {
-       "name": "Ember",
-       "type": "Fire",
-       "power": 40
-      }
-     ]
-    }
-   ],
-   "id": "gentleman-lamar",
-   "area": "2F Room 4"
-  },
-  {
    "class": "Lass",
    "name": "Dawn",
    "prize": 288,
@@ -1022,39 +961,65 @@
    "area": "2F Room 4"
   },
   {
-   "class": "Sailor",
-   "name": "Phillip",
-   "prize": 640,
+   "class": "Gentleman",
+   "name": "Lamar",
+   "prize": 1224,
    "party": [
     {
-     "dex": 66,
-     "name": "Machop",
-     "level": 20,
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 17,
      "iv": 0,
      "moves": [
       {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
        "name": "Leer",
        "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 77,
+     "name": "Ponyta",
+     "level": 17,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
       },
       {
-       "name": "Focus Energy",
+       "name": "Growl",
        "type": "Normal"
       },
       {
-       "name": "Karate Chop",
-       "type": "Fighting",
-       "power": 50
+       "name": "Tail Whip",
+       "type": "Normal"
       },
       {
-       "name": "Seismic Toss",
-       "type": "Fighting",
-       "power": 1
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
       }
      ]
     }
    ],
-   "id": "sailor-phillip",
-   "area": "B1F Room 1"
+   "id": "gentleman-lamar",
+   "area": "2F Room 4"
   },
   {
    "class": "Fisherman",
@@ -1137,6 +1102,41 @@
     }
    ],
    "id": "fisherman-barny",
+   "area": "B1F Room 1"
+  },
+  {
+   "class": "Sailor",
+   "name": "Phillip",
+   "prize": 640,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "sailor-phillip",
    "area": "B1F Room 1"
   },
   {

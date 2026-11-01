@@ -600,96 +600,6 @@
    "area": "Sevault Canyon"
   },
   {
-   "class": "Tamer",
-   "name": "Evan",
-   "prize": 1960,
-   "party": [
-    {
-     "dex": 28,
-     "name": "Sandslash",
-     "level": 48,
-     "iv": 4,
-     "moves": [
-      {
-       "name": "Poison Sting",
-       "type": "Poison",
-       "power": 15
-      },
-      {
-       "name": "Slash",
-       "type": "Normal",
-       "power": 70
-      },
-      {
-       "name": "Swift",
-       "type": "Normal",
-       "power": 60
-      },
-      {
-       "name": "Fury Swipes",
-       "type": "Normal",
-       "power": 18
-      }
-     ]
-    },
-    {
-     "dex": 108,
-     "name": "Lickitung",
-     "level": 48,
-     "iv": 4,
-     "moves": [
-      {
-       "name": "Wrap",
-       "type": "Normal",
-       "power": 15
-      },
-      {
-       "name": "Disable",
-       "type": "Normal"
-      },
-      {
-       "name": "Slam",
-       "type": "Normal",
-       "power": 80
-      },
-      {
-       "name": "Screech",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 217,
-     "name": "Ursaring",
-     "level": 49,
-     "iv": 4,
-     "moves": [
-      {
-       "name": "Rest",
-       "type": "Psychic"
-      },
-      {
-       "name": "Slash",
-       "type": "Normal",
-       "power": 70
-      },
-      {
-       "name": "Snore",
-       "type": "Normal",
-       "power": 40
-      },
-      {
-       "name": "Thrash",
-       "type": "Normal",
-       "power": 90
-      }
-     ]
-    }
-   ],
-   "id": "tamer-evan",
-   "area": "Sevault Canyon"
-  },
-  {
    "class": "Pokémon Ranger",
    "name": "Jackson",
    "prize": 1764,
@@ -777,6 +687,96 @@
     "Full Restore"
    ],
    "id": "pkmn-ranger-jackson",
+   "area": "Sevault Canyon"
+  },
+  {
+   "class": "Tamer",
+   "name": "Evan",
+   "prize": 1960,
+   "party": [
+    {
+     "dex": 28,
+     "name": "Sandslash",
+     "level": 48,
+     "iv": 4,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    },
+    {
+     "dex": 108,
+     "name": "Lickitung",
+     "level": 48,
+     "iv": 4,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 217,
+     "name": "Ursaring",
+     "level": 49,
+     "iv": 4,
+     "moves": [
+      {
+       "name": "Rest",
+       "type": "Psychic"
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Snore",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Thrash",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "id": "tamer-evan",
    "area": "Sevault Canyon"
   },
   {

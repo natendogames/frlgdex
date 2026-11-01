@@ -326,41 +326,6 @@
    "id": "hiker-franklin"
   },
   {
-   "class": "Hiker",
-   "name": "Wayne",
-   "prize": 612,
-   "party": [
-    {
-     "dex": 95,
-     "name": "Onix",
-     "level": 17,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Tackle",
-       "type": "Normal",
-       "power": 35
-      },
-      {
-       "name": "Screech",
-       "type": "Normal"
-      },
-      {
-       "name": "Bind",
-       "type": "Normal",
-       "power": 15
-      },
-      {
-       "name": "Rock Throw",
-       "type": "Rock",
-       "power": 50
-      }
-     ]
-    }
-   ],
-   "id": "hiker-wayne"
-  },
-  {
    "class": "Youngster",
    "name": "Joey",
    "prize": 240,
@@ -420,6 +385,41 @@
     }
    ],
    "id": "youngster-joey"
+  },
+  {
+   "class": "Hiker",
+   "name": "Wayne",
+   "prize": 612,
+   "party": [
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 17,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Bind",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      }
+     ]
+    }
+   ],
+   "id": "hiker-wayne"
   },
   {
    "class": "Youngster",

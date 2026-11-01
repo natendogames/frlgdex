@@ -321,94 +321,6 @@
    "area": "2F"
   },
   {
-   "class": "Scientist",
-   "name": "Jerry",
-   "prize": 1344,
-   "party": [
-    {
-     "dex": 81,
-     "name": "Magnemite",
-     "level": 28,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Supersonic",
-       "type": "Normal"
-      },
-      {
-       "name": "Sonicboom",
-       "type": "Normal",
-       "power": 1
-      },
-      {
-       "name": "Thunder Wave",
-       "type": "Electric"
-      },
-      {
-       "name": "Spark",
-       "type": "Electric",
-       "power": 65
-      }
-     ]
-    },
-    {
-     "dex": 100,
-     "name": "Voltorb",
-     "level": 28,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Screech",
-       "type": "Normal"
-      },
-      {
-       "name": "Sonicboom",
-       "type": "Normal",
-       "power": 1
-      },
-      {
-       "name": "Spark",
-       "type": "Electric",
-       "power": 65
-      },
-      {
-       "name": "Selfdestruct",
-       "type": "Normal",
-       "power": 200
-      }
-     ]
-    },
-    {
-     "dex": 82,
-     "name": "Magneton",
-     "level": 28,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Supersonic",
-       "type": "Normal"
-      },
-      {
-       "name": "Sonicboom",
-       "type": "Normal",
-       "power": 1
-      },
-      {
-       "name": "Thunder Wave",
-       "type": "Electric"
-      },
-      {
-       "name": "Spark",
-       "type": "Electric",
-       "power": 65
-      }
-     ]
-    }
-   ],
-   "id": "scientist-jerry",
-   "area": "2F"
-  },
-  {
    "class": "Team Rocket",
    "name": "Grunt",
    "prize": 928,
@@ -614,13 +526,39 @@
   },
   {
    "class": "Scientist",
-   "name": "Jose",
-   "prize": 1392,
+   "name": "Jerry",
+   "prize": 1344,
    "party": [
     {
-     "dex": 101,
-     "name": "Electrode",
-     "level": 29,
+     "dex": 81,
+     "name": "Magnemite",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      }
+     ]
+    },
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 28,
      "iv": 0,
      "moves": [
       {
@@ -645,35 +583,34 @@
      ]
     },
     {
-     "dex": 110,
-     "name": "Weezing",
-     "level": 29,
+     "dex": 82,
+     "name": "Magneton",
+     "level": 28,
      "iv": 0,
      "moves": [
       {
-       "name": "Smog",
-       "type": "Poison",
-       "power": 20
-      },
-      {
-       "name": "Selfdestruct",
-       "type": "Normal",
-       "power": 200
-      },
-      {
-       "name": "Sludge",
-       "type": "Poison",
-       "power": 65
-      },
-      {
-       "name": "Smokescreen",
+       "name": "Supersonic",
        "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
       }
      ]
     }
    ],
-   "id": "scientist-jose",
-   "area": "3F"
+   "id": "scientist-jerry",
+   "area": "2F"
   },
   {
    "class": "Team Rocket",
@@ -763,6 +700,69 @@
    "area": "3F"
   },
   {
+   "class": "Scientist",
+   "name": "Jose",
+   "prize": 1392,
+   "party": [
+    {
+     "dex": 101,
+     "name": "Electrode",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    },
+    {
+     "dex": 110,
+     "name": "Weezing",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "scientist-jose",
+   "area": "3F"
+  },
+  {
    "class": "Team Rocket",
    "name": "Grunt",
    "prize": 928,
@@ -822,6 +822,42 @@
     }
    ],
    "id": "team-rocket-grunt-26",
+   "area": "4F"
+  },
+  {
+   "class": "Scientist",
+   "name": "Rodney",
+   "prize": 1584,
+   "party": [
+    {
+     "dex": 101,
+     "name": "Electrode",
+     "level": 33,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    }
+   ],
+   "id": "scientist-rodney",
    "area": "4F"
   },
   {
@@ -912,42 +948,6 @@
    "area": "4F"
   },
   {
-   "class": "Scientist",
-   "name": "Rodney",
-   "prize": 1584,
-   "party": [
-    {
-     "dex": 101,
-     "name": "Electrode",
-     "level": 33,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Screech",
-       "type": "Normal"
-      },
-      {
-       "name": "Sonicboom",
-       "type": "Normal",
-       "power": 1
-      },
-      {
-       "name": "Spark",
-       "type": "Electric",
-       "power": 65
-      },
-      {
-       "name": "Selfdestruct",
-       "type": "Normal",
-       "power": 200
-      }
-     ]
-    }
-   ],
-   "id": "scientist-rodney",
-   "area": "4F"
-  },
-  {
    "class": "Team Rocket",
    "name": "Grunt",
    "prize": 1056,
@@ -980,101 +980,6 @@
     }
    ],
    "id": "team-rocket-grunt-28",
-   "area": "5F"
-  },
-  {
-   "class": "Juggler",
-   "name": "Dalton",
-   "prize": 1160,
-   "party": [
-    {
-     "dex": 64,
-     "name": "Kadabra",
-     "level": 29,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Disable",
-       "type": "Normal"
-      },
-      {
-       "name": "Psybeam",
-       "type": "Psychic",
-       "power": 65
-      },
-      {
-       "name": "Reflect",
-       "type": "Psychic"
-      },
-      {
-       "name": "Recover",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 122,
-     "name": "Mr. Mime",
-     "level": 29,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Reflect",
-       "type": "Psychic"
-      },
-      {
-       "name": "Magical Leaf",
-       "type": "Grass",
-       "power": 60
-      },
-      {
-       "name": "Encore",
-       "type": "Normal"
-      },
-      {
-       "name": "Psybeam",
-       "type": "Psychic",
-       "power": 65
-      }
-     ]
-    }
-   ],
-   "id": "juggler-dalton",
-   "area": "5F"
-  },
-  {
-   "class": "Team Rocket",
-   "name": "Grunt",
-   "prize": 1056,
-   "party": [
-    {
-     "dex": 97,
-     "name": "Hypno",
-     "level": 33,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Confusion",
-       "type": "Psychic",
-       "power": 50
-      },
-      {
-       "name": "Headbutt",
-       "type": "Normal",
-       "power": 70
-      },
-      {
-       "name": "Poison Gas",
-       "type": "Poison"
-      },
-      {
-       "name": "Meditate",
-       "type": "Psychic"
-      }
-     ]
-    }
-   ],
-   "id": "team-rocket-grunt-29",
    "area": "5F"
   },
   {
@@ -1195,89 +1100,97 @@
   {
    "class": "Team Rocket",
    "name": "Grunt",
-   "prize": 896,
+   "prize": 1056,
    "party": [
     {
-     "dex": 41,
-     "name": "Zubat",
-     "level": 28,
+     "dex": 97,
+     "name": "Hypno",
+     "level": 33,
      "iv": 0,
      "moves": [
       {
-       "name": "Supersonic",
-       "type": "Normal"
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
       },
       {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
       },
       {
-       "name": "Wing Attack",
-       "type": "Flying",
-       "power": 60
+       "name": "Poison Gas",
+       "type": "Poison"
       },
       {
-       "name": "Confuse Ray",
-       "type": "Ghost"
-      }
-     ]
-    },
-    {
-     "dex": 41,
-     "name": "Zubat",
-     "level": 28,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Supersonic",
-       "type": "Normal"
-      },
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      },
-      {
-       "name": "Wing Attack",
-       "type": "Flying",
-       "power": 60
-      },
-      {
-       "name": "Confuse Ray",
-       "type": "Ghost"
-      }
-     ]
-    },
-    {
-     "dex": 42,
-     "name": "Golbat",
-     "level": 28,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Supersonic",
-       "type": "Normal"
-      },
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      },
-      {
-       "name": "Wing Attack",
-       "type": "Flying",
-       "power": 60
-      },
-      {
-       "name": "Confuse Ray",
-       "type": "Ghost"
+       "name": "Meditate",
+       "type": "Psychic"
       }
      ]
     }
    ],
-   "id": "team-rocket-grunt-31",
-   "area": "6F"
+   "id": "team-rocket-grunt-29",
+   "area": "5F"
+  },
+  {
+   "class": "Juggler",
+   "name": "Dalton",
+   "prize": 1160,
+   "party": [
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Psybeam",
+       "type": "Psychic",
+       "power": 65
+      },
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 122,
+     "name": "Mr. Mime",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Magical Leaf",
+       "type": "Grass",
+       "power": 60
+      },
+      {
+       "name": "Encore",
+       "type": "Normal"
+      },
+      {
+       "name": "Psybeam",
+       "type": "Psychic",
+       "power": 65
+      }
+     ]
+    }
+   ],
+   "id": "juggler-dalton",
+   "area": "5F"
   },
   {
    "class": "Scientist",
@@ -1487,6 +1400,93 @@
   {
    "class": "Team Rocket",
    "name": "Grunt",
+   "prize": 896,
+   "party": [
+    {
+     "dex": 41,
+     "name": "Zubat",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 41,
+     "name": "Zubat",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 42,
+     "name": "Golbat",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-31",
+   "area": "6F"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
    "prize": 928,
    "party": [
     {
@@ -1543,67 +1543,6 @@
     }
    ],
    "id": "team-rocket-grunt-34",
-   "area": "7F"
-  },
-  {
-   "class": "Scientist",
-   "name": "Joshua",
-   "prize": 1392,
-   "party": [
-    {
-     "dex": 101,
-     "name": "Electrode",
-     "level": 29,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Screech",
-       "type": "Normal"
-      },
-      {
-       "name": "Sonicboom",
-       "type": "Normal",
-       "power": 1
-      },
-      {
-       "name": "Spark",
-       "type": "Electric",
-       "power": 65
-      },
-      {
-       "name": "Selfdestruct",
-       "type": "Normal",
-       "power": 200
-      }
-     ]
-    },
-    {
-     "dex": 89,
-     "name": "Muk",
-     "level": 29,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Disable",
-       "type": "Normal"
-      },
-      {
-       "name": "Sludge",
-       "type": "Poison",
-       "power": 65
-      },
-      {
-       "name": "Minimize",
-       "type": "Normal"
-      },
-      {
-       "name": "Screech",
-       "type": "Normal"
-      }
-     ]
-    }
-   ],
-   "id": "scientist-joshua",
    "area": "7F"
   },
   {
@@ -1779,6 +1718,67 @@
     }
    ],
    "id": "team-rocket-grunt-35",
+   "area": "7F"
+  },
+  {
+   "class": "Scientist",
+   "name": "Joshua",
+   "prize": 1392,
+   "party": [
+    {
+     "dex": 101,
+     "name": "Electrode",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    },
+    {
+     "dex": 89,
+     "name": "Muk",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "scientist-joshua",
    "area": "7F"
   },
   {
@@ -2273,6 +2273,67 @@
    "area": "8F"
   },
   {
+   "class": "Scientist",
+   "name": "Parker",
+   "prize": 1392,
+   "party": [
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 101,
+     "name": "Electrode",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    }
+   ],
+   "id": "scientist-parker",
+   "area": "8F"
+  },
+  {
    "class": "Team Rocket",
    "name": "Grunt",
    "prize": 832,
@@ -2389,154 +2450,6 @@
   },
   {
    "class": "Scientist",
-   "name": "Parker",
-   "prize": 1392,
-   "party": [
-    {
-     "dex": 88,
-     "name": "Grimer",
-     "level": 29,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Disable",
-       "type": "Normal"
-      },
-      {
-       "name": "Sludge",
-       "type": "Poison",
-       "power": 65
-      },
-      {
-       "name": "Minimize",
-       "type": "Normal"
-      },
-      {
-       "name": "Screech",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 101,
-     "name": "Electrode",
-     "level": 29,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Screech",
-       "type": "Normal"
-      },
-      {
-       "name": "Sonicboom",
-       "type": "Normal",
-       "power": 1
-      },
-      {
-       "name": "Spark",
-       "type": "Electric",
-       "power": 65
-      },
-      {
-       "name": "Selfdestruct",
-       "type": "Normal",
-       "power": 200
-      }
-     ]
-    }
-   ],
-   "id": "scientist-parker",
-   "area": "8F"
-  },
-  {
-   "class": "Team Rocket",
-   "name": "Grunt",
-   "prize": 896,
-   "party": [
-    {
-     "dex": 42,
-     "name": "Golbat",
-     "level": 28,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Supersonic",
-       "type": "Normal"
-      },
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      },
-      {
-       "name": "Wing Attack",
-       "type": "Flying",
-       "power": 60
-      },
-      {
-       "name": "Confuse Ray",
-       "type": "Ghost"
-      }
-     ]
-    },
-    {
-     "dex": 96,
-     "name": "Drowzee",
-     "level": 28,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Confusion",
-       "type": "Psychic",
-       "power": 50
-      },
-      {
-       "name": "Headbutt",
-       "type": "Normal",
-       "power": 70
-      },
-      {
-       "name": "Poison Gas",
-       "type": "Poison"
-      },
-      {
-       "name": "Meditate",
-       "type": "Psychic"
-      }
-     ]
-    },
-    {
-     "dex": 97,
-     "name": "Hypno",
-     "level": 28,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Disable",
-       "type": "Normal"
-      },
-      {
-       "name": "Confusion",
-       "type": "Psychic",
-       "power": 50
-      },
-      {
-       "name": "Headbutt",
-       "type": "Normal",
-       "power": 70
-      },
-      {
-       "name": "Poison Gas",
-       "type": "Poison"
-      }
-     ]
-    }
-   ],
-   "id": "team-rocket-grunt-38",
-   "area": "9F"
-  },
-  {
-   "class": "Scientist",
    "name": "Ed",
    "prize": 1344,
    "party": [
@@ -2630,6 +2543,93 @@
    "prize": 896,
    "party": [
     {
+     "dex": 42,
+     "name": "Golbat",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 96,
+     "name": "Drowzee",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 97,
+     "name": "Hypno",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-38",
+   "area": "9F"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 896,
+   "party": [
+    {
      "dex": 96,
      "name": "Drowzee",
      "level": 28,
@@ -2712,42 +2712,6 @@
    "area": "9F"
   },
   {
-   "class": "Team Rocket",
-   "name": "Grunt",
-   "prize": 1056,
-   "party": [
-    {
-     "dex": 67,
-     "name": "Machoke",
-     "level": 33,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Seismic Toss",
-       "type": "Fighting",
-       "power": 1
-      },
-      {
-       "name": "Foresight",
-       "type": "Normal"
-      },
-      {
-       "name": "Revenge",
-       "type": "Fighting",
-       "power": 60
-      },
-      {
-       "name": "Vital Throw",
-       "type": "Fighting",
-       "power": 70
-      }
-     ]
-    }
-   ],
-   "id": "team-rocket-grunt-39",
-   "area": "10F"
-  },
-  {
    "class": "Scientist",
    "name": "Travis",
    "prize": 1392,
@@ -2808,6 +2772,182 @@
    ],
    "id": "scientist-travis",
    "area": "10F"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 1056,
+   "party": [
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 33,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-39",
+   "area": "10F"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 800,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 25,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 25,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 41,
+     "name": "Zubat",
+     "level": 25,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Astonish",
+       "type": "Ghost",
+       "power": 30
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 25,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 25,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Glare",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-40",
+   "area": "11F"
   },
   {
    "class": "Team Rocket",
@@ -3011,146 +3151,6 @@
     }
    ],
    "id": "boss-giovanni-2",
-   "area": "11F"
-  },
-  {
-   "class": "Team Rocket",
-   "name": "Grunt",
-   "prize": 800,
-   "party": [
-    {
-     "dex": 19,
-     "name": "Rattata",
-     "level": 25,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Tail Whip",
-       "type": "Normal"
-      },
-      {
-       "name": "Quick Attack",
-       "type": "Normal",
-       "power": 40
-      },
-      {
-       "name": "Hyper Fang",
-       "type": "Normal",
-       "power": 80
-      },
-      {
-       "name": "Focus Energy",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 19,
-     "name": "Rattata",
-     "level": 25,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Tail Whip",
-       "type": "Normal"
-      },
-      {
-       "name": "Quick Attack",
-       "type": "Normal",
-       "power": 40
-      },
-      {
-       "name": "Hyper Fang",
-       "type": "Normal",
-       "power": 80
-      },
-      {
-       "name": "Focus Energy",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 41,
-     "name": "Zubat",
-     "level": 25,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Astonish",
-       "type": "Ghost",
-       "power": 30
-      },
-      {
-       "name": "Supersonic",
-       "type": "Normal"
-      },
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      },
-      {
-       "name": "Wing Attack",
-       "type": "Flying",
-       "power": 60
-      }
-     ]
-    },
-    {
-     "dex": 19,
-     "name": "Rattata",
-     "level": 25,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Tail Whip",
-       "type": "Normal"
-      },
-      {
-       "name": "Quick Attack",
-       "type": "Normal",
-       "power": 40
-      },
-      {
-       "name": "Hyper Fang",
-       "type": "Normal",
-       "power": 80
-      },
-      {
-       "name": "Focus Energy",
-       "type": "Normal"
-      }
-     ]
-    },
-    {
-     "dex": 23,
-     "name": "Ekans",
-     "level": 25,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Poison Sting",
-       "type": "Poison",
-       "power": 15
-      },
-      {
-       "name": "Bite",
-       "type": "Dark",
-       "power": 60
-      },
-      {
-       "name": "Glare",
-       "type": "Normal"
-      },
-      {
-       "name": "Screech",
-       "type": "Normal"
-      }
-     ]
-    }
-   ],
-   "id": "team-rocket-grunt-40",
    "area": "11F"
   }
  ],

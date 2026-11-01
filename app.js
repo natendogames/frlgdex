@@ -769,6 +769,7 @@ function trainerCard(t, stage, opts = {}) {
     ${info ? `<p class="note">${info}</p>` : ''}
     ${t.note && !t.byStarter ? `<p class="note">${esc(t.note)}</p>` : ''}${rival}${party ? opts.extra?.(party) || '' : ''}
     ${party ? party.map(p => foeRow(p, stage, party)).join('') : ''}
+    ${opts.loc && typeof rematchBlock === 'function' ? rematchBlock(t, opts.loc) : ''}
     ${party && cur().team.some(n => !teamMeta(n).level) ? '<p class="note">* Level not set in Battle plan, so it is assumed to match theirs.</p>' : ''}</details>`;
 }
 
@@ -1147,7 +1148,8 @@ view.addEventListener('change', e => {
     view.querySelectorAll(`[data-key="dex:${d}"]`).forEach(x => { x.checked = e.target.checked; x.closest('.row').classList.toggle('checked', e.target.checked); });
   } else if (e.target.checked) s.checks[key] = true; else delete s.checks[key];
   save();
-  e.target.closest('.row, .trainer').classList.toggle('checked', e.target.checked);
+  e.target.closest('.row, .trainer')?.classList.toggle('checked', e.target.checked);
+  e.target.closest('.chip')?.classList.toggle('on', e.target.checked);
   updateLegCount(e.target);
   if (key.includes(':trainer:')) { const h = [...view.querySelectorAll('h2')].find(x => x.textContent.startsWith('Trainers (')); if (h) h.textContent = h.textContent.replace(/\(\d+\//, `(${view.querySelectorAll('.tcheck:checked').length}/`); }
 });

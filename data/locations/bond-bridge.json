@@ -276,6 +276,42 @@
  "gifts": [],
  "trainers": [
   {
+   "class": "Swimmer",
+   "name": "Tisha",
+   "prize": 152,
+   "party": [
+    {
+     "dex": 99,
+     "name": "Kingler",
+     "level": 38,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Shot",
+       "type": "Ground",
+       "power": 55
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Guillotine",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-female-tisha",
+   "area": "Bond Bridge"
+  },
+  {
    "class": "Twins",
    "name": "Joy & Meg",
    "prize": 888,
@@ -530,42 +566,6 @@
     }
    ],
    "id": "tuber-alexis",
-   "area": "Bond Bridge"
-  },
-  {
-   "class": "Swimmer",
-   "name": "Tisha",
-   "prize": 152,
-   "party": [
-    {
-     "dex": 99,
-     "name": "Kingler",
-     "level": 38,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Harden",
-       "type": "Normal"
-      },
-      {
-       "name": "Mud Shot",
-       "type": "Ground",
-       "power": 55
-      },
-      {
-       "name": "Stomp",
-       "type": "Normal",
-       "power": 65
-      },
-      {
-       "name": "Guillotine",
-       "type": "Normal",
-       "power": 1
-      }
-     ]
-    }
-   ],
-   "id": "swimmer-female-tisha",
    "area": "Bond Bridge"
   },
   {

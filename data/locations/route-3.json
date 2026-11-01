@@ -157,58 +157,6 @@
    "id": "bug-catcher-colton"
   },
   {
-   "class": "Youngster",
-   "name": "Ben",
-   "prize": 176,
-   "party": [
-    {
-     "dex": 19,
-     "name": "Rattata",
-     "level": 11,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Tackle",
-       "type": "Normal",
-       "power": 35
-      },
-      {
-       "name": "Tail Whip",
-       "type": "Normal"
-      },
-      {
-       "name": "Quick Attack",
-       "type": "Normal",
-       "power": 40
-      }
-     ]
-    },
-    {
-     "dex": 23,
-     "name": "Ekans",
-     "level": 11,
-     "iv": 0,
-     "moves": [
-      {
-       "name": "Wrap",
-       "type": "Normal",
-       "power": 15
-      },
-      {
-       "name": "Leer",
-       "type": "Normal"
-      },
-      {
-       "name": "Poison Sting",
-       "type": "Poison",
-       "power": 15
-      }
-     ]
-    }
-   ],
-   "id": "youngster-ben"
-  },
-  {
    "class": "Lass",
    "name": "Janice",
    "prize": 144,
@@ -259,6 +207,58 @@
     }
    ],
    "id": "lass-janice"
+  },
+  {
+   "class": "Youngster",
+   "name": "Ben",
+   "prize": 176,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 11,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 11,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "youngster-ben"
   },
   {
    "class": "Bug Catcher",
