@@ -210,74 +210,74 @@
    "where": "Outside"
   },
   {
-   "id": "hidden-game-corner-none",
-   "name": "None ×10",
+   "id": "hidden-game-corner-coins",
+   "name": "Coins ×10",
    "hidden": true,
    "where": "Game Corner"
   },
   {
-   "id": "hidden-game-corner-none-2",
-   "name": "None ×10",
+   "id": "hidden-game-corner-coins-2",
+   "name": "Coins ×10",
    "hidden": true,
    "where": "Game Corner"
   },
   {
-   "id": "hidden-game-corner-none-3",
-   "name": "None ×20",
+   "id": "hidden-game-corner-coins-3",
+   "name": "Coins ×20",
    "hidden": true,
    "where": "Game Corner"
   },
   {
-   "id": "hidden-game-corner-none-4",
-   "name": "None ×10",
+   "id": "hidden-game-corner-coins-4",
+   "name": "Coins ×10",
    "hidden": true,
    "where": "Game Corner"
   },
   {
-   "id": "hidden-game-corner-none-5",
-   "name": "None ×10",
+   "id": "hidden-game-corner-coins-5",
+   "name": "Coins ×10",
    "hidden": true,
    "where": "Game Corner"
   },
   {
-   "id": "hidden-game-corner-none-6",
-   "name": "None ×20",
+   "id": "hidden-game-corner-coins-6",
+   "name": "Coins ×20",
    "hidden": true,
    "where": "Game Corner"
   },
   {
-   "id": "hidden-game-corner-none-7",
-   "name": "None ×10",
+   "id": "hidden-game-corner-coins-7",
+   "name": "Coins ×10",
    "hidden": true,
    "where": "Game Corner"
   },
   {
-   "id": "hidden-game-corner-none-8",
-   "name": "None ×10",
+   "id": "hidden-game-corner-coins-8",
+   "name": "Coins ×10",
    "hidden": true,
    "where": "Game Corner"
   },
   {
-   "id": "hidden-game-corner-none-9",
-   "name": "None ×10",
+   "id": "hidden-game-corner-coins-9",
+   "name": "Coins ×10",
    "hidden": true,
    "where": "Game Corner"
   },
   {
-   "id": "hidden-game-corner-none-10",
-   "name": "None ×40",
+   "id": "hidden-game-corner-coins-10",
+   "name": "Coins ×40",
    "hidden": true,
    "where": "Game Corner"
   },
   {
-   "id": "hidden-game-corner-none-11",
-   "name": "None ×100",
+   "id": "hidden-game-corner-coins-11",
+   "name": "Coins ×100",
    "hidden": true,
    "where": "Game Corner"
   },
   {
-   "id": "hidden-game-corner-none-12",
-   "name": "None ×10",
+   "id": "hidden-game-corner-coins-12",
+   "name": "Coins ×10",
    "hidden": true,
    "where": "Game Corner"
   }
