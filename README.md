@@ -34,4 +34,13 @@ python3 -I scripts/build_data.py /tmp/pokefirered data
 | `types.json` | Gen 3 type chart (attacker → defender → multiplier) |
 | `moves.json` | Move name → type, power and special damage effect, for the damage estimates |
 
+## Tests
+
+`node tests/audit_battles.js` (Node 18+, no installs) loads `app.js` with a stub DOM and audits the Battle plan: for every Gym Leader,
+rival, Giovanni, Elite Four and Champion Pokémon, in both versions and with every starter, it checks each catch suggestion is
+catchable by then, evolves legally, only uses moves it can really know, and is super effective; it fails when a
+brute-force search finds a super-effective catch the planner missed. It also checks the type chart against Gen 3, key move
+data, and known answers (Pikachu, Oddish or Bellsprout for Misty; Diglett for Lt. Surge). Add `--report out.txt` to dump every
+suggestion. GitHub Actions runs it on every push and pull request.
+
 Progress keys are `dex:<number>` for Pokémon and `<location-id>:item:<id>` or `<location-id>:gift:<id>` for checklists, so keep ids stable.

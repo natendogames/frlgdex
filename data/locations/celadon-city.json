@@ -93,6 +93,7 @@
     "LG"
    ],
    "area": "Condominiums Roof Room",
+   "levels": "25",
    "notes": "Eevee (Lv 25) · Poké Ball on the table"
   },
   {
@@ -103,6 +104,7 @@
     "FR"
    ],
    "area": "Game Corner Prize Room",
+   "levels": "9",
    "notes": "Abra (Lv 9) for 180 coins · Prize clerk"
   },
   {
@@ -113,6 +115,7 @@
     "FR"
    ],
    "area": "Game Corner Prize Room",
+   "levels": "8",
    "notes": "Clefairy (Lv 8) for 500 coins · Prize clerk"
   },
   {
@@ -123,6 +126,7 @@
     "FR"
    ],
    "area": "Game Corner Prize Room",
+   "levels": "18",
    "notes": "Dratini (Lv 18) for 2800 coins · Prize clerk"
   },
   {
@@ -133,6 +137,7 @@
     "FR"
    ],
    "area": "Game Corner Prize Room",
+   "levels": "25",
    "notes": "Scyther (Lv 25) for 5500 coins · Prize clerk"
   },
   {
@@ -143,6 +148,7 @@
     "FR"
    ],
    "area": "Game Corner Prize Room",
+   "levels": "26",
    "notes": "Porygon (Lv 26) for 9999 coins · Prize clerk"
   },
   {
@@ -153,6 +159,7 @@
     "LG"
    ],
    "area": "Game Corner Prize Room",
+   "levels": "7",
    "notes": "Abra (Lv 7) for 120 coins · Prize clerk"
   },
   {
@@ -163,6 +170,7 @@
     "LG"
    ],
    "area": "Game Corner Prize Room",
+   "levels": "12",
    "notes": "Clefairy (Lv 12) for 750 coins · Prize clerk"
   },
   {
@@ -173,6 +181,7 @@
     "LG"
    ],
    "area": "Game Corner Prize Room",
+   "levels": "18",
    "notes": "Pinsir (Lv 18) for 2500 coins · Prize clerk"
   },
   {
@@ -183,6 +192,7 @@
     "LG"
    ],
    "area": "Game Corner Prize Room",
+   "levels": "24",
    "notes": "Dratini (Lv 24) for 4600 coins · Prize clerk"
   },
   {
@@ -193,6 +203,7 @@
     "LG"
    ],
    "area": "Game Corner Prize Room",
+   "levels": "18",
    "notes": "Porygon (Lv 18) for 6500 coins · Prize clerk"
   }
  ],

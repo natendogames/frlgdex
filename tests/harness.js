@@ -1,0 +1,32 @@
+'use strict';
+// Loads app.js in Node with a stub DOM so the battle logic can be tested without a browser.
+const fs = require('fs'), path = require('path'), vm = require('vm');
+const ROOT = path.join(__dirname, '..');
+
+async function loadApp() {
+  const el = () => ({ addEventListener() {}, querySelectorAll: () => [], classList: { toggle() {} }, dataset: {}, set innerHTML(v) { this._h = v; }, get innerHTML() { return this._h; } });
+  const els = {};
+  const store = {};
+  const ctx = {
+    console, setTimeout, clearTimeout, Promise, JSON, Math, Object, Array, Set, Map, String, Number,
+    document: { getElementById: id => (els[id] ||= el()), querySelectorAll: () => [], documentElement: { dataset: {} }, addEventListener() {} },
+    localStorage: { getItem: k => store[k] ?? null, setItem: (k, v) => { store[k] = String(v); }, removeItem: k => { delete store[k]; } },
+    location: { hash: '#/none' }, history: { length: 1 }, navigator: {},
+    fetch: async url => {
+      if (/^https?:/.test(url)) throw new Error('offline');
+      const body = fs.readFileSync(path.join(ROOT, url), 'utf8');
+      return { ok: true, status: 200, json: async () => JSON.parse(body) };
+    }
+  };
+  ctx.window = { addEventListener() {}, scrollTo() {}, scrollY: 0 };
+  ctx.globalThis = ctx;
+  vm.createContext(ctx);
+  const src = fs.readFileSync(path.join(ROOT, 'app.js'), 'utf8')
+    // don't render a page; expose the internals instead
+    .replace(/loadData\(\)\.then\([^\n]*\n/, '')
+    + '\nglobalThis.app = { state, loadData, cur, mon, stageOf, catchableBy, catchSuggestions, foeRow, foeBattler, myBattler, duel, defaultMoves, bestMoves: typeof bestMoves === "function" ? bestMoves : null, battleStage: typeof battleStage === "function" ? battleStage : null, evoForms, eff, lineOf: typeof lineOf === "function" ? lineOf : null, learnedBy: typeof learnedBy === "function" ? learnedBy : null };';
+  vm.runInContext(src, ctx, { filename: 'app.js' });
+  await ctx.app.loadData();
+  return ctx.app;
+}
+module.exports = { loadApp };

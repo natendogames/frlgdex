@@ -167,7 +167,18 @@ const UNLOCK = {
   'rock-smash': { at: 'ember-spa', need: 'Rock Smash (HM06 from the Ember Spa on One Island, used with the Marsh Badge)' }
 };
 const stageOf = id => state.stage[id] ?? 0;
-const encStage = (locId, e) => Math.max(stageOf(locId), UNLOCK[e.method] ? stageOf(UNLOCK[e.method].at) : -1);
+// Surf is handed over in the Safari Zone but only works once you beat Koga, who you can fight after the Safari Zone,
+// so Surf encounters open half a step after it.
+const unlockStage = m => stageOf(UNLOCK[m].at) + (m === 'surf' ? 0.5 : 0);
+const encStage = (locId, e) => Math.max(stageOf(locId), UNLOCK[e.method] ? unlockStage(e.method) : -1);
+// Gyms you can't (or needn't) take on as soon as you reach the city: everything up to this location is open before
+// the gym. Misty: Routes 24 and 25 are open first. Lt. Surge: the gym is behind a Cut tree (HM01 on the S.S. Anne),
+// and Route 11 and Diglett's Cave are open too. Koga: the Safari Zone. Sabrina: a Rocket blocks the gym door until
+// Silph Co. is cleared. Blaine: the gym needs the Secret Key from the Pokémon Mansion.
+const READY_BY = { 'cerulean-city:Gym': 'route-25', 'vermilion-city:Gym': 'digletts-cave', 'fuchsia-city:Gym': 'safari-zone',
+  'saffron-city:Gym': 'silph-co', 'cinnabar-island:Gym': 'pokemon-mansion' };
+// How far into the story you can be when you fight this trainer, for planning with what you could have caught by then.
+const battleStage = (t, locId) => Math.max(stageOf(t.stage || locId), READY_BY[`${locId}:${t.area}`] ? stageOf(READY_BY[`${locId}:${t.area}`]) : 0);
 const unlockName = m => state.index[stageOf(UNLOCK[m].at)].name;
 
 // ---------- helpers ----------
@@ -286,7 +297,7 @@ function renderLocation(id) {
   if (trs.length) {
     html += `<h2>Trainers (${trs.filter(t => s.checks[trainerKey(id, t)]).length}/${trs.length})</h2>${teamHint()}`;
     const cards = list => Object.entries(groupBy(list, t => t.area)).map(([area, grp]) =>
-      (area ? `<div class="area">${esc(area)}</div>` : '') + grp.map(t => trainerCard(t, stageOf(t.stage || id), { loc: id, open: !t.later })).join('')).join('');
+      (area ? `<div class="area">${esc(area)}</div>` : '') + grp.map(t => trainerCard(t, battleStage(t, id), { loc: id, open: !t.later })).join('')).join('');
     const firstVisit = trs.filter(t => !t.later), laterTrs = trs.filter(t => t.later);
     html += cards(firstVisit);
     // Trainers you only fight later in the story: collapsed, planned with what you can have caught by then
@@ -412,6 +423,7 @@ const PHYSICAL = new Set(['Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'R
 const VARIES_POWER = { Return: 102, 'Hidden Power': 70, Magnitude: 70, Flail: 40, Present: 40, Revenge: 60 };
 const PLAYER_IV = 15; // average IVs for your Pokémon; no EVs
 const ALL_TYPES = () => Object.keys(state.types);
+const HITS = { multi: 3, double: 2, triple: 6 }; // 2-5 hit moves average about 3; Triple Kick is 10+20+30 power
 
 function calcStats(dex, level, iv) {
   return mon(dex).stats.map((b, i) => Math.floor((2 * b + iv) * level / 100) + (i === 0 ? level + 10 : 5));
@@ -426,6 +438,58 @@ function defaultMoves(dex, level) {
   }
   return out;
 }
+// Moves a Pokémon of yours would sensibly know at a level: the strongest attack of each type it (or the Pokémon it
+// evolved from) learns by level up by then, best four. The game's own default keeps only the last four moves
+// learned, which drops early attacks like Pikachu's Thundershock for Tail Whip and Double Team; a player keeps them.
+function lineOf(dex) { const out = [dex]; while (mon(out[0]).evolvesFrom) out.unshift(mon(out[0]).evolvesFrom); return out; }
+// Level-up moves a Pokémon can know at `level`. `from` is the Pokémon you start with: the species you catch and its level
+// (it arrives knowing the last four moves it learned by then, the game's default). Without one, the line starts at the
+// first form you can find in the wild or be given, so baby forms like Cleffa (breeding only) don't count.
+// Rules: a pre-evolution learns moves up to the level it evolves at; an evolved form only learns its moves from the
+// level it evolved at onward, so Gyarados never gets its level 1 Thrash and Vileplume never gets Mega Drain. With
+// `relearn` (the Move Reminder on Two Island) any move the species learns by this level is available.
+function learnedBy(dex, level, from = {}, relearn = false) {
+  const full = lineOf(dex);
+  let i0 = from.dex ? full.indexOf(from.dex) : full.findIndex(d => state.found[d]?.length);
+  if (i0 < 0) i0 = from.dex ? full.length - 1 : 0;
+  const line = full.slice(i0), out = new Map();
+  const add = (mv, l, d) => { if (!out.has(mv)) out.set(mv, { level: l, from: d }); };
+  let since = from.level || 1; // level this form was reached at
+  line.forEach((d, i) => {
+    const next = line[i + 1];
+    const evo = next && mon(d).evolutions.find(e => e.into === next);
+    // level evolutions happen at their level; for stones and trades, evolve as late as possible to keep learning
+    const until = Math.min(level, evo && evo.method.startsWith('level') ? evo.param : level);
+    if (i === 0 && from.level) for (const mv of defaultMoves(d, from.level)) add(mv, mon(d).learnset.find(([, m]) => m === mv)[0], d);
+    for (const [l, mv] of mon(d).learnset || []) if (l <= until && (i === 0 ? (from.level ? l > since : true) : l >= since)) add(mv, l, d);
+    if (evo) since = Math.max(since, until);
+  });
+  if (relearn) for (const [l, mv] of mon(dex).learnset || []) if (l <= level) add(mv, l, dex);
+  return out;
+}
+const relearnAt = () => stageOf('two-island');
+function moveScore(dex, level, name) {
+  const m = state.moves[name];
+  if (!m || !m.power || ['counter', 'dream', 'ohko', 'explode', 'fakeout'].includes(m.effect)) return 0;
+  let power = { level: level, fixed20: 20 * 1.5, fixed40: 40 * 1.5, half: 60 }[m.effect] ?? (m.power === 1 ? VARIES_POWER[name] || 0 : m.power);
+  if (name === 'Low Kick') power = 60;
+  if (!m.effect || !['level', 'fixed20', 'fixed40', 'half'].includes(m.effect)) {
+    if (mon(dex).types.includes(m.type)) power *= 1.5;
+    power *= HITS[m.effect] || 1;
+  }
+  return m.effect === 'charge' || m.effect === 'recharge' ? power / 2 : power;
+}
+function bestMoves(dex, level, from, relearn) {
+  const best = {};
+  for (const name of learnedBy(dex, level, from, relearn).keys()) {
+    // Low Kick's power depends on the target's weight, so it doesn't crowd out the other Fighting move
+    const sc = moveScore(dex, level, name), t = name === 'Low Kick' ? name : state.moves[name]?.type;
+    if (sc && (!best[t] || sc > best[t].sc)) best[t] = { name, sc };
+  }
+  const out = Object.values(best).sort((a, b) => b.sc - a.sc).slice(0, 4).map(x => x.name);
+  // a Pokémon that knows no attack yet still has whatever it learned
+  return out.length ? out : defaultMoves(dex, level);
+}
 function battler(dex, level, iv, moves) {
   const st = calcStats(dex, level, iv);
   return { dex, level, iv, moves: moves.filter(m => state.moves[m]), hp: st[0], st };
@@ -435,7 +499,7 @@ function myBattler(n, foeLevel) {
   const meta = teamMeta(n);
   const level = meta.level || foeLevel;
   const moves = (meta.moves || []).filter(Boolean);
-  return { ...battler(n, level, PLAYER_IV, moves.length ? moves : defaultMoves(n, level)), guessedLevel: !meta.level, guessedMoves: !moves.length };
+  return { ...battler(n, level, PLAYER_IV, moves.length ? moves : bestMoves(n, level)), guessedLevel: !meta.level, guessedMoves: !moves.length };
 }
 const foeBattler = p => ({ ...battler(p.dex, p.level, p.iv ?? 0, (p.moves || []).map(m => m.name)), foe: true });
 
@@ -460,18 +524,28 @@ function hit(att, def, name) {
   let dmg = Math.floor(Math.floor(Math.floor(2 * att.level / 5 + 2) * power * A / D) / 50) + 2;
   if (mon(att.dex).types.includes(m.type)) dmg = Math.floor(dmg * 1.5);
   dmg = Math.floor(dmg * mult);
-  const hits = m.effect === 'multi' ? 3 : m.effect === 'double' ? 2 : 1; // 2-5 hit moves average about 3
+  const hits = HITS[m.effect] || 1;
   return out(Math.max(1, Math.floor(dmg * 85 / 100)) * hits, dmg * hits);
 }
+// Turns to KO with one move, using its low roll for your side and high roll for theirs. Charge moves (Solarbeam, Fly,
+// Dig, Sky Attack...) take two turns per hit and Hyper Beam needs a turn to recharge between hits.
+function turnsToKO(h, hp, low) {
+  if (!h || !h.max) return Infinity;
+  const n = Math.ceil(hp / Math.max(1, low ? h.min : h.max));
+  const e = state.moves[h.name]?.effect;
+  return e === 'charge' ? 2 * n : e === 'recharge' ? 2 * n - 1 : n;
+}
 function bestHit(att, def) {
-  // don't plan around Selfdestruct or Explosion for your side
-  return att.moves.filter(n => att.foe || state.moves[n]?.effect !== 'explode').map(n => hit(att, def, n)).filter(Boolean).sort((a, b) => b.min + b.max - a.min - a.max)[0] || null;
+  // don't plan around Selfdestruct, Explosion or Fake Out (first turn only) for your side
+  const low = !att.foe;
+  return att.moves.filter(n => state.moves[n]?.effect !== 'fakeout' && (att.foe || state.moves[n]?.effect !== 'explode')).map(n => hit(att, def, n)).filter(Boolean)
+    .sort((a, b) => turnsToKO(a, def.hp, low) - turnsToKO(b, def.hp, low) || b.min + b.max - a.min - a.max)[0] || null;
 }
 // How a battle between one of your Pokémon and one of theirs goes, one-on-one.
 function duel(me, foe) {
   const mine = bestHit(me, foe), theirs = bestHit(foe, me);
-  const myHits = mine && mine.max ? Math.ceil(foe.hp / Math.max(1, mine.min)) : Infinity;
-  const theirHits = theirs && theirs.max ? Math.ceil(me.hp / Math.max(1, theirs.max)) : Infinity;
+  const myHits = turnsToKO(mine, foe.hp, true);
+  const theirHits = turnsToKO(theirs, me.hp, false);
   const faster = me.st[5] > foe.st[5];
   const wins = myHits < theirHits || (myHits === theirHits && faster && myHits !== Infinity);
   const se = me.moves.filter(n => { const h = hit(me, foe, n); return h && h.mult >= 2; });
@@ -515,20 +589,26 @@ function evoForms(dex, level, stage) {
 // Pokémon you could catch by the time of this battle that have a super-effective level-up move at the foe's level,
 // evolved where you would have by then. Ones that win the one-on-one come first, and ones the rest of the trainer's
 // team can't hit super effectively are preferred; any that can be are flagged with the move to watch for.
+// Lowest level you can get this Pokémon at from that encounter (gifts and prizes have a fixed level)
+const catchLevel = c => parseInt(String(c.levels || '').split('-')[0], 10) || 5;
 function catchSuggestions(foeMon, foe, stage, party, n = 2) {
   const team = cur().team;
   const others = party.filter(x => x !== foeMon).map(x => ({ p: x, b: foeBattler(x) }));
   const seen = new Set(team);
   const out = [];
+  const relearn = stage >= relearnAt();
   for (const c of catchableBy(stage)) {
-    for (const f of evoForms(c.dex, foe.level, stage)) {
+    // trained up to the foe's level, or the level you catch it at if that's higher
+    const from = { dex: c.dex, level: catchLevel(c) }, level = Math.max(foe.level, from.level);
+    for (const f of evoForms(c.dex, level, stage)) {
       if (seen.has(f.dex)) continue;
-      const me = battler(f.dex, foe.level, PLAYER_IV, defaultMoves(f.dex, foe.level));
+      const learned = learnedBy(f.dex, level, from, relearn);
+      const me = battler(f.dex, level, PLAYER_IV, bestMoves(f.dex, level, from, relearn));
       const d = duel(me, foe);
       if (!d.se.length || d.myHits === Infinity) continue;
       const risk = [];
       for (const o of others) for (const mv of o.b.moves) { const h = hit(o.b, me, mv); if (h && h.mult >= 2) risk.push(`${o.p.name}'s ${mv}`); }
-      out.push({ c, f, d, risk: [...new Set(risk)] });
+      out.push({ c, f, d, level, learned, risk: [...new Set(risk)] });
     }
   }
   const picked = [], used = new Set();
@@ -541,7 +621,7 @@ function catchSuggestions(foeMon, foe, stage, party, n = 2) {
 
 const hpPct = (h, b) => `${Math.min(100, Math.round(100 * h.min / b.hp))}–${Math.min(100, Math.round(100 * h.max / b.hp))}%`;
 const multTag = m => m >= 2 ? ` <span class="good">${m}×</span>` : m === 0 ? ' <span class="bad">no effect</span>' : m < 1 ? ` <span class="note">${m === 0.25 ? '¼' : '½'}×</span>` : '';
-const hitsText = n => n === Infinity ? "can't KO" : n === 1 ? 'OHKO' : `${n} hits`;
+const hitsText = n => n === Infinity ? "can't KO" : n === 1 ? 'OHKO' : `${n} turns`;
 function hitText(h, target, hits) {
   return h ? `${esc(h.name)}${multTag(h.mult)} ${hpPct(h, target)} (${hitsText(hits)})` : '<span class="note">no damaging move</span>';
 }
@@ -572,12 +652,12 @@ function foeRow(p, stage, party) {
   // Suggest a catch when you'd lose, or when nobody is super effective and the fight isn't a quick win anyway
   if (!best || !best.wins || (!duels.some(d => d.se.length) && best.myHits > 2)) {
     const sug = catchSuggestions(p, foe, stage, party);
-    pick += sug.length ? `<div class="catch">${best ? (duels.some(d => d.se.length) ? 'Or catch' : 'Nobody on your team has a super-effective move. Catch') : 'Good catch'}: ${sug.map(({ c, f, d, risk }) => {
-      const learn = mon(f.dex).learnset.find(([, mv]) => mv === d.mine?.name);
+    pick += sug.length ? `<div class="catch">${best ? (duels.some(d => d.se.length) ? 'Or catch' : 'Nobody on your team has a super-effective move. Catch') : 'Good catch'}: ${sug.map(({ c, f, d, level, learned, risk }) => {
+      const learn = d.mine && learned.get(d.mine.name);
       const evo = f.dex !== c.dex ? `${esc(mon(c.dex).name)} and evolve it into <b>${esc(mon(f.dex).name)}</b> (${esc(f.via.join(', then '))})` : `<b>${esc(mon(c.dex).name)}</b>`;
       return `${evo} ${types(f.dex)} on <a href="#/loc/${c.loc}">${esc(c.name)}</a>
         <span class="note">(${esc(METHOD_LABEL[c.method] || c.method)}${c.levels ? `, Lv ${esc(c.levels)}` : ''}${isCaught(c.dex) ? ', you have one' : ''}).
-        At Lv ${p.level}: ${hitText(d.mine, foe, d.myHits)}${learn && learn[0] > 1 ? `, learned at Lv ${learn[0]}` : ''}${d.wins ? '' : ', but it may lose the one-on-one'}</span>${risk.length ? `<div class="bad">Watch out for ${esc(risk.slice(0, 3).join(', '))}</div>` : ''}`;
+        At Lv ${level}: ${hitText(d.mine, foe, d.myHits)}${learn && learn.level > catchLevel(c) ? `, ${learn.from !== f.dex ? `${esc(mon(learn.from).name)} ` : ''}learns it at Lv ${learn.level}${learn.from !== f.dex && f.via.length ? ' (before evolving)' : ''}` : ''}${d.wins ? '' : ', but it may lose the one-on-one'}</span>${risk.length ? `<div class="bad">Watch out for ${esc(risk.slice(0, 3).join(', '))}</div>` : ''}`;
     }).join('<br>or ')}</div>`
       : `<div class="note">Nothing you can catch by ${esc(state.index[stage]?.name || 'now')} learns a super-effective move by Lv ${p.level}.</div>`;
   }
@@ -615,11 +695,11 @@ function renderPlanner() {
   const s = cur();
   s.teamMeta ||= {};
   const moveNames = Object.keys(state.moves).sort();
-  let html = `<div class="card"><b>Your team</b> <span class="note">(up to 6). Set each one's level and moves for exact damage; blank moves use what it learns by level up.</span>
+  let html = `<div class="card"><b>Your team</b> <span class="note">(up to 6). Set each one's level and moves for exact damage; blank moves assume it kept the strongest attack of each type it learns by level up.</span>
     ${s.team.map((n, i) => {
       const meta = s.teamMeta[n] || {};
       const lvl = meta.level || '';
-      const defaults = defaultMoves(n, meta.level || 100);
+      const defaults = bestMoves(n, meta.level || 100);
       return `<div class="member"><div class="mhead"><b>${esc(mon(n).name)}</b> ${types(n)}
           <label class="note">Lv <input type="number" min="1" max="100" inputmode="numeric" data-lvl="${n}" value="${lvl}" placeholder="?"></label>
           <button class="icon-x" data-rm="${i}" aria-label="Remove ${esc(mon(n).name)}">&times;</button></div>
@@ -632,7 +712,7 @@ function renderPlanner() {
     ${starterChips()}</div>
     <p class="note">Gym Leaders, rival battles, Giovanni, the Elite Four and the Champion in story order. Every other trainer is on its route page.</p>`;
   for (const t of state.trainers) {
-    html += trainerCard(t, stageOf(t.stage || t.location), {
+    html += trainerCard(t, battleStage(t, t.location), {
       title: t.name, where: `${t.where} · ${t.specialty}`, loc: t.location,
       extra: party => `<p class="note">Types that hit most of this team: ${bestTypesAgainst(party).map(g => typeTag(g.t)).join(' ')}</p>`
     });

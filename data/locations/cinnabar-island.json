@@ -202,6 +202,7 @@
     "LG"
    ],
    "area": "Pokémon Lab Experiment Room",
+   "levels": "5",
    "notes": "Omanyte (Lv 5) · Lab scientist (revives Helix Fossil)"
   },
   {
@@ -213,6 +214,7 @@
     "LG"
    ],
    "area": "Pokémon Lab Experiment Room",
+   "levels": "5",
    "notes": "Kabuto (Lv 5) · Lab scientist (revives Dome Fossil)"
   },
   {
@@ -224,6 +226,7 @@
     "LG"
    ],
    "area": "Pokémon Lab Experiment Room",
+   "levels": "5",
    "notes": "Aerodactyl (Lv 5) · Lab scientist (revives Old Amber)"
   },
   {
