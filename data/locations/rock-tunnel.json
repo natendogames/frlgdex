@@ -180,6 +180,1112 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Picnicker",
+   "name": "Dana",
+   "prize": 400,
+   "party": [
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-dana",
+   "area": "1F"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Ariana",
+   "prize": 380,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-ariana",
+   "area": "1F"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Leah",
+   "prize": 440,
+   "party": [
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sing",
+       "type": "Normal"
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Follow Me",
+       "type": "Normal"
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-leah",
+   "area": "1F"
+  },
+  {
+   "class": "Hiker",
+   "name": "Oliver",
+   "prize": 720,
+   "party": [
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Bind",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Bind",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "hiker-oliver",
+   "area": "1F"
+  },
+  {
+   "class": "Hiker",
+   "name": "Lucas",
+   "prize": 756,
+   "party": [
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    },
+    {
+     "dex": 75,
+     "name": "Graveler",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    }
+   ],
+   "id": "hiker-lucas",
+   "area": "1F"
+  },
+  {
+   "class": "Poké Maniac",
+   "name": "Ashton",
+   "prize": 1104,
+   "party": [
+    {
+     "dex": 104,
+     "name": "Cubone",
+     "level": 23,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Bone Club",
+       "type": "Ground",
+       "power": 65
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 79,
+     "name": "Slowpoke",
+     "level": 23,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      }
+     ]
+    }
+   ],
+   "id": "pokemaniac-ashton",
+   "area": "1F"
+  },
+  {
+   "class": "Hiker",
+   "name": "Lenny",
+   "prize": 684,
+   "party": [
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "hiker-lenny",
+   "area": "1F"
+  },
+  {
+   "class": "Poké Maniac",
+   "name": "Winston",
+   "prize": 1200,
+   "party": [
+    {
+     "dex": 79,
+     "name": "Slowpoke",
+     "level": 25,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "pokemaniac-winston",
+   "area": "B1F"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Martha",
+   "prize": 440,
+   "party": [
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 1,
+     "name": "Bulbasaur",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-martha",
+   "area": "B1F"
+  },
+  {
+   "class": "Poké Maniac",
+   "name": "Steve",
+   "prize": 1056,
+   "party": [
+    {
+     "dex": 4,
+     "name": "Charmander",
+     "level": 22,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Metal Claw",
+       "type": "Steel",
+       "power": 50
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 104,
+     "name": "Cubone",
+     "level": 22,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Bone Club",
+       "type": "Ground",
+       "power": 65
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "pokemaniac-steve",
+   "area": "B1F"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Sofia",
+   "prize": 420,
+   "party": [
+    {
+     "dex": 39,
+     "name": "Jigglypuff",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Pound",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      }
+     ]
+    },
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-sofia",
+   "area": "B1F"
+  },
+  {
+   "class": "Hiker",
+   "name": "Dudley",
+   "prize": 756,
+   "party": [
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    },
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    },
+    {
+     "dex": 75,
+     "name": "Graveler",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    }
+   ],
+   "id": "hiker-dudley",
+   "area": "B1F"
+  },
+  {
+   "class": "Hiker",
+   "name": "Allen",
+   "prize": 900,
+   "party": [
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 25,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    }
+   ],
+   "id": "hiker-allen",
+   "area": "B1F"
+  },
+  {
+   "class": "Poké Maniac",
+   "name": "Cooper",
+   "prize": 960,
+   "party": [
+    {
+     "dex": 79,
+     "name": "Slowpoke",
+     "level": 20,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      }
+     ]
+    },
+    {
+     "dex": 79,
+     "name": "Slowpoke",
+     "level": 20,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      }
+     ]
+    },
+    {
+     "dex": 79,
+     "name": "Slowpoke",
+     "level": 20,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      }
+     ]
+    }
+   ],
+   "id": "pokemaniac-cooper",
+   "area": "B1F"
+  },
+  {
+   "class": "Hiker",
+   "name": "Eric",
+   "prize": 720,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Bind",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "hiker-eric",
+   "area": "B1F"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

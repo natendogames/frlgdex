@@ -396,6 +396,1322 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Cool Trainer",
+   "name": "Naomi",
+   "prize": 1512,
+   "party": [
+    {
+     "dex": 53,
+     "name": "Persian",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    },
+    {
+     "dex": 77,
+     "name": "Ponyta",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Fire Spin",
+       "type": "Fire",
+       "power": 15
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 78,
+     "name": "Rapidash",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Fire Spin",
+       "type": "Fire",
+       "power": 15
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 37,
+     "name": "Vulpix",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      },
+      {
+       "name": "Grudge",
+       "type": "Ghost"
+      },
+      {
+       "name": "Fire Spin",
+       "type": "Fire",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 38,
+     "name": "Ninetales",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion"
+   ],
+   "id": "coolnaomi",
+   "area": "1F"
+  },
+  {
+   "class": "Cool Trainer",
+   "name": "Rolando",
+   "prize": 1512,
+   "party": [
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Super Fang",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 2,
+     "name": "Ivysaur",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Growth",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 8,
+     "name": "Wartortle",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      }
+     ]
+    },
+    {
+     "dex": 5,
+     "name": "Charmeleon",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      }
+     ]
+    },
+    {
+     "dex": 6,
+     "name": "Charizard",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion"
+   ],
+   "id": "coolrolando",
+   "area": "1F"
+  },
+  {
+   "class": "Juggler",
+   "name": "Nelson",
+   "prize": 1640,
+   "party": [
+    {
+     "dex": 96,
+     "name": "Drowzee",
+     "level": 41,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Psych Up",
+       "type": "Normal"
+      },
+      {
+       "name": "Swagger",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 97,
+     "name": "Hypno",
+     "level": 41,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 41,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Role Play",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 41,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Role Play",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "id": "juggler-nelson",
+   "area": "2F"
+  },
+  {
+   "class": "Black Belt",
+   "name": "Daisuke",
+   "prize": 1032,
+   "party": [
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 43,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 43,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      }
+     ],
+     "item": "Black Belt"
+    },
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 43,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      }
+     ],
+     "item": "Black Belt"
+    }
+   ],
+   "id": "black-belt-daisuke",
+   "area": "2F"
+  },
+  {
+   "class": "Tamer",
+   "name": "Vincent",
+   "prize": 1760,
+   "party": [
+    {
+     "dex": 53,
+     "name": "Persian",
+     "level": 44,
+     "iv": 4,
+     "moves": [
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    },
+    {
+     "dex": 55,
+     "name": "Golduck",
+     "level": 44,
+     "iv": 4,
+     "moves": [
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Psych Up",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    }
+   ],
+   "id": "tamer-vincent",
+   "area": "2F"
+  },
+  {
+   "class": "Juggler",
+   "name": "Gregory",
+   "prize": 1920,
+   "party": [
+    {
+     "dex": 122,
+     "name": "Mr. Mime",
+     "level": 48,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Trick",
+       "type": "Psychic"
+      },
+      {
+       "name": "Role Play",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Baton Pass",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "juggler-gregory",
+   "area": "2F"
+  },
+  {
+   "class": "Poké Maniac",
+   "name": "Dawson",
+   "prize": 1920,
+   "party": [
+    {
+     "dex": 5,
+     "name": "Charmeleon",
+     "level": 40,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Metal Claw",
+       "type": "Steel",
+       "power": 50
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      }
+     ]
+    },
+    {
+     "dex": 131,
+     "name": "Lapras",
+     "level": 40,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Perish Song",
+       "type": "Normal"
+      },
+      {
+       "name": "Ice Beam",
+       "type": "Ice",
+       "power": 95
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      }
+     ]
+    },
+    {
+     "dex": 108,
+     "name": "Lickitung",
+     "level": 40,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    }
+   ],
+   "id": "pokemaniac-dawson",
+   "area": "2F"
+  },
+  {
+   "class": "Cool Trainer",
+   "name": "Colby",
+   "prize": 1548,
+   "party": [
+    {
+     "dex": 99,
+     "name": "Kingler",
+     "level": 41,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Shot",
+       "type": "Ground",
+       "power": 55
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Guillotine",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 61,
+     "name": "Poliwhirl",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      }
+     ]
+    },
+    {
+     "dex": 73,
+     "name": "Tentacruel",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Barrier",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 117,
+     "name": "Seadra",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 9,
+     "name": "Blastoise",
+     "level": 43,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion"
+   ],
+   "id": "coolcolby",
+   "area": "3F"
+  },
+  {
+   "class": "Cool Trainer",
+   "name": "Caroline",
+   "prize": 1512,
+   "party": [
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    },
+    {
+     "dex": 70,
+     "name": "Weepinbell",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    },
+    {
+     "dex": 71,
+     "name": "Victreebel",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    },
+    {
+     "dex": 46,
+     "name": "Paras",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Growth",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 47,
+     "name": "Parasect",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion"
+   ],
+   "id": "coolcaroline",
+   "area": "3F"
+  },
+  {
+   "class": "Cool Couple",
+   "name": "Ray & Tyra",
+   "prize": 2160,
+   "party": [
+    {
+     "dex": 31,
+     "name": "Nidoqueen",
+     "level": 45,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      },
+      {
+       "name": "Superpower",
+       "type": "Fighting",
+       "power": 120
+      }
+     ]
+    },
+    {
+     "dex": 34,
+     "name": "Nidoking",
+     "level": 45,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Thrash",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Megahorn",
+       "type": "Bug",
+       "power": 120
+      }
+     ]
+    }
+   ],
+   "double": true,
+   "id": "cool-couple-ray-tyra",
+   "area": "3F"
+  },
+  {
+   "class": "Cool Trainer",
+   "name": "George",
+   "prize": 1512,
+   "party": [
+    {
+     "dex": 103,
+     "name": "Exeggutor",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Egg Bomb",
+       "type": "Normal",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 28,
+     "name": "Sandslash",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    },
+    {
+     "dex": 91,
+     "name": "Cloyster",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      },
+      {
+       "name": "Spikes",
+       "type": "Ground"
+      }
+     ]
+    },
+    {
+     "dex": 101,
+     "name": "Electrode",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 59,
+     "name": "Arcanine",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion"
+   ],
+   "id": "coolgeorge",
+   "area": "3F"
+  },
+  {
+   "class": "Cool Trainer",
+   "name": "Alexa",
+   "prize": 1512,
+   "party": [
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Metronome",
+       "type": "Normal"
+      },
+      {
+       "name": "Cosmic Power",
+       "type": "Psychic"
+      },
+      {
+       "name": "Moonlight",
+       "type": "Normal"
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 39,
+     "name": "Jigglypuff",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rest",
+       "type": "Psychic"
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      },
+      {
+       "name": "Mimic",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 53,
+     "name": "Persian",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    },
+    {
+     "dex": 87,
+     "name": "Dewgong",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Rest",
+       "type": "Psychic"
+      },
+      {
+       "name": "Sheer Cold",
+       "type": "Ice",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 113,
+     "name": "Chansey",
+     "level": 42,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Sing",
+       "type": "Normal"
+      },
+      {
+       "name": "Egg Bomb",
+       "type": "Normal",
+       "power": 100
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Full Restore"
+   ],
+   "id": "coolalexa",
+   "area": "3F"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

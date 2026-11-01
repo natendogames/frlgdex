@@ -220,6 +220,966 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Bird Keeper",
+   "name": "Sebastian",
+   "prize": 696,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-sebastian"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Alma",
+   "prize": 560,
+   "party": [
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      }
+     ]
+    },
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-alma"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Susie",
+   "prize": 480,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-susie"
+  },
+  {
+   "class": "Beauty",
+   "name": "Lola",
+   "prize": 1944,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Thunderbolt",
+       "type": "Electric",
+       "power": 95
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "beauty-lola"
+  },
+  {
+   "class": "Beauty",
+   "name": "Sheila",
+   "prize": 2088,
+   "party": [
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Follow Me",
+       "type": "Normal"
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Metronome",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "beauty-sheila"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Valerie",
+   "prize": 600,
+   "party": [
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      }
+     ]
+    },
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-valerie"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Gwen",
+   "prize": 540,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-gwen"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Perry",
+   "prize": 600,
+   "party": [
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 25,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Aerial Ace",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 25,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 25,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 25,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Aerial Ace",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 25,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Aerial Ace",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-perry"
+  },
+  {
+   "class": "Biker",
+   "name": "Jared",
+   "prize": 560,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "biker-jared"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Robert",
+   "prize": 624,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Aerial Ace",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 22,
+     "name": "Fearow",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-robert"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

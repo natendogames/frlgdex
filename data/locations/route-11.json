@@ -257,6 +257,615 @@
    ]
   }
  ],
+ "trainers": [
+  {
+   "class": "Gamer",
+   "name": "Hugo",
+   "prize": 1296,
+   "party": [
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "gamer-hugo",
+   "area": "Outside"
+  },
+  {
+   "class": "Youngster",
+   "name": "Eddie",
+   "prize": 336,
+   "party": [
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Glare",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "youngster-eddie",
+   "area": "Outside"
+  },
+  {
+   "class": "Youngster",
+   "name": "Dave",
+   "prize": 288,
+   "party": [
+    {
+     "dex": 32,
+     "name": "Nidoran♂",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Peck",
+       "type": "Flying",
+       "power": 35
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 33,
+     "name": "Nidorino",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Peck",
+       "type": "Flying",
+       "power": 35
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "youngster-dave",
+   "area": "Outside"
+  },
+  {
+   "class": "Youngster",
+   "name": "Dillon",
+   "prize": 304,
+   "party": [
+    {
+     "dex": 27,
+     "name": "Sandshrew",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 41,
+     "name": "Zubat",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Astonish",
+       "type": "Ghost",
+       "power": 30
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "youngster-dillon",
+   "area": "Outside"
+  },
+  {
+   "class": "Engineer",
+   "name": "Bernie",
+   "prize": 864,
+   "party": [
+    {
+     "dex": 81,
+     "name": "Magnemite",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Thundershock",
+       "type": "Electric",
+       "power": 40
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 81,
+     "name": "Magnemite",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Thundershock",
+       "type": "Electric",
+       "power": 40
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 82,
+     "name": "Magneton",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Thundershock",
+       "type": "Electric",
+       "power": 40
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "engineer-bernie",
+   "area": "Outside"
+  },
+  {
+   "class": "Gamer",
+   "name": "Jasper",
+   "prize": 1296,
+   "party": [
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growth",
+       "type": "Normal"
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      }
+     ]
+    },
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    }
+   ],
+   "id": "gamer-jasper",
+   "area": "Outside"
+  },
+  {
+   "class": "Engineer",
+   "name": "Braxton",
+   "prize": 1008,
+   "party": [
+    {
+     "dex": 81,
+     "name": "Magnemite",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Thundershock",
+       "type": "Electric",
+       "power": 40
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      }
+     ]
+    }
+   ],
+   "id": "engineer-braxton",
+   "area": "Outside"
+  },
+  {
+   "class": "Gamer",
+   "name": "Darian",
+   "prize": 1296,
+   "party": [
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 37,
+     "name": "Vulpix",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Will-o-wisp",
+       "type": "Fire"
+      }
+     ]
+    }
+   ],
+   "id": "gamer-darian",
+   "area": "Outside"
+  },
+  {
+   "class": "Youngster",
+   "name": "Yasu",
+   "prize": 272,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 17,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 17,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 17,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    }
+   ],
+   "id": "youngster-yasu",
+   "area": "Outside"
+  },
+  {
+   "class": "Gamer",
+   "name": "Dirk",
+   "prize": 1296,
+   "party": [
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Charge",
+       "type": "Electric"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 81,
+     "name": "Magnemite",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Thundershock",
+       "type": "Electric",
+       "power": 40
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "gamer-dirk",
+   "area": "Outside"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

@@ -185,6 +185,7 @@
    "where": "Pokémon Center 1F"
   }
  ],
+ "trainers": [],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

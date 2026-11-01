@@ -209,6 +209,371 @@
    "where": "Pokémon Center 1F"
   }
  ],
+ "trainers": [
+  {
+   "class": "Picnicker",
+   "name": "Heidi",
+   "prize": 400,
+   "party": [
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Encore",
+       "type": "Normal"
+      },
+      {
+       "name": "Sing",
+       "type": "Normal"
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Follow Me",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-heidi"
+  },
+  {
+   "class": "Poké Maniac",
+   "name": "Mark",
+   "prize": 1392,
+   "party": [
+    {
+     "dex": 111,
+     "name": "Rhyhorn",
+     "level": 29,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      }
+     ]
+    },
+    {
+     "dex": 108,
+     "name": "Lickitung",
+     "level": 29,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Knock Off",
+       "type": "Dark",
+       "power": 20
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "pokemaniac-mark"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Carol",
+   "prize": 420,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-carol"
+  },
+  {
+   "class": "Hiker",
+   "name": "Clark",
+   "prize": 756,
+   "party": [
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    },
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Bind",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "hiker-clark"
+  },
+  {
+   "class": "Hiker",
+   "name": "Trent",
+   "prize": 684,
+   "party": [
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Bind",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 75,
+     "name": "Graveler",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Mud Sport",
+       "type": "Ground"
+      },
+      {
+       "name": "Rock Throw",
+       "type": "Rock",
+       "power": 50
+      },
+      {
+       "name": "Magnitude",
+       "type": "Ground",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "hiker-trent"
+  },
+  {
+   "class": "Poké Maniac",
+   "name": "Herman",
+   "prize": 960,
+   "party": [
+    {
+     "dex": 104,
+     "name": "Cubone",
+     "level": 20,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Bone Club",
+       "type": "Ground",
+       "power": 65
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 79,
+     "name": "Slowpoke",
+     "level": 20,
+     "iv": 3,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      }
+     ]
+    }
+   ],
+   "id": "pokemaniac-herman"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

@@ -80,6 +80,466 @@
    "where": "North Entrance 2F"
   }
  ],
+ "trainers": [
+  {
+   "class": "Young Couple",
+   "name": "Lea & Jed",
+   "prize": 1624,
+   "party": [
+    {
+     "dex": 78,
+     "name": "Rapidash",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Fire Spin",
+       "type": "Fire",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 38,
+     "name": "Ninetales",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "double": true,
+   "id": "young-couple-lea-jed"
+  },
+  {
+   "class": "Biker",
+   "name": "Lao",
+   "prize": 580,
+   "party": [
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "biker-lao"
+  },
+  {
+   "class": "Cue Ball",
+   "name": "Koji",
+   "prize": 672,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 56,
+     "name": "Mankey",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "cue-ball-koji"
+  },
+  {
+   "class": "Cue Ball",
+   "name": "Luke",
+   "prize": 696,
+   "party": [
+    {
+     "dex": 56,
+     "name": "Mankey",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "cue-ball-luke"
+  },
+  {
+   "class": "Biker",
+   "name": "Hideo",
+   "prize": 660,
+   "party": [
+    {
+     "dex": 110,
+     "name": "Weezing",
+     "level": 33,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Haze",
+       "type": "Ice"
+      }
+     ]
+    }
+   ],
+   "id": "biker-hideo"
+  },
+  {
+   "class": "Biker",
+   "name": "Ruben",
+   "prize": 560,
+   "party": [
+    {
+     "dex": 110,
+     "name": "Weezing",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 110,
+     "name": "Weezing",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "biker-ruben"
+  },
+  {
+   "class": "Cue Ball",
+   "name": "Camron",
+   "prize": 696,
+   "party": [
+    {
+     "dex": 56,
+     "name": "Mankey",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Seismic Toss",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Foresight",
+       "type": "Normal"
+      },
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "cue-ball-camron"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

@@ -46,13 +46,30 @@ const inVersion = x => !x.versions || x.versions.includes(V());
 
 const getJSON = url => fetch(url).then(r => { if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); });
 async function loadData() {
-  const [idx, dex, trainers, types, walk] = await Promise.all(['data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json'].map(getJSON));
-  Object.assign(state, { index: idx.locations, dex, trainers, types, walk });
+  const [idx, dex, trainers, types, walk, moves] = await Promise.all(['data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json'].map(getJSON));
+  Object.assign(state, { index: idx.locations, dex, trainers, types, walk, moves });
   await Promise.all(state.index.map(async l => { state.locations[l.id] = await getJSON('data/' + l.file); }));
+  state.stage = Object.fromEntries(state.index.map((l, i) => [l.id, i]));
   for (const l of state.index) for (const e of state.locations[l.id].encounters) {
-    (state.found[e.dex] ||= []).push({ loc: l.id, name: l.name, method: e.method, versions: e.versions });
+    (state.found[e.dex] ||= []).push({ loc: l.id, name: l.name, method: e.method, versions: e.versions, levels: e.levels,
+      stage: encStage(l.id, e), later: encStage(l.id, e) > stageOf(l.id) });
   }
+  for (const list of Object.values(state.found)) list.sort((a, b) => a.stage - b.stage);
 }
+
+// ---------- story progress ----------
+// The location list is in story order, so a location's position is how far into the game you are when you first get there.
+// Fishing, Surf and Rock Smash only open up once you have the rod or HM (and badge) for them.
+const UNLOCK = {
+  'old-rod': { at: 'vermilion-city', need: 'the Old Rod (Fishing Guru in Vermilion City)' },
+  'good-rod': { at: 'fuchsia-city', need: 'the Good Rod (Fishing Guru in Fuchsia City)' },
+  'super-rod': { at: 'route-12', need: "the Super Rod (Fishing Guru's brother on Route 12)" },
+  surf: { at: 'safari-zone', need: 'Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)' },
+  'rock-smash': { at: 'ember-spa', need: 'Rock Smash (HM06 from the Ember Spa on One Island, used with the Marsh Badge)' }
+};
+const stageOf = id => state.stage[id] ?? 0;
+const encStage = (locId, e) => Math.max(stageOf(locId), UNLOCK[e.method] ? stageOf(UNLOCK[e.method].at) : -1);
+const unlockName = m => state.index[stageOf(UNLOCK[m].at)].name;
 
 // ---------- helpers ----------
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -84,8 +101,9 @@ function availability(n) {
 function availText(n) {
   const a = availability(n);
   if (a.kind === 'catch') {
-    const uniq = [...new Map(a.where.map(w => [w.loc, w])).values()];
-    return uniq.slice(0, 4).map(w => `<a href="#/loc/${w.loc}">${esc(w.name)}</a> <span class="note">(${esc(METHOD_LABEL[w.method] || w.method)})</span>`).join(', ') + (uniq.length > 4 ? ` +${uniq.length - 4} more` : '');
+    // a.where is sorted by when you can first catch it there, so the earliest chance comes first
+    const uniq = [...new Map([...a.where].reverse().map(w => [w.loc, w])).values()].sort((x, y) => x.stage - y.stage);
+    return uniq.slice(0, 4).map(w => `<a href="#/loc/${w.loc}">${esc(w.name)}</a> <span class="note">(${esc(METHOD_LABEL[w.method] || w.method)}${w.later ? `, after ${esc(unlockName(w.method))}` : ''})</span>`).join(', ') + (uniq.length > 4 ? ` +${uniq.length - 4} more` : '');
   }
   if (a.kind === 'evolve') return `Evolve ${esc(mon(a.from).name)}: ${esc(a.how)}`;
   if (a.kind === 'other') return `<span class="bad">Not in ${VNAME[V()]}.</span> Trade from ${VNAME[OTHER[V()]]}${a.via ? ` (or trade for ${esc(mon(a.via).name)} and evolve it)` : ''}.`;
@@ -147,18 +165,36 @@ function renderLocation(id) {
   if (loc.notes) html += `<div class="card note">${esc(loc.notes)}</div>`;
   if (steps?.length) html += `<h2>Walkthrough</h2><div class="card"><ol class="steps">${steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol></div>`;
 
+  const trs = loc.trainers || [];
+  if (trs.length) {
+    html += `<h2>Trainers (${trs.length})</h2>${teamHint()}`;
+    for (const [area, list] of Object.entries(groupBy(trs, t => t.area))) {
+      if (area) html += `<div class="area">${esc(area)}</div>`;
+      html += list.map(t => trainerCard(t, stageOf(t.stage || id))).join('');
+    }
+  }
+
   const encs = loc.encounters.filter(inVersion);
+  const here = stageOf(id);
+  const encList = (list, later) => {
+    let out = '';
+    for (const [area, grp] of Object.entries(groupBy(list, e => e.area))) {
+      if (area) out += `<div class="area">${esc(area)}</div>`;
+      out += grp.map(e => {
+        const sub = [METHOD_LABEL[e.method] || e.method, e.levels && `Lv ${esc(e.levels)}`, e.rate && esc(e.rate), e.notes && esc(e.notes),
+          later && `Needs ${esc(UNLOCK[e.method].need)}`].filter(Boolean).join(' · ');
+        const excl = e.versions.length === 1 ? `<span class="tag">${e.versions[0]} only</span>` : '';
+        return checkRow(`dex:${e.dex}`, s.caught[e.dex], `#${String(e.dex).padStart(3, '0')} ${esc(e.name)} ${types(e.dex)}`, sub, excl);
+      }).join('');
+    }
+    return out;
+  };
+  const now = encs.filter(e => encStage(id, e) <= here), later = encs.filter(e => encStage(id, e) > here);
   html += `<h2>Pokémon</h2><div class="card">`;
   if (!encs.length) html += '<div class="empty">No Pokémon to catch here.</div>';
-  for (const [area, list] of Object.entries(groupBy(encs, e => e.area))) {
-    if (area) html += `<div class="area">${esc(area)}</div>`;
-    html += list.map(e => {
-      const sub = [METHOD_LABEL[e.method] || e.method, e.levels && `Lv ${esc(e.levels)}`, e.rate && esc(e.rate), e.notes && esc(e.notes)].filter(Boolean).join(' · ');
-      const excl = e.versions.length === 1 ? `<span class="tag">${e.versions[0]} only</span>` : '';
-      return checkRow(`dex:${e.dex}`, s.caught[e.dex], `#${String(e.dex).padStart(3, '0')} ${esc(e.name)} ${types(e.dex)}`, sub, excl);
-    }).join('');
-  }
-  html += `</div>`;
+  else if (!now.length) html += '<div class="empty">Nothing to catch on your first visit.</div>';
+  html += encList(now, false) + `</div>`;
+  if (later.length) html += `<h2>Pokémon: come back later</h2><div class="card"><p class="note">You can't fish, Surf or Rock Smash here on your first visit. These open up later in the story.</p>${encList(later, true)}</div>`;
 
   const section = (title, list, kind, subFn) => {
     html += `<h2>${title} (${list.filter(x => s.checks[`${loc.id}:${kind}:${x.id}`]).length}/${list.length})</h2><div class="card">`;
@@ -200,53 +236,218 @@ function renderDex() {
   q.oninput = () => { f.q = q.value; const pos = q.selectionStart; renderDex(); const n = document.getElementById('dexq'); n.focus(); n.setSelectionRange(pos, pos); };
 }
 
-// ---------- battle planner ----------
-function matchup(member, foe) {
-  const mt = mon(member).types, ft = mon(foe.dex).types;
-  const offense = Math.max(...mt.map(t => eff(t, ft)));
-  const atkTypes = new Set([...ft, ...(foe.moves || []).map(m => m.type).filter(Boolean)]);
-  const defense = Math.max(...[...atkTypes].map(t => eff(t, mt)));
-  return { offense, defense, score: offense / Math.max(defense, 0.25) };
+// ---------- battle engine (route trainers and the Battle plan tab) ----------
+// Estimates real damage with the Gen 3 formula: levels, base stats, IVs, move power, STAB and type effectiveness.
+// Gen 3 decides physical or special by the move's type. Critical hits, abilities, held items and stat changes are ignored.
+const PHYSICAL = new Set(['Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel']);
+const VARIES_POWER = { Return: 102, 'Hidden Power': 70, Magnitude: 70, Flail: 40, Present: 40, Revenge: 60 };
+const PLAYER_IV = 15; // average IVs for your Pokémon; no EVs
+const ALL_TYPES = () => Object.keys(state.types);
+
+function calcStats(dex, level, iv) {
+  return mon(dex).stats.map((b, i) => Math.floor((2 * b + iv) * level / 100) + (i === 0 ? level + 10 : 5));
+}
+function defaultMoves(dex, level) {
+  const out = [];
+  for (const [l, mv] of mon(dex).learnset || []) {
+    if (l > level) break;
+    if (out.includes(mv)) continue;
+    if (out.length === 4) out.shift();
+    out.push(mv);
+  }
+  return out;
+}
+function battler(dex, level, iv, moves) {
+  const st = calcStats(dex, level, iv);
+  return { dex, level, iv, moves: moves.filter(m => state.moves[m]), hp: st[0], st };
+}
+const teamMeta = n => (cur().teamMeta ||= {})[n] || {};
+function myBattler(n, foeLevel) {
+  const meta = teamMeta(n);
+  const level = meta.level || foeLevel;
+  const moves = (meta.moves || []).filter(Boolean);
+  return { ...battler(n, level, PLAYER_IV, moves.length ? moves : defaultMoves(n, level)), guessedLevel: !meta.level, guessedMoves: !moves.length };
+}
+const foeBattler = p => battler(p.dex, p.level, p.iv ?? 0, (p.moves || []).map(m => m.name));
+
+// Damage range of one move, in HP. null for moves that don't deal direct damage.
+function hit(att, def, name) {
+  const m = state.moves[name];
+  if (!m || !m.power || ['counter', 'dream', 'ohko'].includes(m.effect)) return null;
+  const mult = eff(m.type, mon(def.dex).types);
+  const out = (min, max) => ({ name, type: m.type, mult, min, max });
+  if (mult === 0) return out(0, 0);
+  if (m.effect === 'level') return out(att.level, att.level);
+  if (m.effect === 'fixed20') return out(20, 20);
+  if (m.effect === 'fixed40') return out(40, 40);
+  if (m.effect === 'half') return out(Math.floor(def.hp / 2), Math.floor(def.hp / 2));
+  // Low Kick's power depends on the target's weight (in 0.1 kg)
+  const w = mon(def.dex).weight || 0;
+  const power = name === 'Low Kick' ? (w < 100 ? 20 : w < 250 ? 40 : w < 500 ? 60 : w < 1000 ? 80 : w < 2000 ? 100 : 120) : m.power === 1 ? VARIES_POWER[name] : m.power;
+  if (!power) return null;
+  const phys = PHYSICAL.has(m.type);
+  const A = att.st[phys ? 1 : 3];
+  const D = Math.max(1, Math.floor(def.st[phys ? 2 : 4] / (m.effect === 'explode' ? 2 : 1)));
+  let dmg = Math.floor(Math.floor(Math.floor(2 * att.level / 5 + 2) * power * A / D) / 50) + 2;
+  if (mon(att.dex).types.includes(m.type)) dmg = Math.floor(dmg * 1.5);
+  dmg = Math.floor(dmg * mult);
+  const hits = m.effect === 'multi' ? 3 : m.effect === 'double' ? 2 : 1; // 2-5 hit moves average about 3
+  return out(Math.max(1, Math.floor(dmg * 85 / 100)) * hits, dmg * hits);
+}
+function bestHit(att, def) {
+  return att.moves.map(n => hit(att, def, n)).filter(Boolean).sort((a, b) => b.min + b.max - a.min - a.max)[0] || null;
+}
+// How a battle between one of your Pokémon and one of theirs goes, one-on-one.
+function duel(me, foe) {
+  const mine = bestHit(me, foe), theirs = bestHit(foe, me);
+  const myHits = mine && mine.max ? Math.ceil(foe.hp / Math.max(1, mine.min)) : Infinity;
+  const theirHits = theirs && theirs.max ? Math.ceil(me.hp / Math.max(1, theirs.max)) : Infinity;
+  const faster = me.st[5] > foe.st[5];
+  const wins = myHits < theirHits || (myHits === theirHits && faster && myHits !== Infinity);
+  const se = me.moves.filter(n => { const h = hit(me, foe, n); return h && h.mult >= 2; });
+  const threats = foe.moves.filter(n => { const h = hit(foe, me, n); return h && h.mult >= 2; });
+  return { me, mine, theirs, myHits, theirHits, faster, wins, se, threats };
+}
+const rankDuels = (a, b) => b.wins - a.wins || a.myHits - b.myHits || (a.theirs?.max || 0) / a.me.hp - (b.theirs?.max || 0) / b.me.hp;
+
+function weaknesses(dex) {
+  return ALL_TYPES().map(t => ({ t, m: eff(t, mon(dex).types) })).filter(x => x.m > 1).sort((a, b) => b.m - a.m);
 }
 function bestTypesAgainst(party) {
-  return Object.keys(state.types).map(t => ({ t, n: party.filter(p => eff(t, mon(p.dex).types) > 1).length }))
+  return ALL_TYPES().map(t => ({ t, n: party.filter(p => eff(t, mon(p.dex).types) > 1).length }))
     .filter(x => x.n).sort((a, b) => b.n - a.n).slice(0, 4);
 }
+
+// Pokémon you could have caught by a point in the story: one entry per species, at the earliest place you can get it.
+const catchCache = {};
+function catchableBy(stage) {
+  const key = V() + ':' + stage;
+  if (catchCache[key]) return catchCache[key];
+  const out = [];
+  for (const [dex, list] of Object.entries(state.found)) {
+    const w = list.find(x => inVersion(x) && x.stage <= stage && !['trade', 'roaming'].includes(x.method) && !(x.loc === 'pallet-town' && x.method === 'gift'));
+    if (w) out.push({ dex: +dex, ...w });
+  }
+  return (catchCache[key] = out);
+}
+// Catches that would have a super-effective level-up move if raised to the foe's level, best duel first.
+// Anything the trainer's other Pokémon can hit super effectively is left out, so the pick isn't a liability later in the fight.
+function catchSuggestions(foeMon, foe, stage, party, n = 2) {
+  const team = cur().team;
+  const others = party.map(foeBattler);
+  return catchableBy(stage).filter(c => !team.includes(c.dex)).map(c => {
+    const me = battler(c.dex, foe.level, PLAYER_IV, defaultMoves(c.dex, foe.level));
+    return { c, d: duel(me, foe), exposed: others.some(o => o.moves.some(mv => { const h = hit(o, me, mv); return h && h.mult >= 2; })) };
+  }).filter(x => x.d.se.length && x.d.wins && !x.exposed)
+    .sort((a, b) => isCaught(b.c.dex) - isCaught(a.c.dex) || rankDuels(a.d, b.d)).slice(0, n);
+}
+
+const hpPct = (h, b) => `${Math.min(100, Math.round(100 * h.min / b.hp))}–${Math.min(100, Math.round(100 * h.max / b.hp))}%`;
+const multTag = m => m >= 2 ? ` <span class="good">${m}×</span>` : m === 0 ? ' <span class="bad">no effect</span>' : m < 1 ? ` <span class="note">${m === 0.25 ? '¼' : '½'}×</span>` : '';
+const hitsText = n => n === Infinity ? "can't KO" : n === 1 ? 'OHKO' : `${n} hits`;
+function hitText(h, target, hits) {
+  return h ? `${esc(h.name)}${multTag(h.mult)} ${hpPct(h, target)} (${hitsText(hits)})` : '<span class="note">no damaging move</span>';
+}
+
+function teamHint() {
+  const team = cur().team;
+  return `<p class="note">${team.length ? `Picks use your team from <a href="#/planner">Battle plan</a>: ${team.map(n => esc(mon(n).name)).join(', ')}. Set their levels and moves there for exact numbers.`
+    : `Add your team in <a href="#/planner">Battle plan</a> to see who to send out against each trainer.`}
+    Damage is estimated with the game's formula. When nobody on your team has a super-effective move, you get a Pokémon you could catch by this point in the story.</p>`;
+}
+
+function foeRow(p, stage, party) {
+  const team = cur().team;
+  const foe = foeBattler(p);
+  const weak = weaknesses(p.dex);
+  const duels = team.map(n => duel(myBattler(n, p.level), foe)).sort(rankDuels);
+  const best = duels[0];
+  let pick = '';
+  if (best) {
+    const nm = esc(mon(best.me.dex).name);
+    pick = best.wins ? `Send out <b class="good">${nm}</b>: ${hitText(best.mine, foe, best.myHits)}`
+      : `<span class="${best.myHits < Infinity ? 'meh' : 'bad'}">No sure win. Best bet: ${nm}</span>: ${hitText(best.mine, foe, best.myHits)}`;
+    pick += `<table class="mini duel"><tr><th>Yours</th><th>Your best hit</th><th>Their best hit on you</th></tr>${duels.map(d => `<tr${d === best ? ' class="best"' : ''}>
+        <td><b>${esc(mon(d.me.dex).name)}</b> Lv ${d.me.level}${d.me.guessedLevel ? '*' : ''}${d.faster ? ' <span class="note">faster</span>' : ''}</td>
+        <td>${hitText(d.mine, foe, d.myHits)}</td>
+        <td>${hitText(d.theirs, d.me, d.theirHits)}${d.threats.length ? `<div class="bad">Super effective: ${d.threats.map(esc).join(', ')}</div>` : ''}</td></tr>`).join('')}</table>`;
+  }
+  if (!best || !duels.some(d => d.se.length) || !best.wins) {
+    const sug = catchSuggestions(p, foe, stage, party);
+    pick += sug.length ? `<div class="catch">${best ? (duels.some(d => d.se.length) ? 'Or catch' : 'Nobody on your team has a super-effective move. Catch') : 'Good catch'}: ${sug.map(({ c, d }) => {
+      const learn = mon(c.dex).learnset.find(([, mv]) => mv === d.mine?.name);
+      return `<b>${esc(mon(c.dex).name)}</b> ${types(c.dex)} on <a href="#/loc/${c.loc}">${esc(c.name)}</a>
+        <span class="note">(${esc(METHOD_LABEL[c.method] || c.method)}${c.levels ? `, Lv ${esc(c.levels)}` : ''}${isCaught(c.dex) ? ', you have one' : ''}).
+        At Lv ${p.level}: ${hitText(d.mine, foe, d.myHits)}${learn && learn[0] > 1 ? `, learned at Lv ${learn[0]}` : ''}</span>`;
+    }).join(' or ')}</div>`
+      : `<div class="note">Nothing you can catch by now has a super-effective move that wins this one-on-one without being weak to another of this trainer's moves.</div>`;
+  }
+  return `<div class="foe"><div><b>${esc(p.name)}</b> Lv ${p.level} ${types(p.dex)} <span class="note">${foe.hp} HP${p.item ? ` · holding ${esc(p.item)}` : ''}</span></div>
+    ${p.moves?.length ? `<div class="moves">${p.moves.map(m => `<span class="mv">${esc(m.name)}${m.type ? ` <i class="t-${m.type}"></i>` : ''}${m.power ? ` <small>${m.power === 1 ? '—' : m.power}</small>` : ''}</span>`).join('')}</div>` : ''}
+    <div class="note">Weak to: ${weak.length ? weak.map(w => typeTag(w.t) + (w.m === 4 ? '×4' : '')).join(' ') : 'nothing'}</div>
+    <div class="pick">${pick}</div></div>`;
+}
+
+const money = n => '₽' + Number(n).toLocaleString();
+function trainerCard(t, stage, opts = {}) {
+  const s = cur();
+  const party = t.party || t.byStarter[s.starter];
+  const prize = typeof t.prize === 'object' ? t.prize[s.starter] : t.prize;
+  const ace = Math.max(...party.map(p => p.level));
+  const head = opts.title || `${t.class} ${t.name}`;
+  const meta = opts.meta || `${party.length} Pokémon · Lv ${ace} · ${money(prize)}`;
+  const info = [t.rewards && `Reward: ${t.rewards.map(esc).join(', ')}`, t.uses && `Uses ${t.uses.map(esc).join(', ')}`,
+    t.double && 'Double battle'].filter(Boolean).join(' · ');
+  return `<details class="card trainer"><summary>${esc(head)} <span class="note">· ${esc(meta)}</span>${t.double ? ' <span class="tag">Double</span>' : ''}${t.rewards ? ' <span class="tag">Reward</span>' : ''}</summary>
+    ${info ? `<p class="note">${info}</p>` : ''}
+    ${t.note ? `<p class="note">${esc(t.note)}</p>` : ''}${opts.extra || ''}
+    ${party.map(p => foeRow(p, stage, party)).join('')}
+    ${cur().team.some(n => !teamMeta(n).level) ? '<p class="note">* Level not set in Battle plan, so it is assumed to match theirs.</p>' : ''}</details>`;
+}
+
 function renderPlanner() {
   setHeader('Battle plan', false, 'planner');
   const s = cur();
-  let html = `<div class="card"><b>Your team</b> <span class="note">(add up to 6)</span>
-    <div class="team" style="margin-top:8px">${[0, 1, 2, 3, 4, 5].map(i => {
-      const n = s.team[i];
-      return n ? `<div class="slot"><button data-rm="${i}" aria-label="Remove">&times;</button><b>${esc(mon(n).name)}</b>${types(n)}</div>` : `<div class="slot note">Empty</div>`;
-    }).join('')}</div>
-    <input type="search" id="teamq" placeholder="Add a Pokémon by name" list="monlist" style="margin-top:10px">
+  s.teamMeta ||= {};
+  const moveNames = Object.keys(state.moves).sort();
+  let html = `<div class="card"><b>Your team</b> <span class="note">(up to 6). Set each one's level and moves for exact damage; blank moves use what it learns by level up.</span>
+    ${s.team.map((n, i) => {
+      const meta = s.teamMeta[n] || {};
+      const lvl = meta.level || '';
+      const defaults = defaultMoves(n, meta.level || 100);
+      return `<div class="member"><div class="mhead"><b>${esc(mon(n).name)}</b> ${types(n)}
+          <label class="note">Lv <input type="number" min="1" max="100" inputmode="numeric" data-lvl="${n}" value="${lvl}" placeholder="?"></label>
+          <button class="icon-x" data-rm="${i}" aria-label="Remove ${esc(mon(n).name)}">&times;</button></div>
+        <div class="mvgrid">${[0, 1, 2, 3].map(k => `<input list="movelist" data-mv="${n}:${k}" value="${esc(meta.moves?.[k] || '')}" placeholder="${meta.level ? esc(defaults[k] || 'Move') : 'Move'}">`).join('')}</div></div>`;
+    }).join('') || '<p class="note">No Pokémon yet.</p>'}
+    <input type="search" id="teamq" placeholder="Add a Pokémon by name" list="monlist" style="margin-top:10px" ${s.team.length >= 6 ? 'disabled' : ''}>
     <datalist id="monlist">${state.dex.map(p => `<option value="${esc(p.name)}">`).join('')}</datalist>
-    <label class="note" style="display:block;margin-top:10px">Starter you picked (sets the Champion's team):
-      <select id="starter">${['Bulbasaur', 'Charmander', 'Squirtle'].map(x => `<option ${s.starter === x ? 'selected' : ''}>${x}</option>`).join('')}</select></label></div>`;
-
+    <datalist id="movelist">${moveNames.map(m => `<option value="${esc(m)}">`).join('')}</datalist>
+    <label class="note" style="display:block;margin-top:10px">Starter you picked (sets your rival's team):
+      <select id="starter">${['Bulbasaur', 'Charmander', 'Squirtle'].map(x => `<option ${s.starter === x ? 'selected' : ''}>${x}</option>`).join('')}</select></label></div>
+    <p class="note">Gym Leaders, rival battles, Giovanni, the Elite Four and the Champion in story order. Every other trainer is on its route page.</p>`;
   for (const t of state.trainers) {
     const party = t.party || t.byStarter[s.starter];
-    const good = bestTypesAgainst(party);
-    const rows = party.map(p => {
-      const ranked = s.team.map(n => ({ n, ...matchup(n, p) })).sort((a, b) => b.score - a.score);
-      const best = ranked[0];
-      const verdict = !best ? '' : best.score >= 2 ? `<span class="good">${esc(mon(best.n).name)}</span>` : best.score >= 1 ? `<span class="meh">${esc(mon(best.n).name)} (even)</span>` : `<span class="bad">No good answer</span>`;
-      const threat = s.team.filter(n => matchup(n, p).defense >= 2).map(n => mon(n).name);
-      return `<tr><td><b>${esc(p.name)}</b> Lv ${p.level}${p.item ? ` <span class="note">@ ${esc(p.item)}</span>` : ''}<br>${types(p.dex)}
-        ${p.moves?.length ? `<div class="note">${p.moves.map(m => esc(m.name)).join(', ')}</div>` : ''}</td>
-        <td>${verdict}${threat.length ? `<div class="note">Hits hard: ${esc(threat.join(', '))}</div>` : ''}</td></tr>`;
-    }).join('');
     const ace = Math.max(...party.map(p => p.level));
-    html += `<details class="card"><summary>${esc(t.name)} <span class="note">· ${esc(t.where)} · ${esc(t.specialty)} · ace Lv ${ace}</span></summary>
-      ${t.note ? `<p class="note">${esc(t.note)}</p>` : ''}
-      <p class="note">Types that hit most of this team: ${good.map(g => typeTag(g.t)).join(' ')}</p>
-      ${s.team.length ? '' : '<p class="note">Add your team above to see who to send out.</p>'}
-      <table class="mini"><tr><th>Their Pokémon</th><th>Send out</th></tr>${rows}</table></details>`;
+    html += trainerCard(t, stageOf(t.stage || t.location), {
+      title: t.name, meta: `${t.where} · ${t.specialty} · ace Lv ${ace}`,
+      extra: `<p class="note">Types that hit most of this team: ${bestTypesAgainst(party).map(g => typeTag(g.t)).join(' ')}</p>`
+    });
   }
-  html += `<p class="note">Matchups use type effectiveness only: your Pokémon's own types against theirs, and their types and moves against yours. Levels and stats are not counted.</p>`;
+  html += `<p class="note">Damage uses the Gen 3 formula with your levels and moves, their real moves and IVs, average IVs for yours and no EVs. Critical hits, abilities, held items and stat changes are not counted, so treat close calls with care.</p>`;
   view.innerHTML = html;
   view.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => { s.team.splice(+b.dataset.rm, 1); save(); renderPlanner(); });
+  view.querySelectorAll('[data-lvl]').forEach(inp => inp.onchange = () => {
+    const n = inp.dataset.lvl, v = Math.max(0, Math.min(100, parseInt(inp.value, 10) || 0));
+    (s.teamMeta[n] ||= {}).level = v || undefined; save(); renderPlanner();
+  });
+  view.querySelectorAll('[data-mv]').forEach(inp => inp.onchange = () => {
+    const [n, k] = inp.dataset.mv.split(':');
+    const name = moveNames.find(m => m.toLowerCase() === inp.value.trim().toLowerCase()) || '';
+    const meta = (s.teamMeta[n] ||= {});
+    meta.moves = [0, 1, 2, 3].map(i => (meta.moves || [])[i] || '');
+    meta.moves[k] = name; save(); renderPlanner();
+  });
   document.getElementById('starter').onchange = e => { s.starter = e.target.value; save(); renderPlanner(); };
   const q = document.getElementById('teamq');
   q.onchange = () => {

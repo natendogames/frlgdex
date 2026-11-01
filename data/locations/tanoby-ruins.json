@@ -305,6 +305,221 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Ruin Maniac",
+   "name": "Benjamin",
+   "prize": 2304,
+   "party": [
+    {
+     "dex": 74,
+     "name": "Geodude",
+     "level": 48,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Earthquake",
+       "type": "Ground",
+       "power": 100
+      },
+      {
+       "name": "Explosion",
+       "type": "Normal",
+       "power": 250
+      },
+      {
+       "name": "Double-edge",
+       "type": "Normal",
+       "power": 120
+      }
+     ]
+    },
+    {
+     "dex": 75,
+     "name": "Graveler",
+     "level": 48,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Earthquake",
+       "type": "Ground",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 75,
+     "name": "Graveler",
+     "level": 48,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Earthquake",
+       "type": "Ground",
+       "power": 100
+      }
+     ]
+    }
+   ],
+   "id": "ruin-maniac-benjamin",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "class": "Gentleman",
+   "name": "Clifford",
+   "prize": 3528,
+   "party": [
+    {
+     "dex": 105,
+     "name": "Marowak",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bonemerang",
+       "type": "Ground",
+       "power": 50
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "False Swipe",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Thrash",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 55,
+     "name": "Golduck",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Psych Up",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    }
+   ],
+   "id": "gentleman-clifford",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "class": "Painter",
+   "name": "Edna",
+   "prize": 800,
+   "party": [
+    {
+     "dex": 235,
+     "name": "Smeargle",
+     "level": 50,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Sketch",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "painter-edna",
+   "area": "Tanoby Ruins"
+  },
+  {
+   "class": "Ruin Maniac",
+   "name": "Brandon",
+   "prize": 2400,
+   "party": [
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 50,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Dragonbreath",
+       "type": "Dragon",
+       "power": 60
+      },
+      {
+       "name": "Sandstorm",
+       "type": "Rock"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Iron Tail",
+       "type": "Steel",
+       "power": 100
+      }
+     ]
+    }
+   ],
+   "id": "ruin-maniac-brandon",
+   "area": "Tanoby Ruins"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

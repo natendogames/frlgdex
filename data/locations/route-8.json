@@ -86,6 +86,943 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Lass",
+   "name": "Julia",
+   "prize": 352,
+   "party": [
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sing",
+       "type": "Normal"
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Follow Me",
+       "type": "Normal"
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sing",
+       "type": "Normal"
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Follow Me",
+       "type": "Normal"
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "lass-julia"
+  },
+  {
+   "class": "Gamer",
+   "name": "Rich",
+   "prize": 1728,
+   "party": [
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 37,
+     "name": "Vulpix",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Will-o-wisp",
+       "type": "Fire"
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "id": "gamer-rich"
+  },
+  {
+   "class": "Super Nerd",
+   "name": "Glenn",
+   "prize": 528,
+   "party": [
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 89,
+     "name": "Muk",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "super-nerd-glenn"
+  },
+  {
+   "class": "Twins",
+   "name": "Eli & Anne",
+   "prize": 528,
+   "party": [
+    {
+     "dex": 35,
+     "name": "Clefairy",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sing",
+       "type": "Normal"
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Follow Me",
+       "type": "Normal"
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 39,
+     "name": "Jigglypuff",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Pound",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      }
+     ]
+    }
+   ],
+   "double": true,
+   "id": "twins-eli-anne"
+  },
+  {
+   "class": "Lass",
+   "name": "Paige",
+   "prize": 368,
+   "party": [
+    {
+     "dex": 29,
+     "name": "Nidoran♀",
+     "level": 23,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 30,
+     "name": "Nidorina",
+     "level": 23,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "lass-paige"
+  },
+  {
+   "class": "Super Nerd",
+   "name": "Leslie",
+   "prize": 624,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "super-nerd-leslie"
+  },
+  {
+   "class": "Lass",
+   "name": "Andrea",
+   "prize": 384,
+   "party": [
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "lass-andrea"
+  },
+  {
+   "class": "Lass",
+   "name": "Megan",
+   "prize": 304,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 32,
+     "name": "Nidoran♂",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Peck",
+       "type": "Flying",
+       "power": 35
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 52,
+     "name": "Meowth",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Pay Day",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "lass-megan"
+  },
+  {
+   "class": "Biker",
+   "name": "Jaren",
+   "prize": 480,
+   "party": [
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "biker-jaren"
+  },
+  {
+   "class": "Gamer",
+   "name": "Stan",
+   "prize": 1584,
+   "party": [
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 61,
+     "name": "Poliwhirl",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "gamer-stan"
+  },
+  {
+   "class": "Biker",
+   "name": "Ricardo",
+   "prize": 460,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      }
+     ]
+    },
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 23,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "biker-ricardo"
+  },
+  {
+   "class": "Super Nerd",
+   "name": "Aidan",
+   "prize": 480,
+   "party": [
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Charge",
+       "type": "Electric"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Poison Gas",
+       "type": "Poison"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    },
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Charge",
+       "type": "Electric"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    },
+    {
+     "dex": 81,
+     "name": "Magnemite",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Thundershock",
+       "type": "Electric",
+       "power": 40
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "super-nerd-aidan"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

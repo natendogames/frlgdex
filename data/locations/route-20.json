@@ -156,6 +156,718 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Swimmer",
+   "name": "Barry",
+   "prize": 124,
+   "party": [
+    {
+     "dex": 90,
+     "name": "Shellder",
+     "level": 31,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Icicle Spear",
+       "type": "Ice",
+       "power": 10
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 91,
+     "name": "Cloyster",
+     "level": 31,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-barry"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Darrin",
+   "prize": 112,
+   "party": [
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 117,
+     "name": "Seadra",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-darrin"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Shirley",
+   "prize": 120,
+   "party": [
+    {
+     "dex": 117,
+     "name": "Seadra",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 117,
+     "name": "Seadra",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-female-shirley"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Irene",
+   "prize": 600,
+   "party": [
+    {
+     "dex": 72,
+     "name": "Tentacool",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Constrict",
+       "type": "Normal",
+       "power": 10
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 86,
+     "name": "Seel",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Icy Wind",
+       "type": "Ice",
+       "power": 55
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Rest",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-irene"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Tiffany",
+   "prize": 140,
+   "party": [
+    {
+     "dex": 119,
+     "name": "Seaking",
+     "level": 35,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-female-tiffany"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Roger",
+   "prize": 720,
+   "party": [
+    {
+     "dex": 22,
+     "name": "Fearow",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 22,
+     "name": "Fearow",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-roger"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Nora",
+   "prize": 120,
+   "party": [
+    {
+     "dex": 90,
+     "name": "Shellder",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Icicle Spear",
+       "type": "Ice",
+       "power": 10
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 90,
+     "name": "Shellder",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Icicle Spear",
+       "type": "Ice",
+       "power": 10
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 91,
+     "name": "Cloyster",
+     "level": 30,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Aurora Beam",
+       "type": "Ice",
+       "power": 65
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-female-nora"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Dean",
+   "prize": 140,
+   "party": [
+    {
+     "dex": 120,
+     "name": "Staryu",
+     "level": 35,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Camouflage",
+       "type": "Normal"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-dean"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Missy",
+   "prize": 620,
+   "party": [
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 31,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 119,
+     "name": "Seaking",
+     "level": 31,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-missy"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Melissa",
+   "prize": 124,
+   "party": [
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 31,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      }
+     ]
+    },
+    {
+     "dex": 119,
+     "name": "Seaking",
+     "level": 31,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-female-melissa"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

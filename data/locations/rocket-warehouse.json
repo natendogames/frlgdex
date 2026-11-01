@@ -48,6 +48,543 @@
    "where": "Rocket Warehouse"
   }
  ],
+ "trainers": [
+  {
+   "class": "Team Rocket",
+   "name": "Admin",
+   "prize": 1728,
+   "party": [
+    {
+     "dex": 89,
+     "name": "Muk",
+     "level": 52,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Acid Armor",
+       "type": "Poison"
+      },
+      {
+       "name": "Sludge Bomb",
+       "type": "Poison",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 24,
+     "name": "Arbok",
+     "level": 53,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      },
+      {
+       "name": "Stockpile",
+       "type": "Normal"
+      },
+      {
+       "name": "Swallow",
+       "type": "Normal"
+      },
+      {
+       "name": "Spit Up",
+       "type": "Normal",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 45,
+     "name": "Vileplume",
+     "level": 54,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Aromatherapy",
+       "type": "Grass"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Mega Drain",
+       "type": "Grass",
+       "power": 40
+      },
+      {
+       "name": "Petal Dance",
+       "type": "Grass",
+       "power": 70
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion"
+   ],
+   "id": "team-rocket-admin",
+   "area": "Rocket Warehouse"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 1568,
+   "party": [
+    {
+     "dex": 97,
+     "name": "Hypno",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Psych Up",
+       "type": "Normal"
+      },
+      {
+       "name": "Swagger",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 97,
+     "name": "Hypno",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Meditate",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Psych Up",
+       "type": "Normal"
+      },
+      {
+       "name": "Swagger",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-48",
+   "area": "Rocket Warehouse"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 1536,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 48,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 48,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 48,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-47",
+   "area": "Rocket Warehouse"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Admin",
+   "prize": 1760,
+   "party": [
+    {
+     "dex": 42,
+     "name": "Golbat",
+     "level": 53,
+     "iv": 24,
+     "moves": [
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Air Cutter",
+       "type": "Flying",
+       "power": 55
+      },
+      {
+       "name": "Mean Look",
+       "type": "Normal"
+      },
+      {
+       "name": "Poison Fang",
+       "type": "Poison",
+       "power": 50
+      }
+     ]
+    },
+    {
+     "dex": 110,
+     "name": "Weezing",
+     "level": 54,
+     "iv": 24,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Haze",
+       "type": "Ice"
+      },
+      {
+       "name": "Explosion",
+       "type": "Normal",
+       "power": 250
+      },
+      {
+       "name": "Destiny Bond",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 229,
+     "name": "Houndoom",
+     "level": 55,
+     "iv": 24,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion"
+   ],
+   "id": "team-rocket-admin-2",
+   "area": "Rocket Warehouse"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 1568,
+   "party": [
+    {
+     "dex": 228,
+     "name": "Houndour",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Crunch",
+       "type": "Dark",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 228,
+     "name": "Houndour",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Faint Attack",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Crunch",
+       "type": "Dark",
+       "power": 80
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-42",
+   "area": "Rocket Warehouse"
+  },
+  {
+   "class": "Scientist",
+   "name": "Gideon",
+   "prize": 2208,
+   "party": [
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 46,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Explosion",
+       "type": "Normal",
+       "power": 250
+      }
+     ]
+    },
+    {
+     "dex": 101,
+     "name": "Electrode",
+     "level": 46,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 81,
+     "name": "Magnemite",
+     "level": 46,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Lock-on",
+       "type": "Normal"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 82,
+     "name": "Magneton",
+     "level": 46,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Lock-on",
+       "type": "Normal"
+      },
+      {
+       "name": "Tri Attack",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 137,
+     "name": "Porygon",
+     "level": 46,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sharpen",
+       "type": "Normal"
+      },
+      {
+       "name": "Lock-on",
+       "type": "Normal"
+      },
+      {
+       "name": "Tri Attack",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Recycle",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "rewards": [
+    "Sapphire"
+   ],
+   "id": "scientist-gideon",
+   "area": "Rocket Warehouse"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

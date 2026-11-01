@@ -177,6 +177,344 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Bug Catcher",
+   "name": "Keigo",
+   "prize": 192,
+   "party": [
+    {
+     "dex": 13,
+     "name": "Weedle",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 13,
+     "name": "Weedle",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-keigo"
+  },
+  {
+   "class": "Camper",
+   "name": "Ricky",
+   "prize": 400,
+   "party": [
+    {
+     "dex": 7,
+     "name": "Squirtle",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "camper-ricky"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Nancy",
+   "prize": 320,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Thunder Wave",
+       "type": "Electric"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Double Team",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-nancy"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Elijah",
+   "prize": 240,
+   "party": [
+    {
+     "dex": 12,
+     "name": "Butterfree",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-elijah"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Isabelle",
+   "prize": 320,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-isabelle"
+  },
+  {
+   "class": "Camper",
+   "name": "Jeff",
+   "prize": 320,
+   "party": [
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Peck",
+       "type": "Flying",
+       "power": 35
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    }
+   ],
+   "id": "camper-jeff"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

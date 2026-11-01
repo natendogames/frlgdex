@@ -666,6 +666,96 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 1216,
+   "party": [
+    {
+     "dex": 41,
+     "name": "Zubat",
+     "level": 38,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Air Cutter",
+       "type": "Flying",
+       "power": 55
+      },
+      {
+       "name": "Mean Look",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 41,
+     "name": "Zubat",
+     "level": 38,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Air Cutter",
+       "type": "Flying",
+       "power": 55
+      },
+      {
+       "name": "Mean Look",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 42,
+     "name": "Golbat",
+     "level": 38,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Air Cutter",
+       "type": "Flying",
+       "power": 55
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-45",
+   "area": "Icefall Cave Back"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

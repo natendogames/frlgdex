@@ -96,6 +96,392 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Bug Catcher",
+   "name": "Colton",
+   "prize": 120,
+   "party": [
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 10,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 13,
+     "name": "Weedle",
+     "level": 10,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 10,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-colton"
+  },
+  {
+   "class": "Youngster",
+   "name": "Ben",
+   "prize": 176,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 11,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 11,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "youngster-ben"
+  },
+  {
+   "class": "Lass",
+   "name": "Janice",
+   "prize": 144,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 9,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 9,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "lass-janice"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "Greg",
+   "prize": 108,
+   "party": [
+    {
+     "dex": 13,
+     "name": "Weedle",
+     "level": 9,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 14,
+     "name": "Kakuna",
+     "level": 9,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 9,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 11,
+     "name": "Metapod",
+     "level": 9,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-greg"
+  },
+  {
+   "class": "Youngster",
+   "name": "Calvin",
+   "prize": 224,
+   "party": [
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 14,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Peck",
+       "type": "Flying",
+       "power": 35
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "youngster-calvin"
+  },
+  {
+   "class": "Lass",
+   "name": "Sally",
+   "prize": 160,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 10,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 29,
+     "name": "Nidoran♀",
+     "level": 10,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "lass-sally"
+  },
+  {
+   "class": "Bug Catcher",
+   "name": "James",
+   "prize": 132,
+   "party": [
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 11,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 11,
+     "name": "Metapod",
+     "level": 11,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-james"
+  },
+  {
+   "class": "Lass",
+   "name": "Robin",
+   "prize": 224,
+   "party": [
+    {
+     "dex": 39,
+     "name": "Jigglypuff",
+     "level": 14,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sing",
+       "type": "Normal"
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Pound",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "lass-robin"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

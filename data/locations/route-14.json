@@ -102,6 +102,840 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Bird Keeper",
+   "name": "Carter",
+   "prize": 672,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 84,
+     "name": "Doduo",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Tri Attack",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    },
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-carter"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Mitch",
+   "prize": 624,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Aerial Ace",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 22,
+     "name": "Fearow",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-mitch"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Beck",
+   "prize": 696,
+   "party": [
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 22,
+     "name": "Fearow",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-beck"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Marlon",
+   "prize": 672,
+   "party": [
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Aerial Ace",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 84,
+     "name": "Doduo",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Tri Attack",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Rage",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    },
+    {
+     "dex": 22,
+     "name": "Fearow",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-marlon"
+  },
+  {
+   "class": "Biker",
+   "name": "Isaac",
+   "prize": 560,
+   "party": [
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 28,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "biker-isaac"
+  },
+  {
+   "class": "Biker",
+   "name": "Malik",
+   "prize": 580,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "biker-malik"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Donald",
+   "prize": 792,
+   "party": [
+    {
+     "dex": 83,
+     "name": "Farfetch'd",
+     "level": 33,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Knock Off",
+       "type": "Dark",
+       "power": 20
+      },
+      {
+       "name": "Fury Cutter",
+       "type": "Bug",
+       "power": 10
+      },
+      {
+       "name": "Swords Dance",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-donald"
+  },
+  {
+   "class": "Biker",
+   "name": "Gerald",
+   "prize": 580,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 89,
+     "name": "Muk",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "biker-gerald"
+  },
+  {
+   "class": "Biker",
+   "name": "Lukas",
+   "prize": 520,
+   "party": [
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 88,
+     "name": "Grimer",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 109,
+     "name": "Koffing",
+     "level": 26,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Smog",
+       "type": "Poison",
+       "power": 20
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Sludge",
+       "type": "Poison",
+       "power": 65
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "biker-lukas"
+  },
+  {
+   "class": "Bird Keeper",
+   "name": "Benny",
+   "prize": 696,
+   "party": [
+    {
+     "dex": 21,
+     "name": "Spearow",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Aerial Ace",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 22,
+     "name": "Fearow",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "bird-keeper-benny"
+  },
+  {
+   "class": "Twins",
+   "name": "Kiri & Jan",
+   "prize": 696,
+   "party": [
+    {
+     "dex": 4,
+     "name": "Charmander",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Metal Claw",
+       "type": "Steel",
+       "power": 50
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 7,
+     "name": "Squirtle",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "double": true,
+   "id": "twins-kiri-jan"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

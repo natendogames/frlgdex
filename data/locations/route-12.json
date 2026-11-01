@@ -252,6 +252,524 @@
    "where": "North Entrance 2F"
   }
  ],
+ "trainers": [
+  {
+   "class": "Fisherman",
+   "name": "Ned",
+   "prize": 792,
+   "party": [
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      }
+     ]
+    },
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 22,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-ned"
+  },
+  {
+   "class": "Fisherman",
+   "name": "Chip",
+   "prize": 864,
+   "party": [
+    {
+     "dex": 72,
+     "name": "Tentacool",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Constrict",
+       "type": "Normal",
+       "power": 10
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-chip"
+  },
+  {
+   "class": "Fisherman",
+   "name": "Hank",
+   "prize": 972,
+   "party": [
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 27,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Flail",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-hank"
+  },
+  {
+   "class": "Fisherman",
+   "name": "Elliot",
+   "prize": 756,
+   "party": [
+    {
+     "dex": 60,
+     "name": "Poliwag",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 90,
+     "name": "Shellder",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Icicle Spear",
+       "type": "Ice",
+       "power": 10
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      }
+     ]
+    },
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-elliot"
+  },
+  {
+   "class": "Young Couple",
+   "name": "Gia & Jes",
+   "prize": 1344,
+   "party": [
+    {
+     "dex": 32,
+     "name": "Nidoran♂",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 29,
+     "name": "Nidoran♀",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "double": true,
+   "id": "young-couple-gia-jes"
+  },
+  {
+   "class": "Rocker",
+   "name": "Luca",
+   "prize": 696,
+   "party": [
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    },
+    {
+     "dex": 101,
+     "name": "Electrode",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Sonicboom",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      }
+     ]
+    }
+   ],
+   "id": "rocker-luca"
+  },
+  {
+   "class": "Camper",
+   "name": "Justin",
+   "prize": 580,
+   "party": [
+    {
+     "dex": 32,
+     "name": "Nidoran♂",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 33,
+     "name": "Nidorino",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "camper-justin"
+  },
+  {
+   "class": "Fisherman",
+   "name": "Andrew",
+   "prize": 864,
+   "party": [
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    },
+    {
+     "dex": 129,
+     "name": "Magikarp",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Splash",
+       "type": "Normal"
+      },
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-andrew"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

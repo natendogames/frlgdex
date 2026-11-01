@@ -179,6 +179,318 @@
   }
  ],
  "gifts": [],
+ "trainers": [
+  {
+   "class": "Swimmer",
+   "name": "Nicole",
+   "prize": 200,
+   "party": [
+    {
+     "dex": 183,
+     "name": "Marill",
+     "level": 50,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubblebeam",
+       "type": "Water",
+       "power": 65
+      },
+      {
+       "name": "Double-edge",
+       "type": "Normal",
+       "power": 120
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-female-nicole",
+   "area": "Outcast Island"
+  },
+  {
+   "class": "Sis and Bro",
+   "name": "Ava & Geb",
+   "prize": 400,
+   "party": [
+    {
+     "dex": 61,
+     "name": "Poliwhirl",
+     "level": 50,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Doubleslap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Body Slam",
+       "type": "Normal",
+       "power": 85
+      },
+      {
+       "name": "Belly Drum",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 121,
+     "name": "Starmie",
+     "level": 50,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "double": true,
+   "id": "sis-and-bro-ava-geb",
+   "area": "Outcast Island"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Mymo",
+   "prize": 196,
+   "party": [
+    {
+     "dex": 99,
+     "name": "Kingler",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Mud Shot",
+       "type": "Ground",
+       "power": 55
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Guillotine",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 8,
+     "name": "Wartortle",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Skull Bash",
+       "type": "Normal",
+       "power": 100
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-mymo",
+   "area": "Outcast Island"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 1536,
+   "party": [
+    {
+     "dex": 89,
+     "name": "Muk",
+     "level": 48,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Minimize",
+       "type": "Normal"
+      },
+      {
+       "name": "Screech",
+       "type": "Normal"
+      },
+      {
+       "name": "Acid Armor",
+       "type": "Poison"
+      },
+      {
+       "name": "Sludge Bomb",
+       "type": "Poison",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 42,
+     "name": "Golbat",
+     "level": 48,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Air Cutter",
+       "type": "Flying",
+       "power": 55
+      },
+      {
+       "name": "Mean Look",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 48,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Pursuit",
+       "type": "Dark",
+       "power": 40
+      },
+      {
+       "name": "Super Fang",
+       "type": "Normal",
+       "power": 1
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-46",
+   "area": "Outcast Island"
+  },
+  {
+   "class": "Fisherman",
+   "name": "Tylor",
+   "prize": 1764,
+   "party": [
+    {
+     "dex": 211,
+     "name": "Qwilfish",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      },
+      {
+       "name": "Destiny Bond",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 211,
+     "name": "Qwilfish",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      },
+      {
+       "name": "Destiny Bond",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "id": "fisherman-tylor",
+   "area": "Outcast Island"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

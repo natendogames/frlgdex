@@ -2,9 +2,10 @@
 
 A phone-friendly, offline-capable 100% completion guide for Pokémon FireRed and LeafGreen, inspired by RouteDex.
 
-- **Routes**: all 90 Kanto and Sevii Islands locations in story order. Each one has walkthrough steps, wild Pokémon (method, levels, encounter rate, FR/LG-only tags), items on the ground, hidden items, NPC gifts and in-game trades, all as checklists.
+- **Routes**: all 90 Kanto and Sevii Islands locations in story order. Each one has walkthrough steps, every trainer in the order you meet them (party, levels, HP, moves, weaknesses, prize money and rewards, with a damage estimate for each of your Pokémon against each of theirs), wild Pokémon (method, levels, encounter rate, FR/LG-only tags), items on the ground, hidden items, NPC gifts and in-game trades, all as checklists.
+- **Story progress**: fishing, Surf and Rock Smash encounters are listed under "come back later" until you have the rod or HM. When your team has no super-effective answer to a trainer's Pokémon, the app suggests one you could have caught by that point.
 - **Pokédex**: Kanto 151 or National 386, showing where to catch each one, what to evolve it from, or which version to trade from.
-- **Battle plan**: enter your team to see who to send out against each Gym Leader, the Elite Four and the Champion (whose team depends on your starter).
+- **Battle plan**: enter your team to see who to send out against each Gym Leader, rival battle, Giovanni, the Elite Four and the Champion (rival teams depend on your starter).
 - **Tools**: breeding helper (egg groups, partners, what hatches, steps), type matchup lookup and full chart, version exclusives list.
 - Separate FireRed and LeafGreen saves, stored on the device, with backup export and import.
 - Optional cloud sync between devices keyed by an email address (no password). Needs the small Cloudflare Worker in `worker/`; see `worker/README.md`.
@@ -27,9 +28,10 @@ python3 -I scripts/build_data.py /tmp/pokefirered data
 | File | Contents |
 |---|---|
 | `locations.json` | Story-order list of locations with their section |
-| `locations/<id>.json` | `encounters[]` (dex, name, method, versions, levels, rate, area, notes), `items[]` (id, name, hidden, where), `gifts[]` (id, name, from, where, versions?) |
+| `locations/<id>.json` | `encounters[]` (dex, name, method, versions, levels, rate, area, notes), `items[]` (id, name, hidden, where), `gifts[]` (id, name, from, where, versions?), `trainers[]` (id, class, name, prize, party or byStarter, rewards?, uses?, double?, area?, stage?) |
 | `pokedex.json` | 386 species: types, base stats, egg groups, gender ratio, egg cycles, evolutions |
-| `trainers.json` | Gym Leaders, Elite Four and Champion parties |
+| `trainers.json` | Key battles for the Battle plan tab (Gym Leaders, rivals, Giovanni, Elite Four, Champion), same shape as route trainers |
 | `types.json` | Gen 3 type chart (attacker → defender → multiplier) |
+| `moves.json` | Move name → type, power and special damage effect, for the damage estimates |
 
 Progress keys are `dex:<number>` for Pokémon and `<location-id>:item:<id>` or `<location-id>:gift:<id>` for checklists, so keep ids stable.

@@ -196,6 +196,508 @@
    "where": "House 5"
   }
  ],
+ "trainers": [
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 544,
+   "party": [
+    {
+     "dex": 66,
+     "name": "Machop",
+     "level": 17,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Low Kick",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      }
+     ]
+    },
+    {
+     "dex": 96,
+     "name": "Drowzee",
+     "level": 17,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Headbutt",
+       "type": "Normal",
+       "power": 70
+      }
+     ]
+    }
+   ],
+   "rewards": [
+    "TM28"
+   ],
+   "id": "team-rocket-grunt-5",
+   "area": "Outside"
+  },
+  {
+   "class": "Rival",
+   "name": "Rival",
+   "prize": 288,
+   "byStarter": {
+    "Bulbasaur": [
+     {
+      "dex": 17,
+      "name": "Pidgeotto",
+      "level": 17,
+      "iv": 6,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Sand-attack",
+        "type": "Ground"
+       },
+       {
+        "name": "Gust",
+        "type": "Flying",
+        "power": 40
+       },
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       }
+      ]
+     },
+     {
+      "dex": 63,
+      "name": "Abra",
+      "level": 16,
+      "iv": 6,
+      "moves": [
+       {
+        "name": "Teleport",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 19,
+      "name": "Rattata",
+      "level": 15,
+      "iv": 6,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Tail Whip",
+        "type": "Normal"
+       },
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       }
+      ]
+     },
+     {
+      "dex": 4,
+      "name": "Charmander",
+      "level": 18,
+      "iv": 12,
+      "moves": [
+       {
+        "name": "Scratch",
+        "type": "Normal",
+        "power": 40
+       },
+       {
+        "name": "Growl",
+        "type": "Normal"
+       },
+       {
+        "name": "Ember",
+        "type": "Fire",
+        "power": 40
+       },
+       {
+        "name": "Metal Claw",
+        "type": "Steel",
+        "power": 50
+       }
+      ]
+     }
+    ],
+    "Charmander": [
+     {
+      "dex": 17,
+      "name": "Pidgeotto",
+      "level": 17,
+      "iv": 6,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Sand-attack",
+        "type": "Ground"
+       },
+       {
+        "name": "Gust",
+        "type": "Flying",
+        "power": 40
+       },
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       }
+      ]
+     },
+     {
+      "dex": 63,
+      "name": "Abra",
+      "level": 16,
+      "iv": 6,
+      "moves": [
+       {
+        "name": "Teleport",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 19,
+      "name": "Rattata",
+      "level": 15,
+      "iv": 6,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Tail Whip",
+        "type": "Normal"
+       },
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       }
+      ]
+     },
+     {
+      "dex": 7,
+      "name": "Squirtle",
+      "level": 18,
+      "iv": 12,
+      "moves": [
+       {
+        "name": "Bubble",
+        "type": "Water",
+        "power": 20
+       },
+       {
+        "name": "Withdraw",
+        "type": "Water"
+       },
+       {
+        "name": "Water Gun",
+        "type": "Water",
+        "power": 40
+       },
+       {
+        "name": "Bite",
+        "type": "Dark",
+        "power": 60
+       }
+      ]
+     }
+    ],
+    "Squirtle": [
+     {
+      "dex": 17,
+      "name": "Pidgeotto",
+      "level": 17,
+      "iv": 6,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Sand-attack",
+        "type": "Ground"
+       },
+       {
+        "name": "Gust",
+        "type": "Flying",
+        "power": 40
+       },
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       }
+      ]
+     },
+     {
+      "dex": 63,
+      "name": "Abra",
+      "level": 16,
+      "iv": 6,
+      "moves": [
+       {
+        "name": "Teleport",
+        "type": "Psychic"
+       }
+      ]
+     },
+     {
+      "dex": 19,
+      "name": "Rattata",
+      "level": 15,
+      "iv": 6,
+      "moves": [
+       {
+        "name": "Tackle",
+        "type": "Normal",
+        "power": 35
+       },
+       {
+        "name": "Tail Whip",
+        "type": "Normal"
+       },
+       {
+        "name": "Quick Attack",
+        "type": "Normal",
+        "power": 40
+       }
+      ]
+     },
+     {
+      "dex": 1,
+      "name": "Bulbasaur",
+      "level": 18,
+      "iv": 12,
+      "moves": [
+       {
+        "name": "Leech Seed",
+        "type": "Grass"
+       },
+       {
+        "name": "Vine Whip",
+        "type": "Grass",
+        "power": 35
+       },
+       {
+        "name": "Poisonpowder",
+        "type": "Poison"
+       },
+       {
+        "name": "Sleep Powder",
+        "type": "Grass"
+       }
+      ]
+     }
+    ]
+   },
+   "id": "rival-cerulean",
+   "area": "Outside"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Luis",
+   "prize": 64,
+   "party": [
+    {
+     "dex": 116,
+     "name": "Horsea",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 90,
+     "name": "Shellder",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Icicle Spear",
+       "type": "Ice",
+       "power": 10
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-luis",
+   "area": "Gym"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Diana",
+   "prize": 380,
+   "party": [
+    {
+     "dex": 118,
+     "name": "Goldeen",
+     "level": 19,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Sport",
+       "type": "Water"
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Horn Attack",
+       "type": "Normal",
+       "power": 65
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-diana",
+   "area": "Gym"
+  },
+  {
+   "class": "Leader",
+   "name": "Misty",
+   "prize": 2100,
+   "party": [
+    {
+     "dex": 120,
+     "name": "Staryu",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 121,
+     "name": "Starmie",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Super Potion"
+   ],
+   "rewards": [
+    "Cascade Badge",
+    "TM03"
+   ],
+   "id": "leader-misty",
+   "area": "Gym"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

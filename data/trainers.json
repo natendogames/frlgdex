@@ -1,20 +1,213 @@
 [
  {
-  "id": "brock",
+  "class": "Rival",
+  "name": "Rival (Oak's Lab)",
+  "prize": 80,
+  "byStarter": {
+   "Bulbasaur": [
+    {
+     "dex": 4,
+     "name": "Charmander",
+     "level": 5,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "Charmander": [
+    {
+     "dex": 7,
+     "name": "Squirtle",
+     "level": 5,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "Squirtle": [
+    {
+     "dex": 1,
+     "name": "Bulbasaur",
+     "level": 5,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "rival-oaks-lab",
+  "area": "Professor Oaks Lab",
+  "trainerName": "Rival",
+  "where": "Pallet Town Professor Oaks Lab",
+  "badge": null,
+  "specialty": "Mixed",
+  "location": "pallet-town",
+  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+ },
+ {
+  "class": "Rival",
+  "name": "Rival (Route 22)",
+  "prize": 144,
+  "byStarter": {
+   "Bulbasaur": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 9,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      }
+     ]
+    },
+    {
+     "dex": 4,
+     "name": "Charmander",
+     "level": 9,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "Charmander": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 9,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      }
+     ]
+    },
+    {
+     "dex": 7,
+     "name": "Squirtle",
+     "level": 9,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "Squirtle": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 9,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      }
+     ]
+    },
+    {
+     "dex": 1,
+     "name": "Bulbasaur",
+     "level": 9,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "rival-route22-early",
+  "trainerName": "Rival",
+  "where": "Route 22",
+  "badge": null,
+  "specialty": "Mixed",
+  "location": "route-22",
+  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+ },
+ {
+  "class": "Leader",
   "name": "Brock",
-  "where": "Pewter City Gym",
-  "badge": "Boulder Badge",
-  "specialty": "Rock",
-  "location": "pewter-city",
+  "prize": 1400,
   "party": [
    {
     "dex": 74,
     "name": "Geodude",
     "level": 12,
+    "iv": 0,
     "moves": [
      {
       "name": "Tackle",
-      "type": "Normal"
+      "type": "Normal",
+      "power": 35
      },
      {
       "name": "Defense Curl",
@@ -26,451 +219,3740 @@
     "dex": 95,
     "name": "Onix",
     "level": 14,
+    "iv": 0,
     "moves": [
      {
       "name": "Tackle",
-      "type": "Normal"
+      "type": "Normal",
+      "power": 35
      },
      {
       "name": "Bind",
-      "type": "Normal"
+      "type": "Normal",
+      "power": 15
      },
      {
       "name": "Rock Tomb",
-      "type": "Rock"
+      "type": "Rock",
+      "power": 50
      }
     ]
    }
-  ]
+  ],
+  "rewards": [
+   "Boulder Badge",
+   "TM39"
+  ],
+  "id": "leader-brock",
+  "area": "Gym",
+  "trainerName": "Brock",
+  "where": "Pewter City Gym",
+  "badge": "Boulder Badge",
+  "specialty": "Rock",
+  "location": "pewter-city"
  },
  {
-  "id": "misty",
-  "name": "Misty",
-  "where": "Cerulean City Gym",
-  "badge": "Cascade Badge",
-  "specialty": "Water",
+  "class": "Rival",
+  "name": "Rival (Cerulean City)",
+  "prize": 288,
+  "byStarter": {
+   "Bulbasaur": [
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 17,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 63,
+     "name": "Abra",
+     "level": 16,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 15,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 4,
+     "name": "Charmander",
+     "level": 18,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Metal Claw",
+       "type": "Steel",
+       "power": 50
+      }
+     ]
+    }
+   ],
+   "Charmander": [
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 17,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 63,
+     "name": "Abra",
+     "level": 16,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 15,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 7,
+     "name": "Squirtle",
+     "level": 18,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "Squirtle": [
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 17,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 63,
+     "name": "Abra",
+     "level": 16,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 15,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 1,
+     "name": "Bulbasaur",
+     "level": 18,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Leech Seed",
+       "type": "Grass"
+      },
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "rival-cerulean",
+  "area": "Outside",
+  "trainerName": "Rival",
+  "where": "Cerulean City",
+  "badge": null,
+  "specialty": "Mixed",
   "location": "cerulean-city",
+  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+ },
+ {
+  "class": "Leader",
+  "name": "Misty",
+  "prize": 2100,
   "party": [
    {
     "dex": 120,
     "name": "Staryu",
     "level": 18,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Harden",
+      "type": "Normal"
+     },
+     {
+      "name": "Water Gun",
+      "type": "Water",
+      "power": 40
+     },
+     {
+      "name": "Rapid Spin",
+      "type": "Normal",
+      "power": 20
+     },
+     {
+      "name": "Recover",
+      "type": "Normal"
+     }
+    ]
    },
    {
     "dex": 121,
     "name": "Starmie",
     "level": 21,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Water Gun",
+      "type": "Water",
+      "power": 40
+     },
+     {
+      "name": "Rapid Spin",
+      "type": "Normal",
+      "power": 20
+     },
+     {
+      "name": "Recover",
+      "type": "Normal"
+     },
+     {
+      "name": "Swift",
+      "type": "Normal",
+      "power": 60
+     }
+    ]
    }
-  ]
+  ],
+  "uses": [
+   "Super Potion"
+  ],
+  "rewards": [
+   "Cascade Badge",
+   "TM03"
+  ],
+  "id": "leader-misty",
+  "area": "Gym",
+  "trainerName": "Misty",
+  "where": "Cerulean City Gym",
+  "badge": "Cascade Badge",
+  "specialty": "Water",
+  "location": "cerulean-city"
  },
  {
-  "id": "lt-surge",
+  "class": "Rival",
+  "name": "Rival (S.S. Anne)",
+  "prize": 720,
+  "byStarter": {
+   "Bulbasaur": [
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 19,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 16,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 18,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      },
+      {
+       "name": "Kinesis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 5,
+     "name": "Charmeleon",
+     "level": 20,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Metal Claw",
+       "type": "Steel",
+       "power": 50
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "Charmander": [
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 19,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 16,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 18,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      },
+      {
+       "name": "Kinesis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 8,
+     "name": "Wartortle",
+     "level": 20,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Bubble",
+       "type": "Water",
+       "power": 20
+      },
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "Squirtle": [
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 19,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 16,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 18,
+     "iv": 6,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      },
+      {
+       "name": "Kinesis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 2,
+     "name": "Ivysaur",
+     "level": 20,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Leech Seed",
+       "type": "Grass"
+      },
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "rival-ss-anne",
+  "area": "2F Corridor",
+  "trainerName": "Rival",
+  "where": "S.S. Anne 2F Corridor",
+  "badge": null,
+  "specialty": "Mixed",
+  "location": "ss-anne",
+  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+ },
+ {
+  "class": "Leader",
   "name": "Lt. Surge",
-  "where": "Vermilion City Gym",
-  "badge": "Thunder Badge",
-  "specialty": "Electric",
-  "location": "vermilion-city",
+  "prize": 2400,
   "party": [
    {
     "dex": 100,
     "name": "Voltorb",
     "level": 21,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Tackle",
+      "type": "Normal",
+      "power": 35
+     },
+     {
+      "name": "Screech",
+      "type": "Normal"
+     },
+     {
+      "name": "Sonicboom",
+      "type": "Normal",
+      "power": 1
+     },
+     {
+      "name": "Spark",
+      "type": "Electric",
+      "power": 65
+     }
+    ]
    },
    {
     "dex": 25,
     "name": "Pikachu",
     "level": 18,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Tail Whip",
+      "type": "Normal"
+     },
+     {
+      "name": "Thunder Wave",
+      "type": "Electric"
+     },
+     {
+      "name": "Quick Attack",
+      "type": "Normal",
+      "power": 40
+     },
+     {
+      "name": "Double Team",
+      "type": "Normal"
+     }
+    ]
    },
    {
     "dex": 26,
     "name": "Raichu",
     "level": 24,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Thundershock",
+      "type": "Electric",
+      "power": 40
+     },
+     {
+      "name": "Tail Whip",
+      "type": "Normal"
+     },
+     {
+      "name": "Quick Attack",
+      "type": "Normal",
+      "power": 40
+     },
+     {
+      "name": "Thunderbolt",
+      "type": "Electric",
+      "power": 95
+     }
+    ]
    }
-  ]
+  ],
+  "uses": [
+   "Super Potion",
+   "Full Heal"
+  ],
+  "rewards": [
+   "Thunder Badge",
+   "TM34"
+  ],
+  "id": "leader-lt-surge",
+  "area": "Gym",
+  "trainerName": "Lt. Surge",
+  "where": "Vermilion City Gym",
+  "badge": "Thunder Badge",
+  "specialty": "Electric",
+  "location": "vermilion-city"
  },
  {
-  "id": "erika",
+  "class": "Leader",
   "name": "Erika",
-  "where": "Celadon City Gym",
-  "badge": "Rainbow Badge",
-  "specialty": "Grass",
-  "location": "celadon-city",
+  "prize": 2900,
   "party": [
    {
     "dex": 71,
     "name": "Victreebel",
     "level": 29,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Vine Whip",
+      "type": "Grass",
+      "power": 35
+     },
+     {
+      "name": "Sleep Powder",
+      "type": "Grass"
+     },
+     {
+      "name": "Sweet Scent",
+      "type": "Normal"
+     },
+     {
+      "name": "Razor Leaf",
+      "type": "Grass",
+      "power": 55
+     }
+    ]
    },
    {
     "dex": 114,
     "name": "Tangela",
     "level": 24,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Absorb",
+      "type": "Grass",
+      "power": 20
+     },
+     {
+      "name": "Growth",
+      "type": "Normal"
+     },
+     {
+      "name": "Poisonpowder",
+      "type": "Poison"
+     },
+     {
+      "name": "Vine Whip",
+      "type": "Grass",
+      "power": 35
+     }
+    ]
    },
    {
     "dex": 45,
     "name": "Vileplume",
     "level": 29,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Absorb",
+      "type": "Grass",
+      "power": 20
+     },
+     {
+      "name": "Aromatherapy",
+      "type": "Grass"
+     },
+     {
+      "name": "Stun Spore",
+      "type": "Grass"
+     },
+     {
+      "name": "Mega Drain",
+      "type": "Grass",
+      "power": 40
+     }
+    ]
    }
-  ]
+  ],
+  "uses": [
+   "Hyper Potion",
+   "Full Heal"
+  ],
+  "rewards": [
+   "Rainbow Badge",
+   "TM19"
+  ],
+  "id": "leader-erika",
+  "area": "Gym",
+  "trainerName": "Erika",
+  "where": "Celadon City Gym",
+  "badge": "Rainbow Badge",
+  "specialty": "Grass",
+  "location": "celadon-city"
  },
  {
-  "id": "koga",
+  "class": "Boss",
+  "name": "Giovanni (Rocket Hideout)",
+  "prize": 2900,
+  "party": [
+   {
+    "dex": 95,
+    "name": "Onix",
+    "level": 25,
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Bind",
+      "type": "Normal",
+      "power": 15
+     },
+     {
+      "name": "Rock Throw",
+      "type": "Rock",
+      "power": 50
+     },
+     {
+      "name": "Harden",
+      "type": "Normal"
+     },
+     {
+      "name": "Rage",
+      "type": "Normal",
+      "power": 20
+     }
+    ]
+   },
+   {
+    "dex": 111,
+    "name": "Rhyhorn",
+    "level": 24,
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Tail Whip",
+      "type": "Normal"
+     },
+     {
+      "name": "Stomp",
+      "type": "Normal",
+      "power": 65
+     },
+     {
+      "name": "Fury Attack",
+      "type": "Normal",
+      "power": 15
+     },
+     {
+      "name": "Scary Face",
+      "type": "Normal"
+     }
+    ]
+   },
+   {
+    "dex": 115,
+    "name": "Kangaskhan",
+    "level": 29,
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Bite",
+      "type": "Dark",
+      "power": 60
+     },
+     {
+      "name": "Tail Whip",
+      "type": "Normal"
+     },
+     {
+      "name": "Fake Out",
+      "type": "Normal",
+      "power": 40
+     },
+     {
+      "name": "Mega Punch",
+      "type": "Normal",
+      "power": 80
+     }
+    ]
+   }
+  ],
+  "id": "boss-giovanni",
+  "area": "B4F",
+  "trainerName": "Giovanni",
+  "where": "Rocket Hideout B4F",
+  "badge": null,
+  "specialty": "Ground",
+  "location": "rocket-hideout"
+ },
+ {
+  "class": "Rival",
+  "name": "Rival (Pokémon Tower)",
+  "prize": 900,
+  "byStarter": {
+   "Bulbasaur": [
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 25,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 102,
+     "name": "Exeggcute",
+     "level": 23,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Leech Seed",
+       "type": "Grass"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      }
+     ]
+    },
+    {
+     "dex": 130,
+     "name": "Gyarados",
+     "level": 22,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Thrash",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 20,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      },
+      {
+       "name": "Kinesis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 5,
+     "name": "Charmeleon",
+     "level": 25,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Metal Claw",
+       "type": "Steel",
+       "power": 50
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "Charmander": [
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 25,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 23,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 102,
+     "name": "Exeggcute",
+     "level": 22,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Leech Seed",
+       "type": "Grass"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 20,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      },
+      {
+       "name": "Kinesis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 8,
+     "name": "Wartortle",
+     "level": 25,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Withdraw",
+       "type": "Water"
+      },
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      }
+     ]
+    }
+   ],
+   "Squirtle": [
+    {
+     "dex": 17,
+     "name": "Pidgeotto",
+     "level": 25,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 130,
+     "name": "Gyarados",
+     "level": 23,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Thrash",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 22,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 64,
+     "name": "Kadabra",
+     "level": 20,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Teleport",
+       "type": "Psychic"
+      },
+      {
+       "name": "Kinesis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Disable",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 2,
+     "name": "Ivysaur",
+     "level": 25,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    }
+   ]
+  },
+  "id": "rival-pokemon-tower",
+  "area": "2F",
+  "trainerName": "Rival",
+  "where": "Pokémon Tower 2F",
+  "badge": null,
+  "specialty": "Mixed",
+  "location": "pokemon-tower",
+  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+ },
+ {
+  "class": "Leader",
   "name": "Koga",
-  "where": "Fuchsia City Gym",
-  "badge": "Soul Badge",
-  "specialty": "Poison",
-  "location": "fuchsia-city",
+  "prize": 4300,
   "party": [
    {
     "dex": 109,
     "name": "Koffing",
     "level": 37,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Selfdestruct",
+      "type": "Normal",
+      "power": 200
+     },
+     {
+      "name": "Sludge",
+      "type": "Poison",
+      "power": 65
+     },
+     {
+      "name": "Smokescreen",
+      "type": "Normal"
+     },
+     {
+      "name": "Haze",
+      "type": "Ice"
+     }
+    ]
    },
    {
     "dex": 89,
     "name": "Muk",
     "level": 39,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Sludge",
+      "type": "Poison",
+      "power": 65
+     },
+     {
+      "name": "Minimize",
+      "type": "Normal"
+     },
+     {
+      "name": "Screech",
+      "type": "Normal"
+     },
+     {
+      "name": "Acid Armor",
+      "type": "Poison"
+     }
+    ]
    },
    {
     "dex": 109,
     "name": "Koffing",
     "level": 37,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Selfdestruct",
+      "type": "Normal",
+      "power": 200
+     },
+     {
+      "name": "Sludge",
+      "type": "Poison",
+      "power": 65
+     },
+     {
+      "name": "Smokescreen",
+      "type": "Normal"
+     },
+     {
+      "name": "Haze",
+      "type": "Ice"
+     }
+    ]
    },
    {
     "dex": 110,
     "name": "Weezing",
     "level": 43,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Selfdestruct",
+      "type": "Normal",
+      "power": 200
+     },
+     {
+      "name": "Sludge",
+      "type": "Poison",
+      "power": 65
+     },
+     {
+      "name": "Smokescreen",
+      "type": "Normal"
+     },
+     {
+      "name": "Haze",
+      "type": "Ice"
+     }
+    ]
    }
-  ]
+  ],
+  "uses": [
+   "Hyper Potion ×2",
+   "Full Heal"
+  ],
+  "rewards": [
+   "Soul Badge",
+   "TM06"
+  ],
+  "id": "leader-koga",
+  "area": "Gym",
+  "trainerName": "Koga",
+  "where": "Fuchsia City Gym",
+  "badge": "Soul Badge",
+  "specialty": "Poison",
+  "location": "fuchsia-city"
  },
  {
-  "id": "sabrina",
+  "class": "Rival",
+  "name": "Rival (Silph Co.)",
+  "prize": 1440,
+  "byStarter": {
+   "Bulbasaur": [
+    {
+     "dex": 18,
+     "name": "Pidgeot",
+     "level": 37,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Featherdance",
+       "type": "Flying"
+      }
+     ]
+    },
+    {
+     "dex": 102,
+     "name": "Exeggcute",
+     "level": 38,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 130,
+     "name": "Gyarados",
+     "level": 35,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Dragon Rage",
+       "type": "Dragon",
+       "power": 1
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 65,
+     "name": "Alakazam",
+     "level": 35,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Calm Mind",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 6,
+     "name": "Charizard",
+     "level": 40,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "Charmander": [
+    {
+     "dex": 18,
+     "name": "Pidgeot",
+     "level": 37,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Featherdance",
+       "type": "Flying"
+      }
+     ]
+    },
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 38,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Flame Wheel",
+       "type": "Fire",
+       "power": 60
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 102,
+     "name": "Exeggcute",
+     "level": 35,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Leech Seed",
+       "type": "Grass"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      }
+     ]
+    },
+    {
+     "dex": 65,
+     "name": "Alakazam",
+     "level": 35,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Calm Mind",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 9,
+     "name": "Blastoise",
+     "level": 40,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "Squirtle": [
+    {
+     "dex": 18,
+     "name": "Pidgeot",
+     "level": 37,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Featherdance",
+       "type": "Flying"
+      }
+     ]
+    },
+    {
+     "dex": 130,
+     "name": "Gyarados",
+     "level": 38,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Dragon Rage",
+       "type": "Dragon",
+       "power": 1
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 35,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Flame Wheel",
+       "type": "Fire",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 65,
+     "name": "Alakazam",
+     "level": 35,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Recover",
+       "type": "Normal"
+      },
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Calm Mind",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 3,
+     "name": "Venusaur",
+     "level": 40,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "rival-silph",
+  "area": "7F",
+  "trainerName": "Rival",
+  "where": "Silph Co. 7F",
+  "badge": null,
+  "specialty": "Mixed",
+  "location": "silph-co",
+  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+ },
+ {
+  "class": "Boss",
+  "name": "Giovanni (Silph Co.)",
+  "prize": 4100,
+  "party": [
+   {
+    "dex": 33,
+    "name": "Nidorino",
+    "level": 37,
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Poison Sting",
+      "type": "Poison",
+      "power": 15
+     },
+     {
+      "name": "Horn Attack",
+      "type": "Normal",
+      "power": 65
+     },
+     {
+      "name": "Helping Hand",
+      "type": "Normal"
+     },
+     {
+      "name": "Fury Attack",
+      "type": "Normal",
+      "power": 15
+     }
+    ]
+   },
+   {
+    "dex": 115,
+    "name": "Kangaskhan",
+    "level": 35,
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Tail Whip",
+      "type": "Normal"
+     },
+     {
+      "name": "Fake Out",
+      "type": "Normal",
+      "power": 40
+     },
+     {
+      "name": "Mega Punch",
+      "type": "Normal",
+      "power": 80
+     },
+     {
+      "name": "Rage",
+      "type": "Normal",
+      "power": 20
+     }
+    ]
+   },
+   {
+    "dex": 111,
+    "name": "Rhyhorn",
+    "level": 37,
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Stomp",
+      "type": "Normal",
+      "power": 65
+     },
+     {
+      "name": "Fury Attack",
+      "type": "Normal",
+      "power": 15
+     },
+     {
+      "name": "Scary Face",
+      "type": "Normal"
+     },
+     {
+      "name": "Rock Blast",
+      "type": "Rock",
+      "power": 25
+     }
+    ]
+   },
+   {
+    "dex": 31,
+    "name": "Nidoqueen",
+    "level": 41,
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Tail Whip",
+      "type": "Normal"
+     },
+     {
+      "name": "Double Kick",
+      "type": "Fighting",
+      "power": 30
+     },
+     {
+      "name": "Poison Sting",
+      "type": "Poison",
+      "power": 15
+     },
+     {
+      "name": "Body Slam",
+      "type": "Normal",
+      "power": 85
+     }
+    ]
+   }
+  ],
+  "id": "boss-giovanni-2",
+  "area": "11F",
+  "trainerName": "Giovanni",
+  "where": "Silph Co. 11F",
+  "badge": null,
+  "specialty": "Ground",
+  "location": "silph-co"
+ },
+ {
+  "class": "Leader",
   "name": "Sabrina",
-  "where": "Saffron City Gym",
-  "badge": "Marsh Badge",
-  "specialty": "Psychic",
-  "location": "saffron-city",
+  "prize": 4300,
   "party": [
    {
     "dex": 64,
     "name": "Kadabra",
     "level": 38,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Recover",
+      "type": "Normal"
+     },
+     {
+      "name": "Future Sight",
+      "type": "Psychic",
+      "power": 80
+     },
+     {
+      "name": "Role Play",
+      "type": "Psychic"
+     },
+     {
+      "name": "Psychic",
+      "type": "Psychic",
+      "power": 90
+     }
+    ]
    },
    {
     "dex": 122,
     "name": "Mr. Mime",
     "level": 37,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Encore",
+      "type": "Normal"
+     },
+     {
+      "name": "Psybeam",
+      "type": "Psychic",
+      "power": 65
+     },
+     {
+      "name": "Recycle",
+      "type": "Normal"
+     },
+     {
+      "name": "Trick",
+      "type": "Psychic"
+     }
+    ]
    },
    {
     "dex": 49,
     "name": "Venomoth",
     "level": 38,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Leech Life",
+      "type": "Bug",
+      "power": 20
+     },
+     {
+      "name": "Stun Spore",
+      "type": "Grass"
+     },
+     {
+      "name": "Gust",
+      "type": "Flying",
+      "power": 40
+     },
+     {
+      "name": "Psybeam",
+      "type": "Psychic",
+      "power": 65
+     }
+    ]
    },
    {
     "dex": 65,
     "name": "Alakazam",
     "level": 43,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Future Sight",
+      "type": "Psychic",
+      "power": 80
+     },
+     {
+      "name": "Calm Mind",
+      "type": "Psychic"
+     },
+     {
+      "name": "Psychic",
+      "type": "Psychic",
+      "power": 90
+     },
+     {
+      "name": "Trick",
+      "type": "Psychic"
+     }
+    ]
    }
-  ]
+  ],
+  "uses": [
+   "Hyper Potion ×2",
+   "Full Heal"
+  ],
+  "rewards": [
+   "Marsh Badge",
+   "TM04"
+  ],
+  "id": "leader-sabrina",
+  "area": "Gym",
+  "trainerName": "Sabrina",
+  "where": "Saffron City Gym",
+  "badge": "Marsh Badge",
+  "specialty": "Psychic",
+  "location": "saffron-city"
  },
  {
-  "id": "blaine",
+  "class": "Leader",
   "name": "Blaine",
-  "where": "Cinnabar Island Gym",
-  "badge": "Volcano Badge",
-  "specialty": "Fire",
-  "location": "cinnabar-island",
+  "prize": 4700,
   "party": [
    {
     "dex": 58,
     "name": "Growlithe",
     "level": 42,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Odor Sleuth",
+      "type": "Normal"
+     },
+     {
+      "name": "Take Down",
+      "type": "Normal",
+      "power": 90
+     },
+     {
+      "name": "Flame Wheel",
+      "type": "Fire",
+      "power": 60
+     },
+     {
+      "name": "Helping Hand",
+      "type": "Normal"
+     }
+    ]
    },
    {
     "dex": 77,
     "name": "Ponyta",
     "level": 40,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Stomp",
+      "type": "Normal",
+      "power": 65
+     },
+     {
+      "name": "Fire Spin",
+      "type": "Fire",
+      "power": 15
+     },
+     {
+      "name": "Take Down",
+      "type": "Normal",
+      "power": 90
+     },
+     {
+      "name": "Agility",
+      "type": "Psychic"
+     }
+    ]
    },
    {
     "dex": 78,
     "name": "Rapidash",
     "level": 42,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Fire Spin",
+      "type": "Fire",
+      "power": 15
+     },
+     {
+      "name": "Take Down",
+      "type": "Normal",
+      "power": 90
+     },
+     {
+      "name": "Agility",
+      "type": "Psychic"
+     },
+     {
+      "name": "Fury Attack",
+      "type": "Normal",
+      "power": 15
+     }
+    ]
    },
    {
     "dex": 59,
     "name": "Arcanine",
     "level": 47,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Bite",
+      "type": "Dark",
+      "power": 60
+     },
+     {
+      "name": "Roar",
+      "type": "Normal"
+     },
+     {
+      "name": "Ember",
+      "type": "Fire",
+      "power": 40
+     },
+     {
+      "name": "Odor Sleuth",
+      "type": "Normal"
+     }
+    ]
    }
-  ]
+  ],
+  "uses": [
+   "Hyper Potion ×2",
+   "Full Heal"
+  ],
+  "rewards": [
+   "Volcano Badge",
+   "TM38"
+  ],
+  "id": "leader-blaine",
+  "area": "Gym",
+  "trainerName": "Blaine",
+  "where": "Cinnabar Island Gym",
+  "badge": "Volcano Badge",
+  "specialty": "Fire",
+  "location": "cinnabar-island"
  },
  {
-  "id": "giovanni",
+  "class": "Leader",
   "name": "Giovanni",
-  "where": "Viridian City Gym",
-  "badge": "Earth Badge",
-  "specialty": "Ground",
-  "location": "viridian-city",
+  "prize": 5000,
   "party": [
    {
     "dex": 111,
     "name": "Rhyhorn",
     "level": 45,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Scary Face",
+      "type": "Normal"
+     },
+     {
+      "name": "Rock Blast",
+      "type": "Rock",
+      "power": 25
+     },
+     {
+      "name": "Horn Drill",
+      "type": "Normal",
+      "power": 1
+     },
+     {
+      "name": "Take Down",
+      "type": "Normal",
+      "power": 90
+     }
+    ]
    },
    {
     "dex": 51,
     "name": "Dugtrio",
     "level": 42,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Fury Swipes",
+      "type": "Normal",
+      "power": 18
+     },
+     {
+      "name": "Mud-slap",
+      "type": "Ground",
+      "power": 20
+     },
+     {
+      "name": "Sand Tomb",
+      "type": "Ground",
+      "power": 15
+     },
+     {
+      "name": "Slash",
+      "type": "Normal",
+      "power": 70
+     }
+    ]
    },
    {
     "dex": 31,
     "name": "Nidoqueen",
     "level": 44,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Double Kick",
+      "type": "Fighting",
+      "power": 30
+     },
+     {
+      "name": "Poison Sting",
+      "type": "Poison",
+      "power": 15
+     },
+     {
+      "name": "Body Slam",
+      "type": "Normal",
+      "power": 85
+     },
+     {
+      "name": "Superpower",
+      "type": "Fighting",
+      "power": 120
+     }
+    ]
    },
    {
     "dex": 34,
     "name": "Nidoking",
     "level": 45,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Double Kick",
+      "type": "Fighting",
+      "power": 30
+     },
+     {
+      "name": "Poison Sting",
+      "type": "Poison",
+      "power": 15
+     },
+     {
+      "name": "Thrash",
+      "type": "Normal",
+      "power": 90
+     },
+     {
+      "name": "Megahorn",
+      "type": "Bug",
+      "power": 120
+     }
+    ]
    },
    {
     "dex": 111,
     "name": "Rhyhorn",
     "level": 50,
-    "moves": []
+    "iv": 0,
+    "moves": [
+     {
+      "name": "Scary Face",
+      "type": "Normal"
+     },
+     {
+      "name": "Rock Blast",
+      "type": "Rock",
+      "power": 25
+     },
+     {
+      "name": "Horn Drill",
+      "type": "Normal",
+      "power": 1
+     },
+     {
+      "name": "Take Down",
+      "type": "Normal",
+      "power": 90
+     }
+    ]
    }
-  ]
+  ],
+  "uses": [
+   "Hyper Potion ×2",
+   "Full Heal"
+  ],
+  "rewards": [
+   "Earth Badge",
+   "TM26"
+  ],
+  "id": "leader-giovanni",
+  "area": "Gym",
+  "stage": "route-21",
+  "trainerName": "Giovanni",
+  "where": "Viridian City Gym",
+  "badge": "Earth Badge",
+  "specialty": "Ground",
+  "location": "viridian-city"
  },
  {
-  "id": "lorelei",
-  "name": "Lorelei",
-  "where": "Elite Four",
+  "class": "Rival",
+  "name": "Rival (Route 22, before Victory Road)",
+  "prize": 1908,
+  "byStarter": {
+   "Bulbasaur": [
+    {
+     "dex": 18,
+     "name": "Pidgeot",
+     "level": 47,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Featherdance",
+       "type": "Flying"
+      }
+     ]
+    },
+    {
+     "dex": 111,
+     "name": "Rhyhorn",
+     "level": 45,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Horn Drill",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 102,
+     "name": "Exeggcute",
+     "level": 45,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Solarbeam",
+       "type": "Grass",
+       "power": 120
+      }
+     ]
+    },
+    {
+     "dex": 130,
+     "name": "Gyarados",
+     "level": 45,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      },
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      }
+     ]
+    },
+    {
+     "dex": 65,
+     "name": "Alakazam",
+     "level": 47,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Calm Mind",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Trick",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 6,
+     "name": "Charizard",
+     "level": 53,
+     "iv": 30,
+     "moves": [
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      }
+     ]
+    }
+   ],
+   "Charmander": [
+    {
+     "dex": 18,
+     "name": "Pidgeot",
+     "level": 47,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Featherdance",
+       "type": "Flying"
+      }
+     ]
+    },
+    {
+     "dex": 111,
+     "name": "Rhyhorn",
+     "level": 45,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Horn Drill",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 45,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Flame Wheel",
+       "type": "Fire",
+       "power": 60
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 102,
+     "name": "Exeggcute",
+     "level": 45,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Solarbeam",
+       "type": "Grass",
+       "power": 120
+      }
+     ]
+    },
+    {
+     "dex": 65,
+     "name": "Alakazam",
+     "level": 47,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Calm Mind",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Trick",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 9,
+     "name": "Blastoise",
+     "level": 53,
+     "iv": 30,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      }
+     ]
+    }
+   ],
+   "Squirtle": [
+    {
+     "dex": 18,
+     "name": "Pidgeot",
+     "level": 47,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Featherdance",
+       "type": "Flying"
+      }
+     ]
+    },
+    {
+     "dex": 111,
+     "name": "Rhyhorn",
+     "level": 45,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Horn Drill",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 130,
+     "name": "Gyarados",
+     "level": 45,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      },
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      }
+     ]
+    },
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 45,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Flame Wheel",
+       "type": "Fire",
+       "power": 60
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 65,
+     "name": "Alakazam",
+     "level": 47,
+     "iv": 18,
+     "moves": [
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Calm Mind",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Trick",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 3,
+     "name": "Venusaur",
+     "level": 53,
+     "iv": 30,
+     "moves": [
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Growth",
+       "type": "Normal"
+      },
+      {
+       "name": "Synthesis",
+       "type": "Grass"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "rival-route22-late",
+  "stage": "route-23",
+  "trainerName": "Rival",
+  "where": "Route 22",
   "badge": null,
-  "specialty": "Ice",
-  "location": "pokemon-league",
+  "specialty": "Mixed",
+  "location": "route-22",
+  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
+ },
+ {
+  "class": "Elite Four",
+  "name": "Lorelei",
+  "prize": 5400,
   "party": [
    {
     "dex": 87,
     "name": "Dewgong",
     "level": 52,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Rest",
+      "type": "Psychic"
+     },
+     {
+      "name": "Sheer Cold",
+      "type": "Ice",
+      "power": 1
+     },
+     {
+      "name": "Take Down",
+      "type": "Normal",
+      "power": 90
+     },
+     {
+      "name": "Ice Beam",
+      "type": "Ice",
+      "power": 95
+     }
+    ]
    },
    {
     "dex": 91,
     "name": "Cloyster",
     "level": 51,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Aurora Beam",
+      "type": "Ice",
+      "power": 65
+     },
+     {
+      "name": "Protect",
+      "type": "Normal"
+     },
+     {
+      "name": "Spikes",
+      "type": "Ground"
+     },
+     {
+      "name": "Spike Cannon",
+      "type": "Normal",
+      "power": 20
+     }
+    ]
    },
    {
     "dex": 80,
     "name": "Slowbro",
     "level": 52,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Headbutt",
+      "type": "Normal",
+      "power": 70
+     },
+     {
+      "name": "Amnesia",
+      "type": "Psychic"
+     },
+     {
+      "name": "Withdraw",
+      "type": "Water"
+     },
+     {
+      "name": "Psychic",
+      "type": "Psychic",
+      "power": 90
+     }
+    ]
    },
    {
     "dex": 124,
     "name": "Jynx",
     "level": 54,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Ice Punch",
+      "type": "Ice",
+      "power": 75
+     },
+     {
+      "name": "Mean Look",
+      "type": "Normal"
+     },
+     {
+      "name": "Fake Tears",
+      "type": "Dark"
+     },
+     {
+      "name": "Body Slam",
+      "type": "Normal",
+      "power": 85
+     }
+    ]
    },
    {
     "dex": 131,
     "name": "Lapras",
     "level": 54,
-    "moves": [],
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Ice Beam",
+      "type": "Ice",
+      "power": 95
+     },
+     {
+      "name": "Rain Dance",
+      "type": "Water"
+     },
+     {
+      "name": "Safeguard",
+      "type": "Normal"
+     },
+     {
+      "name": "Hydro Pump",
+      "type": "Water",
+      "power": 120
+     }
+    ],
     "item": "Sitrus Berry"
    }
-  ]
+  ],
+  "uses": [
+   "Full Restore ×2"
+  ],
+  "id": "elite-four-lorelei",
+  "area": "Loreleis Room",
+  "trainerName": "Lorelei",
+  "where": "Pokémon League Loreleis Room",
+  "badge": null,
+  "specialty": "Ice",
+  "location": "pokemon-league"
  },
  {
-  "id": "bruno",
+  "class": "Elite Four",
   "name": "Bruno",
-  "where": "Elite Four",
-  "badge": null,
-  "specialty": "Fighting",
-  "location": "pokemon-league",
+  "prize": 5600,
   "party": [
    {
     "dex": 95,
     "name": "Onix",
     "level": 51,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Dragonbreath",
+      "type": "Dragon",
+      "power": 60
+     },
+     {
+      "name": "Sandstorm",
+      "type": "Rock"
+     },
+     {
+      "name": "Slam",
+      "type": "Normal",
+      "power": 80
+     },
+     {
+      "name": "Iron Tail",
+      "type": "Steel",
+      "power": 100
+     }
+    ]
    },
    {
     "dex": 107,
     "name": "Hitmonchan",
     "level": 53,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Sky Uppercut",
+      "type": "Fighting",
+      "power": 85
+     },
+     {
+      "name": "Mega Punch",
+      "type": "Normal",
+      "power": 80
+     },
+     {
+      "name": "Detect",
+      "type": "Fighting"
+     },
+     {
+      "name": "Counter",
+      "type": "Fighting",
+      "power": 1
+     }
+    ]
    },
    {
     "dex": 106,
     "name": "Hitmonlee",
     "level": 53,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Foresight",
+      "type": "Normal"
+     },
+     {
+      "name": "Endure",
+      "type": "Normal"
+     },
+     {
+      "name": "Mega Kick",
+      "type": "Normal",
+      "power": 120
+     },
+     {
+      "name": "Reversal",
+      "type": "Fighting",
+      "power": 1
+     }
+    ]
    },
    {
     "dex": 95,
     "name": "Onix",
     "level": 54,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Sandstorm",
+      "type": "Rock"
+     },
+     {
+      "name": "Slam",
+      "type": "Normal",
+      "power": 80
+     },
+     {
+      "name": "Iron Tail",
+      "type": "Steel",
+      "power": 100
+     },
+     {
+      "name": "Sand Tomb",
+      "type": "Ground",
+      "power": 15
+     }
+    ]
    },
    {
     "dex": 68,
     "name": "Machamp",
     "level": 56,
-    "moves": [],
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Vital Throw",
+      "type": "Fighting",
+      "power": 70
+     },
+     {
+      "name": "Submission",
+      "type": "Fighting",
+      "power": 80
+     },
+     {
+      "name": "Cross Chop",
+      "type": "Fighting",
+      "power": 100
+     },
+     {
+      "name": "Scary Face",
+      "type": "Normal"
+     }
+    ],
     "item": "Sitrus Berry"
    }
-  ]
+  ],
+  "uses": [
+   "Full Restore ×2"
+  ],
+  "id": "elite-four-bruno",
+  "area": "Brunos Room",
+  "trainerName": "Bruno",
+  "where": "Pokémon League Brunos Room",
+  "badge": null,
+  "specialty": "Fighting",
+  "location": "pokemon-league"
  },
  {
-  "id": "agatha",
+  "class": "Elite Four",
   "name": "Agatha",
-  "where": "Elite Four",
-  "badge": null,
-  "specialty": "Ghost",
-  "location": "pokemon-league",
+  "prize": 5800,
   "party": [
    {
     "dex": 94,
     "name": "Gengar",
     "level": 54,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Dream Eater",
+      "type": "Psychic",
+      "power": 100
+     },
+     {
+      "name": "Destiny Bond",
+      "type": "Ghost"
+     },
+     {
+      "name": "Shadow Ball",
+      "type": "Ghost",
+      "power": 80
+     },
+     {
+      "name": "Nightmare",
+      "type": "Ghost"
+     }
+    ]
    },
    {
     "dex": 42,
     "name": "Golbat",
     "level": 54,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Confuse Ray",
+      "type": "Ghost"
+     },
+     {
+      "name": "Air Cutter",
+      "type": "Flying",
+      "power": 55
+     },
+     {
+      "name": "Mean Look",
+      "type": "Normal"
+     },
+     {
+      "name": "Poison Fang",
+      "type": "Poison",
+      "power": 50
+     }
+    ]
    },
    {
     "dex": 93,
     "name": "Haunter",
     "level": 53,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Dream Eater",
+      "type": "Psychic",
+      "power": 100
+     },
+     {
+      "name": "Destiny Bond",
+      "type": "Ghost"
+     },
+     {
+      "name": "Shadow Ball",
+      "type": "Ghost",
+      "power": 80
+     },
+     {
+      "name": "Nightmare",
+      "type": "Ghost"
+     }
+    ]
    },
    {
     "dex": 24,
     "name": "Arbok",
     "level": 56,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Stockpile",
+      "type": "Normal"
+     },
+     {
+      "name": "Swallow",
+      "type": "Normal"
+     },
+     {
+      "name": "Spit Up",
+      "type": "Normal",
+      "power": 100
+     },
+     {
+      "name": "Haze",
+      "type": "Ice"
+     }
+    ]
    },
    {
     "dex": 94,
     "name": "Gengar",
     "level": 58,
-    "moves": [],
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Dream Eater",
+      "type": "Psychic",
+      "power": 100
+     },
+     {
+      "name": "Destiny Bond",
+      "type": "Ghost"
+     },
+     {
+      "name": "Shadow Ball",
+      "type": "Ghost",
+      "power": 80
+     },
+     {
+      "name": "Nightmare",
+      "type": "Ghost"
+     }
+    ],
     "item": "Sitrus Berry"
    }
-  ]
+  ],
+  "uses": [
+   "Full Restore ×2"
+  ],
+  "id": "elite-four-agatha",
+  "area": "Agathas Room",
+  "trainerName": "Agatha",
+  "where": "Pokémon League Agathas Room",
+  "badge": null,
+  "specialty": "Ghost",
+  "location": "pokemon-league"
  },
  {
-  "id": "lance",
+  "class": "Elite Four",
   "name": "Lance",
-  "where": "Elite Four",
-  "badge": null,
-  "specialty": "Dragon",
-  "location": "pokemon-league",
+  "prize": 6000,
   "party": [
    {
     "dex": 130,
     "name": "Gyarados",
     "level": 56,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Hydro Pump",
+      "type": "Water",
+      "power": 120
+     },
+     {
+      "name": "Rain Dance",
+      "type": "Water"
+     },
+     {
+      "name": "Dragon Dance",
+      "type": "Dragon"
+     },
+     {
+      "name": "Hyper Beam",
+      "type": "Normal",
+      "power": 150
+     }
+    ]
    },
    {
     "dex": 148,
     "name": "Dragonair",
     "level": 54,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Dragon Rage",
+      "type": "Dragon",
+      "power": 1
+     },
+     {
+      "name": "Slam",
+      "type": "Normal",
+      "power": 80
+     },
+     {
+      "name": "Agility",
+      "type": "Psychic"
+     },
+     {
+      "name": "Safeguard",
+      "type": "Normal"
+     }
+    ]
    },
    {
     "dex": 148,
     "name": "Dragonair",
     "level": 54,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Dragon Rage",
+      "type": "Dragon",
+      "power": 1
+     },
+     {
+      "name": "Slam",
+      "type": "Normal",
+      "power": 80
+     },
+     {
+      "name": "Agility",
+      "type": "Psychic"
+     },
+     {
+      "name": "Safeguard",
+      "type": "Normal"
+     }
+    ]
    },
    {
     "dex": 142,
     "name": "Aerodactyl",
     "level": 58,
-    "moves": []
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Ancientpower",
+      "type": "Rock",
+      "power": 60
+     },
+     {
+      "name": "Scary Face",
+      "type": "Normal"
+     },
+     {
+      "name": "Take Down",
+      "type": "Normal",
+      "power": 90
+     },
+     {
+      "name": "Hyper Beam",
+      "type": "Normal",
+      "power": 150
+     }
+    ]
    },
    {
     "dex": 149,
     "name": "Dragonite",
     "level": 60,
-    "moves": [],
+    "iv": 30,
+    "moves": [
+     {
+      "name": "Slam",
+      "type": "Normal",
+      "power": 80
+     },
+     {
+      "name": "Agility",
+      "type": "Psychic"
+     },
+     {
+      "name": "Safeguard",
+      "type": "Normal"
+     },
+     {
+      "name": "Wing Attack",
+      "type": "Flying",
+      "power": 60
+     }
+    ],
     "item": "Sitrus Berry"
    }
-  ]
+  ],
+  "uses": [
+   "Full Restore ×2"
+  ],
+  "id": "elite-four-lance",
+  "area": "Lances Room",
+  "trainerName": "Lance",
+  "where": "Pokémon League Lances Room",
+  "badge": null,
+  "specialty": "Dragon",
+  "location": "pokemon-league"
  },
  {
-  "id": "champion",
+  "class": "Champion",
   "name": "Champion (your rival)",
-  "where": "Pokémon League",
-  "badge": null,
-  "specialty": "Mixed",
-  "location": "pokemon-league",
+  "prize": 6300,
+  "uses": [
+   "Full Restore ×4"
+  ],
   "byStarter": {
    "Bulbasaur": [
     {
      "dex": 18,
      "name": "Pidgeot",
      "level": 59,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Featherdance",
+       "type": "Flying"
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
     },
     {
      "dex": 65,
      "name": "Alakazam",
      "level": 57,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Calm Mind",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Trick",
+       "type": "Psychic"
+      }
+     ]
     },
     {
      "dex": 112,
      "name": "Rhydon",
      "level": 59,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Horn Drill",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Earthquake",
+       "type": "Ground",
+       "power": 100
+      }
+     ]
     },
     {
      "dex": 103,
      "name": "Exeggutor",
      "level": 59,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Egg Bomb",
+       "type": "Normal",
+       "power": 100
+      }
+     ]
     },
     {
      "dex": 130,
      "name": "Gyarados",
      "level": 61,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Dragon Dance",
+       "type": "Dragon"
+      },
+      {
+       "name": "Hyper Beam",
+       "type": "Normal",
+       "power": 150
+      }
+     ]
     },
     {
      "dex": 6,
      "name": "Charizard",
      "level": 63,
-     "moves": [],
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Slash",
+       "type": "Normal",
+       "power": 70
+      },
+      {
+       "name": "Dragon Rage",
+       "type": "Dragon",
+       "power": 1
+      }
+     ],
      "item": "Sitrus Berry"
     }
    ],
@@ -479,37 +3961,159 @@
      "dex": 18,
      "name": "Pidgeot",
      "level": 59,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Featherdance",
+       "type": "Flying"
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
     },
     {
      "dex": 65,
      "name": "Alakazam",
      "level": 57,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Calm Mind",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Trick",
+       "type": "Psychic"
+      }
+     ]
     },
     {
      "dex": 112,
      "name": "Rhydon",
      "level": 59,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Horn Drill",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Earthquake",
+       "type": "Ground",
+       "power": 100
+      }
+     ]
     },
     {
      "dex": 59,
      "name": "Arcanine",
      "level": 59,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Extremespeed",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
     },
     {
      "dex": 103,
      "name": "Exeggutor",
      "level": 61,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Egg Bomb",
+       "type": "Normal",
+       "power": 100
+      }
+     ]
     },
     {
      "dex": 9,
      "name": "Blastoise",
      "level": 63,
-     "moves": [],
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Rapid Spin",
+       "type": "Normal",
+       "power": 20
+      },
+      {
+       "name": "Protect",
+       "type": "Normal"
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Skull Bash",
+       "type": "Normal",
+       "power": 100
+      }
+     ],
      "item": "Sitrus Berry"
     }
    ],
@@ -518,41 +4122,168 @@
      "dex": 18,
      "name": "Pidgeot",
      "level": 59,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Whirlwind",
+       "type": "Normal"
+      },
+      {
+       "name": "Wing Attack",
+       "type": "Flying",
+       "power": 60
+      },
+      {
+       "name": "Featherdance",
+       "type": "Flying"
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
     },
     {
      "dex": 65,
      "name": "Alakazam",
      "level": 57,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Future Sight",
+       "type": "Psychic",
+       "power": 80
+      },
+      {
+       "name": "Calm Mind",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Trick",
+       "type": "Psychic"
+      }
+     ]
     },
     {
      "dex": 112,
      "name": "Rhydon",
      "level": 59,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Rock Blast",
+       "type": "Rock",
+       "power": 25
+      },
+      {
+       "name": "Horn Drill",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Earthquake",
+       "type": "Ground",
+       "power": 100
+      }
+     ]
     },
     {
      "dex": 130,
      "name": "Gyarados",
      "level": 59,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Dragon Dance",
+       "type": "Dragon"
+      },
+      {
+       "name": "Hyper Beam",
+       "type": "Normal",
+       "power": 150
+      }
+     ]
     },
     {
      "dex": 59,
      "name": "Arcanine",
      "level": 61,
-     "moves": []
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Extremespeed",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
     },
     {
      "dex": 3,
      "name": "Venusaur",
      "level": 63,
-     "moves": [],
+     "iv": 31,
+     "moves": [
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Growth",
+       "type": "Normal"
+      },
+      {
+       "name": "Synthesis",
+       "type": "Grass"
+      }
+     ],
      "item": "Sitrus Berry"
     }
    ]
   },
-  "note": "Your rival picks the starter that beats yours; choose the party for the starter YOU picked."
+  "id": "champion-first",
+  "area": "Champions Room",
+  "trainerName": "Rival",
+  "where": "Pokémon League Champions Room",
+  "badge": null,
+  "specialty": "Mixed",
+  "location": "pokemon-league",
+  "note": "Your rival picks the starter that beats yours. Set the starter you picked above."
  }
 ]

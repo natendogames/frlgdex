@@ -313,6 +313,408 @@
    "where": "Water Path House 1"
   }
  ],
+ "trainers": [
+  {
+   "class": "Hiker",
+   "name": "Earl",
+   "prize": 1764,
+   "party": [
+    {
+     "dex": 95,
+     "name": "Onix",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Dragonbreath",
+       "type": "Dragon",
+       "power": 60
+      },
+      {
+       "name": "Sandstorm",
+       "type": "Rock"
+      },
+      {
+       "name": "Slam",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Iron Tail",
+       "type": "Steel",
+       "power": 100
+      }
+     ]
+    },
+    {
+     "dex": 67,
+     "name": "Machoke",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Revenge",
+       "type": "Fighting",
+       "power": 60
+      },
+      {
+       "name": "Vital Throw",
+       "type": "Fighting",
+       "power": 70
+      },
+      {
+       "name": "Submission",
+       "type": "Fighting",
+       "power": 80
+      },
+      {
+       "name": "Cross Chop",
+       "type": "Fighting",
+       "power": 100
+      }
+     ]
+    }
+   ],
+   "id": "hiker-earl",
+   "area": "Water Path"
+  },
+  {
+   "class": "Juggler",
+   "name": "Edward",
+   "prize": 1920,
+   "party": [
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 46,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Explosion",
+       "type": "Normal",
+       "power": 250
+      }
+     ]
+    },
+    {
+     "dex": 100,
+     "name": "Voltorb",
+     "level": 46,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      },
+      {
+       "name": "Swift",
+       "type": "Normal",
+       "power": 60
+      },
+      {
+       "name": "Explosion",
+       "type": "Normal",
+       "power": 250
+      }
+     ]
+    },
+    {
+     "dex": 101,
+     "name": "Electrode",
+     "level": 47,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Selfdestruct",
+       "type": "Normal",
+       "power": 200
+      },
+      {
+       "name": "Rollout",
+       "type": "Rock",
+       "power": 30
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 122,
+     "name": "Mr. Mime",
+     "level": 48,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Trick",
+       "type": "Psychic"
+      },
+      {
+       "name": "Role Play",
+       "type": "Psychic"
+      },
+      {
+       "name": "Psychic",
+       "type": "Psychic",
+       "power": 90
+      },
+      {
+       "name": "Baton Pass",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "juggler-edward",
+   "area": "Water Path"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Denise",
+   "prize": 196,
+   "party": [
+    {
+     "dex": 170,
+     "name": "Chinchou",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      },
+      {
+       "name": "Charge",
+       "type": "Electric"
+      }
+     ]
+    },
+    {
+     "dex": 171,
+     "name": "Lanturn",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Water Gun",
+       "type": "Water",
+       "power": 40
+      },
+      {
+       "name": "Spark",
+       "type": "Electric",
+       "power": 65
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-female-denise",
+   "area": "Water Path"
+  },
+  {
+   "class": "Swimmer",
+   "name": "Samir",
+   "prize": 200,
+   "party": [
+    {
+     "dex": 130,
+     "name": "Gyarados",
+     "level": 50,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Twister",
+       "type": "Dragon",
+       "power": 40
+      },
+      {
+       "name": "Hydro Pump",
+       "type": "Water",
+       "power": 120
+      },
+      {
+       "name": "Rain Dance",
+       "type": "Water"
+      },
+      {
+       "name": "Dragon Dance",
+       "type": "Dragon"
+      }
+     ]
+    }
+   ],
+   "id": "swimmer-male-samir",
+   "area": "Water Path"
+  },
+  {
+   "class": "Twins",
+   "name": "Miu & Mia",
+   "prize": 1200,
+   "party": [
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 50,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Thunderbolt",
+       "type": "Electric",
+       "power": 95
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Thunder",
+       "type": "Electric",
+       "power": 120
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 25,
+     "name": "Pikachu",
+     "level": 50,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Thunderbolt",
+       "type": "Electric",
+       "power": 95
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Thunder",
+       "type": "Electric",
+       "power": 120
+      },
+      {
+       "name": "Light Screen",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "double": true,
+   "id": "twins-miu-mia",
+   "area": "Water Path"
+  },
+  {
+   "class": "Aroma Lady",
+   "name": "Rose",
+   "prize": 1372,
+   "party": [
+    {
+     "dex": 191,
+     "name": "Sunkern",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Endeavor",
+       "type": "Normal",
+       "power": 1
+      },
+      {
+       "name": "Sunny Day",
+       "type": "Fire"
+      },
+      {
+       "name": "Synthesis",
+       "type": "Grass"
+      },
+      {
+       "name": "Giga Drain",
+       "type": "Grass",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 192,
+     "name": "Sunflora",
+     "level": 49,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bullet Seed",
+       "type": "Grass",
+       "power": 10
+      },
+      {
+       "name": "Sunny Day",
+       "type": "Fire"
+      },
+      {
+       "name": "Petal Dance",
+       "type": "Grass",
+       "power": 70
+      },
+      {
+       "name": "Solarbeam",
+       "type": "Grass",
+       "power": 120
+      }
+     ]
+    }
+   ],
+   "id": "aroma-lady-rose",
+   "area": "Water Path"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

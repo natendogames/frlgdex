@@ -1,8 +1,8 @@
 // Offline support: precache the app shell and every data file on install, then serve
 // network-first with the cache as fallback. Bump CACHE when shipping new files or data.
-const CACHE = 'frlg-dex-v4';
+const CACHE = 'frlg-dex-v5';
 const SHELL = ['./', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest', 'icons/icon.svg',
-  'data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json'];
+  'data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(async c => {
     await c.addAll(SHELL);

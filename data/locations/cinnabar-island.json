@@ -294,6 +294,608 @@
    "where": "Pokémon Lab Lounge"
   }
  ],
+ "trainers": [
+  {
+   "class": "Burglar",
+   "name": "Dusty",
+   "prize": 3256,
+   "party": [
+    {
+     "dex": 37,
+     "name": "Vulpix",
+     "level": 37,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Imprison",
+       "type": "Psychic"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      },
+      {
+       "name": "Grudge",
+       "type": "Ghost"
+      }
+     ]
+    },
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 37,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Flame Wheel",
+       "type": "Fire",
+       "power": 60
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "burglar-dusty",
+   "area": "Gym"
+  },
+  {
+   "class": "Super Nerd",
+   "name": "Derek",
+   "prize": 984,
+   "party": [
+    {
+     "dex": 78,
+     "name": "Rapidash",
+     "level": 41,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Fire Spin",
+       "type": "Fire",
+       "power": 15
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "super-nerd-derek",
+   "area": "Gym"
+  },
+  {
+   "class": "Super Nerd",
+   "name": "Zac",
+   "prize": 888,
+   "party": [
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 37,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Flame Wheel",
+       "type": "Fire",
+       "power": 60
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 37,
+     "name": "Vulpix",
+     "level": 37,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Imprison",
+       "type": "Psychic"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      },
+      {
+       "name": "Grudge",
+       "type": "Ghost"
+      }
+     ]
+    }
+   ],
+   "id": "super-nerd-zac",
+   "area": "Gym"
+  },
+  {
+   "class": "Burglar",
+   "name": "Ramon",
+   "prize": 3608,
+   "party": [
+    {
+     "dex": 77,
+     "name": "Ponyta",
+     "level": 41,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Fire Spin",
+       "type": "Fire",
+       "power": 15
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
+    }
+   ],
+   "id": "burglar-ramon",
+   "area": "Gym"
+  },
+  {
+   "class": "Burglar",
+   "name": "Quinn",
+   "prize": 3168,
+   "party": [
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 36,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Flame Wheel",
+       "type": "Fire",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 37,
+     "name": "Vulpix",
+     "level": 36,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Imprison",
+       "type": "Psychic"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 38,
+     "name": "Ninetales",
+     "level": 36,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "burglar-quinn",
+   "area": "Gym"
+  },
+  {
+   "class": "Super Nerd",
+   "name": "Avery",
+   "prize": 816,
+   "party": [
+    {
+     "dex": 77,
+     "name": "Ponyta",
+     "level": 34,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Fire Spin",
+       "type": "Fire",
+       "power": 15
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      }
+     ]
+    },
+    {
+     "dex": 4,
+     "name": "Charmander",
+     "level": 34,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Metal Claw",
+       "type": "Steel",
+       "power": 50
+      },
+      {
+       "name": "Smokescreen",
+       "type": "Normal"
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      }
+     ]
+    },
+    {
+     "dex": 37,
+     "name": "Vulpix",
+     "level": 34,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Imprison",
+       "type": "Psychic"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 34,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Flame Wheel",
+       "type": "Fire",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "super-nerd-avery",
+   "area": "Gym"
+  },
+  {
+   "class": "Super Nerd",
+   "name": "Erik",
+   "prize": 864,
+   "party": [
+    {
+     "dex": 37,
+     "name": "Vulpix",
+     "level": 36,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Imprison",
+       "type": "Psychic"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 37,
+     "name": "Vulpix",
+     "level": 36,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Imprison",
+       "type": "Psychic"
+      },
+      {
+       "name": "Flamethrower",
+       "type": "Fire",
+       "power": 95
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 38,
+     "name": "Ninetales",
+     "level": 36,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Confuse Ray",
+       "type": "Ghost"
+      },
+      {
+       "name": "Safeguard",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "super-nerd-erik",
+   "area": "Gym"
+  },
+  {
+   "class": "Leader",
+   "name": "Blaine",
+   "prize": 4700,
+   "party": [
+    {
+     "dex": 58,
+     "name": "Growlithe",
+     "level": 42,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Flame Wheel",
+       "type": "Fire",
+       "power": 60
+      },
+      {
+       "name": "Helping Hand",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 77,
+     "name": "Ponyta",
+     "level": 40,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Stomp",
+       "type": "Normal",
+       "power": 65
+      },
+      {
+       "name": "Fire Spin",
+       "type": "Fire",
+       "power": 15
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      }
+     ]
+    },
+    {
+     "dex": 78,
+     "name": "Rapidash",
+     "level": 42,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Fire Spin",
+       "type": "Fire",
+       "power": 15
+      },
+      {
+       "name": "Take Down",
+       "type": "Normal",
+       "power": 90
+      },
+      {
+       "name": "Agility",
+       "type": "Psychic"
+      },
+      {
+       "name": "Fury Attack",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    },
+    {
+     "dex": 59,
+     "name": "Arcanine",
+     "level": 47,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      },
+      {
+       "name": "Roar",
+       "type": "Normal"
+      },
+      {
+       "name": "Ember",
+       "type": "Fire",
+       "power": 40
+      },
+      {
+       "name": "Odor Sleuth",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion ×2",
+    "Full Heal"
+   ],
+   "rewards": [
+    "Volcano Badge",
+    "TM38"
+   ],
+   "id": "leader-blaine",
+   "area": "Gym"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

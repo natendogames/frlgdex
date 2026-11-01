@@ -253,6 +253,416 @@
    "where": "Outside"
   }
  ],
+ "trainers": [
+  {
+   "class": "Bug Catcher",
+   "name": "Cale",
+   "prize": 120,
+   "party": [
+    {
+     "dex": 10,
+     "name": "Caterpie",
+     "level": 10,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 13,
+     "name": "Weedle",
+     "level": 10,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "String Shot",
+       "type": "Bug"
+      }
+     ]
+    },
+    {
+     "dex": 11,
+     "name": "Metapod",
+     "level": 10,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 14,
+     "name": "Kakuna",
+     "level": 10,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Harden",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "id": "bug-catcher-cale"
+  },
+  {
+   "class": "Lass",
+   "name": "Ali",
+   "prize": 192,
+   "party": [
+    {
+     "dex": 16,
+     "name": "Pidgey",
+     "level": 12,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      },
+      {
+       "name": "Gust",
+       "type": "Flying",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 12,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Absorb",
+       "type": "Grass",
+       "power": 20
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 12,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Growth",
+       "type": "Normal"
+      },
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      }
+     ]
+    }
+   ],
+   "id": "lass-ali"
+  },
+  {
+   "class": "Youngster",
+   "name": "Timmy",
+   "prize": 224,
+   "party": [
+    {
+     "dex": 27,
+     "name": "Sandshrew",
+     "level": 14,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Defense Curl",
+       "type": "Normal"
+      },
+      {
+       "name": "Sand-attack",
+       "type": "Ground"
+      }
+     ]
+    },
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 14,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "youngster-timmy"
+  },
+  {
+   "class": "Lass",
+   "name": "Reli",
+   "prize": 256,
+   "party": [
+    {
+     "dex": 32,
+     "name": "Nidoran♂",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Peck",
+       "type": "Flying",
+       "power": 35
+      },
+      {
+       "name": "Focus Energy",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      }
+     ]
+    },
+    {
+     "dex": 29,
+     "name": "Nidoran♀",
+     "level": 16,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Growl",
+       "type": "Normal"
+      },
+      {
+       "name": "Scratch",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Double Kick",
+       "type": "Fighting",
+       "power": 30
+      }
+     ]
+    }
+   ],
+   "id": "lass-reli"
+  },
+  {
+   "class": "Camper",
+   "name": "Shane",
+   "prize": 280,
+   "party": [
+    {
+     "dex": 19,
+     "name": "Rattata",
+     "level": 14,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tackle",
+       "type": "Normal",
+       "power": 35
+      },
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      }
+     ]
+    },
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 14,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "camper-shane"
+  },
+  {
+   "class": "Camper",
+   "name": "Ethan",
+   "prize": 360,
+   "party": [
+    {
+     "dex": 56,
+     "name": "Mankey",
+     "level": 18,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Low Kick",
+       "type": "Fighting",
+       "power": 1
+      },
+      {
+       "name": "Karate Chop",
+       "type": "Fighting",
+       "power": 50
+      },
+      {
+       "name": "Fury Swipes",
+       "type": "Normal",
+       "power": 18
+      }
+     ]
+    }
+   ],
+   "id": "camper-ethan"
+  },
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 480,
+   "party": [
+    {
+     "dex": 23,
+     "name": "Ekans",
+     "level": 15,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Leer",
+       "type": "Normal"
+      },
+      {
+       "name": "Poison Sting",
+       "type": "Poison",
+       "power": 15
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    },
+    {
+     "dex": 41,
+     "name": "Zubat",
+     "level": 15,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Astonish",
+       "type": "Ghost",
+       "power": 30
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      }
+     ]
+    }
+   ],
+   "rewards": [
+    "Nugget"
+   ],
+   "id": "team-rocket-grunt-6"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"

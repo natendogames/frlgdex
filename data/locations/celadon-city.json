@@ -416,6 +416,679 @@
    "where": "Department Store Roof"
   }
  ],
+ "trainers": [
+  {
+   "class": "Team Rocket",
+   "name": "Grunt",
+   "prize": 640,
+   "party": [
+    {
+     "dex": 20,
+     "name": "Raticate",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Tail Whip",
+       "type": "Normal"
+      },
+      {
+       "name": "Quick Attack",
+       "type": "Normal",
+       "power": 40
+      },
+      {
+       "name": "Hyper Fang",
+       "type": "Normal",
+       "power": 80
+      },
+      {
+       "name": "Scary Face",
+       "type": "Normal"
+      }
+     ]
+    },
+    {
+     "dex": 41,
+     "name": "Zubat",
+     "level": 20,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Leech Life",
+       "type": "Bug",
+       "power": 20
+      },
+      {
+       "name": "Astonish",
+       "type": "Ghost",
+       "power": 30
+      },
+      {
+       "name": "Supersonic",
+       "type": "Normal"
+      },
+      {
+       "name": "Bite",
+       "type": "Dark",
+       "power": 60
+      }
+     ]
+    }
+   ],
+   "id": "team-rocket-grunt-7",
+   "area": "Game Corner"
+  },
+  {
+   "class": "Lass",
+   "name": "Kay",
+   "prize": 368,
+   "party": [
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 23,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 70,
+     "name": "Weepinbell",
+     "level": 23,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      }
+     ]
+    }
+   ],
+   "id": "lass-kay",
+   "area": "Gym"
+  },
+  {
+   "class": "Beauty",
+   "name": "Bridget",
+   "prize": 1512,
+   "party": [
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 21,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      }
+     ]
+    }
+   ],
+   "id": "beauty-bridget",
+   "area": "Gym"
+  },
+  {
+   "class": "Cool Trainer",
+   "name": "Mary",
+   "prize": 792,
+   "party": [
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 22,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 22,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 70,
+     "name": "Weepinbell",
+     "level": 22,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Wrap",
+       "type": "Normal",
+       "power": 15
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 44,
+     "name": "Gloom",
+     "level": 22,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    },
+    {
+     "dex": 2,
+     "name": "Ivysaur",
+     "level": 22,
+     "iv": 12,
+     "moves": [
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Super Potion"
+   ],
+   "id": "coolmary",
+   "area": "Gym"
+  },
+  {
+   "class": "Picnicker",
+   "name": "Tina",
+   "prize": 480,
+   "party": [
+    {
+     "dex": 1,
+     "name": "Bulbasaur",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    },
+    {
+     "dex": 2,
+     "name": "Ivysaur",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    }
+   ],
+   "id": "picnicker-tina",
+   "area": "Gym"
+  },
+  {
+   "class": "Beauty",
+   "name": "Tamia",
+   "prize": 1728,
+   "party": [
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 69,
+     "name": "Bellsprout",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "id": "beauty-tamia",
+   "area": "Gym"
+  },
+  {
+   "class": "Beauty",
+   "name": "Lori",
+   "prize": 1728,
+   "party": [
+    {
+     "dex": 102,
+     "name": "Exeggcute",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Hypnosis",
+       "type": "Psychic"
+      },
+      {
+       "name": "Reflect",
+       "type": "Psychic"
+      },
+      {
+       "name": "Leech Seed",
+       "type": "Grass"
+      },
+      {
+       "name": "Confusion",
+       "type": "Psychic",
+       "power": 50
+      }
+     ]
+    }
+   ],
+   "id": "beauty-lori",
+   "area": "Gym"
+  },
+  {
+   "class": "Lass",
+   "name": "Lisa",
+   "prize": 368,
+   "party": [
+    {
+     "dex": 43,
+     "name": "Oddish",
+     "level": 23,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Acid",
+       "type": "Poison",
+       "power": 40
+      }
+     ]
+    },
+    {
+     "dex": 44,
+     "name": "Gloom",
+     "level": 23,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      }
+     ]
+    }
+   ],
+   "id": "lass-lisa",
+   "area": "Gym"
+  },
+  {
+   "class": "Leader",
+   "name": "Erika",
+   "prize": 2900,
+   "party": [
+    {
+     "dex": 71,
+     "name": "Victreebel",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      },
+      {
+       "name": "Sleep Powder",
+       "type": "Grass"
+      },
+      {
+       "name": "Sweet Scent",
+       "type": "Normal"
+      },
+      {
+       "name": "Razor Leaf",
+       "type": "Grass",
+       "power": 55
+      }
+     ]
+    },
+    {
+     "dex": 114,
+     "name": "Tangela",
+     "level": 24,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Absorb",
+       "type": "Grass",
+       "power": 20
+      },
+      {
+       "name": "Growth",
+       "type": "Normal"
+      },
+      {
+       "name": "Poisonpowder",
+       "type": "Poison"
+      },
+      {
+       "name": "Vine Whip",
+       "type": "Grass",
+       "power": 35
+      }
+     ]
+    },
+    {
+     "dex": 45,
+     "name": "Vileplume",
+     "level": 29,
+     "iv": 0,
+     "moves": [
+      {
+       "name": "Absorb",
+       "type": "Grass",
+       "power": 20
+      },
+      {
+       "name": "Aromatherapy",
+       "type": "Grass"
+      },
+      {
+       "name": "Stun Spore",
+       "type": "Grass"
+      },
+      {
+       "name": "Mega Drain",
+       "type": "Grass",
+       "power": 40
+      }
+     ]
+    }
+   ],
+   "uses": [
+    "Hyper Potion",
+    "Full Heal"
+   ],
+   "rewards": [
+    "Rainbow Badge",
+    "TM19"
+   ],
+   "id": "leader-erika",
+   "area": "Gym"
+  }
+ ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
