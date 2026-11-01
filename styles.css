@@ -122,3 +122,19 @@ details.leg > summary { padding: 2px 0; }
 details.leg.checked > summary { color: var(--muted); }
 table.lineup { margin: 10px 0 4px; }
 @media (max-width: 360px) { .tabs a { padding-left: 1px; padding-right: 1px; font-size: 12px; white-space: nowrap; letter-spacing: -0.2px; } }
+
+/* reference pages */
+a.info { text-decoration: none; font-size: 15px; margin-left: 4px; color: var(--muted); }
+a.linkrow, a.linkcard { text-decoration: none; color: inherit; }
+a.linkrow > span:last-child { color: var(--muted); }
+.stats-bars .sb { display: grid; grid-template-columns: 40px 40px 1fr; align-items: center; gap: 6px; font-size: 13px; }
+.stats-bars .sb .bar { margin-top: 0; }
+.prog { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; padding: 6px 0; font-size: 14px; }
+.prog .bar { grid-column: 1 / -1; margin-top: 2px; }
+ul.evo, ul.evo ul { list-style: none; padding-left: 14px; margin: 0; }
+ul.evo { padding-left: 0; }
+ul.evo li { margin: 3px 0; }
+a.mv { text-decoration: none; color: inherit; }
+.stat span + span { display: block; }
+select { margin-top: 4px; }
+.chip { text-decoration: none; }

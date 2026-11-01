@@ -124,6 +124,12 @@ const strip = h => h.replace(/<table[\s\S]*?<\/table>/g, ' [duel table] ').repla
           // moves must be ones it really has: from its catch moveset, learned after catching, or (from Two Island on) relearned
           const relearn = stage >= app.stageOf('two-island');
           const legal = app.learnedBy(s.f.dex, s.level, { dex: s.c.dex, level: parseInt(String(s.c.levels || '5'), 10) }, relearn);
+          // or taught from a TM/HM you can have by then (and that this species can learn)
+          for (const [mv, x] of app.tmMovesBy(s.f.dex, stage)) {
+            if (!(mon(s.f.dex).tmhm || []).includes(x.tm) || state.tms[x.tm].move !== mv) fail(`${tag}: ${mon(s.f.dex).name} can't learn ${x.tm}`);
+            if (x.src.stage > stage) fail(`${tag}: ${x.tm} planned before you can get it`);
+            legal.set(mv, x);
+          }
           for (const mv of s.d.me.moves) if (!legal.has(mv)) fail(`${tag} vs ${p.name}: ${mon(s.f.dex).name} (caught as ${mon(s.c.dex).name}) can't know ${mv} at Lv ${s.level}`);
           for (const mv of s.d.se) {
             if (chartEff(state.moves[mv].type, mon(p.dex).types) < 2) fail(`${tag} vs ${p.name}: ${mv} is not super effective`);

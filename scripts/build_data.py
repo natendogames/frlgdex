@@ -691,3 +691,99 @@ for c, coins in re.findall(r'setvar VAR_TEMP_1, ITEM_((?:TM|HM)\d+)\n\tsetvar VA
 json.dump(pokedex, open(os.path.join(OUT, 'pokedex.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
 json.dump(tms, open(os.path.join(OUT, 'tms.json'), 'w'), ensure_ascii=False, indent=1)
 print('tms', len(tms), 'without a source:', [k for k, v in tms.items() if not v['sources']])
+
+# ---------- extra species data: abilities, catch rate, EXP, EV yield, growth rate, wild held items ----------
+ability_names = {}
+for k, v in re.findall(r'\[ABILITY_(\w+)\] = _\("(.*?)"\)', open(P('src/data/text/abilities.h'), encoding='utf-8').read()):
+    ability_names[k] = title(v)
+GROWTH = {'MEDIUM_FAST': 'medium-fast', 'ERRATIC': 'erratic', 'FLUCTUATING': 'fluctuating', 'MEDIUM_SLOW': 'medium-slow', 'FAST': 'fast', 'SLOW': 'slow'}
+extra, cur = {}, None
+for line in open(P('src/data/pokemon/species_info.h')):
+    m = re.match(r'\s*\[SPECIES_(\w+)\]\s*=', line)
+    if m: cur = m.group(1); extra[cur] = {}; continue
+    if not cur: continue
+    m = re.match(r'\s*\.(catchRate|expYield|friendship|safariZoneFleeRate|evYield_\w+) = (\d+)', line)
+    if m: extra[cur][m.group(1)] = int(m.group(2))
+    m = re.match(r'\s*\.growthRate = GROWTH_(\w+)', line)
+    if m: extra[cur]['growth'] = GROWTH[m.group(1)]
+    m = re.match(r'\s*\.abilities = \{ABILITY_(\w+), ABILITY_(\w+)\}', line)
+    if m: extra[cur]['abilities'] = [ability_names[a] for a in dict.fromkeys(m.groups()) if a != 'NONE']
+    m = re.match(r'\s*\.item(Common|Rare) = (ITEM_\w+)', line)
+    if m and m.group(2) != 'ITEM_NONE': extra[cur].setdefault('held', {})[m.group(1).lower()] = item_name(m.group(2))
+tutor_list = re.findall(r'\[TUTOR_MOVE_(\w+)\] = MOVE_(\w+)', open(P('src/data/pokemon/tutor_learnsets.h')).read())
+tutor_by_species = {k: [move_names[mv] for mv in re.findall(r'TUTOR\(MOVE_(\w+)\)', body)]
+                    for k, body in re.findall(r'\[SPECIES_(\w+)\] = ((?:TUTOR\(MOVE_\w+\)\s*\|?\s*)+|0),', open(P('src/data/pokemon/tutor_learnsets.h')).read())}
+for p in pokedex:
+    key = next(k for k, v in natdex.items() if v == p['dex'])
+    x = extra.get(key, {})
+    p['abilities'] = x.get('abilities', [])
+    p['catchRate'] = x.get('catchRate'); p['expYield'] = x.get('expYield'); p['growth'] = x.get('growth')
+    p['ev'] = [x.get(f'evYield_{s}', 0) for s in ('HP', 'Attack', 'Defense', 'SpAttack', 'SpDefense', 'Speed')]
+    if x.get('held'): p['held'] = x['held']
+    if x.get('safariZoneFleeRate'): p['safariFlee'] = x['safariZoneFleeRate']
+    if tutor_by_species.get(key): p['tutor'] = tutor_by_species[key]
+json.dump(pokedex, open(os.path.join(OUT, 'pokedex.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
+
+# ---------- shops, tutors, VS Seeker rematches, Unown chambers ----------
+def map_loc(mapname):
+    return loc_id(maps[mapname]['region_map_section'])
+shops = collections.defaultdict(list)
+SHOP_NOTE = {'TwoIsland_Items_ShopInitial': 'Two Island shop at first', 'TwoIsland_Items_ShopExpanded1': 'After rescuing Lostelle',
+             'TwoIsland_Items_ShopExpanded2': 'After you become Champion', 'TwoIsland_Items_ShopExpanded3': 'After linking with Ruby or Sapphire'}
+for name in sorted(maps):
+    f = os.path.join(maps[name]['_dir'], 'scripts.inc')
+    if not os.path.exists(f) or maps[name]['region_map_section'] in SKIP: continue
+    raw = open(f, encoding='utf-8').read()
+    for lbl in re.findall(r'pokemart (\w+)', raw):
+        body = re.search(re.escape(lbl) + r'::(.*?)ITEM_NONE', raw, re.S).group(1)
+        lst = [{'name': item_name(c), 'price': items[c]['price']} for c in re.findall(r'(ITEM_\w+)', body)]
+        where = SHOP_NOTE.get(lbl) or area_name(name, maps[name]['region_map_section'])
+        if 'TMs' in lbl: where += ' (TMs)'
+        if 'Vitamins' in lbl: where += ' (vitamins)'
+        if 'XItems' in lbl: where += ' (battle items)'
+        shops[map_loc(name)].append({'id': re.sub(r'[^a-z0-9]+', '-', lbl.lower()), 'where': where, 'items': lst})
+shops['celadon-city'].append({'id': 'roof-vending', 'where': 'Department Store Roof (vending machines)', 'items': [
+    {'name': 'Fresh Water', 'price': 200}, {'name': 'Soda Pop', 'price': 300}, {'name': 'Lemonade', 'price': 350}]})
+prize_items = re.findall(r'setvar VAR_TEMP_1, (ITEM_\w+)\n\tsetvar VAR_TEMP_2, (\d+)', prize)
+shops['celadon-city'].append({'id': 'game-corner-prizes', 'where': 'Game Corner Prize Room', 'coins': True,
+    'items': [{'name': item_name(c), 'price': int(n)} for c, n in prize_items]})
+
+TUTOR_WHERE = {'DoubleEdge': ('victory-road', '2F'), 'ThunderWave': ('silph-co', '2F'), 'RockSlide': ('rock-tunnel', 'B1F'),
+    'Explosion': ('mt-ember', 'Exterior'), 'MegaPunch': ('route-4', 'Outside'), 'MegaKick': ('route-4', 'Outside'),
+    'DreamEater': ('viridian-city', 'House'), 'Softboiled': ('celadon-city', 'Outside'), 'Substitute': ('fuchsia-city', 'Outside'),
+    'SwordsDance': ('seven-island', 'Outside'), 'SeismicToss': ('pewter-city', 'Museum 1F'), 'Counter': ('celadon-city', 'Department Store 3F'),
+    'Metronome': ('cinnabar-island', 'Pokémon Lab Research Room'), 'Mimic': ('saffron-city', 'Copycats House 2F'), 'BodySlam': ('four-island', 'House 1')}
+tutor_src = open(P('data/scripts/move_tutors.inc')).read()
+tutors = []
+for label in re.findall(r'^(\w+Tutor)::', tutor_src, re.M):
+    k = re.search(r'EventScript_(\w+)Tutor$', label).group(1)
+    if k not in TUTOR_WHERE: continue
+    mv = re.search(re.escape(label) + r'::.*?MOVETUTOR_(\w+)', tutor_src, re.S).group(1)
+    lid, where = TUTOR_WHERE[k]
+    tutors.append({'id': 'tutor-' + mv.lower().replace('_', '-'), 'move': move_names[mv], 'loc': lid, 'where': where,
+                   'learners': [p['dex'] for p in pokedex if move_names[mv] in p.get('tutor', [])]})
+tutors.sort(key=lambda t: order_pos[t['loc']])
+tutors.append({'id': 'tutor-ultimate', 'move': 'Frenzy Plant / Blast Burn / Hydro Cannon', 'loc': 'cape-brink', 'where': 'House',
+               'learners': [3, 6, 9], 'note': 'Once per starter line: Venusaur, Charizard or Blastoise with maximum friendship. Can be taught to each of the three.'})
+
+rm_src = open(P('src/vs_seeker.c')).read()
+rm_block = re.search(r'sRematches\[\] = \{(.*?)\n\};', rm_src, re.S).group(1)
+TIER = ['First battle', 'After you get the VS Seeker', 'After you reach Celadon City', 'After you reach Fuchsia City', 'After you become Champion', 'After linking with Ruby or Sapphire']
+rematches = collections.defaultdict(list)
+for ids, mp in re.findall(r'\{\s*\{(.*?)\},\s*MAP\((MAP_\w+)\)\s*\}', rm_block, re.S):
+    consts = [c.strip() for c in ids.split(',') if c.strip()]
+    m = by_const.get(mp)
+    if not m: continue
+    lid = loc_id(m['region_map_section'])
+    base = re.sub(r'[^a-z0-9]+', '-', consts[0].replace('TRAINER_', '').lower()).strip('-')
+    tiers, seen_c = [], {consts[0]}
+    for i, c in enumerate(consts[1:], 1):
+        if c == 'SKIP' or c in seen_c or c not in tdefs: continue
+        seen_c.add(c)
+        tiers.append({'after': TIER[i], 'party': trainer_party(c)})
+    if tiers: rematches[lid].append({'id': base, 'tiers': tiers})
+
+unown = {'monean': 'A ?', 'liptoo': 'C D H U O', 'weepth': 'N S I E', 'dilford': 'P L J R Q', 'scufib': 'Y T G F K', 'rixy': 'V W X M B', 'viapois': 'Z !'}
+json.dump({'shops': shops, 'tutors': tutors, 'rematches': rematches, 'unown': {k.title() + ' Chamber': v.split() for k, v in unown.items()}},
+          open(os.path.join(OUT, 'extras.json'), 'w'), ensure_ascii=False, indent=1)
+print('shops', sum(len(v) for v in shops.values()), 'tutors', len(tutors), 'rematch trainers', sum(len(v) for v in rematches.values()))

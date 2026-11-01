@@ -145,8 +145,8 @@ const trainerKey = (locId, t) => `${locId}:trainer:${t.id}`;
 
 const getJSON = url => fetch(url).then(r => { if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); });
 async function loadData() {
-  const [idx, dex, trainers, types, walk, moves] = await Promise.all(['data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json'].map(getJSON));
-  Object.assign(state, { index: idx.locations, dex, trainers, types, walk, moves });
+  const [idx, dex, trainers, types, walk, moves, tms, extras] = await Promise.all(['data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json', 'data/tms.json', 'data/extras.json'].map(getJSON));
+  Object.assign(state, { index: idx.locations, dex, trainers, types, walk, moves, tms, extras });
   await Promise.all(state.index.map(async l => { state.locations[l.id] = await getJSON('data/' + l.file); }));
   state.stage = Object.fromEntries(state.index.map((l, i) => [l.id, i]));
   for (const l of state.index) for (const e of state.locations[l.id].encounters) {
@@ -235,21 +235,24 @@ function availText(n) {
 function locStats(loc) {
   const s = cur(), v = locView(loc);
   const dex = [...new Set(v.encs.map(e => e.dex))];
-  const keys = [...loc.items.map(i => `${loc.id}:item:${i.id}`), ...v.gifts.map(g => `${loc.id}:gift:${g.id}`), ...v.trainers.map(t => trainerKey(loc.id, t))];
+  const keys = [...loc.items.map(i => `${loc.id}:item:${i.id}`), ...v.gifts.map(g => `${loc.id}:gift:${g.id}`), ...v.trainers.map(t => trainerKey(loc.id, t)), ...extraKeys(loc)];
   return { total: dex.length + keys.length + v.choices.length,
     done: dex.filter(d => s.caught[d]).length + keys.filter(k => s.checks[k]).length + v.choices.filter(c => pickOf(c.id)).length };
 }
+// Checklist rows added by features.js (shop TMs and prizes); none until it has loaded
+const extraKeys = loc => (typeof shopRows === 'function' ? shopRows(loc) : []);
 function globalStats() {
-  const s = cur(); let items = 0, itemsDone = 0, gifts = 0, giftsDone = 0, trs = 0, trsDone = 0;
+  const s = cur(); let items = 0, itemsDone = 0, gifts = 0, giftsDone = 0, trs = 0, trsDone = 0, shop = 0, shopDone = 0;
   for (const loc of Object.values(state.locations)) {
     const v = locView(loc);
+    for (const k of extraKeys(loc)) { shop++; if (s.checks[k]) shopDone++; }
     for (const i of loc.items) { items++; if (s.checks[`${loc.id}:item:${i.id}`]) itemsDone++; }
     for (const g of v.gifts) { gifts++; if (s.checks[`${loc.id}:gift:${g.id}`]) giftsDone++; }
     for (const c of v.choices) { gifts++; if (pickOf(c.id)) giftsDone++; }
     for (const t of v.trainers) { trs++; if (s.checks[trainerKey(loc.id, t)]) trsDone++; }
   }
   let kanto = 0; for (let n = 1; n <= 151; n++) if (s.caught[n]) kanto++;
-  return { dex: [kanto, 151], items: [itemsDone, items], gifts: [giftsDone, gifts], trainers: [trsDone, trs] };
+  return { dex: [kanto, 151], items: [itemsDone, items], gifts: [giftsDone, gifts], trainers: [trsDone, trs], shop: [shopDone, shop] };
 }
 
 // ---------- views ----------
@@ -257,7 +260,7 @@ function renderHome() {
   setHeader('FRLG Completion Dex', false, 'routes');
   const g = globalStats();
   const stat = (label, [a, b]) => `<div class="stat"><b>${a}/${b}</b><span>${label}</span>${bar(a, b)}</div>`;
-  let html = `<div class="card stats">${stat('Kanto Dex', g.dex)}${stat('Items', g.items)}${stat('NPC gifts', g.gifts)}${stat('Trainers', g.trainers)}</div>`;
+  let html = `<a class="card stats linkcard" href="#/progress">${stat('Kanto Dex', g.dex)}${stat('Items', g.items)}${stat('NPC gifts', g.gifts)}${stat('Trainers', g.trainers)}</a>`;
   let region = '';
   for (const l of state.index) {
     const loc = state.locations[l.id];
@@ -316,7 +319,7 @@ function renderLocation(id) {
         const sub = [METHOD_LABEL[e.method] || e.method, e.levels && `Lv ${esc(e.levels)}`, e.rate && esc(e.rate), e.notes && esc(e.notes),
           later && `Needs ${esc(UNLOCK[e.method].need)}`].filter(Boolean).join(' · ');
         const excl = e.versions.length === 1 ? `<span class="tag">${e.versions[0]} only</span>` : '';
-        return checkRow(`dex:${e.dex}`, s.caught[e.dex], `#${String(e.dex).padStart(3, '0')} ${esc(e.name)} ${types(e.dex)}`, sub, excl);
+        return checkRow(`dex:${e.dex}`, s.caught[e.dex], `#${String(e.dex).padStart(3, '0')} ${esc(e.name)} ${types(e.dex)}`, sub, excl + infoLink(e.dex));
       }).join('');
     }
     return out;
@@ -340,9 +343,13 @@ function renderLocation(id) {
   section('Items', loc.items.filter(i => !i.hidden), 'item', () => 'On the ground');
   section('Hidden items', loc.items.filter(i => i.hidden), 'item', () => 'Hidden: use the Itemfinder');
   section('NPC gifts &amp; trades', v.gifts, 'gift', g => [g.from && esc(g.from), esc(g.where)].filter(Boolean).join(' · '));
+  for (const f of LOC_SECTIONS) html += f(loc);
   view.innerHTML = html;
 }
 
+// Extra location page sections (shops, move tutors...) registered by features.js and friends: loc -> html
+const LOC_SECTIONS = [];
+const infoLink = n => ` <a class="info" href="#/mon/${n}" aria-label="About ${esc(mon(n).name)}">ⓘ</a>`;
 function choiceCard(c) {
   const p = pickOf(c.id), nm = `pick-${c.id}-${rowSeq++}`;
   const opt = o => {
@@ -405,8 +412,9 @@ function renderDex() {
       <button class="chip ${f.missing ? 'on' : ''}" data-f="missing">Missing only</button>
     </div>
     <input type="search" id="dexq" placeholder="Search name or number" value="${esc(f.q)}" style="margin-top:10px"></div>
+    <p class="note"><a href="#/missing">Still missing: what you can catch now and where</a></p>
     <div class="card">${list.map(p => checkRow(`dex:${p.dex}`, isCaught(p.dex),
-      `#${String(p.dex).padStart(3, '0')} ${esc(p.name)} ${types(p.dex)}`, availText(p.dex))).join('') || '<div class="empty">Nothing matches.</div>'}</div>`;
+      `#${String(p.dex).padStart(3, '0')} ${esc(p.name)} ${types(p.dex)}`, availText(p.dex), infoLink(p.dex))).join('') || '<div class="empty">Nothing matches.</div>'}</div>`;
   view.querySelectorAll('[data-f]').forEach(b => b.onclick = () => {
     const [k, v] = b.dataset.f.split(':');
     if (k === 'scope') f.scope = v; else f.missing = !f.missing;
@@ -479,9 +487,35 @@ function moveScore(dex, level, name) {
   }
   return m.effect === 'charge' || m.effect === 'recharge' ? power / 2 : power;
 }
-function bestMoves(dex, level, from, relearn) {
+// TMs and HMs you can have by a point in the story: found or given at a location you've reached, bought at the
+// Celadon Department Store or won at the Game Corner. One handed over after a battle ("after winning") only counts
+// once that battle is behind you, so Misty's TM03 is never planned for the fight with Misty.
+const tmCache = {};
+function tmStage(src, tm) {
+  // a trainer who hands it over as a battle reward (Gym Leaders, Giovanni...): only after that battle
+  const t = (state.locations[src.loc]?.trainers || []).find(x => (x.rewards || []).some(r => r.split(' ')[0] === tm));
+  if (t) return battleStage(t, src.loc) + 0.5;
+  return stageOf(src.loc) + (/after (winning|beating)/i.test(src.from || '') ? 0.5 : 0);
+}
+function tmsBy(stage) {
+  if (tmCache[stage]) return tmCache[stage];
+  const out = [];
+  for (const [tm, t] of Object.entries(state.tms || {})) {
+    const src = (t.sources || []).map(x => ({ ...x, stage: tmStage(x, tm) })).filter(x => x.stage <= stage).sort((a, b) => a.stage - b.stage)[0];
+    if (src) out.push({ tm, move: t.move, src });
+  }
+  return (tmCache[stage] = out);
+}
+// Moves this Pokémon could be taught from the TMs and HMs you can have by then: move -> { tm, src }
+function tmMovesBy(dex, stage) {
+  const can = new Set(mon(dex).tmhm || []), out = new Map();
+  for (const t of tmsBy(stage)) if (can.has(t.tm)) out.set(t.move, { tm: t.tm, src: t.src });
+  return out;
+}
+const tmSourceText = x => `${x.tm} (${x.src.how === 'buy' ? `buy at ${state.locations[x.src.loc]?.name}` : x.src.how === 'prize' ? 'Game Corner prize' : state.locations[x.src.loc]?.name || x.src.loc})`;
+function bestMoves(dex, level, from, relearn, extra) {
   const best = {};
-  for (const name of learnedBy(dex, level, from, relearn).keys()) {
+  for (const name of new Set([...learnedBy(dex, level, from, relearn).keys(), ...(extra ? extra.keys() : [])])) {
     // Low Kick's power depends on the target's weight, so it doesn't crowd out the other Fighting move
     const sc = moveScore(dex, level, name), t = name === 'Low Kick' ? name : state.moves[name]?.type;
     if (sc && (!best[t] || sc > best[t].sc)) best[t] = { name, sc };
@@ -602,8 +636,9 @@ function catchSuggestions(foeMon, foe, stage, party, n = 2) {
     const from = { dex: c.dex, level: catchLevel(c) }, level = Math.max(foe.level, from.level);
     for (const f of evoForms(c.dex, level, stage)) {
       if (seen.has(f.dex)) continue;
-      const learned = learnedBy(f.dex, level, from, relearn);
-      const me = battler(f.dex, level, PLAYER_IV, bestMoves(f.dex, level, from, relearn));
+      const learned = learnedBy(f.dex, level, from, relearn), tmm = tmMovesBy(f.dex, stage);
+      for (const [mv, x] of tmm) if (!learned.has(mv)) learned.set(mv, x);
+      const me = battler(f.dex, level, PLAYER_IV, bestMoves(f.dex, level, from, relearn, tmm));
       const d = duel(me, foe);
       if (!d.se.length || d.myHits === Infinity) continue;
       const risk = [];
@@ -657,9 +692,9 @@ function foeRow(p, stage, party) {
       const evo = f.dex !== c.dex ? `${esc(mon(c.dex).name)} and evolve it into <b>${esc(mon(f.dex).name)}</b> (${esc(f.via.join(', then '))})` : `<b>${esc(mon(c.dex).name)}</b>`;
       return `${evo} ${types(f.dex)} on <a href="#/loc/${c.loc}">${esc(c.name)}</a>
         <span class="note">(${esc(METHOD_LABEL[c.method] || c.method)}${c.levels ? `, Lv ${esc(c.levels)}` : ''}${isCaught(c.dex) ? ', you have one' : ''}).
-        At Lv ${level}: ${hitText(d.mine, foe, d.myHits)}${learn && learn.level > catchLevel(c) ? `, ${learn.from !== f.dex ? `${esc(mon(learn.from).name)} ` : ''}learns it at Lv ${learn.level}${learn.from !== f.dex && f.via.length ? ' (before evolving)' : ''}` : ''}${d.wins ? '' : ', but it may lose the one-on-one'}</span>${risk.length ? `<div class="bad">Watch out for ${esc(risk.slice(0, 3).join(', '))}</div>` : ''}`;
+        At Lv ${level}: ${hitText(d.mine, foe, d.myHits)}${learn?.tm ? `, teach it ${esc(tmSourceText(learn))}` : learn && learn.level > catchLevel(c) ? `, ${learn.from !== f.dex ? `${esc(mon(learn.from).name)} ` : ''}learns it at Lv ${learn.level}${learn.from !== f.dex && f.via.length ? ' (before evolving)' : ''}` : ''}${d.wins ? '' : ', but it may lose the one-on-one'}</span>${risk.length ? `<div class="bad">Watch out for ${esc(risk.slice(0, 3).join(', '))}</div>` : ''}`;
     }).join('<br>or ')}</div>`
-      : `<div class="note">Nothing you can catch by ${esc(state.index[stage]?.name || 'now')} learns a super-effective move by Lv ${p.level}.</div>`;
+      : `<div class="note">Nothing you can catch by ${esc(state.index[stage]?.name || 'now')} learns or can be taught (TM/HM) a super-effective move by Lv ${p.level}.</div>`;
   }
   return `<div class="foe"><div><b>${esc(p.name)}</b> Lv ${p.level} ${types(p.dex)} <span class="note">${foe.hp} HP${p.item ? ` · holding ${esc(p.item)}` : ''}</span></div>
     ${p.moves?.length ? `<div class="moves">${p.moves.map(m => `<span class="mv">${esc(m.name)}${m.type ? ` <i class="t-${m.type}"></i>` : ''}${m.power ? ` <small>${m.power === 1 ? '—' : m.power}</small>` : ''}</span>`).join('')}</div>` : ''}
@@ -710,6 +745,7 @@ function renderPlanner() {
     <datalist id="movelist">${moveNames.map(m => `<option value="${esc(m)}">`).join('')}</datalist>
     <div class="note" style="margin-top:12px">Starter you picked in <a href="#/loc/pallet-town">Professor Oak's Lab</a> (sets your rival's team)${pickOf('starter') ? '' : ': <b class="bad">not picked yet</b>'}</div>
     ${starterChips()}</div>
+    ${typeof hmHelper === 'function' ? hmHelper() : ''}
     <p class="note">Gym Leaders, rival battles, Giovanni, the Elite Four and the Champion in story order. Every other trainer is on its route page.</p>`;
   for (const t of state.trainers) {
     html += trainerCard(t, battleStage(t, t.location), {
@@ -808,16 +844,21 @@ function updateLegCount(el) {
 }
 
 // ---------- tools ----------
-function renderTools(tool) {
-  setHeader(tool ? { breeding: 'Breeding helper', types: 'Type matchups', exclusives: 'Version exclusives' }[tool] : 'Tools', !!tool, 'tools');
+// More tools registered by other files: { id, title, desc, render(arg) }. An id starting with # is a link to another page.
+const TOOLS = [];
+function renderTools(tool, arg) {
+  const ext = TOOLS.find(t => t.id === tool);
+  setHeader(tool ? ext?.title || { breeding: 'Breeding helper', types: 'Type matchups', exclusives: 'Version exclusives' }[tool] : 'Tools', !!tool, 'tools');
+  if (ext?.render) return ext.render(arg);
   if (tool === 'breeding') return renderBreeding();
   if (tool === 'types') return renderTypes();
   if (tool === 'exclusives') return renderExclusives();
   view.innerHTML = [
     ['breeding', 'Breeding helper', 'Egg groups, compatible partners, what hatches and how many steps it takes'],
     ['types', 'Type matchups', 'Look up weaknesses for any type combination, plus the full chart'],
-    ['exclusives', 'Version exclusives', `Pokémon you need to trade for from ${VNAME[OTHER[V()]]}`]
-  ].map(([id, t, d]) => `<a class="card loc" href="#/tools/${id}"><div class="name">${t}<div class="meta">${d}</div></div><span>&rsaquo;</span></a>`).join('');
+    ['exclusives', 'Version exclusives', `Pokémon you need to trade for from ${VNAME[OTHER[V()]]}`],
+    ...TOOLS.map(t => [t.id, t.title, t.desc])
+  ].map(([id, t, d]) => `<a class="card loc" href="${id.startsWith('#') ? id : `#/tools/${id}`}"><div class="name">${t}<div class="meta">${d}</div></div><span>&rsaquo;</span></a>`).join('');
 }
 
 function renderBreeding() {
@@ -1023,6 +1064,8 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('online', () => { if (sync.on()) sync.cfg.dirty ? sync.push() : sync.pull(); });
 
 // ---------- shell ----------
+// Extra pages (features.js and friends) register themselves here: PAGES.mon = id => ..., reached at #/mon/<id>.
+const PAGES = {};
 function setHeader(title, back, tab) {
   document.getElementById('title').textContent = title;
   document.getElementById('back').hidden = !back;
@@ -1034,13 +1077,14 @@ function applyVersion() {
 }
 function route(keepScroll) {
   const y = window.scrollY;
-  const [, page, id] = location.hash.split('/');
+  const [, page, id, arg] = location.hash.split('/');
   if (page === 'loc') renderLocation(id);
   else if (page === 'dex') renderDex();
   else if (page === 'planner') renderPlanner();
   else if (page === 'plan') renderPlan();
-  else if (page === 'tools') renderTools(id);
+  else if (page === 'tools') renderTools(id, arg && decodeURIComponent(arg));
   else if (page === 'settings') renderSettings();
+  else if (PAGES[page]) PAGES[page](id ? decodeURIComponent(id) : id);
   else renderHome();
   window.scrollTo(0, keepScroll ? y : 0);
 }
