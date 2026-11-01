@@ -6,7 +6,7 @@
 const STORE_KEY = 'frlg-dex-progress-v1';
 const SYNC_KEY = 'frlg-dex-sync-v1';
 // URL of the deployed sync worker (see worker/README.md). Leave empty to hide cloud sync.
-const SYNC_URL = '';
+const SYNC_URL = 'https://frlg-dex-sync.natendogames.workers.dev';
 const METHOD_LABEL = {
   grass: 'Grass / cave', surf: 'Surf', 'old-rod': 'Old Rod', 'good-rod': 'Good Rod', 'super-rod': 'Super Rod',
   'rock-smash': 'Rock Smash', static: 'Static', gift: 'Gift', trade: 'In-game trade', 'game-corner': 'Game Corner', roaming: 'Roaming'

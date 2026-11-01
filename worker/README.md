@@ -17,8 +17,8 @@ emails trimmed and lower-cased, and only the origins in `ALLOWED_ORIGINS` may ca
    ```
    Copy the `id` it prints into `wrangler.toml` in place of `PASTE_YOUR_KV_NAMESPACE_ID_HERE`.
 3. `npx wrangler deploy`. It prints a URL like `https://frlg-dex-sync.<your-subdomain>.workers.dev`.
-4. Put that URL in `SYNC_URL` near the top of `../app.js` and push. The "Sync across devices"
-   section then appears on the app's settings page.
+4. Put that URL in `SYNC_URL` near the top of `../app.js` and push (already set to the live worker,
+   https://frlg-dex-sync.natendogames.workers.dev). The "Sync across devices" section then appears in settings.
 
 No Node? In the Cloudflare dashboard: Storage & Databases → KV → create a namespace named `SAVES`;
 Workers & Pages → Create → Worker → paste `worker.js`, deploy; then in the worker's Settings add

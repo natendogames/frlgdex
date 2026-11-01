@@ -9,7 +9,7 @@ ALLOWED_ORIGINS = "https://natendogames.github.io,http://localhost:8000"
 
 [[kv_namespaces]]
 binding = "SAVES"
-id = "PASTE_YOUR_KV_NAMESPACE_ID_HERE"
+id = "e1bcf728b34c475f8d2b4a72c61a15c5"
 
 # Free Cloudflare rate limiter: 20 requests per IP per minute.
 [[ratelimits]]
