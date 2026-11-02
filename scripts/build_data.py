@@ -835,6 +835,38 @@ json.dump({'shops': shops, 'tutors': tutors, 'rematches': rematches, 'unown': {k
           open(os.path.join(OUT, 'extras.json'), 'w'), ensure_ascii=False, indent=1)
 print('shops', sum(len(v) for v in shops.values()), 'tutors', len(tutors), 'rematch trainers', sum(len(v) for v in rematches.values()))
 
+# ---------- item descriptions ----------
+# The game's own Bag text for every item (TMs/HMs have their own pages), its shop price, Bag pocket, and what a
+# held berry does. data/items.json: name -> {desc, price, pocket, held?}
+KEEP_CAPS = {'HP', 'PP', 'TM', 'HM', 'S.S.', 'EXP.', 'EXP'}
+def desc_text(d):
+    d = d.replace('\\n', ' ').replace('POKéMON', 'Pokémon').replace('POKé', 'Poké')
+    return re.sub(r"\b[A-Zé][A-Zé'.\-]+\b\.?", lambda m: m.group(0) if m.group(0).rstrip('.') in KEEP_CAPS else m.group(0).capitalize(), d).replace('Exp.', 'Exp.')
+POCKET = {'POCKET_ITEMS': 'Items', 'POCKET_KEY_ITEMS': 'Key Items', 'POCKET_POKE_BALLS': 'Poké Balls', 'POCKET_BERRY_POUCH': 'Berry Pouch', 'POCKET_TM_CASE': 'TM Case'}
+STATUS_CURE = {'CURE_PAR': 'paralysis', 'CURE_SLP': 'sleep', 'CURE_PSN': 'poison', 'CURE_BRN': 'a burn', 'CURE_FRZ': 'freezing', 'CURE_CONFUSION': 'confusion', 'CURE_STATUS': 'any status problem or confusion'}
+PINCH = {'ATTACK_UP': 'Attack', 'DEFENSE_UP': 'Defense', 'SPEED_UP': 'Speed', 'SP_ATTACK_UP': 'Sp. Atk', 'SP_DEFENSE_UP': 'Sp. Def'}
+def held_text(i):
+    e, n = i['holdEffect'].replace('HOLD_EFFECT_', ''), i['holdEffectParam']
+    if i['pocket'] != 'POCKET_BERRY_POUCH': return None
+    if e == 'RESTORE_HP': return f'Held in battle: restores {n} HP once its HP falls below half.'
+    if e in STATUS_CURE: return f'Held in battle: cures {STATUS_CURE[e]} straight away.'
+    if e == 'RESTORE_PP': return f'Held in battle: restores {n} PP to a move that runs out.'
+    if e.startswith('CONFUSE_'): return 'Held in battle: restores 1/8 of max HP when HP is low, but confuses a Pokémon that dislikes the flavor.'
+    if e in PINCH: return f'Held in battle: raises {PINCH[e]} when HP is low.'
+    if e == 'CRITICAL_UP': return 'Held in battle: raises the critical-hit ratio when HP is low.'
+    if e == 'RANDOM_STAT_UP': return 'Held in battle: sharply raises a random stat when HP is low.'
+    if e == 'RESTORE_STATS': return 'Held in battle: restores lowered stats.'
+    return None
+item_info = {}
+for c, i in items.items():
+    if c == 'ITEM_NONE' or '?' in i['english'] or i['pocket'] == 'POCKET_TM_CASE': continue
+    x = {'desc': desc_text(i['description_english']), 'price': i['price'], 'pocket': POCKET.get(i['pocket'], '')}
+    h = held_text(i)
+    if h: x['held'] = h
+    item_info[item_name(c)] = x
+json.dump(item_info, open(os.path.join(OUT, 'items.json'), 'w'), ensure_ascii=False, indent=0)
+print('items', len(item_info))
+
 # ---------- save file import map ----------
 # What the app needs to read a FireRed/LeafGreen .sav: the save flag behind each item and trainer checklist row,
 # the game's internal species numbers (Hoenn Pokémon are out of National Dex order) and move numbers.

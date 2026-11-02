@@ -145,8 +145,8 @@ const trainerKey = (locId, t) => `${locId}:trainer:${t.id}`;
 
 const getJSON = url => fetch(url).then(r => { if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); });
 async function loadData() {
-  const [idx, dex, trainers, types, walk, moves, tms, extras] = await Promise.all(['data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json', 'data/tms.json', 'data/extras.json'].map(getJSON));
-  Object.assign(state, { index: idx.locations, dex, trainers, types, walk, moves, tms, extras });
+  const [idx, dex, trainers, types, walk, moves, tms, extras, items] = await Promise.all(['data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json', 'data/tms.json', 'data/extras.json', 'data/items.json'].map(getJSON));
+  Object.assign(state, { index: idx.locations, dex, trainers, types, walk, moves, tms, extras, items });
   await Promise.all(state.index.map(async l => { state.locations[l.id] = await getJSON('data/' + l.file); }));
   state.stage = Object.fromEntries(state.index.map((l, i) => [l.id, i]));
   for (const l of state.index) for (const e of state.locations[l.id].encounters) {
@@ -345,7 +345,7 @@ function renderLocation(id) {
     if (!list.length) html += '<div class="empty">None.</div>';
     for (const [area, grp] of Object.entries(groupBy(list, x => x.where))) {
       if (area && kind === 'item') html += `<div class="area">${esc(area)}</div>`;
-      html += grp.map(x => { const k = `${loc.id}:${kind}:${x.id}`; return checkRow(k, s.checks[k], esc(x.name), subFn(x)); }).join('');
+      html += grp.map(x => { const k = `${loc.id}:${kind}:${x.id}`; return checkRow(k, s.checks[k], esc(x.name), subFn(x), typeof itemInfoLink === 'function' ? itemInfoLink(x.name) : ''); }).join('');
     }
     html += `</div>`;
   };

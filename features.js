@@ -68,9 +68,9 @@ function shopSection(loc) {
     html += coll.map(it => {
       const k = shopKey(loc.id, sh, it), tm = /^(TM|HM)\d+/.exec(it.name)?.[0];
       const price = sh.coins ? `${it.price.toLocaleString()} coins` : money(it.price);
-      return checkRow(k, s.checks[k], `${esc(it.name)}${tm ? ` ${esc(state.tms[tm].move)}` : ''}`, price, tm ? ` <a class="info" href="#/tm/${tm}">ⓘ</a>` : '');
+      return checkRow(k, s.checks[k], `${esc(it.name)}${tm ? ` ${esc(state.tms[tm].move)}` : ''}`, price, tm ? ` <a class="info" href="#/tm/${tm}">ⓘ</a>` : itemInfoLink(it.name));
     }).join('');
-    if (rest.length) html += `<p class="note">${rest.map(it => `${esc(it.name)} ${money(it.price)}`).join(' · ')}</p>`;
+    if (rest.length) html += `<p class="note">${rest.map(it => `${itemA(it.name)} ${money(it.price)}`).join(' · ')}</p>`;
   }
   return html + '</div>';
 }
@@ -166,22 +166,43 @@ function itemPlaces(name) {
   const q = base(name), out = [];
   for (const l of state.index) {
     const loc = state.locations[l.id];
-    for (const i of loc.items) if (base(i.name) === q) out.push({ key: `${loc.id}:item:${i.id}`, loc, text: `${i.hidden ? 'Hidden' : 'On the ground'}${i.where ? ` · ${i.where}` : ''}`, name: i.name });
-    for (const g of loc.gifts) if (inVersion(g) && base(g.name) === q) out.push({ key: `${loc.id}:gift:${g.id}`, loc, text: `Given · ${[g.from, g.where].filter(Boolean).join(' · ')}`, name: g.name });
+    for (const i of loc.items) if (base(i.name) === q) out.push({ kind: 'find', key: `${loc.id}:item:${i.id}`, loc, text: `${i.hidden ? 'Hidden' : 'On the ground'}${i.where ? ` · ${i.where}` : ''}`, name: i.name });
+    for (const g of loc.gifts) if (inVersion(g) && base(g.name) === q) out.push({ kind: 'find', key: `${loc.id}:gift:${g.id}`, loc, text: `Given · ${[g.from, g.where].filter(Boolean).join(' · ')}`, name: g.name });
     for (const sh of state.extras.shops[loc.id] || []) for (const it of sh.items) if (base(it.name) === q)
-      out.push({ key: collectible(sh, it) ? shopKey(loc.id, sh, it) : null, loc, text: `${sh.coins ? 'Prize' : 'Sold'} · ${sh.where} · ${sh.coins ? `${it.price.toLocaleString()} coins` : money(it.price)}`, name: it.name });
+      out.push({ kind: sh.coins ? 'prize' : 'buy', key: collectible(sh, it) ? shopKey(loc.id, sh, it) : null, loc, text: `${sh.where} · ${sh.coins ? `${it.price.toLocaleString()} coins` : money(it.price)}`, name: it.name });
   }
   const held = state.dex.filter(p => p.held && Object.values(p.held).some(h => h.toLowerCase() === q));
   return { out, held };
 }
+// Item info from the game's Bag text (data/items.json). Row names can carry a count or a note ("Potion ×3",
+// "Old Amber (fossil)"), so look items up by their base name.
+const itemBase = x => String(x).replace(/ ×\d+$/, '').replace(/ \(.*\)$/, '');
+const itemInfo = x => state.items?.[itemBase(x)] || null;
+const itemHref = x => `#/item/${encodeURIComponent(itemBase(x))}`;
+// an info link makes a checklist row open the item page (only the checkbox ticks it)
+const itemInfoLink = x => /^(TM|HM)\d+/.test(x) && state.tms[/^(TM|HM)\d+/.exec(x)[0]] ? ` <a class="info" href="#/tm/${/^(TM|HM)\d+/.exec(x)[0]}">ⓘ</a>` : (itemInfo(x) ? ` <a class="info" href="${itemHref(x)}" aria-label="About ${esc(itemBase(x))}">ⓘ</a>` : '');
+const itemA = x => (itemInfo(x) ? `<a href="${itemHref(x)}">${esc(x)}</a>` : esc(x));
 function renderItem(name) {
   const tm = /^(TM|HM)\d+$/i.exec(name);
   if (tm) return renderTM(name.toUpperCase());
+  name = itemBase(name);
   setHeader(name, true, 'tools');
-  const { out, held } = itemPlaces(name), s = cur();
-  view.innerHTML = `<div class="card">${out.map(x => x.key ? checkRow(x.key, s.checks[x.key], `<a href="#/loc/${x.loc.id}">${esc(x.loc.name)}</a> ${esc(x.name)}`, esc(x.text))
-    : `<div class="row"><span style="width:22px"></span><span><a href="#/loc/${x.loc.id}">${esc(x.loc.name)}</a><span class="sub">${esc(x.text)}</span></span></div>`).join('') || '<div class="empty">Not found anywhere.</div>'}</div>
-    ${held.length ? `<h2>Held by wild Pokémon</h2><div class="card"><p>${held.map(p => `${monA(p.dex)} <span class="note">(${p.held.common?.toLowerCase() === name.toLowerCase() ? '50%' : '5%'})</span>`).join(', ')}</p><p class="note">Steal it with Thief or Covet, or catch the Pokémon. Compound Eyes on your lead raises the odds.</p></div>` : ''}`;
+  const info = itemInfo(name), { out, held } = itemPlaces(name), s = cur();
+  const row = x => x.key ? checkRow(x.key, s.checks[x.key], `<a href="#/loc/${x.loc.id}">${esc(x.loc.name)}</a> ${x.name !== name ? esc(x.name.replace(name, '').trim()) : ''}`, esc(x.text))
+    : `<div class="row"><span style="width:22px"></span><span><a href="#/loc/${x.loc.id}">${esc(x.loc.name)}</a><span class="sub">${esc(x.text)}</span></span></div>`;
+  const shops = out.filter(x => x.kind === 'buy'), prizes = out.filter(x => x.kind === 'prize'), found = out.filter(x => x.kind === 'find');
+  const evolves = state.dex.filter(p => (p.evolutions || []).some(e => e.method === 'item' && e.param === name));
+  const isBall = info?.pocket === 'Poké Balls';
+  let html = `<div class="card">${info ? `<p style="margin-top:0">${esc(info.desc)}</p>${info.held ? `<p>${esc(info.held)}</p>` : ''}
+    <table class="mini">${info.pocket ? `<tr><td>Bag pocket</td><td>${esc(info.pocket)}</td></tr>` : ''}
+    ${info.price && info.pocket !== 'Key Items' ? `<tr><td>Sells for</td><td>${money(Math.floor(info.price / 2))} at any Poké Mart</td></tr>` : ''}</table>` : '<p class="note" style="margin:0">No description for this one.</p>'}
+    ${evolves.length ? `<p class="note">Evolves: ${evolves.map(p => `${monA(p.dex)} → ${monA(p.evolutions.find(e => e.param === name).into)}`).join(', ')}</p>` : ''}
+    ${isBall ? `<p class="note">See its odds in the <a href="#/tools/catch">catch calculator</a>, or tap Catch plan next to any wild Pokémon on a route.</p>` : ''}</div>`;
+  html += `<h2>Buy it</h2><div class="card">${shops.length ? `<p class="note" style="margin-top:0">In story order: the first one is the earliest you can buy it.</p>` + shops.map(row).join('') : `<div class="empty">No shop sells it.</div>`}</div>`;
+  if (prizes.length) html += `<h2>Game Corner prize</h2><div class="card">${prizes.map(row).join('')}</div>`;
+  html += `<h2>Find it (${found.filter(x => s.checks[x.key]).length}/${found.length})</h2><div class="card">${found.length ? found.map(row).join('') : '<div class="empty">Not found on the ground or given anywhere.</div>'}</div>`;
+  if (held.length) html += `<h2>Held by wild Pokémon</h2><div class="card"><p>${held.map(p => `${monA(p.dex)} <span class="note">(${p.held.common?.toLowerCase() === name.toLowerCase() ? '50%' : '5%'})</span>`).join(', ')}</p><p class="note">Steal it with Thief or Covet, or catch the Pokémon. Compound Eyes on your lead raises the odds.</p></div>`;
+  view.innerHTML = html;
 }
 
 // ---------- search ----------
@@ -198,7 +219,8 @@ function searchIndex() {
     for (const sh of state.extras.shops[l.id] || []) for (const it of sh.items) items.add(it.name);
     for (const t of loc.trainers || []) out.push({ k: 'Trainer', t: t.class === t.name ? t.name : `${t.class} ${t.name}`, s: loc.name, h: `#/loc/${l.id}`, q: `${t.class} ${t.name}` });
   }
-  for (const it of items) if (!/^(TM|HM)\d/.test(it)) out.push({ k: 'Item', t: it, s: '', h: `#/item/${encodeURIComponent(it)}`, q: it });
+  for (const it of Object.keys(state.items || {})) items.add(it);
+  for (const it of items) if (!/^(TM|HM)\d/.test(it)) out.push({ k: 'Item', t: it, s: state.items?.[it]?.pocket || '', h: `#/item/${encodeURIComponent(it)}`, q: it });
   for (const mv of Object.keys(state.moves)) out.push({ k: 'Move', t: mv, s: state.moves[mv].type, h: `#/move/${encodeURIComponent(mv)}`, q: mv });
   return (state.searchIdx = out);
 }
