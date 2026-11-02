@@ -275,10 +275,18 @@ function renderHome() {
 }
 
 let rowSeq = 0;
+// A row with an info link (a Pokémon or a TM) opens that page when tapped, and only the checkbox ticks it, so a stray
+// tap can't mark something caught. Other rows tick when tapped anywhere.
 function checkRow(key, checked, title, sub, tags = '') {
   const id = 'cb' + (rowSeq++);
+  const box = `<input type="checkbox" id="${id}" data-key="${esc(key)}" ${checked ? 'checked' : ''}>`;
+  const info = /<a class="info" href="([^"]+)"[^>]*>ⓘ<\/a>/.exec(tags);
+  // a button (like Catch plan) goes on its own line under the details
+  const rest = info ? tags.replace(info[0], '') : '', btn = (/ ?<a class="tag catchlink"[^>]*>[^<]*<\/a>/.exec(rest) || [''])[0];
+  if (info) return `<div class="row linkrow ${checked ? 'checked' : ''}"><label class="cbhit" for="${id}" aria-label="Tick off">${box}</label>
+    <div class="rowbody"><a class="rowlink" href="${info[1]}"><span>${title}</span></a>${rest.replace(btn, '')}<span class="sub">${sub}</span>${btn}</div></div>`;
   return `<div class="row ${checked ? 'checked' : ''}">
-    <input type="checkbox" id="${id}" data-key="${esc(key)}" ${checked ? 'checked' : ''}>
+    ${box}
     <label for="${id}"><span>${title}</span>${tags}<span class="sub">${sub}</span></label></div>`;
 }
 const groupBy = (list, f) => list.reduce((m, x) => ((m[f(x) || ''] ||= []).push(x), m), {});
@@ -1171,7 +1179,7 @@ view.addEventListener('change', e => {
   const was = key.startsWith('dex:') ? s.caught[key.slice(4)] : s.checks[key];
   try {
     const box = e.target.closest('.row, .trainer, .chip');
-    const span = box.querySelector('label > span, .tname');
+    const span = box.querySelector('label > span, .rowlink > span, .tname');
     const lbl = (span ? [...span.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent).join('') : box.textContent) || 'item';
     showUndo(key, was, `${e.target.checked ? 'Ticked' : 'Unticked'} ${lbl.trim().slice(0, 40)}`);
   } catch (err) { /* no toast without a page to show it on */ }

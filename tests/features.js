@@ -158,6 +158,9 @@ const strip = h => String(h).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
     sv.team = keepTeam; sv.teamMeta = keepMeta; if (keepHere) sv.here = keepHere;
   }
 
+  // Pokémon rows open the Pokémon page; only the checkbox ticks them (no label wrapping the name, no separate ⓘ)
+  { const h = render('#/dex'); if (!h.includes('class="rowlink" href="#/mon/1"') || /class="info"/.test(h) || /<label for="[^"]+"><span>#001/.test(h)) fail('Pokédex rows should link to the Pokémon page and tick only from the checkbox'); }
+
   if (fails.length) { console.log(`FAIL (${fails.length})\n` + fails.slice(0, 60).map(f => ' - ' + f).join('\n')); process.exit(1); }
   console.log('OK: feature pages and data checks passed');
 })().catch(e => { console.error(e); process.exit(1); });
