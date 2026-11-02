@@ -163,25 +163,25 @@
   {
    "id": "item-pok-mon-center-1f-meteorite",
    "name": "Meteorite",
-   "from": "Celio",
+   "from": "Bill and Celio",
    "where": "Pokémon Center 1F"
   },
   {
    "id": "item-pok-mon-center-1f-tri-pass",
    "name": "Tri-pass",
-   "from": "Celio",
+   "from": "Bill and Celio",
    "where": "Pokémon Center 1F"
   },
   {
    "id": "item-pok-mon-center-1f-town-map",
    "name": "Town Map",
-   "from": "Celio",
+   "from": "Celio (only if you never got Daisy's)",
    "where": "Pokémon Center 1F"
   },
   {
    "id": "item-pok-mon-center-1f-rainbow-pass",
    "name": "Rainbow Pass",
-   "from": "Celio (after giving him the Ruby and Sapphire)",
+   "from": "Celio (after you give him the Ruby)",
    "where": "Pokémon Center 1F"
   }
  ],

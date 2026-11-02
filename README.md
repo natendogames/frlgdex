@@ -62,4 +62,6 @@ suggestion. GitHub Actions runs it on every push and pull request.
 
 `node tests/team_plan.js` checks `data/team-plan.json` and the Team plan page: legs in story order with levels that never drop, every catch reachable by then, legal evolutions and moves, TMs in hand by then and single-use TMs taught once, real battles, lead picks re-run through the damage engine, and the page's checkboxes saving and reloading. CI runs it too.
 
+`node tests/walkthrough.js` checks that every place has walkthrough steps, that every `{gift:}`, `{trainer:}`, `{loc:}`, `{mon:}` and `{item:}` link in a step points at real data on that page, and that pages render cleanly. Steps live in `data/walkthrough.json`; places in its `_checked` map were checked against the pokefirered event scripts, and the rest show a Draft tag.
+
 Progress keys are `dex:<number>` for Pokémon and `<location-id>:item:<id>` or `<location-id>:gift:<id>` for checklists, so keep ids stable.

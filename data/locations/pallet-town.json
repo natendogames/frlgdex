@@ -224,13 +224,13 @@
   {
    "id": "item-professor-oaks-lab-pok-ball-5",
    "name": "Poké Ball ×5",
-   "from": "Professor Oak",
+   "from": "Professor Oak (when you bring him the Parcel)",
    "where": "Professor Oaks Lab"
   },
   {
    "id": "item-rivals-house-town-map",
    "name": "Town Map",
-   "from": "Daisy",
+   "from": "Daisy (once you have the Pokédex)",
    "where": "Rivals House"
   },
   {

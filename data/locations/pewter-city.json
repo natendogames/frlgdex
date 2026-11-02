@@ -22,6 +22,12 @@
    "name": "Old Amber",
    "from": "Scientist in the back room (behind a Cut tree)",
    "where": "Museum 1F"
+  },
+  {
+   "id": "item-outside-running-shoes",
+   "name": "Running Shoes",
+   "from": "Professor Oak's aide (as you head east after beating Brock)",
+   "where": "Outside"
   }
  ],
  "trainers": [

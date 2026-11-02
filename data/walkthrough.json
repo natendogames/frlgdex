@@ -1,288 +1,323 @@
 {
- "_about": "Story steps per location, in play order. Written from game knowledge; item, Pokemon and gift lists come from the game's decompiled data.",
+ "_about": "Story steps per location, in play order. Gift and trainer links point at the game data on the same page. Places in _checked were checked against the pokefirered event scripts; the rest are Draft.",
  "pallet-town": [
-  "Go downstairs and try to leave town; Professor Oak stops you and takes you to his lab.",
-  "Pick your starter: Bulbasaur (easiest early game), Charmander (hardest early game) or Squirtle. Your rival takes the one strong against yours.",
-  "Win or lose, your first rival battle is right after. Then head north on Route 1.",
-  "After delivering Oak's Parcel you get the Pokédex and 5 Poké Balls. Visit Daisy in your rival's house for the Town Map."
+  "Go downstairs and try to walk into the tall grass north of town. Professor Oak stops you and takes you to his lab.",
+  "Pick your {gift:mon-professor-oaks-lab-starter-pok-mon-bulbasaur-charmander-or-squirtle}. Bulbasaur makes the first two Gyms easiest; Charmander makes them hardest. Your rival takes the one strong against yours.",
+  "Battle {trainer:rival-oaks-lab} in the lab before you leave. Win or lose, the story carries on. Then head north on {loc:route-1}.",
+  "Come back with Oak's Parcel from the {loc:viridian-city} Poké Mart. Oak gives you the {gift:item-professor-oaks-lab-pok-dex} and {gift:item-professor-oaks-lab-pok-ball-5}.",
+  "Visit your rival's house: Daisy gives you the {gift:item-rivals-house-town-map}. Your bedroom PC holds a {gift:item-players-house-2f-potion-in-your-pc}."
  ],
  "route-1": [
-  "Grab the free Potion from the Poké Mart employee. Catch Pidgey and Rattata on the way to Viridian City."
+  "A Poké Mart employee hands out a free {gift:item-outside-potion}.",
+  "You can't catch anything until Oak gives you Poké Balls, so for now walk north to {loc:viridian-city}. On the way back you can catch {mon:16} and {mon:19}."
  ],
  "viridian-city": [
-  "The Poké Mart clerk hands you Oak's Parcel. Take it back to Professor Oak in Pallet Town.",
-  "After the delivery, the old man shows you how to catch Pokémon and gives you the Teachy TV.",
-  "The Gym is locked until you have seven badges. Head west to Route 22 for an optional rival battle, then north to Route 2.",
-  "Gym 8, Giovanni (Ground): Water, Grass or Ice. Opens once you have seven badges. Reward: Earth Badge and TM26 Earthquake."
+  "The Poké Mart clerk gives you {gift:item-mart-oak-s-parcel}. Take it back to Professor Oak in {loc:pallet-town}.",
+  "After the delivery, the grumpy old man who was blocking the road north shows you how to catch Pokémon and gives you the {gift:item-outside-teachy-tv}.",
+  "The Gym is locked for now. Head west to {loc:route-22} for an optional rival battle, then north to {loc:route-2}.",
+  "Later: the Gym opens once you have seven badges. Beat {trainer:leader-giovanni} (Ground): Water, Grass and Ice moves win, and Flying types dodge Earthquake. Reward: Earth Badge and {gift:item-gym-tm26}."
  ],
  "route-22": [
-  "Optional early rival battle near the gate. The Pokémon League gate at the west end is blocked until you have all eight badges."
+  "Once you have the Pokédex, your rival waits here for an optional battle ({trainer:rival-route22-early}). If you go to Cerulean first, the chance is gone.",
+  "Catch {mon:56} here: its Fighting moves help against Brock.",
+  "The Pokémon League gate at the west end needs all eight badges. After you beat Giovanni, your rival is waiting here again for a tougher battle ({trainer:rival-route22-late})."
  ],
  "route-2": [
-  "Go north into Viridian Forest. The east side of the route needs Cut, so come back later.",
-  "With Cut: the house has an Abra-for-Mr. Mime trade, and Oak's aide gives HM05 Flash once you've registered 10 Pokémon."
+  "Head north into {loc:viridian-forest}. The east side of the route is behind small trees, so come back with Cut (or through {loc:digletts-cave}).",
+  "With Cut: Professor Oak's aide in the east building gives you {gift:item-east-building-hm05} once you have caught 10 kinds of Pokémon. The house has a trade: {gift:trade-house-trade-give-abra-get-mr-mime-mimien}."
  ],
  "viridian-forest": [
-  "Bug Catchers everywhere. Pikachu is rare here (5%), so catch one now if you want it early. Exit north to Pewter City."
+  "A maze of Bug Catchers. {mon:25} is rare here, so catch one now if you want it early. Exit north to {loc:pewter-city}."
  ],
  "pewter-city": [
-  "Gym 1, Brock (Rock): use Water or Grass moves. Bulbasaur and Squirtle walk it; Charmander should learn Metal Claw at Lv 13, or catch Mankey on Route 22.",
-  "Brock gives the Boulder Badge and TM39 Rock Tomb.",
-  "Come back with Cut for the Old Amber in the museum's back room."
+  "Beat {trainer:leader-brock} (Rock). Water and Grass moves win; Charmander learns Metal Claw at Lv 13, or bring a {mon:56} from Route 22. Reward: Boulder Badge and {gift:item-gym-tm39}.",
+  "As you head east toward Route 3, Professor Oak's aide catches up with you and gives you the {gift:item-outside-running-shoes}.",
+  "Later, with Cut: the scientist in the Museum's back room gives you the {gift:item-museum-1f-old-amber}."
  ],
  "route-3": [
-  "Long trainer gauntlet. Catch Jigglypuff, Spearow and the version Nidoran. The Mt. Moon Pokémon Center has a Magikarp seller (buy it, it's worth it for Gyarados)."
- ],
- "route-4": [
-  "Magikarp salesman in the Pokémon Center: 500 Poké Dollars. Rest before entering Mt. Moon."
+  "A long run of trainers. Catch {mon:39}, {mon:21}, {mon:56} and Nidoran here. The Pokémon Center at the end, by Mt. Moon, is on {loc:route-4}."
  ],
  "mt-moon": [
-  "Zubat, Geodude, Paras and the rare Clefairy. Lots of items, including a Moon Stone on 1F.",
-  "Beat Team Rocket and the Super Nerd on B2F, then choose the Dome Fossil (Kabuto) or the Helix Fossil (Omanyte). The other one is gone for good.",
-  "Exit to the second half of Route 4 and continue east to Cerulean City."
+  "Zubat, Geodude, Paras and the rare {mon:35} live here. There is a Moon Stone on 1F and a hidden one on B2F.",
+  "On B2F, beat Team Rocket and then {trainer:super-nerd-miguel}. Pick the {gift:item-b2f-dome-fossil} (Kabuto) or the {gift:item-b2f-helix-fossil} (Omanyte); the other is gone for good.",
+  "Exit to the east half of {loc:route-4} and continue to {loc:cerulean-city}."
+ ],
+ "route-4": [
+  "The Pokémon Center by Mt. Moon has a salesman who sells a {gift:mon-pok-mon-center-1f-magikarp-lv-5} for ₽500. It evolves into Gyarados at Lv 20.",
+  "After Mt. Moon, the east half of the route leads down a ledge to {loc:cerulean-city}."
  ],
  "cerulean-city": [
-  "Rival battle on the bridge north of town; afterwards he gives you the Fame Checker.",
-  "Gym 2, Misty (Water): Grass or Electric. Her Starmie is fast and hits hard. Reward: Cascade Badge and TM03 Water Pulse.",
-  "Chase the Team Rocket grunt who robbed the house to get TM28 Dig.",
-  "Trade a Poliwhirl for a Jynx in the house. The Bike Shop gives you a Bicycle for the Bike Voucher."
+  "Your rival stops you on the bridge north of town. Beat {trainer:rival-cerulean} and he gives you the {gift:item-outside-fame-checker}.",
+  "Beat {trainer:leader-misty} (Water). Grass and Electric moves win; her Starmie is fast and hits hard. Reward: Cascade Badge and {gift:item-gym-tm03}.",
+  "A Team Rocket Grunt robbed the house by the Gym. Beat him behind the house to get {gift:item-outside-tm28}.",
+  "The Bike Shop trades a {gift:item-bike-shop-bicycle} for the Bike Voucher from Vermilion. A house has a trade: {gift:trade-house-3-trade-give-poliwhirl-get-jynx-zynx}."
  ],
  "route-24": [
-  "Nugget Bridge: beat five trainers and then the Rocket at the end for a Nugget."
+  "Nugget Bridge: beat five trainers in a row, then a Team Rocket recruiter, who gives you a {gift:item-outside-nugget}.",
+  "{mon:63} lives in the grass here. It only knows Teleport, so throw a ball on the first turn."
  ],
  "route-25": [
-  "Visit Bill in the Sea Cottage, help him with the Cell Separator and get the S.S. Ticket. Then go south through Cerulean to Route 5."
+  "Visit Bill in the Sea Cottage at the end. Help him with the Cell Separator, and he gives you the {gift:item-sea-cottage-s-s-ticket}.",
+  "Then go back through {loc:cerulean-city} and south to {loc:route-5}."
  ],
  "route-5": [
-  "The Day Care is here (it raises one Pokémon at a time). Use the Underground Path to reach Route 6 and Vermilion."
+  "The Day Care here raises one Pokémon for you (it does not breed). Take the Underground Path south to reach {loc:route-6} and {loc:vermilion-city}."
  ],
  "underground-path-north-south": [
-  "Trade with the man in the north entrance for a Nidoran of the other gender."
+  "In the north entrance, a man trades Nidoran: {gift:trade-north-entrance-trade-give-nidoran-get-nidoran-ms-nido}."
  ],
  "route-6": [
-  "Short route down to Vermilion City."
+  "A short route down to {loc:vermilion-city}."
  ],
  "vermilion-city": [
   "Board the S.S. Anne with the S.S. Ticket.",
-  "The Fishing Guru gives you the Old Rod. The Fan Club Chairman gives you the Bike Voucher if you listen to his story.",
-  "Gym 3, Lt. Surge (Electric): Ground types are immune. Diglett from Diglett's Cave is perfect. You need Cut to reach the Gym, and the trash-can switch puzzle is inside.",
-  "Reward: Thunder Badge and TM34 Shock Wave."
+  "The Fishing Guru gives you the {gift:item-house-1-old-rod}. The Fan Club Chairman gives you the {gift:item-pok-mon-fan-club-bike-voucher} if you listen to his story. Another house has a trade: {gift:trade-house-2-trade-give-spearow-get-farfetch-d-ch-ding}.",
+  "A small tree blocks the Gym, so you need Cut from the S.S. Anne. Inside, find the two switches in the trash cans.",
+  "Beat {trainer:leader-lt-surge} (Electric). Ground types are immune: {mon:50} from {loc:digletts-cave} is perfect. Reward: Thunder Badge and {gift:item-gym-tm34}."
  ],
  "ss-anne": [
-  "Explore the cabins for items, beat your rival near the Captain's room, then rub the Captain's back to get HM01 Cut. The ship leaves once you get off."
+  "Explore the cabins for items. Beat {trainer:rival-ss-anne} near the Captain's room, then rub the Captain's back to get {gift:item-captains-office-hm01}. The ship leaves once you get off."
  ],
  "route-11": [
-  "Oak's aide upstairs in the gate gives the Itemfinder once you've caught 30 Pokémon. Diglett's Cave is at the west end."
+  "Professor Oak's aide upstairs in the gate gives you the {gift:item-east-entrance-2f-itemfinder} once you have caught 30 kinds of Pokémon. The gate also has a Nidorino/Nidorina trade.",
+  "{loc:digletts-cave} is at the west end."
  ],
  "digletts-cave": [
-  "Diglett and Dugtrio. Ground types make Lt. Surge easy. The cave leads to Route 2, so you can now reach the east side with Cut."
+  "Catch {mon:50} and {mon:51}: Ground types make Lt. Surge easy. The far end comes out on {loc:route-2}, so you can reach its east side."
  ],
  "route-9": [
-  "Head east from Cerulean (cut the tree). Lots of trainers on the way to Rock Tunnel."
+  "Cut the tree east of Cerulean. Lots of trainers on the way to {loc:rock-tunnel}."
  ],
  "route-10": [
-  "Pokémon Center by Rock Tunnel. Oak's aide here gives the Everstone once you've caught 20 Pokémon. The Power Plant is down the river (you need Surf)."
+  "The Pokémon Center by Rock Tunnel has another of Oak's aides: he gives you the {gift:item-pok-mon-center-1f-everstone} once you have caught 20 kinds of Pokémon.",
+  "The {loc:power-plant} is down the river, once you can Surf."
  ],
  "rock-tunnel": [
-  "Pitch dark without Flash (HM05 from the aide on Route 2). Exit south to Lavender Town."
+  "Pitch dark without Flash (HM05 from the aide on {loc:route-2}). Exit south to {loc:lavender-town}."
  ],
  "lavender-town": [
-  "Pokémon Tower is full of ghosts you can't identify yet. You need the Silph Scope from Celadon's Rocket Hideout.",
-  "After rescuing Mr. Fuji at the top of the tower he gives you the Poké Flute, which wakes the Snorlax."
+  "{loc:pokemon-tower} is full of ghosts you can't identify yet. You need the Silph Scope from Celadon's {loc:rocket-hideout}.",
+  "After you rescue Mr. Fuji at the top of the tower, he gives you the {gift:item-volunteer-pok-mon-house-pok-flute}, which wakes the sleeping Snorlax."
  ],
  "route-8": [
-  "Go west to Saffron's gate. The guards are thirsty, so buy a drink on Celadon's Department Store roof, then take the Underground Path to Celadon."
+  "The guard at the Saffron gate is thirsty and won't let you in. Get Tea from the old woman in {loc:celadon-city}, then give it to him.",
+  "Until then, take the Underground Path west to {loc:route-7} and Celadon."
  ],
  "underground-path-east-west": [
   "Connects Route 8 and Route 7, skipping Saffron."
  ],
  "route-7": [
-  "Short route into Celadon City."
+  "A short route into {loc:celadon-city}."
  ],
  "celadon-city": [
-  "Department Store: buy evolution stones and TMs. On the roof, give drinks to the girl for TM16, TM20 and TM33.",
-  "Get a free Eevee from the Poké Ball in the Condominiums' roof room (back entrance). The old woman on the first floor gives you Tea, which gets you past the Saffron guards.",
-  "Gym 4, Erika (Grass): Fire, Flying, Ice or Poison. You need Cut to reach it. Reward: Rainbow Badge and TM19 Giga Drain.",
-  "The poster in the Game Corner hides the Rocket Hideout switch. The Coin Case is from the man in the restaurant."
+  "The old woman on the first floor of the Condominiums gives you {gift:item-condominiums-1f-tea}, which gets you past the Saffron guards. Take the back stairs to the roof room for a free {gift:mon-condominiums-roof-room-eevee-lv-25}.",
+  "The Department Store sells evolution stones and TMs. On the roof, the thirsty girl gives you a TM for each drink from the vending machines: Fresh Water, Soda Pop or Lemonade.",
+  "Beat {trainer:leader-erika} (Grass). You need Cut to reach the Gym. Fire, Flying, Ice and Poison moves win. Reward: Rainbow Badge and {gift:item-gym-tm19}.",
+  "The man in the restaurant gives you the {gift:item-restaurant-coin-case}. The poster in the Game Corner hides the switch to the {loc:rocket-hideout}."
  ],
  "rocket-hideout": [
-  "A spin-tile maze. A grunt drops the Lift Key on B4F. Beat Giovanni for the Silph Scope, then go back to Pokémon Tower."
+  "A spin-tile maze. A Grunt on B4F drops the {gift:item-b4f-lift-key} for the elevator.",
+  "Beat {trainer:boss-giovanni} on B4F. He leaves the {gift:item-b4f-silph-scope}; take it to {loc:pokemon-tower}."
  ],
  "pokemon-tower": [
-  "With the Silph Scope you can see the ghosts (Gastly, Haunter, Cubone). The Marowak ghost on 6F can't be caught. Rescue Mr. Fuji at the top."
+  "Your rival is on 2F ({trainer:rival-pokemon-tower}). From 3F up, you need the Silph Scope to see the ghosts.",
+  "The Marowak ghost on 6F can't be caught. Beat the Rocket Grunts on 7F to rescue Mr. Fuji, then visit him in {loc:lavender-town}."
  ],
  "route-12": [
-  "Snorlax blocks the route. Wake it with the Poké Flute, and save first: it's your only chance to catch it. The Fishing Guru's brother gives you the Super Rod, and the girl upstairs in the gate gives TM27 Return."
+  "Snorlax blocks the route. Save first, then wake it with the Poké Flute: this is your only chance to catch it.",
+  "The Fishing Guru's brother gives you the {gift:item-fishing-house-super-rod}. Upstairs in the north gate, a girl gives you {gift:item-north-entrance-2f-tm27}."
  ],
  "route-13": [
-  "Maze of fences. Hidden items around the trainer grid."
+  "A maze of fences with a grid of trainers. {mon:132} hides in the grass."
  ],
  "route-14": [
-  "Route south toward Fuchsia."
+  "Route south toward {loc:fuchsia-city}."
  ],
  "route-15": [
-  "Oak's aide in the west gate gives the Exp. Share once you've caught 50 Pokémon."
+  "Professor Oak's aide upstairs in the west gate gives you the {gift:item-west-entrance-2f-exp-share} once you have caught 50 kinds of Pokémon."
  ],
  "route-16": [
-  "Cycling Road starts here. A second Snorlax sleeps by the gate (save first). The woman in the house behind a Cut tree gives you HM02 Fly. Oak's aide in the north gate gives the Amulet Coin once you've caught 40 Pokémon."
+  "Cycling Road starts here; you need the Bicycle. A second Snorlax sleeps by the gate (save first).",
+  "The woman in the house behind a Cut tree gives you {gift:item-house-hm02}. Professor Oak's aide in the north gate gives you the {gift:item-north-entrance-2f-amulet-coin} once you have caught 40 kinds of Pokémon."
  ],
  "route-17": [
-  "Cycling Road, all downhill. You need the Bicycle."
+  "Cycling Road, all downhill to {loc:route-18}."
  ],
  "route-18": [
-  "Trade for Lickitung in the east gate: Golduck in FireRed, Slowbro in LeafGreen."
+  "A man in the east gate trades for {mon:108}: he wants a Golduck in FireRed or a Slowbro in LeafGreen."
  ],
  "fuchsia-city": [
-  "Gym 5, Koga (Poison): Psychic or Ground. Invisible walls inside. Reward: Soul Badge and TM06 Toxic.",
-  "The Fishing Guru gives you the Good Rod. Return the Gold Teeth from the Safari Zone to the Warden for HM04 Strength."
+  "Beat {trainer:leader-koga} (Poison). The Gym has invisible walls. Psychic and Ground moves win. Reward: Soul Badge and {gift:item-gym-tm06}.",
+  "The Fishing Guru gives you the {gift:item-house-2-good-rod}. Bring the Warden his Gold Teeth from the Safari Zone for {gift:item-wardens-house-hm04}."
  ],
  "safari-zone": [
-  "Catch Chansey, Kangaskhan, Tauros, Scyther or Pinsir, and Dratini by fishing. Find the Secret House for HM03 Surf, and grab the Gold Teeth on the way."
+  "Catch {mon:113}, {mon:115}, {mon:128}, and Scyther (FireRed) or Pinsir (LeafGreen). Fish for {mon:147}.",
+  "Reach the Secret House at the back for {gift:item-secret-house-hm03}, and pick up the Gold Teeth on the way."
  ],
  "saffron-city": [
-  "Give the guard some Tea to get in. Clear Silph Co. first: the Gym and the Dojo are blocked until then.",
-  "Beat the Karate Master in the Dojo and choose Hitmonlee or Hitmonchan.",
-  "Gym 6, Sabrina (Psychic): Bug or Ghost moves, or hit hard physically with Dark-type moves. It has a teleport-pad maze. Reward: Marsh Badge and TM04 Calm Mind.",
-  "Mr. Psychic gives you TM29 Psychic."
+  "Give the gate guard some Tea to get in. Team Rocket has taken over: a Grunt blocks the Gym door until you clear {loc:silph-co}.",
+  "The Dojo is open: beat the Karate Master and pick {gift:mon-dojo-hitmonlee-lv-25-choose-one} or {gift:mon-dojo-hitmonchan-lv-25-choose-one}.",
+  "Mr. Psychic gives you {gift:item-mr-psychics-house-tm29}.",
+  "Beat {trainer:leader-sabrina} (Psychic). Bug and Ghost moves are strong, or hit hard with physical moves. The Gym is a maze of warp pads. Reward: Marsh Badge and {gift:item-gym-tm04}."
  ],
  "silph-co": [
-  "Find the Card Key on 5F. The Silph employee on 7F gives you Lapras. Beat your rival on 7F and Giovanni on 11F; the president then gives you the Master Ball."
+  "Find the Card Key on 5F to open the locked doors. A Silph employee on 7F gives you {gift:mon-7f-lapras-lv-25}.",
+  "Beat {trainer:rival-silph} on 7F and {trainer:boss-giovanni-2} on 11F. The President then gives you the {gift:item-11f-master-ball}."
+ ],
+ "power-plant": [
+  "Surf down the river from {loc:route-10}. Zapdos waits at the back (Lv 50; save first). Some item balls are really Voltorb or Electrode."
  ],
  "route-19": [
-  "Surf south from Fuchsia toward the Seafoam Islands."
+  "Surf south from {loc:fuchsia-city} toward the {loc:seafoam-islands}."
  ],
  "route-20": [
-  "Surf west. Seafoam Islands sit in the middle of the route."
+  "Surf west. The {loc:seafoam-islands} sit in the middle of the route."
  ],
  "seafoam-islands": [
-  "Push boulders with Strength to slow the current, then reach Articuno on B4F (Lv 50, save first)."
+  "Push boulders with Strength to slow the current, then reach Articuno on B4F (Lv 50; save first)."
  ],
  "cinnabar-island": [
-  "Get the Secret Key from Pokémon Mansion to open the Gym.",
-  "Revive fossils at the Pokémon Lab. Trades in the lab: Ponyta for Seel, Raichu for Electrode, Venonat for Tangela.",
-  "Gym 7, Blaine (Fire): Water, Ground or Rock. Reward: Volcano Badge and TM38 Fire Blast.",
-  "Bill takes you to One Island after you beat Blaine."
+  "The Gym is locked: get the Secret Key from the {loc:pokemon-mansion}.",
+  "The Pokémon Lab revives fossils: the Dome Fossil, Helix Fossil and Old Amber become Kabuto, Omanyte and Aerodactyl. The lab also has three trades.",
+  "Beat {trainer:leader-blaine} (Fire). Water, Ground and Rock moves win. Reward: Volcano Badge and {gift:item-gym-tm38}.",
+  "Bill is waiting at the Pokémon Center after you win, and takes you to {loc:one-island}."
  ],
  "pokemon-mansion": [
   "Statue switches open and close doors. The Secret Key is on B1F."
  ],
  "one-island": [
-  "Meet Celio. He gives you the Tri-Pass. Later, bring him the Ruby and Sapphire for the Rainbow Pass."
+  "Bill introduces you to Celio. Bill gives you the {gift:item-pok-mon-center-1f-meteorite} to deliver to the Game Corner owner on {loc:two-island}, and Celio gives you the {gift:item-pok-mon-center-1f-tri-pass}.",
+  "After the National Pokédex, Celio asks for the Ruby from {loc:mt-ember}. Bring it back for the {gift:item-pok-mon-center-1f-rainbow-pass}, which opens Four to Seven Island. Then he asks for the Sapphire.",
+  "Bring Celio the Sapphire to link up with Hoenn. That also opens {loc:cerulean-cave} and sets a legendary beast roaming Kanto."
  ],
  "kindle-road": [
-  "Long route to Mt. Ember. Rock Smash rocks and fishing spots."
+  "A long route north to {loc:mt-ember}. Rock Smash rocks, fishing spots, and the {loc:ember-spa}."
  ],
  "ember-spa": [
-  "The man in the spa gives you HM06 Rock Smash."
+  "A man in the spa gives you {gift:item-kindle-road-ember-spa-hm06}."
  ],
  "treasure-beach": [
   "Hidden items all along the sand."
  ],
  "mt-ember": [
-  "Beat the two Rocket grunts at the entrance. Moltres is at the summit (Lv 50, needs Strength and Rock Smash). The Ruby is at the bottom of Ruby Path (post-game)."
+  "Two Team Rocket Grunts at the foot of the mountain let slip the first warehouse password, \"Goldeen need log.\" Beat them to get past.",
+  "Moltres is at the summit (Lv 50; needs Strength and Rock Smash; save first). The Ruby is at the bottom of Ruby Path, after the National Pokédex."
  ],
  "two-island": [
-  "After you rescue Lostelle, the Game Corner owner gives you a Moon Stone. Move tutors appear here later."
+  "Deliver the Meteorite. The Game Corner owner's granddaughter Lostelle has gone missing, and he asks you to search {loc:three-island}.",
+  "After you rescue Lostelle, he gives you a {gift:item-joyful-game-corner-moon-stone}. Move tutors appear here later."
  ],
  "cape-brink": [
-  "Starter Ultimate-move tutor (needs max friendship)."
+  "A move tutor teaches your fully evolved starter its ultimate move (Frenzy Plant, Blast Burn or Hydro Cannon) if it is very friendly."
  ],
  "three-island": [
-  "Clear the bikers from town. Lostelle is lost in Berry Forest."
+  "Bikers have taken over the town. Beat them and their leader {trainer:cue-ball-paxton}.",
+  "The townsperson who stood up to them gives you a {gift:item-outside-full-restore}. Get it before you rescue Lostelle, because the defenders leave after that.",
+  "Lostelle is lost in {loc:berry-forest}, across {loc:bond-bridge}."
  ],
  "bond-bridge": [
-  "Bridge route between Three Island and Berry Forest."
+  "Bridge route from {loc:three-island} to {loc:berry-forest}."
  ],
  "berry-forest": [
-  "Find Lostelle (and a Hypno, Lv 30, save first). Then return to One Island and head back to Kanto for the last badge."
+  "Find Lostelle. A wild Hypno attacks (Lv 30; save first). She gives you an {gift:item-berry-forest-iapapa-berry}.",
+  "Then head back to {loc:one-island} and to Kanto for the last badge in {loc:viridian-city}."
+ ],
+ "three-isle-port": [
+  "A small harbor area south of {loc:three-island}. {mon:206} lives here."
  ],
  "route-21": [
-  "Surf between Pallet Town and Cinnabar. Tangela lives here."
+  "Surf between {loc:pallet-town} and {loc:cinnabar-island}. {mon:114} lives in the grass."
  ],
  "route-23": [
-  "Badge-check gates on the way to Victory Road."
+  "Guards check each badge on the way to {loc:victory-road}."
  ],
  "victory-road": [
-  "Strength boulder puzzles. Watch out for strong Machoke and Onix."
+  "Strength boulder puzzles. Watch out for strong {mon:67} and {mon:95}."
  ],
  "indigo-plateau": [
-  "Last Pokémon Center and Mart before the Elite Four. Stock up on Full Restores and Revives."
+  "The last Pokémon Center and Mart before the Elite Four. Stock up on Full Restores and Revives."
  ],
  "pokemon-league": [
-  "Lorelei (Ice/Water), Bruno (Fighting/Rock), Agatha (Ghost/Poison), Lance (Dragon/Flying), then your rival for the title.",
-  "After the credits, Professor Oak upgrades you to the National Pokédex once you've seen 60 Pokémon. That opens the rest of the Sevii Islands."
+  "Beat {trainer:elite-four-lorelei} (Ice), {trainer:elite-four-bruno} (Fighting), {trainer:elite-four-agatha} (Ghost) and {trainer:elite-four-lance} (Dragon) in a row, then {trainer:champion-first} for the title.",
+  "After the credits, visit Professor Oak with at least 60 kinds of Pokémon caught: he upgrades you to the National Pokédex. That opens the rest of the Sevii Islands."
  ],
  "cerulean-cave": [
-  "Post-game. Mewtwo waits at the bottom (Lv 70). Bring your best Poké Balls, or the Master Ball."
+  "The guard steps aside once you bring Celio the Sapphire. Mewtwo waits at the bottom (Lv 70). Bring your best Poké Balls, or the Master Ball."
+ ],
+ "three-isle-path": [
+  "A tunnel with a Dunsparce colony. The prospector gives you a {gift:item-dunsparce-tunnel-nugget} after he strikes gold."
  ],
  "four-island": [
-  "Lorelei's hometown. The Day Care here can breed. Icefall Cave is to the north."
+  "Lorelei's hometown. The Day Care here can breed Pokémon. {loc:icefall-cave} is to the north."
  ],
  "icefall-cave": [
-  "Ice-floor puzzles. Beat the Rockets who are taking Lapras. Lorelei helps you out."
+  "Ice-floor puzzles. At the back, Lorelei asks you to help her drive off Team Rocket poachers who are taking Lapras."
  ],
  "five-island": [
-  "Gateway to the Rocket Warehouse and the Lost Cave."
+  "Gateway to the {loc:rocket-warehouse} (in {loc:five-isle-meadow}) and the {loc:lost-cave}."
  ],
  "five-isle-meadow": [
-  "The Rocket Warehouse is hidden here. You find its password during the Dotted Hole story."
+  "The Rocket Warehouse door needs two passwords: one from the Grunts at {loc:mt-ember}, one from Gideon in {loc:dotted-hole}."
  ],
  "memorial-pillar": [
-  "Bring Lemonade to the man at the pillar for TM42 Facade."
+  "Bring Lemonade to the man at the pillar for {gift:item-memorial-pillar-tm42}."
  ],
  "water-labyrinth": [
-  "The old man gives you a Togepi Egg if you have a Pokémon with high friendship and an empty slot."
+  "The old man gives you a {gift:mon-water-labyrinth-togepi-egg} if your lead Pokémon has max friendship and you have an empty party slot."
  ],
  "resort-gorgeous": [
-  "Selphy wants to see specific Pokémon (repeatable)."
+  "Selphy asks to see a specific Pokémon (repeatable)."
  ],
  "rocket-warehouse": [
-  "Beat the Rocket admins. Gideon hands over the Sapphire."
+  "Enter with both passwords. Beat the Team Rocket Admins and {trainer:scientist-gideon}, who hands over the {gift:item-rocket-warehouse-sapphire}."
  ],
  "lost-cave": [
-  "Fog maze. Find the lost girl Selphy deep inside."
+  "A foggy maze. Selphy from {loc:resort-gorgeous} is lost deep inside."
  ],
  "six-island": [
-  "Gateway to Water Path and Ruin Valley."
+  "Gateway to the {loc:water-path} and {loc:ruin-valley}."
  ],
  "water-path": [
-  "Show the boy a Heracross for a Nest Ball."
+  "A boy in a house wants to see a {mon:214}: show him one for a {gift:item-water-path-house-1-nest-ball}."
  ],
  "ruin-valley": [
-  "Use Cut and Strength to open Dotted Hole (Braille puzzle)."
+  "Use Cut and Strength to open the {loc:dotted-hole} (a Braille puzzle)."
  ],
  "dotted-hole": [
-  "The Sapphire is at the bottom, but Gideon steals it. Chase him to the Rocket Warehouse."
+  "The Sapphire is at the bottom, but Gideon grabs it. He tells you the second warehouse password, \"Yes, nah, Chansey,\" and runs off to sell it to Team Rocket."
  ],
  "green-path": [
-  "Quiet route to Pattern Bush and Outcast Island."
+  "A quiet route to {loc:pattern-bush} and {loc:outcast-island}."
  ],
  "pattern-bush": [
-  "Bug Pokémon, including Heracross."
+  "Bug Pokémon, including {mon:214}."
  ],
  "outcast-island": [
-  "Surf and fishing only."
+  "Surfing and fishing only."
  ],
  "altering-cave": [
-  "Only Zubat in normal play."
+  "Only {mon:41} lives here in normal play."
  ],
  "seven-island": [
-  "Trainer Tower is to the north. Sevault Canyon to the south."
+  "The {loc:trainer-tower} is to the north, and {loc:sevault-canyon} to the south."
  ],
  "trainer-tower": [
   "Timed trainer challenges with prizes."
  ],
  "canyon-entrance": [
-  "Leads to Sevault Canyon."
+  "Leads to {loc:sevault-canyon}."
  ],
  "sevault-canyon": [
-  "Tough trainers. Phanpy, Skarmory, Larvitar and more."
+  "Tough trainers. {mon:231}, {mon:246} and, in FireRed, Skarmory live here."
  ],
  "tanoby-key": [
-  "Strength puzzle that unlocks the Tanoby Chambers (needs the National Dex and Rainbow Pass story finished)."
+  "A Strength puzzle that unlocks the Tanoby Chambers (needs the National Pokédex and the Rainbow Pass story finished)."
  ],
  "tanoby-ruins": [
-  "Unown forms are spread across the seven chambers."
+  "{mon:201} forms are spread across the seven chambers."
+ ],
+ "roaming": [
+  "Once you bring Celio the Sapphire, one legendary beast roams Kanto: Entei if you picked Bulbasaur, Suicune if you picked Charmander, Raikou if you picked Squirtle. It flees on the first turn, so trap it or put it to sleep."
  ],
  "navel-rock": [
   "Event only: needs the Mystic Ticket. Lugia and Ho-Oh (Lv 70)."
@@ -290,13 +325,29 @@
  "birth-island": [
   "Event only: needs the Aurora Ticket. Deoxys (Lv 30) after the triangle puzzle."
  ],
- "power-plant": [
-  "Surf down the river from Route 10. Zapdos is at the back (Lv 50, save first). Some of the item balls are really Voltorb or Electrode."
- ],
- "three-isle-port": [
-  "Small harbor area south of Three Island."
- ],
- "three-isle-path": [
-  "Tunnel with a Dunsparce colony. Talk to the prospector after he strikes gold for a Nugget."
- ]
+ "_checked": {
+  "pallet-town": "pokefirered event scripts",
+  "viridian-city": "pokefirered event scripts",
+  "route-22": "pokefirered event scripts",
+  "route-2": "pokefirered event scripts",
+  "pewter-city": "pokefirered event scripts",
+  "route-10": "pokefirered event scripts",
+  "route-11": "pokefirered event scripts",
+  "route-15": "pokefirered event scripts",
+  "route-16": "pokefirered event scripts",
+  "route-8": "pokefirered event scripts",
+  "route-12": "pokefirered event scripts",
+  "saffron-city": "pokefirered event scripts",
+  "one-island": "pokefirered event scripts",
+  "two-island": "pokefirered event scripts",
+  "three-island": "pokefirered event scripts",
+  "mt-ember": "pokefirered event scripts",
+  "dotted-hole": "pokefirered event scripts",
+  "five-isle-meadow": "pokefirered event scripts",
+  "icefall-cave": "pokefirered event scripts",
+  "water-labyrinth": "pokefirered event scripts",
+  "pokemon-league": "pokefirered event scripts",
+  "cerulean-cave": "pokefirered event scripts",
+  "roaming": "pokefirered event scripts"
+ }
 }
