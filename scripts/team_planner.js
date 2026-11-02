@@ -84,7 +84,7 @@ const STORY_HMS = ['HM01', 'HM04', 'HM03', 'HM06']; // Cut, Strength, Surf, Rock
     battles.forEach((b, bi) => b.party.forEach(p => foes.push({ bi, p, b: foeBattler(p), w: (b.key ? KEY_WEIGHT : 1) / b.party.length })));
 
     // candidates: the starter, plus every catch you can make before the League and every non-trade form it reaches
-    const avail = catchableBy(LEAGUE).filter(c => c.stage <= LEAGUE);
+    const avail = catchableBy(LEAGUE).filter(c => c.stage <= LEAGUE && !app.get('LEGENDARY').has(c.dex)); // never plan around a legendary
     const sources = [{ dex: STARTER_BASE[starter], stage: 0, loc: 'pallet-town', method: 'gift', levels: '5', name: 'Pallet Town' }, ...avail];
     const cands = [];
     for (const c of sources) {

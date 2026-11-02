@@ -47,15 +47,15 @@ function renderStatsTool(arg) {
       <td>${numIn('ev' + i, t.ev[i], 0, 255, 56)}</td><td>${`<input type="number" id="st${i}" value="${t.stat[i]}" min="1" max="999" inputmode="numeric" style="width:64px">`}</td>
       <td>${r ? (r.length ? `<b>${r[0] === r[r.length - 1] ? r[0] : `${r[0]}–${r[r.length - 1]}`}</b>` : '<span class="bad">impossible</span>') : ''}</td></tr>`;
   }).join('');
-  view.innerHTML = `<div class="card"><select id="stmon">${monOptions(t.dex)}</select>
+  view.innerHTML = `<div class="card"><input type="search" id="stmon" value="${esc(mon(t.dex).name)}" placeholder="Type a Pokémon name or number">
     <div class="toolbar" style="margin-top:8px"><label class="note">Level ${numIn('stlvl', t.level, 1, 100)}</label>
     <label class="note">Nature <select id="stnat" style="width:auto">${NATURES.map(n => `<option ${n[0] === t.nat ? 'selected' : ''}>${n[0]}</option>`).join('')}</select></label></div></div>
     <div class="card scrollx"><table class="mini"><tr><th>Stat</th><th>Base</th><th>Range (IV 0–31)</th><th>EVs</th><th>Your stat</th><th>IV</th></tr>${rows}</table>
     <p class="note">Enter the stats from your summary screen to work out IVs. A level-up or two narrows the range. Uses the Gen 3 formula; EVs count a quarter each, max 255 per stat and 510 in total.</p></div>`;
-  const go = () => { Object.assign(t, { dex: val('stmon', t.dex), level: Math.min(100, Math.max(1, val('stlvl', t.level))), nat: document.getElementById('stnat').value,
+  const go = () => { Object.assign(t, { level: Math.min(100, Math.max(1, val('stlvl', t.level))), nat: document.getElementById('stnat').value,
     ev: t.ev.map((_, i) => Math.min(255, Math.max(0, val('ev' + i)))), stat: t.stat.map((_, i) => document.getElementById('st' + i).value) }); renderStatsTool(); };
-  view.querySelectorAll('select, input').forEach(el => el.onchange = go);
-  document.getElementById('stmon').onchange = () => { t.stat = ['', '', '', '', '', '']; t.dex = val('stmon', t.dex); renderStatsTool(); };
+  view.querySelectorAll('select, input:not(#stmon)').forEach(el => el.onchange = go);
+  suggestBox(document.getElementById('stmon'), monItems(), it => { t.stat = ['', '', '', '', '', '']; t.dex = it.value; renderStatsTool(); });
 }
 
 // ---------- catch odds ----------
@@ -68,7 +68,7 @@ function renderCatchTool(arg) {
     ['Nest Ball', t.level < 40 ? Math.max(1, (40 - t.level) / 10) : 1, 'better the lower its level'], ['Repeat Ball', isCaught(t.dex) ? 3 : 1, isCaught(t.dex) ? 'you have one: 3×' : "3× once you've caught one"],
     ['Timer Ball', Math.min(4, (t.turns + 10) / 10), `after ${t.turns} turn${t.turns === 1 ? '' : 's'}`], ['Premier Ball', 1], ['Master Ball', 255, 'always']];
   const one = b => catchChance(p.catchRate, b, frac, t.status);
-  view.innerHTML = `<div class="card"><select id="cmon">${monOptions(t.dex)}</select>
+  view.innerHTML = `<div class="card"><input type="search" id="cmon" value="${esc(p.name)}" placeholder="Type a Pokémon name or number">
     <p class="note">Catch rate ${p.catchRate} (higher is easier; 255 is the easiest, 3 the hardest)</p>
     <label class="note">HP left: <b>${t.hp}%</b></label><input type="range" id="chp" min="1" max="100" value="${t.hp}" style="width:100%">
     <div class="chips" style="margin:8px 0">${[[1, 'No status'], [1.5, 'Paralysed / poisoned / burned'], [2, 'Asleep / frozen']].map(([v, l]) => `<button class="chip ${t.status === v ? 'on' : ''}" data-st="${v}">${l}</button>`).join('')}</div>
@@ -76,7 +76,7 @@ function renderCatchTool(arg) {
     <div class="card"><table class="mini"><tr><th>Ball</th><th>Each throw</th><th>Within 5 throws</th></tr>${balls.map(([n, m, note]) => {
       const c = one(m); return `<tr><td>${n}${note ? `<div class="note">${note}</div>` : ''}</td><td><b>${(c * 100).toFixed(c < 0.1 ? 1 : 0)}%</b></td><td>${((1 - (1 - c) ** 5) * 100).toFixed(0)}%</td></tr>`;
     }).join('')}</table><p class="note">Gen 3 formula from the game code: four shake checks per throw. False Swipe leaves it at 1 HP; sleep is the best status.</p></div>`;
-  document.getElementById('cmon').onchange = e => { t.dex = +e.target.value; renderCatchTool(); };
+  suggestBox(document.getElementById('cmon'), monItems(), it => { t.dex = it.value; renderCatchTool(); });
   document.getElementById('chp').oninput = e => { t.hp = +e.target.value; renderCatchTool(); };
   view.querySelectorAll('[data-st]').forEach(b => b.onclick = () => { t.status = +b.dataset.st; renderCatchTool(); });
   document.getElementById('clvl').onchange = () => { t.level = val('clvl', t.level); renderCatchTool(); };
@@ -142,7 +142,7 @@ function renderEVTool() {
     const e = s.evs[n] || [0, 0, 0, 0, 0, 0], tot = e.reduce((a, b) => a + b, 0);
     return `<div class="member"><div class="mhead"><b>${esc(mon(n).name)}</b> <span class="note">${tot}/510</span></div>
       <div class="note">${e.map((v, i) => `${STAT_SHORT[i]} ${v}`).join(' · ')}</div>
-      <div class="toolbar" style="margin:6px 0 0"><select data-evadd="${n}" style="flex:1"><option value="">Add a defeated Pokémon…</option>${state.dex.filter(p => p.ev?.some(Boolean)).map(p => `<option value="${p.dex}">${esc(p.name)} (${evText(p.ev)})</option>`).join('')}</select>
+      <div class="toolbar" style="margin:6px 0 0"><input type="search" data-evadd="${n}" style="flex:1" placeholder="Add a defeated Pokémon…">
       <button class="btn small" data-evreset="${n}" style="margin-top:0">Reset</button></div></div>`;
   };
   view.innerHTML = `<div class="card"><p class="note">Best places to train one stat: EVs per wild battle, weighted by how often each Pokémon appears.</p>
@@ -153,12 +153,13 @@ function renderEVTool() {
     <label class="row"><input type="checkbox" id="evbrace" ${t.brace ? 'checked' : ''}><span>Holding a Macho Brace or has Pokérus (×2)</span></label></div>`;
   view.querySelectorAll('[data-evs]').forEach(b => b.onclick = () => { t.stat = +b.dataset.evs; renderEVTool(); });
   document.getElementById('evbrace').onchange = e => { t.brace = e.target.checked; };
-  view.querySelectorAll('[data-evadd]').forEach(sel => sel.onchange = () => {
-    const n = sel.dataset.evadd, y = mon(+sel.value).ev, e = (s.evs[n] ||= [0, 0, 0, 0, 0, 0]);
+  const evItems = state.dex.filter(p => p.ev?.some(Boolean)).map(p => ({ label: p.name, sub: evText(p.ev), value: p.dex, num: p.dex }));
+  view.querySelectorAll('[data-evadd]').forEach(sel => suggestBox(sel, evItems, it => {
+    const n = sel.dataset.evadd, y = mon(it.value).ev, e = (s.evs[n] ||= [0, 0, 0, 0, 0, 0]);
     let tot = e.reduce((a, b) => a + b, 0);
     y.forEach((v, i) => { const add = Math.min(v * (t.brace ? 2 : 1), 255 - e[i], 510 - tot); if (add > 0) { e[i] += add; tot += add; } });
     save(); renderEVTool();
-  });
+  }));
   view.querySelectorAll('[data-evreset]').forEach(b => b.onclick = () => { delete s.evs[b.dataset.evreset]; save(); renderEVTool(); });
 }
 

@@ -169,6 +169,21 @@ const strip = h => String(h).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
     if (!/Evolves:.*Clefairy/.test(strip(render('#/item/Moon%20Stone')))) fail('Moon Stone page should list Clefairy');
     if (!render('#/loc/route-3').includes('class="rowlink" href="#/item/')) fail('Route item rows should open the item page'); }
 
+  // suggestions as you type: prefix first, number matches the Pokédex number
+  { const sm = g('suggestMatches'), items = g('monItems')();
+    const names = q => sm(items, q).map(x => x.label);
+    if (names('pika')[0] !== 'Pikachu') fail(`"pika" suggests ${names('pika')}`);
+    if (names('25')[0] !== 'Pikachu') fail(`"25" suggests ${names('25')}`);
+    if (names('char')[0] !== 'Charmander' || !names('char').includes('Charizard')) fail(`"char" suggests ${names('char')}`);
+    if (names('').length || names('zzzz').length) fail('empty or junk text should suggest nothing');
+    if (names('a').length > 8) fail('at most 8 suggestions'); }
+  // counters to trainer Pokémon never suggest a legendary, even late in the game
+  { const L = g('LEGENDARY'), cs = g('catchSuggestions'), fb = g('foeBattler'), bs = g('battleStage');
+    for (const t of state.trainers.filter(t => /pokemon-league|cerulean-cave|trainer-tower|indigo/.test(t.location) || bs(t, t.location) >= g('stageOf')('pokemon-league')).slice(0, 40)) {
+      const party = t.party || Object.values(t.byStarter || {})[0] || [];
+      for (const p of party) for (const x of cs(p, fb(p), bs(t, t.location) + 100, party, 6)) if (L.has(x.c.dex) || L.has(x.f.dex)) fail(`${t.name} vs ${p.name}: suggests legendary ${x.f.dex}`);
+    } }
+
   if (fails.length) { console.log(`FAIL (${fails.length})\n` + fails.slice(0, 60).map(f => ' - ' + f).join('\n')); process.exit(1); }
   console.log('OK: feature pages and data checks passed');
 })().catch(e => { console.error(e); process.exit(1); });
