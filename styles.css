@@ -124,7 +124,7 @@ table.lineup { margin: 10px 0 4px; }
 @media (max-width: 360px) { .tabs a { padding-left: 1px; padding-right: 1px; font-size: 12px; white-space: nowrap; letter-spacing: -0.2px; } }
 
 /* reference pages */
-a.info { text-decoration: none; font-size: 15px; margin-left: 4px; color: var(--muted); }
+a.info { text-decoration: none; font-size: 22px; line-height: 1; margin-left: 2px; padding: 6px 8px; color: var(--muted); display: inline-block; vertical-align: middle; }
 a.linkrow, a.linkcard { text-decoration: none; color: inherit; }
 a.linkrow > span:last-child { color: var(--muted); }
 .stats-bars .sb { display: grid; grid-template-columns: 40px 40px 1fr; align-items: center; gap: 6px; font-size: 13px; }
@@ -169,8 +169,18 @@ svg.townmap rect { cursor: pointer; }
 svg.townmap rect:focus { outline: none; stroke: var(--accent); stroke-width: 2; }
 svg.townmap .maplbl { font-size: 6.5px; font-weight: 700; fill: var(--text); text-anchor: middle; pointer-events: none; paint-order: stroke; stroke: var(--card); stroke-width: 1.5px; }
 /* catch plan */
-a.tag.catchlink { color: var(--accent); border-color: var(--accent); text-decoration: none; white-space: nowrap; }
+a.tag.catchlink { color: var(--accent); border: 1.5px solid var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; padding: 6px 12px; border-radius: 8px; display: inline-block; margin: 6px 0 2px 0; position: relative; z-index: 1; }
 .scrollx { overflow-x: auto; }
 .catchtbl td, .catchtbl th { text-align: center; } .catchtbl td:first-child { text-align: left; }
 .tips { margin: 0; padding-left: 20px; } .tips li { margin: 6px 0; }
 .good-card { border-left: 4px solid var(--done); }
+/* rows that open a page: tap the row to open it, tap the checkbox to tick it */
+.row.linkrow { gap: 4px; }
+.row .cbhit { display: flex; align-items: center; justify-content: center; width: 48px; min-height: 48px; margin: -6px 0 -6px -12px; flex: none; cursor: pointer; }
+.row .cbhit input { width: 26px; height: 26px; }
+.row .rowbody { flex: 1; position: relative; }
+.row a.rowlink { color: inherit; text-decoration: none; }
+.row a.rowlink::after { content: ''; position: absolute; inset: 0; }
+.row .rowbody a:not(.rowlink) { position: relative; z-index: 1; }
+.row.linkrow::after { content: '›'; color: var(--muted); font-size: 22px; padding-left: 4px; }
+.row.checked a.rowlink > span { text-decoration: line-through; color: var(--muted); }
