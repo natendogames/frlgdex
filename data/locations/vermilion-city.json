@@ -215,6 +215,12 @@
    "name": "Bike Voucher",
    "from": "Fan Club Chairman (listen to his story)",
    "where": "Pokémon Fan Club"
+  },
+  {
+   "id": "item-pok-mon-center-1f-vs-seeker",
+   "name": "Vs. Seeker",
+   "from": "Woman by the counter",
+   "where": "Pokémon Center 1F"
   }
  ],
  "trainers": [

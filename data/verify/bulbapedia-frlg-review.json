@@ -1,0 +1,27 @@
+{
+ "_about": "Hand-written review of each mismatch scripts/verify_bulbapedia.py reports, checked against pret/pokefirered where the two sources disagree.",
+ "mismatches": {
+  "vermilion-city": "Vs. Seeker was missing: its script is in data/event_scripts.s, which the map pass didn't read. Added.",
+  "safari-zone": "Safari Balls are loaned for the game, not a pickup. OK.",
+  "kindle-road": "HM06 is given inside Ember Spa, which the app lists as its own place. OK.",
+  "two-island": "Bulbapedia lists Cape Brink's hidden items under Two Island; the app has them on Cape Brink. OK.",
+  "resort-gorgeous": "Selphy's rewards are random prizes, not fixed items. Not tracked.",
+  "trainer-tower": "Mode-clear prizes; not tracked as items."
+ },
+ "order": {
+  "underground-path-east-west": "Either way works: the path joins Routes 7 and 8.",
+  "pokemon-tower": "Bulbapedia mentions the tower on your first pass through Lavender; you can only climb it with the Silph Scope from the Rocket Hideout, as the app orders it.",
+  "route-16": "Routes 12-15 and Cycling Road (16-18) both reach Fuchsia; either order works.",
+  "route-19": "Power Plant is optional and can wait.",
+  "three-isle-path": "Post-game Sevii order is free.",
+  "six-island": "Post-game Sevii order is free.",
+  "green-path": "Post-game Sevii order is free."
+ },
+ "not_covered": "Bulbapedia's FRLG Part 21 (event islands) doesn't exist, so Navel Rock and Birth Island stay Draft. Pokémon League steps are covered by Bulbapedia's Indigo Plateau section; Roaming by the Kanto post-game part.",
+ "corrections": [
+  "Vs. Seeker gift in the Vermilion Pokémon Center added (shared script data/event_scripts.s).",
+  "Route 18: the Lickitung trade is with a boy upstairs in the gate.",
+  "Water Path: the Heracross size check is a woman in the northern house.",
+  "Power Plant: the fake item balls are Electrode."
+ ]
+}
