@@ -184,3 +184,9 @@ a.tag.catchlink { color: var(--accent); border: 1.5px solid var(--accent); text-
 .row .rowbody a:not(.rowlink) { position: relative; z-index: 1; }
 .row.linkrow::after { content: '›'; color: var(--muted); font-size: 22px; padding-left: 4px; }
 .row.checked a.rowlink > span { text-decoration: line-through; color: var(--muted); }
+/* suggestions as you type */
+.suggwrap { position: relative; }
+.sugg { position: absolute; left: 0; right: 0; z-index: 30; background: var(--card); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,.18); margin-top: 2px; max-height: 320px; overflow-y: auto; }
+.sugg button { display: block; width: 100%; text-align: left; padding: 11px 12px; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--text); font: inherit; cursor: pointer; }
+.sugg button:last-child { border-bottom: 0; }
+.sugg button.on, .sugg button:hover { background: color-mix(in srgb, var(--accent) 12%, var(--card)); }

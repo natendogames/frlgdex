@@ -97,12 +97,12 @@ function renderShiny() {
   const hunts = s.shiny;
   const chance = n => (1 - Math.pow(1 - 1 / SHINY_ODDS, n)) * 100;
   view.innerHTML = `<div class="card"><p class="note">Gen 3 shiny odds are 1 in ${SHINY_ODDS.toLocaleString()} for every wild encounter, egg, gift or soft reset. There's no Shiny Charm or Masuda method in FireRed and LeafGreen.</p>
-    <div class="toolbar"><select id="shnew" style="flex:1"><option value="">Start a hunt for…</option>${monOptions(0)}</select></div></div>
+    <div class="toolbar"><input type="search" id="shnew" style="flex:1" placeholder="Start a hunt for… (type a name)"></div></div>
     ${hunts.map((h, i) => `<div class="card shiny ${h.found ? 'checked' : ''}"><div class="mhead"><b>${esc(mon(h.dex).name)}</b> ${types(h.dex)} ${h.found ? `<span class="tag good">Found after ${h.count.toLocaleString()} · ${esc(h.found)}</span>` : ''}<button class="icon-x" data-shdel="${i}" aria-label="Delete hunt">&times;</button></div>
       <div class="shcount">${h.count.toLocaleString()}</div>
       <div class="note">${chance(h.count).toFixed(1)}% of hunts would have found one by now · ${h.count > SHINY_ODDS ? 'past the odds' : `${(SHINY_ODDS - h.count).toLocaleString()} to the odds`}</div>
       ${h.found ? '' : `<div class="toolbar" style="margin-top:8px"><button class="btn big" data-sh="${i}:1">+1</button><button class="btn" data-sh="${i}:10">+10</button><button class="btn" data-sh="${i}:-1">−1</button><button class="btn" data-shfound="${i}">Found it!</button></div>`}</div>`).join('') || '<div class="card empty">No hunts yet.</div>'}`;
-  document.getElementById('shnew').onchange = e => { if (+e.target.value) { hunts.unshift({ dex: +e.target.value, count: 0 }); save(); renderShiny(); } };
+  suggestBox(document.getElementById('shnew'), monItems(), it => { hunts.unshift({ dex: it.value, count: 0 }); save(); renderShiny(); });
   view.querySelectorAll('[data-sh]').forEach(b => b.onclick = () => { const [i, d] = b.dataset.sh.split(':').map(Number); hunts[i].count = Math.max(0, hunts[i].count + d); save(); renderShiny(); });
   view.querySelectorAll('[data-shfound]').forEach(b => b.onclick = () => { const h = hunts[+b.dataset.shfound]; h.found = new Date().toLocaleDateString(); s.caught[h.dex] ||= true; save(); renderShiny(); });
   view.querySelectorAll('[data-shdel]').forEach(b => b.onclick = () => { if (confirm('Delete this hunt?')) { hunts.splice(+b.dataset.shdel, 1); save(); renderShiny(); } });

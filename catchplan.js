@@ -109,7 +109,7 @@ function helpers(stage, lvl, mustOutspeed) {
   for (const c of catchableBy(stage)) {
     const from = { dex: c.dex, level: catchLevel(c) }, level = Math.max(lvl, from.level);
     for (const f of evoForms(c.dex, level, stage)) {
-      if (team.has(f.dex) || (mustOutspeed && calcStats(f.dex, level, PLAYER_IV)[5] <= mustOutspeed)) continue;
+      if (LEGENDARY.has(c.dex) || LEGENDARY.has(f.dex) || team.has(f.dex) || (mustOutspeed && calcStats(f.dex, level, PLAYER_IV)[5] <= mustOutspeed)) continue;
       const learned = learnedBy(f.dex, level, from);
       const pick = ['False Swipe', ...Object.keys(SLEEP_MOVES), ...Object.keys(PARA_MOVES)].find(m => learned.has(m));
       if (pick) out.push({ c, f, move: pick, at: learned.get(pick).level, rank: pick === 'False Swipe' ? 0 : SLEEP_MOVES[pick] ? 1 - SLEEP_MOVES[pick] / 1000 : 2 });

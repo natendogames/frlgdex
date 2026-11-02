@@ -19,6 +19,8 @@ const EVO_LABEL = {
   'level-shedinja': p => `Level ${p} (empty slot)`, beauty: () => 'High Beauty'
 };
 const EVENT_ONLY = new Set([151, 251, 385, 386]);
+// Legendary and mythical Pokémon: never suggested as a catch to counter a trainer
+const LEGENDARY = new Set([144, 145, 146, 150, 151, 243, 244, 245, 249, 250, 251, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386]);
 const OTHER = { FR: 'LG', LG: 'FR' };
 const VNAME = { FR: 'FireRed', LG: 'LeafGreen' };
 
@@ -289,6 +291,50 @@ function checkRow(key, checked, title, sub, tags = '') {
     ${box}
     <label for="${id}"><span>${title}</span>${tags}<span class="sub">${sub}</span></label></div>`;
 }
+// ---------- suggestions as you type ----------
+// Turns a text box into a picker: matches appear under it as you type (name starts with what you typed first, then a
+// word in it, then anywhere; a number matches the Pokédex number). Tap one, or use the arrow keys and Enter.
+// items: [{ label, sub?, value, q? }]; onPick(item) runs when one is chosen.
+function suggestMatches(items, text, max = 8) {
+  const q = String(text || '').trim().toLowerCase();
+  if (!q) return [];
+  const score = it => {
+    const s = (it.q || it.label).toLowerCase();
+    if (/^\d+$/.test(q) && String(it.num ?? '') === String(parseInt(q, 10))) return 0;
+    return s === q ? 0 : s.startsWith(q) ? 1 : s.split(/[\s\-'.]+/).some(w => w.startsWith(q)) ? 2 : s.includes(q) ? 3 : 9;
+  };
+  return items.map(it => ({ it, sc: score(it) })).filter(r => r.sc < 9).sort((a, b) => a.sc - b.sc).slice(0, max).map(r => r.it);
+}
+const monItems = (list = state.dex) => list.map(p => ({ label: p.name, sub: `#${String(p.dex).padStart(3, '0')} · ${(p.types || []).join('/')}`, value: p.dex, num: p.dex }));
+function suggestBox(inp, items, onPick) {
+  if (!inp || !inp.insertAdjacentElement) return; // no page (tests)
+  inp.setAttribute('autocomplete', 'off');
+  inp.removeAttribute('list');
+  const box = document.createElement('div');
+  box.className = 'sugg'; box.hidden = true; box.setAttribute('role', 'listbox');
+  inp.insertAdjacentElement('afterend', box);
+  inp.parentElement.classList.add('suggwrap');
+  let shown = [], at = -1;
+  const pick = it => { box.hidden = true; inp.value = it.label; onPick(it); };
+  const draw = () => {
+    shown = suggestMatches(items, inp.value);
+    at = shown.length ? Math.max(0, Math.min(at, shown.length - 1)) : -1;
+    box.innerHTML = shown.map((it, i) => `<button type="button" class="${i === at ? 'on' : ''}" data-i="${i}">${esc(it.label)}${it.sub ? `<span class="note"> ${esc(it.sub)}</span>` : ''}</button>`).join('');
+    box.hidden = !shown.length;
+  };
+  inp.addEventListener('input', () => { at = 0; draw(); });
+  inp.addEventListener('focus', () => { inp.select?.(); });
+  inp.addEventListener('blur', () => setTimeout(() => { box.hidden = true; }, 150));
+  inp.addEventListener('keydown', e => {
+    if (box.hidden) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); at = (at + (e.key === 'ArrowDown' ? 1 : -1) + shown.length) % shown.length; draw(); }
+    else if (e.key === 'Enter' && shown[at]) { e.preventDefault(); pick(shown[at]); }
+    else if (e.key === 'Escape') box.hidden = true;
+  });
+  // pointerdown so the pick lands before the box loses focus
+  box.addEventListener('pointerdown', e => { const b = e.target.closest('button'); if (b) { e.preventDefault(); pick(shown[+b.dataset.i]); } });
+}
+
 const groupBy = (list, f) => list.reduce((m, x) => ((m[f(x) || ''] ||= []).push(x), m), {});
 
 function renderLocation(id) {
@@ -689,6 +735,7 @@ function catchSuggestions(foeMon, foe, stage, party, n = 2) {
   const out = [];
   const relearn = stage >= relearnAt();
   for (const c of catchableBy(stage)) {
+    if (LEGENDARY.has(c.dex)) continue;
     // trained up to the foe's level, or the level you catch it at if that's higher
     const from = { dex: c.dex, level: catchLevel(c) }, level = Math.max(foe.level, from.level);
     for (const f of evoForms(c.dex, level, stage)) {
@@ -797,11 +844,10 @@ function renderPlanner() {
       return `<div class="member"><div class="mhead"><b>${esc(mon(n).name)}</b> ${types(n)}
           <label class="note">Lv <input type="number" min="1" max="100" inputmode="numeric" data-lvl="${n}" value="${lvl}" placeholder="?"></label>
           <button class="icon-x" data-rm="${i}" aria-label="Remove ${esc(mon(n).name)}">&times;</button></div>
-        <div class="mvgrid">${[0, 1, 2, 3].map(k => `<input list="movelist" data-mv="${n}:${k}" value="${esc(meta.moves?.[k] || '')}" placeholder="${meta.level ? esc(defaults[k] || 'Move') : 'Move'}">`).join('')}</div></div>`;
+        <div class="mvgrid">${[0, 1, 2, 3].map(k => `<input data-mv="${n}:${k}" value="${esc(meta.moves?.[k] || '')}" placeholder="${meta.level ? esc(defaults[k] || 'Move') : 'Move'}">`).join('')}</div></div>`;
     }).join('') || '<p class="note">No Pokémon yet.</p>'}
-    <input type="search" id="teamq" placeholder="Add a Pokémon by name" list="monlist" style="margin-top:10px" ${s.team.length >= 6 ? 'disabled' : ''}>
-    <datalist id="monlist">${state.dex.map(p => `<option value="${esc(p.name)}">`).join('')}</datalist>
-    <datalist id="movelist">${moveNames.map(m => `<option value="${esc(m)}">`).join('')}</datalist>
+    <input type="search" id="teamq" placeholder="Add a Pokémon by name" style="margin-top:10px" ${s.team.length >= 6 ? 'disabled' : ''}>
+
     <div class="note" style="margin-top:12px">Starter you picked in <a href="#/loc/pallet-town">Professor Oak's Lab</a> (sets your rival's team)${pickOf('starter') ? '' : ': <b class="bad">not picked yet</b>'}</div>
     ${starterChips()}</div>
     ${typeof hmHelper === 'function' ? hmHelper() : ''}
@@ -819,15 +865,16 @@ function renderPlanner() {
     const n = inp.dataset.lvl, v = Math.max(0, Math.min(100, parseInt(inp.value, 10) || 0));
     (s.teamMeta[n] ||= {}).level = v || undefined; save(); renderPlanner();
   });
-  view.querySelectorAll('[data-mv]').forEach(inp => inp.onchange = () => {
+  const moveItems = moveNames.map(m => ({ label: m, sub: state.moves[m]?.type || '', value: m }));
+  view.querySelectorAll('[data-mv]').forEach(inp => { const set = () => {
     const [n, k] = inp.dataset.mv.split(':');
     const name = moveNames.find(m => m.toLowerCase() === inp.value.trim().toLowerCase()) || '';
     const meta = (s.teamMeta[n] ||= {});
     meta.moves = [0, 1, 2, 3].map(i => (meta.moves || [])[i] || '');
     meta.moves[k] = name; save(); renderPlanner();
-  });
+  }; inp.onchange = set; suggestBox(inp, moveItems, set); });
   const q = document.getElementById('teamq');
-  q.onchange = () => {
+  const addMon = () => {
     const p = state.dex.find(x => x.name.toLowerCase() === q.value.trim().toLowerCase());
     if (!p || s.team.length >= 6 || s.team.includes(p.dex)) return;
     s.team.push(p.dex);
@@ -836,6 +883,8 @@ function renderPlanner() {
     if (k && !pickOf('starter') && s.team.filter(starterKeyOf).length === 1) return setPick('starter', k);
     save(); renderPlanner();
   };
+  q.onchange = addMon;
+  suggestBox(q, monItems(), addMon);
 }
 
 // ---------- team plan ----------
@@ -935,8 +984,7 @@ function renderBreeding() {
   const incense = INCENSE[base] && [base, INCENSE[base][1]];
   const hatch = incense ? INCENSE[base][0] : base;
   const genderText = { genderless: 'Genderless', male: 'Always male', female: 'Always female' }[p.gender] || p.gender.replace('% F', '% female');
-  let html = `<div class="card"><input type="search" id="breedq" placeholder="Pick a Pokémon" list="monlist2" value="${esc(p.name)}">
-    <datalist id="monlist2">${state.dex.map(x => `<option value="${esc(x.name)}">`).join('')}</datalist></div>
+  let html = `<div class="card"><label class="note" for="breedq">Pokémon</label><input type="search" id="breedq" placeholder="Type a name or number" value="${esc(p.name)}"></div>
     <div class="card"><b>#${p.dex} ${esc(p.name)}</b> ${types(sel)}
     <table class="mini" style="margin-top:8px">
       <tr><td>Egg groups</td><td>${groups.map(esc).join(', ')}</td></tr>
@@ -951,7 +999,11 @@ function renderBreeding() {
   html += `<div class="card note">Breeding happens at the Day Care on Four Island (post-game). The Route 5 Day Care only raises one Pokémon and can't make eggs. The baby learns any move both parents know that's in its level-up set, plus the father's TMs and egg moves.</div>`;
   view.innerHTML = html;
   const q = document.getElementById('breedq');
-  q.onchange = () => { const m = state.dex.find(x => x.name.toLowerCase() === q.value.trim().toLowerCase()); if (m) { state.breedSel = m.dex; renderBreeding(); } };
+  const pickBreed = it => { state.breedSel = it.value; renderBreeding(); };
+  const items = monItems();
+  suggestBox(q, items, pickBreed);
+  // a whole name typed and left in the box counts too
+  q.onchange = () => { const it = items.find(x => x.label.toLowerCase() === q.value.trim().toLowerCase()); if (it && it.value !== state.breedSel) pickBreed(it); };
 }
 
 function renderTypes() {
