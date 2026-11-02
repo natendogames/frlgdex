@@ -10,6 +10,7 @@ A phone-friendly, offline-capable 100% completion guide for Pokémon FireRed and
 - **Reference pages**: every Pokémon (stats, abilities, catch rate, EV yield, where to get it, evolutions, level-up/TM/tutor moves), TM, item and move, plus search (🔍) across all of them.
 - **Progress**: completion by category and part of the game, badges, "still missing" Pokémon with the earliest place to get each, and a tappable town map shaded by completion.
 - **Shops and tutors**: buy-only TMs and Game Corner prizes as checklist rows; every move tutor on its location page.
+- **Item pages**: tap any item, gift or shop item for the game's own description, what a held berry does, which Pokémon an evolution stone evolves, every shop that sells it (in story order), Game Corner prizes, and every place to find it.
 - **Catch plan**: tap "Catch plan" next to any wild Pokémon on a route (or a catch step in the Team plan) for the odds with every ball the shops sell by that point in the story, and a step-by-step plan from your team's moves: False Swipe, sleep or paralysis, the strongest hit that can't knock it out, plus warnings (Teleport, Selfdestruct, Roar, Static...) and Pokémon you could catch to help. The Master Ball is never planned for.
 - **Tools**: breeding helper, type matchups, version exclusives, TM list, stats/IV calculator, catch odds, level forecast, EV training and counter, one-time Pokémon, move tutors, Unown forms, Sevii story checklist, Nuzlocke run tracker (level cap, dupes clause), shiny hunt counters, living dex boxes, and .sav import (ticks caught Pokémon, items and trainers, and loads your party).
 - Separate FireRed and LeafGreen saves, stored on the device, with backup export and import.
@@ -40,6 +41,7 @@ python3 -I scripts/build_data.py /tmp/pokefirered data
 | `moves.json` | Move name → type, power and special damage effect, for the damage estimates |
 | `extras.json` | Shops (stock and prices), move tutors (where, who can learn), VS Seeker rematch teams, Unown letters per Tanoby chamber |
 | `save-map.json` | For .sav import: the save flag behind each item and trainer row, internal species and move numbers, badge flags |
+| `items.json` | Every item's Bag description, price and pocket, plus what held berries do |
 | `region-map.json` | The game's town-map grid per region, cell → location |
 | `tms.json` | TM/HM number → move, whether it can be reused (HMs, Department Store and Game Corner TMs) and every place you get one; `pokedex.json` lists each species' `tmhm` |
 

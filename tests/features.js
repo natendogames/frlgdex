@@ -161,6 +161,14 @@ const strip = h => String(h).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
   // Pokémon rows open the Pokémon page; only the checkbox ticks them (no label wrapping the name, no separate ⓘ)
   { const h = render('#/dex'); if (!h.includes('class="rowlink" href="#/mon/1"') || /class="info"/.test(h) || /<label for="[^"]+"><span>#001/.test(h)) fail('Pokédex rows should link to the Pokémon page and tick only from the checkbox'); }
 
+  // item pages: every item in a checklist, shop or the Bag data renders with a description; shop sellers listed
+  for (const it of Object.keys(state.items)) render(`#/item/${encodeURIComponent(it)}`);
+  { const h = strip(render('#/item/Pok%C3%A9%20Ball'));
+    if (!/A Ball thrown to catch/.test(h) || !/Viridian City/.test(h) || !/Sells for/.test(h)) fail(`Poké Ball page: ${h.slice(0, 200)}`);
+    if (!/Held in battle: restores 30 HP/.test(strip(render('#/item/Sitrus%20Berry')))) fail('Sitrus Berry held effect missing');
+    if (!/Evolves:.*Clefairy/.test(strip(render('#/item/Moon%20Stone')))) fail('Moon Stone page should list Clefairy');
+    if (!render('#/loc/route-3').includes('class="rowlink" href="#/item/')) fail('Route item rows should open the item page'); }
+
   if (fails.length) { console.log(`FAIL (${fails.length})\n` + fails.slice(0, 60).map(f => ' - ' + f).join('\n')); process.exit(1); }
   console.log('OK: feature pages and data checks passed');
 })().catch(e => { console.error(e); process.exit(1); });
