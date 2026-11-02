@@ -1,5 +1,5 @@
 {
- "_about": "Story steps per location, in play order. Gift and trainer links point at the game data on the same page. Places in _checked were checked against the pokefirered event scripts; the rest are Draft.",
+ "_about": "Story steps per location, in play order. Gift and trainer links point at the game data on the same page. Places in _checked were checked against a second source (the pokefirered event scripts and/or Bulbapedia's walkthrough, see docs/bulbapedia-check.md); the rest are Draft.",
  "pallet-town": [
   "Go downstairs and try to walk into the tall grass north of town. Professor Oak stops you and takes you to his lab.",
   "Pick your {gift:mon-professor-oaks-lab-starter-pok-mon-bulbasaur-charmander-or-squirtle}. Bulbasaur makes the first two Gyms easiest; Charmander makes them hardest. Your rival takes the one strong against yours.",
@@ -144,7 +144,7 @@
   "Cycling Road, all downhill to {loc:route-18}."
  ],
  "route-18": [
-  "A man in the east gate trades for {mon:108}: he wants a Golduck in FireRed or a Slowbro in LeafGreen."
+  "A boy upstairs in the east gate trades for {mon:108}: he wants a Golduck in FireRed or a Slowbro in LeafGreen."
  ],
  "fuchsia-city": [
   "Beat {trainer:leader-koga} (Poison). The Gym has invisible walls. Psychic and Ground moves win. Reward: Soul Badge and {gift:item-gym-tm06}.",
@@ -165,7 +165,7 @@
   "Beat {trainer:rival-silph} on 7F and {trainer:boss-giovanni-2} on 11F. The President then gives you the {gift:item-11f-master-ball}."
  ],
  "power-plant": [
-  "Surf down the river from {loc:route-10}. Zapdos waits at the back (Lv 50; save first). Some item balls are really Voltorb or Electrode."
+  "Surf down the river from {loc:route-10}. Zapdos waits at the back (Lv 50; save first). Two of the item balls are really Electrode."
  ],
  "route-19": [
   "Surf south from {loc:fuchsia-city} toward the {loc:seafoam-islands}."
@@ -278,7 +278,7 @@
   "Gateway to the {loc:water-path} and {loc:ruin-valley}."
  ],
  "water-path": [
-  "A boy in a house wants to see a {mon:214}: show him one for a {gift:item-water-path-house-1-nest-ball}."
+  "A woman in the northern house wants to see a {mon:214}: show him one for a {gift:item-water-path-house-1-nest-ball}."
  ],
  "ruin-valley": [
   "Use Cut and Strength to open the {loc:dotted-hole} (a Braille puzzle)."
@@ -326,28 +326,94 @@
   "Event only: needs the Aurora Ticket. Deoxys (Lv 30) after the triangle puzzle."
  ],
  "_checked": {
-  "pallet-town": "pokefirered event scripts",
-  "viridian-city": "pokefirered event scripts",
-  "route-22": "pokefirered event scripts",
-  "route-2": "pokefirered event scripts",
-  "pewter-city": "pokefirered event scripts",
-  "route-10": "pokefirered event scripts",
-  "route-11": "pokefirered event scripts",
-  "route-15": "pokefirered event scripts",
-  "route-16": "pokefirered event scripts",
-  "route-8": "pokefirered event scripts",
-  "route-12": "pokefirered event scripts",
-  "saffron-city": "pokefirered event scripts",
-  "one-island": "pokefirered event scripts",
-  "two-island": "pokefirered event scripts",
-  "three-island": "pokefirered event scripts",
-  "mt-ember": "pokefirered event scripts",
-  "dotted-hole": "pokefirered event scripts",
-  "five-isle-meadow": "pokefirered event scripts",
-  "icefall-cave": "pokefirered event scripts",
-  "water-labyrinth": "pokefirered event scripts",
-  "pokemon-league": "pokefirered event scripts",
-  "cerulean-cave": "pokefirered event scripts",
-  "roaming": "pokefirered event scripts"
+  "pallet-town": "pokefirered event scripts + Bulbapedia walkthrough",
+  "viridian-city": "pokefirered event scripts + Bulbapedia walkthrough",
+  "route-22": "pokefirered event scripts + Bulbapedia walkthrough",
+  "route-2": "pokefirered event scripts + Bulbapedia walkthrough",
+  "pewter-city": "pokefirered event scripts + Bulbapedia walkthrough",
+  "route-10": "pokefirered event scripts + Bulbapedia walkthrough",
+  "route-11": "pokefirered event scripts + Bulbapedia walkthrough",
+  "route-15": "pokefirered event scripts + Bulbapedia walkthrough",
+  "route-16": "pokefirered event scripts + Bulbapedia walkthrough",
+  "route-8": "pokefirered event scripts + Bulbapedia walkthrough",
+  "route-12": "pokefirered event scripts + Bulbapedia walkthrough",
+  "saffron-city": "pokefirered event scripts + Bulbapedia walkthrough",
+  "one-island": "pokefirered event scripts + Bulbapedia walkthrough",
+  "two-island": "pokefirered event scripts + Bulbapedia walkthrough",
+  "three-island": "pokefirered event scripts + Bulbapedia walkthrough",
+  "mt-ember": "pokefirered event scripts + Bulbapedia walkthrough",
+  "dotted-hole": "pokefirered event scripts + Bulbapedia walkthrough",
+  "five-isle-meadow": "pokefirered event scripts + Bulbapedia walkthrough",
+  "icefall-cave": "pokefirered event scripts + Bulbapedia walkthrough",
+  "water-labyrinth": "pokefirered event scripts + Bulbapedia walkthrough",
+  "pokemon-league": "pokefirered event scripts + Bulbapedia walkthrough",
+  "cerulean-cave": "pokefirered event scripts + Bulbapedia walkthrough",
+  "roaming": "pokefirered event scripts + Bulbapedia walkthrough",
+  "route-1": "Bulbapedia walkthrough",
+  "viridian-forest": "Bulbapedia walkthrough",
+  "route-3": "Bulbapedia walkthrough",
+  "mt-moon": "Bulbapedia walkthrough",
+  "route-4": "Bulbapedia walkthrough",
+  "cerulean-city": "Bulbapedia walkthrough",
+  "route-24": "Bulbapedia walkthrough",
+  "route-25": "Bulbapedia walkthrough",
+  "route-5": "Bulbapedia walkthrough",
+  "underground-path-north-south": "Bulbapedia walkthrough",
+  "route-6": "Bulbapedia walkthrough",
+  "vermilion-city": "Bulbapedia walkthrough",
+  "ss-anne": "Bulbapedia walkthrough",
+  "digletts-cave": "Bulbapedia walkthrough",
+  "route-9": "Bulbapedia walkthrough",
+  "rock-tunnel": "Bulbapedia walkthrough",
+  "lavender-town": "Bulbapedia walkthrough",
+  "underground-path-east-west": "Bulbapedia walkthrough",
+  "route-7": "Bulbapedia walkthrough",
+  "celadon-city": "Bulbapedia walkthrough",
+  "rocket-hideout": "Bulbapedia walkthrough",
+  "pokemon-tower": "Bulbapedia walkthrough",
+  "route-13": "Bulbapedia walkthrough",
+  "route-14": "Bulbapedia walkthrough",
+  "route-17": "Bulbapedia walkthrough",
+  "route-18": "Bulbapedia walkthrough",
+  "fuchsia-city": "Bulbapedia walkthrough",
+  "safari-zone": "Bulbapedia walkthrough",
+  "silph-co": "Bulbapedia walkthrough",
+  "power-plant": "Bulbapedia walkthrough",
+  "route-19": "Bulbapedia walkthrough",
+  "route-20": "Bulbapedia walkthrough",
+  "seafoam-islands": "Bulbapedia walkthrough",
+  "cinnabar-island": "Bulbapedia walkthrough",
+  "pokemon-mansion": "Bulbapedia walkthrough",
+  "kindle-road": "Bulbapedia walkthrough",
+  "ember-spa": "Bulbapedia walkthrough",
+  "treasure-beach": "Bulbapedia walkthrough",
+  "cape-brink": "Bulbapedia walkthrough",
+  "bond-bridge": "Bulbapedia walkthrough",
+  "berry-forest": "Bulbapedia walkthrough",
+  "three-isle-port": "Bulbapedia walkthrough",
+  "route-21": "Bulbapedia walkthrough",
+  "route-23": "Bulbapedia walkthrough",
+  "victory-road": "Bulbapedia walkthrough",
+  "indigo-plateau": "Bulbapedia walkthrough",
+  "three-isle-path": "Bulbapedia walkthrough",
+  "four-island": "Bulbapedia walkthrough",
+  "five-island": "Bulbapedia walkthrough",
+  "memorial-pillar": "Bulbapedia walkthrough",
+  "resort-gorgeous": "Bulbapedia walkthrough",
+  "rocket-warehouse": "Bulbapedia walkthrough",
+  "lost-cave": "Bulbapedia walkthrough",
+  "six-island": "Bulbapedia walkthrough",
+  "water-path": "Bulbapedia walkthrough",
+  "ruin-valley": "Bulbapedia walkthrough",
+  "green-path": "Bulbapedia walkthrough",
+  "pattern-bush": "Bulbapedia walkthrough",
+  "outcast-island": "Bulbapedia walkthrough",
+  "altering-cave": "Bulbapedia walkthrough",
+  "seven-island": "Bulbapedia walkthrough",
+  "trainer-tower": "Bulbapedia walkthrough",
+  "canyon-entrance": "Bulbapedia walkthrough",
+  "sevault-canyon": "Bulbapedia walkthrough",
+  "tanoby-key": "Bulbapedia walkthrough",
+  "tanoby-ruins": "Bulbapedia walkthrough"
  }
 }

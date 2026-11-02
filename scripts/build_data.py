@@ -305,6 +305,7 @@ for sp in ('HITMONLEE', 'HITMONCHAN'):
 EXTRA_GIFTS = [
     ('pallet-town', 'mon', 'Starter Pokémon (Bulbasaur, Charmander or Squirtle)', 'Professor Oaks Lab', 'Professor Oak', None),
     ('pallet-town', 'item', 'Pokédex', 'Professor Oaks Lab', 'Professor Oak (after delivering Oak\'s Parcel)', None),
+    ('vermilion-city', 'item', 'Vs. Seeker', 'Pokémon Center 1F', 'Woman by the counter', None),
     ('pallet-town', 'item', 'Potion (in your PC)', 'Players House 2F', 'Your bedroom PC', None),
     ('pewter-city', 'item', 'Running Shoes', 'Outside', "Professor Oak's aide (as you head east after beating Brock)", None),
     ('celadon-city', 'item', 'TM16 (give Fresh Water)', 'Department Store Roof', 'Thirsty girl', None),
