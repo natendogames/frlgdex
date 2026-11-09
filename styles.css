@@ -190,3 +190,15 @@ a.tag.catchlink { color: var(--accent); border: 1.5px solid var(--accent); text-
 .sugg button { display: block; width: 100%; text-align: left; padding: 11px 12px; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--text); font: inherit; cursor: pointer; }
 .sugg button:last-child { border-bottom: 0; }
 .sugg button.on, .sugg button:hover { background: color-mix(in srgb, var(--accent) 12%, var(--card)); }
+/* competitive builds (builds.js) */
+details.build > summary { padding: 6px 0; font-size: 16px; }
+details.build > summary .tag:first-child { margin-left: 0; font-weight: 600; color: var(--accent); border-color: var(--accent); }
+.tag.draft { border-color: var(--warn); color: var(--warn); }
+.bmoves { margin: 8px 0; }
+.bmove { display: flex; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); }
+.bmove > span:last-child { flex: 1; }
+.bslot { flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--line); text-align: center; line-height: 24px; font-size: 13px; font-weight: 600; }
+.bor { margin: 4px 0; font-style: italic; }
+.note.warn { color: var(--warn); }
+.btn.wide { display: block; width: 100%; text-align: center; text-decoration: none; margin: 10px 0 4px; box-sizing: border-box; min-height: 48px; font-size: 16px; font-weight: 600; }
+details.tiers { margin-top: 8px; }
