@@ -1,0 +1,91 @@
+# Draft builds for Pokémon that Smogon's ADV (Gen 3) dex has no set for.
+# These are Claude's suggestions, not Smogon analyses: the app marks every one of them Draft.
+# scripts/build_builds.py checks each move, ability, item, nature and EV spread is legal in Gen 3.
+#
+# Species | format | set name | item | ability | nature | EVs | moves (; between slots, / between options) | note
+# format: lc (Little Cup, level 5), nfe (not fully evolved, level 100) or ingame (no competitive use)
+Bulbasaur | lc | Sleep and drain | Oran Berry | Overgrow | Modest | 4 HP / 252 SpA / 252 Spe | Sleep Powder; Giga Drain; Sludge Bomb; Hidden Power Fire / Leech Seed |
+Squirtle | lc | Bulky spinner | Oran Berry | Torrent | Bold | 252 HP / 252 Def / 4 SpD | Rapid Spin; Surf; Ice Beam; Toxic / Mirror Coat |
+Caterpie | ingame | Evolve it | Oran Berry | Shield Dust | Hardy | | Tackle; String Shot | No competitive use: evolve it into Butterfree, which gets Sleep Powder and Psychic.
+Metapod | ingame | Evolve it | Oran Berry | Shed Skin | Hardy | | Harden; Tackle; String Shot | No competitive use: evolve it into Butterfree.
+Weedle | ingame | Evolve it | Oran Berry | Shield Dust | Hardy | | Poison Sting; String Shot | No competitive use: evolve it into Beedrill.
+Kakuna | ingame | Evolve it | Oran Berry | Shed Skin | Hardy | | Harden; Poison Sting; String Shot | No competitive use: evolve it into Beedrill.
+Pidgey | lc | Fast attacker | Oran Berry | Keen Eye | Jolly | 4 HP / 252 Atk / 252 Spe | Return; Aerial Ace; Quick Attack; Toxic |
+Rattata | lc | Guts attacker | Oran Berry | Guts | Jolly | 4 HP / 252 Atk / 252 Spe | Super Fang; Return; Quick Attack; Shadow Ball |
+Spearow | lc | Fast attacker | Oran Berry | Keen Eye | Jolly | 4 HP / 252 Atk / 252 Spe | Drill Peck; Return; Quick Attack; Pursuit |
+Ekans | lc | Paralysis support | Oran Berry | Intimidate | Adamant | 252 HP / 252 Atk / 4 Def | Glare; Sludge Bomb; Earthquake; Pursuit / Haze |
+Sandshrew | lc | Swords Dance spinner | Oran Berry | Sand Veil | Adamant | 4 HP / 252 Atk / 252 Spe | Swords Dance; Earthquake; Rock Slide; Rapid Spin |
+Nidoran♀ | lc | Special attacker | Oran Berry | Poison Point | Modest | 4 HP / 252 SpA / 252 Spe | Thunderbolt; Ice Beam; Toxic; Protect |
+Nidorina | nfe | Special attacker | Leftovers | Poison Point | Modest | 4 HP / 252 SpA / 252 Spe | Thunderbolt; Ice Beam; Toxic; Protect | Evolve it into Nidoqueen with a Moon Stone for better stats and Earthquake.
+Nidoran♂ | lc | Physical attacker | Oran Berry | Poison Point | Jolly | 4 HP / 252 Atk / 252 Spe | Double Kick; Return; Sludge Bomb; Toxic |
+Clefairy | nfe | Support | Leftovers | Cute Charm | Bold | 252 HP / 252 Def / 4 SpD | Softboiled; Seismic Toss; Thunder Wave; Encore | Evolve it into Clefable with a Moon Stone.
+Vulpix | lc | Sleep and burn | Oran Berry | Flash Fire | Timid | 4 HP / 252 SpA / 252 Spe | Hypnosis; Flamethrower; Hidden Power Grass; Quick Attack |
+Jigglypuff | nfe | Sing support | Leftovers | Cute Charm | Bold | 252 HP / 252 Def / 4 SpD | Sing; Body Slam; Seismic Toss; Protect | Evolve it into Wigglytuff with a Moon Stone.
+Zubat | lc | Confuse and poison | Oran Berry | Inner Focus | Jolly | 4 HP / 252 Atk / 252 Spe | Aerial Ace; Confuse Ray; Toxic; Sludge Bomb |
+Paras | lc | Spore support | Oran Berry | Effect Spore | Modest | 252 HP / 252 SpA / 4 SpD | Spore; Giga Drain; Stun Spore; Hidden Power Bug |
+Venonat | lc | Sleep support | Oran Berry | Compoundeyes | Modest | 4 HP / 252 SpA / 252 Spe | Sleep Powder; Psychic; Sludge Bomb; Stun Spore |
+Psyduck | lc | Special attacker | Oran Berry | Cloud Nine | Modest | 4 HP / 252 SpA / 252 Spe | Hypnosis; Surf; Ice Beam; Psychic |
+Poliwag | lc | Sleep and attack | Oran Berry | Water Absorb | Timid | 4 HP / 252 SpA / 252 Spe | Hypnosis; Surf; Ice Beam; Body Slam |
+Poliwhirl | nfe | Belly Drum | Leftovers | Water Absorb | Adamant | 4 HP / 252 Atk / 252 Spe | Belly Drum; Body Slam; Hypnosis; Earthquake | Evolve it into Poliwrath (Water Stone) or Politoed (trade with a King's Rock).
+Kadabra | nfe | Calm Mind | Leftovers | Synchronize | Timid | 4 HP / 252 SpA / 252 Spe | Calm Mind; Psychic; Recover; Fire Punch / Thunderpunch | Trade it to evolve it into Alakazam.
+Geodude | lc | Sturdy attacker | Oran Berry | Sturdy | Adamant | 252 HP / 252 Atk / 4 Def | Earthquake; Rock Slide; Explosion; Counter |
+Slowpoke | lc | Bulky attacker | Oran Berry | Own Tempo | Modest | 252 HP / 252 SpA / 4 SpD | Surf; Psychic; Thunder Wave; Ice Beam |
+Seel | lc | Encore support | Oran Berry | Thick Fat | Bold | 252 HP / 252 Def / 4 SpD | Surf; Ice Beam; Encore; Toxic |
+Shellder | lc | Spinner | Oran Berry | Shell Armor | Modest | 4 HP / 252 SpA / 252 Spe | Surf; Ice Beam; Rapid Spin; Explosion |
+Krabby | lc | Swords Dance | Oran Berry | Hyper Cutter | Adamant | 4 HP / 252 Atk / 252 Spe | Swords Dance; Return; Crabhammer; Knock Off |
+Chansey | nfe | Special wall | Leftovers | Natural Cure | Bold | 252 HP / 252 Def / 4 SpD | Softboiled; Seismic Toss; Aromatherapy / Heal Bell; Toxic / Thunder Wave | Blissey is better at the same job: evolve Chansey with high friendship.
+Goldeen | lc | Swift attacker | Oran Berry | Swift Swim | Adamant | 4 HP / 252 Atk / 252 Spe | Megahorn; Return; Agility; Toxic |
+Magikarp | ingame | Evolve it | Oran Berry | Swift Swim | Hardy | | Splash; Tackle; Flail | No competitive use: evolve it into Gyarados at level 20.
+Eevee | lc | Wish support | Oran Berry | Run Away | Adamant | 252 HP / 252 Atk / 4 Def | Wish; Return; Shadow Ball; Protect | Evolve it with a stone or friendship for a much stronger Pokémon.
+Kabuto | lc | Spinner | Oran Berry | Battle Armor | Naive | 4 HP / 252 Atk / 252 Spe | Rapid Spin; Rock Slide; Surf; Ice Beam |
+Dratini | lc | Dragon Dance | Oran Berry | Shed Skin | Adamant | 4 HP / 252 Atk / 252 Spe | Dragon Dance; Return; Thunder Wave; Rest |
+Chikorita | lc | Leech Seed staller | Oran Berry | Overgrow | Calm | 252 HP / 4 Def / 252 SpD | Leech Seed; Giga Drain; Synthesis; Toxic |
+Cyndaquil | lc | Special attacker | Oran Berry | Blaze | Timid | 4 HP / 252 SpA / 252 Spe | Flamethrower; Hidden Power Grass; Quick Attack; Sunny Day |
+Totodile | lc | Swords Dance | Oran Berry | Torrent | Adamant | 4 HP / 252 Atk / 252 Spe | Swords Dance; Return; Rock Slide; Brick Break |
+Sentret | lc | Fast attacker | Oran Berry | Keen Eye | Jolly | 4 HP / 252 Atk / 252 Spe | Return; Shadow Ball; Brick Break; Quick Attack |
+Hoothoot | lc | Support | Oran Berry | Insomnia | Calm | 252 HP / 4 Def / 252 SpD | Toxic; Psychic; Reflect; Whirlwind |
+Ledyba | lc | Screens and Baton Pass | Oran Berry | Early Bird | Bold | 252 HP / 252 Def / 4 SpD | Reflect; Light Screen; Baton Pass; Agility |
+Spinarak | lc | Poisoner | Oran Berry | Insomnia | Adamant | 252 HP / 252 Atk / 4 Def | Sludge Bomb; Toxic; Night Shade; Agility |
+Pichu | lc | Special attacker | Oran Berry | Static | Timid | 4 HP / 252 SpA / 252 Spe | Thunderbolt; Hidden Power Ice; Thunder Wave; Substitute |
+Cleffa | lc | Wish support | Oran Berry | Cute Charm | Bold | 252 HP / 252 Def / 4 SpD | Wish; Encore; Seismic Toss; Thunder Wave |
+Igglybuff | lc | Wish support | Oran Berry | Cute Charm | Bold | 252 HP / 252 Def / 4 SpD | Wish; Sing; Seismic Toss; Protect |
+Mareep | lc | Special attacker | Oran Berry | Static | Modest | 4 HP / 252 SpA / 252 Spe | Thunderbolt; Hidden Power Ice; Thunder Wave; Light Screen |
+Marill | lc | Huge Power | Oran Berry | Huge Power | Adamant | 252 HP / 252 Atk / 4 Def | Belly Drum; Return; Brick Break; Rest |
+Hoppip | lc | Sleep and seed | Oran Berry | Chlorophyll | Timid | 252 HP / 4 Def / 252 Spe | Sleep Powder; Leech Seed; Encore; Substitute |
+Skiploom | nfe | Sleep and seed | Leftovers | Chlorophyll | Timid | 252 HP / 4 Def / 252 Spe | Sleep Powder; Leech Seed; Encore; Substitute | Evolve it into Jumpluff at level 27.
+Sunkern | lc | Sun attacker | Oran Berry | Chlorophyll | Modest | 4 HP / 252 SpA / 252 Spe | Sunny Day; Solarbeam; Hidden Power Fire; Synthesis |
+Wooper | lc | Bulky Ground | Oran Berry | Water Absorb | Impish | 252 HP / 252 Def / 4 SpD | Earthquake; Surf; Toxic; Yawn |
+Teddiursa | lc | Swords Dance | Oran Berry | Pickup | Jolly | 4 HP / 252 Atk / 252 Spe | Swords Dance; Return; Earthquake; Brick Break |
+Slugma | lc | Special attacker | Oran Berry | Flame Body | Modest | 252 HP / 252 SpA / 4 SpD | Flamethrower; Hidden Power Grass; Toxic; Protect |
+Swinub | lc | Mixed attacker | Oran Berry | Oblivious | Naughty | 4 HP / 252 Atk / 252 Spe | Earthquake; Ice Beam; Rock Slide; Toxic |
+Remoraid | lc | Special attacker | Oran Berry | Hustle | Modest | 4 HP / 252 SpA / 252 Spe | Surf; Ice Beam; Hidden Power Grass; Flamethrower |
+Phanpy | lc | Physical attacker | Oran Berry | Pickup | Adamant | 252 HP / 252 Atk / 4 Def | Earthquake; Rock Tomb; Body Slam; Toxic |
+Tyrogue | lc | Spinner | Oran Berry | Guts | Adamant | 4 HP / 252 Atk / 252 Spe | Hi Jump Kick; Mach Punch; Rapid Spin; Return |
+Torchic | lc | Special attacker | Oran Berry | Blaze | Modest | 4 HP / 252 SpA / 252 Spe | Flamethrower; Hidden Power Grass; Quick Attack; Protect |
+Mudkip | lc | Special attacker | Oran Berry | Torrent | Modest | 252 HP / 252 SpA / 4 SpD | Surf; Ice Beam; Mirror Coat; Toxic |
+Poochyena | lc | Mixed attacker | Oran Berry | Run Away | Naive | 4 HP / 252 Atk / 252 Spe | Return; Crunch; Iron Tail; Shadow Ball |
+Zigzagoon | lc | Belly Drum | Oran Berry | Pickup | Adamant | 4 HP / 252 Atk / 252 Spe | Belly Drum; Return; Shadow Ball; Substitute |
+Wurmple | ingame | Evolve it | Oran Berry | Shield Dust | Hardy | | Tackle; String Shot; Poison Sting | No competitive use: evolve it into Beautifly or Dustox.
+Silcoon | ingame | Evolve it | Oran Berry | Shed Skin | Hardy | | Harden; Tackle; String Shot | No competitive use: evolve it into Beautifly.
+Cascoon | ingame | Evolve it | Oran Berry | Shed Skin | Hardy | | Harden; Tackle; String Shot | No competitive use: evolve it into Dustox.
+Lotad | lc | Rain attacker | Oran Berry | Swift Swim | Modest | 4 HP / 252 SpA / 252 Spe | Rain Dance; Giga Drain; Ice Beam; Leech Seed |
+Seedot | lc | Swords Dance | Oran Berry | Early Bird | Adamant | 4 HP / 252 Atk / 252 Spe | Swords Dance; Return; Explosion; Toxic |
+Nuzleaf | nfe | Swords Dance | Leftovers | Early Bird | Adamant | 4 HP / 252 Atk / 252 Spe | Swords Dance; Return; Explosion; Shadow Ball | Evolve it into Shiftry with a Leaf Stone.
+Wingull | lc | Special attacker | Oran Berry | Keen Eye | Timid | 4 HP / 252 SpA / 252 Spe | Water Pulse; Ice Beam; Toxic; Protect |
+Ralts | lc | Calm Mind | Oran Berry | Trace | Timid | 4 HP / 252 SpA / 252 Spe | Calm Mind; Psychic; Hypnosis; Shadow Ball |
+Kirlia | nfe | Calm Mind | Leftovers | Trace | Timid | 4 HP / 252 SpA / 252 Spe | Calm Mind; Psychic; Hypnosis; Thunderbolt | Evolve it into Gardevoir at level 30.
+Surskit | lc | Rain attacker | Oran Berry | Swift Swim | Modest | 4 HP / 252 SpA / 252 Spe | Hydro Pump; Ice Beam; Giga Drain; Rain Dance |
+Shroomish | lc | Spore support | Oran Berry | Effect Spore | Bold | 252 HP / 252 Def / 4 SpD | Spore; Leech Seed; Giga Drain; Stun Spore |
+Slakoth | lc | Bulky support | Oran Berry | Truant | Impish | 252 HP / 252 Def / 4 SpD | Slack Off; Return; Encore; Yawn |
+Nincada | lc | Physical attacker | Oran Berry | Compoundeyes | Adamant | 4 HP / 252 Atk / 252 Spe | Dig; Aerial Ace; Leech Life; Fury Swipes | Evolving it at level 20 with a free party slot and a Poké Ball also gives you Shedinja.
+Whismur | lc | Special attacker | Oran Berry | Soundproof | Modest | 252 HP / 252 SpA / 4 SpD | Hyper Voice; Ice Beam; Flamethrower; Rest |
+Makuhita | lc | Bulk Up | Oran Berry | Thick Fat | Adamant | 252 HP / 252 Atk / 4 Def | Bulk Up; Cross Chop; Fake Out; Rock Slide |
+Azurill | lc | Huge Power | Oran Berry | Huge Power | Adamant | 252 HP / 252 Atk / 4 Def | Return; Encore; Substitute; Rest |
+Electrike | lc | Special attacker | Oran Berry | Static | Timid | 4 HP / 252 SpA / 252 Spe | Thunderbolt; Hidden Power Ice; Thunder Wave; Quick Attack |
+Gulpin | lc | Poisoner | Oran Berry | Sticky Hold | Calm | 252 HP / 4 Def / 252 SpD | Toxic; Sludge Bomb; Yawn; Protect |
+Swablu | lc | Support | Oran Berry | Natural Cure | Jolly | 252 HP / 4 Atk / 252 Spe | Toxic; Refresh; Aerial Ace; Return |
+Barboach | lc | Physical attacker | Oran Berry | Oblivious | Adamant | 4 HP / 252 Atk / 252 Spe | Earthquake; Return; Rest; Toxic |
+Corphish | lc | Swords Dance | Oran Berry | Hyper Cutter | Adamant | 4 HP / 252 Atk / 252 Spe | Swords Dance; Return; Brick Break; Ancientpower |
+Feebas | ingame | Evolve it | Oran Berry | Swift Swim | Bold | | Splash; Tackle; Flail | No competitive use: raise its Beauty with Pokéblocks in Ruby, Sapphire or Emerald to evolve it into Milotic.
+Spheal | lc | Bulky attacker | Oran Berry | Thick Fat | Modest | 252 HP / 252 SpA / 4 SpD | Surf; Ice Beam; Encore; Rest |
+Beldum | ingame | Evolve it | Oran Berry | Clear Body | Adamant | | Take Down | Beldum only knows Take Down until it evolves into Metang at level 20.

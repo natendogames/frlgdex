@@ -120,6 +120,7 @@ function renderMon(id) {
     <h2>Type matchups</h2><div class="card"><table class="mini">
       ${gl(4) ? `<tr><td>Takes 4×</td><td>${gl(4)}</td></tr>` : ''}${gl(2) ? `<tr><td>Takes 2×</td><td>${gl(2)}</td></tr>` : ''}
       ${gl(0.5) ? `<tr><td>Takes ½×</td><td>${gl(0.5)}</td></tr>` : ''}${gl(0.25) ? `<tr><td>Takes ¼×</td><td>${gl(0.25)}</td></tr>` : ''}${gl(0) ? `<tr><td>Immune</td><td>${gl(0)}</td></tr>` : ''}</table></div>
+    ${typeof buildsSection === 'function' ? buildsSection(n) : ''}
     <h2>Evolution</h2><div class="card">${evoChain(n)}</div>
     <h2>Level-up moves</h2><div class="card"><table class="mini"><tr><th>Lv</th><th>Move</th><th>Type</th><th>Power</th></tr>
       ${(p.learnset || []).map(([l, mv]) => { const m = state.moves[mv] || {}; return `<tr><td>${l}</td><td>${esc(mv)}</td><td>${m.type ? typeTag(m.type) : ''}</td><td>${m.power > 1 ? m.power : m.power === 1 ? 'varies' : '—'}</td></tr>`; }).join('')}</table></div>

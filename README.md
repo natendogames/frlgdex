@@ -7,6 +7,7 @@ A phone-friendly, offline-capable 100% completion guide for Pokémon FireRed and
 - **Pokédex**: Kanto 151 or National 386, showing where to catch each one, what to evolve it from, or which version to trade from.
 - **Battle plan**: enter your team to see who to send out against each Gym Leader, rival battle, Giovanni, the Elite Four and the Champion (rival teams depend on your starter).
 - **Team plan**: the best team at every point of the game for your version and starter. Before each key battle it lists who to catch or box, who evolves, which moves and TMs to teach, the lineup and who to lead with, all as checkboxes. The battle checkbox is the same one as on the route page, and a button copies the lineup into the Battle plan.
+- **Competitive builds**: every Pokémon page lists Smogon's ADV (Gen 3) sets: best natures, abilities, items and top moves at a glance, then each full build (tier, item, ability, nature, EV spread, IVs and Hidden Power, moves with alternatives). Every move and item says how to get it in FireRed/LeafGreen (level, TM, tutor, egg move) or flags it ⚠ when it needs another game or an event. A button copies the set in Showdown format, and a link opens Smogon's analysis. The 85 Pokémon Smogon has no set for (mostly unevolved ones) get a hand-written Draft build.
 - **Reference pages**: every Pokémon (stats, abilities, catch rate, EV yield, where to get it, evolutions, level-up/TM/tutor moves), TM, item and move, plus search (🔍) across all of them.
 - **Progress**: completion by category and part of the game, badges, "still missing" Pokémon with the earliest place to get each, and a tappable town map shaded by completion.
 - **Shops and tutors**: buy-only TMs and Game Corner prizes as checklist rows; every move tutor on its location page.
@@ -44,6 +45,21 @@ python3 -I scripts/build_data.py /tmp/pokefirered data
 | `items.json` | Every item's Bag description, price and pocket, plus what held berries do |
 | `region-map.json` | The game's town-map grid per region, cell → location |
 | `tms.json` | TM/HM number → move, whether it can be reused (HMs, Department Store and Game Corner TMs) and every place you get one; `pokedex.json` lists each species' `tmhm` |
+| `builds.json` | Competitive builds per national dex number (shared with the Emerald app): Smogon ADV sets (format, name, level, move slots, items, abilities, natures, EVs, IVs, Hidden Power IVs) and how each move is learned in Gen 3. Built by `scripts/build_builds.py`, see below |
+
+## Competitive builds
+
+`data/builds.json` comes from Smogon's Gen 3 strategy dex (as published by [pkmn/smogon](https://github.com/pkmn/smogon)) and is checked against
+[Pokémon Showdown](https://github.com/smogon/pokemon-showdown)'s Gen 3 learnsets, so every move is one the Pokémon (or what it evolves from) can learn in Gen 3.
+Pokémon without a Smogon set get the hand-written Draft builds in `scripts/draft_builds.txt`, which go through the same checks.
+
+```
+curl -sLo /tmp/gen3.json https://raw.githubusercontent.com/pkmn/smogon/main/data/sets/gen3.json
+git clone --depth 1 https://github.com/smogon/pokemon-showdown /tmp/ps
+python3 -I scripts/build_builds.py /tmp/gen3.json /tmp/ps data
+```
+
+`node tests/builds.js` (in CI) checks every set renders on its Pokémon page, every move resolves to a way to learn it, and items, abilities, natures, EVs and Hidden Power IVs are legal.
 
 ## Team planner
 
