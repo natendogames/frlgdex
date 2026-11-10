@@ -227,7 +227,11 @@
    "id": "hidden-outside-lum-berry",
    "name": "Lum Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "later": true,
+   "need": "Come in from Victory Road",
+   "after": "victory-road",
+   "stage": 60
   },
   {
    "id": "hidden-outside-sitrus-berry",
@@ -251,7 +255,11 @@
    "id": "hidden-outside-max-elixir",
    "name": "Max Elixir",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "later": true,
+   "need": "Come in from Victory Road",
+   "after": "victory-road",
+   "stage": 60
   }
  ],
  "gifts": [],

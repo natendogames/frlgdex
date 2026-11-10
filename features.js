@@ -167,7 +167,7 @@ function itemPlaces(name) {
   const q = base(name), out = [];
   for (const l of state.index) {
     const loc = state.locations[l.id];
-    for (const i of loc.items) if (base(i.name) === q) out.push({ kind: 'find', key: `${loc.id}:item:${i.id}`, loc, text: `${i.hidden ? 'Hidden' : 'On the ground'}${i.where ? ` · ${i.where}` : ''}`, name: i.name });
+    for (const i of loc.items) if (base(i.name) === q) out.push({ kind: 'find', key: `${loc.id}:item:${i.id}`, loc, text: `${i.hidden ? 'Hidden' : 'On the ground'}${i.where ? ` · ${i.where}` : ''}${i.later && i.need ? ` · Later: ${/^(Come in|After) /.test(i.need) ? i.need.replace(/^After/, 'after') : 'needs ' + i.need}` : ''}`, name: i.name });
     for (const g of loc.gifts) if (inVersion(g) && base(g.name) === q) out.push({ kind: 'find', key: `${loc.id}:gift:${g.id}`, loc, text: `Given · ${[g.from, g.where].filter(Boolean).join(' · ')}`, name: g.name });
     for (const sh of state.extras.shops[loc.id] || []) for (const it of sh.items) if (base(it.name) === q)
       out.push({ kind: sh.coins ? 'prize' : 'buy', key: collectible(sh, it) ? shopKey(loc.id, sh, it) : null, loc, text: `${sh.where} · ${sh.coins ? `${it.price.toLocaleString()} coins` : money(it.price)}`, name: it.name });

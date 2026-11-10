@@ -131,7 +131,11 @@
    "id": "wardens-house-rare-candy",
    "name": "Rare Candy",
    "hidden": false,
-   "where": "Wardens House"
+   "where": "Wardens House",
+   "later": true,
+   "need": "Strength (HM04 from the Safari Zone warden for his Gold Teeth, used with the Rainbow Badge)",
+   "after": "safari-zone",
+   "stage": 38.5
   }
  ],
  "gifts": [

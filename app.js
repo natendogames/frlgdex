@@ -170,7 +170,7 @@ function walkStep(text, locId) {
 const LATER_GIFT = /\(|Prize clerk|Pick one fossil/;
 function beforeYouLeave(loc) {
   const s = cur();
-  const hidden = loc.items.filter(i => i.hidden && inVersion(i) && !s.checks[`${loc.id}:item:${i.id}`]);
+  const hidden = loc.items.filter(i => i.hidden && !i.later && inVersion(i) && !s.checks[`${loc.id}:item:${i.id}`]);
   const gifts = locView(loc).gifts.filter(g => !g.after && !LATER_GIFT.test(g.from || '') && !/^Trade/.test(g.name) && !s.checks[`${loc.id}:gift:${g.id}`]);
   if (!hidden.length && !gifts.length) return '';
   const parts = [];
@@ -179,6 +179,11 @@ function beforeYouLeave(loc) {
   return `<div class="card note"><b>Before you leave:</b> ${parts.join('; and ')}. They're easy to miss on a first visit.</div>`;
 }
 
+// "Come back later" note for items: what you need first ("Needs Surf (HM03 ...)."), the side you have to come in from
+// ("Come in from Victory Road"), or the story point that opens them ("After ...").
+const laterNeed = need => !need ? "You can't reach these on your first visit."
+  : /^Come in /.test(need) ? `${need} later in the story: you can't get to these from where you first arrive.`
+  : /^After /.test(need) ? `${need}.` : `Needs ${need}.`;
 const getJSON = url => fetch(url).then(r => { if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); });
 async function loadData() {
   const [idx, dex, trainers, types, walk, moves, tms, extras, items] = await Promise.all(['data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json', 'data/tms.json', 'data/extras.json', 'data/items.json'].map(getJSON));
@@ -424,15 +429,27 @@ function renderLocation(id) {
 
   const section = (title, list, kind, subFn) => {
     html += `<h2>${title} (${list.filter(x => s.checks[`${loc.id}:${kind}:${x.id}`]).length}/${list.length})</h2><div class="card">`;
-    if (!list.length) html += '<div class="empty">None.</div>';
+    if (!list.length) html += `<div class="empty">${kind === 'item' && loc.items.some(i => i.later) ? 'None on your first visit.' : 'None.'}</div>`;
     for (const [area, grp] of Object.entries(groupBy(list, x => x.where))) {
       if (area && kind === 'item') html += `<div class="area">${esc(area)}</div>`;
       html += grp.map(x => { const k = `${loc.id}:${kind}:${x.id}`; return checkRow(k, s.checks[k], esc(x.name), subFn(x), typeof itemInfoLink === 'function' ? itemInfoLink(x.name) : ''); }).join('');
     }
     html += `</div>`;
   };
-  section('Items', loc.items.filter(i => !i.hidden), 'item', () => 'On the ground');
-  section('Hidden items', loc.items.filter(i => i.hidden), 'item', () => 'Hidden: use the Itemfinder');
+  // Items you can pick up on your first visit come first; ones behind water, trees, rocks, boulders, Snorlax or a
+  // later story point (worked out from the map tiles at build time: scripts/reach.py) wait in "come back later".
+  section('Items', loc.items.filter(i => !i.hidden && !i.later), 'item', () => 'On the ground');
+  section('Hidden items', loc.items.filter(i => i.hidden && !i.later), 'item', () => 'Hidden: use the Itemfinder');
+  const laterItems = loc.items.filter(i => i.later);
+  if (laterItems.length) {
+    html += `<details class="later"><summary><h2>Items: come back later (${laterItems.filter(x => s.checks[`${loc.id}:item:${x.id}`]).length}/${laterItems.length})</h2></summary>`;
+    for (const [need, grp] of Object.entries(groupBy(laterItems, i => i.need || ''))) {
+      html += `<div class="card"><p class="note">${esc(laterNeed(need))}</p>`;
+      html += grp.map(x => { const k = `${loc.id}:item:${x.id}`; return checkRow(k, s.checks[k], esc(x.name), [x.hidden ? 'Hidden: use the Itemfinder' : 'On the ground', x.where && x.where !== 'Outside' ? esc(x.where) : ''].filter(Boolean).join(' · '), typeof itemInfoLink === 'function' ? itemInfoLink(x.name) : ''); }).join('');
+      html += `</div>`;
+    }
+    html += `</details>`;
+  }
   section('NPC gifts &amp; trades', v.gifts, 'gift', g => [g.from && esc(g.from), esc(g.where)].filter(Boolean).join(' · '));
   for (const f of LOC_SECTIONS) html += f(loc);
   view.innerHTML = html;
@@ -589,7 +606,8 @@ function tmStage(src, tm) {
   // a trainer who hands it over as a battle reward (Gym Leaders, Giovanni...): only after that battle
   const t = (state.locations[src.loc]?.trainers || []).find(x => (x.rewards || []).some(r => r.split(' ')[0] === tm));
   if (t) return battleStage(t, src.loc) + 0.5;
-  return stageOf(src.loc) + (/after (winning|beating)/i.test(src.from || '') ? 0.5 : 0);
+  // a TM lying somewhere you can only reach later (across water, behind a tree...): from when you can reach it
+  return Math.max(src.stage ?? 0, stageOf(src.loc) + (/after (winning|beating)/i.test(src.from || '') ? 0.5 : 0));
 }
 function tmsBy(stage) {
   if (tmCache[stage]) return tmCache[stage];

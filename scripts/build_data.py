@@ -211,8 +211,10 @@ for line in open(P('data/scripts/item_ball_scripts.inc')):
     if m and cur: balls[cur] = (m.group(1), int(m.group(2) or 1))
 
 item_flags = {}  # checklist key -> the save flag set when you pick it up (for save file import)
-def add_item(loc, name, qty, hidden, where, ident, flag=None):
+item_pos = {}  # (location id, item id) -> where it sits on the map, for the reachability walk
+def add_item(loc, name, qty, hidden, where, ident, flag=None, pos=None):
     loc['items'].append({'id': ident, 'name': name + (f' ×{qty}' if qty > 1 else ''), 'hidden': hidden, 'where': where})
+    if pos: item_pos[(loc['id'], ident)] = pos
     if flag: item_flags[f"{loc['id']}:item:{ident}"] = flag
 
 seen_ids = collections.Counter()
@@ -229,11 +231,12 @@ for name in sorted(maps):
     for ev in m.get('object_events') or []:
         if ev.get('script') in balls:
             it, q = balls[ev['script']]
-            add_item(loc, item_name(it), q, False, area, uid(loc, f'{area}-{item_name(it)}'), ev.get('flag'))
+            add_item(loc, item_name(it), q, False, area, uid(loc, f'{area}-{item_name(it)}'), ev.get('flag'), (name, ev['x'], ev['y'], ev.get('elevation') or 0, False))
     for ev in m.get('bg_events') or []:
         if ev.get('type') == 'hidden_item':
             add_item(loc, item_name(ev['item']), int(ev.get('quantity') or 1), True,
-                     area + (' (underfoot)' if ev.get('underfoot') else ''), uid(loc, f'hidden-{area}-{item_name(ev["item"])}'), ev.get('flag'))
+                     area + (' (underfoot)' if ev.get('underfoot') else ''), uid(loc, f'hidden-{area}-{item_name(ev["item"])}'), ev.get('flag'),
+                     (name, ev['x'], ev['y'], ev.get('elevation') or 0, bool(ev.get('underfoot'))))
 
 # NPC gifts, static encounters, trades
 trades_src = open(P('src/data/ingame_trades.h')).read()
@@ -692,6 +695,72 @@ def ace_of(t):
     parties = [t['party']] if 'party' in t else list(t['byStarter'].values())
     return max(p['level'] for pty in parties for p in pty)
 keys = sorted(((order_pos[t.get('stage') or t['location']], ace_of(t), t.get('stage') or t['location']) for t in trainers))
+# ---------- when can you reach each item? ----------
+# A walk over the real map tiles (scripts/reach.py, shared with the Emerald app): water, waterfalls, ledges, Cut trees,
+# Rock Smash rocks, Strength boulders, Snorlax, warps and the Seagallop ferries, with each map opening when the story
+# reaches its location and each field move once you have its HM and the badge to use it.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import reach
+def stage_after(lid, plus=0.5): return order_pos[lid] + plus
+ABILITIES = {
+    'cut': (stage_after('ss-anne'), 'Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)'),
+    'poke-flute': (stage_after('pokemon-tower'), 'the Poké Flute (from Mr. Fuji after the Pokémon Tower) to wake Snorlax'),
+    'surf': (stage_after('safari-zone'), 'Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)'),
+    'strength': (stage_after('safari-zone'), "Strength (HM04 from the Safari Zone warden for his Gold Teeth, used with the Rainbow Badge)"),
+    'rock-smash': (stage_after('ember-spa'), 'Rock Smash (HM06 from the Ember Spa on One Island, used with the Marsh Badge)'),
+    'waterfall': (stage_after('icefall-cave'), 'Waterfall (HM07 from Lorelei in Icefall Cave, used with the Volcano Badge)'),
+}
+OBSTACLES = {'OBJ_EVENT_GFX_CUT_TREE': 'cut', 'OBJ_EVENT_GFX_ROCK_SMASH_ROCK': 'rock-smash',
+             'OBJ_EVENT_GFX_PUSHABLE_BOULDER': 'strength', 'OBJ_EVENT_GFX_SNORLAX': 'poke-flute'}
+# The Seagallop ferries (src/seagallop.c) link Vermilion, Cinnabar and the Sevii Islands; each opens with its place.
+PORTS = [('VermilionCity', 23, 32), ('CinnabarIsland', 21, 7)] + [(f'{n}Island_Harbor', 8, 5) for n in ('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven')]
+TRANSPORTS = [(a, b, x, y) for a, _, _ in PORTS for b, x, y in PORTS if a != b]
+MAP_OPEN = {}
+def map_stage(name):
+    if name not in maps or maps[name]['region_map_section'] in SKIP: return None
+    if name in MAP_OPEN: return MAP_OPEN[name][0]
+    return order_pos.get(loc_id(maps[name]['region_map_section']))
+world = reach.World(SRC, 'frlg', maps, map_stage, ABILITIES, OBSTACLES, [], TRANSPORTS, {})
+world.solve(('PalletTown', 6, 8))
+key_stages = sorted({k[0] for k in keys})
+def first_visit_until(lid):
+    """Everything up to the next key battle at or after a place counts as its first visit, so an item is 'later'
+    only when it needs a later story point than that."""
+    here = order_pos[lid]
+    return next((k for k in key_stages if k >= here), here)
+def describe(loc, st, kind, what):
+    if kind == 'ability': return ABILITIES[what][1], index[int(ABILITIES[what][0])]['id']
+    if kind == 'gate': return what, index[int(st)]['id']
+    if what in MAP_OPEN and MAP_OPEN[what][1]: return MAP_OPEN[what][1], index[int(st)]['id']
+    via = loc_id(maps[what]['region_map_section']) if what in maps else what
+    if via != loc['id'] and via in locs: return f"Come in from {locs[via]['name']}", via
+    return f"After {index[int(st)]['name']}", index[int(st)]['id']
+unreachable = []
+for loc in locs.values():
+    if loc['id'] not in order_pos: continue
+    for it in loc['items']:
+        pos = item_pos.get((loc['id'], it['id']))
+        if not pos: continue
+        mapname, x, y, el, under = pos
+        r = world.item_reach(mapname, x, y, el, under)
+        if r is None:
+            # puzzles the walk can't solve (switch doors, spinner floors): open with the map
+            unreachable.append(f"{loc['id']}: {it['name']} ({mapname} {x},{y})")
+            r = (map_stage(mapname), ('map', mapname))
+        st, (kind, what) = r
+        if st <= first_visit_until(loc['id']): continue
+        it['later'] = True
+        it['need'], it['after'] = describe(loc, st, kind, what)
+        it['stage'] = st
+os.makedirs(os.path.join(OUT, 'verify'), exist_ok=True)
+json.dump({'_about': 'Written by scripts/build_data.py from the reachability walk (scripts/reach.py). Read by tests/item_reach.js.',
+           'abilities': {k: {'stage': v[0], 'need': v[1]} for k, v in ABILITIES.items()},
+           'firstVisitUntil': {x['id']: first_visit_until(x['id']) for x in index},
+           'puzzles': unreachable},
+          open(os.path.join(OUT, 'verify', 'item-reach.json'), 'w'), ensure_ascii=False, indent=1)
+if unreachable:
+    print(f'reach: {len(unreachable)} items behind puzzles the walk cannot solve (timed by their map):', *unreachable, sep='\n  ', file=sys.stderr)
+
 for loc in locs.values():
     if loc['id'] not in order_pos: continue
     here = order_pos[loc['id']]
@@ -728,7 +797,8 @@ for x in index:
             m = re.match(r'((?:TM|HM)\d+)\b', it['name'])
             if m and m.group(1) in tms:
                 tms[m.group(1)]['sources'].append({'loc': x['id'], 'how': 'gift' if kind == 'gifts' else 'found', 'where': it.get('where'),
-                                                   **({'from': it['from']} if it.get('from') else {})})
+                                                   **({'from': it['from']} if it.get('from') else {}),
+                                                   **({'stage': it['stage'], 'need': it['need']} if it.get('later') else {})})
 mart = re.search(r'CeladonCity_DepartmentStore_2F_TMs::(.*?)ITEM_NONE', open(P('data/maps/CeladonCity_DepartmentStore_2F/scripts.inc')).read(), re.S).group(1)
 for c in re.findall(r'ITEM_((?:TM|HM)\d+)', mart):
     tms[c]['reusable'] = True

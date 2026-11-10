@@ -7,7 +7,11 @@
    "id": "hidden-outside-leppa-berry",
    "name": "Leppa Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "later": true,
+   "need": "Come in from Water Path",
+   "after": "water-path",
+   "stage": 76
   }
  ],
  "gifts": [],

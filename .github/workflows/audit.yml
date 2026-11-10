@@ -16,6 +16,7 @@ jobs:
       - run: node tests/features.js
       - run: node tests/walkthrough.js
       - run: node tests/builds.js
+      - run: node tests/item_reach.js
       - uses: actions/upload-artifact@v4
         if: always()
         with:
