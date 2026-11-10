@@ -656,7 +656,9 @@
    {
     "loc": "route-12",
     "how": "found",
-    "where": "Outside"
+    "where": "Outside",
+    "stage": 38.5,
+    "need": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)"
    }
   ]
  },

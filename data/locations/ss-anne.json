@@ -194,7 +194,11 @@
    "id": "hidden-exterior-lava-cookie",
    "name": "Lava Cookie",
    "hidden": true,
-   "where": "Exterior"
+   "where": "Exterior",
+   "later": true,
+   "need": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)",
+   "after": "safari-zone",
+   "stage": 38.5
   },
   {
    "id": "kitchen-great-ball",

@@ -163,7 +163,11 @@
    "id": "hidden-green-path-ultra-ball",
    "name": "Ultra Ball",
    "hidden": true,
-   "where": "Green Path"
+   "where": "Green Path",
+   "later": true,
+   "need": "Come in from Pattern Bush",
+   "after": "pattern-bush",
+   "stage": 80
   }
  ],
  "gifts": [],

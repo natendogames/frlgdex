@@ -67,13 +67,21 @@
    "id": "outside-ether",
    "name": "Ether",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "later": true,
+   "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
+   "after": "ss-anne",
+   "stage": 17.5
   },
   {
    "id": "outside-parlyz-heal",
    "name": "Parlyz Heal",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "later": true,
+   "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
+   "after": "ss-anne",
+   "stage": 17.5
   }
  ],
  "gifts": [

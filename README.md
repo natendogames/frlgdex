@@ -30,6 +30,8 @@ git clone --depth 1 https://github.com/pret/pokefirered /tmp/pokefirered
 python3 -I scripts/build_data.py /tmp/pokefirered data
 ```
 
+Items are split by when you can reach them. `scripts/reach.py` (the same file as in the Emerald app) walks the real map tiles: water, waterfalls, ledges, Cut trees, Rock Smash rocks, Strength boulders, Snorlax, warps and the Seagallop ferries, with each map opening when the story reaches its location and each field move once you have its HM and badge (`ABILITIES` in the build script). An item that needs a later point than the place's first visit is listed under "Items: come back later" with what it needs. `tests/item_reach.js` checks the result against every Bulbapedia walkthrough note that says an item "requires" a field move.
+
 `data/walkthrough.json` holds the hand-written story steps and is not overwritten by the script.
 
 | File | Contents |
