@@ -60,7 +60,8 @@
    ],
    "area": "House",
    "notes": "Trade: give Abra, get Mr. Mime (\"Mimien\") · Reyley",
-   "after": "ss-anne"
+   "after": "ss-anne",
+   "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)"
   }
  ],
  "items": [

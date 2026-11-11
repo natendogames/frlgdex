@@ -810,7 +810,7 @@ for loc in locs.values():
             # the Pokémon row for a gift or trade waits too (the Pokédex counts it from then)
             for e in loc['encounters']:
                 if e['method'] in ('gift', 'trade', 'game-corner') and (e.get('notes') or '').startswith(g['name'] + ' · '):
-                    e['after'] = g['after']
+                    e['after'], e['need'] = g['after'], g['need']
     for t in loc['trainers']:
         src = trainer_src.get((loc['id'], t['id']))
         if not src: continue
