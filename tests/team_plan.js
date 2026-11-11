@@ -121,7 +121,7 @@ const ok = (cond, msg) => { checks++; if (!cond) fail(msg); };
   ok((html.match(/<details class="card leg/g) || []).length === plan.legs.length, 'one section per key battle');
   ok((html.match(/ open>/g) || []).length === 1, 'only the next leg is open');
   // ticking a box saves it
-  const k = expected[0], change = view._l.change, cls = { classList: { toggle() {} } };
+  const k = expected.find(x => x.startsWith('plan:')), change = view._l.change, cls = { classList: { toggle() {} } };
   change({ target: { dataset: { key: k }, checked: true, closest: s => (s === 'details.leg' ? null : cls) } });
   ok(state.progress.saves.FR.checks[k] === true, 'ticking a step saves it');
   app.renderPlan();
@@ -129,7 +129,7 @@ const ok = (cond, msg) => { checks++; if (!cond) fail(msg); };
   change({ target: { dataset: { key: k }, checked: false, closest: s => (s === 'details.leg' ? null : cls) } });
   ok(!state.progress.saves.FR.checks[k], 'unticking a step clears it');
   // finishing the first leg opens the second
-  for (const x of app.legKeys(plan.legs[0])) state.progress.saves.FR.checks[x] = true;
+  for (const x of app.legKeys(plan.legs[0])) { if (x.startsWith('dex:')) state.progress.saves.FR.caught[x.slice(4)] = true; else state.progress.saves.FR.checks[x] = true; }
   app.renderPlan();
   ok(view.innerHTML.includes('data-leg="1" open>'), 'the next unfinished leg opens');
   // the lineup button fills the Battle plan
