@@ -164,6 +164,21 @@ function walkStep(text, locId) {
     return r.href ? `<a href="${r.href}">${esc(r.text)}</a>` : r.strong ? `<b>${esc(r.text)}</b>` : esc(r.text);
   }).join('');
 }
+// A walkthrough step split into its first-visit part and its come-back-later part: a sentence is for later when
+// every gift and trainer it names is one you can't get on your first visit; a sentence naming neither goes with the
+// one before it ("Beat Winona. Electric moves win."). Returns [now text, later text].
+function stepSplit(text, locId) {
+  const loc = state.locations[locId];
+  const parts = text.split(/(?<=[.!?])(?<!\b(?:Mr|Ms|Mrs|Dr|Lt|St|No|vs)\.)\s+(?=[A-Z{])/);
+  let prev = false;
+  const now = [], later = [];
+  for (const p of parts) {
+    const refs = [...p.matchAll(/\{(gift|trainer):([^}]+)\}/g)].map(([, k, r]) => (k === 'gift' ? loc?.gifts : loc?.trainers || []).find(x => x.id === r));
+    if (refs.length) prev = refs.every(x => x && x.later);
+    (prev ? later : now).push(p);
+  }
+  return [now.join(' '), later.join(' ')];
+}
 // One-time things on this page you could walk past on your first visit: hidden items and gifts not yet ticked
 // (gifts that only come later in the story are left out)
 // gifts with a condition in brackets (after a battle, a trade-in, enough Pokédex entries) are covered by the walkthrough instead
@@ -201,7 +216,7 @@ async function loadData() {
   state.stage = Object.fromEntries(state.index.map((l, i) => [l.id, i]));
   for (const l of state.index) for (const e of state.locations[l.id].encounters) {
     (state.found[e.dex] ||= []).push({ loc: l.id, name: l.name, method: e.method, versions: e.versions, levels: e.levels,
-      stage: encStage(l.id, e), later: encStage(l.id, e) > stageOf(l.id) });
+      stage: encStage(l.id, e), later: encStage(l.id, e) > stageOf(l.id), need: e.need });
   }
   for (const list of Object.values(state.found)) list.sort((a, b) => a.stage - b.stage);
 }
@@ -220,7 +235,8 @@ const stageOf = id => state.stage[id] ?? 0;
 // Surf is handed over in the Safari Zone but only works once you beat Koga, who you can fight after the Safari Zone,
 // so Surf encounters open half a step after it.
 const unlockStage = m => stageOf(UNLOCK[m].at) + (m === 'surf' ? 0.5 : 0);
-const encStage = (locId, e) => Math.max(stageOf(locId), UNLOCK[e.method] ? unlockStage(e.method) : -1);
+// a gift or trade Pokémon whose giver you can't reach yet (behind a Cut tree, after a story event) waits too
+const encStage = (locId, e) => Math.max(stageOf(locId), UNLOCK[e.method] ? unlockStage(e.method) : -1, e.after && state.locations[e.after] ? stageOf(e.after) : -1);
 // Gyms you can't (or needn't) take on as soon as you reach the city: everything up to this location is open before
 // the gym. Misty: Routes 24 and 25 are open first. Lt. Surge: the gym is behind a Cut tree (HM01 on the S.S. Anne),
 // and Route 11 and Diglett's Cave are open too. Koga: the Safari Zone. Sabrina: a Rocket blocks the gym door until
@@ -272,7 +288,7 @@ function availText(n) {
   if (a.kind === 'catch') {
     // a.where is sorted by when you can first catch it there, so the earliest chance comes first
     const uniq = [...new Map([...a.where].reverse().map(w => [w.loc, w])).values()].sort((x, y) => x.stage - y.stage);
-    return uniq.slice(0, 4).map(w => `<a href="#/loc/${w.loc}">${esc(w.name)}</a> <span class="note">(${esc(METHOD_LABEL[w.method] || w.method)}${w.later ? `, after ${esc(unlockName(w.method))}` : ''}${condText(w, n) ? `, ${esc(condText(w, n))}` : ''})</span>`).join(', ') + (uniq.length > 4 ? ` +${uniq.length - 4} more` : '');
+    return uniq.slice(0, 4).map(w => `<a href="#/loc/${w.loc}">${esc(w.name)}</a> <span class="note">(${esc(METHOD_LABEL[w.method] || w.method)}${w.later ? `, after ${esc(state.index[Math.floor(w.stage)]?.name || unlockName(w.method))}` : ''}${condText(w, n) ? `, ${esc(condText(w, n))}` : ''})</span>`).join(', ') + (uniq.length > 4 ? ` +${uniq.length - 4} more` : '');
   }
   if (a.kind === 'evolve') return `Evolve ${esc(mon(a.from).name)}: ${esc(a.how)}`;
   if (a.kind === 'missed') return missedText(a);
@@ -393,8 +409,15 @@ function renderLocation(id) {
   let html = '';
   const steps = state.walk[id];
   if (loc.notes) html += `<div class="card note">${esc(loc.notes)}</div>`;
-  if (steps?.length) html += `<h2>Walkthrough</h2><div class="card"><ol class="steps">${steps.map(x => `<li>${walkStep(x, id)}</li>`).join('')}</ol>${
-    state.walk._checked?.[id] ? '' : '<p class="note"><span class="tag">Draft</span> Not yet checked against a second source.</p>'}</div>`;
+  if (steps?.length) {
+    // the parts of steps about things you can't get yet (a gift behind a Cut tree) wait under "come back later"
+    const split = steps.map(x => stepSplit(x, id));
+    const nowSteps = split.map(x => x[0]).filter(Boolean), laterSteps = split.map(x => x[1]).filter(Boolean);
+    const ol = list => `<ol class="steps">${list.map(x => `<li>${walkStep(x, id)}</li>`).join('')}</ol>`;
+    html += `<h2>Walkthrough</h2><div class="card">${nowSteps.length ? ol(nowSteps) : '<div class="empty">Nothing to do on your first visit.</div>'}${
+      state.walk._checked?.[id] ? '' : '<p class="note"><span class="tag">Draft</span> Not yet checked against a second source.</p>'}</div>`;
+    if (laterSteps.length) html += `<details class="later"><summary><h2>Walkthrough: come back later (${laterSteps.length})</h2></summary><div class="card">${ol(laterSteps)}</div></details>`;
+  }
   html += beforeYouLeave(loc);
 
   const v = locView(loc);
@@ -422,7 +445,7 @@ function renderLocation(id) {
       if (area) out += `<div class="area">${esc(area)}</div>`;
       out += grp.map(e => {
         const sub = [METHOD_LABEL[e.method] || e.method, e.levels && `Lv ${esc(e.levels)}`, e.rate && esc(e.rate), e.notes && esc(e.notes),
-          later && `Needs ${esc(UNLOCK[e.method].need)}`].filter(Boolean).join(' · ');
+          later && (e.need ? esc(laterNeed(e.need)) : UNLOCK[e.method] ? `Needs ${esc(UNLOCK[e.method].need)}` : 'Later in the story')].filter(Boolean).join(' · ');
         const excl = e.versions.length === 1 ? `<span class="tag">${e.versions[0]} only</span>` : '';
         return checkRow(`dex:${e.dex}`, s.caught[e.dex], `#${String(e.dex).padStart(3, '0')} ${esc(e.name)} ${types(e.dex)}`, sub, excl + infoLink(e.dex) + (typeof catchLink === 'function' && !['gift', 'trade', 'game-corner'].includes(e.method) ? catchLink(id, e.dex, e.method) : ''));
       }).join('');
@@ -434,7 +457,7 @@ function renderLocation(id) {
   if (!encs.length) html += '<div class="empty">No Pokémon to catch here.</div>';
   else if (!now.length) html += '<div class="empty">Nothing to catch on your first visit.</div>';
   html += encList(now, false) + `</div>`;
-  if (later.length) html += `<details class="later"><summary><h2>Pokémon: come back later (${new Set(later.map(e => e.dex)).size})</h2></summary><div class="card"><p class="note">You can't fish, Surf or Rock Smash here on your first visit. These open up later in the story.</p>${encList(later, true)}</div></details>`;
+  if (later.length) html += `<details class="later"><summary><h2>Pokémon: come back later (${new Set(later.map(e => e.dex)).size})</h2></summary><div class="card"><p class="note">You can't get these on your first visit. They open up later in the story.</p>${encList(later, true)}</div></details>`;
 
   const section = (title, list, kind, subFn) => {
     html += `<h2>${title} (${list.filter(x => s.checks[`${loc.id}:${kind}:${x.id}`]).length}/${list.length})</h2><div class="card">`;

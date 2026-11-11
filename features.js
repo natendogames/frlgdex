@@ -95,7 +95,7 @@ function whereRows(n) {
   return `<table class="mini"><tr><th>Where</th><th>How</th><th>Lv</th><th>Rate</th></tr>${list.map(w => {
     const e = state.locations[w.loc].encounters.find(x => x.dex === n && x.method === w.method && x.levels === w.levels && (!x.versions || !w.versions || x.versions.join() === w.versions.join()));
     return `<tr><td><a href="#/loc/${w.loc}">${esc(w.name)}</a>${e?.area ? ` <span class="note">${esc(e.area)}</span>` : ''}${w.stage > here ? ' <span class="tag">ahead of you</span>' : ''}</td>
-      <td>${esc(METHOD_LABEL[w.method] || w.method)}${w.later ? `<div class="note">needs ${esc(UNLOCK[w.method].need)}</div>` : ''}${condText(w, n) ? `<div class="note">${esc(condText(w, n))}</div>` : ''}</td>
+      <td>${esc(METHOD_LABEL[w.method] || w.method)}${w.later ? `<div class="note">needs ${esc(w.need || UNLOCK[w.method]?.need || "a later story point")}</div>` : ''}${condText(w, n) ? `<div class="note">${esc(condText(w, n))}</div>` : ''}</td>
       <td>${esc(w.levels || '')}</td><td>${esc(e?.rate || '')}</td></tr>`;
   }).join('')}</table>`;
 }

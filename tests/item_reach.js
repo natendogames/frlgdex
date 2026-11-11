@@ -92,6 +92,20 @@ const LATER_CASES = J('tests/later_cases.json');
     const first = html.slice(0, cut);
     if (/Parlyz Heal/.test(first.slice(first.indexOf('<h2>Items')))) fail('Route 2 lists Parlyz Heal (behind a Cut tree) as a first-visit item');
   }
+  // gift and trade Pokémon wait with their giver, and walkthrough steps about only later things wait too
+  for (const l of state.index) {
+    const loc = state.locations[l.id];
+    for (const g of loc.gifts.filter(g => g.later))
+      for (const e of loc.encounters.filter(e => ['gift', 'trade'].includes(e.method) && (e.notes || '').startsWith(g.name)))
+        if (app.encStage(l.id, e) <= stageOf(l.id)) fail(`${l.id}: ${e.name} (${g.name}) is a first-visit Pokémon row but its giver is "come back later"`);
+  }
+  {
+    app.ctx.location.hash = '#/loc/route-2'; app.route();
+    const page = app.view.innerHTML || '';
+    const firstPart = (h, title) => h.slice(0, Math.max(0, h.indexOf(title)));
+    if (/Mr\. Mime/.test(firstPart(page, 'Pokémon: come back later').split('<h2>Pokémon</h2>')[1] || '')) fail('Route 2 shows the Mr. Mime trade (behind a Cut tree) as a first-visit Pokémon');
+    if (/HM05/.test(firstPart(page, 'Walkthrough: come back later'))) fail('Route 2 walkthrough shows the HM05 step (behind a Cut tree) as first visit');
+  }
   if (fails.length) { console.log(fails.map(f => 'FAIL ' + f).join('\n')); process.exit(1); }
   console.log(`item reach OK: ${later} of ${total} items, gifts, shops and tutors are "come back later"; ${checked} Bulbapedia "requires" notes checked; ${reach.puzzles.length} puzzle items timed by their map`);
 })();
