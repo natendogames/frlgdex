@@ -92,12 +92,25 @@ function migratePicks(s) {
   s.picks = picks;
   delete s.starter;
 }
+// One caught list for the whole app: the Pokédex, route rows, the Battle plan team and the Team plan's catch and
+// evolve steps all read and write s.caught. Older saves kept team members and ticked Team plan steps apart from it,
+// so mark those caught. 'team' marks a Pokémon caught because it went on the Battle plan team.
+function linkCaught(s) {
+  s.caught ||= {};
+  for (const n of s.team || []) s.caught[n] ||= 'team';
+  for (const k in s.checks || {}) {
+    const m = /^plan:[^:]*:(?:catch|evolve)-(\d+)$/.exec(k);
+    if (m && s.checks[k]) { s.caught[m[1]] ||= true; delete s.checks[k]; }
+  }
+}
+const markCaught = (n, how = 'team') => { const s = cur(); s.caught[n] ||= how; };
 function normaliseProgress(p) {
   if (!p || typeof p.saves !== 'object' || !p.saves) return null;
   for (const v of ['FR', 'LG']) {
     const old = p.saves[v] && typeof p.saves[v] === 'object' ? p.saves[v] : {};
     if (!old.picks) migratePicks(old);
     p.saves[v] = Object.assign(freshSave(), old);
+    linkCaught(p.saves[v]);
     delete p.saves[v].starter;
   }
   if (!['FR', 'LG'].includes(p.version)) p.version = 'FR';
@@ -524,8 +537,10 @@ function starterToTeam(prev, next) {
   if (i >= 0) {
     const old = s.team[i];
     const nn = next ? STARTER_BASE[next] + (old - STARTER_BASE[prev]) : null;
+    if (s.caught[old] === 'team') delete s.caught[old];
     if (!nn || s.team.includes(nn)) { s.team.splice(i, 1); return; }
     s.team[i] = nn;
+    s.caught[nn] ||= 'team';
     const lvl = s.teamMeta?.[old]?.level;
     if (lvl) (s.teamMeta[nn] ||= {}).level ||= lvl;
   } else if (next && !s.team.some(starterKeyOf) && s.team.length < 6) s.team.unshift(STARTER_BASE[next]);
@@ -922,6 +937,7 @@ function renderPlanner() {
       const defaults = bestMoves(n, meta.level || 100);
       return `<div class="member"><div class="mhead"><b>${esc(mon(n).name)}</b> ${types(n)}
           <label class="note">Lv <input type="number" min="1" max="100" inputmode="numeric" data-lvl="${n}" value="${lvl}" placeholder="?"></label>
+          <label class="note teamcaught"><input type="checkbox" data-key="dex:${n}" ${s.caught[n] ? 'checked' : ''}> Caught</label>
           <button class="icon-x" data-rm="${i}" aria-label="Remove ${esc(mon(n).name)}">&times;</button></div>
         <div class="mvgrid">${[0, 1, 2, 3].map(k => `<input data-mv="${n}:${k}" value="${esc(meta.moves?.[k] || '')}" placeholder="${meta.level ? esc(defaults[k] || 'Move') : 'Move'}">`).join('')}</div></div>`;
     }).join('') || '<p class="note">No Pokémon yet.</p>'}
@@ -960,6 +976,7 @@ function renderPlanner() {
     // the first starter-line Pokémon added with no starter picked yet is taken to be your starter
     const k = starterKeyOf(p.dex);
     if (k && !pickOf('starter') && s.team.filter(starterKeyOf).length === 1) return setPick('starter', k);
+    markCaught(p.dex);
     save(); renderPlanner();
   };
   q.onchange = addMon;
@@ -973,7 +990,11 @@ function renderPlanner() {
 const planKey = id => `plan:${pickOf('starter')}:${id}`;
 const STEP_TAG = { catch: 'Catch', box: 'Box', evolve: 'Evolve', teach: 'TM/HM', learn: 'Level up' };
 function planOf(version, starter) { return state.teamPlan?.plans[`${version}:${starter}`] || null; }
-function legKeys(leg) { return [...leg.steps.map(x => planKey(x.id)), trainerKey(leg.battle.loc, leg.battle)]; }
+// Catch and evolve steps are the Pokémon's own caught box (evolving registers it in the Pokédex), so ticking one
+// ticks it on its route and Pokédex pages and the other way round.
+const stepKey = x => (['catch', 'evolve'].includes(x.kind) && x.dex ? `dex:${x.dex}` : planKey(x.id));
+const keyDone = k => (k.startsWith('dex:') ? !!cur().caught[k.slice(4)] : !!cur().checks[k]);
+function legKeys(leg) { return [...new Set([...leg.steps.map(stepKey), trainerKey(leg.battle.loc, leg.battle)])]; }
 function renderPlan() {
   setHeader('Team plan', false, 'plan');
   if (!state.teamPlan) {
@@ -991,15 +1012,15 @@ function renderPlan() {
     view.innerHTML = html + '<p class="note">Pick your starter to see its plan. Squirtle gives the strongest run in both versions.</p>';
     return;
   }
-  const keys = plan.legs.flatMap(legKeys), done = keys.filter(k => s.checks[k]).length;
-  const firstOpen = plan.legs.findIndex(l => legKeys(l).some(k => !s.checks[k]));
+  const keys = [...new Set(plan.legs.flatMap(legKeys))], done = keys.filter(keyDone).length;
+  const firstOpen = plan.legs.findIndex(l => legKeys(l).some(k => !keyDone(k)));
   html += `<div class="card"><b>End-game team</b><div class="chips" style="margin:6px 0">${plan.end.map(d => `<span class="chip">${esc(mon(d).name)}</span>`).join('')}</div>
     <div class="note">${done}/${keys.length} steps done · this plan wins ${plan.won} of ${plan.total} trainer Pokémon one-on-one</div>${bar(done, keys.length)}</div>`;
   plan.legs.forEach((leg, i) => {
-    const lk = legKeys(leg), ld = lk.filter(k => s.checks[k]).length, b = leg.battle;
+    const lk = legKeys(leg), ld = lk.filter(keyDone).length, b = leg.battle;
     html += `<details class="card leg ${ld === lk.length ? 'checked' : ''}" data-leg="${i}"${i === firstOpen ? ' open' : ''}>
       <summary>${i + 1}. ${esc(b.name)} <span class="note">· ${esc(b.where)} · ace Lv ${b.ace}</span> <span class="tag legcount">${ld}/${lk.length}</span></summary>`;
-    for (const x of leg.steps) html += checkRow(planKey(x.id), !!s.checks[planKey(x.id)], esc(x.text), esc(x.sub), ` <span class="tag">${STEP_TAG[x.kind]}</span>` + (x.kind === 'catch' && x.loc && typeof catchLink === 'function' ? catchLink(x.loc, x.dex) : ''));
+    for (const x of leg.steps) html += checkRow(stepKey(x), keyDone(stepKey(x)), esc(x.text), esc(x.sub), ` <span class="tag">${STEP_TAG[x.kind]}</span>` + (x.kind === 'catch' && x.loc && typeof catchLink === 'function' ? catchLink(x.loc, x.dex) : ''));
     const tk = trainerKey(b.loc, b);
     html += checkRow(tk, !!s.checks[tk], `Beat ${esc(b.name)}`, `${esc(b.where)}${b.loc ? ` · <a href="#/loc/${b.loc}">route page</a>` : ''}`, ' <span class="tag">Battle</span>');
     html += `<table class="mini lineup"><tr><th>Lineup</th><th>Lv</th><th>Moves</th></tr>${leg.team.map(m => `<tr><td>${esc(mon(m.dex).name)}</td><td>${m.level}</td><td>${esc(m.moves.join(', '))}</td></tr>`).join('')}</table>
@@ -1015,6 +1036,7 @@ function renderPlan() {
 function copyLineup(leg) {
   const s = cur();
   s.team = leg.team.map(m => m.dex);
+  for (const n of s.team) markCaught(n);
   s.teamMeta ||= {};
   for (const m of leg.team) s.teamMeta[m.dex] = { level: m.level, moves: [0, 1, 2, 3].map(k => m.moves[k] || '') };
   save();
@@ -1317,7 +1339,7 @@ view.addEventListener('change', e => {
   if (key.startsWith('dex:')) {
     const d = key.slice(4);
     if (e.target.checked) s.caught[d] = true; else delete s.caught[d];
-    view.querySelectorAll(`[data-key="dex:${d}"]`).forEach(x => { x.checked = e.target.checked; x.closest('.row').classList.toggle('checked', e.target.checked); });
+    view.querySelectorAll(`[data-key="dex:${d}"]`).forEach(x => { x.checked = e.target.checked; x.closest('.row')?.classList.toggle('checked', e.target.checked); updateLegCount(x); });
   } else if (e.target.checked) s.checks[key] = true; else delete s.checks[key];
   save();
   e.target.closest('.row, .trainer')?.classList.toggle('checked', e.target.checked);

@@ -13,6 +13,7 @@ jobs:
           node-version: 20
       - run: node tests/audit_battles.js --report audit-report.txt
       - run: node tests/team_plan.js
+      - run: node tests/caught_link.js
       - run: node tests/features.js
       - run: node tests/walkthrough.js
       - run: node tests/builds.js
