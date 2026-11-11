@@ -759,6 +759,8 @@ def first_visit_until(lid):
     here = order_pos[lid]
     return next((k for k in key_stages if k >= here), here)
 def describe(loc, st, kind, what):
+    if kind == 'after':  # someone who only turns up after a story event elsewhere
+        return f"After {index[int(st)]['name']}", index[int(st)]['id']
     if kind == 'ability': return ABILITIES[what][1], index[int(ABILITIES[what][0])]['id']
     if kind == 'gate': return what, index[int(st)]['id']
     if what in MAP_OPEN and MAP_OPEN[what][1]: return MAP_OPEN[what][1], index[int(st)]['id']
@@ -792,7 +794,10 @@ def time_thing(loc, mapname, positions):
     if r is None and map_stage(mapname) is not None: r = (map_stage(mapname), ('map', mapname))
     return r
 def mark_later(loc, thing, r):
-    if not r or r[0] <= first_visit_until(loc['id']): return False
+    if not r: return False
+    # someone who only turns up after you have been somewhere else is never there on the first trip
+    away = r[1] and r[1][0] == 'after' and loc_id(maps[r[1][1]]['region_map_section']) != loc['id']
+    if r[0] <= (order_pos[loc['id']] if away else first_visit_until(loc['id'])): return False
     thing['later'] = True
     thing['need'], thing['after'] = describe(loc, r[0], *r[1])
     thing['stage'] = r[0]
