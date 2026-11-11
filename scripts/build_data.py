@@ -256,6 +256,8 @@ def who(label, mapname):
     return s
 
 gifts = collections.OrderedDict()  # (lid, kind, name, area) -> {versions, ...}
+gift_src = {}  # gift key -> (map, script label) it comes from, to find the giver on the map
+gift_pos = {}  # (location id, gift id) -> (map, script label)
 statics = collections.OrderedDict()
 NOT_CATCHABLE = {'MAROWAK'}
 for name in sorted(maps):
@@ -277,15 +279,15 @@ for name in sorted(maps):
                 it, q = gm.group(1), int(gm.group(2) or 1)
                 nm = item_name(it) + (f' ×{q}' if q > 1 else '')
                 k = (lid, 'item', nm, area, who(label, name))
-                gifts.setdefault(k, set()).add(v); continue
+                gifts.setdefault(k, set()).add(v); gift_src.setdefault(k, (name, label)); continue
             mm = re.match(r'givemon SPECIES_(\w+), (\d+)', s)
             if mm:
                 k = (lid, 'mon', f'{species_const[mm.group(1)]} (Lv {mm.group(2)})', area, who(label, name), mm.group(1))
-                gifts.setdefault(k, set()).add(v); continue
+                gifts.setdefault(k, set()).add(v); gift_src.setdefault(k, (name, label)); continue
             mm = re.match(r'giveegg SPECIES_(\w+)', s)
             if mm:
                 k = (lid, 'mon', f'{species_const[mm.group(1)]} Egg', area, who(label, name), mm.group(1))
-                gifts.setdefault(k, set()).add(v); continue
+                gifts.setdefault(k, set()).add(v); gift_src.setdefault(k, (name, label)); continue
             mm = re.match(r'(?:setwildbattle|seteventmon) SPECIES_(\w+), (\d+)', s)
             if mm and mm.group(1) not in NOT_CATCHABLE:
                 statics.setdefault((lid, area, mm.group(1), mm.group(2)), set()).add(v); continue
@@ -293,7 +295,7 @@ for name in sorted(maps):
             if mm:
                 get, give, nick = trades[v][mm.group(1)]
                 k = (lid, 'trade', f'Trade: give {species_const[give]}, get {species_const[get]} ("{title(nick)}")', area, who(label, name), get)
-                gifts.setdefault(k, set()).add(v)
+                gifts.setdefault(k, set()).add(v); gift_src.setdefault(k, (name, label))
 
 # Game Corner prize Pokémon (set via variables in the script, so listed from the script's values)
 for v, lst in {'FR': [('ABRA', 9, 180), ('CLEFAIRY', 8, 500), ('DRATINI', 18, 2800), ('SCYTHER', 25, 5500), ('PORYGON', 26, 9999)],
@@ -341,6 +343,7 @@ for k, vs in gifts.items():
     frm = FROM_FIX.get(frm, frm)
     loc['gifts'].append({'id': uid(loc, f'{kind}-{area}-{nm}'), 'name': nm, 'from': frm, 'where': area,
                          **({'versions': sorted(vs, key=VERSIONS.index)} if len(vs) == 1 else {})})
+    if k in gift_src: gift_pos[(lid, loc['gifts'][-1]['id'])] = gift_src[k]
     if kind in GMETHOD and k[5]:
         sp = k[5]
         method = 'game-corner' if 'coins' in nm else GMETHOD[kind]
@@ -564,6 +567,7 @@ def area_sort(lid, area):
 
 per_loc = collections.defaultdict(list)
 trainer_consts = {}
+trainer_src = {}  # (location id, trainer id) -> (map, script labels)
 for (mapname, key), b in found_battles.items():
     sec = maps[mapname]['region_map_section']
     lid = loc_id(sec); area = area_name(mapname, sec)
@@ -579,6 +583,7 @@ for (mapname, key), b in found_battles.items():
     if rewards: rec['rewards'] = rewards
     rec['id'] = re.sub(r'[^a-z0-9]+', '-', key.replace('TRAINER_', '').lower()).strip('-')
     trainer_consts[(lid, rec['id'])] = list(b['consts'].values())
+    trainer_src[(lid, rec['id'])] = (mapname, b['labels'])
     rec['area'] = area
     st = STAGE.get(mapname) or next((v for k, v in STAGE.items() if k in key), None)
     if st: rec['stage'] = st
@@ -695,6 +700,18 @@ def ace_of(t):
     parties = [t['party']] if 'party' in t else list(t['byStarter'].values())
     return max(p['level'] for pty in parties for p in pty)
 keys = sorted(((order_pos[t.get('stage') or t['location']], ace_of(t), t.get('stage') or t['location']) for t in trainers))
+for loc in locs.values():
+    if loc['id'] not in order_pos: continue
+    here = order_pos[loc['id']]
+    nxt = next((k for k in keys if k[0] >= here), None)
+    for t in loc['trainers']:
+        if t.get('stage'):
+            t['later'] = order_pos[t['stage']] > here
+            continue
+        ace = ace_of(t)
+        fit = next((k for k in keys if k[0] >= here and k[1] >= ace - 5), None)
+        if fit and nxt and fit[0] > nxt[0] and fit[2] != loc['id']:
+            t['stage'], t['later'] = fit[2], True
 # ---------- when can you reach each item? ----------
 # A walk over the real map tiles (scripts/reach.py, shared with the Emerald app): water, waterfalls, ledges, Cut trees,
 # Rock Smash rocks, Strength boulders, Snorlax, warps and the Seagallop ferries, with each map opening when the story
@@ -715,7 +732,20 @@ OBSTACLES = {'OBJ_EVENT_GFX_CUT_TREE': 'cut', 'OBJ_EVENT_GFX_ROCK_SMASH_ROCK': '
 # The Seagallop ferries (src/seagallop.c) link Vermilion, Cinnabar and the Sevii Islands; each opens with its place.
 PORTS = [('VermilionCity', 23, 32), ('CinnabarIsland', 21, 7)] + [(f'{n}Island_Harbor', 8, 5) for n in ('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven')]
 TRANSPORTS = [(a, b, x, y) for a, _, _ in PORTS for b, x, y in PORTS if a != b]
+# Rooms that open later than the rest of their place: the Viridian Gym door stays locked until you have the other seven
+# badges (ViridianCity_EventScript_TryUnlockGym), and any building whose trainers all belong to a later point in the story.
+MAP_REASON = {'ViridianCity_Gym': 'the other seven badges: the Gym door stays locked until then'}
 MAP_OPEN = {}
+for k, v in STAGE.items():
+    if k in maps: MAP_OPEN[k] = (order_pos[v], MAP_REASON.get(k))
+trainers_in_map = collections.defaultdict(list)
+for (lid, tid), (mapname, _) in trainer_src.items():
+    t = next((x for x in locs[lid]['trainers'] if x['id'] == tid), None)
+    if t: trainers_in_map[mapname].append(t)
+for mapname, ts in trainers_in_map.items():
+    if mapname in MAP_OPEN or maps[mapname].get('map_type') != 'MAP_TYPE_INDOOR': continue
+    if all(t.get('later') and t.get('stage') for t in ts):
+        MAP_OPEN[mapname] = (min(order_pos[t['stage']] for t in ts), None)
 def map_stage(name):
     if name not in maps or maps[name]['region_map_section'] in SKIP: return None
     if name in MAP_OPEN: return MAP_OPEN[name][0]
@@ -752,6 +782,37 @@ for loc in locs.values():
         it['later'] = True
         it['need'], it['after'] = describe(loc, st, kind, what)
         it['stage'] = st
+# The same for everything else on a place's page: NPC gifts and trainers (where their script's NPC stands)
+scripts_at = reach.Scripts(world)
+map_first = reach.map_reach(world)
+def time_thing(loc, mapname, positions):
+    """(stage, reason) for something at these spots on a map; the map's own opening if it has no spot we can find."""
+    r = scripts_at.reach(mapname, positions) if positions else None
+    if r is None: r = map_first.get(mapname)
+    if r is None and map_stage(mapname) is not None: r = (map_stage(mapname), ('map', mapname))
+    return r
+def mark_later(loc, thing, r):
+    if not r or r[0] <= first_visit_until(loc['id']): return False
+    thing['later'] = True
+    thing['need'], thing['after'] = describe(loc, r[0], *r[1])
+    thing['stage'] = r[0]
+    return True
+for loc in locs.values():
+    if loc['id'] not in order_pos: continue
+    for g in loc['gifts']:
+        src = gift_pos.get((loc['id'], g['id']))
+        if src and mark_later(loc, g, time_thing(loc, src[0], scripts_at.positions(src[0], label=src[1]))):
+            # the Pokémon row for a gift or trade waits too (the Pokédex counts it from then)
+            for e in loc['encounters']:
+                if e['method'] in ('gift', 'trade', 'game-corner') and (e.get('notes') or '').startswith(g['name'] + ' · '):
+                    e['after'] = g['after']
+    for t in loc['trainers']:
+        src = trainer_src.get((loc['id'], t['id']))
+        if not src: continue
+        r = time_thing(loc, src[0], [p for l in src[1] for p in scripts_at.positions(src[0], label=l)])
+        if r and r[0] > first_visit_until(loc['id']) and (not t.get('stage') or order_pos[t['stage']] < int(r[0])):
+            t['stage'], t['later'] = index[int(r[0])]['id'], True
+            t['reach'] = describe(loc, r[0], *r[1])[0]
 os.makedirs(os.path.join(OUT, 'verify'), exist_ok=True)
 json.dump({'_about': 'Written by scripts/build_data.py from the reachability walk (scripts/reach.py). Read by tests/item_reach.js.',
            'abilities': {k: {'stage': v[0], 'need': v[1]} for k, v in ABILITIES.items()},
@@ -762,17 +823,6 @@ if unreachable:
     print(f'reach: {len(unreachable)} items behind puzzles the walk cannot solve (timed by their map):', *unreachable, sep='\n  ', file=sys.stderr)
 
 for loc in locs.values():
-    if loc['id'] not in order_pos: continue
-    here = order_pos[loc['id']]
-    nxt = next((k for k in keys if k[0] >= here), None)
-    for t in loc['trainers']:
-        if t.get('stage'):
-            t['later'] = order_pos[t['stage']] > here
-            continue
-        ace = ace_of(t)
-        fit = next((k for k in keys if k[0] >= here and k[1] >= ace - 5), None)
-        if fit and nxt and fit[0] > nxt[0] and fit[2] != loc['id']:
-            t['stage'], t['later'] = fit[2], True
     json.dump(loc, open(os.path.join(OUT, 'locations', loc['id'] + '.json'), 'w'), ensure_ascii=False, indent=1)
 
 print('index', len(index))
@@ -860,7 +910,9 @@ for name in sorted(maps):
         if 'TMs' in lbl: where += ' (TMs)'
         if 'Vitamins' in lbl: where += ' (vitamins)'
         if 'XItems' in lbl: where += ' (battle items)'
-        shops[map_loc(name)].append({'id': re.sub(r'[^a-z0-9]+', '-', lbl.lower()), 'where': where, 'items': lst})
+        shop = {'id': re.sub(r'[^a-z0-9]+', '-', lbl.lower()), 'where': where, 'items': lst}
+        mark_later(locs[map_loc(name)], shop, time_thing(locs[map_loc(name)], name, scripts_at.positions(name, contains=r'pokemart ' + lbl + r'\b')))
+        shops[map_loc(name)].append(shop)
 shops['celadon-city'].append({'id': 'roof-vending', 'where': 'Department Store Roof (vending machines)', 'items': [
     {'name': 'Fresh Water', 'price': 200}, {'name': 'Soda Pop', 'price': 300}, {'name': 'Lemonade', 'price': 350}]})
 prize_items = re.findall(r'setvar VAR_TEMP_1, (ITEM_\w+)\n\tsetvar VAR_TEMP_2, (\d+)', prize)
@@ -879,8 +931,18 @@ for label in re.findall(r'^(\w+Tutor)::', tutor_src, re.M):
     if k not in TUTOR_WHERE: continue
     mv = re.search(re.escape(label) + r'::.*?MOVETUTOR_(\w+)', tutor_src, re.S).group(1)
     lid, where = TUTOR_WHERE[k]
-    tutors.append({'id': 'tutor-' + mv.lower().replace('_', '-'), 'move': move_names[mv], 'loc': lid, 'where': where,
-                   'learners': [p['dex'] for p in pokedex if move_names[mv] in p.get('tutor', [])]})
+    tutor = {'id': 'tutor-' + mv.lower().replace('_', '-'), 'move': move_names[mv], 'loc': lid, 'where': where,
+             'learners': [p['dex'] for p in pokedex if move_names[mv] in p.get('tutor', [])]}
+    # where the tutor stands, and when you can reach them
+    found = [(n, scripts_at.positions(n, label=label, contains=r'\b' + label + r'\b')) for n in sorted(maps) if maps[n]['region_map_section'] not in SKIP and map_loc(n) == lid]
+    found = [(n, ps) for n, ps in found if ps]
+    if found:
+        n, ps = found[0]
+        tutor['where'] = area_name(n, maps[n]['region_map_section'])
+        mark_later(locs[lid], tutor, time_thing(locs[lid], n, ps))
+    else:
+        print('tutor without an NPC on the map:', label, file=sys.stderr)
+    tutors.append(tutor)
 tutors.sort(key=lambda t: order_pos[t['loc']])
 tutors.append({'id': 'tutor-ultimate', 'move': 'Frenzy Plant / Blast Burn / Hydro Cannon', 'loc': 'cape-brink', 'where': 'House',
                'learners': [3, 6, 9], 'note': 'Once per starter line: Venusaur, Charizard or Blastoise with maximum friendship. Can be taught to each of the three.'})

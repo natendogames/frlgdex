@@ -61,9 +61,8 @@ function shopSection(loc) {
   const shops = state.extras.shops[loc.id];
   if (!shops?.length) return '';
   const s = cur(), keys = shopRows(loc);
-  let html = `<h2>Shops${keys.length ? ` (${keys.filter(k => s.checks[k]).length}/${keys.length})` : ''}</h2><div class="card">`;
-  for (const sh of shops) {
-    html += `<div class="area">${esc(sh.where)}</div>`;
+  const shopHtml = sh => {
+    let html = `<div class="area">${esc(sh.where)}</div>`;
     const coll = sh.items.filter(it => collectible(sh, it)), rest = sh.items.filter(it => !collectible(sh, it));
     html += coll.map(it => {
       const k = shopKey(loc.id, sh, it), tm = /^(TM|HM)\d+/.exec(it.name)?.[0];
@@ -71,8 +70,12 @@ function shopSection(loc) {
       return checkRow(k, s.checks[k], `${esc(it.name)}${tm ? ` ${esc(state.tms[tm].move)}` : ''}`, price, tm ? ` <a class="info" href="#/tm/${tm}">ⓘ</a>` : itemInfoLink(it.name));
     }).join('');
     if (rest.length) html += `<p class="note">${rest.map(it => `${itemA(it.name)} ${money(it.price)}`).join(' · ')}</p>`;
-  }
-  return html + '</div>';
+    return html;
+  };
+  const now = shops.filter(sh => !sh.later), later = shops.filter(sh => sh.later);
+  let html = '';
+  if (now.length) html += `<h2>Shops${keys.length ? ` (${keys.filter(k => s.checks[k]).length}/${keys.length})` : ''}</h2><div class="card">${now.map(shopHtml).join('')}</div>`;
+  return html + laterSection('Shops', later, shopHtml);
 }
 
 // ---------- Pokémon page ----------

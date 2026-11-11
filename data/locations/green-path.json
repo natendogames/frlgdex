@@ -256,7 +256,10 @@
     }
    ],
    "id": "psychic-jaclyn",
-   "area": "Green Path"
+   "area": "Green Path",
+   "stage": "pattern-bush",
+   "later": true,
+   "reach": "Come in from Pattern Bush"
   }
  ],
  "verified": true,

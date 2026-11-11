@@ -38,7 +38,9 @@ function tutorRow(t) {
 }
 function tutorSection(loc) {
   const list = state.extras.tutors.filter(t => t.loc === loc.id);
-  return list.length ? `<h2>Move tutors</h2><div class="card">${list.map(tutorRow).join('')}<p class="note">Tick one off once you've used it.</p></div>` : '';
+  const now = list.filter(t => !t.later), later = list.filter(t => t.later);
+  return (now.length ? `<h2>Move tutors</h2><div class="card">${now.map(tutorRow).join('')}<p class="note">Tick one off once you've used it.</p></div>` : '')
+    + laterSection('Move tutors', later, tutorRow, t => cur().checks[tutorKey(t)]);
 }
 function renderTutors() {
   const list = state.extras.tutors;

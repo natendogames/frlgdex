@@ -62,6 +62,7 @@ class World:
         self.waterfall = {self.mb['MB_WATERFALL']}
         self.diveable = {self.mb[k] for k in ('MB_INTERIOR_DEEP_WATER', 'MB_DEEP_WATER', 'MB_SOOTOPOLIS_DEEP_WATER') if k in self.mb}
         self.no_surfacing = {self.mb[k] for k in ('MB_NO_SURFACING', 'MB_SEAWEED_NO_SURFACING') if k in self.mb}
+        self.counter = {self.mb[k] for k in ('MB_COUNTER',) if k in self.mb}
         self.jump = {self.mb['MB_JUMP_' + w]: d for w, d in (('EAST', 'E'), ('WEST', 'W'), ('NORTH', 'N'), ('SOUTH', 'S'))}
         # fast water is surfable in FRLG only with... nothing: it just pushes you. Treat as water.
 
@@ -280,6 +281,12 @@ class World:
         """Earliest (stage, reason) to pick up an item at (x, y): standing on it (underfoot hidden items) or facing it
         from a neighbouring tile at a matching elevation."""
         spots = [(x, y)] if underfoot else [(x, y)] + [(x + dx, y + dy) for dx, dy in DIRS.values()]
+        if not underfoot and self.grid(mapname):
+            # shop clerks and nurses: you talk to them across the counter
+            w, h, cells = self.grid(mapname)
+            for dx, dy in DIRS.values():
+                a, b = x + dx, y + dy
+                if 0 <= a < w and 0 <= b < h and cells[b * w + a][2] in self.counter: spots.append((x + 2 * dx, y + 2 * dy))
         def ok(a, b):
             if (mapname, a, b) not in self.best: return False
             if underfoot or (a, b) == (x, y) or elevation in (0, 15): return True
@@ -287,3 +294,64 @@ class World:
             return c[1] in (0, 15, elevation)
         got = [self.best[(mapname, a, b)] for a, b in spots if ok(a, b)]
         return min(got, key=lambda r: r[0]) if got else None
+
+
+class Scripts:
+    """Where on a map a script runs from: the NPCs, signs and trigger tiles whose script reaches a label (directly, or
+    through goto/call in the same map's scripts.inc)."""
+    JUMP = re.compile(r'\b(?:goto|call|goto_if\w*|call_if\w*|trainerbattle\w*|msgbox|setvar|switch|case)\b[^\n]*?\b(\w+_EventScript_\w+|EventScript_\w+)')
+
+    def __init__(self, world):
+        self.w = world
+        self._bodies = {}
+
+    def bodies(self, mapname):
+        if mapname in self._bodies: return self._bodies[mapname]
+        f = self.w.P('data/maps', mapname, 'scripts.inc')
+        out, cur = {}, None
+        if os.path.exists(f):
+            for line in open(f, encoding='utf-8'):
+                m = re.match(r'(\w+)::', line)
+                if m: cur = m.group(1); out[cur] = ''; continue
+                if cur: out[cur] += line
+        self._bodies[mapname] = out
+        return out
+
+    def positions(self, mapname, label=None, contains=None):
+        """[(x, y, elevation, kind)] for events whose script reaches `label`, or a label whose body matches `contains`."""
+        b = self.bodies(mapname)
+        want = {label} if label else set()
+        if contains:
+            want |= {l for l, body in b.items() if re.search(contains, body)}
+        if not want: return []
+        # labels that jump into a wanted label
+        changed = True
+        while changed:
+            changed = False
+            for l, body in b.items():
+                if l in want: continue
+                if any(t in want for t in re.findall(r'\b(\w+)\b', body) if t in b):
+                    want.add(l); changed = True
+        m = self.w.maps[mapname]
+        out = []
+        for kind in ('object_events', 'bg_events', 'coord_events'):
+            for e in m.get(kind) or []:
+                if e.get('script') in want and isinstance(e.get('x'), int):
+                    out.append((e['x'], e['y'], e.get('elevation') or 0, kind))
+        return out
+
+    def reach(self, mapname, positions):
+        """Earliest (stage, reason) at which you can talk to / step on any of these, or None."""
+        got = []
+        for x, y, el, kind in positions:
+            r = self.w.item_reach(mapname, x, y, el, kind == 'coord_events')
+            if r: got.append(r)
+        return min(got, key=lambda r: r[0]) if got else None
+
+
+def map_reach(world):
+    """Earliest (stage, reason) at which you can stand anywhere on each map."""
+    out = {}
+    for (n, x, y), r in world.best.items():
+        if n not in out or r[0] < out[n][0]: out[n] = r
+    return out

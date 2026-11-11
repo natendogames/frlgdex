@@ -333,7 +333,10 @@
      ]
     }
    ],
-   "id": "pokemaniac-mark"
+   "id": "pokemaniac-mark",
+   "stage": "safari-zone",
+   "later": true,
+   "reach": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)"
   },
   {
    "class": "Picnicker",

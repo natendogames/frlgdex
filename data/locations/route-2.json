@@ -59,7 +59,8 @@
     "LG"
    ],
    "area": "House",
-   "notes": "Trade: give Abra, get Mr. Mime (\"Mimien\") · Reyley"
+   "notes": "Trade: give Abra, get Mr. Mime (\"Mimien\") · Reyley",
+   "after": "ss-anne"
   }
  ],
  "items": [
@@ -89,13 +90,21 @@
    "id": "item-east-building-hm05",
    "name": "HM05",
    "from": "Professor Oak's aide (needs enough Pokédex entries)",
-   "where": "East Building"
+   "where": "East Building",
+   "later": true,
+   "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
+   "after": "ss-anne",
+   "stage": 17.5
   },
   {
    "id": "trade-house-trade-give-abra-get-mr-mime-mimien",
    "name": "Trade: give Abra, get Mr. Mime (\"Mimien\")",
    "from": "Reyley",
-   "where": "House"
+   "where": "House",
+   "later": true,
+   "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
+   "after": "ss-anne",
+   "stage": 17.5
   }
  ],
  "trainers": [],

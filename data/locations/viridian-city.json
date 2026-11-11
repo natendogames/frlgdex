@@ -131,7 +131,11 @@
    "id": "hidden-gym-macho-brace",
    "name": "Macho Brace",
    "hidden": true,
-   "where": "Gym (underfoot)"
+   "where": "Gym (underfoot)",
+   "later": true,
+   "need": "the other seven badges: the Gym door stays locked until then",
+   "after": "route-21",
+   "stage": 58
   }
  ],
  "gifts": [
@@ -145,7 +149,11 @@
    "id": "item-gym-tm26",
    "name": "TM26",
    "from": "Giovanni (after winning)",
-   "where": "Gym"
+   "where": "Gym",
+   "later": true,
+   "need": "the other seven badges: the Gym door stays locked until then",
+   "after": "route-21",
+   "stage": 58
   },
   {
    "id": "item-mart-oak-s-parcel",
