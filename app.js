@@ -171,7 +171,7 @@ const LATER_GIFT = /\(|Prize clerk|Pick one fossil/;
 function beforeYouLeave(loc) {
   const s = cur();
   const hidden = loc.items.filter(i => i.hidden && !i.later && inVersion(i) && !s.checks[`${loc.id}:item:${i.id}`]);
-  const gifts = locView(loc).gifts.filter(g => !g.after && !LATER_GIFT.test(g.from || '') && !/^Trade/.test(g.name) && !s.checks[`${loc.id}:gift:${g.id}`]);
+  const gifts = locView(loc).gifts.filter(g => !g.later && !g.after && !LATER_GIFT.test(g.from || '') && !/^Trade/.test(g.name) && !s.checks[`${loc.id}:gift:${g.id}`]);
   if (!hidden.length && !gifts.length) return '';
   const parts = [];
   if (gifts.length) parts.push(gifts.map(g => `<b>${esc(g.name)}</b> (${esc(g.from || 'gift')}${g.where && g.where !== 'Outside' ? `, ${esc(g.where)}` : ''})`).join(', '));
@@ -184,6 +184,15 @@ function beforeYouLeave(loc) {
 const laterNeed = need => !need ? "You can't reach these on your first visit."
   : /^Come in /.test(need) ? `${need} later in the story: you can't get to these from where you first arrive.`
   : /^After /.test(need) ? `${need}.` : `Needs ${need}.`;
+// A collapsed "<title>: come back later" block for things on a place's page you can't get on your first visit
+// (worked out at build time from the map tiles and scripts: scripts/reach.py), grouped by what they need.
+function laterSection(title, list, row, done, unit) {
+  if (!list.length) return '';
+  const n = done ? `${list.filter(done).length}/${list.length}` : list.length;
+  let html = `<details class="later"><summary><h2>${title}: come back later (${n})</h2></summary>`;
+  for (const [need, grp] of Object.entries(groupBy(list, x => x.need || ''))) html += `<div class="card"><p class="note">${esc(laterNeed(need))}</p>${grp.map(row).join('')}</div>`;
+  return html + '</details>';
+}
 const getJSON = url => fetch(url).then(r => { if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); });
 async function loadData() {
   const [idx, dex, trainers, types, walk, moves, tms, extras, items] = await Promise.all(['data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json', 'data/tms.json', 'data/extras.json', 'data/items.json'].map(getJSON));
@@ -440,17 +449,10 @@ function renderLocation(id) {
   // later story point (worked out from the map tiles at build time: scripts/reach.py) wait in "come back later".
   section('Items', loc.items.filter(i => !i.hidden && !i.later), 'item', () => 'On the ground');
   section('Hidden items', loc.items.filter(i => i.hidden && !i.later), 'item', () => 'Hidden: use the Itemfinder');
-  const laterItems = loc.items.filter(i => i.later);
-  if (laterItems.length) {
-    html += `<details class="later"><summary><h2>Items: come back later (${laterItems.filter(x => s.checks[`${loc.id}:item:${x.id}`]).length}/${laterItems.length})</h2></summary>`;
-    for (const [need, grp] of Object.entries(groupBy(laterItems, i => i.need || ''))) {
-      html += `<div class="card"><p class="note">${esc(laterNeed(need))}</p>`;
-      html += grp.map(x => { const k = `${loc.id}:item:${x.id}`; return checkRow(k, s.checks[k], esc(x.name), [x.hidden ? 'Hidden: use the Itemfinder' : 'On the ground', x.where && x.where !== 'Outside' ? esc(x.where) : ''].filter(Boolean).join(' · '), typeof itemInfoLink === 'function' ? itemInfoLink(x.name) : ''); }).join('');
-      html += `</div>`;
-    }
-    html += `</details>`;
-  }
-  section('NPC gifts &amp; trades', v.gifts, 'gift', g => [g.from && esc(g.from), esc(g.where)].filter(Boolean).join(' · '));
+  html += laterSection('Items', loc.items.filter(i => i.later), x => { const k = `${loc.id}:item:${x.id}`; return checkRow(k, s.checks[k], esc(x.name), [x.hidden ? 'Hidden: use the Itemfinder' : 'On the ground', x.where && x.where !== 'Outside' ? esc(x.where) : ''].filter(Boolean).join(' · '), typeof itemInfoLink === 'function' ? itemInfoLink(x.name) : ''); }, x => s.checks[`${loc.id}:item:${x.id}`]);
+  const giftSub = g => [g.from && esc(g.from), esc(g.where)].filter(Boolean).join(' · ');
+  section('NPC gifts &amp; trades', v.gifts.filter(g => !g.later), 'gift', giftSub);
+  html += laterSection('NPC gifts &amp; trades', v.gifts.filter(g => g.later), g => { const k = `${loc.id}:gift:${g.id}`; return checkRow(k, s.checks[k], esc(g.name), giftSub(g)); }, g => s.checks[`${loc.id}:gift:${g.id}`]);
   for (const f of LOC_SECTIONS) html += f(loc);
   view.innerHTML = html;
 }

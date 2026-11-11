@@ -8,7 +8,11 @@
    "id": "item-volunteer-pok-mon-house-pok-flute",
    "name": "Poké Flute",
    "from": "Mr. Fuji (after you rescue him)",
-   "where": "Volunteer Pokémon House"
+   "where": "Volunteer Pokémon House",
+   "later": true,
+   "need": "After Pokémon Tower",
+   "after": "pokemon-tower",
+   "stage": 29
   }
  ],
  "trainers": [],

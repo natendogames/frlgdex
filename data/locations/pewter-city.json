@@ -21,7 +21,11 @@
    "id": "item-museum-1f-old-amber",
    "name": "Old Amber",
    "from": "Scientist in the back room (behind a Cut tree)",
-   "where": "Museum 1F"
+   "where": "Museum 1F",
+   "later": true,
+   "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
+   "after": "ss-anne",
+   "stage": 17.5
   },
   {
    "id": "item-outside-running-shoes",

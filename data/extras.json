@@ -869,7 +869,7 @@
    "id": "tutor-dream-eater",
    "move": "Dream Eater",
    "loc": "viridian-city",
-   "where": "House",
+   "where": "Outside",
    "learners": [
     12,
     35,
@@ -957,7 +957,11 @@
     381,
     385,
     386
-   ]
+   ],
+   "later": true,
+   "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
+   "after": "ss-anne",
+   "stage": 17.5
   },
   {
    "id": "tutor-seismic-toss",
@@ -1091,7 +1095,11 @@
     379,
     383,
     386
-   ]
+   ],
+   "later": true,
+   "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
+   "after": "ss-anne",
+   "stage": 17.5
   },
   {
    "id": "tutor-mega-punch",
@@ -1484,7 +1492,11 @@
     175,
     176,
     242
-   ]
+   ],
+   "later": true,
+   "need": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)",
+   "after": "safari-zone",
+   "stage": 38.5
   },
   {
    "id": "tutor-counter",

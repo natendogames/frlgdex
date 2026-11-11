@@ -329,8 +329,9 @@
    ],
    "id": "lass-crissy",
    "area": "Outside",
-   "stage": "celadon-city",
-   "later": true
+   "stage": "safari-zone",
+   "later": true,
+   "reach": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)"
   }
  ],
  "verified": true,

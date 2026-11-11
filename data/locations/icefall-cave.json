@@ -753,7 +753,10 @@
     }
    ],
    "id": "team-rocket-grunt-45",
-   "area": "Icefall Cave Back"
+   "area": "Icefall Cave Back",
+   "stage": "icefall-cave",
+   "later": true,
+   "reach": "Waterfall (HM07 from Lorelei in Icefall Cave, used with the Volcano Badge)"
   }
  ],
  "verified": true,

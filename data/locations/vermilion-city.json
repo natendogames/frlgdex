@@ -196,7 +196,11 @@
    "id": "item-gym-tm34",
    "name": "TM34",
    "from": "Lt. Surge (after winning)",
-   "where": "Gym"
+   "where": "Gym",
+   "later": true,
+   "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
+   "after": "ss-anne",
+   "stage": 17.5
   },
   {
    "id": "item-house-1-old-rod",
@@ -283,7 +287,10 @@
     }
    ],
    "id": "sailor-dwayne",
-   "area": "Gym"
+   "area": "Gym",
+   "stage": "ss-anne",
+   "later": true,
+   "reach": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)"
   },
   {
    "class": "Engineer",
@@ -345,7 +352,10 @@
     }
    ],
    "id": "engineer-baily",
-   "area": "Gym"
+   "area": "Gym",
+   "stage": "ss-anne",
+   "later": true,
+   "reach": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)"
   },
   {
    "class": "Gentleman",
@@ -380,7 +390,10 @@
     }
    ],
    "id": "gentleman-tucker",
-   "area": "Gym"
+   "area": "Gym",
+   "stage": "ss-anne",
+   "later": true,
+   "reach": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)"
   },
   {
    "class": "Leader",
@@ -476,7 +489,10 @@
     "TM34"
    ],
    "id": "leader-lt-surge",
-   "area": "Gym"
+   "area": "Gym",
+   "stage": "ss-anne",
+   "later": true,
+   "reach": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)"
   }
  ],
  "verified": true,

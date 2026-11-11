@@ -10,7 +10,7 @@ move works once its HM and badge are in hand. One cheapest-path search ("how far
 on this tile?") gives every tile the earliest story point it can be reached at, and why: the move it needed, or the
 place you have to come in from. An item is reachable when you can stand on it (hidden items you stand on) or next to it.
 """
-import collections, heapq, json, os, re
+import collections, glob, heapq, json, os, re
 
 DIRS = {'N': (0, -1), 'S': (0, 1), 'E': (1, 0), 'W': (-1, 0)}
 
@@ -24,7 +24,8 @@ class World:
         abilities: name -> (stage, label). Names used: surf, waterfall, dive, cut, rock-smash, strength, bike.
         obstacles: object graphics id -> ability that clears it.
         gates: tiles that stay shut until a story point (scripted blockers): (map, x0, y0, x1, y1, stage, reason) for a
-            box of tiles, or (map, script, stage, reason) for the coord events that run that script.
+            box of tiles, (map, script, stage, reason) for the coord events that run that script, or
+            (map, 'lock:<script>', stage, reason) for the tiles that script walls off (locked doors).
         transports: [(from_map, to_map, x, y)] scripted trips (boats) the map scripts don't spell out as warps.
         tile_needs: behaviour name -> ability needed to enter such a tile (bike slopes and rails).
         """
@@ -62,6 +63,7 @@ class World:
         self.waterfall = {self.mb['MB_WATERFALL']}
         self.diveable = {self.mb[k] for k in ('MB_INTERIOR_DEEP_WATER', 'MB_DEEP_WATER', 'MB_SOOTOPOLIS_DEEP_WATER') if k in self.mb}
         self.no_surfacing = {self.mb[k] for k in ('MB_NO_SURFACING', 'MB_SEAWEED_NO_SURFACING') if k in self.mb}
+        self.counter = {self.mb[k] for k in ('MB_COUNTER',) if k in self.mb}
         self.jump = {self.mb['MB_JUMP_' + w]: d for w, d in (('EAST', 'E'), ('WEST', 'W'), ('NORTH', 'N'), ('SOUTH', 'S'))}
         # fast water is surfable in FRLG only with... nothing: it just pushes you. Treat as water.
 
@@ -86,10 +88,25 @@ class World:
         self._attr_cache[tileset] = out
         return out
 
+    def layout_always(self, name):
+        """A layout the map always swaps to on entry (Route 131's Sky Pillar version): a `setmaplayoutindex` in a
+        script the map's on-transition script calls unconditionally."""
+        f = self.P('data/maps', name, 'scripts.inc')
+        if not os.path.exists(f): return None
+        t = open(f, encoding='utf-8').read()
+        m = re.search(r'map_script MAP_SCRIPT_ON_TRANSITION,\s*(\w+)', t)
+        if not m: return None
+        body = lambda l: (re.search(r'^' + re.escape(l) + r':+\n(.*?)(?=^\w+:|\Z)', t, re.S | re.M) or [None, ''])[1]
+        on = body(m.group(1))
+        for l in [m.group(1)] + re.findall(r'^\s*call\s+(\w+)\s*$', on, re.M):
+            lm = re.search(r'^\s*setmaplayoutindex\s+(LAYOUT_\w+)', body(l), re.M)
+            if lm and not re.search(r'goto_if|call_if', body(l)): return lm.group(1)
+        return None
+
     def grid(self, name):
         """(width, height, cells) where a cell is (collision, elevation, behaviour)."""
         if name in self.grids: return self.grids[name]
-        lay = self.layouts.get(self.maps[name]['layout'])
+        lay = self.layouts.get(self.layout_always(name) or self.maps[name]['layout'])
         if not lay: self.grids[name] = None; return None
         w, h = lay['width'], lay['height']
         raw = open(self.P(lay['blockdata_filepath']), 'rb').read()
@@ -122,7 +139,13 @@ class World:
         gate = collections.defaultdict(dict)  # map -> {(x, y): (stage, reason)}
         for g in self.gates:
             mp, what, gs, reason = g[0], g[1], g[-2], g[-1]
-            if isinstance(what, str):  # the tiles of a map's coord events running this script (they turn you back)
+            if isinstance(what, str) and what.startswith('lock:'):  # tiles a map script walls off with setmetatile ..., TRUE
+                body = open(self.P('data/maps', mp, 'scripts.inc'), encoding='utf-8').read()
+                m = re.search(r'^' + re.escape(what[5:]) + r'::\n(.*?)(?=^\w+::|\Z)', body, re.S | re.M)
+                if not m: raise SystemExit(f'reach: gate {mp} {what} has no such script')
+                tiles = [(int(x), int(y)) for x, y in re.findall(r'setmetatile\s+(\d+),\s*(\d+),\s*\w+,\s*(?:TRUE|1)\b', m.group(1))]
+                if not tiles: raise SystemExit(f'reach: gate {mp} {what} locks no tiles')
+            elif isinstance(what, str):  # the tiles of a map's coord events running this script (they turn you back)
                 tiles = [(c['x'], c['y']) for c in maps[mp].get('coord_events') or [] if c.get('script') == what]
                 if not tiles: raise SystemExit(f'reach: gate {mp} {what} matches no coord event')
             else:
@@ -136,15 +159,16 @@ class World:
         for n in maps:
             f = self.P('data/maps', n, 'scripts.inc')
             if not os.path.exists(f): continue
-            for dest, nums in re.findall(r'^\s*warp\w*\s+(MAP_\w+)((?:\s*,\s*\w+)*)', open(f).read(), re.M):
+            for cmd, dest, nums in re.findall(r'^\s*(warp\w*|setdivewarp)\s+(MAP_\w+)((?:\s*,\s*\w+)*)', open(f).read(), re.M):
                 dn = self.by_const.get(dest)
                 nums = [x.strip() for x in nums.split(',') if x.strip()]
                 if not dn or dn == n: continue
+                ab = 'dive' if cmd == 'setdivewarp' else None  # diving or surfacing where the map has no dive connection
                 if len(nums) >= 2 and nums[-1].isdigit() and nums[-2].isdigit():
-                    script_warps[n].append((dn, int(nums[-2]), int(nums[-1])))
+                    script_warps[n].append((dn, int(nums[-2]), int(nums[-1]), ab))
                 elif len(nums) == 1 and nums[0].isdigit():
                     ws = warps.get(dn, [])
-                    if int(nums[0]) < len(ws): script_warps[n].append((dn, ws[int(nums[0])]['x'], ws[int(nums[0])]['y']))
+                    if int(nums[0]) < len(ws): script_warps[n].append((dn, ws[int(nums[0])]['x'], ws[int(nums[0])]['y'], ab))
         for a, b, x, y in self.transports:
             # a boat: step off onto the nearest dry tile next to where it moors
             g = self.grid(b)
@@ -153,7 +177,7 @@ class World:
                 land = lambda p: 0 <= p[0] < w and 0 <= p[1] < h and not cells[p[1] * w + p[0]][0] and cells[p[1] * w + p[0]][2] not in self.surfable
                 ring = [(x + dx, y + dy) for r in range(0, 4) for dx in range(-r, r + 1) for dy in range(-r, r + 1) if max(abs(dx), abs(dy)) == r]
                 x, y = next((p for p in ring if land(p)), (x, y))
-            script_warps[a].append((b, x, y))
+            script_warps[a].append((b, x, y, None))
 
         open_at = {}
         def map_open(n):
@@ -222,8 +246,9 @@ class World:
             surfing = c[2] in self.surfable
             if n not in map_seen:
                 map_seen.add(n)
-                for dn, dx, dy in script_warps.get(n, ()):
+                for dn, dx, dy, ab in script_warps.get(n, ()):
                     s2, w2 = need(st, why, map_open(dn), ('map', dn))
+                    if ab: s2, w2 = need(s2, w2, self.ability_stage(ab), ('ability', ab))
                     push((dn, dx, dy), s2, w2)
             # warps
             wp = warp_at[n].get((x, y))
@@ -280,6 +305,12 @@ class World:
         """Earliest (stage, reason) to pick up an item at (x, y): standing on it (underfoot hidden items) or facing it
         from a neighbouring tile at a matching elevation."""
         spots = [(x, y)] if underfoot else [(x, y)] + [(x + dx, y + dy) for dx, dy in DIRS.values()]
+        if not underfoot and self.grid(mapname):
+            # shop clerks and nurses: you talk to them across the counter
+            w, h, cells = self.grid(mapname)
+            for dx, dy in DIRS.values():
+                a, b = x + dx, y + dy
+                if 0 <= a < w and 0 <= b < h and cells[b * w + a][2] in self.counter: spots.append((x + 2 * dx, y + 2 * dy))
         def ok(a, b):
             if (mapname, a, b) not in self.best: return False
             if underfoot or (a, b) == (x, y) or elevation in (0, 15): return True
@@ -287,3 +318,114 @@ class World:
             return c[1] in (0, 15, elevation)
         got = [self.best[(mapname, a, b)] for a, b in spots if ok(a, b)]
         return min(got, key=lambda r: r[0]) if got else None
+
+
+class Scripts:
+    """Where on a map a script runs from: the NPCs, signs and trigger tiles whose script reaches a label (directly, or
+    through goto/call in the same map's scripts.inc)."""
+    JUMP = re.compile(r'\b(?:goto|call|goto_if\w*|call_if\w*|trainerbattle\w*|msgbox|setvar|switch|case)\b[^\n]*?\b(\w+_EventScript_\w+|EventScript_\w+)')
+
+    def __init__(self, world):
+        self.w = world
+        self._bodies = {}
+
+    def bodies(self, mapname):
+        if mapname in self._bodies: return self._bodies[mapname]
+        f = self.w.P('data/maps', mapname, 'scripts.inc')
+        out, cur = {}, None
+        if os.path.exists(f):
+            for line in open(f, encoding='utf-8'):
+                m = re.match(r'(\w+)::', line)
+                if m: cur = m.group(1); out[cur] = ''; continue
+                if cur: out[cur] += line
+        self._bodies[mapname] = out
+        return out
+
+    def hidden_at_start(self):
+        """Flags a new game sets (EventScript_ResetAllMapFlags): NPCs with these flags start hidden."""
+        if hasattr(self, '_hidden'): return self._hidden
+        files = [self.w.P('data/event_scripts.s')] + glob.glob(self.w.P('data/scripts/*.inc'))
+        out = set()
+        for f in files:
+            if not os.path.exists(f): continue
+            t = open(f, encoding='utf-8').read()
+            m = re.search(r'^EventScript_ResetAllMapFlags::\n(.*?)(?=^\w+::|\Z)', t, re.S | re.M)
+            if m: out |= set(re.findall(r'setflag (FLAG_\w+)', m.group(1)))
+        self._hidden = out
+        return out
+
+    def clear_sites(self, flag):
+        """[(map, label)] for every map script that clears a flag (makes a hidden NPC appear)."""
+        if not hasattr(self, '_clears'):
+            self._clears = collections.defaultdict(list)
+            for n in self.w.maps:
+                for l, body in self.bodies(n).items():
+                    for fl in re.findall(r'clearflag (FLAG_\w+)', body): self._clears[fl].append((n, l))
+        return self._clears.get(flag, [])
+
+    def positions(self, mapname, label=None, contains=None):
+        """[(x, y, elevation, kind)] for events whose script reaches `label`, or a label whose body matches `contains`."""
+        b = self.bodies(mapname)
+        want = {label} if label else set()
+        if contains:
+            want |= {l for l, body in b.items() if re.search(contains, body)}
+        if not want: return []
+        # labels that jump into a wanted label
+        changed = True
+        while changed:
+            changed = False
+            for l, body in b.items():
+                if l in want: continue
+                if any(t in want for t in re.findall(r'\b(\w+)\b', body) if t in b):
+                    want.add(l); changed = True
+        m = self.w.maps[mapname]
+        out = []
+        for kind in ('object_events', 'bg_events', 'coord_events'):
+            for e in m.get(kind) or []:
+                if e.get('script') in want and isinstance(e.get('x'), int):
+                    out.append((e['x'], e['y'], e.get('elevation') or 0, kind, e.get('flag') if kind == 'object_events' else None))
+        return out
+
+    def reach(self, mapname, positions):
+        """Earliest (stage, reason) at which you can talk to / step on any of these, or None."""
+        got = []
+        for x, y, el, kind, *rest in positions:
+            r = self.w.item_reach(mapname, x, y, el, kind == 'coord_events')
+            flag = rest[0] if rest else None
+            if r and flag and flag in self.hidden_at_start():
+                # an NPC that starts hidden only turns up once some script clears its flag
+                seen = self.appears(flag)
+                if seen is None: continue
+                if seen[0] > r[0]: r = seen
+            if r: got.append(r)
+        return min(got, key=lambda r: r[0]) if got else None
+
+
+def _appears(self, flag, _stack=set()):
+    """Earliest (stage, ('after', map)) at which a script clearing this flag can run, or None if none can."""
+    if not hasattr(self, '_appear'): self._appear = {}
+    if flag in self._appear: return self._appear[flag]
+    if flag in _stack: return None
+    _stack.add(flag)
+    best = None
+    for n, l in self.clear_sites(flag):
+        ps = self.positions(n, label=l)
+        r = self.reach(n, ps) if ps else None
+        if r is None:
+            st = min((v[0] for (m, x, y), v in self.w.best.items() if m == n), default=None) if not ps else None
+            if st is None: continue
+            r = (st, None)
+        r = (r[0], ('after', n))
+        if best is None or r[0] < best[0]: best = r
+    _stack.discard(flag)
+    self._appear[flag] = best
+    return best
+Scripts.appears = _appears
+
+
+def map_reach(world):
+    """Earliest (stage, reason) at which you can stand anywhere on each map."""
+    out = {}
+    for (n, x, y), r in world.best.items():
+        if n not in out or r[0] < out[n][0]: out[n] = r
+    return out

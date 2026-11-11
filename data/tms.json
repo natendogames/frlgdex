@@ -55,7 +55,9 @@
     "loc": "route-2",
     "how": "gift",
     "where": "East Building",
-    "from": "Professor Oak's aide (needs enough Pokédex entries)"
+    "from": "Professor Oak's aide (needs enough Pokédex entries)",
+    "stage": 17.5,
+    "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)"
    }
   ]
  },
@@ -380,7 +382,9 @@
     "loc": "viridian-city",
     "how": "gift",
     "where": "Gym",
-    "from": "Giovanni (after winning)"
+    "from": "Giovanni (after winning)",
+    "stage": 58,
+    "need": "the other seven badges: the Gym door stays locked until then"
    }
   ]
  },
@@ -486,7 +490,9 @@
     "loc": "vermilion-city",
     "how": "gift",
     "where": "Gym",
-    "from": "Lt. Surge (after winning)"
+    "from": "Lt. Surge (after winning)",
+    "stage": 17.5,
+    "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)"
    }
   ]
  },
