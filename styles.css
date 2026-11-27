@@ -231,12 +231,10 @@ details.tiers { margin-top: 8px; }
 .spotlegend i{display:inline-block;width:14px;height:14px;border-radius:3px}
 .spotlegend i.dot{border-radius:50%;background:var(--map-item)}
 .spotlegend i.dia{width:11px;height:11px;border:2px solid var(--map-item);transform:rotate(45deg);border-radius:1px}
-.yleave a.spotlink{display:inline-block;margin:6px 6px 0 0}
 .spotlegend i.tri{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:13px solid var(--map-tree);border-radius:0}
 .spotlegend i{display:inline-block;width:14px;height:14px;border-radius:3px}
 .spotlegend i.dot{border-radius:50%;background:var(--map-item)}
 .spotlegend i.dia{width:11px;height:11px;border:2px solid var(--map-item);transform:rotate(45deg);border-radius:1px}
-.yleave a.spotlink{display:inline-block;margin:6px 6px 0 0}
 .spotlegend i.tri{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:13px solid var(--map-tree);border-radius:0}
 :root{--map-badge:#fffdf6}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--map-badge:#1d1c19}}
