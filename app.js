@@ -732,9 +732,9 @@ const HIGH_CRIT = new Set(['Karate Chop', 'Razor Leaf', 'Crabhammer', 'Slash', '
 const teamMeta = n => (cur().teamMeta ||= {})[n] || {};
 function myBattler(n, foeLevel) {
   const meta = teamMeta(n);
-  const level = meta.level || foeLevel;
+  const auto = typeof autoLevelOn === 'function' && autoLevelOn(), level = auto ? foeLevel : meta.level || foeLevel;
   const moves = (meta.moves || []).filter(Boolean);
-  return { ...battler(n, level, PLAYER_IV, moves.length ? moves : bestMoves(n, level)), guessedLevel: !meta.level, guessedMoves: !moves.length };
+  return { ...battler(n, level, PLAYER_IV, moves.length ? moves : bestMoves(n, level)), guessedLevel: auto || !meta.level, autoLevel: auto, guessedMoves: !moves.length };
 }
 const foeBattler = p => ({ ...battler(p.dex, p.level, p.iv ?? 0, (p.moves || []).map(m => m.name), p.item), foe: true });
 
@@ -908,7 +908,8 @@ function foeRow(p, stage, party) {
   const team = cur().team;
   const foe = foeBattler(p);
   const weak = weaknesses(p.dex);
-  const duels = team.map(n => duel(myBattler(n, p.level), foe)).sort(rankDuels);
+  const lv = typeof autoLevelOn === 'function' && autoLevelOn() ? autoLevelFor(party || [p]) : p.level;
+  const duels = team.map(n => duel(myBattler(n, lv), foe)).sort(rankDuels);
   const best = duels[0];
   let pick = '';
   if (best) {
@@ -961,21 +962,21 @@ function trainerCard(t, stage, opts = {}) {
     ${t.note && !t.byStarter ? `<p class="note">${esc(t.note)}</p>` : ''}${rival}${party ? opts.extra?.(party) || '' : ''}
     ${party ? party.map(p => foeRow(p, stage, party)).join('') : ''}
     ${opts.loc && typeof rematchBlock === 'function' ? rematchBlock(t, opts.loc) : ''}
-    ${party && cur().team.some(n => !teamMeta(n).level) ? '<p class="note">* Level not set in Battle plan, so it is assumed to match theirs.</p>' : ''}</details>`;
+    ${party && cur().team.length && typeof autoLevelOn === 'function' && autoLevelOn() ? `<p class="note">* Auto levels: your team is taken as Lv ${autoLevelFor(party)}, the level of their strongest Pokémon. Turn this off in the <a href="#/planner">Battle plan</a> to use your own levels.</p>` : party && cur().team.some(n => !teamMeta(n).level) ? '<p class="note">* Level not set in Battle plan, so it is assumed to match theirs.</p>' : ''}</details>`;
 }
 
 function renderPlanner() {
   setHeader('Battle plan', false, 'planner');
   const s = cur();
   s.teamMeta ||= {};
-  const moveNames = Object.keys(state.moves).sort();
-  let html = `<div class="card"><b>Your team</b> <span class="note">(up to 6). Set each one's level and moves for exact damage; blank moves assume it kept the strongest attack of each type it learns by level up.</span>
+  const moveNames = Object.keys(state.moves).sort(), autoLv = typeof autoLevelOn === 'function' && autoLevelOn();
+  let html = `<div class="card">${typeof autoSettingsHtml === 'function' ? autoSettingsHtml() : ''}</div><div class="card"><b>Your team</b> <span class="note">(up to 6). ${autoLv ? 'Levels follow each trainer (Auto levels). Set moves for exact damage;' : "Set each one's level and moves for exact damage;"} blank moves assume it kept the strongest attack of each type it learns by level up.</span>
     ${s.team.map((n, i) => {
       const meta = s.teamMeta[n] || {};
       const lvl = meta.level || '';
       const defaults = bestMoves(n, meta.level || 100);
       return `<div class="member"><div class="mhead"><b>${esc(mon(n).name)}</b> ${types(n)}
-          <label class="note">Lv <input type="number" min="1" max="100" inputmode="numeric" data-lvl="${n}" value="${lvl}" placeholder="?"></label>
+          <label class="note">Lv <input type="number" min="1" max="100" inputmode="numeric" data-lvl="${n}" value="${autoLv ? '' : lvl}" placeholder="${autoLv ? 'auto' : '?'}"${autoLv ? ' disabled' : ''}></label>
           <label class="note teamcaught"><input type="checkbox" data-key="dex:${n}" ${s.caught[n] ? 'checked' : ''}> Caught</label>
           <button class="icon-x" data-rm="${i}" aria-label="Remove ${esc(mon(n).name)}">&times;</button></div>
         <div class="mvgrid">${[0, 1, 2, 3].map(k => `<input data-mv="${n}:${k}" value="${esc(meta.moves?.[k] || '')}" placeholder="${meta.level ? esc(defaults[k] || 'Move') : 'Move'}">`).join('')}</div></div>`;
@@ -994,6 +995,7 @@ function renderPlanner() {
   }
   html += `<p class="note">Damage uses the Gen 3 formula with your levels and moves, their real moves and IVs, average IVs for yours and no EVs. Abilities are counted when the species can only have one (Levitate, Thick Fat, Intimidate...), held type boosters and berries are counted, and a critical hit that could KO you sooner is flagged. Stat-changing moves and two-ability Pokémon are shown as warnings, not counted.</p>`;
   view.innerHTML = html;
+  if (typeof bindAutoSettings === 'function') bindAutoSettings(renderPlanner);
   view.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => { s.team.splice(+b.dataset.rm, 1); save(); renderPlanner(); });
   view.querySelectorAll('[data-lvl]').forEach(inp => inp.onchange = () => {
     const n = inp.dataset.lvl, v = Math.max(0, Math.min(100, parseInt(inp.value, 10) || 0));
@@ -1183,6 +1185,7 @@ function renderSettings() {
   setHeader('Backup & settings', true, '');
   view.innerHTML = `
     <div class="card"><label class="row"><input type="checkbox" id="hideDone" ${state.progress.hideDone ? 'checked' : ''}><span>Hide completed locations</span></label>
+      ${typeof autoSettingsHtml === 'function' ? autoSettingsHtml() : ''}
       <label class="row"><input type="checkbox" id="hideRows" ${state.progress.hideRows ? 'checked' : ''}><span>Hide ticked-off rows on location pages</span></label>
       <div class="row"><span>Theme</span><select id="theme" style="width:auto;margin-left:auto">${['auto', 'light', 'dark'].map(t => `<option ${(state.progress.theme || 'auto') === t ? 'selected' : ''}>${t}</option>`).join('')}</select></div></div>
     ${SYNC_URL ? syncCard() : ''}
@@ -1193,6 +1196,7 @@ function renderSettings() {
     <h2>Reset</h2>
     <div class="card"><button class="btn" id="reset">Reset ${VNAME[V()]} progress</button></div>
     <p class="note">Pokémon, item, gift and trainer data come from the pret/pokefirered decompilation of the game. Walkthrough steps are written guidance.</p>`;
+  if (typeof bindAutoSettings === 'function') bindAutoSettings();
   document.getElementById('hideDone').onchange = e => { state.progress.hideDone = e.target.checked; save(); };
   document.getElementById('hideRows').onchange = e => { state.progress.hideRows = e.target.checked; save(); applyVersion(); };
   document.getElementById('theme').onchange = e => { state.progress.theme = e.target.value; save(); applyVersion(); };
@@ -1357,8 +1361,10 @@ function showUndo(key, was, label) {
   t.innerHTML = `<span>${esc(label)}</span><button class="btn small" id="undoBtn">Undo</button>`;
   t.hidden = false;
   clearTimeout(undoTimer); undoTimer = setTimeout(() => { t.hidden = true; }, UNDO_MS);
+  state.autoAdded = null;
   document.getElementById('undoBtn').onclick = () => {
     const s = cur();
+    if (key.startsWith('dex:') && state.autoAdded === +key.slice(4)) { s.team = s.team.filter(n => n !== state.autoAdded); state.autoAdded = null; }
     if (key.startsWith('dex:')) { if (was) s.caught[key.slice(4)] = was; else delete s.caught[key.slice(4)]; }
     else if (was) s.checks[key] = true; else delete s.checks[key];
     t.hidden = true; save(); route(true);
@@ -1379,6 +1385,11 @@ view.addEventListener('change', e => {
   if (key.startsWith('dex:')) {
     const d = key.slice(4);
     if (e.target.checked) s.caught[d] = true; else delete s.caught[d];
+    // a Pokémon the Team plan uses goes on the Battle plan team
+    if (e.target.checked && typeof autoTeamAdd === 'function') {
+      const tell = r => { const sp = document.querySelector('#toast span'); if (sp && autoTeamNote(r)) sp.textContent += autoTeamNote(r); };
+      tell(autoTeamAdd(d, tell));
+    }
     view.querySelectorAll(`[data-key="dex:${d}"]`).forEach(x => { x.checked = e.target.checked; x.closest('.row')?.classList.toggle('checked', e.target.checked); updateLegCount(x); });
   } else if (e.target.checked) s.checks[key] = true; else delete s.checks[key];
   save();

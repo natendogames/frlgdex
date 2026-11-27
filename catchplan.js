@@ -55,7 +55,7 @@ function minLevelOf(dex) {
   return Math.max(minLevelOf(from), ev?.method === 'level' ? ev.param : 1);
 }
 function teamTools(n, wildLvl) {
-  const b = myBattler(n, Math.max(wildLvl, minLevelOf(n))), meta = teamMeta(n), set = (meta.moves || []).filter(Boolean);
+  const b = myBattler(n, Math.max(typeof autoLevelOn === 'function' && autoLevelOn() ? autoLevelNow() : wildLvl, minLevelOf(n))), meta = teamMeta(n), set = (meta.moves || []).filter(Boolean);
   const known = set.length ? set : [...learnedBy(n, b.level).keys()];
   return { n, b, known, guessed: !set.length };
 }
@@ -194,7 +194,8 @@ function renderCatchPlan(locId, dexArg) {
     if (trap) li.push(`<b>${name(trap.n)}</b>'s ${esc(trap.known.find(m => TRAP_MOVES.includes(m)))}${guess(trap)}: stops it running away.`);
     if (!li.length) li.push("Nobody on your team has a safe way to weaken it or a sleep or paralysis move. Your weakest attack still helps; see the Pokémon you could catch below.");
     tl = `<ul class="tips">${li.map(x => `<li>${x}</li>`).join('')}</ul>${tools.some(t => t.guessed) ? '<p class="note">Moves marked "if it still knows it" are guesses from its level. Set real moves in the <a href="#/planner">Battle plan</a>.</p>' : ''}`;
-    if (tools.some(t => t.b.guessedLevel)) tl += `<p class="note">Levels not set in the Battle plan are taken as Lv ${maxL}.</p>`;
+    if (tools.some(t => t.b.autoLevel)) tl += `<p class="note">Auto levels: your team is taken as Lv ${tools[0].b.level}, the strongest trainer Pokémon you've reached so far.</p>`;
+    else if (tools.some(t => t.b.guessedLevel)) tl += `<p class="note">Levels not set in the Battle plan are taken as Lv ${maxL}.</p>`;
   }
   html += `<h2>What your team can do</h2><div class="card">${tl}</div>`;
 
