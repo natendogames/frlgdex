@@ -53,7 +53,8 @@ function spotSvg(m, loc, target, checks) {
   }
   for (const it of m.items) {
     const cx = it.x * T + 4, cy = it.y * T + 4, done = checks[`${locId}:item:${it.id}`];
-    const col = done ? 'var(--map-done)' : 'var(--map-item)';
+    if (done && it.id !== target) continue;  // found items disappear (unless it's the one you opened)
+    const col = 'var(--map-item)';
     r += `<a href="${spotHref(locId, it.id)}"><title>${esc(it.name)}${it.hidden ? ' (hidden)' : ''}${done ? ' (found)' : ''}</title><rect x="${it.x * T - 4}" y="${it.y * T - 4}" width="16" height="16" fill="transparent"/>` + (it.hidden
       ? `<rect x="${cx - 3}" y="${cy - 3}" width="6" height="6" transform="rotate(45 ${cx} ${cy})" fill="none" stroke="${col}" stroke-width="1.8"/>`
       : spotBall(cx, cy, col)) + '</a>';
@@ -81,7 +82,7 @@ function spotWords(m, t) {
   return `About ${parts.join(' and ')} from the nearest ${k === 'door' ? 'doorway or exit' : 'sign'} (as the map is drawn: up is north).`;
 }
 const SPOT_LEGEND = `<div class="card spotlegend"><span><i style="background:var(--map-target)"></i>Selected</span><span><i class="dia"></i>Hidden item</span><span><i class="dot"></i>Item ball</span>
-    <span><i class="dot" style="background:var(--map-trainer)"></i>Trainer</span><span><i style="background:var(--map-done)"></i>Found or beaten</span><span><i class="dot" style="background:var(--map-person)"></i>Other person</span>
+    <span><i class="dot" style="background:var(--map-trainer)"></i>Trainer</span><span><i class="dot" style="background:var(--map-done)"></i>Beaten trainer</span><span><i class="dot" style="background:var(--map-person)"></i>Other person</span>
     <span><i style="background:var(--map-grass)"></i>Tall grass</span><span><i style="background:var(--map-water)"></i>Water</span><span><i style="background:var(--map-wall)"></i>Wall, tree or rock</span>
     <span><i style="background:var(--map-door)"></i>Door or exit</span><span><i style="background:var(--map-sign)"></i>Sign</span><span><i style="background:var(--map-ledge)"></i>Ledge (jump down)</span>
     <span><i class="tri"></i>Tree to Cut</span><span><i class="dot" style="background:var(--map-rock)"></i>Rock or boulder</span></div>`;
@@ -112,8 +113,8 @@ async function renderSpot(locId, target) {
         ${checkRow(k, s.checks[k], 'Found it', it.hidden ? 'Tick it off once you have picked it up' : 'Tick it off once you have it')}</div>`;
     }
   } else {
-    const ni = d.maps.reduce((a, m) => a + m.items.length, 0), nt = d.maps.reduce((a, m) => a + (m.trainers || []).length, 0);
-    html += `<div class="card"><p class="note">${ni} item${ni === 1 ? '' : 's'} and ${nt} trainer${nt === 1 ? '' : 's'} here. Tap any marker for details.</p></div>`;
+    const ni = d.maps.reduce((a, m) => a + m.items.filter(i => !s.checks[`${locId}:item:${i.id}`]).length, 0), nt = d.maps.reduce((a, m) => a + (m.trainers || []).length, 0);
+    html += `<div class="card"><p class="note">${ni} item${ni === 1 ? '' : 's'} left to find and ${nt} trainer${nt === 1 ? '' : 's'} here. Items you tick off disappear from the map. Tap any marker for details.</p></div>`;
   }
   for (const m of maps) html += `${maps.length > 1 || !target ? `<h2>${esc(m.where)}</h2>` : ''}<div class="card spotcard">${spotSvg(m, loc, target, s.checks)}</div>`;
   html += after + SPOT_LEGEND + `<p class="note">Drawn from the game's map data. ${target ? `<a href="#/spot/${locId}/all">Whole map of ${esc(loc.name)}</a> · ` : ''}<a href="#/loc/${locId}">Back to ${esc(loc.name)}</a></p>`;
