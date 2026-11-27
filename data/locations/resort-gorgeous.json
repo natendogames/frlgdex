@@ -175,28 +175,48 @@
    "name": "Nest Ball",
    "hidden": true,
    "where": "Resort Gorgeous",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-resort-gorgeous-stardust",
    "name": "Stardust",
    "hidden": true,
    "where": "Resort Gorgeous",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-resort-gorgeous-star-piece",
    "name": "Star Piece",
    "hidden": true,
    "where": "Resort Gorgeous",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-resort-gorgeous-stardust-2",
    "name": "Stardust",
    "hidden": true,
    "where": "Resort Gorgeous",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   }
  ],
  "gifts": [],
@@ -221,7 +241,12 @@
    ],
    "id": "painter-celina",
    "area": "Resort Gorgeous",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Painter",
@@ -243,7 +268,12 @@
    ],
    "id": "painter-rayna",
    "area": "Resort Gorgeous",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Painter",
@@ -265,7 +295,12 @@
    ],
    "id": "painter-daisy",
    "area": "Resort Gorgeous",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Lady",
@@ -330,7 +365,12 @@
    ],
    "id": "lady-jacki",
    "area": "Resort Gorgeous",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Lady",
@@ -421,7 +461,12 @@
    ],
    "id": "lady-gillian",
    "area": "Resort Gorgeous",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Swimmer",
@@ -509,7 +554,12 @@
    ],
    "id": "swimmer-male-toby",
    "area": "Resort Gorgeous",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Youngster",
@@ -571,7 +621,12 @@
    ],
    "id": "youngster-destin",
    "area": "Resort Gorgeous",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   }
  ],
  "verified": true,

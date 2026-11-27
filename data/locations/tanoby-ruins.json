@@ -284,28 +284,48 @@
    "name": "Heart Scale",
    "hidden": true,
    "where": "Tanoby Ruins",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-tanoby-ruins-heart-scale-2",
    "name": "Heart Scale",
    "hidden": true,
    "where": "Tanoby Ruins",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-tanoby-ruins-heart-scale-3",
    "name": "Heart Scale",
    "hidden": true,
    "where": "Tanoby Ruins",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-tanoby-ruins-heart-scale-4",
    "name": "Heart Scale",
    "hidden": true,
    "where": "Tanoby Ruins",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [],
@@ -402,7 +422,12 @@
    ],
    "id": "ruin-maniac-benjamin",
    "area": "Tanoby Ruins",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Gentleman",
@@ -466,7 +491,12 @@
    ],
    "id": "gentleman-clifford",
    "area": "Tanoby Ruins",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Painter",
@@ -488,7 +518,12 @@
    ],
    "id": "painter-edna",
    "area": "Tanoby Ruins",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Ruin Maniac",
@@ -525,7 +560,12 @@
    ],
    "id": "ruin-maniac-brandon",
    "area": "Tanoby Ruins",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,

@@ -8,112 +8,192 @@
    "name": "Escape Rope",
    "hidden": false,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "b1f-hyper-potion",
    "name": "Hyper Potion",
    "hidden": false,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-b1f-pp-up",
    "name": "PP Up",
    "hidden": true,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "b2f-x-speed",
    "name": "X Speed",
    "hidden": false,
    "where": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "b2f-moon-stone",
    "name": "Moon Stone",
    "hidden": false,
    "where": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "b2f-tm12",
    "name": "TM12",
    "hidden": false,
    "where": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "b2f-super-potion",
    "name": "Super Potion",
    "hidden": false,
    "where": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "b3f-rare-candy",
    "name": "Rare Candy",
    "hidden": false,
    "where": "B3F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "b3f-tm21",
    "name": "TM21",
    "hidden": false,
    "where": "B3F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "b3f-blackglasses",
    "name": "Blackglasses",
    "hidden": false,
    "where": "B3F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-b3f-nugget",
    "name": "Nugget",
    "hidden": true,
    "where": "B3F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "b4f-tm49",
    "name": "TM49",
    "hidden": false,
    "where": "B4F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "b4f-max-ether",
    "name": "Max Ether",
    "hidden": false,
    "where": "B4F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "b4f-calcium",
    "name": "Calcium",
    "hidden": false,
    "where": "B4F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    6
+   ],
+   "lbl": "7"
   },
   {
    "id": "hidden-b4f-nest-ball",
    "name": "Nest Ball",
    "hidden": true,
    "where": "B4F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    5
+   ],
+   "lbl": "6"
   },
   {
    "id": "hidden-b4f-net-ball",
    "name": "Net Ball",
    "hidden": true,
    "where": "B4F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    4
+   ],
+   "lbl": "5"
   }
  ],
  "gifts": [
@@ -121,13 +201,25 @@
    "id": "item-b4f-silph-scope",
    "name": "Silph Scope",
    "from": "Giovanni drops it",
-   "where": "B4F"
+   "where": "B4F",
+   "map": true,
+   "mo": [
+    3,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "item-b4f-lift-key",
    "name": "Lift Key",
    "from": "Rocket Grunt drops it",
-   "where": "B4F"
+   "where": "B4F",
+   "map": true,
+   "mo": [
+    3,
+    2
+   ],
+   "lbl": "3"
   }
  ],
  "trainers": [
@@ -247,7 +339,12 @@
    ],
    "id": "team-rocket-grunt-11",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Team Rocket",
@@ -326,7 +423,12 @@
    ],
    "id": "team-rocket-grunt-10",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Team Rocket",
@@ -388,7 +490,12 @@
    ],
    "id": "team-rocket-grunt-9",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Team Rocket",
@@ -450,7 +557,12 @@
    ],
    "id": "team-rocket-grunt-8",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -513,7 +625,12 @@
    ],
    "id": "team-rocket-grunt-12",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Team Rocket",
@@ -652,7 +769,12 @@
    ],
    "id": "team-rocket-grunt-13",
    "area": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Team Rocket",
@@ -740,7 +862,12 @@
    ],
    "id": "team-rocket-grunt-14",
    "area": "B3F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -802,7 +929,12 @@
    ],
    "id": "team-rocket-grunt-15",
    "area": "B3F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Team Rocket",
@@ -890,7 +1022,12 @@
    ],
    "id": "team-rocket-grunt-16",
    "area": "B4F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Team Rocket",
@@ -978,7 +1115,12 @@
    ],
    "id": "team-rocket-grunt-17",
    "area": "B4F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Boss",
@@ -1068,7 +1210,12 @@
    ],
    "id": "boss-giovanni",
    "area": "B4F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -1133,7 +1280,12 @@
    ],
    "id": "team-rocket-grunt-18",
    "area": "B4F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,

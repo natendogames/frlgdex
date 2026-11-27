@@ -153,7 +153,12 @@
    "name": "Stardust",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [],
@@ -216,7 +221,12 @@
     }
    ],
    "id": "swimmer-male-barry",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Swimmer",
@@ -329,7 +339,12 @@
     }
    ],
    "id": "swimmer-male-darrin",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Swimmer",
@@ -416,7 +431,12 @@
     }
    ],
    "id": "swimmer-female-shirley",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Picnicker",
@@ -505,7 +525,12 @@
     }
    ],
    "id": "picnicker-irene",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    9
+   ],
+   "lbl": "J"
   },
   {
    "class": "Swimmer",
@@ -541,7 +566,12 @@
     }
    ],
    "id": "swimmer-female-tiffany",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Bird Keeper",
@@ -629,7 +659,12 @@
     }
    ],
    "id": "bird-keeper-roger",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Swimmer",
@@ -715,7 +750,12 @@
     }
    ],
    "id": "swimmer-female-nora",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Swimmer",
@@ -750,7 +790,12 @@
     }
    ],
    "id": "swimmer-male-dean",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Picnicker",
@@ -813,7 +858,12 @@
     }
    ],
    "id": "picnicker-missy",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    8
+   ],
+   "lbl": "I"
   },
   {
    "class": "Swimmer",
@@ -876,7 +926,12 @@
     }
    ],
    "id": "swimmer-female-melissa",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   }
  ],
  "verified": true,

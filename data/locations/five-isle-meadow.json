@@ -261,14 +261,24 @@
    "name": "Max Potion",
    "hidden": false,
    "where": "Meadow",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "meadow-pp-up",
    "name": "PP Up",
    "hidden": false,
    "where": "Meadow",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [],
@@ -332,7 +342,12 @@
    ],
    "id": "team-rocket-grunt-50",
    "area": "Meadow",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Team Rocket",
@@ -419,7 +434,12 @@
    ],
    "id": "team-rocket-grunt-51",
    "area": "Meadow",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -506,7 +526,12 @@
    ],
    "id": "team-rocket-grunt-49",
    "area": "Meadow",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,

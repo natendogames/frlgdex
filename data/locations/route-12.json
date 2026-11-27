@@ -210,35 +210,60 @@
    "need": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)",
    "after": "safari-zone",
    "stage": 38.5,
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "outside-iron",
    "name": "Iron",
    "hidden": false,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-outside-hyper-potion",
    "name": "Hyper Potion",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-outside-leftovers",
    "name": "Leftovers",
    "hidden": true,
    "where": "Outside (underfoot)",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-outside-rare-candy",
    "name": "Rare Candy",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   }
  ],
  "gifts": [
@@ -246,19 +271,37 @@
    "id": "item-fishing-house-super-rod",
    "name": "Super Rod",
    "from": "Fishing Guru",
-   "where": "Fishing House"
+   "where": "Fishing House",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-fishing-house-net-ball",
    "name": "Net Ball",
    "from": "Fishing Guru (show a record-size Magikarp)",
-   "where": "Fishing House"
+   "where": "Fishing House",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-north-entrance-2f-tm27",
    "name": "TM27",
    "from": "Girl upstairs",
-   "where": "North Entrance 2F"
+   "where": "North Entrance 2F",
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -346,7 +389,12 @@
     }
    ],
    "id": "fisherman-ned",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Fisherman",
@@ -408,7 +456,12 @@
     }
    ],
    "id": "fisherman-chip",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Fisherman",
@@ -443,7 +496,12 @@
     }
    ],
    "id": "fisherman-hank",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Fisherman",
@@ -551,7 +609,12 @@
     }
    ],
    "id": "fisherman-elliot",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Young Couple",
@@ -615,7 +678,12 @@
    ],
    "double": true,
    "id": "young-couple-gia-jes",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Rocker",
@@ -678,7 +746,12 @@
     }
    ],
    "id": "rocker-luca",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Camper",
@@ -741,7 +814,12 @@
     }
    ],
    "id": "camper-justin",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Fisherman",
@@ -784,12 +862,17 @@
     }
    ],
    "id": "fisherman-andrew",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    8
+   ],
+   "lbl": "I"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 3
 }

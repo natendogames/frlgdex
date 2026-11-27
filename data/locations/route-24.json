@@ -237,14 +237,24 @@
    "name": "TM45",
    "hidden": false,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-outside-pecha-berry",
    "name": "Pecha Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   }
  ],
  "gifts": [
@@ -252,7 +262,13 @@
    "id": "item-outside-nugget",
    "name": "Nugget",
    "from": "Rocket at the end of Nugget Bridge (after beating him)",
-   "where": "Outside"
+   "where": "Outside",
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -321,7 +337,12 @@
     }
    ],
    "id": "bug-catcher-cale",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Lass",
@@ -391,7 +412,12 @@
     }
    ],
    "id": "lass-ali",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Youngster",
@@ -448,7 +474,12 @@
     }
    ],
    "id": "youngster-timmy",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Lass",
@@ -509,7 +540,12 @@
     }
    ],
    "id": "lass-reli",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Camper",
@@ -545,7 +581,12 @@
     }
    ],
    "id": "camper-ethan",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Team Rocket",
@@ -606,7 +647,12 @@
     "Nugget"
    ],
    "id": "team-rocket-grunt-6",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Camper",
@@ -669,7 +715,12 @@
     }
    ],
    "id": "camper-shane",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   }
  ],
  "verified": true,

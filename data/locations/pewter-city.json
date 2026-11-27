@@ -8,7 +8,12 @@
    "name": "Poké Ball",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [
@@ -16,7 +21,13 @@
    "id": "item-gym-tm39",
    "name": "TM39",
    "from": "Brock (after winning)",
-   "where": "Gym"
+   "where": "Gym",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-museum-1f-old-amber",
@@ -26,7 +37,13 @@
    "later": true,
    "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
    "after": "ss-anne",
-   "stage": 17.5
+   "stage": 17.5,
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-outside-running-shoes",
@@ -82,7 +99,12 @@
    ],
    "id": "camper-liam",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Leader",
@@ -136,12 +158,17 @@
    ],
    "id": "leader-brock",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 2
+ "mapCount": 3
 }

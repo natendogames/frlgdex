@@ -225,13 +225,25 @@
    "id": "item-professor-oaks-lab-pok-ball-5",
    "name": "Poké Ball ×5",
    "from": "Professor Oak (when you bring him the Parcel)",
-   "where": "Professor Oaks Lab"
+   "where": "Professor Oaks Lab",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-rivals-house-town-map",
    "name": "Town Map",
    "from": "Daisy (once you have the Pokédex)",
-   "where": "Rivals House"
+   "where": "Rivals House",
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "mon-professor-oaks-lab-starter-pok-mon-bulbasaur-charmander-or-squirtle",
@@ -324,5 +336,5 @@
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 3
 }

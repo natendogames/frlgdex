@@ -8,12 +8,19 @@
    "id": "item-kindle-road-ember-spa-hm06",
    "name": "HM06",
    "from": "Man at the Ember Spa",
-   "where": "Kindle Road Ember Spa"
+   "where": "Kindle Road Ember Spa",
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

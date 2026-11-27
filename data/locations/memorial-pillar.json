@@ -186,35 +186,60 @@
    "name": "Metal Coat",
    "hidden": false,
    "where": "Memorial Pillar",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "hidden-memorial-pillar-big-pearl",
    "name": "Big Pearl",
    "hidden": true,
    "where": "Memorial Pillar",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "6"
   },
   {
    "id": "hidden-memorial-pillar-razz-berry",
    "name": "Razz Berry",
    "hidden": true,
    "where": "Memorial Pillar",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-memorial-pillar-sitrus-berry",
    "name": "Sitrus Berry",
    "hidden": true,
    "where": "Memorial Pillar",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-memorial-pillar-bluk-berry",
    "name": "Bluk Berry",
    "hidden": true,
    "where": "Memorial Pillar",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   }
  ],
  "gifts": [
@@ -222,7 +247,13 @@
    "id": "item-memorial-pillar-tm42",
    "name": "TM42",
    "from": "Man at the pillar (after giving Lemonade)",
-   "where": "Memorial Pillar"
+   "where": "Memorial Pillar",
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   }
  ],
  "trainers": [
@@ -286,7 +317,12 @@
    ],
    "id": "bird-keeper-harold",
    "area": "Memorial Pillar",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Bird Keeper",
@@ -348,7 +384,12 @@
    ],
    "id": "bird-keeper-chaz",
    "area": "Memorial Pillar",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Bird Keeper",
@@ -408,7 +449,12 @@
    ],
    "id": "bird-keeper-milo",
    "area": "Memorial Pillar",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,

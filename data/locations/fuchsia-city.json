@@ -126,7 +126,12 @@
    "name": "Max Revive",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "wardens-house-rare-candy",
@@ -137,7 +142,12 @@
    "need": "Strength (HM04 from the Safari Zone warden for his Gold Teeth, used with the Rainbow Badge)",
    "after": "safari-zone",
    "stage": 38.5,
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [
@@ -145,19 +155,37 @@
    "id": "item-gym-tm06",
    "name": "TM06",
    "from": "Koga (after winning)",
-   "where": "Gym"
+   "where": "Gym",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-house-2-good-rod",
    "name": "Good Rod",
    "from": "Fishing Guru",
-   "where": "House 2"
+   "where": "House 2",
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-wardens-house-hm04",
    "name": "HM04",
    "from": "Safari Warden (return his Gold Teeth)",
-   "where": "Wardens House"
+   "where": "Wardens House",
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -220,7 +248,12 @@
    ],
    "id": "juggler-nate",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Juggler",
@@ -256,7 +289,12 @@
    ],
    "id": "juggler-kayden",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Juggler",
@@ -370,7 +408,12 @@
    ],
    "id": "juggler-kirk",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Tamer",
@@ -459,7 +502,12 @@
    ],
    "id": "tamer-edgar",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Tamer",
@@ -522,7 +570,12 @@
    ],
    "id": "tamer-phil",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Juggler",
@@ -584,7 +637,12 @@
    ],
    "id": "juggler-shawn",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Leader",
@@ -705,12 +763,17 @@
    ],
    "id": "leader-koga",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    6
+   ],
+   "lbl": "G"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 3
+ "mapCount": 4
 }

@@ -153,35 +153,60 @@
    "name": "Repel",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "1f-pearl",
    "name": "Pearl",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "1f-escape-rope",
    "name": "Escape Rope",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "b1f-revive",
    "name": "Revive",
    "hidden": false,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "b1f-max-ether",
    "name": "Max Ether",
    "hidden": false,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [],
@@ -271,7 +296,12 @@
    ],
    "id": "picnicker-dana",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Picnicker",
@@ -386,7 +416,12 @@
    ],
    "id": "picnicker-ariana",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Picnicker",
@@ -446,7 +481,12 @@
    ],
    "id": "picnicker-leah",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Hiker",
@@ -534,7 +574,12 @@
    ],
    "id": "hiker-oliver",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Hiker",
@@ -598,7 +643,12 @@
    ],
    "id": "hiker-lucas",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Hiker",
@@ -712,7 +762,12 @@
    ],
    "id": "hiker-lenny",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Poké Maniac",
@@ -775,7 +830,12 @@
    ],
    "id": "pokemaniac-ashton",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Picnicker",
@@ -864,7 +924,12 @@
    ],
    "id": "picnicker-sofia",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Hiker",
@@ -955,7 +1020,12 @@
    ],
    "id": "hiker-dudley",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Poké Maniac",
@@ -1046,7 +1116,12 @@
    ],
    "id": "pokemaniac-cooper",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Poké Maniac",
@@ -1082,7 +1157,12 @@
    ],
    "id": "pokemaniac-winston",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Picnicker",
@@ -1142,7 +1222,12 @@
    ],
    "id": "picnicker-martha",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Poké Maniac",
@@ -1204,7 +1289,12 @@
    ],
    "id": "pokemaniac-steve",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Hiker",
@@ -1241,7 +1331,12 @@
    ],
    "id": "hiker-allen",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Hiker",
@@ -1303,7 +1398,12 @@
    ],
    "id": "hiker-eric",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    4
+   ],
+   "lbl": "E"
   }
  ],
  "verified": true,

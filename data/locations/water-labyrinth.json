@@ -186,7 +186,13 @@
    "id": "mon-water-labyrinth-togepi-egg",
    "name": "Togepi Egg",
    "from": "Daycare man (needs an empty party slot)",
-   "where": "Water Labyrinth"
+   "where": "Water Labyrinth",
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -277,7 +283,12 @@
    ],
    "id": "pkmn-breeder-alize",
    "area": "Water Labyrinth",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,

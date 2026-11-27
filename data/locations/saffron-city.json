@@ -31,7 +31,12 @@
    "name": "Nugget",
    "hidden": true,
    "where": "Copycats House 2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [
@@ -39,13 +44,25 @@
    "id": "item-gym-tm04",
    "name": "TM04",
    "from": "Sabrina (after winning)",
-   "where": "Gym"
+   "where": "Gym",
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-mr-psychics-house-tm29",
    "name": "TM29",
    "from": "Mr. Psychic",
-   "where": "Mr Psychics House"
+   "where": "Mr Psychics House",
+   "map": true,
+   "mo": [
+    4,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "mon-dojo-hitmonlee-lv-25-choose-one",
@@ -125,7 +142,12 @@
    ],
    "id": "black-belt-hideki",
    "area": "Dojo",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Black Belt",
@@ -219,7 +241,12 @@
    ],
    "id": "black-belt-hitoshi",
    "area": "Dojo",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Black Belt",
@@ -313,7 +340,12 @@
    ],
    "id": "black-belt-mike",
    "area": "Dojo",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Black Belt",
@@ -378,7 +410,12 @@
    ],
    "id": "black-belt-koichi",
    "area": "Dojo",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Black Belt",
@@ -416,7 +453,12 @@
    ],
    "id": "black-belt-aaron",
    "area": "Dojo",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Channeler",
@@ -505,7 +547,12 @@
    ],
    "id": "channeler-tasha",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Psychic",
@@ -596,7 +643,12 @@
    ],
    "id": "psychic-cameron",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Channeler",
@@ -633,7 +685,12 @@
    ],
    "id": "channeler-stacy",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Psychic",
@@ -694,7 +751,12 @@
    ],
    "id": "psychic-tyron",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Psychic",
@@ -729,7 +791,12 @@
    ],
    "id": "psychic-preston",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Channeler",
@@ -792,7 +859,12 @@
    ],
    "id": "channeler-amanda",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Psychic",
@@ -907,7 +979,12 @@
    ],
    "id": "psychic-johan",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Leader",
@@ -1029,12 +1106,17 @@
    ],
    "id": "leader-sabrina",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    5
+   ],
+   "lbl": "F"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 4
+ "mapCount": 5
 }

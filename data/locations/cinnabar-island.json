@@ -258,43 +258,85 @@
    "id": "item-gym-tm38",
    "name": "TM38",
    "from": "Blaine (after winning)",
-   "where": "Gym"
+   "where": "Gym",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "trade-pok-mon-lab-experiment-room-trade-give-ponyta-get-seel-seelor",
    "name": "Trade: give Ponyta, get Seel (\"Seelor\")",
    "from": "Garett",
-   "where": "Pokémon Lab Experiment Room"
+   "where": "Pokémon Lab Experiment Room",
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "mon-pok-mon-lab-experiment-room-omanyte-lv-5",
    "name": "Omanyte (Lv 5)",
    "from": "Lab scientist (revives Helix Fossil)",
-   "where": "Pokémon Lab Experiment Room"
+   "where": "Pokémon Lab Experiment Room",
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "mon-pok-mon-lab-experiment-room-kabuto-lv-5",
    "name": "Kabuto (Lv 5)",
    "from": "Lab scientist (revives Dome Fossil)",
-   "where": "Pokémon Lab Experiment Room"
+   "where": "Pokémon Lab Experiment Room",
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "mon-pok-mon-lab-experiment-room-aerodactyl-lv-5",
    "name": "Aerodactyl (Lv 5)",
    "from": "Lab scientist (revives Old Amber)",
-   "where": "Pokémon Lab Experiment Room"
+   "where": "Pokémon Lab Experiment Room",
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "trade-pok-mon-lab-lounge-trade-give-raichu-get-electrode-esphere",
    "name": "Trade: give Raichu, get Electrode (\"Esphere\")",
    "from": "Clifton",
-   "where": "Pokémon Lab Lounge"
+   "where": "Pokémon Lab Lounge",
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "trade-pok-mon-lab-lounge-trade-give-venonat-get-tangela-tangeny",
    "name": "Trade: give Venonat, get Tangela (\"Tangeny\")",
    "from": "Norma",
-   "where": "Pokémon Lab Lounge"
+   "where": "Pokémon Lab Lounge",
+   "map": true,
+   "mo": [
+    3,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "trainers": [
@@ -357,7 +399,12 @@
    ],
    "id": "burglar-dusty",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Super Nerd",
@@ -394,7 +441,12 @@
    ],
    "id": "super-nerd-derek",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Super Nerd",
@@ -455,7 +507,12 @@
    ],
    "id": "super-nerd-zac",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Burglar",
@@ -492,7 +549,12 @@
    ],
    "id": "burglar-ramon",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Super Nerd",
@@ -607,7 +669,12 @@
    ],
    "id": "super-nerd-avery",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Super Nerd",
@@ -693,7 +760,12 @@
    ],
    "id": "super-nerd-erik",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Burglar",
@@ -780,7 +852,12 @@
    ],
    "id": "burglar-quinn",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Leader",
@@ -904,12 +981,17 @@
    ],
    "id": "leader-blaine",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "B"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 2
+ "mapCount": 4
 }

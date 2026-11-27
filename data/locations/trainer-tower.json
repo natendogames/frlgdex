@@ -183,21 +183,36 @@
    "name": "Big Pearl",
    "hidden": true,
    "where": "Trainer Tower",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-trainer-tower-pearl",
    "name": "Pearl",
    "hidden": true,
    "where": "Trainer Tower",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-trainer-tower-nanab-berry",
    "name": "Nanab Berry",
    "hidden": true,
    "where": "Trainer Tower",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [],
@@ -286,7 +301,12 @@
    ],
    "id": "psychic-rodette",
    "area": "Trainer Tower",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Psychic",
@@ -322,7 +342,12 @@
    ],
    "id": "psychic-dario",
    "area": "Trainer Tower",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   }
  ],
  "verified": true,

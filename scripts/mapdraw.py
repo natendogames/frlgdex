@@ -25,6 +25,9 @@ def _classes(world):
         return '.'
     return cls
 
+def letter(i):
+    return (letter(i // 26 - 1) if i >= 26 else '') + chr(65 + i % 26)
+
 def walk_key(world, name):
     """How a player walks a map on a first visit: in at the entrance (the first tile the reach walk stands on), along
     the main route to the exit that leads on in the story, stepping into each side branch (a dead end, or a part that
@@ -79,12 +82,19 @@ def walk_key(world, name):
         return (i, 0 if d else 1, d)  # a side branch before the main route at the same point
     return key
 
-def write(world, item_pos, locs, out, place_maps, trainer_pos):
+def write(world, item_pos, locs, out, place_maps, trainer_pos, gift_pos=None):
     """item_pos: (location id, item id) -> (map name, x, y, elevation, underfoot).
     place_maps: map name -> (location id, area name) for every map that belongs to a place in the app.
-    trainer_pos: (location id, trainer id) -> (map name, [(x, y), ...]) where that trainer stands."""
+    trainer_pos: (location id, trainer id) -> (map name, [(x, y), ...]) where that trainer stands.
+    gift_pos: (location id, gift id) -> (map name, [(x, y), ...]) where the person who gives it stands.
+
+    Labels: things you collect (items and the people who give you something) are numbered 1, 2, 3 and trainers lettered
+    A, B, C, in walk order; each one's label and place in that order go onto the location data too (lbl, mo), so the
+    lists on the place page can follow the map."""
     cls = _classes(world)
-    items_on, trainers_on = {}, {}
+    items_on, trainers_on, gifts_on = {}, {}, {}
+    for (lid, gid), (name, spots) in (gift_pos or {}).items():
+        if spots: gifts_on.setdefault(name, []).append((lid, gid) + tuple(spots[0]))
     for (lid, iid), pos in item_pos.items(): items_on.setdefault(pos[0], []).append((lid, iid, pos))
     for (lid, tid), (name, spots) in trainer_pos.items():
         for x, y in spots: trainers_on.setdefault(name, []).append((lid, tid, x, y))
@@ -96,6 +106,9 @@ def write(world, item_pos, locs, out, place_maps, trainer_pos):
         loc = locs[lid]
         names = {i['id']: i for i in loc['items']}
         tnames = {t['id']: t for t in loc.get('trainers') or []}
+        gnames = {g['id']: g for g in loc.get('gifts') or []}
+        gifts = [{'id': gid, 'x': x, 'y': y, 'name': gnames[gid]['name'], 'from': gnames[gid].get('from', '')}
+                 for l, gid, x, y in gifts_on.get(name, []) if l == lid and gid in gnames]
         items = [{'id': iid, 'x': p[1], 'y': p[2], 'hidden': names[iid]['hidden'], 'name': names[iid]['name']}
                  for l, iid, p in sorted(items_on.get(name, []), key=lambda t: (t[2][2], t[2][1])) if l == lid and iid in names]
         seen, trainers = set(), []
@@ -105,12 +118,12 @@ def write(world, item_pos, locs, out, place_maps, trainer_pos):
             t = tnames[tid]
             trainers.append({'id': tid, 'x': x, 'y': y, 'name': f"{t.get('class', '')} {t.get('name', '')}".strip()})
         # a map with nothing to find or fight is left out (Pokémon Centers, Marts, plain houses), except the outdoors
-        if not items and not trainers and area != 'Outside': continue
+        if not items and not trainers and not gifts and area != 'Outside': continue
         g = world.grid(name)
         if not g: continue
         w, h, cells = g
         m = world.maps[name]
-        spots = {(i['x'], i['y']) for i in items} | {(t['x'], t['y']) for t in trainers}
+        spots = {(i['x'], i['y']) for i in items} | {(t['x'], t['y']) for t in trainers} | {(g['x'], g['y']) for g in gifts}
         objs = []
         for ev in m.get('object_events') or []:
             if not isinstance(ev.get('x'), int) or (ev['x'], ev['y']) in spots: continue
@@ -121,17 +134,28 @@ def write(world, item_pos, locs, out, place_maps, trainer_pos):
         # you can only reach later (Cut, Surf, a later story point) come after, and the app lists them in their own
         # "come back later" group
         key = walk_key(world, name)
-        for group, src in ((items, names), (trainers, tnames)):
+        for group, src in ((items, names), (trainers, tnames), (gifts, gnames)):
             for t in group:
                 if src[t['id']].get('later'): t['later'] = True
-            group.sort(key=lambda t: (bool(t.get('later')), key(t['x'], t['y']), t['y'], t['x']))
-            for i, t in enumerate(group): t['o'] = i
+        srt = lambda t: (bool(t.get('later')), key(t['x'], t['y']), t['y'], t['x'])
+        trainers.sort(key=srt)
+        for i, t in enumerate(trainers): t['o'], t['lbl'] = i, letter(i)
+        # items and gift givers share the numbers; everything one person gives you shares that person's number
+        got = sorted(items + gifts, key=lambda t: srt(t) + (t['id'] in gnames and t not in items,))
+        n, at = 0, {}
+        for t in got:
+            p = (t['x'], t['y']) if t in gifts else None
+            if p in at: t['o'], t['lbl'] = at[p]; continue
+            t['o'], t['lbl'] = n, str(n + 1); n += 1
+            if p: at[p] = (t['o'], t['lbl'])
+        items.sort(key=lambda t: t['o']); gifts.sort(key=lambda t: t['o'])
         for i in items: names[i['id']]['map'] = True
         for t in trainers: tnames[t['id']]['map'] = True
+        for g in gifts: gnames[g['id']]['map'] = True
         loc['mapCount'] = loc.get('mapCount', 0) + 1
         files.setdefault(lid, []).append({
             'map': name, 'where': area, 'w': w, 'h': h, 'tiles': ''.join(cls(c[0], c[2]) for c in cells),
-            'items': items, 'trainers': trainers, 'objects': objs,
+            'items': items, 'trainers': trainers, 'gifts': gifts, 'objects': objs,
             'doors': [list(d) for d in sorted({(e['x'], e['y']) for e in m.get('warp_events') or [] if isinstance(e.get('x'), int)})],
             'signs': [list(s) for s in sorted({(e['x'], e['y']) for e in m.get('bg_events') or [] if e.get('type') == 'sign' and isinstance(e.get('x'), int)})]})
     d = os.path.join(out, 'itemmaps')
@@ -140,5 +164,13 @@ def write(world, item_pos, locs, out, place_maps, trainer_pos):
         if f.endswith('.json') and f[:-5] not in files: os.remove(os.path.join(d, f))
     for lid, ms in files.items():
         ms.sort(key=lambda x: (x['where'] != 'Outside', x['where'], x['map']))
+        # the place page lists things in map order: which map (as the map page shows them), then the label order
+        src = {'items': {i['id']: i for i in locs[lid]['items']}, 'trainers': {t['id']: t for t in locs[lid].get('trainers') or []},
+               'gifts': {g['id']: g for g in locs[lid].get('gifts') or []}}
+        for mi, m in enumerate(ms):
+            for kind in ('items', 'trainers', 'gifts'):
+                for t in m[kind]:
+                    dst = src[kind][t['id']]
+                    if 'mo' not in dst: dst['mo'], dst['lbl'] = [mi, t['o']], t['lbl']
         json.dump({'maps': ms}, open(os.path.join(d, lid + '.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
     return sum(len(v) for v in files.values())

@@ -210,21 +210,36 @@
    "name": "Full Restore",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "hidden-outside-ultra-ball",
    "name": "Ultra Ball",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-outside-max-ether",
    "name": "Max Ether",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-outside-lum-berry",
@@ -235,28 +250,48 @@
    "need": "Come in from Victory Road",
    "after": "victory-road",
    "stage": 60,
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "8"
   },
   {
    "id": "hidden-outside-sitrus-berry",
    "name": "Sitrus Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "6"
   },
   {
    "id": "hidden-outside-aspear-berry",
    "name": "Aspear Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-outside-leppa-berry",
    "name": "Leppa Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-outside-max-elixir",
@@ -267,7 +302,12 @@
    "need": "Come in from Victory Road",
    "after": "victory-road",
    "stage": 60,
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "7"
   }
  ],
  "gifts": [],

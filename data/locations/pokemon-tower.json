@@ -189,70 +189,120 @@
    "name": "Escape Rope",
    "hidden": false,
    "where": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "4f-elixir",
    "name": "Elixir",
    "hidden": false,
    "where": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "4f-awakening",
    "name": "Awakening",
    "hidden": false,
    "where": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "4f-great-ball",
    "name": "Great Ball",
    "hidden": false,
    "where": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "5f-nugget",
    "name": "Nugget",
    "hidden": false,
    "where": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "5f-cleanse-tag",
    "name": "Cleanse Tag",
    "hidden": false,
    "where": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-5f-big-mushroom",
    "name": "Big Mushroom",
    "hidden": true,
    "where": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "6f-rare-candy",
    "name": "Rare Candy",
    "hidden": false,
    "where": "6F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "6f-x-accuracy",
    "name": "X Accuracy",
    "hidden": false,
    "where": "6F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-7f-soothe-bell",
    "name": "Soothe Bell",
    "hidden": true,
    "where": "7F (underfoot)",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [],
@@ -673,7 +723,12 @@
    ],
    "id": "channeler-patricia",
    "area": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Channeler",
@@ -708,7 +763,12 @@
    ],
    "id": "channeler-carly",
    "area": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Channeler",
@@ -743,7 +803,12 @@
    ],
    "id": "channeler-hope",
    "area": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Channeler",
@@ -778,7 +843,12 @@
    ],
    "id": "channeler-paula",
    "area": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Channeler",
@@ -813,7 +883,12 @@
    ],
    "id": "channeler-jody",
    "area": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Channeler",
@@ -873,7 +948,12 @@
    ],
    "id": "channeler-laurel",
    "area": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Channeler",
@@ -908,7 +988,12 @@
    ],
    "id": "channeler-ruth",
    "area": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Channeler",
@@ -943,7 +1028,12 @@
    ],
    "id": "channeler-tammy",
    "area": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Channeler",
@@ -978,7 +1068,12 @@
    ],
    "id": "channeler-karina",
    "area": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Channeler",
@@ -1013,7 +1108,12 @@
    ],
    "id": "channeler-janae",
    "area": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Channeler",
@@ -1048,7 +1148,12 @@
    ],
    "id": "channeler-emilia",
    "area": "6F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Channeler",
@@ -1083,7 +1188,12 @@
    ],
    "id": "channeler-jennifer",
    "area": "6F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Channeler",
@@ -1168,7 +1278,12 @@
    ],
    "id": "channeler-angelica",
    "area": "6F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Team Rocket",
@@ -1259,7 +1374,12 @@
    ],
    "id": "team-rocket-grunt-19",
    "area": "7F",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Team Rocket",
@@ -1322,7 +1442,12 @@
    ],
    "id": "team-rocket-grunt-20",
    "area": "7F",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -1438,7 +1563,12 @@
    ],
    "id": "team-rocket-grunt-21",
    "area": "7F",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    2
+   ],
+   "lbl": "C"
   }
  ],
  "verified": true,

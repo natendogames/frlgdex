@@ -93,14 +93,24 @@
    "name": "Zinc",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-outside-pinap-berry",
    "name": "Pinap Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [],
@@ -194,7 +204,12 @@
     }
    ],
    "id": "bird-keeper-carter",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Bird Keeper",
@@ -310,7 +325,12 @@
     }
    ],
    "id": "bird-keeper-mitch",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Bird Keeper",
@@ -372,7 +392,12 @@
     }
    ],
    "id": "bird-keeper-beck",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Bird Keeper",
@@ -462,7 +487,12 @@
     }
    ],
    "id": "bird-keeper-marlon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Biker",
@@ -548,7 +578,12 @@
     }
    ],
    "id": "biker-isaac",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    8
+   ],
+   "lbl": "I"
   },
   {
    "class": "Biker",
@@ -609,7 +644,12 @@
     }
    ],
    "id": "biker-malik",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Bird Keeper",
@@ -645,7 +685,12 @@
     }
    ],
    "id": "bird-keeper-donald",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Biker",
@@ -706,7 +751,12 @@
     }
    ],
    "id": "biker-gerald",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Biker",
@@ -821,7 +871,12 @@
     }
    ],
    "id": "biker-lukas",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Bird Keeper",
@@ -883,7 +938,12 @@
     }
    ],
    "id": "bird-keeper-benny",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    9
+   ],
+   "lbl": "J"
   },
   {
    "class": "Twins",
@@ -946,7 +1006,12 @@
    ],
    "double": true,
    "id": "twins-kiri-jan",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    10
+   ],
+   "lbl": "K"
   }
  ],
  "verified": true,

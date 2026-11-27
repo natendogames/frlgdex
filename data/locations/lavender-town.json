@@ -12,7 +12,13 @@
    "later": true,
    "need": "After Pokémon Tower",
    "after": "pokemon-tower",
-   "stage": 29
+   "stage": 29,
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [],
@@ -20,5 +26,5 @@
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 2
 }

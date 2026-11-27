@@ -64,35 +64,60 @@
    "name": "Rare Candy",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-outside-full-restore",
    "name": "Full Restore",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-outside-pp-up",
    "name": "PP Up",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-outside-max-revive",
    "name": "Max Revive",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-outside-max-elixir",
    "name": "Max Elixir",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   }
  ],
  "gifts": [],
@@ -158,7 +183,12 @@
     }
    ],
    "id": "cue-ball-isaiah",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Biker",
@@ -248,7 +278,12 @@
     }
    ],
    "id": "biker-virgil",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Cue Ball",
@@ -311,7 +346,12 @@
     }
    ],
    "id": "cue-ball-raul",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Biker",
@@ -345,7 +385,12 @@
     }
    ],
    "id": "biker-billy",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Biker",
@@ -408,7 +453,12 @@
     }
    ],
    "id": "biker-nikolas",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Cue Ball",
@@ -525,7 +575,12 @@
     }
    ],
    "id": "cue-ball-jamal",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Cue Ball",
@@ -561,7 +616,12 @@
     }
    ],
    "id": "cue-ball-zeek",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Cue Ball",
@@ -624,7 +684,12 @@
     }
    ],
    "id": "cue-ball-corey",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Biker",
@@ -685,7 +750,12 @@
     }
    ],
    "id": "biker-jaxon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    8
+   ],
+   "lbl": "I"
   },
   {
    "class": "Biker",
@@ -829,7 +899,12 @@
     }
    ],
    "id": "biker-william",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    9
+   ],
+   "lbl": "J"
   }
  ],
  "verified": true,

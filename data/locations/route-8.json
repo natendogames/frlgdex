@@ -71,21 +71,36 @@
    "name": "Rawst Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-outside-lum-berry",
    "name": "Lum Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-outside-leppa-berry",
    "name": "Leppa Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [],
@@ -147,7 +162,12 @@
     }
    ],
    "id": "lass-julia",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Gamer",
@@ -206,7 +226,12 @@
     }
    ],
    "id": "gamer-rich",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Super Nerd",
@@ -290,7 +315,12 @@
     }
    ],
    "id": "super-nerd-glenn",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Twins",
@@ -351,7 +381,12 @@
    ],
    "double": true,
    "id": "twins-eli-anne",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Lass",
@@ -492,7 +527,12 @@
     }
    ],
    "id": "lass-megan",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Lass",
@@ -582,7 +622,12 @@
     }
    ],
    "id": "lass-andrea",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Super Nerd",
@@ -618,7 +663,12 @@
     }
    ],
    "id": "super-nerd-leslie",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Lass",
@@ -681,7 +731,12 @@
     }
    ],
    "id": "lass-paige",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    8
+   ],
+   "lbl": "I"
   },
   {
    "class": "Biker",
@@ -740,7 +795,12 @@
     }
    ],
    "id": "biker-jaren",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    9
+   ],
+   "lbl": "J"
   },
   {
    "class": "Biker",
@@ -830,7 +890,12 @@
     }
    ],
    "id": "biker-ricardo",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    10
+   ],
+   "lbl": "K"
   },
   {
    "class": "Gamer",
@@ -920,7 +985,12 @@
     }
    ],
    "id": "gamer-stan",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    11
+   ],
+   "lbl": "L"
   },
   {
    "class": "Super Nerd",
@@ -1035,7 +1105,12 @@
     }
    ],
    "id": "super-nerd-aidan",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    12
+   ],
+   "lbl": "M"
   }
  ],
  "verified": true,

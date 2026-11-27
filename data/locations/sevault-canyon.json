@@ -149,35 +149,60 @@
    "name": "King's Rock",
    "hidden": false,
    "where": "Sevault Canyon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "sevault-canyon-max-elixir",
    "name": "Max Elixir",
    "hidden": false,
    "where": "Sevault Canyon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "sevault-canyon-nugget",
    "name": "Nugget",
    "hidden": false,
    "where": "Sevault Canyon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-sevault-canyon-cheri-berry",
    "name": "Cheri Berry",
    "hidden": true,
    "where": "Sevault Canyon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "sevault-canyon-house-lucky-punch",
    "name": "Lucky Punch",
    "hidden": false,
    "where": "Sevault Canyon House",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [],
@@ -326,7 +351,12 @@
    ],
    "id": "coolmichelle",
    "area": "Sevault Canyon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Cool Trainer",
@@ -474,7 +504,12 @@
    ],
    "id": "coolleroy",
    "area": "Sevault Canyon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Crush Girl",
@@ -568,7 +603,12 @@
    ],
    "id": "crush-girl-cyndy",
    "area": "Sevault Canyon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Pokémon Ranger",
@@ -606,7 +646,12 @@
    ],
    "id": "pkmn-ranger-katelyn",
    "area": "Sevault Canyon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Pokémon Ranger",
@@ -697,7 +742,12 @@
    ],
    "id": "pkmn-ranger-jackson",
    "area": "Sevault Canyon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Tamer",
@@ -788,7 +838,12 @@
    ],
    "id": "tamer-evan",
    "area": "Sevault Canyon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Cool Couple",
@@ -855,7 +910,12 @@
    ],
    "id": "cool-couple-lex-nya",
    "area": "Sevault Canyon",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,

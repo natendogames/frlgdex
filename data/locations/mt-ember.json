@@ -534,35 +534,60 @@
    "name": "Ultra Ball",
    "hidden": false,
    "where": "Exterior",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "exterior-fire-stone",
    "name": "Fire Stone",
    "hidden": false,
    "where": "Exterior",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "exterior-dire-hit",
    "name": "Dire Hit",
    "hidden": false,
    "where": "Exterior",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-exterior-fire-stone",
    "name": "Fire Stone",
    "hidden": true,
    "where": "Exterior",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "hidden-exterior-ultra-ball",
    "name": "Ultra Ball",
    "hidden": true,
    "where": "Exterior",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [
@@ -636,7 +661,12 @@
    ],
    "id": "team-rocket-grunt-43",
    "area": "Exterior",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Team Rocket",
@@ -754,7 +784,12 @@
    ],
    "id": "team-rocket-grunt-44",
    "area": "Exterior",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Pokémon Ranger",
@@ -843,7 +878,12 @@
    ],
    "id": "pkmn-ranger-beth",
    "area": "Exterior",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Pokémon Ranger",
@@ -908,7 +948,12 @@
    ],
    "id": "pkmn-ranger-logan",
    "area": "Exterior",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Crush Girl",
@@ -976,7 +1021,12 @@
    ],
    "id": "crush-girl-jocelyn",
    "area": "Exterior",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   }
  ],
  "verified": true,

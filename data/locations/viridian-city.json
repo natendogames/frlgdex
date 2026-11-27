@@ -126,7 +126,12 @@
    "name": "Potion",
    "hidden": false,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-gym-macho-brace",
@@ -137,7 +142,12 @@
    "need": "the other seven badges: the Gym door stays locked until then",
    "after": "route-21",
    "stage": 58,
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [
@@ -145,7 +155,13 @@
    "id": "item-outside-teachy-tv",
    "name": "Teachy TV",
    "from": "Old man (after the catching tutorial)",
-   "where": "Outside"
+   "where": "Outside",
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "item-gym-tm26",
@@ -155,7 +171,13 @@
    "later": true,
    "need": "the other seven badges: the Gym door stays locked until then",
    "after": "route-21",
-   "stage": 58
+   "stage": 58,
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "item-mart-oak-s-parcel",
@@ -232,7 +254,12 @@
    "area": "Gym",
    "stage": "route-21",
    "later": true,
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Tamer",
@@ -295,7 +322,12 @@
    "area": "Gym",
    "stage": "route-21",
    "later": true,
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Cool Trainer",
@@ -445,7 +477,12 @@
    "area": "Gym",
    "stage": "route-21",
    "later": true,
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Tamer",
@@ -484,7 +521,12 @@
    "area": "Gym",
    "stage": "route-21",
    "later": true,
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Cool Trainer",
@@ -632,7 +674,12 @@
    "area": "Gym",
    "stage": "route-21",
    "later": true,
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Black Belt",
@@ -672,7 +719,12 @@
    "area": "Gym",
    "stage": "route-21",
    "later": true,
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Black Belt",
@@ -768,7 +820,12 @@
    "area": "Gym",
    "stage": "route-21",
    "later": true,
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Cool Trainer",
@@ -918,7 +975,12 @@
    "area": "Gym",
    "stage": "route-21",
    "later": true,
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Leader",
@@ -1076,7 +1138,12 @@
    "area": "Gym",
    "stage": "route-21",
    "later": true,
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    8
+   ],
+   "lbl": "I"
   }
  ],
  "verified": true,

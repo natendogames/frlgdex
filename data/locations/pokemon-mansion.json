@@ -469,105 +469,180 @@
    "name": "Carbos",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "1f-escape-rope",
    "name": "Escape Rope",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "1f-protein",
    "name": "Protein",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-1f-moon-stone",
    "name": "Moon Stone",
    "hidden": true,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "2f-calcium",
    "name": "Calcium",
    "hidden": false,
    "where": "2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "2f-zinc",
    "name": "Zinc",
    "hidden": false,
    "where": "2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "2f-hp-up",
    "name": "HP Up",
    "hidden": false,
    "where": "2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "3f-max-potion",
    "name": "Max Potion",
    "hidden": false,
    "where": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "3f-iron",
    "name": "Iron",
    "hidden": false,
    "where": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-3f-rare-candy",
    "name": "Rare Candy",
    "hidden": true,
    "where": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "b1f-tm22",
    "name": "TM22",
    "hidden": false,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "b1f-tm14",
    "name": "TM14",
    "hidden": false,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "b1f-full-restore",
    "name": "Full Restore",
    "hidden": false,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "b1f-secret-key",
    "name": "Secret Key",
    "hidden": false,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-b1f-elixir",
    "name": "Elixir",
    "hidden": true,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [],
@@ -634,7 +709,12 @@
    ],
    "id": "scientist-ted",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Youngster",
@@ -723,7 +803,12 @@
    ],
    "id": "youngster-johnson",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Burglar",
@@ -785,7 +870,12 @@
    ],
    "id": "burglar-arnie",
    "area": "2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Burglar",
@@ -821,7 +911,12 @@
    ],
    "id": "burglar-simon",
    "area": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Scientist",
@@ -911,7 +1006,12 @@
    ],
    "id": "scientist-braydon",
    "area": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Scientist",
@@ -975,7 +1075,12 @@
    ],
    "id": "scientist-ivan",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Burglar",
@@ -1039,7 +1144,12 @@
    ],
    "id": "burglar-lewis",
    "area": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    1
+   ],
+   "lbl": "B"
   }
  ],
  "verified": true,

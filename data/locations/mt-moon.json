@@ -117,126 +117,216 @@
    "name": "Parlyz Heal",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "1f-tm09",
    "name": "TM09",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "1f-potion",
    "name": "Potion",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "1f-rare-candy",
    "name": "Rare Candy",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "1f-escape-rope",
    "name": "Escape Rope",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "1f-moon-stone",
    "name": "Moon Stone",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "6"
   },
   {
    "id": "hidden-b1f-tinymushroom",
    "name": "Tinymushroom",
    "hidden": true,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "hidden-b1f-tinymushroom-2",
    "name": "Tinymushroom",
    "hidden": true,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-b1f-tinymushroom-3",
    "name": "Tinymushroom",
    "hidden": true,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-b1f-big-mushroom",
    "name": "Big Mushroom",
    "hidden": true,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-b1f-big-mushroom-2",
    "name": "Big Mushroom",
    "hidden": true,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    5
+   ],
+   "lbl": "6"
   },
   {
    "id": "hidden-b1f-big-mushroom-3",
    "name": "Big Mushroom",
    "hidden": true,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "b2f-star-piece",
    "name": "Star Piece",
    "hidden": false,
    "where": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "b2f-tm46",
    "name": "TM46",
    "hidden": false,
    "where": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "b2f-revive",
    "name": "Revive",
    "hidden": false,
    "where": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "b2f-antidote",
    "name": "Antidote",
    "hidden": false,
    "where": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    5
+   ],
+   "lbl": "6"
   },
   {
    "id": "hidden-b2f-moon-stone",
    "name": "Moon Stone",
    "hidden": true,
    "where": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    7
+   ],
+   "lbl": "8"
   },
   {
    "id": "hidden-b2f-ether",
    "name": "Ether",
    "hidden": true,
    "where": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    6
+   ],
+   "lbl": "7"
   }
  ],
  "gifts": [
@@ -244,13 +334,25 @@
    "id": "item-b2f-dome-fossil",
    "name": "Dome Fossil",
    "from": "Pick one fossil after beating the Super Nerd",
-   "where": "B2F"
+   "where": "B2F",
+   "map": true,
+   "mo": [
+    2,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "item-b2f-helix-fossil",
    "name": "Helix Fossil",
    "from": "Pick one fossil after beating the Super Nerd",
-   "where": "B2F"
+   "where": "B2F",
+   "map": true,
+   "mo": [
+    2,
+    4
+   ],
+   "lbl": "5"
   }
  ],
  "trainers": [
@@ -287,7 +389,12 @@
    ],
    "id": "lass-iris",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Bug Catcher",
@@ -326,7 +433,12 @@
    ],
    "id": "bug-catcher-kent",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Lass",
@@ -375,7 +487,12 @@
    ],
    "id": "lass-miriam",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Super Nerd",
@@ -432,7 +549,12 @@
    ],
    "id": "super-nerd-jovan",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Bug Catcher",
@@ -488,7 +610,12 @@
    ],
    "id": "bug-catcher-robby",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Youngster",
@@ -560,7 +687,12 @@
    ],
    "id": "youngster-josh",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Hiker",
@@ -634,7 +766,12 @@
    ],
    "id": "hiker-marcos",
    "area": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Team Rocket",
@@ -692,7 +829,12 @@
    ],
    "id": "team-rocket-grunt-4",
    "area": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Team Rocket",
@@ -751,7 +893,12 @@
    ],
    "id": "team-rocket-grunt",
    "area": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Team Rocket",
@@ -805,7 +952,12 @@
    ],
    "id": "team-rocket-grunt-3",
    "area": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Super Nerd",
@@ -883,7 +1035,12 @@
    ],
    "id": "super-nerd-miguel",
    "area": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -958,7 +1115,12 @@
    ],
    "id": "team-rocket-grunt-2",
    "area": "B2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,
