@@ -1,0 +1,53 @@
+'use strict';
+// Every page keeps what you can't get on your first visit out of sight: anything marked "later" (items, hidden items,
+// gifts and trades, either/or picks, trainers, shop stock, tutors, wild Pokémon) must only show inside a collapsed
+// "come back later" section. Renders every place and checks each checkbox and pick outside those sections.
+// Run: node tests/later_hidden.js
+const { loadApp } = require('./harness');
+const FILES = require('./files.json');
+const fails = [];
+const fail = m => fails.push(m);
+// drop every <details class="later">…</details> block, with whatever <details> it holds (trainer cards)
+function visible(h) {
+  let out = '', depth = 0, laterAt = -1, i = 0;
+  const re = /<details\b[^>]*>|<\/details>/g;
+  let m;
+  while ((m = re.exec(h))) {
+    if (laterAt < 0) out += h.slice(i, m.index);
+    if (m[0].startsWith('</')) { depth--; if (depth === laterAt) laterAt = -1; else if (laterAt < 0) out += m[0]; }
+    else { if (laterAt < 0 && /class="later"/.test(m[0])) laterAt = depth; else if (laterAt < 0) out += m[0]; depth++; }
+    i = re.lastIndex;
+  }
+  return laterAt < 0 ? out + h.slice(i) : out;
+}
+
+(async () => {
+  const app = await loadApp(FILES);
+  const { state } = app, g = app.get;
+  const CHOICES = g('CHOICES'), choiceLater = g('choiceLater'), trainerKey = g('trainerKey'), encStage = g('encStage');
+  let checked = 0;
+  for (const l of state.index) {
+    const loc = state.locations[l.id];
+    app.ctx.location.hash = `#/loc/${l.id}`; app.route();
+    const h = visible(app.view.innerHTML || '');
+    const keys = new Set([...h.matchAll(/data-key="([^"]+)"/g)].map(m => m[1]));
+    const picks = new Set([...h.matchAll(/data-pick="([^"]+)"/g)].map(m => m[1]));
+    const bad = (what, x) => fail(`${l.id}: ${what} "${x.name || x.id}" shows on the first visit but is "come back later"${x.need ? ` (${x.need})` : ''}`);
+    for (const it of loc.items) if (it.later && keys.has(`${l.id}:item:${it.id}`)) bad('item', it);
+    for (const gf of loc.gifts) if (gf.later && keys.has(`${l.id}:gift:${gf.id}`)) bad('gift', gf);
+    for (const t of loc.trainers || []) if (t.later && keys.has(trainerKey(l.id, t))) bad('trainer', t);
+    for (const sh of state.extras.shops[l.id] || []) if (sh.later && sh.items.some(it => keys.has(`${l.id}:buy:${sh.id}:${it.name}`))) bad('shop', { name: sh.where, need: sh.need });
+    for (const t of state.extras.tutors || []) if (t.loc === l.id && t.later && keys.has(`${t.loc}:tutor:${t.id}`)) bad('tutor', { name: t.move, need: t.need });
+    for (const c of CHOICES) if (c.loc === l.id && choiceLater(c, loc) && picks.has(c.id)) bad('pick', { name: c.title, need: choiceLater(c, loc) });
+    for (const e of loc.encounters) if (encStage(l.id, e) > app.stageOf(l.id) && new RegExp(`data-key="dex:${e.dex}"[^>]*>[\\s\\S]{0,400}?${e.name}`).test(h)
+      && !loc.encounters.some(x => x.dex === e.dex && encStage(l.id, x) <= app.stageOf(l.id))) bad('Pokémon', e);
+    // a gift Pokémon that only comes later (its Pokémon row waits) must have its gift row waiting too
+    for (const e of loc.encounters) if (e.method === 'gift' && encStage(l.id, e) > app.stageOf(l.id)) {
+      const gf = loc.gifts.find(x => (e.notes || '').startsWith(x.name));
+      if (gf && !gf.later) fail(`${l.id}: gift "${gf.name}" isn't marked "come back later", but its Pokémon only comes later`);
+    }
+    checked++;
+  }
+  if (fails.length) { console.log(fails.join('\n')); console.log(`${fails.length} failures`); process.exit(1); }
+  console.log(`later_hidden: ${checked} places checked; nothing marked "come back later" shows on a first visit`);
+})().catch(e => { console.error(e); process.exit(1); });

@@ -434,7 +434,11 @@ function renderLocation(id) {
   html += beforeYouLeave(loc);
 
   const v = locView(loc);
-  if (v.choices.length) html += `<h2>Choose one</h2>${v.choices.map(choiceCard).join('')}`;
+  // a pick you can only make later waits under "come back later" too
+  const nowChoices = v.choices.filter(c => !choiceLater(c, loc)), laterChoices = v.choices.filter(c => choiceLater(c, loc));
+  if (nowChoices.length) html += `<h2>Choose one</h2>${nowChoices.map(choiceCard).join('')}`;
+  if (laterChoices.length) html += `<details class="later"><summary><h2>Choose one: come back later (${laterChoices.length})</h2></summary>${
+    laterChoices.map(c => `<p class="note">${esc(laterNeed(choiceLater(c, loc)))}</p>${choiceCard(c)}`).join('')}</details>`;
   for (const c of v.pending) html += `<div class="card note">${esc(c.linkedNote[id])} <a href="#/loc/${c.loc}">Pick it on the ${esc(state.locations[c.loc].name)} page</a> and the right one shows up here.</div>`;
 
   const trs = v.trainers;
@@ -496,6 +500,12 @@ function renderLocation(id) {
 // Extra location page sections (shops, move tutors...) registered by features.js and friends: loc -> html
 const LOC_SECTIONS = [];
 const infoLink = n => ` <a class="info" href="#/mon/${n}" aria-label="About ${esc(mon(n).name)}">ⓘ</a>`;
+// The "come back later" need of a pick, if its gifts at this place aren't yours on the first visit (null if they are)
+function choiceLater(c, loc) {
+  const ids = [...(c.gifts || []), ...c.options.map(o => o.gift)].filter(Boolean);
+  const g = loc.gifts.find(x => ids.includes(x.id) && x.later);
+  return g ? g.need || 'After a later point in the story' : null;
+}
 function choiceCard(c) {
   const p = pickOf(c.id), nm = `pick-${c.id}-${rowSeq++}`;
   const opt = o => {
