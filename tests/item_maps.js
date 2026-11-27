@@ -56,6 +56,14 @@ const fail = m => fails.push(m);
     for (const t of loc.trainers || []) if (t.map && !t.later && !h.includes(`#/spot/${l.id}/${encodeURIComponent('trainer:' + t.id)}"`)) fail(`${l.id}: no Show on map button for trainer ${t.name}`);
     if (loc.mapCount && !h.includes(`#/spot/${l.id}/all"`)) fail(`${l.id}: no Map button on the page`);
   }
+  // a found item disappears from the map, but stays when you open its own page
+  { const l = state.index.find(x => state.locations[x.id].items.length > 1), loc = state.locations[l.id], [a, b] = loc.items;
+    const s = app.cur(); s.checks[`${l.id}:item:${a.id}`] = true;
+    app.ctx.location.hash = `#/spot/${l.id}/all`; await renderSpot(l.id, 'all');
+    if ((app.view.innerHTML || '').includes(`#/spot/${l.id}/${encodeURIComponent(a.id)}"`)) fail(`${l.id}: found ${a.name} still shows on the map`);
+    app.ctx.location.hash = `#/spot/${l.id}/${encodeURIComponent(a.id)}`; await renderSpot(l.id, a.id);
+    if (!(app.view.innerHTML || '').includes('class="spotpulse"')) fail(`${l.id}: opening found ${a.name} shows no marker`);
+    delete s.checks[`${l.id}:item:${a.id}`]; }
   console.log(`${checked} items checked`);
   if (fails.length) { console.log(fails.slice(0, 40).join('\n')); console.log(`${fails.length} failures`); process.exit(1); }
   console.log('all items and placed trainers have a map');
