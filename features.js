@@ -130,7 +130,8 @@ function renderMon(id) {
       ${(p.learnset || []).map(([l, mv]) => { const m = state.moves[mv] || {}; return `<tr><td>${l}</td><td>${esc(mv)}</td><td>${m.type ? typeTag(m.type) : ''}</td><td>${m.power > 1 ? m.power : m.power === 1 ? 'varies' : '—'}</td></tr>`; }).join('')}</table></div>
     <h2>TMs and HMs (${(p.tmhm || []).length})</h2><div class="card"><div class="moves">${tms || '<span class="note">None.</span>'}</div><p class="note">✓ = you have it.</p></div>`;
   if (p.tutor?.length) html += `<h2>Move tutors</h2><div class="card"><div class="moves">${p.tutor.map(mv => { const t = state.extras.tutors.find(x => x.move === mv); return `<span class="mv">${esc(mv)}${t ? ` <a href="#/loc/${t.loc}">${esc(state.locations[t.loc].name)}</a>` : ''}</span>`; }).join('')}</div></div>`;
-  view.innerHTML = html;
+  view.innerHTML = typeof withToc === 'function' ? withToc(html) : html;
+  if (typeof backToTop === 'function') backToTop();
 }
 
 // ---------- TM and item pages ----------
@@ -207,7 +208,8 @@ function renderItem(name) {
   if (prizes.length) html += `<h2>Game Corner prize</h2><div class="card">${prizes.map(row).join('')}</div>`;
   html += `<h2>Find it (${found.filter(x => s.checks[x.key]).length}/${found.length})</h2><div class="card">${found.length ? found.map(row).join('') : '<div class="empty">Not found on the ground or given anywhere.</div>'}</div>`;
   if (held.length) html += `<h2>Held by wild Pokémon</h2><div class="card"><p>${held.map(p => `${monA(p.dex)} <span class="note">(${p.held.common?.toLowerCase() === name.toLowerCase() ? '50%' : '5%'})</span>`).join(', ')}</p><p class="note">Steal it with Thief or Covet, or catch the Pokémon. Compound Eyes on your lead raises the odds.</p></div>`;
-  view.innerHTML = html;
+  view.innerHTML = typeof withToc === 'function' ? withToc(html) : html;
+  if (typeof backToTop === 'function') backToTop();
 }
 
 // ---------- search ----------

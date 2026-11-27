@@ -251,6 +251,6 @@ details.tiers { margin-top: 8px; }
 /* contents list and back-to-top on place pages */
 .toc { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 .toc .chip { min-height: 36px; font-size: 14px; cursor: pointer; }
-h2[id^="sec-"] { scroll-margin-top: 70px; }
+[id^="sec-"] { scroll-margin-top: 70px; }
 .totop { position: fixed; right: 16px; bottom: calc(80px + env(safe-area-inset-bottom)); z-index: 30; padding: 10px 14px; border-radius: 22px; border: 1px solid var(--line); background: var(--accent, #127a5c); color: #fff; font-size: 15px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.25); cursor: pointer; }
 .totop[hidden] { display: none; }

@@ -113,7 +113,7 @@ function grindCard(locId, now, later = []) {
   const tg = grindTarget(locId);
   const cap = tg ? `<p class="note">Next ${tg.t.class === 'Leader' ? 'Gym Leader' : esc(tg.t.class)}: ${esc(tg.t.name)}, top Pokémon Lv ${tg.ace}.${typeof SOFT_LEVEL_CAP !== 'undefined' && SOFT_LEVEL_CAP
     ? ` Seaglass's level cap (on by default) cuts EXP once your Pokémon pass about Lv ${tg.base}, so training past that is slow.` : ` Training to about Lv ${tg.ace} makes that battle much easier.`}</p>` : '';
-  let html = `<div class="card grindcard"><b>Best Pokémon to train on here</b>${picks.length ? '' : '<p class="note">Nothing to battle here on your first visit.</p>'}`;
+  let html = `<div class="card grindcard" data-toc="Best to train on here"><b>Best Pokémon to train on here</b>${picks.length ? '' : '<p class="note">Nothing to battle here on your first visit.</p>'}`;
   const members = grindMembers(tg && tg.t);
   html += grindFor(members, now, tg && tg.t);
   html += picks.map(x => grindRow(x, members, tg && tg.t)).join('') + cap;
