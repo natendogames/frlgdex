@@ -108,8 +108,8 @@ function renderXPTool() {
   t.to = t.to && state.trainers.some(k => k.id === t.to) ? t.to : next.id;
   const f = forecast(here, t.to, t.split);
   const rows = s.team.map(n => {
-    const lvl = teamMeta(n).level || 5, g = mon(n).growth, after = levelFor(g, expAt(g, lvl) + f.exp);
-    return `<tr><td>${monA(n)}</td><td>${lvl}${teamMeta(n).level ? '' : '*'}</td><td><b>${after}</b></td><td>${after >= f.ace ? '<span class="good">ready</span>' : `<span class="bad">${f.ace - after} short</span>`}</td></tr>`;
+    const auto = typeof autoLevelOn === 'function' && autoLevelOn(), lvl = auto ? autoLevelNow() : teamMeta(n).level || 5, g = mon(n).growth, after = levelFor(g, expAt(g, lvl) + f.exp);
+    return `<tr><td>${monA(n)}</td><td>${lvl}${!auto && teamMeta(n).level ? '' : '*'}</td><td><b>${after}</b></td><td>${after >= f.ace ? '<span class="good">ready</span>' : `<span class="bad">${f.ace - after} short</span>`}</td></tr>`;
   }).join('');
   view.innerHTML = `<div class="card">${stagePicker('xphere')}
     <label class="note" style="display:block;margin-top:8px">Up to and including</label><select id="xpto">${state.trainers.map(k => `<option value="${k.id}" ${k.id === t.to ? 'selected' : ''}>${esc(k.name)} (ace Lv ${Math.max(...partyOf(k).map(p => p.level))})</option>`).join('')}</select>

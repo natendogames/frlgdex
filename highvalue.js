@@ -47,7 +47,7 @@ function highValue() {
     const stage = battleStage(u.t, u.t.location);
     for (const p of party) {
       const foe = foeBattler(p);
-      const duels = team.map(n => duel(myBattler(n, p.level), foe)).sort(rankDuels), best = duels[0];
+      const duels = team.map(n => duel(myBattler(n, typeof autoLevelOn === 'function' && autoLevelOn() ? autoLevelFor(party) : p.level), foe)).sort(rankDuels), best = duels[0];
       // the same test the Battle plan uses to decide when to suggest a catch
       if (best && best.wins && (duels.some(d => d.se.length) || best.myHits <= 2)) continue;
       // only the best catch for each of their Pokémon (the Battle plan lists it first)

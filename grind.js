@@ -158,7 +158,7 @@ function grindMembers(target) {
       const prev = legs.slice(0, i).reverse().map(l => l.team.find(x => x.dex === m.dex)).find(Boolean);
       return { dex: m.dex, level: prev ? prev.level : Math.max(2, m.level - 2), moves: m.moves || [], from: 'plan' };
     });
-  } else members = (s.team || []).map(n => { const b = myBattler(n, 10); return { dex: n, level: b.level, moves: b.moves, from: 'team', guessed: b.guessedLevel }; });
+  } else members = (s.team || []).map(n => { const b = myBattler(n, typeof autoLevelOn === 'function' && autoLevelOn() ? autoLevelNow() : 10); return { dex: n, level: b.level, moves: b.moves, from: 'team', guessed: b.guessedLevel }; });
   return members.map(m => ({ ...m, me: battler(m.dex, m.level, PLAYER_IV, m.moves.length ? m.moves : bestMoves(m.dex, m.level)) }));
 }
 // One team member against one wild Pokémon: no good if it can't win one-on-one, or if the wild one has (or will soon

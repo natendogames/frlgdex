@@ -28,7 +28,7 @@ function nuzBanner() {
   if (!nuzOn()) return '';
   const c = nuzCap(), z = nuzState();
   const alive = Object.values(z.areas).filter(a => a.status === 'alive').length, dead = Object.values(z.areas).filter(a => a.status === 'dead').length;
-  const over = c ? cur().team.filter(n => (teamMeta(n).level || 0) > c.cap) : [];
+  const over = c ? cur().team.filter(n => !(typeof autoLevelOn === 'function' && autoLevelOn()) && (teamMeta(n).level || 0) > c.cap) : [];
   return `<div class="card nuz"><b>Nuzlocke</b> · level cap <b>${c ? c.cap : '—'}</b>${c ? ` <span class="note">(${esc(c.t.name)})</span>` : ''} · ${alive} alive · ${dead} dead <a href="#/nuzlocke">run</a>
     ${over.length ? `<div class="bad">Over the cap: ${over.map(n => esc(mon(n).name)).join(', ')}</div>` : ''}</div>`;
 }
