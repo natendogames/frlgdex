@@ -644,7 +644,8 @@ function moveScore(dex, level, name) {
     if (mon(dex).types.includes(m.type)) power *= 1.5;
     power *= HITS[m.effect] || 1;
   }
-  return m.effect === 'charge' || m.effect === 'recharge' ? power / 2 : power;
+  // Overheat and Psycho Boost: Sp. Atk -2 after each use, so a second hit has half the power
+  return m.effect === 'charge' || m.effect === 'recharge' ? power / 2 : m.effect === 'selfdrop' ? power * 0.75 : power;
 }
 // TMs and HMs you can have by a point in the story: found or given at a location you've reached, bought at the
 // Celadon Department Store or won at the Game Corner. One handed over after a battle ("after winning") only counts
@@ -752,11 +753,19 @@ function hit(att, def, name, crit = false) {
   return out(Math.max(1, Math.floor(dmg * 85 / 100)) * hits, dmg * hits);
 }
 // Turns to KO with one move, using its low roll for your side and high roll for theirs. Charge moves (Solarbeam, Fly,
-// Dig, Sky Attack...) take two turns per hit and Hyper Beam needs a turn to recharge between hits.
+// Dig, Sky Attack...) take two turns per hit, Hyper Beam needs a turn to recharge between hits, and Overheat and
+// Psycho Boost lose power with each use.
 function turnsToKO(h, hp, low) {
   if (!h || !h.max) return Infinity;
-  const n = Math.ceil(hp / Math.max(1, low ? h.min : h.max));
   const e = state.moves[h.name]?.effect;
+  // a move that drops the user's Sp. Atk by 2 each use: full, then 1/2, 1/3, 1/4 of its first hit
+  if (e === 'selfdrop') {
+    const d = Math.max(1, low ? h.min : h.max);
+    let left = hp, n = 0;
+    while (left > 0 && n < 50) { left -= Math.max(1, Math.floor(d * 2 / (2 + 2 * Math.min(n, 3)))); n++; }
+    return n;
+  }
+  const n = Math.ceil(hp / Math.max(1, low ? h.min : h.max));
   return e === 'charge' ? 2 * n : e === 'recharge' ? 2 * n - 1 : n;
 }
 function bestHit(att, def) {

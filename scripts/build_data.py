@@ -648,7 +648,8 @@ EFFECT_KEEP = {'LEVEL_DAMAGE': 'level', 'SONICBOOM': 'fixed20', 'DRAGON_RAGE': '
                'EXPLOSION': 'explode', 'RECHARGE': 'recharge', 'SOLAR_BEAM': 'charge', 'SEMI_INVULNERABLE': 'charge', 'FUTURE_SIGHT': 'charge', 'RAZOR_WIND': 'charge', 'SKY_ATTACK': 'charge', 'SKULL_BASH': 'charge',
                'DREAM_EATER': 'dream', 'FLAIL': 'varies', 'RETURN': 'varies', 'FRUSTRATION': 'varies', 'HIDDEN_POWER': 'varies', 'MAGNITUDE': 'varies',
                'PRESENT': 'varies', 'LOW_KICK': 'varies', 'SPIT_UP': 'varies', 'ERUPTION': 'varies', 'REVENGE': 'varies', 'FOCUS_PUNCH': 'varies',
-               'FAKE_OUT': 'fakeout', 'SNORE': 'dream', 'TRIPLE_KICK': 'triple'}  # 'dream': only works on (or while) asleep
+               'FAKE_OUT': 'fakeout', 'SNORE': 'dream', 'TRIPLE_KICK': 'triple',
+               'OVERHEAT': 'selfdrop'}  # 'dream': only works on (or while) asleep
 moves_out = {}
 for k, nm in move_names.items():
     if k == 'NONE': continue
