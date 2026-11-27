@@ -72,8 +72,12 @@ const strip = h => h.replace(/<table[\s\S]*?<\/table>/g, ' [duel table] ').repla
     if (!m) { fail(`move ${n} missing`); continue; }
     if (m.type !== t || (p && m.power !== p)) fail(`move ${n}: ${m.type} ${m.power}, expected ${t} ${p}`);
   }
-  for (const [n, e] of Object.entries({ Solarbeam: 'charge', Fly: 'charge', Dig: 'charge', 'Sky Attack': 'charge', 'Hyper Beam': 'recharge', 'Fake Out': 'fakeout', 'Triple Kick': 'triple', Explosion: 'explode' }))
+  for (const [n, e] of Object.entries({ Solarbeam: 'charge', Fly: 'charge', Dig: 'charge', 'Sky Attack': 'charge', 'Hyper Beam': 'recharge', 'Fake Out': 'fakeout', 'Triple Kick': 'triple', Explosion: 'explode', Overheat: 'selfdrop', 'Psycho Boost': 'selfdrop' }))
     if (state.moves[n]?.effect !== e) fail(`move ${n} effect is ${state.moves[n]?.effect}, expected ${e}`);
+  { // Overheat loses Sp. Atk each use: 40, 20, 13, 10, 10, 10 takes 6 hits for 100 HP, not 3
+    const g = app.get('turnsToKO'), oh = { name: 'Overheat', min: 40, max: 40 };
+    if (g(oh, 100, true) !== 6) fail(`Overheat doing 40, 20, 13, 10... should need 6 hits for 100 HP, got ${g(oh, 100, true)}`);
+  }
   for (const p of state.dex) for (const [, mv] of p.learnset || []) if (!state.moves[mv]) fail(`${p.name} learns unknown move ${mv}`);
 
   // ---- move choice for your side ----
