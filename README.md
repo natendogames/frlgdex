@@ -82,4 +82,6 @@ suggestion. GitHub Actions runs it on every push and pull request.
 
 `node tests/walkthrough.js` checks that every place has walkthrough steps, that every `{gift:}`, `{trainer:}`, `{loc:}`, `{mon:}` and `{item:}` link in a step points at real data on that page, and that pages render cleanly. Steps live in `data/walkthrough.json`; places in its `_checked` map were checked against the pokefirered event scripts, and the rest show a Draft tag.
 
+`node tests/high_value.js` checks the ★ "worth catching" flags on route, Pokédex and Pokémon pages: they only name your next key battles (up to the second Gym Leader you haven't beaten), never a legendary or a Pokémon you already have, and only one you can catch by then. `node tests/later_hidden.js` checks nothing marked "come back later" shows on a first visit.
+
 Progress keys are `dex:<number>` for Pokémon and `<location-id>:item:<id>` or `<location-id>:gift:<id>` for checklists, so keep ids stable.
