@@ -152,31 +152,36 @@
    "id": "1f-repel",
    "name": "Repel",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "1f-pearl",
    "name": "Pearl",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "1f-escape-rope",
    "name": "Escape Rope",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "b1f-revive",
    "name": "Revive",
    "hidden": false,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "b1f-max-ether",
    "name": "Max Ether",
    "hidden": false,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   }
  ],
  "gifts": [],
@@ -265,7 +270,8 @@
     }
    ],
    "id": "picnicker-dana",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -379,7 +385,8 @@
     }
    ],
    "id": "picnicker-ariana",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -438,7 +445,8 @@
     }
    ],
    "id": "picnicker-leah",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Hiker",
@@ -525,7 +533,8 @@
     }
    ],
    "id": "hiker-oliver",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Hiker",
@@ -588,7 +597,8 @@
     }
    ],
    "id": "hiker-lucas",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Hiker",
@@ -701,7 +711,8 @@
     }
    ],
    "id": "hiker-lenny",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Poké Maniac",
@@ -763,7 +774,8 @@
     }
    ],
    "id": "pokemaniac-ashton",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -851,7 +863,8 @@
     }
    ],
    "id": "picnicker-sofia",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Hiker",
@@ -941,7 +954,8 @@
     }
    ],
    "id": "hiker-dudley",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Poké Maniac",
@@ -1031,7 +1045,8 @@
     }
    ],
    "id": "pokemaniac-cooper",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Poké Maniac",
@@ -1066,7 +1081,8 @@
     }
    ],
    "id": "pokemaniac-winston",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -1125,7 +1141,8 @@
     }
    ],
    "id": "picnicker-martha",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Poké Maniac",
@@ -1186,7 +1203,8 @@
     }
    ],
    "id": "pokemaniac-steve",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Hiker",
@@ -1222,7 +1240,8 @@
     }
    ],
    "id": "hiker-allen",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Hiker",
@@ -1283,11 +1302,13 @@
     }
    ],
    "id": "hiker-eric",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 2
 }

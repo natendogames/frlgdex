@@ -216,7 +216,8 @@
    "id": "hidden-outside-pp-up",
    "name": "PP Up",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [],
@@ -281,7 +282,8 @@
      ]
     }
    ],
-   "id": "bird-keeper-sebastian"
+   "id": "bird-keeper-sebastian",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -367,7 +369,8 @@
      ]
     }
    ],
-   "id": "picnicker-alma"
+   "id": "picnicker-alma",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -507,7 +510,8 @@
      ]
     }
    ],
-   "id": "picnicker-susie"
+   "id": "picnicker-susie",
+   "map": true
   },
   {
    "class": "Beauty",
@@ -596,7 +600,8 @@
      ]
     }
    ],
-   "id": "beauty-lola"
+   "id": "beauty-lola",
+   "map": true
   },
   {
    "class": "Beauty",
@@ -655,7 +660,8 @@
      ]
     }
    ],
-   "id": "beauty-sheila"
+   "id": "beauty-sheila",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -715,7 +721,8 @@
      ]
     }
    ],
-   "id": "picnicker-valerie"
+   "id": "picnicker-valerie",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -831,7 +838,8 @@
      ]
     }
    ],
-   "id": "picnicker-gwen"
+   "id": "picnicker-gwen",
+   "map": true
   },
   {
    "class": "Bird Keeper",
@@ -974,7 +982,8 @@
      ]
     }
    ],
-   "id": "bird-keeper-perry"
+   "id": "bird-keeper-perry",
+   "map": true
   },
   {
    "class": "Biker",
@@ -1063,7 +1072,8 @@
      ]
     }
    ],
-   "id": "biker-jared"
+   "id": "biker-jared",
+   "map": true
   },
   {
    "class": "Bird Keeper",
@@ -1177,11 +1187,13 @@
      ]
     }
    ],
-   "id": "bird-keeper-robert"
+   "id": "bird-keeper-robert",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

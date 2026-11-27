@@ -11,7 +11,8 @@
    "later": true,
    "need": "Come in from Water Path",
    "after": "water-path",
-   "stage": 76
+   "stage": 76,
+   "map": true
   }
  ],
  "gifts": [],
@@ -19,5 +20,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

@@ -348,7 +348,8 @@
    "id": "hidden-north-pearl",
    "name": "Pearl",
    "hidden": true,
-   "where": "North"
+   "where": "North",
+   "map": true
   }
  ],
  "gifts": [],
@@ -413,7 +414,8 @@
     }
    ],
    "id": "swimmer-male-jerome",
-   "area": "South"
+   "area": "South",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -502,7 +504,8 @@
     }
    ],
    "id": "swimmer-male-roland",
-   "area": "South"
+   "area": "South",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -537,7 +540,8 @@
     }
    ],
    "id": "swimmer-male-jack",
-   "area": "South"
+   "area": "South",
+   "map": true
   },
   {
    "class": "Fisherman",
@@ -600,7 +604,8 @@
     }
    ],
    "id": "fisherman-nolan",
-   "area": "South"
+   "area": "South",
+   "map": true
   },
   {
    "class": "Fisherman",
@@ -660,7 +665,8 @@
     }
    ],
    "id": "fisherman-claude",
-   "area": "South"
+   "area": "South",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -723,7 +729,8 @@
     }
    ],
    "id": "swimmer-male-spencer",
-   "area": "North"
+   "area": "North",
+   "map": true
   },
   {
    "class": "Sis and Bro",
@@ -785,7 +792,8 @@
    ],
    "double": true,
    "id": "sis-and-bro-lil-ian",
-   "area": "North"
+   "area": "North",
+   "map": true
   },
   {
    "class": "Fisherman",
@@ -896,7 +904,8 @@
     }
    ],
    "id": "fisherman-wade",
-   "area": "North"
+   "area": "North",
+   "map": true
   },
   {
    "class": "Fisherman",
@@ -1009,11 +1018,13 @@
     }
    ],
    "id": "fisherman-ronald",
-   "area": "North"
+   "area": "North",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 2
 }

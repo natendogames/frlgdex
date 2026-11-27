@@ -1140,85 +1140,99 @@
    "id": "center-nugget",
    "name": "Nugget",
    "hidden": false,
-   "where": "Center"
+   "where": "Center",
+   "map": true
   },
   {
    "id": "hidden-center-leaf-stone",
    "name": "Leaf Stone",
    "hidden": true,
-   "where": "Center"
+   "where": "Center",
+   "map": true
   },
   {
    "id": "east-max-potion",
    "name": "Max Potion",
    "hidden": false,
-   "where": "East"
+   "where": "East",
+   "map": true
   },
   {
    "id": "east-full-restore",
    "name": "Full Restore",
    "hidden": false,
-   "where": "East"
+   "where": "East",
+   "map": true
   },
   {
    "id": "east-tm11",
    "name": "TM11",
    "hidden": false,
-   "where": "East"
+   "where": "East",
+   "map": true
   },
   {
    "id": "east-leaf-stone",
    "name": "Leaf Stone",
    "hidden": false,
-   "where": "East"
+   "where": "East",
+   "map": true
   },
   {
    "id": "north-protein",
    "name": "Protein",
    "hidden": false,
-   "where": "North"
+   "where": "North",
+   "map": true
   },
   {
    "id": "north-tm47",
    "name": "TM47",
    "hidden": false,
-   "where": "North"
+   "where": "North",
+   "map": true
   },
   {
    "id": "north-quick-claw",
    "name": "Quick Claw",
    "hidden": false,
-   "where": "North"
+   "where": "North",
+   "map": true
   },
   {
    "id": "west-gold-teeth",
    "name": "Gold Teeth",
    "hidden": false,
-   "where": "West"
+   "where": "West",
+   "map": true
   },
   {
    "id": "west-tm32",
    "name": "TM32",
    "hidden": false,
-   "where": "West"
+   "where": "West",
+   "map": true
   },
   {
    "id": "west-max-potion",
    "name": "Max Potion",
    "hidden": false,
-   "where": "West"
+   "where": "West",
+   "map": true
   },
   {
    "id": "west-max-revive",
    "name": "Max Revive",
    "hidden": false,
-   "where": "West"
+   "where": "West",
+   "map": true
   },
   {
    "id": "hidden-west-revive",
    "name": "Revive",
    "hidden": true,
-   "where": "West"
+   "where": "West",
+   "map": true
   }
  ],
  "gifts": [
@@ -1233,5 +1247,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 4
 }

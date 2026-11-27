@@ -242,19 +242,22 @@
    "id": "ruin-valley-hp-up",
    "name": "HP Up",
    "hidden": false,
-   "where": "Ruin Valley"
+   "where": "Ruin Valley",
+   "map": true
   },
   {
    "id": "ruin-valley-full-restore",
    "name": "Full Restore",
    "hidden": false,
-   "where": "Ruin Valley"
+   "where": "Ruin Valley",
+   "map": true
   },
   {
    "id": "ruin-valley-sun-stone",
    "name": "Sun Stone",
    "hidden": false,
-   "where": "Ruin Valley"
+   "where": "Ruin Valley",
+   "map": true
   }
  ],
  "gifts": [],
@@ -320,7 +323,8 @@
     }
    ],
    "id": "pokemaniac-hector",
-   "area": "Ruin Valley"
+   "area": "Ruin Valley",
+   "map": true
   },
   {
    "class": "Ruin Maniac",
@@ -385,7 +389,8 @@
     }
    ],
    "id": "ruin-maniac-larry",
-   "area": "Ruin Valley"
+   "area": "Ruin Valley",
+   "map": true
   },
   {
    "class": "Ruin Maniac",
@@ -422,7 +427,8 @@
     }
    ],
    "id": "ruin-maniac-foster",
-   "area": "Ruin Valley"
+   "area": "Ruin Valley",
+   "map": true
   },
   {
    "class": "Ruin Maniac",
@@ -514,7 +520,8 @@
     }
    ],
    "id": "ruin-maniac-stanly",
-   "area": "Ruin Valley"
+   "area": "Ruin Valley",
+   "map": true
   },
   {
    "class": "Hiker",
@@ -550,11 +557,13 @@
     }
    ],
    "id": "hiker-daryl",
-   "area": "Ruin Valley"
+   "area": "Ruin Valley",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

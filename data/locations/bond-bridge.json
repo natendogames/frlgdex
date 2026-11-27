@@ -258,19 +258,22 @@
    "id": "hidden-bond-bridge-max-repel",
    "name": "Max Repel",
    "hidden": true,
-   "where": "Bond Bridge"
+   "where": "Bond Bridge",
+   "map": true
   },
   {
    "id": "hidden-bond-bridge-pearl",
    "name": "Pearl",
    "hidden": true,
-   "where": "Bond Bridge"
+   "where": "Bond Bridge",
+   "map": true
   },
   {
    "id": "hidden-bond-bridge-stardust",
    "name": "Stardust",
    "hidden": true,
-   "where": "Bond Bridge"
+   "where": "Bond Bridge",
+   "map": true
   }
  ],
  "gifts": [],
@@ -309,7 +312,8 @@
     }
    ],
    "id": "swimmer-female-tisha",
-   "area": "Bond Bridge"
+   "area": "Bond Bridge",
+   "map": true
   },
   {
    "class": "Twins",
@@ -367,7 +371,8 @@
    ],
    "double": true,
    "id": "twins-joy-meg",
-   "area": "Bond Bridge"
+   "area": "Bond Bridge",
+   "map": true
   },
   {
    "class": "Aroma Lady",
@@ -451,7 +456,8 @@
     }
    ],
    "id": "aroma-lady-violet",
-   "area": "Bond Bridge"
+   "area": "Bond Bridge",
+   "map": true
   },
   {
    "class": "Tuber",
@@ -566,7 +572,8 @@
     }
    ],
    "id": "tuber-alexis",
-   "area": "Bond Bridge"
+   "area": "Bond Bridge",
+   "map": true
   },
   {
    "class": "Tuber",
@@ -656,7 +663,8 @@
     }
    ],
    "id": "tuber-amira",
-   "area": "Bond Bridge"
+   "area": "Bond Bridge",
+   "map": true
   },
   {
    "class": "Aroma Lady",
@@ -716,11 +724,13 @@
     }
    ],
    "id": "aroma-lady-nikki",
-   "area": "Bond Bridge"
+   "area": "Bond Bridge",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

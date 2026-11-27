@@ -212,85 +212,99 @@
    "id": "outside-ether",
    "name": "Ether",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-pp-up",
    "name": "PP Up",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-game-corner-coins",
    "name": "Coins ×10",
    "hidden": true,
-   "where": "Game Corner"
+   "where": "Game Corner",
+   "map": true
   },
   {
    "id": "hidden-game-corner-coins-2",
    "name": "Coins ×10",
    "hidden": true,
-   "where": "Game Corner"
+   "where": "Game Corner",
+   "map": true
   },
   {
    "id": "hidden-game-corner-coins-3",
    "name": "Coins ×20",
    "hidden": true,
-   "where": "Game Corner"
+   "where": "Game Corner",
+   "map": true
   },
   {
    "id": "hidden-game-corner-coins-4",
    "name": "Coins ×10",
    "hidden": true,
-   "where": "Game Corner"
+   "where": "Game Corner",
+   "map": true
   },
   {
    "id": "hidden-game-corner-coins-5",
    "name": "Coins ×10",
    "hidden": true,
-   "where": "Game Corner"
+   "where": "Game Corner",
+   "map": true
   },
   {
    "id": "hidden-game-corner-coins-6",
    "name": "Coins ×20",
    "hidden": true,
-   "where": "Game Corner"
+   "where": "Game Corner",
+   "map": true
   },
   {
    "id": "hidden-game-corner-coins-7",
    "name": "Coins ×10",
    "hidden": true,
-   "where": "Game Corner"
+   "where": "Game Corner",
+   "map": true
   },
   {
    "id": "hidden-game-corner-coins-8",
    "name": "Coins ×10",
    "hidden": true,
-   "where": "Game Corner"
+   "where": "Game Corner",
+   "map": true
   },
   {
    "id": "hidden-game-corner-coins-9",
    "name": "Coins ×10",
    "hidden": true,
-   "where": "Game Corner"
+   "where": "Game Corner",
+   "map": true
   },
   {
    "id": "hidden-game-corner-coins-10",
    "name": "Coins ×40",
    "hidden": true,
-   "where": "Game Corner"
+   "where": "Game Corner",
+   "map": true
   },
   {
    "id": "hidden-game-corner-coins-11",
    "name": "Coins ×100",
    "hidden": true,
-   "where": "Game Corner"
+   "where": "Game Corner",
+   "map": true
   },
   {
    "id": "hidden-game-corner-coins-12",
    "name": "Coins ×10",
    "hidden": true,
-   "where": "Game Corner"
+   "where": "Game Corner",
+   "map": true
   }
  ],
  "gifts": [
@@ -488,7 +502,8 @@
     }
    ],
    "id": "team-rocket-grunt-7",
-   "area": "Game Corner"
+   "area": "Game Corner",
+   "map": true
   },
   {
    "class": "Lass",
@@ -547,7 +562,8 @@
     }
    ],
    "id": "lass-kay",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Beauty",
@@ -654,7 +670,8 @@
     }
    ],
    "id": "beauty-bridget",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Cool Trainer",
@@ -790,7 +807,8 @@
     "Super Potion"
    ],
    "id": "coolmary",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Beauty",
@@ -849,7 +867,8 @@
     }
    ],
    "id": "beauty-tamia",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Lass",
@@ -907,7 +926,8 @@
     }
    ],
    "id": "lass-lisa",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -968,7 +988,8 @@
     }
    ],
    "id": "picnicker-tina",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Beauty",
@@ -1002,7 +1023,8 @@
     }
    ],
    "id": "beauty-lori",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Leader",
@@ -1097,11 +1119,13 @@
     "TM19"
    ],
    "id": "leader-erika",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 3
 }

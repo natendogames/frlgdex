@@ -644,25 +644,29 @@
    "id": "icefall-cave-1f-ultra-ball",
    "name": "Ultra Ball",
    "hidden": false,
-   "where": "Icefall Cave 1F"
+   "where": "Icefall Cave 1F",
+   "map": true
   },
   {
    "id": "icefall-cave-1f-hm07",
    "name": "HM07",
    "hidden": false,
-   "where": "Icefall Cave 1F"
+   "where": "Icefall Cave 1F",
+   "map": true
   },
   {
    "id": "icefall-cave-b1f-full-restore",
    "name": "Full Restore",
    "hidden": false,
-   "where": "Icefall Cave B1F"
+   "where": "Icefall Cave B1F",
+   "map": true
   },
   {
    "id": "icefall-cave-b1f-nevermeltice",
    "name": "Nevermeltice",
    "hidden": false,
-   "where": "Icefall Cave B1F"
+   "where": "Icefall Cave B1F",
+   "map": true
   }
  ],
  "gifts": [],
@@ -762,5 +766,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 2
 }

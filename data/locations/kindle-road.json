@@ -262,19 +262,22 @@
    "id": "kindle-road-ether",
    "name": "Ether",
    "hidden": false,
-   "where": "Kindle Road"
+   "where": "Kindle Road",
+   "map": true
   },
   {
    "id": "kindle-road-max-repel",
    "name": "Max Repel",
    "hidden": false,
-   "where": "Kindle Road"
+   "where": "Kindle Road",
+   "map": true
   },
   {
    "id": "kindle-road-carbos",
    "name": "Carbos",
    "hidden": false,
-   "where": "Kindle Road"
+   "where": "Kindle Road",
+   "map": true
   }
  ],
  "gifts": [],
@@ -361,7 +364,8 @@
     }
    ],
    "id": "swimmer-female-abigail",
-   "area": "Kindle Road"
+   "area": "Kindle Road",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -474,7 +478,8 @@
     }
    ],
    "id": "picnicker-claire",
-   "area": "Kindle Road"
+   "area": "Kindle Road",
+   "map": true
   },
   {
    "class": "Crush Girl",
@@ -538,7 +543,8 @@
     }
    ],
    "id": "crush-girl-tanya",
-   "area": "Kindle Road"
+   "area": "Kindle Road",
+   "map": true
   },
   {
    "class": "Camper",
@@ -628,7 +634,8 @@
     }
    ],
    "id": "camper-bryce",
-   "area": "Kindle Road"
+   "area": "Kindle Road",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -714,7 +721,8 @@
     }
    ],
    "id": "swimmer-male-garrett",
-   "area": "Kindle Road"
+   "area": "Kindle Road",
+   "map": true
   },
   {
    "class": "Crush Kin",
@@ -780,7 +788,8 @@
    ],
    "double": true,
    "id": "crush-kin-mik-kia",
-   "area": "Kindle Road"
+   "area": "Kindle Road",
+   "map": true
   },
   {
    "class": "Black Belt",
@@ -845,7 +854,8 @@
     }
    ],
    "id": "black-belt-hugh",
-   "area": "Kindle Road"
+   "area": "Kindle Road",
+   "map": true
   },
   {
    "class": "Black Belt",
@@ -910,7 +920,8 @@
     }
    ],
    "id": "black-belt-shea",
-   "area": "Kindle Road"
+   "area": "Kindle Road",
+   "map": true
   },
   {
    "class": "Crush Girl",
@@ -974,7 +985,8 @@
     }
    ],
    "id": "crush-girl-sharon",
-   "area": "Kindle Road"
+   "area": "Kindle Road",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -1009,7 +1021,8 @@
     }
    ],
    "id": "swimmer-male-finn",
-   "area": "Kindle Road"
+   "area": "Kindle Road",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -1070,7 +1083,8 @@
     }
    ],
    "id": "swimmer-female-maria",
-   "area": "Kindle Road"
+   "area": "Kindle Road",
+   "map": true
   },
   {
    "class": "Fisherman",
@@ -1214,11 +1228,13 @@
     }
    ],
    "id": "fisherman-tommy",
-   "area": "Kindle Road"
+   "area": "Kindle Road",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

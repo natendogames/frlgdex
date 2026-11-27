@@ -214,25 +214,29 @@
    "id": "outside-tm05",
    "name": "TM05",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-great-ball",
    "name": "Great Ball",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-persim-berry",
    "name": "Persim Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-razz-berry",
    "name": "Razz Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [
@@ -331,11 +335,13 @@
    "area": "Outside",
    "stage": "safari-zone",
    "later": true,
-   "reach": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)"
+   "reach": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

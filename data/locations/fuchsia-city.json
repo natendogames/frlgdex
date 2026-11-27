@@ -125,7 +125,8 @@
    "id": "hidden-outside-max-revive",
    "name": "Max Revive",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "wardens-house-rare-candy",
@@ -135,7 +136,8 @@
    "later": true,
    "need": "Strength (HM04 from the Safari Zone warden for his Gold Teeth, used with the Rainbow Badge)",
    "after": "safari-zone",
-   "stage": 38.5
+   "stage": 38.5,
+   "map": true
   }
  ],
  "gifts": [
@@ -217,7 +219,8 @@
     }
    ],
    "id": "juggler-nate",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Juggler",
@@ -252,7 +255,8 @@
     }
    ],
    "id": "juggler-kayden",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Juggler",
@@ -365,7 +369,8 @@
     }
    ],
    "id": "juggler-kirk",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Tamer",
@@ -453,7 +458,8 @@
     }
    ],
    "id": "tamer-edgar",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Tamer",
@@ -515,7 +521,8 @@
     }
    ],
    "id": "tamer-phil",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Juggler",
@@ -576,7 +583,8 @@
     }
    ],
    "id": "juggler-shawn",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Leader",
@@ -696,11 +704,13 @@
     "TM06"
    ],
    "id": "leader-koga",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 3
 }

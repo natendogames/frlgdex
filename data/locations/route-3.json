@@ -92,7 +92,8 @@
    "id": "hidden-outside-oran-berry",
    "name": "Oran Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [],
@@ -154,7 +155,8 @@
      ]
     }
    ],
-   "id": "bug-catcher-colton"
+   "id": "bug-catcher-colton",
+   "map": true
   },
   {
    "class": "Lass",
@@ -206,7 +208,8 @@
      ]
     }
    ],
-   "id": "lass-janice"
+   "id": "lass-janice",
+   "map": true
   },
   {
    "class": "Youngster",
@@ -258,7 +261,8 @@
      ]
     }
    ],
-   "id": "youngster-ben"
+   "id": "youngster-ben",
+   "map": true
   },
   {
    "class": "Bug Catcher",
@@ -324,7 +328,8 @@
      ]
     }
    ],
-   "id": "bug-catcher-greg"
+   "id": "bug-catcher-greg",
+   "map": true
   },
   {
    "class": "Youngster",
@@ -358,7 +363,8 @@
      ]
     }
    ],
-   "id": "youngster-calvin"
+   "id": "youngster-calvin",
+   "map": true
   },
   {
    "class": "Lass",
@@ -409,7 +415,8 @@
      ]
     }
    ],
-   "id": "lass-sally"
+   "id": "lass-sally",
+   "map": true
   },
   {
    "class": "Bug Catcher",
@@ -446,7 +453,8 @@
      ]
     }
    ],
-   "id": "bug-catcher-james"
+   "id": "bug-catcher-james",
+   "map": true
   },
   {
    "class": "Lass",
@@ -479,11 +487,13 @@
      ]
     }
    ],
-   "id": "lass-robin"
+   "id": "lass-robin",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

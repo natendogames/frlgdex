@@ -32,7 +32,8 @@
    "id": "hidden-summit-sacred-ash",
    "name": "Sacred Ash",
    "hidden": true,
-   "where": "Summit (underfoot)"
+   "where": "Summit (underfoot)",
+   "map": true
   }
  ],
  "gifts": [],
@@ -40,5 +41,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

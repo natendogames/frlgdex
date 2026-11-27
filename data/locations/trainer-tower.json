@@ -182,19 +182,22 @@
    "id": "hidden-trainer-tower-big-pearl",
    "name": "Big Pearl",
    "hidden": true,
-   "where": "Trainer Tower"
+   "where": "Trainer Tower",
+   "map": true
   },
   {
    "id": "hidden-trainer-tower-pearl",
    "name": "Pearl",
    "hidden": true,
-   "where": "Trainer Tower"
+   "where": "Trainer Tower",
+   "map": true
   },
   {
    "id": "hidden-trainer-tower-nanab-berry",
    "name": "Nanab Berry",
    "hidden": true,
-   "where": "Trainer Tower"
+   "where": "Trainer Tower",
+   "map": true
   }
  ],
  "gifts": [],
@@ -282,7 +285,8 @@
     }
    ],
    "id": "psychic-rodette",
-   "area": "Trainer Tower"
+   "area": "Trainer Tower",
+   "map": true
   },
   {
    "class": "Psychic",
@@ -317,11 +321,13 @@
     }
    ],
    "id": "psychic-dario",
-   "area": "Trainer Tower"
+   "area": "Trainer Tower",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

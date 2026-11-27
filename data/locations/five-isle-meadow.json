@@ -260,13 +260,15 @@
    "id": "meadow-max-potion",
    "name": "Max Potion",
    "hidden": false,
-   "where": "Meadow"
+   "where": "Meadow",
+   "map": true
   },
   {
    "id": "meadow-pp-up",
    "name": "PP Up",
    "hidden": false,
-   "where": "Meadow"
+   "where": "Meadow",
+   "map": true
   }
  ],
  "gifts": [],
@@ -329,7 +331,8 @@
     }
    ],
    "id": "team-rocket-grunt-50",
-   "area": "Meadow"
+   "area": "Meadow",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -415,7 +418,8 @@
     }
    ],
    "id": "team-rocket-grunt-51",
-   "area": "Meadow"
+   "area": "Meadow",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -501,11 +505,13 @@
     }
    ],
    "id": "team-rocket-grunt-49",
-   "area": "Meadow"
+   "area": "Meadow",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

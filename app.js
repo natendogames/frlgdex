@@ -204,7 +204,8 @@ function beforeYouLeave(loc) {
   const parts = [];
   if (gifts.length) parts.push(gifts.map(g => `<b>${esc(g.name)}</b> (${esc(g.from || 'gift')}${g.where && g.where !== 'Outside' ? `, ${esc(g.where)}` : ''})`).join(', '));
   if (hidden.length) parts.push(`${hidden.length} hidden item${hidden.length > 1 ? 's' : ''} (${hidden.map(i => esc(i.name)).join(', ')})`);
-  return `<div class="card note"><b>Before you leave:</b> ${parts.join('; and ')}. They're easy to miss on a first visit.</div>`;
+  const maps = typeof spotLink === 'function' ? hidden.map(i => spotLink(loc.id, { ...i, id: i.id }).replace('Show on map', `${esc(i.name)} on the map`)).join('') : '';
+  return `<div class="card note yleave"><b>Before you leave:</b> ${parts.join('; and ')}. They're easy to miss on a first visit.${maps ? `<div>${maps}</div>` : ''}</div>`;
 }
 
 // "Come back later" note for items: what you need first ("Needs Surf (HM03 ...)."), the side you have to come in from
@@ -422,6 +423,7 @@ function renderLocation(id) {
   let html = '';
   const steps = state.walk[id];
   if (loc.notes) html += `<div class="card note">${esc(loc.notes)}</div>`;
+  if (loc.mapCount && typeof spotLink === 'function') html += `<div class="card spotentry"><a class="tag catchlink spotlink" href="#/spot/${id}/all">Map: where every item and trainer is</a></div>`;
   if (steps?.length) {
     // the parts of steps about things you can't get yet (a gift behind a Cut tree) wait under "come back later"
     const split = steps.map(x => stepSplit(x, id));
@@ -482,7 +484,7 @@ function renderLocation(id) {
     if (!list.length) html += `<div class="empty">${kind === 'item' && loc.items.some(i => i.later) ? 'None on your first visit.' : 'None.'}</div>`;
     for (const [area, grp] of Object.entries(groupBy(list, x => x.where))) {
       if (area && kind === 'item') html += `<div class="area">${esc(area)}</div>`;
-      html += grp.map(x => { const k = `${loc.id}:${kind}:${x.id}`; return checkRow(k, s.checks[k], esc(x.name), subFn(x), typeof itemInfoLink === 'function' ? itemInfoLink(x.name) : ''); }).join('');
+      html += grp.map(x => { const k = `${loc.id}:${kind}:${x.id}`; return checkRow(k, s.checks[k], esc(x.name), subFn(x), (typeof itemInfoLink === 'function' ? itemInfoLink(x.name) : '') + (x.hidden !== undefined && typeof spotLink === 'function' ? spotLink(loc.id, x) : '')); }).join('');
     }
     html += `</div>`;
   };
@@ -490,7 +492,7 @@ function renderLocation(id) {
   // later story point (worked out from the map tiles at build time: scripts/reach.py) wait in "come back later".
   section('Items', loc.items.filter(i => !i.hidden && !i.later), 'item', () => 'On the ground');
   section('Hidden items', loc.items.filter(i => i.hidden && !i.later), 'item', () => 'Hidden: use the Itemfinder');
-  html += laterSection('Items', loc.items.filter(i => i.later), x => { const k = `${loc.id}:item:${x.id}`; return checkRow(k, s.checks[k], esc(x.name), [x.hidden ? 'Hidden: use the Itemfinder' : 'On the ground', x.where && x.where !== 'Outside' ? esc(x.where) : ''].filter(Boolean).join(' · '), typeof itemInfoLink === 'function' ? itemInfoLink(x.name) : ''); }, x => s.checks[`${loc.id}:item:${x.id}`]);
+  html += laterSection('Items', loc.items.filter(i => i.later), x => { const k = `${loc.id}:item:${x.id}`; return checkRow(k, s.checks[k], esc(x.name), [x.hidden ? 'Hidden: use the Itemfinder' : 'On the ground', x.where && x.where !== 'Outside' ? esc(x.where) : ''].filter(Boolean).join(' · '), (typeof itemInfoLink === 'function' ? itemInfoLink(x.name) : '') + (x.hidden !== undefined && typeof spotLink === 'function' ? spotLink(loc.id, x) : '')); }, x => s.checks[`${loc.id}:item:${x.id}`]);
   const giftSub = g => [g.from && esc(g.from), esc(g.where)].filter(Boolean).join(' · ');
   section('NPC gifts &amp; trades', v.gifts.filter(g => !g.later), 'gift', giftSub);
   html += laterSection('NPC gifts &amp; trades', v.gifts.filter(g => g.later), g => { const k = `${loc.id}:gift:${g.id}`; return checkRow(k, s.checks[k], esc(g.name), giftSub(g)); }, g => s.checks[`${loc.id}:gift:${g.id}`]);
@@ -939,6 +941,7 @@ function trainerCard(t, stage, opts = {}) {
     : `<p class="note"><b>Pick your starter to see this team.</b> Your rival takes the one that beats yours. Which did you choose in Professor Oak's Lab?</p>${starterChips()}`) : '';
   return `<details class="card trainer ${done ? 'checked' : ''}"${opts.open === false ? '' : ' open'}><summary><input type="checkbox" class="tcheck" data-key="${esc(key)}" ${done ? 'checked' : ''} aria-label="Defeated ${esc(head)}"><span class="tname">${esc(head)}</span> <span class="note">· ${esc(meta)}</span>${t.double ? ' <span class="tag">Double</span>' : ''}${t.rewards ? ' <span class="tag">Reward</span>' : ''}</summary>
     ${info ? `<p class="note">${info}</p>` : ''}
+    ${opts.loc && t.map && typeof spotLink === 'function' ? `<p>${spotLink(opts.loc, { id: 'trainer:' + t.id, map: true })}</p>` : ''}
     ${t.note && !t.byStarter ? `<p class="note">${esc(t.note)}</p>` : ''}${rival}${party ? opts.extra?.(party) || '' : ''}
     ${party ? party.map(p => foeRow(p, stage, party)).join('') : ''}
     ${opts.loc && typeof rematchBlock === 'function' ? rematchBlock(t, opts.loc) : ''}

@@ -218,49 +218,57 @@
    "id": "hidden-treasure-beach-stardust",
    "name": "Stardust",
    "hidden": true,
-   "where": "Treasure Beach"
+   "where": "Treasure Beach",
+   "map": true
   },
   {
    "id": "hidden-treasure-beach-stardust-2",
    "name": "Stardust",
    "hidden": true,
-   "where": "Treasure Beach"
+   "where": "Treasure Beach",
+   "map": true
   },
   {
    "id": "hidden-treasure-beach-pearl",
    "name": "Pearl",
    "hidden": true,
-   "where": "Treasure Beach"
+   "where": "Treasure Beach",
+   "map": true
   },
   {
    "id": "hidden-treasure-beach-pearl-2",
    "name": "Pearl",
    "hidden": true,
-   "where": "Treasure Beach"
+   "where": "Treasure Beach",
+   "map": true
   },
   {
    "id": "hidden-treasure-beach-ultra-ball",
    "name": "Ultra Ball",
    "hidden": true,
-   "where": "Treasure Beach"
+   "where": "Treasure Beach",
+   "map": true
   },
   {
    "id": "hidden-treasure-beach-ultra-ball-2",
    "name": "Ultra Ball",
    "hidden": true,
-   "where": "Treasure Beach"
+   "where": "Treasure Beach",
+   "map": true
   },
   {
    "id": "hidden-treasure-beach-star-piece",
    "name": "Star Piece",
    "hidden": true,
-   "where": "Treasure Beach"
+   "where": "Treasure Beach",
+   "map": true
   },
   {
    "id": "hidden-treasure-beach-big-pearl",
    "name": "Big Pearl",
    "hidden": true,
-   "where": "Treasure Beach"
+   "where": "Treasure Beach",
+   "map": true
   }
  ],
  "gifts": [],
@@ -351,11 +359,13 @@
     }
    ],
    "id": "swimmer-female-amara",
-   "area": "Treasure Beach"
+   "area": "Treasure Beach",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

@@ -209,31 +209,36 @@
    "later": true,
    "need": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)",
    "after": "safari-zone",
-   "stage": 38.5
+   "stage": 38.5,
+   "map": true
   },
   {
    "id": "outside-iron",
    "name": "Iron",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-hyper-potion",
    "name": "Hyper Potion",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-leftovers",
    "name": "Leftovers",
    "hidden": true,
-   "where": "Outside (underfoot)"
+   "where": "Outside (underfoot)",
+   "map": true
   },
   {
    "id": "hidden-outside-rare-candy",
    "name": "Rare Candy",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [
@@ -340,7 +345,8 @@
      ]
     }
    ],
-   "id": "fisherman-ned"
+   "id": "fisherman-ned",
+   "map": true
   },
   {
    "class": "Fisherman",
@@ -401,7 +407,8 @@
      ]
     }
    ],
-   "id": "fisherman-chip"
+   "id": "fisherman-chip",
+   "map": true
   },
   {
    "class": "Fisherman",
@@ -435,7 +442,8 @@
      ]
     }
    ],
-   "id": "fisherman-hank"
+   "id": "fisherman-hank",
+   "map": true
   },
   {
    "class": "Fisherman",
@@ -542,7 +550,8 @@
      ]
     }
    ],
-   "id": "fisherman-elliot"
+   "id": "fisherman-elliot",
+   "map": true
   },
   {
    "class": "Young Couple",
@@ -605,7 +614,8 @@
     }
    ],
    "double": true,
-   "id": "young-couple-gia-jes"
+   "id": "young-couple-gia-jes",
+   "map": true
   },
   {
    "class": "Rocker",
@@ -667,7 +677,8 @@
      ]
     }
    ],
-   "id": "rocker-luca"
+   "id": "rocker-luca",
+   "map": true
   },
   {
    "class": "Camper",
@@ -729,7 +740,8 @@
      ]
     }
    ],
-   "id": "camper-justin"
+   "id": "camper-justin",
+   "map": true
   },
   {
    "class": "Fisherman",
@@ -771,11 +783,13 @@
      ]
     }
    ],
-   "id": "fisherman-andrew"
+   "id": "fisherman-andrew",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

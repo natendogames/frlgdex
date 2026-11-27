@@ -174,7 +174,8 @@
    "id": "hidden-outside-super-potion",
    "name": "Super Potion",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-max-ether",
@@ -184,25 +185,29 @@
    "later": true,
    "need": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)",
    "after": "safari-zone",
-   "stage": 38.5
+   "stage": 38.5,
+   "map": true
   },
   {
    "id": "hidden-outside-cheri-berry",
    "name": "Cheri Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-persim-berry",
    "name": "Persim Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-nanab-berry",
    "name": "Nanab Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [
@@ -271,7 +276,8 @@
      ]
     }
    ],
-   "id": "picnicker-heidi"
+   "id": "picnicker-heidi",
+   "map": true
   },
   {
    "class": "Poké Maniac",
@@ -336,7 +342,8 @@
    "id": "pokemaniac-mark",
    "stage": "safari-zone",
    "later": true,
-   "reach": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)"
+   "reach": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -396,7 +403,8 @@
      ]
     }
    ],
-   "id": "picnicker-carol"
+   "id": "picnicker-carol",
+   "map": true
   },
   {
    "class": "Hiker",
@@ -457,7 +465,8 @@
      ]
     }
    ],
-   "id": "hiker-clark"
+   "id": "hiker-clark",
+   "map": true
   },
   {
    "class": "Hiker",
@@ -517,7 +526,8 @@
      ]
     }
    ],
-   "id": "hiker-trent"
+   "id": "hiker-trent",
+   "map": true
   },
   {
    "class": "Poké Maniac",
@@ -578,11 +588,13 @@
      ]
     }
    ],
-   "id": "pokemaniac-herman"
+   "id": "pokemaniac-herman",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

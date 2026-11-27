@@ -30,7 +30,8 @@
    "id": "hidden-copycats-house-2f-nugget",
    "name": "Nugget",
    "hidden": true,
-   "where": "Copycats House 2F"
+   "where": "Copycats House 2F",
+   "map": true
   }
  ],
  "gifts": [
@@ -123,7 +124,8 @@
     }
    ],
    "id": "black-belt-hideki",
-   "area": "Dojo"
+   "area": "Dojo",
+   "map": true
   },
   {
    "class": "Black Belt",
@@ -216,7 +218,8 @@
     }
    ],
    "id": "black-belt-hitoshi",
-   "area": "Dojo"
+   "area": "Dojo",
+   "map": true
   },
   {
    "class": "Black Belt",
@@ -309,7 +312,8 @@
     }
    ],
    "id": "black-belt-mike",
-   "area": "Dojo"
+   "area": "Dojo",
+   "map": true
   },
   {
    "class": "Black Belt",
@@ -373,7 +377,8 @@
     }
    ],
    "id": "black-belt-koichi",
-   "area": "Dojo"
+   "area": "Dojo",
+   "map": true
   },
   {
    "class": "Black Belt",
@@ -410,7 +415,8 @@
     }
    ],
    "id": "black-belt-aaron",
-   "area": "Dojo"
+   "area": "Dojo",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -498,7 +504,8 @@
     }
    ],
    "id": "channeler-tasha",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Psychic",
@@ -588,7 +595,8 @@
     }
    ],
    "id": "psychic-cameron",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -624,7 +632,8 @@
     }
    ],
    "id": "channeler-stacy",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Psychic",
@@ -684,7 +693,8 @@
     }
    ],
    "id": "psychic-tyron",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Psychic",
@@ -718,7 +728,8 @@
     }
    ],
    "id": "psychic-preston",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -780,7 +791,8 @@
     }
    ],
    "id": "channeler-amanda",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Psychic",
@@ -894,7 +906,8 @@
     }
    ],
    "id": "psychic-johan",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Leader",
@@ -1015,11 +1028,13 @@
     "TM04"
    ],
    "id": "leader-sabrina",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 4
 }

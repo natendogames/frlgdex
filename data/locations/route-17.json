@@ -63,31 +63,36 @@
    "id": "hidden-outside-rare-candy",
    "name": "Rare Candy",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-full-restore",
    "name": "Full Restore",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-pp-up",
    "name": "PP Up",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-max-revive",
    "name": "Max Revive",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-max-elixir",
    "name": "Max Elixir",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [],
@@ -152,7 +157,8 @@
      ]
     }
    ],
-   "id": "cue-ball-isaiah"
+   "id": "cue-ball-isaiah",
+   "map": true
   },
   {
    "class": "Biker",
@@ -241,7 +247,8 @@
      ]
     }
    ],
-   "id": "biker-virgil"
+   "id": "biker-virgil",
+   "map": true
   },
   {
    "class": "Cue Ball",
@@ -303,7 +310,8 @@
      ]
     }
    ],
-   "id": "cue-ball-raul"
+   "id": "cue-ball-raul",
+   "map": true
   },
   {
    "class": "Biker",
@@ -336,7 +344,8 @@
      ]
     }
    ],
-   "id": "biker-billy"
+   "id": "biker-billy",
+   "map": true
   },
   {
    "class": "Biker",
@@ -398,7 +407,8 @@
      ]
     }
    ],
-   "id": "biker-nikolas"
+   "id": "biker-nikolas",
+   "map": true
   },
   {
    "class": "Cue Ball",
@@ -514,7 +524,8 @@
      ]
     }
    ],
-   "id": "cue-ball-jamal"
+   "id": "cue-ball-jamal",
+   "map": true
   },
   {
    "class": "Cue Ball",
@@ -549,7 +560,8 @@
      ]
     }
    ],
-   "id": "cue-ball-zeek"
+   "id": "cue-ball-zeek",
+   "map": true
   },
   {
    "class": "Cue Ball",
@@ -611,7 +623,8 @@
      ]
     }
    ],
-   "id": "cue-ball-corey"
+   "id": "cue-ball-corey",
+   "map": true
   },
   {
    "class": "Biker",
@@ -671,7 +684,8 @@
      ]
     }
    ],
-   "id": "biker-jaxon"
+   "id": "biker-jaxon",
+   "map": true
   },
   {
    "class": "Biker",
@@ -814,11 +828,13 @@
      ]
     }
    ],
-   "id": "biker-william"
+   "id": "biker-william",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

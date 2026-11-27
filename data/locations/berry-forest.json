@@ -293,97 +293,113 @@
    "id": "berry-forest-max-ether",
    "name": "Max Ether",
    "hidden": false,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "berry-forest-full-heal",
    "name": "Full Heal",
    "hidden": false,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "berry-forest-max-elixir",
    "name": "Max Elixir",
    "hidden": false,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-razz-berry",
    "name": "Razz Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-bluk-berry",
    "name": "Bluk Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-nanab-berry",
    "name": "Nanab Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-wepear-berry",
    "name": "Wepear Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-oran-berry",
    "name": "Oran Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-cheri-berry",
    "name": "Cheri Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-chesto-berry",
    "name": "Chesto Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-pecha-berry",
    "name": "Pecha Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-rawst-berry",
    "name": "Rawst Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-aspear-berry",
    "name": "Aspear Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-persim-berry",
    "name": "Persim Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-pinap-berry",
    "name": "Pinap Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   },
   {
    "id": "hidden-berry-forest-lum-berry",
    "name": "Lum Berry",
    "hidden": true,
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true
   }
  ],
  "gifts": [
@@ -398,5 +414,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

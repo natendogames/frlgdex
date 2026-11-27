@@ -165,7 +165,8 @@
     }
    ],
    "id": "bird-keeper-wilton",
-   "area": "Outside"
+   "area": "Outside",
+   "map": true
   },
   {
    "class": "Bird Keeper",
@@ -202,7 +203,8 @@
     }
    ],
    "id": "bird-keeper-ramiro",
-   "area": "Outside"
+   "area": "Outside",
+   "map": true
   },
   {
    "class": "Bird Keeper",
@@ -318,11 +320,13 @@
     }
    ],
    "id": "bird-keeper-jacob",
-   "area": "Outside"
+   "area": "Outside",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

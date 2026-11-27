@@ -988,31 +988,36 @@
    "id": "lost-cave-room-10-silk-scarf",
    "name": "Silk Scarf",
    "hidden": false,
-   "where": "Lost Cave Room 10"
+   "where": "Lost Cave Room 10",
+   "map": true
   },
   {
    "id": "lost-cave-room-11-lax-incense",
    "name": "Lax Incense",
    "hidden": false,
-   "where": "Lost Cave Room 11"
+   "where": "Lost Cave Room 11",
+   "map": true
   },
   {
    "id": "lost-cave-room-12-sea-incense",
    "name": "Sea Incense",
    "hidden": false,
-   "where": "Lost Cave Room 12"
+   "where": "Lost Cave Room 12",
+   "map": true
   },
   {
    "id": "lost-cave-room-13-max-revive",
    "name": "Max Revive",
    "hidden": false,
-   "where": "Lost Cave Room 13"
+   "where": "Lost Cave Room 13",
+   "map": true
   },
   {
    "id": "lost-cave-room-14-rare-candy",
    "name": "Rare Candy",
    "hidden": false,
-   "where": "Lost Cave Room 14"
+   "where": "Lost Cave Room 14",
+   "map": true
   }
  ],
  "gifts": [],
@@ -1107,7 +1112,8 @@
     }
    ],
    "id": "ruin-maniac-lawson",
-   "area": "Lost Cave Room 1"
+   "area": "Lost Cave Room 1",
+   "map": true
   },
   {
    "class": "Lady",
@@ -1260,11 +1266,13 @@
     }
    ],
    "id": "psychic-laura",
-   "area": "Lost Cave Room 4"
+   "area": "Lost Cave Room 4",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 7
 }

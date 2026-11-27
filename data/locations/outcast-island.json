@@ -163,19 +163,22 @@
    "id": "outcast-island-pp-up",
    "name": "PP Up",
    "hidden": false,
-   "where": "Outcast Island"
+   "where": "Outcast Island",
+   "map": true
   },
   {
    "id": "hidden-outcast-island-star-piece",
    "name": "Star Piece",
    "hidden": true,
-   "where": "Outcast Island"
+   "where": "Outcast Island",
+   "map": true
   },
   {
    "id": "hidden-outcast-island-net-ball",
    "name": "Net Ball",
    "hidden": true,
-   "where": "Outcast Island"
+   "where": "Outcast Island",
+   "map": true
   }
  ],
  "gifts": [],
@@ -214,7 +217,8 @@
     }
    ],
    "id": "swimmer-female-nicole",
-   "area": "Outcast Island"
+   "area": "Outcast Island",
+   "map": true
   },
   {
    "class": "Sis and Bro",
@@ -276,7 +280,8 @@
    ],
    "double": true,
    "id": "sis-and-bro-ava-geb",
-   "area": "Outcast Island"
+   "area": "Outcast Island",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -338,7 +343,8 @@
     }
    ],
    "id": "swimmer-male-mymo",
-   "area": "Outcast Island"
+   "area": "Outcast Island",
+   "map": true
   },
   {
    "class": "Fisherman",
@@ -401,7 +407,8 @@
     }
    ],
    "id": "fisherman-tylor",
-   "area": "Outcast Island"
+   "area": "Outcast Island",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -488,11 +495,13 @@
     }
    ],
    "id": "team-rocket-grunt-46",
-   "area": "Outcast Island"
+   "area": "Outcast Island",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

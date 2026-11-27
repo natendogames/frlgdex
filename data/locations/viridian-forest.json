@@ -81,37 +81,43 @@
    "id": "outside-pok-ball",
    "name": "Poké Ball",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "outside-antidote",
    "name": "Antidote",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "outside-potion",
    "name": "Potion",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "outside-potion-2",
    "name": "Potion",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-potion",
    "name": "Potion",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-antidote",
    "name": "Antidote",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [],
@@ -156,7 +162,8 @@
      ]
     }
    ],
-   "id": "bug-catcher-rick"
+   "id": "bug-catcher-rick",
+   "map": true
   },
   {
    "class": "Bug Catcher",
@@ -210,7 +217,8 @@
      ]
     }
    ],
-   "id": "bug-catcher-doug"
+   "id": "bug-catcher-doug",
+   "map": true
   },
   {
    "class": "Bug Catcher",
@@ -252,7 +260,8 @@
      ]
     }
    ],
-   "id": "bug-catcher-anthony"
+   "id": "bug-catcher-anthony",
+   "map": true
   },
   {
    "class": "Bug Catcher",
@@ -301,7 +310,8 @@
      ]
     }
    ],
-   "id": "bug-catcher-charlie"
+   "id": "bug-catcher-charlie",
+   "map": true
   },
   {
    "class": "Bug Catcher",
@@ -326,11 +336,13 @@
      ]
     }
    ],
-   "id": "bug-catcher-sammy"
+   "id": "bug-catcher-sammy",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

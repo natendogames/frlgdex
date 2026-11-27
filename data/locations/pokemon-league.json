@@ -147,7 +147,8 @@
     "Full Restore ×2"
    ],
    "id": "elite-four-lorelei",
-   "area": "Loreleis Room"
+   "area": "Loreleis Room",
+   "map": true
   },
   {
    "class": "Elite Four",
@@ -294,7 +295,8 @@
     "Full Restore ×2"
    ],
    "id": "elite-four-bruno",
-   "area": "Brunos Room"
+   "area": "Brunos Room",
+   "map": true
   },
   {
    "class": "Elite Four",
@@ -436,7 +438,8 @@
     "Full Restore ×2"
    ],
    "id": "elite-four-agatha",
-   "area": "Agathas Room"
+   "area": "Agathas Room",
+   "map": true
   },
   {
    "class": "Elite Four",
@@ -580,7 +583,8 @@
     "Full Restore ×2"
    ],
    "id": "elite-four-lance",
-   "area": "Lances Room"
+   "area": "Lances Room",
+   "map": true
   },
   {
    "class": "Champion",
@@ -1081,5 +1085,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 4
 }

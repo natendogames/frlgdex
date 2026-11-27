@@ -125,7 +125,8 @@
    "id": "outside-potion",
    "name": "Potion",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-gym-macho-brace",
@@ -135,7 +136,8 @@
    "later": true,
    "need": "the other seven badges: the Gym door stays locked until then",
    "after": "route-21",
-   "stage": 58
+   "stage": 58,
+   "map": true
   }
  ],
  "gifts": [
@@ -229,7 +231,8 @@
    "id": "black-belt-atsushi",
    "area": "Gym",
    "stage": "route-21",
-   "later": true
+   "later": true,
+   "map": true
   },
   {
    "class": "Tamer",
@@ -291,7 +294,8 @@
    "id": "tamer-cole",
    "area": "Gym",
    "stage": "route-21",
-   "later": true
+   "later": true,
+   "map": true
   },
   {
    "class": "Cool Trainer",
@@ -440,7 +444,8 @@
    "id": "coolyuji",
    "area": "Gym",
    "stage": "route-21",
-   "later": true
+   "later": true,
+   "map": true
   },
   {
    "class": "Tamer",
@@ -478,7 +483,8 @@
    "id": "tamer-jason",
    "area": "Gym",
    "stage": "route-21",
-   "later": true
+   "later": true,
+   "map": true
   },
   {
    "class": "Cool Trainer",
@@ -625,7 +631,8 @@
    "id": "coolwarren",
    "area": "Gym",
    "stage": "route-21",
-   "later": true
+   "later": true,
+   "map": true
   },
   {
    "class": "Black Belt",
@@ -664,7 +671,8 @@
    "id": "black-belt-kiyo",
    "area": "Gym",
    "stage": "route-21",
-   "later": true
+   "later": true,
+   "map": true
   },
   {
    "class": "Black Belt",
@@ -759,7 +767,8 @@
    "id": "black-belt-takashi",
    "area": "Gym",
    "stage": "route-21",
-   "later": true
+   "later": true,
+   "map": true
   },
   {
    "class": "Cool Trainer",
@@ -908,7 +917,8 @@
    "id": "coolsamuel",
    "area": "Gym",
    "stage": "route-21",
-   "later": true
+   "later": true,
+   "map": true
   },
   {
    "class": "Leader",
@@ -1065,11 +1075,13 @@
    "id": "leader-giovanni",
    "area": "Gym",
    "stage": "route-21",
-   "later": true
+   "later": true,
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 2
 }

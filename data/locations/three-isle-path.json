@@ -7,7 +7,8 @@
    "id": "hidden-dunsparce-tunnel-nugget",
    "name": "Nugget",
    "hidden": true,
-   "where": "Dunsparce Tunnel"
+   "where": "Dunsparce Tunnel",
+   "map": true
   }
  ],
  "gifts": [
@@ -22,5 +23,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

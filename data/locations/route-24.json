@@ -236,13 +236,15 @@
    "id": "outside-tm45",
    "name": "TM45",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-pecha-berry",
    "name": "Pecha Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [
@@ -318,7 +320,8 @@
      ]
     }
    ],
-   "id": "bug-catcher-cale"
+   "id": "bug-catcher-cale",
+   "map": true
   },
   {
    "class": "Lass",
@@ -387,7 +390,8 @@
      ]
     }
    ],
-   "id": "lass-ali"
+   "id": "lass-ali",
+   "map": true
   },
   {
    "class": "Youngster",
@@ -443,7 +447,8 @@
      ]
     }
    ],
-   "id": "youngster-timmy"
+   "id": "youngster-timmy",
+   "map": true
   },
   {
    "class": "Lass",
@@ -503,7 +508,8 @@
      ]
     }
    ],
-   "id": "lass-reli"
+   "id": "lass-reli",
+   "map": true
   },
   {
    "class": "Camper",
@@ -538,7 +544,8 @@
      ]
     }
    ],
-   "id": "camper-ethan"
+   "id": "camper-ethan",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -598,7 +605,8 @@
    "rewards": [
     "Nugget"
    ],
-   "id": "team-rocket-grunt-6"
+   "id": "team-rocket-grunt-6",
+   "map": true
   },
   {
    "class": "Camper",
@@ -660,11 +668,13 @@
      ]
     }
    ],
-   "id": "camper-shane"
+   "id": "camper-shane",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

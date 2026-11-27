@@ -843,6 +843,10 @@ json.dump({'_about': 'Written by scripts/build_data.py from the reachability wal
 if unreachable:
     print(f'reach: {len(unreachable)} items behind puzzles the walk cannot solve (timed by their map):', *unreachable, sep='\n  ', file=sys.stderr)
 
+# Drawn maps with every item's spot (data/itemmaps) for the app's "Show on map" button; marks those items map: true
+import mapdraw
+_tpos = {k: (v[0], [p[:2] for l in v[1] for p in scripts_at.positions(v[0], label=l) if p[3] == 'object_events']) for k, v in trainer_src.items()}
+print('item maps', mapdraw.write(world, item_pos, locs, OUT, {n: (loc_id(m['region_map_section']), area_name(n, m['region_map_section'])) for n, m in maps.items() if m['region_map_section'] not in SKIP}, _tpos))
 for loc in locs.values():
     json.dump(loc, open(os.path.join(OUT, 'locations', loc['id'] + '.json'), 'w'), ensure_ascii=False, indent=1)
 

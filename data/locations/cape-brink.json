@@ -269,13 +269,15 @@
    "id": "hidden-cape-brink-pp-max",
    "name": "PP Max",
    "hidden": true,
-   "where": "Cape Brink (underfoot)"
+   "where": "Cape Brink (underfoot)",
+   "map": true
   },
   {
    "id": "hidden-cape-brink-rare-candy",
    "name": "Rare Candy",
    "hidden": true,
-   "where": "Cape Brink"
+   "where": "Cape Brink",
+   "map": true
   }
  ],
  "gifts": [],
@@ -283,5 +285,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

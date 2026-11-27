@@ -174,25 +174,29 @@
    "id": "hidden-resort-gorgeous-nest-ball",
    "name": "Nest Ball",
    "hidden": true,
-   "where": "Resort Gorgeous"
+   "where": "Resort Gorgeous",
+   "map": true
   },
   {
    "id": "hidden-resort-gorgeous-stardust",
    "name": "Stardust",
    "hidden": true,
-   "where": "Resort Gorgeous"
+   "where": "Resort Gorgeous",
+   "map": true
   },
   {
    "id": "hidden-resort-gorgeous-star-piece",
    "name": "Star Piece",
    "hidden": true,
-   "where": "Resort Gorgeous"
+   "where": "Resort Gorgeous",
+   "map": true
   },
   {
    "id": "hidden-resort-gorgeous-stardust-2",
    "name": "Stardust",
    "hidden": true,
-   "where": "Resort Gorgeous"
+   "where": "Resort Gorgeous",
+   "map": true
   }
  ],
  "gifts": [],
@@ -216,7 +220,8 @@
     }
    ],
    "id": "painter-celina",
-   "area": "Resort Gorgeous"
+   "area": "Resort Gorgeous",
+   "map": true
   },
   {
    "class": "Painter",
@@ -237,7 +242,8 @@
     }
    ],
    "id": "painter-rayna",
-   "area": "Resort Gorgeous"
+   "area": "Resort Gorgeous",
+   "map": true
   },
   {
    "class": "Painter",
@@ -258,7 +264,8 @@
     }
    ],
    "id": "painter-daisy",
-   "area": "Resort Gorgeous"
+   "area": "Resort Gorgeous",
+   "map": true
   },
   {
    "class": "Lady",
@@ -322,7 +329,8 @@
     "Full Restore"
    ],
    "id": "lady-jacki",
-   "area": "Resort Gorgeous"
+   "area": "Resort Gorgeous",
+   "map": true
   },
   {
    "class": "Lady",
@@ -412,7 +420,8 @@
     "Full Restore"
    ],
    "id": "lady-gillian",
-   "area": "Resort Gorgeous"
+   "area": "Resort Gorgeous",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -499,7 +508,8 @@
     }
    ],
    "id": "swimmer-male-toby",
-   "area": "Resort Gorgeous"
+   "area": "Resort Gorgeous",
+   "map": true
   },
   {
    "class": "Youngster",
@@ -560,11 +570,13 @@
     }
    ],
    "id": "youngster-destin",
-   "area": "Resort Gorgeous"
+   "area": "Resort Gorgeous",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

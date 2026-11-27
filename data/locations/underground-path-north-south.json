@@ -26,43 +26,50 @@
    "id": "hidden-north-south-tunnel-potion",
    "name": "Potion",
    "hidden": true,
-   "where": "North South Tunnel"
+   "where": "North South Tunnel",
+   "map": true
   },
   {
    "id": "hidden-north-south-tunnel-antidote",
    "name": "Antidote",
    "hidden": true,
-   "where": "North South Tunnel"
+   "where": "North South Tunnel",
+   "map": true
   },
   {
    "id": "hidden-north-south-tunnel-burn-heal",
    "name": "Burn Heal",
    "hidden": true,
-   "where": "North South Tunnel"
+   "where": "North South Tunnel",
+   "map": true
   },
   {
    "id": "hidden-north-south-tunnel-awakening",
    "name": "Awakening",
    "hidden": true,
-   "where": "North South Tunnel"
+   "where": "North South Tunnel",
+   "map": true
   },
   {
    "id": "hidden-north-south-tunnel-ice-heal",
    "name": "Ice Heal",
    "hidden": true,
-   "where": "North South Tunnel"
+   "where": "North South Tunnel",
+   "map": true
   },
   {
    "id": "hidden-north-south-tunnel-parlyz-heal",
    "name": "Parlyz Heal",
    "hidden": true,
-   "where": "North South Tunnel"
+   "where": "North South Tunnel",
+   "map": true
   },
   {
    "id": "hidden-north-south-tunnel-ether",
    "name": "Ether",
    "hidden": true,
-   "where": "North South Tunnel"
+   "where": "North South Tunnel",
+   "map": true
   }
  ],
  "gifts": [
@@ -89,5 +96,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

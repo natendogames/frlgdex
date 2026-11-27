@@ -533,31 +533,36 @@
    "id": "exterior-ultra-ball",
    "name": "Ultra Ball",
    "hidden": false,
-   "where": "Exterior"
+   "where": "Exterior",
+   "map": true
   },
   {
    "id": "exterior-fire-stone",
    "name": "Fire Stone",
    "hidden": false,
-   "where": "Exterior"
+   "where": "Exterior",
+   "map": true
   },
   {
    "id": "exterior-dire-hit",
    "name": "Dire Hit",
    "hidden": false,
-   "where": "Exterior"
+   "where": "Exterior",
+   "map": true
   },
   {
    "id": "hidden-exterior-fire-stone",
    "name": "Fire Stone",
    "hidden": true,
-   "where": "Exterior"
+   "where": "Exterior",
+   "map": true
   },
   {
    "id": "hidden-exterior-ultra-ball",
    "name": "Ultra Ball",
    "hidden": true,
-   "where": "Exterior"
+   "where": "Exterior",
+   "map": true
   }
  ],
  "gifts": [
@@ -630,7 +635,8 @@
     }
    ],
    "id": "team-rocket-grunt-43",
-   "area": "Exterior"
+   "area": "Exterior",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -747,7 +753,8 @@
     }
    ],
    "id": "team-rocket-grunt-44",
-   "area": "Exterior"
+   "area": "Exterior",
+   "map": true
   },
   {
    "class": "Pokémon Ranger",
@@ -835,7 +842,8 @@
     "Full Restore"
    ],
    "id": "pkmn-ranger-beth",
-   "area": "Exterior"
+   "area": "Exterior",
+   "map": true
   },
   {
    "class": "Pokémon Ranger",
@@ -899,7 +907,8 @@
     "Full Restore"
    ],
    "id": "pkmn-ranger-logan",
-   "area": "Exterior"
+   "area": "Exterior",
+   "map": true
   },
   {
    "class": "Crush Girl",
@@ -966,11 +975,13 @@
     }
    ],
    "id": "crush-girl-jocelyn",
-   "area": "Exterior"
+   "area": "Exterior",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

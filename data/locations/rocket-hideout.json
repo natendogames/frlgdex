@@ -7,97 +7,113 @@
    "id": "b1f-escape-rope",
    "name": "Escape Rope",
    "hidden": false,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "b1f-hyper-potion",
    "name": "Hyper Potion",
    "hidden": false,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "hidden-b1f-pp-up",
    "name": "PP Up",
    "hidden": true,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "b2f-x-speed",
    "name": "X Speed",
    "hidden": false,
-   "where": "B2F"
+   "where": "B2F",
+   "map": true
   },
   {
    "id": "b2f-moon-stone",
    "name": "Moon Stone",
    "hidden": false,
-   "where": "B2F"
+   "where": "B2F",
+   "map": true
   },
   {
    "id": "b2f-tm12",
    "name": "TM12",
    "hidden": false,
-   "where": "B2F"
+   "where": "B2F",
+   "map": true
   },
   {
    "id": "b2f-super-potion",
    "name": "Super Potion",
    "hidden": false,
-   "where": "B2F"
+   "where": "B2F",
+   "map": true
   },
   {
    "id": "b3f-rare-candy",
    "name": "Rare Candy",
    "hidden": false,
-   "where": "B3F"
+   "where": "B3F",
+   "map": true
   },
   {
    "id": "b3f-tm21",
    "name": "TM21",
    "hidden": false,
-   "where": "B3F"
+   "where": "B3F",
+   "map": true
   },
   {
    "id": "b3f-blackglasses",
    "name": "Blackglasses",
    "hidden": false,
-   "where": "B3F"
+   "where": "B3F",
+   "map": true
   },
   {
    "id": "hidden-b3f-nugget",
    "name": "Nugget",
    "hidden": true,
-   "where": "B3F"
+   "where": "B3F",
+   "map": true
   },
   {
    "id": "b4f-tm49",
    "name": "TM49",
    "hidden": false,
-   "where": "B4F"
+   "where": "B4F",
+   "map": true
   },
   {
    "id": "b4f-max-ether",
    "name": "Max Ether",
    "hidden": false,
-   "where": "B4F"
+   "where": "B4F",
+   "map": true
   },
   {
    "id": "b4f-calcium",
    "name": "Calcium",
    "hidden": false,
-   "where": "B4F"
+   "where": "B4F",
+   "map": true
   },
   {
    "id": "hidden-b4f-nest-ball",
    "name": "Nest Ball",
    "hidden": true,
-   "where": "B4F"
+   "where": "B4F",
+   "map": true
   },
   {
    "id": "hidden-b4f-net-ball",
    "name": "Net Ball",
    "hidden": true,
-   "where": "B4F"
+   "where": "B4F",
+   "map": true
   }
  ],
  "gifts": [
@@ -230,7 +246,8 @@
     }
    ],
    "id": "team-rocket-grunt-11",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -308,7 +325,8 @@
     }
    ],
    "id": "team-rocket-grunt-10",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -369,7 +387,8 @@
     }
    ],
    "id": "team-rocket-grunt-9",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -430,7 +449,8 @@
     }
    ],
    "id": "team-rocket-grunt-8",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -492,7 +512,8 @@
     }
    ],
    "id": "team-rocket-grunt-12",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -630,7 +651,8 @@
     }
    ],
    "id": "team-rocket-grunt-13",
-   "area": "B2F"
+   "area": "B2F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -717,7 +739,8 @@
     }
    ],
    "id": "team-rocket-grunt-14",
-   "area": "B3F"
+   "area": "B3F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -778,7 +801,8 @@
     }
    ],
    "id": "team-rocket-grunt-15",
-   "area": "B3F"
+   "area": "B3F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -865,7 +889,8 @@
     }
    ],
    "id": "team-rocket-grunt-16",
-   "area": "B4F"
+   "area": "B4F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -952,7 +977,8 @@
     }
    ],
    "id": "team-rocket-grunt-17",
-   "area": "B4F"
+   "area": "B4F",
+   "map": true
   },
   {
    "class": "Boss",
@@ -1041,7 +1067,8 @@
     }
    ],
    "id": "boss-giovanni",
-   "area": "B4F"
+   "area": "B4F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -1105,11 +1132,13 @@
     }
    ],
    "id": "team-rocket-grunt-18",
-   "area": "B4F"
+   "area": "B4F",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 4
 }

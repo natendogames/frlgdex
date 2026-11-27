@@ -188,7 +188,8 @@
    "id": "hidden-outside-max-ether",
    "name": "Max Ether",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [
@@ -290,7 +291,8 @@
    "area": "Gym",
    "stage": "ss-anne",
    "later": true,
-   "reach": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)"
+   "reach": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
+   "map": true
   },
   {
    "class": "Engineer",
@@ -355,7 +357,8 @@
    "area": "Gym",
    "stage": "ss-anne",
    "later": true,
-   "reach": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)"
+   "reach": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
+   "map": true
   },
   {
    "class": "Gentleman",
@@ -393,7 +396,8 @@
    "area": "Gym",
    "stage": "ss-anne",
    "later": true,
-   "reach": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)"
+   "reach": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
+   "map": true
   },
   {
    "class": "Leader",
@@ -492,11 +496,13 @@
    "area": "Gym",
    "stage": "ss-anne",
    "later": true,
-   "reach": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)"
+   "reach": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 2
 }
