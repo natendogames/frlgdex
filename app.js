@@ -218,7 +218,7 @@ const laterNeed = need => !need ? "You can't reach these on your first visit."
 function laterSection(title, list, row, done, unit) {
   if (!list.length) return '';
   const n = done ? `${list.filter(done).length}/${list.length}` : list.length;
-  let html = `<details class="later"><summary><h2>${title}: come back later (${n})</h2></summary>`;
+  let html = `<details class="later" data-sect><summary><h2>${title}: come back later (${n})</h2></summary>`;
   for (const [need, grp] of Object.entries(groupBy(list, x => x.need || ''))) html += `<div class="card"><p class="note">${esc(laterNeed(need))}</p>${grp.map(row).join('')}</div>`;
   return html + '</details>';
 }
@@ -415,6 +415,18 @@ function suggestBox(inp, items, onPick) {
 
 const groupBy = (list, f) => list.reduce((m, x) => ((m[f(x) || ''] ||= []).push(x), m), {});
 
+// Every "come back later" section of a place page (data-sect), moved to the bottom under one heading, so what you can
+// do on this visit comes first
+function laterLast(html) {
+  const keep = [], later = [], re = /<details\b[^>]*>|<\/details>/g;
+  let depth = 0, start = -1, from = 0, m;
+  while ((m = re.exec(html))) {
+    if (m[0] === '</details>') { if (--depth === 0 && start >= 0) { later.push(html.slice(start, re.lastIndex)); start = -1; from = re.lastIndex; } }
+    else { if (depth === 0 && /data-sect/.test(m[0])) { keep.push(html.slice(from, m.index)); start = m.index; } depth++; }
+  }
+  keep.push(html.slice(from));
+  return keep.join('') + (later.length ? `<h2 class="laterhead">Come back later</h2>${later.join('')}` : '');
+}
 function renderLocation(id) {
   const loc = state.locations[id];
   if (!loc) return renderHome();
@@ -431,7 +443,7 @@ function renderLocation(id) {
     const ol = list => `<ol class="steps">${list.map(x => `<li>${walkStep(x, id)}</li>`).join('')}</ol>`;
     html += `<h2>Walkthrough</h2><div class="card">${nowSteps.length ? ol(nowSteps) : '<div class="empty">Nothing to do on your first visit.</div>'}${
       state.walk._checked?.[id] ? '' : '<p class="note"><span class="tag">Draft</span> Not yet checked against a second source.</p>'}</div>`;
-    if (laterSteps.length) html += `<details class="later"><summary><h2>Walkthrough: come back later (${laterSteps.length})</h2></summary><div class="card">${ol(laterSteps)}</div></details>`;
+    if (laterSteps.length) html += `<details class="later" data-sect><summary><h2>Walkthrough: come back later (${laterSteps.length})</h2></summary><div class="card">${ol(laterSteps)}</div></details>`;
   }
   html += beforeYouLeave(loc);
 
@@ -439,7 +451,7 @@ function renderLocation(id) {
   // a pick you can only make later waits under "come back later" too
   const nowChoices = v.choices.filter(c => !choiceLater(c, loc)), laterChoices = v.choices.filter(c => choiceLater(c, loc));
   if (nowChoices.length) html += `<h2>Choose one</h2>${nowChoices.map(choiceCard).join('')}`;
-  if (laterChoices.length) html += `<details class="later"><summary><h2>Choose one: come back later (${laterChoices.length})</h2></summary>${
+  if (laterChoices.length) html += `<details class="later" data-sect><summary><h2>Choose one: come back later (${laterChoices.length})</h2></summary>${
     laterChoices.map(c => `<p class="note">${esc(laterNeed(choiceLater(c, loc)))}</p>${choiceCard(c)}`).join('')}</details>`;
   for (const c of v.pending) html += `<div class="card note">${esc(c.linkedNote[id])} <a href="#/loc/${c.loc}">Pick it on the ${esc(state.locations[c.loc].name)} page</a> and the right one shows up here.</div>`;
 
@@ -452,7 +464,7 @@ function renderLocation(id) {
     html += cards(firstVisit);
     // Trainers you only fight later in the story: collapsed, planned with what you can have caught by then
     for (const [stg, list] of Object.entries(groupBy(laterTrs, t => t.stage)))
-      html += `<details class="later"><summary><h2>Trainers: come back later (${list.length})</h2></summary>
+      html += `<details class="later" data-sect><summary><h2>Trainers: come back later (${list.length})</h2></summary>
         <p class="note">You fight ${list.length === 1 ? 'this trainer' : 'these trainers'} around ${esc(state.locations[stg]?.name || stg)} in the story, so catch suggestions use everything you can have by then.</p>${cards(list)}</details>`;
   }
 
@@ -477,7 +489,7 @@ function renderLocation(id) {
   else if (!now.length) html += '<div class="empty">Nothing to catch on your first visit.</div>';
   html += encList(now, false) + `</div>`;
   if (typeof grindCard === 'function') html += grindCard(id, now, later);
-  if (later.length) html += `<details class="later"><summary><h2>Pokémon: come back later (${new Set(later.map(e => e.dex)).size})</h2></summary><div class="card"><p class="note">You can't get these on your first visit. They open up later in the story.</p>${encList(later, true)}</div></details>`;
+  if (later.length) html += `<details class="later" data-sect><summary><h2>Pokémon: come back later (${new Set(later.map(e => e.dex)).size})</h2></summary><div class="card"><p class="note">You can't get these on your first visit. They open up later in the story.</p>${encList(later, true)}</div></details>`;
 
   const section = (title, list, kind, subFn) => {
     html += `<h2>${title} (${list.filter(x => s.checks[`${loc.id}:${kind}:${x.id}`]).length}/${list.length})</h2><div class="card">`;
@@ -497,7 +509,7 @@ function renderLocation(id) {
   section('NPC gifts &amp; trades', v.gifts.filter(g => !g.later), 'gift', giftSub);
   html += laterSection('NPC gifts &amp; trades', v.gifts.filter(g => g.later), g => { const k = `${loc.id}:gift:${g.id}`; return checkRow(k, s.checks[k], esc(g.name), giftSub(g)); }, g => s.checks[`${loc.id}:gift:${g.id}`]);
   for (const f of LOC_SECTIONS) html += f(loc);
-  view.innerHTML = html;
+  view.innerHTML = laterLast(html);
 }
 
 // Extra location page sections (shops, move tutors...) registered by features.js and friends: loc -> html

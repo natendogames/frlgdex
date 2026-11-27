@@ -30,6 +30,17 @@ function visible(h) {
     const loc = state.locations[l.id];
     app.ctx.location.hash = `#/loc/${l.id}`; app.route();
     const h = visible(app.view.innerHTML || '');
+    // every "come back later" section sits at the bottom, under one heading, after everything for this visit
+    { const raw = app.view.innerHTML || '', head = raw.indexOf('class="laterhead"'), firstSect = raw.indexOf('data-sect');
+      if (firstSect >= 0 && !(head >= 0 && head < firstSect)) fail(`${l.id}: a "come back later" section shows above the first-visit sections`);
+      if (head >= 0) { // after the heading: only "come back later" sections
+        let rest = raw.slice(raw.indexOf('</h2>', head) + 5), depth = 0, out = '', from = 0;
+        for (const m of rest.matchAll(/<details\b[^>]*>|<\/details>/g)) {
+          if (m[0] === '</details>') { if (--depth === 0) from = m.index + m[0].length; }
+          else { if (depth === 0) { out += rest.slice(from, m.index); if (!/data-sect/.test(m[0])) out += 'x'; } depth++; }
+        }
+        if ((out + rest.slice(from)).trim()) fail(`${l.id}: a first-visit section shows below "Come back later"`);
+      } }
     const keys = new Set([...h.matchAll(/data-key="([^"]+)"/g)].map(m => m[1]));
     const picks = new Set([...h.matchAll(/data-pick="([^"]+)"/g)].map(m => m[1]));
     const bad = (what, x) => fail(`${l.id}: ${what} "${x.name || x.id}" shows on the first visit but is "come back later"${x.need ? ` (${x.need})` : ''}`);
