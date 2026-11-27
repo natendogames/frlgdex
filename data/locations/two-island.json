@@ -15,7 +15,11 @@
    "id": "item-joyful-game-corner-moon-stone",
    "name": "Moon Stone",
    "from": "Owner (after rescuing his granddaughter Lostelle)",
-   "where": "Joyful Game Corner"
+   "where": "Joyful Game Corner",
+   "later": true,
+   "need": "After you rescue Lostelle in Three Island's Berry Forest",
+   "after": "berry-forest",
+   "stage": 56.5
   }
  ],
  "trainers": [],

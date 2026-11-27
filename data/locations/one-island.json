@@ -182,7 +182,11 @@
    "id": "item-pok-mon-center-1f-rainbow-pass",
    "name": "Rainbow Pass",
    "from": "Celio (after you give him the Ruby)",
-   "where": "Pokémon Center 1F"
+   "where": "Pokémon Center 1F",
+   "later": true,
+   "need": "After the Hall of Fame: bring Celio the Ruby from Mt. Ember's Ruby Path",
+   "after": "pokemon-league",
+   "stage": 62.5
   }
  ],
  "trainers": [],
