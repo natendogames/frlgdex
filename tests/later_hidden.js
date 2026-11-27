@@ -25,7 +25,7 @@ function visible(h) {
   const app = await loadApp(FILES);
   const { state } = app, g = app.get;
   const CHOICES = g('CHOICES'), choiceLater = g('choiceLater'), trainerKey = g('trainerKey'), encStage = g('encStage');
-  let checked = 0;
+  let checked = 0, tocs = 0;
   for (const l of state.index) {
     const loc = state.locations[l.id];
     app.ctx.location.hash = `#/loc/${l.id}`; app.route();
@@ -41,6 +41,14 @@ function visible(h) {
         }
         if ((out + rest.slice(from)).trim()) fail(`${l.id}: a first-visit section shows below "Come back later"`);
       } }
+    // the contents list at the top: one button per top-level section heading, each pointing at a heading on the page
+    { const raw = app.view.innerHTML || '', jumps = [...raw.matchAll(/data-jump="([^"]+)"/g)].map(m => m[1]);
+      const heads = (raw.match(/<h2 id="sec-\d+"/g) || []).length;
+      if (heads >= 3 && !raw.startsWith('<nav class="toc')) fail(`${l.id}: no contents list at the top`);
+      if (jumps.length !== heads) fail(`${l.id}: contents list has ${jumps.length} entries for ${heads} sections`);
+      for (const j of jumps) if (!raw.includes(`<h2 id="${j}"`)) fail(`${l.id}: contents entry ${j} has no section`);
+      if (raw.includes('class="laterhead"') && heads >= 3 && !/data-jump="[^"]+">Come back later</.test(raw)) fail(`${l.id}: contents list doesn't link to "Come back later"`);
+      if (heads >= 3) tocs++; }
     const keys = new Set([...h.matchAll(/data-key="([^"]+)"/g)].map(m => m[1]));
     const picks = new Set([...h.matchAll(/data-pick="([^"]+)"/g)].map(m => m[1]));
     const bad = (what, x) => fail(`${l.id}: ${what} "${x.name || x.id}" shows on the first visit but is "come back later"${x.need ? ` (${x.need})` : ''}`);
@@ -59,6 +67,7 @@ function visible(h) {
     }
     checked++;
   }
+  if (tocs < 20) fail(`contents list on only ${tocs} places`);
   if (fails.length) { console.log(fails.join('\n')); console.log(`${fails.length} failures`); process.exit(1); }
   console.log(`later_hidden: ${checked} places checked; nothing marked "come back later" shows on a first visit`);
 })().catch(e => { console.error(e); process.exit(1); });

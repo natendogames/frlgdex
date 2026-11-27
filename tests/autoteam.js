@@ -25,12 +25,31 @@ const ok = (c, m) => { checks++; if (!c) { failures++; if (failures < 40) consol
   s.caught[used] = true;
   ok(get('autoTeamAdd')(used) === 'added' && s.team.includes(used), `${app.mon(used).name}, which the Team plan uses, goes on the team`);
   const sameLine = [...want].concat(lineOf(used)).find(n => n !== used && lineOf(n)[0] === lineOf(used)[0]);
-  if (sameLine) { s.caught[sameLine] = true; ok(get('autoTeamAdd')(sameLine) === '' && !s.team.includes(sameLine), 'no second Pokémon from the same evolution line'); }
+  if (sameLine) {
+    s.caught[sameLine] = true;
+    const r = get('autoTeamAdd')(sameLine);
+    if (lineOf(sameLine).includes(used)) ok(r === 'evolved' && s.team.includes(sameLine) && !s.team.includes(used), `evolving ${app.mon(used).name} into ${app.mon(sameLine).name} swaps it on the team`);
+    else ok(r === '' && !s.team.includes(sameLine), 'no second Pokémon from the same evolution line');
+  }
+  // ticking a Team plan "evolve" step swaps the pre-evolution on the team for it, keeping level and moves; Undo swaps back
+  { const leg = plan.legs.find(l => l.steps.some(x => x.kind === 'evolve' && x.dex && want.has(+x.dex)));
+    const step = leg && leg.steps.find(x => x.kind === 'evolve' && x.dex && want.has(+x.dex));
+    ok(step, 'the Team plan has an evolve step');
+    if (step) {
+      const to = +step.dex, from = lineOf(to)[lineOf(to).indexOf(to) - 1], keep = s.team;
+      s.team = [from]; s.teamMeta = { [from]: { level: 20, moves: ['Tackle', '', '', ''] } }; delete s.caught[to];
+      get('showUndo')(`dex:${to}`, undefined, 'Ticked');
+      s.caught[to] = true;
+      ok(get('autoTeamAdd')(to) === 'evolved' && s.team[0] === to && s.teamMeta[to]?.level === 20 && s.teamMeta[to].moves[0] === 'Tackle', `${app.mon(from).name} evolves into ${app.mon(to).name} on the Battle plan team with its level and moves`);
+      app.ctx.document.getElementById('undoBtn').onclick();
+      ok(s.team[0] === from && !s.caught[to], `Undo turns ${app.mon(to).name} back into ${app.mon(from).name}`);
+      s.team = keep;
+    } }
   const unused = state.dex.find(p => !want.has(p.dex) && !onTeamLine(p.dex)).dex;
   s.caught[unused] = true;
   ok(get('autoTeamAdd')(unused) === '' && !s.team.includes(unused), `${app.mon(unused).name}, which the Team plan doesn't use, stays off the team`);
   // Undo after the toast takes it off the team again
-  s.team = s.team.filter(n => n !== used); delete s.caught[used];
+  s.team = s.team.filter(n => lineOf(n)[0] !== lineOf(used)[0]); delete s.caught[used];
   get('showUndo')(`dex:${used}`, undefined, 'Ticked');
   s.caught[used] = true; get('autoTeamAdd')(used);
   ok(s.team.includes(used), 'added before undo');

@@ -427,6 +427,34 @@ function laterLast(html) {
 }
 // Lists on a place page follow its map: which map (in the order the map page shows them), then the map's own numbers
 // (things to collect) or letters (trainers), worked out at build time (scripts/mapdraw.py). Anything not on a map goes last.
+// A contents list at the top of a place page: one button per section heading (and "Come back later"), each scrolling
+// to it. Headings inside folded sections are left out.
+function withToc(html) {
+  const re = /<details\b[^>]*>|<\/details>|<h2\b([^>]*)>([\s\S]*?)<\/h2>/g, out = [], items = [];
+  let depth = 0, from = 0, m;
+  while ((m = re.exec(html))) {
+    if (m[0] === '</details>') { depth--; continue; }
+    if (m[0].startsWith('<details')) { depth++; continue; }
+    if (depth) continue;
+    const id = `sec-${items.length}`, label = m[2].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s*\(.*$/, '').trim();
+    if (!label) continue;
+    items.push({ id, label });
+    out.push(html.slice(from, m.index), `<h2 id="${id}"${m[1]}>${m[2]}</h2>`);
+    from = re.lastIndex;
+  }
+  out.push(html.slice(from));
+  if (items.length < 3) return html;
+  return `<nav class="toc card" aria-label="On this page"><span class="note">Jump to:</span> ${items.map(x => `<button class="chip" data-jump="${x.id}">${esc(x.label)}</button>`).join('')}</nav>` + out.join('');
+}
+// A "Back to top" button that shows once you've scrolled down a page
+function backToTop() {
+  if (document.getElementById('totop')) return;
+  const b = Object.assign(document.createElement('button'), { id: 'totop', className: 'totop', textContent: '↑ Top', hidden: true });
+  b.setAttribute?.('aria-label', 'Back to top');
+  b.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.body.appendChild(b);
+  window.addEventListener('scroll', () => { b.hidden = window.scrollY < 600; }, { passive: true });
+}
 const byMap = list => [...list].sort((a, b) => (a.mo ? a.mo[0] : 1e9) - (b.mo ? b.mo[0] : 1e9) || (a.mo ? a.mo[1] : 0) - (b.mo ? b.mo[1] : 0));
 const mapLbl = (x, trainer) => x && x.lbl ? `<b class="spotnum${trainer ? ' trainer' : ''}">${esc(x.lbl)}</b> ` : '';
 const giftSpot = (locId, g) => typeof spotLink === 'function' ? spotLink(locId, { id: 'gift:' + g.id, map: g.map }) : '';
@@ -513,7 +541,8 @@ function renderLocation(id) {
   section('NPC gifts &amp; trades', v.gifts.filter(g => !g.later), 'gift', giftSub);
   html += laterSection('NPC gifts &amp; trades', byMap(v.gifts.filter(g => g.later)), g => { const k = `${loc.id}:gift:${g.id}`; return checkRow(k, s.checks[k], mapLbl(g) + esc(g.name), giftSub(g), giftSpot(loc.id, g)); }, g => s.checks[`${loc.id}:gift:${g.id}`]);
   for (const f of LOC_SECTIONS) html += f(loc);
-  view.innerHTML = laterLast(html);
+  view.innerHTML = withToc(laterLast(html));
+  backToTop();
 }
 
 // Extra location page sections (shops, move tutors...) registered by features.js and friends: loc -> html
@@ -1367,7 +1396,8 @@ function showUndo(key, was, label) {
   state.autoAdded = null;
   document.getElementById('undoBtn').onclick = () => {
     const s = cur();
-    if (key.startsWith('dex:') && state.autoAdded === +key.slice(4)) { s.team = s.team.filter(n => n !== state.autoAdded); state.autoAdded = null; }
+    const aa = state.autoAdded;
+    if (key.startsWith('dex:') && aa && aa.dex === +key.slice(4)) { s.team = aa.from ? s.team.map(n => n === aa.dex ? aa.from : n) : s.team.filter(n => n !== aa.dex); state.autoAdded = null; }
     if (key.startsWith('dex:')) { if (was) s.caught[key.slice(4)] = was; else delete s.caught[key.slice(4)]; }
     else if (was) s.checks[key] = true; else delete s.checks[key];
     t.hidden = true; save(); route(true);
@@ -1405,6 +1435,8 @@ view.addEventListener('change', e => {
   if (key.includes(':trainer:')) { const h = [...view.querySelectorAll('h2')].find(x => x.textContent.startsWith('Trainers (')); if (h) h.textContent = h.textContent.replace(/\(\d+\//, `(${view.querySelectorAll('.tcheck:checked').length}/`); }
 });
 view.addEventListener('click', e => {
+  const jump = e.target.closest?.('[data-jump]');
+  if (jump) { document.getElementById(jump.dataset.jump)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
   const id = e.target.dataset?.unpick;
   if (id) setPick(id, null);
 });

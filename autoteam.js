@@ -33,7 +33,7 @@ function planWants() {
   return out;
 }
 // After you tick a Pokémon off as caught: put it on the Battle plan team if the Team plan uses it.
-// Returns 'added', 'full' or ''. state.autoAdded remembers it so Undo takes it off the team again.
+// Returns 'added', 'evolved', 'full' or ''. state.autoAdded remembers it so Undo puts the team back.
 function autoTeamAdd(d, after) {
   const s = cur(), n = +d;
   if (!autoTeamOn() || !s.caught[n] || s.team.includes(n)) return '';
@@ -47,16 +47,26 @@ function autoTeamAdd(d, after) {
   }
   const want = planWants();
   if (!want || !want.has(n)) return '';
+  // an evolution the Team plan calls for ("Evolve Mudkip into Marshstomp"): it replaces its pre-evolution on the team,
+  // keeping the level and moves you set
+  const pre = s.team.find(t => t !== n && lineOf(n).includes(t));
+  if (pre) {
+    s.team[s.team.indexOf(pre)] = n;
+    s.teamMeta ||= {};
+    if (s.teamMeta[pre] && !s.teamMeta[n]) s.teamMeta[n] = { ...s.teamMeta[pre] };
+    state.autoAdded = { dex: n, from: pre };
+    return 'evolved';
+  }
   const base = lineOf(n)[0];
   if (s.team.some(t => lineOf(t)[0] === base)) return '';
   if (s.team.length >= 6) return 'full';
   s.team.push(n);
-  state.autoAdded = n;
+  state.autoAdded = { dex: n };
   return 'added';
 }
-const autoTeamNote = r => r === 'added' ? ' · added to your Battle plan team' : r === 'full' ? ' · Battle plan team is full' : '';
+const autoTeamNote = r => r === 'added' ? ' · added to your Battle plan team' : r === 'evolved' ? ' · evolved on your Battle plan team' : r === 'full' ? ' · Battle plan team is full' : '';
 function autoSettingsHtml() {
-  return `<label class="row"><input type="checkbox" id="autoTeam" ${autoTeamOn() ? 'checked' : ''}><span>Auto team: when I catch a Pokémon the Team plan uses, add it to my Battle plan team</span></label>
+  return `<label class="row"><input type="checkbox" id="autoTeam" ${autoTeamOn() ? 'checked' : ''}><span>Auto team: when I catch a Pokémon the Team plan uses, add it to my Battle plan team, and when I tick an evolve step, evolve it there too</span></label>
     <label class="row"><input type="checkbox" id="autoLevel" ${autoLevelOn() ? 'checked' : ''}><span>Auto levels: take my team to be the level of the trainer I'm up against (their strongest Pokémon), so I don't have to type levels</span></label>`;
 }
 function bindAutoSettings(after) {
