@@ -153,49 +153,84 @@
    "name": "TM31",
    "hidden": false,
    "where": "1F Room 2",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "2f-room-2-stardust",
    "name": "Stardust",
    "hidden": false,
    "where": "2F Room 2",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "2f-room-4-x-attack",
    "name": "X Attack",
    "hidden": false,
    "where": "2F Room 4",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-b1f-corridor-hyper-potion",
    "name": "Hyper Potion",
    "hidden": true,
    "where": "B1F Corridor",
-   "map": true
+   "map": true,
+   "mo": [
+    5,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "b1f-room-2-tm44",
    "name": "TM44",
    "hidden": false,
    "where": "B1F Room 2",
-   "map": true
+   "map": true,
+   "mo": [
+    7,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "b1f-room-3-ether",
    "name": "Ether",
    "hidden": false,
    "where": "B1F Room 3",
-   "map": true
+   "map": true,
+   "mo": [
+    8,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "b1f-room-5-super-potion",
    "name": "Super Potion",
    "hidden": false,
    "where": "B1F Room 5",
-   "map": true
+   "map": true,
+   "mo": [
+    10,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-exterior-lava-cookie",
@@ -206,35 +241,60 @@
    "need": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)",
    "after": "safari-zone",
    "stage": 38.5,
-   "map": true
+   "map": true,
+   "mo": [
+    13,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "kitchen-great-ball",
    "name": "Great Ball",
    "hidden": false,
    "where": "Kitchen",
-   "map": true
+   "map": true,
+   "mo": [
+    14,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-kitchen-chesto-berry",
    "name": "Chesto Berry",
    "hidden": true,
    "where": "Kitchen",
-   "map": true
+   "map": true,
+   "mo": [
+    14,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-kitchen-pecha-berry",
    "name": "Pecha Berry",
    "hidden": true,
    "where": "Kitchen",
-   "map": true
+   "map": true,
+   "mo": [
+    14,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-kitchen-cheri-berry",
    "name": "Cheri Berry",
    "hidden": true,
    "where": "Kitchen",
-   "map": true
+   "map": true,
+   "mo": [
+    14,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [
@@ -242,7 +302,13 @@
    "id": "item-captains-office-hm01",
    "name": "HM01",
    "from": "S.S. Anne Captain (cure his seasickness)",
-   "where": "Captains Office"
+   "where": "Captains Office",
+   "map": true,
+   "mo": [
+    11,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -281,7 +347,12 @@
    ],
    "id": "youngster-tyler",
    "area": "1F Room 2",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Lass",
@@ -345,7 +416,12 @@
    ],
    "id": "lass-ann",
    "area": "1F Room 2",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Gentleman",
@@ -409,7 +485,12 @@
    ],
    "id": "gentleman-arthur",
    "area": "1F Room 5",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Gentleman",
@@ -471,7 +552,12 @@
    ],
    "id": "gentleman-thomas",
    "area": "1F Room 7",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Rival",
@@ -883,7 +969,12 @@
    ],
    "id": "fisherman-dale",
    "area": "2F Room 2",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Gentleman",
@@ -919,7 +1010,12 @@
    ],
    "id": "gentleman-brooks",
    "area": "2F Room 2",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Lass",
@@ -981,7 +1077,12 @@
    ],
    "id": "lass-dawn",
    "area": "2F Room 4",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Gentleman",
@@ -1043,7 +1144,12 @@
    ],
    "id": "gentleman-lamar",
    "area": "2F Room 4",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Fisherman",
@@ -1127,7 +1233,12 @@
    ],
    "id": "fisherman-barny",
    "area": "B1F Room 1",
-   "map": true
+   "map": true,
+   "mo": [
+    6,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Sailor",
@@ -1163,7 +1274,12 @@
    ],
    "id": "sailor-phillip",
    "area": "B1F Room 1",
-   "map": true
+   "map": true,
+   "mo": [
+    6,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Sailor",
@@ -1221,7 +1337,12 @@
    ],
    "id": "sailor-huey",
    "area": "B1F Room 2",
-   "map": true
+   "map": true,
+   "mo": [
+    7,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Sailor",
@@ -1294,7 +1415,12 @@
    ],
    "id": "sailor-dylan",
    "area": "B1F Room 3",
-   "map": true
+   "map": true,
+   "mo": [
+    8,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Sailor",
@@ -1330,7 +1456,12 @@
    ],
    "id": "sailor-leonard",
    "area": "B1F Room 4",
-   "map": true
+   "map": true,
+   "mo": [
+    9,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Sailor",
@@ -1409,7 +1540,12 @@
    ],
    "id": "sailor-duncan",
    "area": "B1F Room 4",
-   "map": true
+   "map": true,
+   "mo": [
+    9,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Sailor",
@@ -1467,7 +1603,12 @@
    ],
    "id": "sailor-trevor",
    "area": "Deck",
-   "map": true
+   "map": true,
+   "mo": [
+    12,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Sailor",
@@ -1529,12 +1670,17 @@
    ],
    "id": "sailor-edmond",
    "area": "Deck",
-   "map": true
+   "map": true,
+   "mo": [
+    12,
+    1
+   ],
+   "lbl": "B"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 14
+ "mapCount": 15
 }

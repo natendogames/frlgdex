@@ -8,7 +8,12 @@
    "name": "Revive",
    "hidden": false,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [
@@ -20,7 +25,13 @@
    "later": true,
    "need": "After you rescue Lostelle in Three Island's Berry Forest",
    "after": "berry-forest",
-   "stage": 56.5
+   "stage": 56.5,
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [],
@@ -28,5 +39,5 @@
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 2
 }

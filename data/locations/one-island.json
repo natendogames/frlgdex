@@ -186,7 +186,13 @@
    "later": true,
    "need": "After the Hall of Fame: bring Celio the Ruby from Mt. Ember's Ruby Path",
    "after": "pokemon-league",
-   "stage": 62.5
+   "stage": 62.5,
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [],
@@ -194,5 +200,5 @@
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 2
 }

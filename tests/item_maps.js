@@ -58,6 +58,23 @@ const fail = m => fails.push(m);
     for (const it of loc.items) if (!it.later && !h.includes(`#/spot/${l.id}/${encodeURIComponent(it.id)}"`)) fail(`${l.id}: no Show on map button for ${it.name}`);
     for (const t of loc.trainers || []) if (t.map && !t.later && !h.includes(`#/spot/${l.id}/${encodeURIComponent('trainer:' + t.id)}"`)) fail(`${l.id}: no Show on map button for trainer ${t.name}`);
     if (loc.mapCount && !h.includes(`#/spot/${l.id}/all"`)) fail(`${l.id}: no Map button on the page`);
+    for (const g of loc.gifts || []) if (g.map && h.includes(`data-key="${l.id}:gift:${g.id}"`) && !h.includes(`#/spot/${l.id}/${encodeURIComponent('gift:' + g.id)}"`)) fail(`${l.id}: no Show on map button for gift ${g.name}`);
+    // the page lists things in the map's order, with the map's labels: within each section, map by map, labels rising
+    const mo = {};
+    for (const it of loc.items) mo[`${l.id}:item:${it.id}`] = it;
+    for (const g of loc.gifts || []) mo[`${l.id}:gift:${g.id}`] = g;
+    for (const t of loc.trainers || []) mo[app.get('trainerKey')(l.id, t)] = t;
+    for (const sec of h.split(/<h2[ >]/)) {
+      let prev = null;  // (a thing not on any map goes at the end of its area)
+      for (const m of sec.matchAll(/data-key="([^"]+)"[^]*?(?:<b class="spotnum(?: trainer)?">([^<]*)<\/b>|(?=data-key=)|$)/g)) {
+        const x = mo[m[1]];
+        if (!x) continue;
+        if (x.lbl && m[2] !== x.lbl) fail(`${l.id}: ${x.name} shows label ${m[2] || 'none'} on the page but ${x.lbl} on the map`);
+        if (!x.mo) continue;
+        if (prev && (x.mo[0] < prev[0] || (x.mo[0] === prev[0] && x.mo[1] < prev[1]))) fail(`${l.id}: ${x.name} (${x.lbl}) is listed out of map order`);
+        prev = x.mo;
+      }
+    }
   }
   // a found item disappears from the map, but stays when you open its own page
   { const l = state.index.find(x => state.locations[x.id].items.length > 1), loc = state.locations[l.id], [a, b] = loc.items;

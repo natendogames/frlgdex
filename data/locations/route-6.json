@@ -168,14 +168,24 @@
    "name": "Sitrus Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-outside-rare-candy",
    "name": "Rare Candy",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [],
@@ -238,7 +248,12 @@
     }
    ],
    "id": "bug-catcher-keigo",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Camper",
@@ -274,7 +289,12 @@
     }
    ],
    "id": "camper-ricky",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Picnicker",
@@ -335,7 +355,12 @@
     }
    ],
    "id": "picnicker-nancy",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Bug Catcher",
@@ -368,7 +393,12 @@
     }
    ],
    "id": "bug-catcher-elijah",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Picnicker",
@@ -458,7 +488,12 @@
     }
    ],
    "id": "picnicker-isabelle",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Camper",
@@ -520,7 +555,12 @@
     }
    ],
    "id": "camper-jeff",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   }
  ],
  "verified": true,

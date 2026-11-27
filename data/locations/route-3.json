@@ -93,7 +93,12 @@
    "name": "Oran Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [],
@@ -156,7 +161,12 @@
     }
    ],
    "id": "bug-catcher-colton",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Lass",
@@ -209,7 +219,12 @@
     }
    ],
    "id": "lass-janice",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Youngster",
@@ -262,7 +277,12 @@
     }
    ],
    "id": "youngster-ben",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Bug Catcher",
@@ -329,7 +349,12 @@
     }
    ],
    "id": "bug-catcher-greg",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Youngster",
@@ -364,7 +389,12 @@
     }
    ],
    "id": "youngster-calvin",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Lass",
@@ -416,7 +446,12 @@
     }
    ],
    "id": "lass-sally",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Bug Catcher",
@@ -454,7 +489,12 @@
     }
    ],
    "id": "bug-catcher-james",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Lass",
@@ -488,7 +528,12 @@
     }
    ],
    "id": "lass-robin",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   }
  ],
  "verified": true,

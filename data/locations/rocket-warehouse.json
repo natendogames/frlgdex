@@ -8,42 +8,72 @@
    "name": "Big Pearl",
    "hidden": false,
    "where": "Rocket Warehouse",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "rocket-warehouse-tm36",
    "name": "TM36",
    "hidden": false,
    "where": "Rocket Warehouse",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "rocket-warehouse-pearl",
    "name": "Pearl",
    "hidden": false,
    "where": "Rocket Warehouse",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "6"
   },
   {
    "id": "rocket-warehouse-up-grade",
    "name": "Up-grade",
    "hidden": false,
    "where": "Rocket Warehouse",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "7"
   },
   {
    "id": "hidden-rocket-warehouse-nest-ball",
    "name": "Nest Ball",
    "hidden": true,
    "where": "Rocket Warehouse",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "hidden-rocket-warehouse-net-ball",
    "name": "Net Ball",
    "hidden": true,
    "where": "Rocket Warehouse",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [
@@ -51,7 +81,13 @@
    "id": "item-rocket-warehouse-sapphire",
    "name": "Sapphire",
    "from": "Gideon (after beating him)",
-   "where": "Rocket Warehouse"
+   "where": "Rocket Warehouse",
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   }
  ],
  "trainers": [
@@ -143,7 +179,12 @@
    ],
    "id": "team-rocket-admin",
    "area": "Rocket Warehouse",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Team Rocket",
@@ -203,7 +244,12 @@
    ],
    "id": "team-rocket-grunt-48",
    "area": "Rocket Warehouse",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Team Rocket",
@@ -294,7 +340,12 @@
    ],
    "id": "team-rocket-admin-2",
    "area": "Rocket Warehouse",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -386,7 +437,12 @@
    ],
    "id": "team-rocket-grunt-47",
    "area": "Rocket Warehouse",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Scientist",
@@ -530,7 +586,12 @@
    ],
    "id": "scientist-gideon",
    "area": "Rocket Warehouse",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Team Rocket",
@@ -594,7 +655,12 @@
    ],
    "id": "team-rocket-grunt-42",
    "area": "Rocket Warehouse",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   }
  ],
  "verified": true,

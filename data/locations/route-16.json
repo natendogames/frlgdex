@@ -64,7 +64,12 @@
    "name": "Leftovers",
    "hidden": true,
    "where": "Outside (underfoot)",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [
@@ -72,13 +77,25 @@
    "id": "item-house-hm02",
    "name": "HM02",
    "from": "Woman in the house behind a Cut tree",
-   "where": "House"
+   "where": "House",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-north-entrance-2f-amulet-coin",
    "name": "Amulet Coin",
    "from": "Professor Oak's aide (needs enough Pokédex entries)",
-   "where": "North Entrance 2F"
+   "where": "North Entrance 2F",
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -141,7 +158,12 @@
     }
    ],
    "id": "biker-lao",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Cue Ball",
@@ -231,7 +253,12 @@
     }
    ],
    "id": "cue-ball-koji",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Cue Ball",
@@ -294,7 +321,12 @@
     }
    ],
    "id": "cue-ball-luke",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Biker",
@@ -329,7 +361,12 @@
     }
    ],
    "id": "biker-hideo",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Biker",
@@ -419,7 +456,12 @@
     }
    ],
    "id": "biker-ruben",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Cue Ball",
@@ -482,7 +524,12 @@
     }
    ],
    "id": "cue-ball-camron",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Young Couple",
@@ -545,12 +592,17 @@
    ],
    "double": true,
    "id": "young-couple-lea-jed",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 3
 }

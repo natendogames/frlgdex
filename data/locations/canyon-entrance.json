@@ -95,7 +95,12 @@
    "name": "Rawst Berry",
    "hidden": true,
    "where": "Sevault Canyon Entrance",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [],
@@ -161,7 +166,12 @@
    "double": true,
    "id": "young-couple-eve-jon",
    "area": "Sevault Canyon Entrance",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Pokémon Ranger",
@@ -226,7 +236,12 @@
    ],
    "id": "pkmn-ranger-madeline",
    "area": "Sevault Canyon Entrance",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Pokémon Ranger",
@@ -291,7 +306,12 @@
    ],
    "id": "pkmn-ranger-nicolas",
    "area": "Sevault Canyon Entrance",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Juggler",
@@ -409,7 +429,12 @@
    ],
    "id": "juggler-mason",
    "area": "Sevault Canyon Entrance",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Aroma Lady",
@@ -471,7 +496,12 @@
    ],
    "id": "aroma-lady-miah",
    "area": "Sevault Canyon Entrance",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,

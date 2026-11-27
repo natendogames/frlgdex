@@ -27,49 +27,84 @@
    "name": "Potion",
    "hidden": true,
    "where": "North South Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-north-south-tunnel-antidote",
    "name": "Antidote",
    "hidden": true,
    "where": "North South Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-north-south-tunnel-burn-heal",
    "name": "Burn Heal",
    "hidden": true,
    "where": "North South Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    6
+   ],
+   "lbl": "7"
   },
   {
    "id": "hidden-north-south-tunnel-awakening",
    "name": "Awakening",
    "hidden": true,
    "where": "North South Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-north-south-tunnel-ice-heal",
    "name": "Ice Heal",
    "hidden": true,
    "where": "North South Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    5
+   ],
+   "lbl": "6"
   },
   {
    "id": "hidden-north-south-tunnel-parlyz-heal",
    "name": "Parlyz Heal",
    "hidden": true,
    "where": "North South Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-north-south-tunnel-ether",
    "name": "Ether",
    "hidden": true,
    "where": "North South Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    4
+   ],
+   "lbl": "5"
   }
  ],
  "gifts": [
@@ -80,7 +115,13 @@
    "where": "North Entrance",
    "versions": [
     "FR"
-   ]
+   ],
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "trade-north-entrance-trade-give-nidoran-get-nidoran-mr-nido",
@@ -89,7 +130,13 @@
    "where": "North Entrance",
    "versions": [
     "LG"
-   ]
+   ],
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [],
@@ -97,5 +144,5 @@
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 2
 }

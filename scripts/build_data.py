@@ -846,7 +846,10 @@ if unreachable:
 # Drawn maps with every item's spot (data/itemmaps) for the app's "Show on map" button; marks those items map: true
 import mapdraw
 _tpos = {k: (v[0], [p[:2] for l in v[1] for p in scripts_at.positions(v[0], label=l) if p[3] == 'object_events']) for k, v in trainer_src.items()}
-print('item maps', mapdraw.write(world, item_pos, locs, OUT, {n: (loc_id(m['region_map_section']), area_name(n, m['region_map_section'])) for n, m in maps.items() if m['region_map_section'] not in SKIP}, _tpos))
+# the person who gives it, or else the tile or sign that starts the scene
+_gp = lambda ps: [p[:2] for p in ps if p[3] == 'object_events'] or [p[:2] for p in ps]
+_gpos = {k: (v[0], _gp(scripts_at.positions(v[0], label=v[1]))) for k, v in gift_pos.items()}
+print('item maps', mapdraw.write(world, item_pos, locs, OUT, {n: (loc_id(m['region_map_section']), area_name(n, m['region_map_section'])) for n, m in maps.items() if m['region_map_section'] not in SKIP}, _tpos, _gpos))
 for loc in locs.values():
     json.dump(loc, open(os.path.join(OUT, 'locations', loc['id'] + '.json'), 'w'), ensure_ascii=False, indent=1)
 

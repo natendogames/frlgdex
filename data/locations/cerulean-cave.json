@@ -681,63 +681,108 @@
    "name": "Nugget",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "1f-full-restore",
    "name": "Full Restore",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "1f-max-elixir",
    "name": "Max Elixir",
    "hidden": false,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-1f-ultra-ball",
    "name": "Ultra Ball",
    "hidden": true,
    "where": "1F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "2f-pp-up",
    "name": "PP Up",
    "hidden": false,
    "where": "2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "2f-ultra-ball",
    "name": "Ultra Ball",
    "hidden": false,
    "where": "2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "2f-full-restore",
    "name": "Full Restore",
    "hidden": false,
    "where": "2F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "b1f-ultra-ball",
    "name": "Ultra Ball",
    "hidden": false,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "b1f-max-revive",
    "name": "Max Revive",
    "hidden": false,
    "where": "B1F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [],

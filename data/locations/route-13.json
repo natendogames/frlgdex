@@ -217,7 +217,12 @@
    "name": "PP Up",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [],
@@ -283,7 +288,12 @@
     }
    ],
    "id": "bird-keeper-sebastian",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Picnicker",
@@ -370,7 +380,12 @@
     }
    ],
    "id": "picnicker-alma",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Picnicker",
@@ -511,7 +526,12 @@
     }
    ],
    "id": "picnicker-susie",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Beauty",
@@ -601,7 +621,12 @@
     }
    ],
    "id": "beauty-lola",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Beauty",
@@ -661,7 +686,12 @@
     }
    ],
    "id": "beauty-sheila",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Picnicker",
@@ -722,7 +752,12 @@
     }
    ],
    "id": "picnicker-valerie",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Picnicker",
@@ -839,7 +874,12 @@
     }
    ],
    "id": "picnicker-gwen",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Bird Keeper",
@@ -983,7 +1023,12 @@
     }
    ],
    "id": "bird-keeper-perry",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    8
+   ],
+   "lbl": "I"
   },
   {
    "class": "Biker",
@@ -1073,7 +1118,12 @@
     }
    ],
    "id": "biker-jared",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    9
+   ],
+   "lbl": "J"
   },
   {
    "class": "Bird Keeper",
@@ -1188,7 +1238,12 @@
     }
    ],
    "id": "bird-keeper-robert",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   }
  ],
  "verified": true,

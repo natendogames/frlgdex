@@ -148,7 +148,12 @@
    ],
    "id": "elite-four-lorelei",
    "area": "Loreleis Room",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Elite Four",
@@ -296,7 +301,12 @@
    ],
    "id": "elite-four-bruno",
    "area": "Brunos Room",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Elite Four",
@@ -439,7 +449,12 @@
    ],
    "id": "elite-four-agatha",
    "area": "Agathas Room",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Elite Four",
@@ -584,7 +599,12 @@
    ],
    "id": "elite-four-lance",
    "area": "Lances Room",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Champion",

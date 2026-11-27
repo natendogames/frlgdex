@@ -215,28 +215,48 @@
    "name": "TM05",
    "hidden": false,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-outside-great-ball",
    "name": "Great Ball",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-outside-persim-berry",
    "name": "Persim Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-outside-razz-berry",
    "name": "Razz Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   }
  ],
  "gifts": [
@@ -244,7 +264,13 @@
    "id": "mon-pok-mon-center-1f-magikarp-lv-5",
    "name": "Magikarp (Lv 5)",
    "from": "Magikarp salesman (500 Poké Dollars)",
-   "where": "Pokémon Center 1F"
+   "where": "Pokémon Center 1F",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -336,12 +362,17 @@
    "stage": "safari-zone",
    "later": true,
    "reach": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 2
 }

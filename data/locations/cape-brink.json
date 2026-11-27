@@ -270,14 +270,24 @@
    "name": "PP Max",
    "hidden": true,
    "where": "Cape Brink (underfoot)",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-cape-brink-rare-candy",
    "name": "Rare Candy",
    "hidden": true,
    "where": "Cape Brink",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [],

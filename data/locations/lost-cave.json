@@ -989,35 +989,60 @@
    "name": "Silk Scarf",
    "hidden": false,
    "where": "Lost Cave Room 10",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "lost-cave-room-11-lax-incense",
    "name": "Lax Incense",
    "hidden": false,
    "where": "Lost Cave Room 11",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "lost-cave-room-12-sea-incense",
    "name": "Sea Incense",
    "hidden": false,
    "where": "Lost Cave Room 12",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "lost-cave-room-13-max-revive",
    "name": "Max Revive",
    "hidden": false,
    "where": "Lost Cave Room 13",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "lost-cave-room-14-rare-candy",
    "name": "Rare Candy",
    "hidden": false,
    "where": "Lost Cave Room 14",
-   "map": true
+   "map": true,
+   "mo": [
+    5,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [],
@@ -1113,7 +1138,12 @@
    ],
    "id": "ruin-maniac-lawson",
    "area": "Lost Cave Room 1",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Lady",
@@ -1267,7 +1297,12 @@
    ],
    "id": "psychic-laura",
    "area": "Lost Cave Room 4",
-   "map": true
+   "map": true,
+   "mo": [
+    6,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,

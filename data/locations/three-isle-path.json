@@ -8,7 +8,12 @@
    "name": "Nugget",
    "hidden": true,
    "where": "Dunsparce Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [
@@ -16,7 +21,13 @@
    "id": "item-dunsparce-tunnel-nugget",
    "name": "Nugget",
    "from": "Prospector",
-   "where": "Dunsparce Tunnel"
+   "where": "Dunsparce Tunnel",
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [],

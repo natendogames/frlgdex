@@ -175,7 +175,12 @@
    "name": "Super Potion",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-outside-max-ether",
@@ -186,28 +191,48 @@
    "need": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)",
    "after": "safari-zone",
    "stage": 38.5,
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "hidden-outside-cheri-berry",
    "name": "Cheri Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-outside-persim-berry",
    "name": "Persim Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-outside-nanab-berry",
    "name": "Nanab Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   }
  ],
  "gifts": [
@@ -215,7 +240,13 @@
    "id": "item-pok-mon-center-1f-everstone",
    "name": "Everstone",
    "from": "Professor Oak's aide (needs enough Pokédex entries)",
-   "where": "Pokémon Center 1F"
+   "where": "Pokémon Center 1F",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -277,7 +308,12 @@
     }
    ],
    "id": "picnicker-heidi",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Poké Maniac",
@@ -343,7 +379,12 @@
    "stage": "safari-zone",
    "later": true,
    "reach": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Picnicker",
@@ -404,7 +445,12 @@
     }
    ],
    "id": "picnicker-carol",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Hiker",
@@ -466,7 +512,12 @@
     }
    ],
    "id": "hiker-clark",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Hiker",
@@ -527,7 +578,12 @@
     }
    ],
    "id": "hiker-trent",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Poké Maniac",
@@ -589,12 +645,17 @@
     }
    ],
    "id": "pokemaniac-herman",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 2
 }

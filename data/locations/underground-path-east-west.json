@@ -8,49 +8,84 @@
    "name": "Potion",
    "hidden": true,
    "where": "East West Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "7"
   },
   {
    "id": "hidden-east-west-tunnel-parlyz-heal",
    "name": "Parlyz Heal",
    "hidden": true,
    "where": "East West Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "6"
   },
   {
    "id": "hidden-east-west-tunnel-awakening",
    "name": "Awakening",
    "hidden": true,
    "where": "East West Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "hidden-east-west-tunnel-burn-heal",
    "name": "Burn Heal",
    "hidden": true,
    "where": "East West Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-east-west-tunnel-ice-heal",
    "name": "Ice Heal",
    "hidden": true,
    "where": "East West Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-east-west-tunnel-ether",
    "name": "Ether",
    "hidden": true,
    "where": "East West Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-east-west-tunnel-antidote",
    "name": "Antidote",
    "hidden": true,
    "where": "East West Tunnel",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [],

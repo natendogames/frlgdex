@@ -211,28 +211,48 @@
    "name": "X Defend",
    "hidden": false,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "outside-great-ball",
    "name": "Great Ball",
    "hidden": false,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "outside-awakening",
    "name": "Awakening",
    "hidden": false,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-outside-escape-rope",
    "name": "Escape Rope",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   }
  ],
  "gifts": [
@@ -243,13 +263,25 @@
    "where": "East Entrance 2F",
    "versions": [
     "FR"
-   ]
+   ],
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-east-entrance-2f-itemfinder",
    "name": "Itemfinder",
    "from": "Professor Oak's aide (needs enough Pokédex entries)",
-   "where": "East Entrance 2F"
+   "where": "East Entrance 2F",
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "trade-east-entrance-2f-trade-give-nidorina-get-nidorino-nino",
@@ -258,7 +290,13 @@
    "where": "East Entrance 2F",
    "versions": [
     "LG"
-   ]
+   ],
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -296,7 +334,12 @@
    ],
    "id": "youngster-eddie",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Gamer",
@@ -349,7 +392,12 @@
    ],
    "id": "gamer-hugo",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Youngster",
@@ -413,7 +461,12 @@
    ],
    "id": "youngster-dave",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Youngster",
@@ -476,7 +529,12 @@
    ],
    "id": "youngster-dillon",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Engineer",
@@ -567,7 +625,12 @@
    ],
    "id": "engineer-bernie",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Engineer",
@@ -603,7 +666,12 @@
    ],
    "id": "engineer-braxton",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Gamer",
@@ -662,7 +730,12 @@
    ],
    "id": "gamer-jasper",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Youngster",
@@ -753,7 +826,12 @@
    ],
    "id": "youngster-yasu",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    8
+   ],
+   "lbl": "I"
   },
   {
    "class": "Gamer",
@@ -814,7 +892,12 @@
    ],
    "id": "gamer-darian",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Gamer",
@@ -877,12 +960,17 @@
    ],
    "id": "gamer-dirk",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    9
+   ],
+   "lbl": "J"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 2
 }

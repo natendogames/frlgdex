@@ -236,7 +236,12 @@
     }
    ],
    "id": "swimmer-male-reece",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Swimmer",
@@ -299,7 +304,12 @@
     }
    ],
    "id": "swimmer-male-richard",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Swimmer",
@@ -360,7 +370,12 @@
     }
    ],
    "id": "swimmer-male-tony",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Swimmer",
@@ -449,7 +464,12 @@
     }
    ],
    "id": "swimmer-male-david",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Swimmer",
@@ -564,7 +584,12 @@
     }
    ],
    "id": "swimmer-male-douglas",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Swimmer",
@@ -625,7 +650,12 @@
     }
    ],
    "id": "swimmer-male-matthew",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Sis and Bro",
@@ -689,7 +719,12 @@
    ],
    "double": true,
    "id": "sis-and-bro-lia-luc",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Swimmer",
@@ -831,7 +866,12 @@
     }
    ],
    "id": "swimmer-male-axle",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    8
+   ],
+   "lbl": "I"
   },
   {
    "class": "Swimmer",
@@ -970,7 +1010,12 @@
     }
    ],
    "id": "swimmer-female-anya",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    10
+   ],
+   "lbl": "K"
   },
   {
    "class": "Swimmer",
@@ -1033,7 +1078,12 @@
     }
    ],
    "id": "swimmer-female-alice",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    9
+   ],
+   "lbl": "J"
   },
   {
    "class": "Swimmer",
@@ -1120,7 +1170,12 @@
     }
    ],
    "id": "swimmer-female-connie",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    11
+   ],
+   "lbl": "L"
   }
  ],
  "verified": true,

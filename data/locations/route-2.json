@@ -74,7 +74,12 @@
    "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
    "after": "ss-anne",
    "stage": 17.5,
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "outside-parlyz-heal",
@@ -85,7 +90,12 @@
    "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
    "after": "ss-anne",
    "stage": 17.5,
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [
@@ -97,7 +107,13 @@
    "later": true,
    "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
    "after": "ss-anne",
-   "stage": 17.5
+   "stage": 17.5,
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "trade-house-trade-give-abra-get-mr-mime-mimien",
@@ -107,7 +123,13 @@
    "later": true,
    "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
    "after": "ss-anne",
-   "stage": 17.5
+   "stage": 17.5,
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [],
@@ -115,5 +137,5 @@
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 3
 }

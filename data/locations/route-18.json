@@ -92,7 +92,13 @@
    "where": "East Entrance 2F",
    "versions": [
     "FR"
-   ]
+   ],
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "trade-east-entrance-2f-trade-give-slowbro-get-lickitung-marc",
@@ -101,7 +107,13 @@
    "where": "East Entrance 2F",
    "versions": [
     "LG"
-   ]
+   ],
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -166,7 +178,12 @@
    ],
    "id": "bird-keeper-wilton",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Bird Keeper",
@@ -204,7 +221,12 @@
    ],
    "id": "bird-keeper-ramiro",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Bird Keeper",
@@ -321,12 +343,17 @@
    ],
    "id": "bird-keeper-jacob",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 2
 }

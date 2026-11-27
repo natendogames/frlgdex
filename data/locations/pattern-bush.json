@@ -161,7 +161,12 @@
    ],
    "id": "youngster-cordell",
    "area": "Pattern Bush",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Pokémon Breeder",
@@ -196,7 +201,12 @@
    ],
    "id": "pkmn-breeder-bethany",
    "area": "Pattern Bush",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Bug Catcher",
@@ -258,7 +268,12 @@
    ],
    "id": "bug-catcher-vance",
    "area": "Pattern Bush",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Bug Catcher",
@@ -296,7 +311,12 @@
    ],
    "id": "bug-catcher-garret",
    "area": "Pattern Bush",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Ruin Maniac",
@@ -389,7 +409,12 @@
    ],
    "id": "ruin-maniac-layton",
    "area": "Pattern Bush",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Lass",
@@ -426,7 +451,12 @@
    ],
    "id": "lass-joana",
    "area": "Pattern Bush",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Picnicker",
@@ -514,7 +544,12 @@
    ],
    "id": "picnicker-marcy",
    "area": "Pattern Bush",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Youngster",
@@ -602,7 +637,12 @@
    ],
    "id": "youngster-nash",
    "area": "Pattern Bush",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Lass",
@@ -712,7 +752,12 @@
    ],
    "id": "lass-dalia",
    "area": "Pattern Bush",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    10
+   ],
+   "lbl": "K"
   },
   {
    "class": "Bug Catcher",
@@ -828,7 +873,12 @@
    ],
    "id": "bug-catcher-jonah",
    "area": "Pattern Bush",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    8
+   ],
+   "lbl": "I"
   },
   {
    "class": "Pokémon Breeder",
@@ -913,7 +963,12 @@
    ],
    "id": "pkmn-breeder-allison",
    "area": "Pattern Bush",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    9
+   ],
+   "lbl": "J"
   },
   {
    "class": "Camper",
@@ -978,7 +1033,12 @@
    ],
    "id": "camper-riley",
    "area": "Pattern Bush",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    11
+   ],
+   "lbl": "L"
   }
  ],
  "verified": true,

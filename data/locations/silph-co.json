@@ -20,203 +20,348 @@
    "name": "Carbos",
    "hidden": false,
    "where": "10F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "10f-ultra-ball",
    "name": "Ultra Ball",
    "hidden": false,
    "where": "10F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "10f-rare-candy",
    "name": "Rare Candy",
    "hidden": false,
    "where": "10F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-10f-hp-up",
    "name": "HP Up",
    "hidden": true,
    "where": "10F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "11f-zinc",
    "name": "Zinc",
    "hidden": false,
    "where": "11F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-11f-revive",
    "name": "Revive",
    "hidden": true,
    "where": "11F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-2f-ultra-ball",
    "name": "Ultra Ball",
    "hidden": true,
    "where": "2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "3f-hyper-potion",
    "name": "Hyper Potion",
    "hidden": false,
    "where": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-3f-protein",
    "name": "Protein",
    "hidden": true,
    "where": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "4f-max-revive",
    "name": "Max Revive",
    "hidden": false,
    "where": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "4f-escape-rope",
    "name": "Escape Rope",
    "hidden": false,
    "where": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "4f-full-heal",
    "name": "Full Heal",
    "hidden": false,
    "where": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "4f-tm41",
    "name": "TM41",
    "hidden": false,
    "where": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-4f-iron",
    "name": "Iron",
    "hidden": true,
    "where": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "5f-protein",
    "name": "Protein",
    "hidden": false,
    "where": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    5,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "5f-tm01",
    "name": "TM01",
    "hidden": false,
    "where": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    5,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "5f-card-key",
    "name": "Card Key",
    "hidden": false,
    "where": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    5,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-5f-elixir",
    "name": "Elixir",
    "hidden": true,
    "where": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    5,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-5f-pp-up",
    "name": "PP Up",
    "hidden": true,
    "where": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    5,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "6f-hp-up",
    "name": "HP Up",
    "hidden": false,
    "where": "6F",
-   "map": true
+   "map": true,
+   "mo": [
+    6,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "6f-x-special",
    "name": "X Special",
    "hidden": false,
    "where": "6F",
-   "map": true
+   "map": true,
+   "mo": [
+    6,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-6f-carbos",
    "name": "Carbos",
    "hidden": true,
    "where": "6F",
-   "map": true
+   "map": true,
+   "mo": [
+    6,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "7f-calcium",
    "name": "Calcium",
    "hidden": false,
    "where": "7F",
-   "map": true
+   "map": true,
+   "mo": [
+    7,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "7f-tm08",
    "name": "TM08",
    "hidden": false,
    "where": "7F",
-   "map": true
+   "map": true,
+   "mo": [
+    7,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-7f-zinc",
    "name": "Zinc",
    "hidden": true,
    "where": "7F",
-   "map": true
+   "map": true,
+   "mo": [
+    7,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "8f-iron",
    "name": "Iron",
    "hidden": false,
    "where": "8F",
-   "map": true
+   "map": true,
+   "mo": [
+    8,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-8f-nugget",
    "name": "Nugget",
    "hidden": true,
    "where": "8F",
-   "map": true
+   "map": true,
+   "mo": [
+    8,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-9f-max-potion",
    "name": "Max Potion",
    "hidden": true,
    "where": "9F",
-   "map": true
+   "map": true,
+   "mo": [
+    9,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-9f-calcium",
    "name": "Calcium",
    "hidden": true,
    "where": "9F",
-   "map": true
+   "map": true,
+   "mo": [
+    9,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [
@@ -224,13 +369,25 @@
    "id": "item-11f-master-ball",
    "name": "Master Ball",
    "from": "Silph President (after beating Giovanni)",
-   "where": "11F"
+   "where": "11F",
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "mon-7f-lapras-lv-25",
    "name": "Lapras (Lv 25)",
    "from": "Silph employee",
-   "where": "7F"
+   "where": "7F",
+   "map": true,
+   "mo": [
+    7,
+    3
+   ],
+   "lbl": "4"
   }
  ],
  "trainers": [
@@ -348,7 +505,12 @@
    ],
    "id": "scientist-connor",
    "area": "2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Team Rocket",
@@ -410,7 +572,12 @@
    ],
    "id": "team-rocket-grunt-23",
    "area": "2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Team Rocket",
@@ -554,7 +721,12 @@
    ],
    "id": "team-rocket-grunt-24",
    "area": "2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Scientist",
@@ -643,7 +815,12 @@
    ],
    "id": "scientist-jerry",
    "area": "2F",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -731,7 +908,12 @@
    ],
    "id": "team-rocket-grunt-25",
    "area": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Scientist",
@@ -795,7 +977,12 @@
    ],
    "id": "scientist-jose",
    "area": "3F",
-   "map": true
+   "map": true,
+   "mo": [
+    3,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -858,7 +1045,12 @@
    ],
    "id": "team-rocket-grunt-26",
    "area": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Scientist",
@@ -895,7 +1087,12 @@
    ],
    "id": "scientist-rodney",
    "area": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Team Rocket",
@@ -983,7 +1180,12 @@
    ],
    "id": "team-rocket-grunt-27",
    "area": "4F",
-   "map": true
+   "map": true,
+   "mo": [
+    4,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Team Rocket",
@@ -1019,7 +1221,12 @@
    ],
    "id": "team-rocket-grunt-28",
    "area": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    5,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Scientist",
@@ -1135,7 +1342,12 @@
    ],
    "id": "scientist-beau",
    "area": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    5,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Team Rocket",
@@ -1171,7 +1383,12 @@
    ],
    "id": "team-rocket-grunt-29",
    "area": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    5,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Juggler",
@@ -1232,7 +1449,12 @@
    ],
    "id": "juggler-dalton",
    "area": "5F",
-   "map": true
+   "map": true,
+   "mo": [
+    5,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Scientist",
@@ -1375,7 +1597,12 @@
    ],
    "id": "scientist-taylor",
    "area": "6F",
-   "map": true
+   "map": true,
+   "mo": [
+    6,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -1439,7 +1666,12 @@
    ],
    "id": "team-rocket-grunt-30",
    "area": "6F",
-   "map": true
+   "map": true,
+   "mo": [
+    6,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Team Rocket",
@@ -1527,7 +1759,12 @@
    ],
    "id": "team-rocket-grunt-31",
    "area": "6F",
-   "map": true
+   "map": true,
+   "mo": [
+    6,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Team Rocket",
@@ -1589,7 +1826,12 @@
    ],
    "id": "team-rocket-grunt-34",
    "area": "7F",
-   "map": true
+   "map": true,
+   "mo": [
+    7,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Team Rocket",
@@ -1651,7 +1893,12 @@
    ],
    "id": "team-rocket-grunt-33",
    "area": "7F",
-   "map": true
+   "map": true,
+   "mo": [
+    7,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -1766,7 +2013,12 @@
    ],
    "id": "team-rocket-grunt-35",
    "area": "7F",
-   "map": true
+   "map": true,
+   "mo": [
+    7,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Scientist",
@@ -1828,7 +2080,12 @@
    ],
    "id": "scientist-joshua",
    "area": "7F",
-   "map": true
+   "map": true,
+   "mo": [
+    7,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Rival",
@@ -2320,7 +2577,12 @@
    ],
    "id": "team-rocket-grunt-36",
    "area": "8F",
-   "map": true
+   "map": true,
+   "mo": [
+    8,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Scientist",
@@ -2382,7 +2644,12 @@
    ],
    "id": "scientist-parker",
    "area": "8F",
-   "map": true
+   "map": true,
+   "mo": [
+    8,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Team Rocket",
@@ -2498,7 +2765,12 @@
    ],
    "id": "team-rocket-grunt-32",
    "area": "8F",
-   "map": true
+   "map": true,
+   "mo": [
+    8,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Scientist",
@@ -2588,7 +2860,12 @@
    ],
    "id": "scientist-ed",
    "area": "9F",
-   "map": true
+   "map": true,
+   "mo": [
+    9,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Team Rocket",
@@ -2676,7 +2953,12 @@
    ],
    "id": "team-rocket-grunt-38",
    "area": "9F",
-   "map": true
+   "map": true,
+   "mo": [
+    9,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -2764,7 +3046,12 @@
    ],
    "id": "team-rocket-grunt-37",
    "area": "9F",
-   "map": true
+   "map": true,
+   "mo": [
+    9,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Scientist",
@@ -2827,7 +3114,12 @@
    ],
    "id": "scientist-travis",
    "area": "10F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Team Rocket",
@@ -2864,7 +3156,12 @@
    ],
    "id": "team-rocket-grunt-39",
    "area": "10F",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -3005,7 +3302,12 @@
    ],
    "id": "team-rocket-grunt-40",
    "area": "11F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Team Rocket",
@@ -3093,7 +3395,12 @@
    ],
    "id": "team-rocket-grunt-41",
    "area": "11F",
-   "map": true
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Boss",

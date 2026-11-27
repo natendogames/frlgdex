@@ -294,112 +294,192 @@
    "name": "Max Ether",
    "hidden": false,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "8"
   },
   {
    "id": "berry-forest-full-heal",
    "name": "Full Heal",
    "hidden": false,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    16
+   ],
+   "lbl": "17"
   },
   {
    "id": "berry-forest-max-elixir",
    "name": "Max Elixir",
    "hidden": false,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    14
+   ],
+   "lbl": "15"
   },
   {
    "id": "hidden-berry-forest-razz-berry",
    "name": "Razz Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-berry-forest-bluk-berry",
    "name": "Bluk Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    8
+   ],
+   "lbl": "9"
   },
   {
    "id": "hidden-berry-forest-nanab-berry",
    "name": "Nanab Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    9
+   ],
+   "lbl": "10"
   },
   {
    "id": "hidden-berry-forest-wepear-berry",
    "name": "Wepear Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    11
+   ],
+   "lbl": "12"
   },
   {
    "id": "hidden-berry-forest-oran-berry",
    "name": "Oran Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-berry-forest-cheri-berry",
    "name": "Cheri Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    10
+   ],
+   "lbl": "11"
   },
   {
    "id": "hidden-berry-forest-chesto-berry",
    "name": "Chesto Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "hidden-berry-forest-pecha-berry",
    "name": "Pecha Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    12
+   ],
+   "lbl": "13"
   },
   {
    "id": "hidden-berry-forest-rawst-berry",
    "name": "Rawst Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "7"
   },
   {
    "id": "hidden-berry-forest-aspear-berry",
    "name": "Aspear Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "6"
   },
   {
    "id": "hidden-berry-forest-persim-berry",
    "name": "Persim Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-berry-forest-pinap-berry",
    "name": "Pinap Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-berry-forest-lum-berry",
    "name": "Lum Berry",
    "hidden": true,
    "where": "Berry Forest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    15
+   ],
+   "lbl": "16"
   }
  ],
  "gifts": [
@@ -407,7 +487,13 @@
    "id": "item-berry-forest-iapapa-berry",
    "name": "Iapapa Berry",
    "from": "Lostelle (when you find her)",
-   "where": "Berry Forest"
+   "where": "Berry Forest",
+   "map": true,
+   "mo": [
+    0,
+    13
+   ],
+   "lbl": "14"
   }
  ],
  "trainers": [],

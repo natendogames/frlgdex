@@ -230,35 +230,60 @@
    "name": "TM43",
    "hidden": false,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-outside-elixir",
    "name": "Elixir",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-outside-ether",
    "name": "Ether",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "hidden-outside-oran-berry",
    "name": "Oran Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-outside-bluk-berry",
    "name": "Bluk Berry",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   }
  ],
  "gifts": [
@@ -266,7 +291,13 @@
    "id": "item-sea-cottage-s-s-ticket",
    "name": "S.S. Ticket",
    "from": "Bill",
-   "where": "Sea Cottage"
+   "where": "Sea Cottage",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -329,7 +360,12 @@
     }
    ],
    "id": "hiker-franklin",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Youngster",
@@ -391,7 +427,12 @@
     }
    ],
    "id": "youngster-joey",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Hiker",
@@ -427,7 +468,12 @@
     }
    ],
    "id": "hiker-wayne",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Youngster",
@@ -463,7 +509,12 @@
     }
    ],
    "id": "youngster-dan",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Picnicker",
@@ -524,7 +575,12 @@
     }
    ],
    "id": "picnicker-kelsey",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Hiker",
@@ -637,7 +693,12 @@
     }
    ],
    "id": "hiker-nob",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Camper",
@@ -700,7 +761,12 @@
     }
    ],
    "id": "camper-flint",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Youngster",
@@ -757,7 +823,12 @@
     }
    ],
    "id": "youngster-chad",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Lass",
@@ -827,12 +898,17 @@
     }
    ],
    "id": "lass-haley",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    8
+   ],
+   "lbl": "I"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 2
 }

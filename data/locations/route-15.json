@@ -93,7 +93,12 @@
    "name": "TM18",
    "hidden": false,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [
@@ -101,7 +106,13 @@
    "id": "item-west-entrance-2f-exp-share",
    "name": "Exp. Share",
    "from": "Professor Oak's aide (needs enough Pokédex entries)",
-   "where": "West Entrance 2F"
+   "where": "West Entrance 2F",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -245,7 +256,12 @@
     }
    ],
    "id": "biker-ernest",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    10
+   ],
+   "lbl": "K"
   },
   {
    "class": "Biker",
@@ -333,7 +349,12 @@
     }
    ],
    "id": "biker-alex",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "H"
   },
   {
    "class": "Beauty",
@@ -394,7 +415,12 @@
     }
    ],
    "id": "beauty-grace",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   },
   {
    "class": "Picnicker",
@@ -457,7 +483,12 @@
     }
    ],
    "id": "picnicker-becky",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Beauty",
@@ -516,7 +547,12 @@
     }
    ],
    "id": "beauty-olivia",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Picnicker",
@@ -600,7 +636,12 @@
     }
    ],
    "id": "picnicker-kindra",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    9
+   ],
+   "lbl": "J"
   },
   {
    "class": "Crush Kin",
@@ -667,7 +708,12 @@
    ],
    "double": true,
    "id": "crush-kin-ron-mya",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Bird Keeper",
@@ -760,7 +806,12 @@
     }
    ],
    "id": "bird-keeper-chester",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    11
+   ],
+   "lbl": "L"
   },
   {
    "class": "Bird Keeper",
@@ -877,7 +928,12 @@
     }
    ],
    "id": "bird-keeper-edwin",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Picnicker",
@@ -910,7 +966,12 @@
     }
    ],
    "id": "picnicker-celia",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Picnicker",
@@ -995,12 +1056,17 @@
     }
    ],
    "id": "picnicker-yazmin",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    8
+   ],
+   "lbl": "I"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 2
 }

@@ -259,21 +259,36 @@
    "name": "Max Repel",
    "hidden": true,
    "where": "Bond Bridge",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-bond-bridge-pearl",
    "name": "Pearl",
    "hidden": true,
    "where": "Bond Bridge",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-bond-bridge-stardust",
    "name": "Stardust",
    "hidden": true,
    "where": "Bond Bridge",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   }
  ],
  "gifts": [],
@@ -313,7 +328,12 @@
    ],
    "id": "swimmer-female-tisha",
    "area": "Bond Bridge",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Twins",
@@ -372,7 +392,12 @@
    "double": true,
    "id": "twins-joy-meg",
    "area": "Bond Bridge",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Aroma Lady",
@@ -457,7 +482,12 @@
    ],
    "id": "aroma-lady-violet",
    "area": "Bond Bridge",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Tuber",
@@ -573,7 +603,12 @@
    ],
    "id": "tuber-alexis",
    "area": "Bond Bridge",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Tuber",
@@ -664,7 +699,12 @@
    ],
    "id": "tuber-amira",
    "area": "Bond Bridge",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   },
   {
    "class": "Aroma Lady",
@@ -725,7 +765,12 @@
    ],
    "id": "aroma-lady-nikki",
    "area": "Bond Bridge",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   }
  ],
  "verified": true,

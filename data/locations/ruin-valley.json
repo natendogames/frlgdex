@@ -243,21 +243,36 @@
    "name": "HP Up",
    "hidden": false,
    "where": "Ruin Valley",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "ruin-valley-full-restore",
    "name": "Full Restore",
    "hidden": false,
    "where": "Ruin Valley",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "ruin-valley-sun-stone",
    "name": "Sun Stone",
    "hidden": false,
    "where": "Ruin Valley",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [],
@@ -324,7 +339,12 @@
    ],
    "id": "pokemaniac-hector",
    "area": "Ruin Valley",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Ruin Maniac",
@@ -390,7 +410,12 @@
    ],
    "id": "ruin-maniac-larry",
    "area": "Ruin Valley",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Ruin Maniac",
@@ -428,7 +453,12 @@
    ],
    "id": "ruin-maniac-foster",
    "area": "Ruin Valley",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Ruin Maniac",
@@ -521,7 +551,12 @@
    ],
    "id": "ruin-maniac-stanly",
    "area": "Ruin Valley",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Hiker",
@@ -558,7 +593,12 @@
    ],
    "id": "hiker-daryl",
    "area": "Ruin Valley",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,

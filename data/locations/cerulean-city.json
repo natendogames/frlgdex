@@ -156,7 +156,12 @@
    "name": "Rare Candy",
    "hidden": true,
    "where": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   }
  ],
  "gifts": [
@@ -164,37 +169,73 @@
    "id": "item-outside-fame-checker",
    "name": "Fame Checker",
    "from": "Your rival (after battling him)",
-   "where": "Outside"
+   "where": "Outside",
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-outside-tm28",
    "name": "TM28",
    "from": "Rocket Grunt (after beating him)",
-   "where": "Outside"
+   "where": "Outside",
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "item-bike-shop-bicycle",
    "name": "Bicycle",
    "from": "Bike Shop owner (trade the Bike Voucher)",
-   "where": "Bike Shop"
+   "where": "Bike Shop",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-gym-tm03",
    "name": "TM03",
    "from": "Misty (after winning)",
-   "where": "Gym"
+   "where": "Gym",
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "trade-house-3-trade-give-poliwhirl-get-jynx-zynx",
    "name": "Trade: give Poliwhirl, get Jynx (\"Zynx\")",
    "from": "Dontae",
-   "where": "House 3"
+   "where": "House 3",
+   "map": true,
+   "mo": [
+    3,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "item-house-5-powder-jar",
    "name": "Powder Jar",
    "from": "Berry Powder man",
-   "where": "House 5"
+   "where": "House 5",
+   "map": true,
+   "mo": [
+    4,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -261,7 +302,12 @@
    ],
    "id": "team-rocket-grunt-5",
    "area": "Outside",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Rival",
@@ -595,7 +641,12 @@
    ],
    "id": "swimmer-male-luis",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Picnicker",
@@ -630,7 +681,12 @@
    ],
    "id": "picnicker-diana",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Leader",
@@ -700,12 +756,17 @@
    ],
    "id": "leader-misty",
    "area": "Gym",
-   "map": true
+   "map": true,
+   "mo": [
+    2,
+    1
+   ],
+   "lbl": "B"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 2
+ "mapCount": 5
 }

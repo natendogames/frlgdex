@@ -164,21 +164,36 @@
    "name": "PP Up",
    "hidden": false,
    "where": "Outcast Island",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-outcast-island-star-piece",
    "name": "Star Piece",
    "hidden": true,
    "where": "Outcast Island",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-outcast-island-net-ball",
    "name": "Net Ball",
    "hidden": true,
    "where": "Outcast Island",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   }
  ],
  "gifts": [],
@@ -218,7 +233,12 @@
    ],
    "id": "swimmer-female-nicole",
    "area": "Outcast Island",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Sis and Bro",
@@ -281,7 +301,12 @@
    "double": true,
    "id": "sis-and-bro-ava-geb",
    "area": "Outcast Island",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Swimmer",
@@ -344,7 +369,12 @@
    ],
    "id": "swimmer-male-mymo",
    "area": "Outcast Island",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Fisherman",
@@ -408,7 +438,12 @@
    ],
    "id": "fisherman-tylor",
    "area": "Outcast Island",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Team Rocket",
@@ -496,7 +531,12 @@
    ],
    "id": "team-rocket-grunt-46",
    "area": "Outcast Island",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "F"
   }
  ],
  "verified": true,

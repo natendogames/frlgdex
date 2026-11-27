@@ -33,7 +33,12 @@
    "name": "Sacred Ash",
    "hidden": true,
    "where": "Summit (underfoot)",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [],

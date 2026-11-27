@@ -279,35 +279,60 @@
    "name": "Elixir",
    "hidden": false,
    "where": "Water Path",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "water-path-dragon-scale",
    "name": "Dragon Scale",
    "hidden": false,
    "where": "Water Path",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-water-path-aspear-berry",
    "name": "Aspear Berry",
    "hidden": true,
    "where": "Water Path",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   },
   {
    "id": "hidden-water-path-oran-berry",
    "name": "Oran Berry",
    "hidden": true,
    "where": "Water Path",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "hidden-water-path-pinap-berry",
    "name": "Pinap Berry",
    "hidden": true,
    "where": "Water Path",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "gifts": [
@@ -315,7 +340,13 @@
    "id": "item-water-path-house-1-nest-ball",
    "name": "Nest Ball",
    "from": "Boy (show him a Heracross)",
-   "where": "Water Path House 1"
+   "where": "Water Path House 1",
+   "map": true,
+   "mo": [
+    1,
+    0
+   ],
+   "lbl": "1"
   }
  ],
  "trainers": [
@@ -382,7 +413,12 @@
    ],
    "id": "hiker-earl",
    "area": "Water Path",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   },
   {
    "class": "Juggler",
@@ -498,7 +534,12 @@
    ],
    "id": "juggler-edward",
    "area": "Water Path",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "B"
   },
   {
    "class": "Swimmer",
@@ -561,7 +602,12 @@
    ],
    "id": "swimmer-female-denise",
    "area": "Water Path",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "C"
   },
   {
    "class": "Swimmer",
@@ -597,7 +643,12 @@
    ],
    "id": "swimmer-male-samir",
    "area": "Water Path",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "D"
   },
   {
    "class": "Twins",
@@ -660,7 +711,12 @@
    "double": true,
    "id": "twins-miu-mia",
    "area": "Water Path",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "E"
   },
   {
    "class": "Aroma Lady",
@@ -723,12 +779,17 @@
    ],
    "id": "aroma-lady-rose",
    "area": "Water Path",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "G"
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
  ],
- "mapCount": 1
+ "mapCount": 2
 }

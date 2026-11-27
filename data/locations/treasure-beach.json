@@ -219,56 +219,96 @@
    "name": "Stardust",
    "hidden": true,
    "where": "Treasure Beach",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "1"
   },
   {
    "id": "hidden-treasure-beach-stardust-2",
    "name": "Stardust",
    "hidden": true,
    "where": "Treasure Beach",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    3
+   ],
+   "lbl": "4"
   },
   {
    "id": "hidden-treasure-beach-pearl",
    "name": "Pearl",
    "hidden": true,
    "where": "Treasure Beach",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    4
+   ],
+   "lbl": "5"
   },
   {
    "id": "hidden-treasure-beach-pearl-2",
    "name": "Pearl",
    "hidden": true,
    "where": "Treasure Beach",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    5
+   ],
+   "lbl": "6"
   },
   {
    "id": "hidden-treasure-beach-ultra-ball",
    "name": "Ultra Ball",
    "hidden": true,
    "where": "Treasure Beach",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    2
+   ],
+   "lbl": "3"
   },
   {
    "id": "hidden-treasure-beach-ultra-ball-2",
    "name": "Ultra Ball",
    "hidden": true,
    "where": "Treasure Beach",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    7
+   ],
+   "lbl": "8"
   },
   {
    "id": "hidden-treasure-beach-star-piece",
    "name": "Star Piece",
    "hidden": true,
    "where": "Treasure Beach",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    6
+   ],
+   "lbl": "7"
   },
   {
    "id": "hidden-treasure-beach-big-pearl",
    "name": "Big Pearl",
    "hidden": true,
    "where": "Treasure Beach",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    1
+   ],
+   "lbl": "2"
   }
  ],
  "gifts": [],
@@ -360,7 +400,12 @@
    ],
    "id": "swimmer-female-amara",
    "area": "Treasure Beach",
-   "map": true
+   "map": true,
+   "mo": [
+    0,
+    0
+   ],
+   "lbl": "A"
   }
  ],
  "verified": true,
