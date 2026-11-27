@@ -464,7 +464,7 @@ function renderLocation(id) {
         const sub = [METHOD_LABEL[e.method] || e.method, e.levels && `Lv ${esc(e.levels)}`, e.rate && esc(e.rate), e.notes && esc(e.notes),
           later && (e.need ? esc(laterNeed(e.need)) : UNLOCK[e.method] ? `Needs ${esc(UNLOCK[e.method].need)}` : 'Later in the story')].filter(Boolean).join(' · ');
         const excl = e.versions.length === 1 ? `<span class="tag">${e.versions[0]} only</span>` : '';
-        return checkRow(`dex:${e.dex}`, s.caught[e.dex], `#${String(e.dex).padStart(3, '0')} ${esc(e.name)} ${types(e.dex)}`, sub, excl + infoLink(e.dex) + (typeof catchLink === 'function' && !['gift', 'trade', 'game-corner'].includes(e.method) ? catchLink(id, e.dex, e.method) : ''));
+        return checkRow(`dex:${e.dex}`, s.caught[e.dex], `#${String(e.dex).padStart(3, '0')} ${esc(e.name)} ${types(e.dex)}`, sub + (typeof hvSub === 'function' ? hvSub(e.dex) : ''), excl + (typeof hvTag === 'function' ? hvTag(e.dex) : '') + infoLink(e.dex) + (typeof catchLink === 'function' && !['gift', 'trade', 'game-corner'].includes(e.method) ? catchLink(id, e.dex, e.method) : ''));
       }).join('');
     }
     return out;
@@ -572,7 +572,7 @@ function renderDex() {
     <input type="search" id="dexq" placeholder="Search name or number" value="${esc(f.q)}" style="margin-top:10px"></div>
     <p class="note"><a href="#/missing">Still missing: what you can catch now and where</a></p>
     <div class="card">${list.map(p => checkRow(`dex:${p.dex}`, isCaught(p.dex),
-      `#${String(p.dex).padStart(3, '0')} ${esc(p.name)} ${types(p.dex)}`, availText(p.dex), infoLink(p.dex))).join('') || '<div class="empty">Nothing matches.</div>'}</div>`;
+      `#${String(p.dex).padStart(3, '0')} ${esc(p.name)} ${types(p.dex)}`, availText(p.dex) + (typeof hvSub === 'function' ? hvSub(p.dex) : ''), (typeof hvTag === 'function' ? hvTag(p.dex) : '') + infoLink(p.dex))).join('') || '<div class="empty">Nothing matches.</div>'}</div>`;
   view.querySelectorAll('[data-f]').forEach(b => b.onclick = () => {
     const [k, v] = b.dataset.f.split(':');
     if (k === 'scope') f.scope = v; else f.missing = !f.missing;

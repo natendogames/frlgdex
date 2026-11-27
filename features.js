@@ -118,6 +118,7 @@ function renderMon(id) {
       ${p.held ? `<tr><td>Wild held item</td><td>${[p.held.common && `${esc(p.held.common)} (50%)`, p.held.rare && `${esc(p.held.rare)} (5%)`].filter(Boolean).join(', ')}</td></tr>` : ''}
       <tr><td>Egg groups</td><td>${(p.eggGroups || []).map(esc).join(', ')} · ${esc(genderText)} · ${(p.eggCycles * 256).toLocaleString()} steps <a href="#/tools/breeding">breeding</a></td></tr>
     </table></div>
+    ${typeof hvCard === 'function' ? hvCard(n) : ''}
     <h2>Where to get it in ${VNAME[V()]}</h2><div class="card">${whereRows(n)}</div>
     <h2>Base stats (total ${total})</h2><div class="card stats-bars">${p.stats.map((v, i) => `<div class="sb"><span>${STAT_SHORT[i]}</span><b>${v}</b><div class="bar"><i style="width:${Math.min(100, v / 1.6)}%"></i></div></div>`).join('')}</div>
     <h2>Type matchups</h2><div class="card"><table class="mini">
