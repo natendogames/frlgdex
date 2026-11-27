@@ -11,13 +11,14 @@ const ok = (c, m) => { checks++; if (!c) { failures++; if (failures < 40) consol
   const { state, view } = app, get = app.get;
   const V = Object.keys(state.progress.saves)[0];
   state.progress.version = V;
-  const grindPicks = get('grindPicks'), encStage = get('encStage'), LEGENDARY = get('LEGENDARY');
+  const grindPicks = get('grindPicks'), grindSearchable = get('grindSearchable'), encStage = get('encStage'), LEGENDARY = get('LEGENDARY');
   let shown = 0;
   for (const l of state.index) {
     const encs = get('locView')(state.locations[l.id]).encs, here = app.stageOf(l.id); // this version's encounters, as the page shows them
     const now = encs.filter(e => encStage(l.id, e) <= here);
     const picks = grindPicks(now);
-    const wild = now.filter(e => !['gift', 'trade', 'static', 'roaming', 'game-corner'].includes(e.method) && !LEGENDARY.has(e.dex));
+    // rare ones (under 5%) only count when the DexNav can search for them
+    const wild = now.filter(e => !['gift', 'trade', 'static', 'roaming', 'game-corner'].includes(e.method) && !LEGENDARY.has(e.dex) && !(e.rate && parseFloat(e.rate) < 5 && !grindSearchable(e)));
     if (wild.length) ok(picks.length >= 1 && picks.length <= 2, `${l.id}: ${picks.length} picks from ${wild.length} wild encounters`);
     for (const x of picks) {
       ok(now.includes(x.e), `${l.id}: ${x.e.name} is not a first-visit encounter`);
@@ -36,6 +37,16 @@ const ok = (c, m) => { checks++; if (!c) { failures++; if (failures < 40) consol
     if (picks.length) { shown++; ok(has, `${l.id}: the training card is on the page`); for (const x of picks) ok(view.innerHTML.includes(`About ${x.exp} EXP a battle`), `${l.id}: ${x.e.name} EXP shown`); }
   }
   ok(shown > 20, `training card shown on ${shown} places`);
+  // the Training spots page: only places you reach before the battle, and an EV ranking only lists that stat
+  const grindSpots = get('grindSpots');
+  const first = state.trainers.find(t => ['Leader', 'Elite Four', 'Champion'].includes(t.class)), st = app.battleStage(first, first.location);
+  const exp = grindSpots(st, -1);
+  ok(exp.length > 0, 'training spots before the first gym');
+  ok(exp.every(x => app.stageOf(x.loc) <= st && encStage(x.loc, x.e) <= st), 'training spots are all reachable before the first gym');
+  ok(exp.every((x, i) => !i || exp[i - 1].exp >= x.exp), 'training spots sorted by EXP');
+  for (let k = 0; k < 6; k++) ok(grindSpots(st + 10, k).every(x => (app.mon(x.e.dex).ev || [])[k] > 0), `EV ranking ${k} only lists Pokémon that give it`);
+  app.ctx.location.hash = '#/tools/train'; app.route(true);
+  ok(view.innerHTML.includes('Train for:') && view.innerHTML.includes(first.name), 'Training spots page names the next big battle');
   if (failures) { console.error(`${failures} of ${checks} checks failed`); process.exit(1); }
   console.log(`grind: ${checks} checks passed, training picks on ${shown} places`);
 })().catch(e => { console.error(e); process.exit(1); });
