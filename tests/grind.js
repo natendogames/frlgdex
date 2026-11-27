@@ -47,6 +47,31 @@ const ok = (c, m) => { checks++; if (!c) { failures++; if (failures < 40) consol
   for (let k = 0; k < 6; k++) ok(grindSpots(st + 10, k).every(x => (app.mon(x.e.dex).ev || [])[k] > 0), `EV ranking ${k} only lists Pokémon that give it`);
   app.ctx.location.hash = '#/tools/train'; app.route(true);
   ok(view.innerHTML.includes('Train for:') && view.innerHTML.includes(first.name), 'Training spots page names the next big battle');
+  // best training for each team member: every pick is a wild Pokémon it beats one-on-one, somewhere you can reach
+  // before that battle, best EXP per turn first
+  { const starter = (get('CHOICES') || []).find(c => c.id === 'starter');
+    const opt = starter && (starter.options || [])[0];
+    if (opt) {
+      state.teamPlan = require('../data/team-plan.json');
+      get('setPick')('starter', opt.key);
+      const big = state.trainers.filter(t => ['Leader', 'Elite Four', 'Champion'].includes(t.class));
+      for (const t of [big[0], big[Math.floor(big.length / 2)]]) {
+        const st = app.battleStage(t, t.location), rows = get('grindTeam')(t, st);
+        ok(rows.length > 0, `team training picks for ${t.name}`);
+        for (const r of rows) {
+          ok(r.picks.length > 0, `${t.name}: a training pick for ${app.mon(r.m.dex).name}`);
+          for (const o of r.picks) {
+            ok(o.d.wins && o.d.myHits < Infinity, `${t.name}: ${app.mon(r.m.dex).name} beats ${o.e.name}`);
+            ok(get('grindVs')(r.m, o.e.dex, o.hi).ok, `${t.name}: ${app.mon(r.m.dex).name} vs ${o.e.name} is a bad matchup (${get('grindVs')(r.m, o.e.dex, o.hi).bad})`);
+            ok(app.stageOf(o.loc) <= st && encStage(o.loc, o.e) <= st, `${t.name}: ${o.e.name} at ${o.loc} is reachable before the battle`);
+          }
+          if (r.picks.length === 2) ok(r.picks[0].score >= r.picks[1].score && r.picks[0].loc !== r.picks[1].loc, `${t.name}: ${app.mon(r.m.dex).name} picks in order, two places`);
+        }
+      }
+      app.ctx.location.hash = '#/tools/train'; app.route(true);
+      ok(view.innerHTML.includes('Best for each team member'), 'Training spots page shows the best for each team member');
+    }
+  }
   if (failures) { console.error(`${failures} of ${checks} checks failed`); process.exit(1); }
   console.log(`grind: ${checks} checks passed, training picks on ${shown} places`);
 })().catch(e => { console.error(e); process.exit(1); });

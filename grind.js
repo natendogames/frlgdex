@@ -54,15 +54,27 @@ function grindKO(dex, level) {
   return best && best.myHits === 1 ? `Your ${esc(mon(best.me.dex).name)} knocks it out in one hit (${esc(best.mine.name)}).`
     : best && best.myHits !== Infinity ? `Your best is ${esc(mon(best.me.dex).name)}: ${hitsText(best.myHits)} with ${esc(best.mine.name)}.` : '';
 }
-function grindRow(x) {
+function grindRow(x, members = [], target = null) {
   const e = x.e;
   const how = [METHOD_LABEL[e.method] || e.method, `Lv ${x.lo === x.hi ? x.lo : `${x.lo}-${x.hi}`}`, e.rate && `${esc(e.rate)} of encounters`].filter(Boolean).join(' · ');
   const tips = [`About ${x.exp} EXP a battle${x.lo !== x.hi ? ` (${grindExp(e.dex, x.lo)}-${grindExp(e.dex, x.hi)})` : ''}`, grindEvText(e.dex) && `trains ${grindEvText(e.dex)} EV${(mon(e.dex).ev || []).reduce((a, b) => a + b, 0) > 1 ? 's' : ''}`]
     .filter(Boolean).join(', ') + '.';
-  const ko = grindKO(e.dex, x.hi);
+  const ko = members.length ? '' : grindKO(e.dex, x.hi);  // with a team to check, the good-for lines say it better
   const nav = grindSearchable(e) ? ' Use the DexNav to search for it directly.' : '';
   return `<div class="grind"><a href="#/mon/${e.dex}"><b>${esc(e.name)}</b></a> ${types(e.dex)}<div class="sub">${how}</div>
-    <div class="sub">${tips}${nav}${ko ? ` ${ko}` : ''}</div></div>`;
+    <div class="sub">${tips}${nav}${ko ? ` ${ko}` : ''}</div>${grindFit(x, members, target)}</div>`;
+}
+// Which of your team should train on it, and which shouldn't (a bad type matchup, or it loses one-on-one)
+function grindFit(x, members, target) {
+  if (!members.length) return '';
+  const who = members[0].from === 'plan' && target ? `Team plan team for ${esc(target.name)}: ` : '';
+  const good = [], bad = [];
+  for (const m of members) {
+    const v = grindVs(m, x.e.dex, x.hi), name = esc(mon(m.dex).name);
+    if (v.ok) good.push(name);
+    else bad.push(`${name} (${v.bad ? esc(v.bad) : `it can't win one-on-one at Lv ${m.level}`})`);
+  }
+  return (good.length ? `<div class="sub">${who}good for ${good.join(', ')}.</div>` : '') + (bad.length ? `<div class="sub bad">${good.length ? '' : who}Not for ${bad.join('; ')}.</div>` : '');
 }
 // The card on a location page: the best now, and a better spot here once more of the area opens up.
 function grindCard(locId, now, later = []) {
@@ -73,7 +85,8 @@ function grindCard(locId, now, later = []) {
   const cap = tg ? `<p class="note">Next ${tg.t.class === 'Leader' ? 'Gym Leader' : esc(tg.t.class)}: ${esc(tg.t.name)}, top Pokémon Lv ${tg.ace}.${typeof SOFT_LEVEL_CAP !== 'undefined' && SOFT_LEVEL_CAP
     ? ` Seaglass's level cap (on by default) cuts EXP once your Pokémon pass about Lv ${tg.base}, so training past that is slow.` : ` Training to about Lv ${tg.ace} makes that battle much easier.`}</p>` : '';
   let html = `<div class="card grindcard"><b>Best Pokémon to train on here</b>${picks.length ? '' : '<p class="note">Nothing to battle here on your first visit.</p>'}`;
-  html += picks.map(grindRow).join('') + cap;
+  const members = grindMembers(tg && tg.t);
+  html += picks.map(x => grindRow(x, members, tg && tg.t)).join('') + cap;
   if (laterBest && (!picks.length || laterBest.exp > picks[0].exp * 1.25))
     html += `<details class="later"><summary>Better spot here: come back later</summary><p class="note">${esc(laterBest.e.name)} (${esc(METHOD_LABEL[laterBest.e.method] || laterBest.e.method)}, Lv ${laterBest.lo === laterBest.hi ? laterBest.lo : `${laterBest.lo}-${laterBest.hi}`}) gives about ${laterBest.exp} EXP a battle${typeof needText === 'function' && needText(laterBest.e) ? ` (${esc(needText(laterBest.e))})` : ''}.</p></details>`;
   html += `<p class="note"><a href="#/tools/train">Best training spots before your next battle</a></p>`;
@@ -98,8 +111,71 @@ function grindSpots(stage, stat) {
   }
   return [...best.values()].sort((a, b) => stat >= 0 ? b.ev - a.ev || b.exp - a.exp : b.exp - a.exp || b.rate - a.rate);
 }
+// ---------- Best training for each team member ----------
+// For every Pokémon on your Team plan team at that battle (or your Battle plan team, if you haven't picked a starter),
+// the wild Pokémon it trains on best: one it beats one-on-one with its own moves at its level, scored by EXP per turn
+// (EXP for the KO ÷ turns to KO, so a weaker Pokémon you OHKO can beat a stronger one that takes three hits), and as a
+// tie-break the one that hits it least hard. Uses the same damage engine as the Battle plan, so typing, STAB, abilities
+// and levels all count.
+// Your team on the way to a battle: the Team plan team for it, else your Battle plan team
+function grindMembers(target) {
+  const s = cur(), plan = target && state.teamPlan && pickOf('starter') && planOf(V(), pickOf('starter'));
+  const legs = plan ? plan.legs : [], i = target ? legs.findIndex(l => l.battle.id === target.id) : -1;
+  let members = [];
+  if (i >= 0) {
+    // the levels you have on the way to it: the last battle each one was in, else a couple below this battle's level
+    members = legs[i].team.map(m => {
+      const prev = legs.slice(0, i).reverse().map(l => l.team.find(x => x.dex === m.dex)).find(Boolean);
+      return { dex: m.dex, level: prev ? prev.level : Math.max(2, m.level - 2), moves: m.moves || [], from: 'plan' };
+    });
+  } else members = (s.team || []).map(n => { const b = myBattler(n, 10); return { dex: n, level: b.level, moves: b.moves, from: 'team', guessed: b.guessedLevel }; });
+  return members.map(m => ({ ...m, me: battler(m.dex, m.level, PLAYER_IV, m.moves.length ? m.moves : bestMoves(m.dex, m.level)) }));
+}
+// One team member against one wild Pokémon: no good if it can't win one-on-one, or if the wild one has (or will soon
+// have) a super-effective move on it: a move it knows now, or an attacking type of its own (Pikachu against Mudkip)
+function grindVs(m, dex, level) {
+  const d = duel(m.me, battler(dex, level, 0, defaultMoves(dex, level)));
+  const mine = mon(m.dex).types || [];
+  const seType = (mon(dex).types || []).find(t => eff(t, mine) >= 2);
+  const bad = d.threats[0] ? `${d.threats[0]} is super effective on it` : seType ? `${seType} moves are super effective on it` : '';
+  return { d, ok: d.wins && d.myHits !== Infinity && !!d.mine && !bad, bad };
+}
+function grindTeam(target, stage) {
+  const spots = grindSpots(stage, -1);
+  return grindMembers(target).map(m => {
+    const me = m.me, opts = [];
+    for (const x of spots) {
+      const { d, ok } = grindVs(m, x.e.dex, x.hi);
+      if (!ok) continue;
+      // one that can hit back hard (it could beat you with a lucky crit or two) counts for less
+      const risky = d.theirHits <= d.myHits + 1;
+      opts.push({ ...x, d, risky, perTurn: x.exp / d.myHits, score: x.exp / d.myHits * (risky ? 0.7 : 1) });
+    }
+    opts.sort((a, b) => b.score - a.score || b.d.theirHits - a.d.theirHits || b.rate - a.rate);
+    // one pick per place, so the second choice is somewhere else
+    const picks = [];
+    for (const o of opts) { if (!picks.some(p => p.loc === o.loc)) picks.push(o); if (picks.length === 2) break; }
+    return { m, me, picks };
+  });
+}
+function grindTeamHtml(target, stage) {
+  const rows = grindTeam(target, stage);
+  if (!rows.length) return `<div class="card"><p class="note">Pick your starter on the <a href="#/plan">Team plan</a> page, or add your team in <a href="#/planner">Battle plan</a>, to see the best training for each team member.</p></div>`;
+  const src = rows[0].m.from === 'plan' ? `your <a href="#/plan">Team plan</a> team for ${esc(target.name)}` : `your <a href="#/planner">Battle plan</a> team`;
+  const hurt = d => d.theirHits === Infinity ? "it can't hurt you" : d.theirHits >= d.myHits + 3 ? 'it barely scratches you' : d.theirHits <= d.myHits + 1 ? `watch out: it can hit back hard (${d.theirHits} hits beat you)` : `it needs ${d.theirHits} hits to beat you`;
+  const one = (o, best) => `<div class="sub">${best ? '' : 'Or: '}<a href="#/mon/${o.e.dex}"><b>${esc(o.e.name)}</b></a> ${types(o.e.dex)} at <a href="#/loc/${o.loc}">${esc(o.locName)}</a>
+    (${esc(METHOD_LABEL[o.e.method] || o.e.method)}, Lv ${o.lo === o.hi ? o.lo : `${o.lo}-${o.hi}`}): ${esc(o.d.mine.name)}${o.d.mine.mult >= 2 ? ' (super effective)' : ''} ${hitsText(o.d.myHits)}, about ${Math.round(o.perTurn)} EXP a turn; ${hurt(o.d)}.${grindEvText(o.e.dex) ? ` Trains ${grindEvText(o.e.dex)}.` : ''}</div>`;
+  return `<h2>Best for each team member</h2><div class="card grindcard"><p class="note">For ${src}: the wild Pokémon each one beats fastest for the most EXP, with its own moves at its level.</p>${rows.map(({ m, me, picks }) =>
+    `<div class="grind"><a href="#/mon/${m.dex}"><b>${esc(mon(m.dex).name)}</b></a> ${types(m.dex)} <span class="note">Lv ${m.level}${m.guessed ? ' (guessed)' : ''} · ${me.moves.map(esc).join(', ') || 'no moves'}</span>
+    ${picks.length ? picks.map((o, k) => one(o, !k)).join('') : '<div class="sub">Nothing it beats one-on-one yet: train it with the Exp. Share or by switching it out.</div>'}</div>`).join('')}</div>`;
+}
 function renderTrainTool() {
   const s = cur(), t = (state.trainTool ||= { stat: -1, battle: null });
+  // the Team plan loads on first use; draw again once it's here
+  if (!state.teamPlan && pickOf('starter') && !state.trainPlanLoading) {
+    state.trainPlanLoading = true;
+    getJSON('data/team-plan.json').then(d => { state.teamPlan ||= d; if (location.hash.startsWith('#/tools/train')) renderTrainTool(); }).catch(() => {});
+  }
   const ahead = (state.trainers || []).filter(x => GRIND_BIG.includes(x.class) && !s.checks[trainerKey(x.location, x)]);
   const target = ahead.find(x => x.id === t.battle) || ahead[0];
   if (!target) { view.innerHTML = '<div class="card"><p class="note">You have beaten every Gym Leader, the Elite Four and the Champion.</p></div>'; return; }
@@ -115,9 +191,10 @@ function renderTrainTool() {
     <div class="note" style="margin-top:6px">Train for:</div><div class="chips">${ahead.slice(0, 4).map(x => `<button class="chip ${x === target ? 'on' : ''}" data-trb="${esc(x.id)}">${esc(x.name)}</button>`).join('')}</div>
     <div class="note" style="margin-top:6px">Rank by:</div><div class="chips"><button class="chip ${t.stat < 0 ? 'on' : ''}" data-trs="-1">Most EXP</button>${names.map((n, i) => `<button class="chip ${t.stat === i ? 'on' : ''}" data-trs="${i}">${n} EVs</button>`).join('')}</div>
     ${ace ? `<p class="note">${esc(target.name)}'s top Pokémon is Lv ${ace}.${typeof SOFT_LEVEL_CAP !== 'undefined' && SOFT_LEVEL_CAP ? " Seaglass's level cap cuts EXP once you pass it." : ''}</p>` : ''}</div>
-    <div class="card grindcard">${spots.length ? spots.map(row).join('') : '<p class="note">Nothing to battle for that yet.</p>'}</div>
+    ${grindTeamHtml(target, stage)}
+    <h2>Most ${t.stat < 0 ? 'EXP' : `${names[t.stat]} EVs`} overall</h2><div class="card grindcard">${spots.length ? spots.map(row).join('') : '<p class="note">Nothing to battle for that yet.</p>'}</div>
     <p class="note">EXP per wild battle for one Pokémon (base EXP × level ÷ 7). A Lucky Egg gives 1.5×; a Macho Brace or Pokérus doubles EVs. See also <a href="#/tools/ev">EV training</a>.</p>`;
   view.querySelectorAll('[data-trb]').forEach(b => b.onclick = () => { t.battle = b.dataset.trb; renderTrainTool(); });
   view.querySelectorAll('[data-trs]').forEach(b => b.onclick = () => { t.stat = +b.dataset.trs; renderTrainTool(); });
 }
-TOOLS.push({ id: 'train', title: 'Training spots', desc: 'The best wild Pokémon to battle for EXP or EVs before your next Gym Leader', render: renderTrainTool });
+TOOLS.push({ id: 'train', title: 'Training spots', desc: 'The best wild Pokémon to battle for EXP or EVs before your next Gym Leader, and the best for each team member', render: renderTrainTool });
