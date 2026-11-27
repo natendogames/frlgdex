@@ -64,6 +64,12 @@ const fail = m => fails.push(m);
     app.ctx.location.hash = `#/spot/${l.id}/${encodeURIComponent(a.id)}`; await renderSpot(l.id, a.id);
     if (!(app.view.innerHTML || '').includes('class="spotpulse"')) fail(`${l.id}: opening found ${a.name} shows no marker`);
     delete s.checks[`${l.id}:item:${a.id}`]; }
+  // every marker has a number or letter, and the key under the map lists it
+  { const l = state.index.find(x => state.locations[x.id].mapCount && (state.locations[x.id].trainers || []).length && state.locations[x.id].items.length);
+    app.ctx.location.hash = `#/spot/${l.id}/all`; await renderSpot(l.id, 'all');
+    const h = app.view.innerHTML || '';
+    if (!/<text[^>]*>1<\/text>/.test(h) || !/<text[^>]*>A<\/text>/.test(h)) fail(`${l.id}: map has no 1 / A labels`);
+    if (!h.includes('class="spotkey"') || !h.includes('<b class="spotnum">1</b>') || !h.includes('<b class="spotnum trainer">A</b>')) fail(`${l.id}: no key under the map`); }
   console.log(`${checked} items checked`);
   if (fails.length) { console.log(fails.slice(0, 40).join('\n')); console.log(`${fails.length} failures`); process.exit(1); }
   console.log('all items and placed trainers have a map');

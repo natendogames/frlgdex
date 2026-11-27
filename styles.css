@@ -233,3 +233,15 @@ details.tiers { margin-top: 8px; }
 .spotlegend i.dia{width:11px;height:11px;border:2px solid var(--map-item);transform:rotate(45deg);border-radius:1px}
 .yleave a.spotlink{display:inline-block;margin:6px 6px 0 0}
 .spotlegend i.tri{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:13px solid var(--map-tree);border-radius:0}
+.spotlegend i{display:inline-block;width:14px;height:14px;border-radius:3px}
+.spotlegend i.dot{border-radius:50%;background:var(--map-item)}
+.spotlegend i.dia{width:11px;height:11px;border:2px solid var(--map-item);transform:rotate(45deg);border-radius:1px}
+.yleave a.spotlink{display:inline-block;margin:6px 6px 0 0}
+.spotlegend i.tri{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:13px solid var(--map-tree);border-radius:0}
+:root{--map-badge:#fffdf6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--map-badge:#1d1c19}}
+:root[data-theme="dark"]{--map-badge:#1d1c19}
+.spotkey{margin-top:8px}
+.spotkey summary{font-size:15px;font-weight:600;padding:8px 2px;cursor:pointer}
+.spotnum{display:inline-block;min-width:24px;padding:0 5px;margin-right:4px;border:1.5px solid var(--map-ink);border-radius:12px;text-align:center;font-size:13px;line-height:20px}
+.spotnum.trainer{border-color:var(--map-trainer);color:var(--map-trainer)}
