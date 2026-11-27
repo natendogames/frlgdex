@@ -32,7 +32,7 @@ function highValue() {
     state.hvPlanLoading = true;
     getJSON('data/team-plan.json').then(d => { state.teamPlan ||= d; hvCache.sig = null; }).catch(() => {});
   }
-  const sig = JSON.stringify([V(), s.team, s.teamMeta, s.picks, ups.map(u => u.t.id), Object.keys(s.caught).filter(k => s.caught[k]), !!state.teamPlan, s.here]);
+  const sig = JSON.stringify([V(), s.team, s.teamMeta, s.picks, ups.map(u => u.t.id), Object.keys(s.caught).filter(k => s.caught[k]), !!state.teamPlan, s.here, typeof hardOn === 'function' && hardOn()]);
   if (hvCache.sig === sig) return hvCache.map;
   const map = new Map(), team = s.team || [];
   const add = (dex, u, text) => {
@@ -58,7 +58,7 @@ function highValue() {
       }
     }
   }
-  const plan = state.teamPlan && pickOf('starter') && state.teamPlan.plans[`${V()}:${pickOf('starter')}`];
+  const plan = state.teamPlan && pickOf('starter') && planOf(V(), pickOf('starter'));
   if (plan) for (const u of ups) {
     const leg = plan.legs.find(l => l.battle.id === u.t.id);
     for (const x of leg?.steps || []) if (x.kind === 'catch' && x.dex) add(x.dex, u, `Team plan: catch it before ${u.t.name}`);
