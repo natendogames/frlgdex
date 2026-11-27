@@ -70,7 +70,8 @@
    "id": "hidden-outside-wepear-berry",
    "name": "Wepear Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [],
@@ -78,5 +79,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

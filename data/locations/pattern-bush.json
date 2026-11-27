@@ -160,7 +160,8 @@
     }
    ],
    "id": "youngster-cordell",
-   "area": "Pattern Bush"
+   "area": "Pattern Bush",
+   "map": true
   },
   {
    "class": "Pokémon Breeder",
@@ -194,7 +195,8 @@
     }
    ],
    "id": "pkmn-breeder-bethany",
-   "area": "Pattern Bush"
+   "area": "Pattern Bush",
+   "map": true
   },
   {
    "class": "Bug Catcher",
@@ -255,7 +257,8 @@
     }
    ],
    "id": "bug-catcher-vance",
-   "area": "Pattern Bush"
+   "area": "Pattern Bush",
+   "map": true
   },
   {
    "class": "Bug Catcher",
@@ -292,7 +295,8 @@
     }
    ],
    "id": "bug-catcher-garret",
-   "area": "Pattern Bush"
+   "area": "Pattern Bush",
+   "map": true
   },
   {
    "class": "Ruin Maniac",
@@ -384,7 +388,8 @@
     }
    ],
    "id": "ruin-maniac-layton",
-   "area": "Pattern Bush"
+   "area": "Pattern Bush",
+   "map": true
   },
   {
    "class": "Lass",
@@ -420,7 +425,8 @@
     }
    ],
    "id": "lass-joana",
-   "area": "Pattern Bush"
+   "area": "Pattern Bush",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -507,7 +513,8 @@
     }
    ],
    "id": "picnicker-marcy",
-   "area": "Pattern Bush"
+   "area": "Pattern Bush",
+   "map": true
   },
   {
    "class": "Youngster",
@@ -594,7 +601,8 @@
     }
    ],
    "id": "youngster-nash",
-   "area": "Pattern Bush"
+   "area": "Pattern Bush",
+   "map": true
   },
   {
    "class": "Lass",
@@ -703,7 +711,8 @@
     }
    ],
    "id": "lass-dalia",
-   "area": "Pattern Bush"
+   "area": "Pattern Bush",
+   "map": true
   },
   {
    "class": "Bug Catcher",
@@ -818,7 +827,8 @@
     }
    ],
    "id": "bug-catcher-jonah",
-   "area": "Pattern Bush"
+   "area": "Pattern Bush",
+   "map": true
   },
   {
    "class": "Pokémon Breeder",
@@ -902,7 +912,8 @@
     }
    ],
    "id": "pkmn-breeder-allison",
-   "area": "Pattern Bush"
+   "area": "Pattern Bush",
+   "map": true
   },
   {
    "class": "Camper",
@@ -966,11 +977,13 @@
     }
    ],
    "id": "camper-riley",
-   "area": "Pattern Bush"
+   "area": "Pattern Bush",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

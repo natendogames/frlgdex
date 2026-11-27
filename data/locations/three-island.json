@@ -7,13 +7,15 @@
    "id": "outside-zinc",
    "name": "Zinc",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-pp-up",
    "name": "PP Up",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [
@@ -214,5 +216,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

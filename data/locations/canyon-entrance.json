@@ -94,7 +94,8 @@
    "id": "hidden-sevault-canyon-entrance-rawst-berry",
    "name": "Rawst Berry",
    "hidden": true,
-   "where": "Sevault Canyon Entrance"
+   "where": "Sevault Canyon Entrance",
+   "map": true
   }
  ],
  "gifts": [],
@@ -159,7 +160,8 @@
    ],
    "double": true,
    "id": "young-couple-eve-jon",
-   "area": "Sevault Canyon Entrance"
+   "area": "Sevault Canyon Entrance",
+   "map": true
   },
   {
    "class": "Pokémon Ranger",
@@ -223,7 +225,8 @@
     "Full Restore"
    ],
    "id": "pkmn-ranger-madeline",
-   "area": "Sevault Canyon Entrance"
+   "area": "Sevault Canyon Entrance",
+   "map": true
   },
   {
    "class": "Pokémon Ranger",
@@ -287,7 +290,8 @@
     "Full Restore"
    ],
    "id": "pkmn-ranger-nicolas",
-   "area": "Sevault Canyon Entrance"
+   "area": "Sevault Canyon Entrance",
+   "map": true
   },
   {
    "class": "Juggler",
@@ -404,7 +408,8 @@
     }
    ],
    "id": "juggler-mason",
-   "area": "Sevault Canyon Entrance"
+   "area": "Sevault Canyon Entrance",
+   "map": true
   },
   {
    "class": "Aroma Lady",
@@ -465,11 +470,13 @@
     }
    ],
    "id": "aroma-lady-miah",
-   "area": "Sevault Canyon Entrance"
+   "area": "Sevault Canyon Entrance",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

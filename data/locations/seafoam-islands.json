@@ -826,43 +826,50 @@
    "id": "1f-ice-heal",
    "name": "Ice Heal",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "b1f-water-stone",
    "name": "Water Stone",
    "hidden": false,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "b1f-revive",
    "name": "Revive",
    "hidden": false,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "b2f-big-pearl",
    "name": "Big Pearl",
    "hidden": false,
-   "where": "B2F"
+   "where": "B2F",
+   "map": true
   },
   {
    "id": "hidden-b3f-nugget",
    "name": "Nugget",
    "hidden": true,
-   "where": "B3F"
+   "where": "B3F",
+   "map": true
   },
   {
    "id": "b4f-ultra-ball",
    "name": "Ultra Ball",
    "hidden": false,
-   "where": "B4F"
+   "where": "B4F",
+   "map": true
   },
   {
    "id": "hidden-b4f-water-stone",
    "name": "Water Stone",
    "hidden": true,
-   "where": "B4F"
+   "where": "B4F",
+   "map": true
   }
  ],
  "gifts": [],
@@ -870,5 +877,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 5
 }

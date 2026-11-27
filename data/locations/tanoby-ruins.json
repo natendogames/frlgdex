@@ -283,25 +283,29 @@
    "id": "hidden-tanoby-ruins-heart-scale",
    "name": "Heart Scale",
    "hidden": true,
-   "where": "Tanoby Ruins"
+   "where": "Tanoby Ruins",
+   "map": true
   },
   {
    "id": "hidden-tanoby-ruins-heart-scale-2",
    "name": "Heart Scale",
    "hidden": true,
-   "where": "Tanoby Ruins"
+   "where": "Tanoby Ruins",
+   "map": true
   },
   {
    "id": "hidden-tanoby-ruins-heart-scale-3",
    "name": "Heart Scale",
    "hidden": true,
-   "where": "Tanoby Ruins"
+   "where": "Tanoby Ruins",
+   "map": true
   },
   {
    "id": "hidden-tanoby-ruins-heart-scale-4",
    "name": "Heart Scale",
    "hidden": true,
-   "where": "Tanoby Ruins"
+   "where": "Tanoby Ruins",
+   "map": true
   }
  ],
  "gifts": [],
@@ -397,7 +401,8 @@
     }
    ],
    "id": "ruin-maniac-benjamin",
-   "area": "Tanoby Ruins"
+   "area": "Tanoby Ruins",
+   "map": true
   },
   {
    "class": "Gentleman",
@@ -460,7 +465,8 @@
     }
    ],
    "id": "gentleman-clifford",
-   "area": "Tanoby Ruins"
+   "area": "Tanoby Ruins",
+   "map": true
   },
   {
    "class": "Painter",
@@ -481,7 +487,8 @@
     }
    ],
    "id": "painter-edna",
-   "area": "Tanoby Ruins"
+   "area": "Tanoby Ruins",
+   "map": true
   },
   {
    "class": "Ruin Maniac",
@@ -517,11 +524,13 @@
     }
    ],
    "id": "ruin-maniac-brandon",
-   "area": "Tanoby Ruins"
+   "area": "Tanoby Ruins",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

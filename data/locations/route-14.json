@@ -92,13 +92,15 @@
    "id": "hidden-outside-zinc",
    "name": "Zinc",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-pinap-berry",
    "name": "Pinap Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [],
@@ -191,7 +193,8 @@
      ]
     }
    ],
-   "id": "bird-keeper-carter"
+   "id": "bird-keeper-carter",
+   "map": true
   },
   {
    "class": "Bird Keeper",
@@ -306,7 +309,8 @@
      ]
     }
    ],
-   "id": "bird-keeper-mitch"
+   "id": "bird-keeper-mitch",
+   "map": true
   },
   {
    "class": "Bird Keeper",
@@ -367,7 +371,8 @@
      ]
     }
    ],
-   "id": "bird-keeper-beck"
+   "id": "bird-keeper-beck",
+   "map": true
   },
   {
    "class": "Bird Keeper",
@@ -456,7 +461,8 @@
      ]
     }
    ],
-   "id": "bird-keeper-marlon"
+   "id": "bird-keeper-marlon",
+   "map": true
   },
   {
    "class": "Biker",
@@ -541,7 +547,8 @@
      ]
     }
    ],
-   "id": "biker-isaac"
+   "id": "biker-isaac",
+   "map": true
   },
   {
    "class": "Biker",
@@ -601,7 +608,8 @@
      ]
     }
    ],
-   "id": "biker-malik"
+   "id": "biker-malik",
+   "map": true
   },
   {
    "class": "Bird Keeper",
@@ -636,7 +644,8 @@
      ]
     }
    ],
-   "id": "bird-keeper-donald"
+   "id": "bird-keeper-donald",
+   "map": true
   },
   {
    "class": "Biker",
@@ -696,7 +705,8 @@
      ]
     }
    ],
-   "id": "biker-gerald"
+   "id": "biker-gerald",
+   "map": true
   },
   {
    "class": "Biker",
@@ -810,7 +820,8 @@
      ]
     }
    ],
-   "id": "biker-lukas"
+   "id": "biker-lukas",
+   "map": true
   },
   {
    "class": "Bird Keeper",
@@ -871,7 +882,8 @@
      ]
     }
    ],
-   "id": "bird-keeper-benny"
+   "id": "bird-keeper-benny",
+   "map": true
   },
   {
    "class": "Twins",
@@ -933,11 +945,13 @@
     }
    ],
    "double": true,
-   "id": "twins-kiri-jan"
+   "id": "twins-kiri-jan",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

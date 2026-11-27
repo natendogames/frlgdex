@@ -116,109 +116,127 @@
    "id": "1f-parlyz-heal",
    "name": "Parlyz Heal",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "1f-tm09",
    "name": "TM09",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "1f-potion",
    "name": "Potion",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "1f-rare-candy",
    "name": "Rare Candy",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "1f-escape-rope",
    "name": "Escape Rope",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "1f-moon-stone",
    "name": "Moon Stone",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "hidden-b1f-tinymushroom",
    "name": "Tinymushroom",
    "hidden": true,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "hidden-b1f-tinymushroom-2",
    "name": "Tinymushroom",
    "hidden": true,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "hidden-b1f-tinymushroom-3",
    "name": "Tinymushroom",
    "hidden": true,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "hidden-b1f-big-mushroom",
    "name": "Big Mushroom",
    "hidden": true,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "hidden-b1f-big-mushroom-2",
    "name": "Big Mushroom",
    "hidden": true,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "hidden-b1f-big-mushroom-3",
    "name": "Big Mushroom",
    "hidden": true,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "b2f-star-piece",
    "name": "Star Piece",
    "hidden": false,
-   "where": "B2F"
+   "where": "B2F",
+   "map": true
   },
   {
    "id": "b2f-tm46",
    "name": "TM46",
    "hidden": false,
-   "where": "B2F"
+   "where": "B2F",
+   "map": true
   },
   {
    "id": "b2f-revive",
    "name": "Revive",
    "hidden": false,
-   "where": "B2F"
+   "where": "B2F",
+   "map": true
   },
   {
    "id": "b2f-antidote",
    "name": "Antidote",
    "hidden": false,
-   "where": "B2F"
+   "where": "B2F",
+   "map": true
   },
   {
    "id": "hidden-b2f-moon-stone",
    "name": "Moon Stone",
    "hidden": true,
-   "where": "B2F"
+   "where": "B2F",
+   "map": true
   },
   {
    "id": "hidden-b2f-ether",
    "name": "Ether",
    "hidden": true,
-   "where": "B2F"
+   "where": "B2F",
+   "map": true
   }
  ],
  "gifts": [
@@ -268,7 +286,8 @@
     }
    ],
    "id": "lass-iris",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Bug Catcher",
@@ -306,7 +325,8 @@
     }
    ],
    "id": "bug-catcher-kent",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Lass",
@@ -354,7 +374,8 @@
     }
    ],
    "id": "lass-miriam",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Super Nerd",
@@ -410,7 +431,8 @@
     }
    ],
    "id": "super-nerd-jovan",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Bug Catcher",
@@ -465,7 +487,8 @@
     }
    ],
    "id": "bug-catcher-robby",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Youngster",
@@ -536,7 +559,8 @@
     }
    ],
    "id": "youngster-josh",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Hiker",
@@ -609,7 +633,8 @@
     }
    ],
    "id": "hiker-marcos",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -666,7 +691,8 @@
     }
    ],
    "id": "team-rocket-grunt-4",
-   "area": "B2F"
+   "area": "B2F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -724,7 +750,8 @@
     }
    ],
    "id": "team-rocket-grunt",
-   "area": "B2F"
+   "area": "B2F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -777,7 +804,8 @@
     }
    ],
    "id": "team-rocket-grunt-3",
-   "area": "B2F"
+   "area": "B2F",
+   "map": true
   },
   {
    "class": "Super Nerd",
@@ -854,7 +882,8 @@
     }
    ],
    "id": "super-nerd-miguel",
-   "area": "B2F"
+   "area": "B2F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -928,11 +957,13 @@
     }
    ],
    "id": "team-rocket-grunt-2",
-   "area": "B2F"
+   "area": "B2F",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 3
 }

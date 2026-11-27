@@ -229,31 +229,36 @@
    "id": "outside-tm43",
    "name": "TM43",
    "hidden": false,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-elixir",
    "name": "Elixir",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-ether",
    "name": "Ether",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-oran-berry",
    "name": "Oran Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-bluk-berry",
    "name": "Bluk Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [
@@ -323,7 +328,8 @@
      ]
     }
    ],
-   "id": "hiker-franklin"
+   "id": "hiker-franklin",
+   "map": true
   },
   {
    "class": "Youngster",
@@ -384,7 +390,8 @@
      ]
     }
    ],
-   "id": "youngster-joey"
+   "id": "youngster-joey",
+   "map": true
   },
   {
    "class": "Hiker",
@@ -419,7 +426,8 @@
      ]
     }
    ],
-   "id": "hiker-wayne"
+   "id": "hiker-wayne",
+   "map": true
   },
   {
    "class": "Youngster",
@@ -454,7 +462,8 @@
      ]
     }
    ],
-   "id": "youngster-dan"
+   "id": "youngster-dan",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -514,7 +523,8 @@
      ]
     }
    ],
-   "id": "picnicker-kelsey"
+   "id": "picnicker-kelsey",
+   "map": true
   },
   {
    "class": "Hiker",
@@ -626,7 +636,8 @@
      ]
     }
    ],
-   "id": "hiker-nob"
+   "id": "hiker-nob",
+   "map": true
   },
   {
    "class": "Camper",
@@ -688,7 +699,8 @@
      ]
     }
    ],
-   "id": "camper-flint"
+   "id": "camper-flint",
+   "map": true
   },
   {
    "class": "Youngster",
@@ -744,7 +756,8 @@
      ]
     }
    ],
-   "id": "youngster-chad"
+   "id": "youngster-chad",
+   "map": true
   },
   {
    "class": "Lass",
@@ -813,11 +826,13 @@
      ]
     }
    ],
-   "id": "lass-haley"
+   "id": "lass-haley",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

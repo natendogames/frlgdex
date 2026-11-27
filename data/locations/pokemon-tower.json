@@ -188,61 +188,71 @@
    "id": "3f-escape-rope",
    "name": "Escape Rope",
    "hidden": false,
-   "where": "3F"
+   "where": "3F",
+   "map": true
   },
   {
    "id": "4f-elixir",
    "name": "Elixir",
    "hidden": false,
-   "where": "4F"
+   "where": "4F",
+   "map": true
   },
   {
    "id": "4f-awakening",
    "name": "Awakening",
    "hidden": false,
-   "where": "4F"
+   "where": "4F",
+   "map": true
   },
   {
    "id": "4f-great-ball",
    "name": "Great Ball",
    "hidden": false,
-   "where": "4F"
+   "where": "4F",
+   "map": true
   },
   {
    "id": "5f-nugget",
    "name": "Nugget",
    "hidden": false,
-   "where": "5F"
+   "where": "5F",
+   "map": true
   },
   {
    "id": "5f-cleanse-tag",
    "name": "Cleanse Tag",
    "hidden": false,
-   "where": "5F"
+   "where": "5F",
+   "map": true
   },
   {
    "id": "hidden-5f-big-mushroom",
    "name": "Big Mushroom",
    "hidden": true,
-   "where": "5F"
+   "where": "5F",
+   "map": true
   },
   {
    "id": "6f-rare-candy",
    "name": "Rare Candy",
    "hidden": false,
-   "where": "6F"
+   "where": "6F",
+   "map": true
   },
   {
    "id": "6f-x-accuracy",
    "name": "X Accuracy",
    "hidden": false,
-   "where": "6F"
+   "where": "6F",
+   "map": true
   },
   {
    "id": "hidden-7f-soothe-bell",
    "name": "Soothe Bell",
    "hidden": true,
-   "where": "7F (underfoot)"
+   "where": "7F (underfoot)",
+   "map": true
   }
  ],
  "gifts": [],
@@ -662,7 +672,8 @@
     }
    ],
    "id": "channeler-patricia",
-   "area": "3F"
+   "area": "3F",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -696,7 +707,8 @@
     }
    ],
    "id": "channeler-carly",
-   "area": "3F"
+   "area": "3F",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -730,7 +742,8 @@
     }
    ],
    "id": "channeler-hope",
-   "area": "3F"
+   "area": "3F",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -764,7 +777,8 @@
     }
    ],
    "id": "channeler-paula",
-   "area": "4F"
+   "area": "4F",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -798,7 +812,8 @@
     }
    ],
    "id": "channeler-jody",
-   "area": "4F"
+   "area": "4F",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -857,7 +872,8 @@
     }
    ],
    "id": "channeler-laurel",
-   "area": "4F"
+   "area": "4F",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -891,7 +907,8 @@
     }
    ],
    "id": "channeler-ruth",
-   "area": "5F"
+   "area": "5F",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -925,7 +942,8 @@
     }
    ],
    "id": "channeler-tammy",
-   "area": "5F"
+   "area": "5F",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -959,7 +977,8 @@
     }
    ],
    "id": "channeler-karina",
-   "area": "5F"
+   "area": "5F",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -993,7 +1012,8 @@
     }
    ],
    "id": "channeler-janae",
-   "area": "5F"
+   "area": "5F",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -1027,7 +1047,8 @@
     }
    ],
    "id": "channeler-emilia",
-   "area": "6F"
+   "area": "6F",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -1061,7 +1082,8 @@
     }
    ],
    "id": "channeler-jennifer",
-   "area": "6F"
+   "area": "6F",
+   "map": true
   },
   {
    "class": "Channeler",
@@ -1145,7 +1167,8 @@
     }
    ],
    "id": "channeler-angelica",
-   "area": "6F"
+   "area": "6F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -1235,7 +1258,8 @@
     }
    ],
    "id": "team-rocket-grunt-19",
-   "area": "7F"
+   "area": "7F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -1297,7 +1321,8 @@
     }
    ],
    "id": "team-rocket-grunt-20",
-   "area": "7F"
+   "area": "7F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -1412,11 +1437,13 @@
     }
    ],
    "id": "team-rocket-grunt-21",
-   "area": "7F"
+   "area": "7F",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 5
 }

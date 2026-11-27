@@ -167,7 +167,8 @@
    "later": true,
    "need": "Come in from Pattern Bush",
    "after": "pattern-bush",
-   "stage": 80
+   "stage": 80,
+   "map": true
   }
  ],
  "gifts": [],
@@ -259,11 +260,13 @@
    "area": "Green Path",
    "stage": "pattern-bush",
    "later": true,
-   "reach": "Come in from Pattern Bush"
+   "reach": "Come in from Pattern Bush",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

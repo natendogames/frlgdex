@@ -235,7 +235,8 @@
      ]
     }
    ],
-   "id": "swimmer-male-reece"
+   "id": "swimmer-male-reece",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -297,7 +298,8 @@
      ]
     }
    ],
-   "id": "swimmer-male-richard"
+   "id": "swimmer-male-richard",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -357,7 +359,8 @@
      ]
     }
    ],
-   "id": "swimmer-male-tony"
+   "id": "swimmer-male-tony",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -445,7 +448,8 @@
      ]
     }
    ],
-   "id": "swimmer-male-david"
+   "id": "swimmer-male-david",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -559,7 +563,8 @@
      ]
     }
    ],
-   "id": "swimmer-male-douglas"
+   "id": "swimmer-male-douglas",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -619,7 +624,8 @@
      ]
     }
    ],
-   "id": "swimmer-male-matthew"
+   "id": "swimmer-male-matthew",
+   "map": true
   },
   {
    "class": "Sis and Bro",
@@ -682,7 +688,8 @@
     }
    ],
    "double": true,
-   "id": "sis-and-bro-lia-luc"
+   "id": "sis-and-bro-lia-luc",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -823,7 +830,8 @@
      ]
     }
    ],
-   "id": "swimmer-male-axle"
+   "id": "swimmer-male-axle",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -961,7 +969,8 @@
      ]
     }
    ],
-   "id": "swimmer-female-anya"
+   "id": "swimmer-female-anya",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -1023,7 +1032,8 @@
      ]
     }
    ],
-   "id": "swimmer-female-alice"
+   "id": "swimmer-female-alice",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -1109,11 +1119,13 @@
      ]
     }
    ],
-   "id": "swimmer-female-connie"
+   "id": "swimmer-female-connie",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

@@ -356,7 +356,8 @@
     }
    ],
    "id": "burglar-dusty",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Super Nerd",
@@ -392,7 +393,8 @@
     }
    ],
    "id": "super-nerd-derek",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Super Nerd",
@@ -452,7 +454,8 @@
     }
    ],
    "id": "super-nerd-zac",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Burglar",
@@ -488,7 +491,8 @@
     }
    ],
    "id": "burglar-ramon",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Super Nerd",
@@ -602,7 +606,8 @@
     }
    ],
    "id": "super-nerd-avery",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Super Nerd",
@@ -687,7 +692,8 @@
     }
    ],
    "id": "super-nerd-erik",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Burglar",
@@ -773,7 +779,8 @@
     }
    ],
    "id": "burglar-quinn",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Leader",
@@ -896,11 +903,13 @@
     "TM38"
    ],
    "id": "leader-blaine",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 2
 }

@@ -70,19 +70,22 @@
    "id": "hidden-outside-rawst-berry",
    "name": "Rawst Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-lum-berry",
    "name": "Lum Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-leppa-berry",
    "name": "Leppa Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [],
@@ -143,7 +146,8 @@
      ]
     }
    ],
-   "id": "lass-julia"
+   "id": "lass-julia",
+   "map": true
   },
   {
    "class": "Gamer",
@@ -201,7 +205,8 @@
      ]
     }
    ],
-   "id": "gamer-rich"
+   "id": "gamer-rich",
+   "map": true
   },
   {
    "class": "Super Nerd",
@@ -284,7 +289,8 @@
      ]
     }
    ],
-   "id": "super-nerd-glenn"
+   "id": "super-nerd-glenn",
+   "map": true
   },
   {
    "class": "Twins",
@@ -344,7 +350,8 @@
     }
    ],
    "double": true,
-   "id": "twins-eli-anne"
+   "id": "twins-eli-anne",
+   "map": true
   },
   {
    "class": "Lass",
@@ -484,7 +491,8 @@
      ]
     }
    ],
-   "id": "lass-megan"
+   "id": "lass-megan",
+   "map": true
   },
   {
    "class": "Lass",
@@ -573,7 +581,8 @@
      ]
     }
    ],
-   "id": "lass-andrea"
+   "id": "lass-andrea",
+   "map": true
   },
   {
    "class": "Super Nerd",
@@ -608,7 +617,8 @@
      ]
     }
    ],
-   "id": "super-nerd-leslie"
+   "id": "super-nerd-leslie",
+   "map": true
   },
   {
    "class": "Lass",
@@ -670,7 +680,8 @@
      ]
     }
    ],
-   "id": "lass-paige"
+   "id": "lass-paige",
+   "map": true
   },
   {
    "class": "Biker",
@@ -728,7 +739,8 @@
      ]
     }
    ],
-   "id": "biker-jaren"
+   "id": "biker-jaren",
+   "map": true
   },
   {
    "class": "Biker",
@@ -817,7 +829,8 @@
      ]
     }
    ],
-   "id": "biker-ricardo"
+   "id": "biker-ricardo",
+   "map": true
   },
   {
    "class": "Gamer",
@@ -906,7 +919,8 @@
      ]
     }
    ],
-   "id": "gamer-stan"
+   "id": "gamer-stan",
+   "map": true
   },
   {
    "class": "Super Nerd",
@@ -1020,11 +1034,13 @@
      ]
     }
    ],
-   "id": "super-nerd-aidan"
+   "id": "super-nerd-aidan",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

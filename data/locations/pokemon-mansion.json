@@ -468,91 +468,106 @@
    "id": "1f-carbos",
    "name": "Carbos",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "1f-escape-rope",
    "name": "Escape Rope",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "1f-protein",
    "name": "Protein",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "hidden-1f-moon-stone",
    "name": "Moon Stone",
    "hidden": true,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "2f-calcium",
    "name": "Calcium",
    "hidden": false,
-   "where": "2F"
+   "where": "2F",
+   "map": true
   },
   {
    "id": "2f-zinc",
    "name": "Zinc",
    "hidden": false,
-   "where": "2F"
+   "where": "2F",
+   "map": true
   },
   {
    "id": "2f-hp-up",
    "name": "HP Up",
    "hidden": false,
-   "where": "2F"
+   "where": "2F",
+   "map": true
   },
   {
    "id": "3f-max-potion",
    "name": "Max Potion",
    "hidden": false,
-   "where": "3F"
+   "where": "3F",
+   "map": true
   },
   {
    "id": "3f-iron",
    "name": "Iron",
    "hidden": false,
-   "where": "3F"
+   "where": "3F",
+   "map": true
   },
   {
    "id": "hidden-3f-rare-candy",
    "name": "Rare Candy",
    "hidden": true,
-   "where": "3F"
+   "where": "3F",
+   "map": true
   },
   {
    "id": "b1f-tm22",
    "name": "TM22",
    "hidden": false,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "b1f-tm14",
    "name": "TM14",
    "hidden": false,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "b1f-full-restore",
    "name": "Full Restore",
    "hidden": false,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "b1f-secret-key",
    "name": "Secret Key",
    "hidden": false,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   },
   {
    "id": "hidden-b1f-elixir",
    "name": "Elixir",
    "hidden": true,
-   "where": "B1F"
+   "where": "B1F",
+   "map": true
   }
  ],
  "gifts": [],
@@ -618,7 +633,8 @@
     }
    ],
    "id": "scientist-ted",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Youngster",
@@ -706,7 +722,8 @@
     }
    ],
    "id": "youngster-johnson",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Burglar",
@@ -767,7 +784,8 @@
     }
    ],
    "id": "burglar-arnie",
-   "area": "2F"
+   "area": "2F",
+   "map": true
   },
   {
    "class": "Burglar",
@@ -802,7 +820,8 @@
     }
    ],
    "id": "burglar-simon",
-   "area": "3F"
+   "area": "3F",
+   "map": true
   },
   {
    "class": "Scientist",
@@ -891,7 +910,8 @@
     }
    ],
    "id": "scientist-braydon",
-   "area": "3F"
+   "area": "3F",
+   "map": true
   },
   {
    "class": "Scientist",
@@ -954,7 +974,8 @@
     }
    ],
    "id": "scientist-ivan",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   },
   {
    "class": "Burglar",
@@ -1017,11 +1038,13 @@
     }
    ],
    "id": "burglar-lewis",
-   "area": "B1F"
+   "area": "B1F",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 4
 }

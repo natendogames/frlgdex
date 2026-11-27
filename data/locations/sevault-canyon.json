@@ -148,31 +148,36 @@
    "id": "sevault-canyon-king-s-rock",
    "name": "King's Rock",
    "hidden": false,
-   "where": "Sevault Canyon"
+   "where": "Sevault Canyon",
+   "map": true
   },
   {
    "id": "sevault-canyon-max-elixir",
    "name": "Max Elixir",
    "hidden": false,
-   "where": "Sevault Canyon"
+   "where": "Sevault Canyon",
+   "map": true
   },
   {
    "id": "sevault-canyon-nugget",
    "name": "Nugget",
    "hidden": false,
-   "where": "Sevault Canyon"
+   "where": "Sevault Canyon",
+   "map": true
   },
   {
    "id": "hidden-sevault-canyon-cheri-berry",
    "name": "Cheri Berry",
    "hidden": true,
-   "where": "Sevault Canyon"
+   "where": "Sevault Canyon",
+   "map": true
   },
   {
    "id": "sevault-canyon-house-lucky-punch",
    "name": "Lucky Punch",
    "hidden": false,
-   "where": "Sevault Canyon House"
+   "where": "Sevault Canyon House",
+   "map": true
   }
  ],
  "gifts": [],
@@ -320,7 +325,8 @@
     "Hyper Potion"
    ],
    "id": "coolmichelle",
-   "area": "Sevault Canyon"
+   "area": "Sevault Canyon",
+   "map": true
   },
   {
    "class": "Cool Trainer",
@@ -467,7 +473,8 @@
     "Full Restore"
    ],
    "id": "coolleroy",
-   "area": "Sevault Canyon"
+   "area": "Sevault Canyon",
+   "map": true
   },
   {
    "class": "Crush Girl",
@@ -560,7 +567,8 @@
     }
    ],
    "id": "crush-girl-cyndy",
-   "area": "Sevault Canyon"
+   "area": "Sevault Canyon",
+   "map": true
   },
   {
    "class": "Pokémon Ranger",
@@ -597,7 +605,8 @@
     "Full Restore"
    ],
    "id": "pkmn-ranger-katelyn",
-   "area": "Sevault Canyon"
+   "area": "Sevault Canyon",
+   "map": true
   },
   {
    "class": "Pokémon Ranger",
@@ -687,7 +696,8 @@
     "Full Restore"
    ],
    "id": "pkmn-ranger-jackson",
-   "area": "Sevault Canyon"
+   "area": "Sevault Canyon",
+   "map": true
   },
   {
    "class": "Tamer",
@@ -777,7 +787,8 @@
     }
    ],
    "id": "tamer-evan",
-   "area": "Sevault Canyon"
+   "area": "Sevault Canyon",
+   "map": true
   },
   {
    "class": "Cool Couple",
@@ -843,11 +854,13 @@
     "Full Restore ×2"
    ],
    "id": "cool-couple-lex-nya",
-   "area": "Sevault Canyon"
+   "area": "Sevault Canyon",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 2
 }

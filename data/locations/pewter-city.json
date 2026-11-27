@@ -7,7 +7,8 @@
    "id": "hidden-outside-pok-ball",
    "name": "Poké Ball",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [
@@ -80,7 +81,8 @@
     }
    ],
    "id": "camper-liam",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   },
   {
    "class": "Leader",
@@ -133,11 +135,13 @@
     "TM39"
    ],
    "id": "leader-brock",
-   "area": "Gym"
+   "area": "Gym",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 2
 }

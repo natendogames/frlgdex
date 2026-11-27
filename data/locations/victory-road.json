@@ -338,61 +338,71 @@
    "id": "1f-rare-candy",
    "name": "Rare Candy",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "1f-tm02",
    "name": "TM02",
    "hidden": false,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "hidden-1f-ultra-ball",
    "name": "Ultra Ball",
    "hidden": true,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "hidden-1f-full-restore",
    "name": "Full Restore",
    "hidden": true,
-   "where": "1F"
+   "where": "1F",
+   "map": true
   },
   {
    "id": "2f-guard-spec",
    "name": "Guard Spec.",
    "hidden": false,
-   "where": "2F"
+   "where": "2F",
+   "map": true
   },
   {
    "id": "2f-tm07",
    "name": "TM07",
    "hidden": false,
-   "where": "2F"
+   "where": "2F",
+   "map": true
   },
   {
    "id": "2f-full-heal",
    "name": "Full Heal",
    "hidden": false,
-   "where": "2F"
+   "where": "2F",
+   "map": true
   },
   {
    "id": "2f-tm37",
    "name": "TM37",
    "hidden": false,
-   "where": "2F"
+   "where": "2F",
+   "map": true
   },
   {
    "id": "3f-max-revive",
    "name": "Max Revive",
    "hidden": false,
-   "where": "3F"
+   "where": "3F",
+   "map": true
   },
   {
    "id": "3f-tm50",
    "name": "TM50",
    "hidden": false,
-   "where": "3F"
+   "where": "3F",
+   "map": true
   }
  ],
  "gifts": [],
@@ -540,7 +550,8 @@
     "Hyper Potion"
    ],
    "id": "coolnaomi",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Cool Trainer",
@@ -682,7 +693,8 @@
     "Hyper Potion"
    ],
    "id": "coolrolando",
-   "area": "1F"
+   "area": "1F",
+   "map": true
   },
   {
    "class": "Juggler",
@@ -794,7 +806,8 @@
     }
    ],
    "id": "juggler-nelson",
-   "area": "2F"
+   "area": "2F",
+   "map": true
   },
   {
    "class": "Black Belt",
@@ -887,7 +900,8 @@
     }
    ],
    "id": "black-belt-daisuke",
-   "area": "2F"
+   "area": "2F",
+   "map": true
   },
   {
    "class": "Tamer",
@@ -949,7 +963,8 @@
     }
    ],
    "id": "tamer-vincent",
-   "area": "2F"
+   "area": "2F",
+   "map": true
   },
   {
    "class": "Juggler",
@@ -983,7 +998,8 @@
     }
    ],
    "id": "juggler-gregory",
-   "area": "2F"
+   "area": "2F",
+   "map": true
   },
   {
    "class": "Poké Maniac",
@@ -1070,7 +1086,8 @@
     }
    ],
    "id": "pokemaniac-dawson",
-   "area": "2F"
+   "area": "2F",
+   "map": true
   },
   {
    "class": "Cool Couple",
@@ -1136,7 +1153,8 @@
    ],
    "double": true,
    "id": "cool-couple-ray-tyra",
-   "area": "3F"
+   "area": "3F",
+   "map": true
   },
   {
    "class": "Cool Trainer",
@@ -1281,7 +1299,8 @@
     "Hyper Potion"
    ],
    "id": "coolcolby",
-   "area": "3F"
+   "area": "3F",
+   "map": true
   },
   {
    "class": "Cool Trainer",
@@ -1423,7 +1442,8 @@
     "Hyper Potion"
    ],
    "id": "coolcaroline",
-   "area": "3F"
+   "area": "3F",
+   "map": true
   },
   {
    "class": "Cool Trainer",
@@ -1564,7 +1584,8 @@
     "Full Restore"
    ],
    "id": "coolalexa",
-   "area": "3F"
+   "area": "3F",
+   "map": true
   },
   {
    "class": "Cool Trainer",
@@ -1709,11 +1730,13 @@
     "Hyper Potion"
    ],
    "id": "coolgeorge",
-   "area": "3F"
+   "area": "3F",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 3
 }

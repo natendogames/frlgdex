@@ -7,37 +7,43 @@
    "id": "rocket-warehouse-big-pearl",
    "name": "Big Pearl",
    "hidden": false,
-   "where": "Rocket Warehouse"
+   "where": "Rocket Warehouse",
+   "map": true
   },
   {
    "id": "rocket-warehouse-tm36",
    "name": "TM36",
    "hidden": false,
-   "where": "Rocket Warehouse"
+   "where": "Rocket Warehouse",
+   "map": true
   },
   {
    "id": "rocket-warehouse-pearl",
    "name": "Pearl",
    "hidden": false,
-   "where": "Rocket Warehouse"
+   "where": "Rocket Warehouse",
+   "map": true
   },
   {
    "id": "rocket-warehouse-up-grade",
    "name": "Up-grade",
    "hidden": false,
-   "where": "Rocket Warehouse"
+   "where": "Rocket Warehouse",
+   "map": true
   },
   {
    "id": "hidden-rocket-warehouse-nest-ball",
    "name": "Nest Ball",
    "hidden": true,
-   "where": "Rocket Warehouse"
+   "where": "Rocket Warehouse",
+   "map": true
   },
   {
    "id": "hidden-rocket-warehouse-net-ball",
    "name": "Net Ball",
    "hidden": true,
-   "where": "Rocket Warehouse"
+   "where": "Rocket Warehouse",
+   "map": true
   }
  ],
  "gifts": [
@@ -136,7 +142,8 @@
     "Hyper Potion"
    ],
    "id": "team-rocket-admin",
-   "area": "Rocket Warehouse"
+   "area": "Rocket Warehouse",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -195,7 +202,8 @@
     }
    ],
    "id": "team-rocket-grunt-48",
-   "area": "Rocket Warehouse"
+   "area": "Rocket Warehouse",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -285,7 +293,8 @@
     "Hyper Potion"
    ],
    "id": "team-rocket-admin-2",
-   "area": "Rocket Warehouse"
+   "area": "Rocket Warehouse",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -376,7 +385,8 @@
     }
    ],
    "id": "team-rocket-grunt-47",
-   "area": "Rocket Warehouse"
+   "area": "Rocket Warehouse",
+   "map": true
   },
   {
    "class": "Scientist",
@@ -519,7 +529,8 @@
     "Sapphire"
    ],
    "id": "scientist-gideon",
-   "area": "Rocket Warehouse"
+   "area": "Rocket Warehouse",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -582,11 +593,13 @@
     }
    ],
    "id": "team-rocket-grunt-42",
-   "area": "Rocket Warehouse"
+   "area": "Rocket Warehouse",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

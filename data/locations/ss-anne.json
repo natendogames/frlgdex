@@ -152,43 +152,50 @@
    "id": "1f-room-2-tm31",
    "name": "TM31",
    "hidden": false,
-   "where": "1F Room 2"
+   "where": "1F Room 2",
+   "map": true
   },
   {
    "id": "2f-room-2-stardust",
    "name": "Stardust",
    "hidden": false,
-   "where": "2F Room 2"
+   "where": "2F Room 2",
+   "map": true
   },
   {
    "id": "2f-room-4-x-attack",
    "name": "X Attack",
    "hidden": false,
-   "where": "2F Room 4"
+   "where": "2F Room 4",
+   "map": true
   },
   {
    "id": "hidden-b1f-corridor-hyper-potion",
    "name": "Hyper Potion",
    "hidden": true,
-   "where": "B1F Corridor"
+   "where": "B1F Corridor",
+   "map": true
   },
   {
    "id": "b1f-room-2-tm44",
    "name": "TM44",
    "hidden": false,
-   "where": "B1F Room 2"
+   "where": "B1F Room 2",
+   "map": true
   },
   {
    "id": "b1f-room-3-ether",
    "name": "Ether",
    "hidden": false,
-   "where": "B1F Room 3"
+   "where": "B1F Room 3",
+   "map": true
   },
   {
    "id": "b1f-room-5-super-potion",
    "name": "Super Potion",
    "hidden": false,
-   "where": "B1F Room 5"
+   "where": "B1F Room 5",
+   "map": true
   },
   {
    "id": "hidden-exterior-lava-cookie",
@@ -198,31 +205,36 @@
    "later": true,
    "need": "Surf (HM03 from the Safari Zone Secret House, used with the Soul Badge)",
    "after": "safari-zone",
-   "stage": 38.5
+   "stage": 38.5,
+   "map": true
   },
   {
    "id": "kitchen-great-ball",
    "name": "Great Ball",
    "hidden": false,
-   "where": "Kitchen"
+   "where": "Kitchen",
+   "map": true
   },
   {
    "id": "hidden-kitchen-chesto-berry",
    "name": "Chesto Berry",
    "hidden": true,
-   "where": "Kitchen"
+   "where": "Kitchen",
+   "map": true
   },
   {
    "id": "hidden-kitchen-pecha-berry",
    "name": "Pecha Berry",
    "hidden": true,
-   "where": "Kitchen"
+   "where": "Kitchen",
+   "map": true
   },
   {
    "id": "hidden-kitchen-cheri-berry",
    "name": "Cheri Berry",
    "hidden": true,
-   "where": "Kitchen"
+   "where": "Kitchen",
+   "map": true
   }
  ],
  "gifts": [
@@ -268,7 +280,8 @@
     }
    ],
    "id": "youngster-tyler",
-   "area": "1F Room 2"
+   "area": "1F Room 2",
+   "map": true
   },
   {
    "class": "Lass",
@@ -331,7 +344,8 @@
     }
    ],
    "id": "lass-ann",
-   "area": "1F Room 2"
+   "area": "1F Room 2",
+   "map": true
   },
   {
    "class": "Gentleman",
@@ -394,7 +408,8 @@
     }
    ],
    "id": "gentleman-arthur",
-   "area": "1F Room 5"
+   "area": "1F Room 5",
+   "map": true
   },
   {
    "class": "Gentleman",
@@ -455,7 +470,8 @@
     }
    ],
    "id": "gentleman-thomas",
-   "area": "1F Room 7"
+   "area": "1F Room 7",
+   "map": true
   },
   {
    "class": "Rival",
@@ -866,7 +882,8 @@
     }
    ],
    "id": "fisherman-dale",
-   "area": "2F Room 2"
+   "area": "2F Room 2",
+   "map": true
   },
   {
    "class": "Gentleman",
@@ -901,7 +918,8 @@
     }
    ],
    "id": "gentleman-brooks",
-   "area": "2F Room 2"
+   "area": "2F Room 2",
+   "map": true
   },
   {
    "class": "Lass",
@@ -962,7 +980,8 @@
     }
    ],
    "id": "lass-dawn",
-   "area": "2F Room 4"
+   "area": "2F Room 4",
+   "map": true
   },
   {
    "class": "Gentleman",
@@ -1023,7 +1042,8 @@
     }
    ],
    "id": "gentleman-lamar",
-   "area": "2F Room 4"
+   "area": "2F Room 4",
+   "map": true
   },
   {
    "class": "Fisherman",
@@ -1106,7 +1126,8 @@
     }
    ],
    "id": "fisherman-barny",
-   "area": "B1F Room 1"
+   "area": "B1F Room 1",
+   "map": true
   },
   {
    "class": "Sailor",
@@ -1141,7 +1162,8 @@
     }
    ],
    "id": "sailor-phillip",
-   "area": "B1F Room 1"
+   "area": "B1F Room 1",
+   "map": true
   },
   {
    "class": "Sailor",
@@ -1198,7 +1220,8 @@
     }
    ],
    "id": "sailor-huey",
-   "area": "B1F Room 2"
+   "area": "B1F Room 2",
+   "map": true
   },
   {
    "class": "Sailor",
@@ -1270,7 +1293,8 @@
     }
    ],
    "id": "sailor-dylan",
-   "area": "B1F Room 3"
+   "area": "B1F Room 3",
+   "map": true
   },
   {
    "class": "Sailor",
@@ -1305,7 +1329,8 @@
     }
    ],
    "id": "sailor-leonard",
-   "area": "B1F Room 4"
+   "area": "B1F Room 4",
+   "map": true
   },
   {
    "class": "Sailor",
@@ -1383,7 +1408,8 @@
     }
    ],
    "id": "sailor-duncan",
-   "area": "B1F Room 4"
+   "area": "B1F Room 4",
+   "map": true
   },
   {
    "class": "Sailor",
@@ -1440,7 +1466,8 @@
     }
    ],
    "id": "sailor-trevor",
-   "area": "Deck"
+   "area": "Deck",
+   "map": true
   },
   {
    "class": "Sailor",
@@ -1501,11 +1528,13 @@
     }
    ],
    "id": "sailor-edmond",
-   "area": "Deck"
+   "area": "Deck",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 14
 }

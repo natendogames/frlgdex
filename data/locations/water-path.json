@@ -278,31 +278,36 @@
    "id": "water-path-elixir",
    "name": "Elixir",
    "hidden": false,
-   "where": "Water Path"
+   "where": "Water Path",
+   "map": true
   },
   {
    "id": "water-path-dragon-scale",
    "name": "Dragon Scale",
    "hidden": false,
-   "where": "Water Path"
+   "where": "Water Path",
+   "map": true
   },
   {
    "id": "hidden-water-path-aspear-berry",
    "name": "Aspear Berry",
    "hidden": true,
-   "where": "Water Path"
+   "where": "Water Path",
+   "map": true
   },
   {
    "id": "hidden-water-path-oran-berry",
    "name": "Oran Berry",
    "hidden": true,
-   "where": "Water Path"
+   "where": "Water Path",
+   "map": true
   },
   {
    "id": "hidden-water-path-pinap-berry",
    "name": "Pinap Berry",
    "hidden": true,
-   "where": "Water Path"
+   "where": "Water Path",
+   "map": true
   }
  ],
  "gifts": [
@@ -376,7 +381,8 @@
     }
    ],
    "id": "hiker-earl",
-   "area": "Water Path"
+   "area": "Water Path",
+   "map": true
   },
   {
    "class": "Juggler",
@@ -491,7 +497,8 @@
     }
    ],
    "id": "juggler-edward",
-   "area": "Water Path"
+   "area": "Water Path",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -553,7 +560,8 @@
     }
    ],
    "id": "swimmer-female-denise",
-   "area": "Water Path"
+   "area": "Water Path",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -588,7 +596,8 @@
     }
    ],
    "id": "swimmer-male-samir",
-   "area": "Water Path"
+   "area": "Water Path",
+   "map": true
   },
   {
    "class": "Twins",
@@ -650,7 +659,8 @@
    ],
    "double": true,
    "id": "twins-miu-mia",
-   "area": "Water Path"
+   "area": "Water Path",
+   "map": true
   },
   {
    "class": "Aroma Lady",
@@ -712,11 +722,13 @@
     }
    ],
    "id": "aroma-lady-rose",
-   "area": "Water Path"
+   "area": "Water Path",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

@@ -167,13 +167,15 @@
    "id": "hidden-outside-sitrus-berry",
    "name": "Sitrus Berry",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   },
   {
    "id": "hidden-outside-rare-candy",
    "name": "Rare Candy",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [],
@@ -235,7 +237,8 @@
      ]
     }
    ],
-   "id": "bug-catcher-keigo"
+   "id": "bug-catcher-keigo",
+   "map": true
   },
   {
    "class": "Camper",
@@ -270,7 +273,8 @@
      ]
     }
    ],
-   "id": "camper-ricky"
+   "id": "camper-ricky",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -330,7 +334,8 @@
      ]
     }
    ],
-   "id": "picnicker-nancy"
+   "id": "picnicker-nancy",
+   "map": true
   },
   {
    "class": "Bug Catcher",
@@ -362,7 +367,8 @@
      ]
     }
    ],
-   "id": "bug-catcher-elijah"
+   "id": "bug-catcher-elijah",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -451,7 +457,8 @@
      ]
     }
    ],
-   "id": "picnicker-isabelle"
+   "id": "picnicker-isabelle",
+   "map": true
   },
   {
    "class": "Camper",
@@ -512,11 +519,13 @@
      ]
     }
    ],
-   "id": "camper-jeff"
+   "id": "camper-jeff",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

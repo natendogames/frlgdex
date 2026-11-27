@@ -152,7 +152,8 @@
    "id": "hidden-outside-stardust",
    "name": "Stardust",
    "hidden": true,
-   "where": "Outside"
+   "where": "Outside",
+   "map": true
   }
  ],
  "gifts": [],
@@ -214,7 +215,8 @@
      ]
     }
    ],
-   "id": "swimmer-male-barry"
+   "id": "swimmer-male-barry",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -326,7 +328,8 @@
      ]
     }
    ],
-   "id": "swimmer-male-darrin"
+   "id": "swimmer-male-darrin",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -412,7 +415,8 @@
      ]
     }
    ],
-   "id": "swimmer-female-shirley"
+   "id": "swimmer-female-shirley",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -500,7 +504,8 @@
      ]
     }
    ],
-   "id": "picnicker-irene"
+   "id": "picnicker-irene",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -535,7 +540,8 @@
      ]
     }
    ],
-   "id": "swimmer-female-tiffany"
+   "id": "swimmer-female-tiffany",
+   "map": true
   },
   {
    "class": "Bird Keeper",
@@ -622,7 +628,8 @@
      ]
     }
    ],
-   "id": "bird-keeper-roger"
+   "id": "bird-keeper-roger",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -707,7 +714,8 @@
      ]
     }
    ],
-   "id": "swimmer-female-nora"
+   "id": "swimmer-female-nora",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -741,7 +749,8 @@
      ]
     }
    ],
-   "id": "swimmer-male-dean"
+   "id": "swimmer-male-dean",
+   "map": true
   },
   {
    "class": "Picnicker",
@@ -803,7 +812,8 @@
      ]
     }
    ],
-   "id": "picnicker-missy"
+   "id": "picnicker-missy",
+   "map": true
   },
   {
    "class": "Swimmer",
@@ -865,11 +875,13 @@
      ]
     }
    ],
-   "id": "swimmer-female-melissa"
+   "id": "swimmer-female-melissa",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

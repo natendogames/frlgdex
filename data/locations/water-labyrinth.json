@@ -276,11 +276,13 @@
     }
    ],
    "id": "pkmn-breeder-alize",
-   "area": "Water Labyrinth"
+   "area": "Water Labyrinth",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

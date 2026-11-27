@@ -63,7 +63,8 @@
    "id": "hidden-outside-leftovers",
    "name": "Leftovers",
    "hidden": true,
-   "where": "Outside (underfoot)"
+   "where": "Outside (underfoot)",
+   "map": true
   }
  ],
  "gifts": [
@@ -139,7 +140,8 @@
      ]
     }
    ],
-   "id": "biker-lao"
+   "id": "biker-lao",
+   "map": true
   },
   {
    "class": "Cue Ball",
@@ -228,7 +230,8 @@
      ]
     }
    ],
-   "id": "cue-ball-koji"
+   "id": "cue-ball-koji",
+   "map": true
   },
   {
    "class": "Cue Ball",
@@ -290,7 +293,8 @@
      ]
     }
    ],
-   "id": "cue-ball-luke"
+   "id": "cue-ball-luke",
+   "map": true
   },
   {
    "class": "Biker",
@@ -324,7 +328,8 @@
      ]
     }
    ],
-   "id": "biker-hideo"
+   "id": "biker-hideo",
+   "map": true
   },
   {
    "class": "Biker",
@@ -413,7 +418,8 @@
      ]
     }
    ],
-   "id": "biker-ruben"
+   "id": "biker-ruben",
+   "map": true
   },
   {
    "class": "Cue Ball",
@@ -475,7 +481,8 @@
      ]
     }
    ],
-   "id": "cue-ball-camron"
+   "id": "cue-ball-camron",
+   "map": true
   },
   {
    "class": "Young Couple",
@@ -537,11 +544,13 @@
     }
    ],
    "double": true,
-   "id": "young-couple-lea-jed"
+   "id": "young-couple-lea-jed",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

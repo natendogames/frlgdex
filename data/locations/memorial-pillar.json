@@ -185,31 +185,36 @@
    "id": "memorial-pillar-metal-coat",
    "name": "Metal Coat",
    "hidden": false,
-   "where": "Memorial Pillar"
+   "where": "Memorial Pillar",
+   "map": true
   },
   {
    "id": "hidden-memorial-pillar-big-pearl",
    "name": "Big Pearl",
    "hidden": true,
-   "where": "Memorial Pillar"
+   "where": "Memorial Pillar",
+   "map": true
   },
   {
    "id": "hidden-memorial-pillar-razz-berry",
    "name": "Razz Berry",
    "hidden": true,
-   "where": "Memorial Pillar"
+   "where": "Memorial Pillar",
+   "map": true
   },
   {
    "id": "hidden-memorial-pillar-sitrus-berry",
    "name": "Sitrus Berry",
    "hidden": true,
-   "where": "Memorial Pillar"
+   "where": "Memorial Pillar",
+   "map": true
   },
   {
    "id": "hidden-memorial-pillar-bluk-berry",
    "name": "Bluk Berry",
    "hidden": true,
-   "where": "Memorial Pillar"
+   "where": "Memorial Pillar",
+   "map": true
   }
  ],
  "gifts": [
@@ -280,7 +285,8 @@
     }
    ],
    "id": "bird-keeper-harold",
-   "area": "Memorial Pillar"
+   "area": "Memorial Pillar",
+   "map": true
   },
   {
    "class": "Bird Keeper",
@@ -341,7 +347,8 @@
     }
    ],
    "id": "bird-keeper-chaz",
-   "area": "Memorial Pillar"
+   "area": "Memorial Pillar",
+   "map": true
   },
   {
    "class": "Bird Keeper",
@@ -400,11 +407,13 @@
     }
    ],
    "id": "bird-keeper-milo",
-   "area": "Memorial Pillar"
+   "area": "Memorial Pillar",
+   "map": true
   }
  ],
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

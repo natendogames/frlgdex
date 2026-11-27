@@ -73,7 +73,8 @@
    "later": true,
    "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
    "after": "ss-anne",
-   "stage": 17.5
+   "stage": 17.5,
+   "map": true
   },
   {
    "id": "outside-parlyz-heal",
@@ -83,7 +84,8 @@
    "later": true,
    "need": "Cut (HM01 from the S.S. Anne captain, used with the Cascade Badge)",
    "after": "ss-anne",
-   "stage": 17.5
+   "stage": 17.5,
+   "map": true
   }
  ],
  "gifts": [
@@ -112,5 +114,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 1
 }

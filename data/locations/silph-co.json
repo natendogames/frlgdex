@@ -19,175 +19,204 @@
    "id": "10f-carbos",
    "name": "Carbos",
    "hidden": false,
-   "where": "10F"
+   "where": "10F",
+   "map": true
   },
   {
    "id": "10f-ultra-ball",
    "name": "Ultra Ball",
    "hidden": false,
-   "where": "10F"
+   "where": "10F",
+   "map": true
   },
   {
    "id": "10f-rare-candy",
    "name": "Rare Candy",
    "hidden": false,
-   "where": "10F"
+   "where": "10F",
+   "map": true
   },
   {
    "id": "hidden-10f-hp-up",
    "name": "HP Up",
    "hidden": true,
-   "where": "10F"
+   "where": "10F",
+   "map": true
   },
   {
    "id": "11f-zinc",
    "name": "Zinc",
    "hidden": false,
-   "where": "11F"
+   "where": "11F",
+   "map": true
   },
   {
    "id": "hidden-11f-revive",
    "name": "Revive",
    "hidden": true,
-   "where": "11F"
+   "where": "11F",
+   "map": true
   },
   {
    "id": "hidden-2f-ultra-ball",
    "name": "Ultra Ball",
    "hidden": true,
-   "where": "2F"
+   "where": "2F",
+   "map": true
   },
   {
    "id": "3f-hyper-potion",
    "name": "Hyper Potion",
    "hidden": false,
-   "where": "3F"
+   "where": "3F",
+   "map": true
   },
   {
    "id": "hidden-3f-protein",
    "name": "Protein",
    "hidden": true,
-   "where": "3F"
+   "where": "3F",
+   "map": true
   },
   {
    "id": "4f-max-revive",
    "name": "Max Revive",
    "hidden": false,
-   "where": "4F"
+   "where": "4F",
+   "map": true
   },
   {
    "id": "4f-escape-rope",
    "name": "Escape Rope",
    "hidden": false,
-   "where": "4F"
+   "where": "4F",
+   "map": true
   },
   {
    "id": "4f-full-heal",
    "name": "Full Heal",
    "hidden": false,
-   "where": "4F"
+   "where": "4F",
+   "map": true
   },
   {
    "id": "4f-tm41",
    "name": "TM41",
    "hidden": false,
-   "where": "4F"
+   "where": "4F",
+   "map": true
   },
   {
    "id": "hidden-4f-iron",
    "name": "Iron",
    "hidden": true,
-   "where": "4F"
+   "where": "4F",
+   "map": true
   },
   {
    "id": "5f-protein",
    "name": "Protein",
    "hidden": false,
-   "where": "5F"
+   "where": "5F",
+   "map": true
   },
   {
    "id": "5f-tm01",
    "name": "TM01",
    "hidden": false,
-   "where": "5F"
+   "where": "5F",
+   "map": true
   },
   {
    "id": "5f-card-key",
    "name": "Card Key",
    "hidden": false,
-   "where": "5F"
+   "where": "5F",
+   "map": true
   },
   {
    "id": "hidden-5f-elixir",
    "name": "Elixir",
    "hidden": true,
-   "where": "5F"
+   "where": "5F",
+   "map": true
   },
   {
    "id": "hidden-5f-pp-up",
    "name": "PP Up",
    "hidden": true,
-   "where": "5F"
+   "where": "5F",
+   "map": true
   },
   {
    "id": "6f-hp-up",
    "name": "HP Up",
    "hidden": false,
-   "where": "6F"
+   "where": "6F",
+   "map": true
   },
   {
    "id": "6f-x-special",
    "name": "X Special",
    "hidden": false,
-   "where": "6F"
+   "where": "6F",
+   "map": true
   },
   {
    "id": "hidden-6f-carbos",
    "name": "Carbos",
    "hidden": true,
-   "where": "6F"
+   "where": "6F",
+   "map": true
   },
   {
    "id": "7f-calcium",
    "name": "Calcium",
    "hidden": false,
-   "where": "7F"
+   "where": "7F",
+   "map": true
   },
   {
    "id": "7f-tm08",
    "name": "TM08",
    "hidden": false,
-   "where": "7F"
+   "where": "7F",
+   "map": true
   },
   {
    "id": "hidden-7f-zinc",
    "name": "Zinc",
    "hidden": true,
-   "where": "7F"
+   "where": "7F",
+   "map": true
   },
   {
    "id": "8f-iron",
    "name": "Iron",
    "hidden": false,
-   "where": "8F"
+   "where": "8F",
+   "map": true
   },
   {
    "id": "hidden-8f-nugget",
    "name": "Nugget",
    "hidden": true,
-   "where": "8F"
+   "where": "8F",
+   "map": true
   },
   {
    "id": "hidden-9f-max-potion",
    "name": "Max Potion",
    "hidden": true,
-   "where": "9F"
+   "where": "9F",
+   "map": true
   },
   {
    "id": "hidden-9f-calcium",
    "name": "Calcium",
    "hidden": true,
-   "where": "9F"
+   "where": "9F",
+   "map": true
   }
  ],
  "gifts": [
@@ -318,7 +347,8 @@
     }
    ],
    "id": "scientist-connor",
-   "area": "2F"
+   "area": "2F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -379,7 +409,8 @@
     }
    ],
    "id": "team-rocket-grunt-23",
-   "area": "2F"
+   "area": "2F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -522,7 +553,8 @@
     }
    ],
    "id": "team-rocket-grunt-24",
-   "area": "2F"
+   "area": "2F",
+   "map": true
   },
   {
    "class": "Scientist",
@@ -610,7 +642,8 @@
     }
    ],
    "id": "scientist-jerry",
-   "area": "2F"
+   "area": "2F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -697,7 +730,8 @@
     }
    ],
    "id": "team-rocket-grunt-25",
-   "area": "3F"
+   "area": "3F",
+   "map": true
   },
   {
    "class": "Scientist",
@@ -760,7 +794,8 @@
     }
    ],
    "id": "scientist-jose",
-   "area": "3F"
+   "area": "3F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -822,7 +857,8 @@
     }
    ],
    "id": "team-rocket-grunt-26",
-   "area": "4F"
+   "area": "4F",
+   "map": true
   },
   {
    "class": "Scientist",
@@ -858,7 +894,8 @@
     }
    ],
    "id": "scientist-rodney",
-   "area": "4F"
+   "area": "4F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -945,7 +982,8 @@
     }
    ],
    "id": "team-rocket-grunt-27",
-   "area": "4F"
+   "area": "4F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -980,7 +1018,8 @@
     }
    ],
    "id": "team-rocket-grunt-28",
-   "area": "5F"
+   "area": "5F",
+   "map": true
   },
   {
    "class": "Scientist",
@@ -1095,7 +1134,8 @@
     }
    ],
    "id": "scientist-beau",
-   "area": "5F"
+   "area": "5F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -1130,7 +1170,8 @@
     }
    ],
    "id": "team-rocket-grunt-29",
-   "area": "5F"
+   "area": "5F",
+   "map": true
   },
   {
    "class": "Juggler",
@@ -1190,7 +1231,8 @@
     }
    ],
    "id": "juggler-dalton",
-   "area": "5F"
+   "area": "5F",
+   "map": true
   },
   {
    "class": "Scientist",
@@ -1332,7 +1374,8 @@
     }
    ],
    "id": "scientist-taylor",
-   "area": "6F"
+   "area": "6F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -1395,7 +1438,8 @@
     }
    ],
    "id": "team-rocket-grunt-30",
-   "area": "6F"
+   "area": "6F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -1482,7 +1526,8 @@
     }
    ],
    "id": "team-rocket-grunt-31",
-   "area": "6F"
+   "area": "6F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -1543,7 +1588,8 @@
     }
    ],
    "id": "team-rocket-grunt-34",
-   "area": "7F"
+   "area": "7F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -1604,7 +1650,8 @@
     }
    ],
    "id": "team-rocket-grunt-33",
-   "area": "7F"
+   "area": "7F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -1718,7 +1765,8 @@
     }
    ],
    "id": "team-rocket-grunt-35",
-   "area": "7F"
+   "area": "7F",
+   "map": true
   },
   {
    "class": "Scientist",
@@ -1779,7 +1827,8 @@
     }
    ],
    "id": "scientist-joshua",
-   "area": "7F"
+   "area": "7F",
+   "map": true
   },
   {
    "class": "Rival",
@@ -2270,7 +2319,8 @@
     }
    ],
    "id": "team-rocket-grunt-36",
-   "area": "8F"
+   "area": "8F",
+   "map": true
   },
   {
    "class": "Scientist",
@@ -2331,7 +2381,8 @@
     }
    ],
    "id": "scientist-parker",
-   "area": "8F"
+   "area": "8F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -2446,7 +2497,8 @@
     }
    ],
    "id": "team-rocket-grunt-32",
-   "area": "8F"
+   "area": "8F",
+   "map": true
   },
   {
    "class": "Scientist",
@@ -2535,7 +2587,8 @@
     }
    ],
    "id": "scientist-ed",
-   "area": "9F"
+   "area": "9F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -2622,7 +2675,8 @@
     }
    ],
    "id": "team-rocket-grunt-38",
-   "area": "9F"
+   "area": "9F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -2709,7 +2763,8 @@
     }
    ],
    "id": "team-rocket-grunt-37",
-   "area": "9F"
+   "area": "9F",
+   "map": true
   },
   {
    "class": "Scientist",
@@ -2771,7 +2826,8 @@
     }
    ],
    "id": "scientist-travis",
-   "area": "10F"
+   "area": "10F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -2807,7 +2863,8 @@
     }
    ],
    "id": "team-rocket-grunt-39",
-   "area": "10F"
+   "area": "10F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -2947,7 +3004,8 @@
     }
    ],
    "id": "team-rocket-grunt-40",
-   "area": "11F"
+   "area": "11F",
+   "map": true
   },
   {
    "class": "Team Rocket",
@@ -3034,7 +3092,8 @@
     }
    ],
    "id": "team-rocket-grunt-41",
-   "area": "11F"
+   "area": "11F",
+   "map": true
   },
   {
    "class": "Boss",
@@ -3157,5 +3216,6 @@
  "verified": true,
  "sources": [
   "https://github.com/pret/pokefirered"
- ]
+ ],
+ "mapCount": 10
 }
