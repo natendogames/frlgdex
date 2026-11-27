@@ -88,7 +88,7 @@ const LATER_CASES = J('tests/later_cases.json');
   const cut = html.indexOf('Items: come back later');
   if (cut < 0) fail('Route 2 page has no "Items: come back later" section');
   else {
-    if (!/<details class="later">[^]*Items: come back later/.test(html)) fail('"Items: come back later" should be collapsed');
+    if (!/<details class="later"[^>]*>[^]*Items: come back later/.test(html)) fail('"Items: come back later" should be collapsed');
     const first = html.slice(0, cut);
     if (/Parlyz Heal/.test(first.slice(first.indexOf('<h2>Items')))) fail('Route 2 lists Parlyz Heal (behind a Cut tree) as a first-visit item');
   }
@@ -103,8 +103,8 @@ const LATER_CASES = J('tests/later_cases.json');
     app.ctx.location.hash = '#/loc/route-2'; app.route();
     const page = app.view.innerHTML || '';
     const firstPart = (h, title) => h.slice(0, Math.max(0, h.indexOf(title)));
-    if (/Mr\. Mime/.test(firstPart(page, 'Pokémon: come back later').split('<h2>Pokémon</h2>')[1] || '')) fail('Route 2 shows the Mr. Mime trade (behind a Cut tree) as a first-visit Pokémon');
-    if (/HM05/.test(firstPart(page, 'Walkthrough: come back later'))) fail('Route 2 walkthrough shows the HM05 step (behind a Cut tree) as first visit');
+    if (/Mr\. Mime/.test(firstPart(page, 'class="laterhead"').split('<h2>Pokémon</h2>')[1] || '')) fail('Route 2 shows the Mr. Mime trade (behind a Cut tree) as a first-visit Pokémon');
+    if (/HM05/.test(firstPart(page, 'class="laterhead"'))) fail('Route 2 walkthrough shows the HM05 step (behind a Cut tree) as first visit');
   }
   if (fails.length) { console.log(fails.map(f => 'FAIL ' + f).join('\n')); process.exit(1); }
   console.log(`item reach OK: ${later} of ${total} items, gifts, shops and tutors are "come back later"; ${checked} Bulbapedia "requires" notes checked; ${reach.puzzles.length} puzzle items timed by their map`);
