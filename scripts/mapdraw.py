@@ -63,6 +63,19 @@ def write(world, item_pos, locs, out, place_maps, trainer_pos):
             kind = obst.get(ev.get('graphics_id'))
             if kind in ('cut', 'rock-smash', 'strength'): objs.append([ev['x'], ev['y'], kind])
             elif ev.get('trainer_type', 'TRAINER_TYPE_NONE') in ('TRAINER_TYPE_NONE', '0'): objs.append([ev['x'], ev['y'], 'person'])
+        # number things in the order you reach them on a first visit (the reach walk's order of first steps; a hidden
+        # item in a wall or a trainer counts from the nearest tile you can stand on). Unreached ones go last.
+        order = getattr(world, 'order', {})
+        def first(x, y):
+            o = [order[(name, x + dx, y + dy)] for dx, dy in ((0, 0), (0, 1), (0, -1), (1, 0), (-1, 0)) if (name, x + dx, y + dy) in order]
+            return min(o) if o else float('inf')
+        # things you can only reach later (Cut, Surf, a later story point) come after the first-visit ones, and the
+        # app lists them in their own "come back later" group
+        for group, src in ((items, names), (trainers, tnames)):
+            for t in group:
+                if src[t['id']].get('later'): t['later'] = True
+            group.sort(key=lambda t: (bool(t.get('later')), first(t['x'], t['y']), t['y'], t['x']))
+            for i, t in enumerate(group): t['o'] = i
         for i in items: names[i['id']]['map'] = True
         for t in trainers: tnames[t['id']]['map'] = True
         loc['mapCount'] = loc.get('mapCount', 0) + 1

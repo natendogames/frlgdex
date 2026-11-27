@@ -27,6 +27,9 @@ const fail = m => fails.push(m);
       const m = d.maps.find(m => m.items.some(i => i.id === it.id));
       if (!m) { fail(`${l.id}: ${it.name} is not on any drawn map`); continue; }
       const t = m.items.find(i => i.id === it.id);
+      // numbered in the order you come across them, first-visit things before "come back later" ones
+      if (!!t.later !== !!it.later) fail(`${l.id}: ${it.name} later flag differs on the map`);
+      if (!it.later && m.items.some(i => i.later && i.o < t.o)) fail(`${l.id}: ${it.name} is numbered after a come-back-later item`);
       if (m.tiles.length !== m.w * m.h) fail(`${l.id} ${m.map}: tiles ${m.tiles.length} != ${m.w}x${m.h}`);
       if (!(t.x >= 0 && t.y >= 0 && t.x < m.w && t.y < m.h)) fail(`${l.id}: ${it.name} at ${t.x},${t.y} is off the ${m.w}x${m.h} map`);
       if (t.hidden !== it.hidden) fail(`${l.id}: ${it.name} hidden flag differs on the map`);

@@ -22,18 +22,19 @@ const spotHref = (locId, id) => `#/spot/${locId}/${encodeURIComponent(id)}`;
 const spotPerson = (cx, cy, col, big) => { const k = big ? 1.5 : 1; return `<circle cx="${cx}" cy="${cy - 2.2 * k}" r="${1.8 * k}" fill="${col}"/><path d="M${cx - 3 * k} ${cy + 3.6 * k}q0-4.6 ${3 * k}-4.6t${3 * k} 4.6z" fill="${col}"/>`; };
 // an item: a plain ball with a shine
 const spotBall = (cx, cy, col) => `<circle cx="${cx}" cy="${cy}" r="3.2" fill="${col}" stroke="var(--map-ink)" stroke-width=".5"/><circle cx="${cx - 1}" cy="${cy - 1.1}" r=".9" fill="#fff" opacity=".85"/>`;
-// labels: items numbered 1, 2, 3 and trainers lettered A, B, C in reading order (top to bottom, left to right). The
+// labels: items numbered 1, 2, 3 and trainers lettered A, B, C in the order you come across them on a first visit. The
 // numbers stay put as you tick things off, so the key under the map always matches.
 const spotLetter = i => (i >= 26 ? spotLetter(Math.floor(i / 26) - 1) : '') + String.fromCharCode(65 + i % 26);
 function spotLabels(m) {
-  const byPos = (a, b) => a.y - b.y || a.x - b.x;
+  // o: the order you reach them on your first visit, worked out at build time (scripts/mapdraw.py)
+  const byPos = (a, b) => (a.o ?? 1e9) - (b.o ?? 1e9) || a.y - b.y || a.x - b.x;
   const items = [...m.items].sort(byPos).map((it, i) => ({ ...it, label: String(i + 1) }));
   const trainers = [...(m.trainers || [])].sort(byPos).map((t, i) => ({ ...t, label: spotLetter(i) }));
   return { items, trainers };
 }
-const spotBadge = (x, y, W, text, col) => {
+const spotBadge = (x, y, W, text, col, later) => {
   const bx = Math.min(Math.max(x + 7, 6), W - 6), by = Math.max(y - 6, 6), wd = text.length > 1 ? 5 + text.length * 4.6 : 11.5;
-  return `<rect x="${bx - wd / 2}" y="${by - 5.75}" width="${wd}" height="11.5" rx="5.75" fill="var(--map-badge)" stroke="${col}" stroke-width="1"/><text x="${bx}" y="${by + 3.1}" text-anchor="middle" font-size="9" font-weight="700" fill="${col}">${text}</text>`;
+  return `<rect x="${bx - wd / 2}" y="${by - 5.75}" width="${wd}" height="11.5" rx="5.75" fill="var(--map-badge)" stroke="${col}" stroke-width="1"${later ? ' stroke-dasharray="2 1.5"' : ''}/><text x="${bx}" y="${by + 3.1}" text-anchor="middle" font-size="9" font-weight="700" fill="${col}">${text}</text>`;
 };
 function spotSvg(m, loc, target, checks) {
   const T = 8, W = m.w * T, H = m.h * T, locId = loc.id;
@@ -65,7 +66,7 @@ function spotSvg(m, loc, target, checks) {
     const id = 'trainer:' + tr.id, t = trainers.find(x => x.id === tr.id);
     const done = t && checks[tk(locId, t)], cx = tr.x * T + 4, cy = tr.y * T + 4;
     r += `<a href="${spotHref(locId, id)}"><title>${esc(tr.name)}${done ? ' (beaten)' : ''}</title><rect x="${tr.x * T - 4}" y="${tr.y * T - 4}" width="16" height="16" fill="transparent"/>${spotPerson(cx, cy, done ? 'var(--map-done)' : 'var(--map-trainer)', true)}</a>`;
-    badges += `<a href="${spotHref(locId, id)}">${spotBadge(cx, cy, W, tr.label, done ? 'var(--map-done)' : 'var(--map-trainer)')}</a>`;
+    badges += `<a href="${spotHref(locId, id)}">${spotBadge(cx, cy, W, tr.label, done ? 'var(--map-done)' : 'var(--map-trainer)', tr.later)}</a>`;
   }
   for (const it of L.items) {
     const cx = it.x * T + 4, cy = it.y * T + 4, done = checks[`${locId}:item:${it.id}`];
@@ -74,7 +75,7 @@ function spotSvg(m, loc, target, checks) {
     r += `<a href="${spotHref(locId, it.id)}"><title>${esc(it.name)}${it.hidden ? ' (hidden)' : ''}${done ? ' (found)' : ''}</title><rect x="${it.x * T - 4}" y="${it.y * T - 4}" width="16" height="16" fill="transparent"/>` + (it.hidden
       ? `<rect x="${cx - 3}" y="${cy - 3}" width="6" height="6" transform="rotate(45 ${cx} ${cy})" fill="none" stroke="${col}" stroke-width="1.8"/>`
       : spotBall(cx, cy, col)) + '</a>';
-    badges += `<a href="${spotHref(locId, it.id)}">${spotBadge(cx, cy, W, it.label, 'var(--map-ink)')}</a>`;
+    badges += `<a href="${spotHref(locId, it.id)}">${spotBadge(cx, cy, W, it.label, 'var(--map-ink)', it.later)}</a>`;
   }
   const t = spotFind(m, target);
   if (t) {
@@ -90,20 +91,22 @@ function spotSvg(m, loc, target, checks) {
 // the key under a map: each number or letter, what it is, and a box to tick it off (tap the name to circle it)
 function spotKey(m, loc, target, checks) {
   const L = spotLabels(m), locId = loc.id, tk = typeof trainerKey === 'function' ? trainerKey : (l, t) => `${l}:trainer:${t.id}`;
-  const rows = [];
+  const rows = [], laterRows = [];
   for (const it of L.items) {
     const k = `${locId}:item:${it.id}`;
     if (checks[k] && it.id !== target) continue;  // found items leave the key too
     const li = loc.items.find(x => x.id === it.id);
-    rows.push(checkRow(k, checks[k], `<b class="spotnum">${it.label}</b> ${esc(it.name)}`, (it.hidden ? 'Hidden item' : 'Item ball') + (li?.later ? ` · come back later: ${esc(li.need || '')}` : ''), `<a class="info" href="${spotHref(locId, it.id)}">ⓘ</a>`));
+    (li?.later ? laterRows : rows).push(checkRow(k, checks[k], `<b class="spotnum">${it.label}</b> ${esc(it.name)}`, (it.hidden ? 'Hidden item' : 'Item ball') + (li?.later && li.need ? ` · needs ${esc(li.need)}` : ''), `<a class="info" href="${spotHref(locId, it.id)}">ⓘ</a>`));
   }
   for (const tr of L.trainers) {
     const t = (loc.trainers || []).find(x => x.id === tr.id);
     if (!t) continue;
     const k = tk(locId, t);
-    rows.push(checkRow(k, checks[k], `<b class="spotnum trainer">${tr.label}</b> ${esc(tr.name)}`, (checks[k] ? 'Trainer · beaten' : 'Trainer') + (t.later ? ' · come back later' : ''), `<a class="info" href="${spotHref(locId, 'trainer:' + tr.id)}">ⓘ</a>`));
+    (t.later ? laterRows : rows).push(checkRow(k, checks[k], `<b class="spotnum trainer">${tr.label}</b> ${esc(tr.name)}`, (checks[k] ? 'Trainer · beaten' : 'Trainer') + (t.later && t.reach ? ` · needs ${esc(t.reach)}` : ''), `<a class="info" href="${spotHref(locId, 'trainer:' + tr.id)}">ⓘ</a>`));
   }
-  return rows.length ? `<details class="spotkey"${target ? '' : ' open'}><summary>Key: ${rows.length} on this map</summary>${rows.join('')}</details>` : '';
+  const n = rows.length + laterRows.length;
+  return n ? `<details class="spotkey"${target ? '' : ' open'}><summary>Key: ${n} on this map</summary>${rows.join('') || '<p class="note">Nothing left here on your first visit.</p>'}${laterRows.length
+    ? `<div class="spotlater"><b>Come back later (${laterRows.length})</b><span class="note"> · dashed labels on the map</span></div>${laterRows.join('')}` : ''}</details>` : '';
 }
 const spotFind = (m, target) => !target ? null : target.startsWith('trainer:') ? (m.trainers || []).find(t => 'trainer:' + t.id === target) : m.items.find(i => i.id === target);
 // where it is in words, from the nearest door or sign

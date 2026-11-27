@@ -186,7 +186,7 @@ class World:
                 open_at[n] = float('inf') if s is None else s
             return open_at[n]
 
-        best = {}
+        best, order = {}, {}
         heap = []
         tick = [0]
         def push(node, st, why):
@@ -240,6 +240,9 @@ class World:
         while heap:
             st, _, node, why = heapq.heappop(heap)
             if best.get(node, (None,))[0] != st or best[node][1] != why: continue
+            # the order you first stand on each tile (story stage, then steps): the app numbers a map's items and
+            # trainers in this order, so they follow the way you walk in on your first visit
+            if node not in order: order[node] = len(order)
             n, x, y = node
             c = cell(n, x, y)
             if c is None: continue
@@ -298,7 +301,7 @@ class World:
                 s2, w2 = need(st, why, self.ability_stage('dive'), ('ability', 'dive'))
                 s2, w2 = need(s2, w2, map_open(dm), ('map', dm))
                 push((dm, x, y), s2, w2)
-        self.best = best
+        self.best, self.order = best, order
         return best
 
     def item_reach(self, mapname, x, y, elevation=0, underfoot=False):
