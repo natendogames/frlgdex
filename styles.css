@@ -211,3 +211,6 @@ details.tiers { margin-top: 8px; }
 .tag.hv.soon { background: var(--accent); border-color: var(--accent); }
 .hvwhy { display: block; font-size: 14px; font-weight: 600; color: var(--accent); margin-top: 3px; }
 .card.hvcard { border-color: var(--accent); }
+.grindcard .grind { padding: 8px 0; border-top: 1px solid var(--line, rgba(127,127,127,.25)); }
+.grindcard .grind:first-of-type { border-top: 0; }
+.grindcard .grind .sub { display: block; font-size: 14px; margin-top: 2px; }
