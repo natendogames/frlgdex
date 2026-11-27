@@ -63,7 +63,8 @@ function highValue() {
     const leg = plan.legs.find(l => l.battle.id === u.t.id);
     for (const x of leg?.steps || []) if (x.kind === 'catch' && x.dex) add(x.dex, u, `Team plan: catch it before ${u.t.name}`);
   }
-  for (const list of map.values()) list.sort((a, b) => a.gym - b.gym);
+  // soonest battle first, and Battle plan picks before Team plan steps for the same battle
+  for (const list of map.values()) list.sort((a, b) => a.gym - b.gym || a.text.startsWith('Team plan') - b.text.startsWith('Team plan'));
   hvCache = { sig, map };
   return map;
 }
@@ -76,7 +77,9 @@ function hvTag(dex) {
 function hvSub(dex) {
   const r = highValue().get(+dex);
   if (!r) return '';
-  return `<span class="hvwhy">★ ${esc(r[0].text)}${r.length > 1 ? ` (+${r.length - 1} more)` : ''}</span>`;
+  // every reason on its own line (up to four), so a Battle plan pick isn't hidden behind a Team plan line
+  const shown = r.slice(0, 4);
+  return shown.map(x => `<span class="hvwhy">★ ${esc(x.text)}</span>`).join('') + (r.length > 4 ? `<span class="hvwhy">+${r.length - 4} more on its Pokémon page</span>` : '');
 }
 // A card on the Pokémon page listing every reason
 function hvCard(dex) {
