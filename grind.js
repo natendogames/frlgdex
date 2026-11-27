@@ -142,23 +142,26 @@ function grindSpots(stage, stat) {
   return [...best.values()].sort((a, b) => stat >= 0 ? b.ev - a.ev || b.exp - a.exp : b.exp - a.exp || b.rate - a.rate);
 }
 // ---------- Best training for each team member ----------
-// For every Pokémon on your Team plan team at that battle (or your Battle plan team, if you haven't picked a starter),
+// For every Pokémon on your Battle plan team, as you have it now (or the Team plan team for that battle, if your Battle
+// plan team is empty),
 // the wild Pokémon it trains on best: one it beats one-on-one with its own moves at its level, scored by EXP per turn
 // (EXP for the KO ÷ turns to KO, so a weaker Pokémon you OHKO can beat a stronger one that takes three hits), and as a
 // tie-break the one that hits it least hard. Uses the same damage engine as the Battle plan, so typing, STAB, abilities
 // and levels all count.
-// Your team on the way to a battle: the Team plan team for it, else your Battle plan team
+// Your team on the way to a battle: your Battle plan team as it is now (Mudkip stays Mudkip until you evolve it), else
+// the Team plan team for that battle
 function grindMembers(target) {
   const s = cur(), plan = target && state.teamPlan && pickOf('starter') && planOf(V(), pickOf('starter'));
   const legs = plan ? plan.legs : [], i = target ? legs.findIndex(l => l.battle.id === target.id) : -1;
   let members = [];
-  if (i >= 0) {
+  if ((s.team || []).length) members = s.team.map(n => { const b = myBattler(n, typeof autoLevelOn === 'function' && autoLevelOn() ? autoLevelNow() : 10); return { dex: n, level: b.level, moves: b.moves, from: 'team', guessed: b.guessedLevel && !b.autoLevel }; });
+  else if (i >= 0) {
     // the levels you have on the way to it: the last battle each one was in, else a couple below this battle's level
     members = legs[i].team.map(m => {
       const prev = legs.slice(0, i).reverse().map(l => l.team.find(x => x.dex === m.dex)).find(Boolean);
       return { dex: m.dex, level: prev ? prev.level : Math.max(2, m.level - 2), moves: m.moves || [], from: 'plan' };
     });
-  } else members = (s.team || []).map(n => { const b = myBattler(n, typeof autoLevelOn === 'function' && autoLevelOn() ? autoLevelNow() : 10); return { dex: n, level: b.level, moves: b.moves, from: 'team', guessed: b.guessedLevel }; });
+  }
   return members.map(m => ({ ...m, me: battler(m.dex, m.level, PLAYER_IV, m.moves.length ? m.moves : bestMoves(m.dex, m.level)) }));
 }
 // One team member against one wild Pokémon: no good if it can't win one-on-one, or if the wild one has (or will soon

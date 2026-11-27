@@ -55,6 +55,9 @@ const ok = (c, m) => { checks++; if (!c) { failures++; if (failures < 40) consol
       state.teamPlan = require('../data/team-plan.json');
       get('setPick')('starter', opt.key);
       const big = state.trainers.filter(t => ['Leader', 'Elite Four', 'Champion'].includes(t.class));
+      // training is for the team you have now: a Mudkip on the Battle plan is trained as a Mudkip, not the Marshstomp
+      // the Team plan expects by the gym
+      ok(get('grindMembers')(big[0]).every(m => app.cur().team.includes(m.dex)) && get('grindMembers')(big[0]).length === app.cur().team.length, 'training uses the Battle plan team as it is now');
       for (const t of [big[0], big[Math.floor(big.length / 2)]]) {
         const st = app.battleStage(t, t.location), rows = get('grindTeam')(t, st);
         ok(rows.length > 0, `team training picks for ${t.name}`);
