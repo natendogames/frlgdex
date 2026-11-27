@@ -819,7 +819,10 @@ function foeNotes(p) {
   if (st.length) out.push(`Watch for ${st.join('; ')}`);
   return out;
 }
-const rankDuels = (a, b) => b.wins - a.wins || a.myHits - b.myHits || (a.theirs?.max || 0) / a.me.hp - (b.theirs?.max || 0) / b.me.hp;
+// Best first: wins, fewest hits to KO, then most hits it can take, then the hardest hitter (a bigger average roll
+// gives a better chance of a KO a turn early: Thunder Shock 48-61% beats Peck 43-52%), then least damage taken
+const avgHit = d => d.mine ? (d.mine.min + d.mine.max) / 2 : 0;
+const rankDuels = (a, b) => b.wins - a.wins || a.myHits - b.myHits || Math.min(b.theirHits, 99) - Math.min(a.theirHits, 99) || avgHit(b) - avgHit(a) || (a.theirs?.max || 0) / a.me.hp - (b.theirs?.max || 0) / b.me.hp;
 
 function weaknesses(dex) {
   return ALL_TYPES().map(t => ({ t, m: eff(t, mon(dex).types) })).filter(x => x.m > 1).sort((a, b) => b.m - a.m);

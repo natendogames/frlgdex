@@ -64,6 +64,15 @@ const ok = (c, m) => { checks++; if (!c) { failures++; if (failures < 40) consol
     ok(app.foeRow(party[0], app.battleStage(t, t.location), party).includes('Lv 77'), 'Auto levels off: your typed levels count'); }
   app.ctx.location.hash = '#/settings'; app.route(true);
   ok(view.innerHTML.includes('id="autoTeam"') && view.innerHTML.includes('id="autoLevel"'), 'settings page has both settings');
+  // picks: when two Pokémon both win in the same number of hits and take as many, the harder hitter goes first
+  // (Nate: Pikachu's Thunder Shock 48-61% over Spearow's Peck 43-52% against Calvin's Hoothoot in Seaglass)
+  { const rank = get('rankDuels'), avg = d => d.mine ? (d.mine.min + d.mine.max) / 2 : 0; let pairs = 0;
+    const mons = state.dex.filter(p => p.dex <= 151).slice(0, 60).map(p => p.dex);
+    for (const t of state.trainers.slice(0, 6)) for (const p of get('partyOf')(t)) {
+      const foe = app.foeBattler(p), ds = mons.map(n => app.duel(app.battler(n, p.level, 15, app.defaultMoves(n, p.level)), foe)).sort(rank);
+      for (let i = 1; i < ds.length; i++) { const x = ds[i - 1], y = ds[i];
+        if (x.wins === y.wins && x.myHits === y.myHits && Math.min(x.theirHits, 99) === Math.min(y.theirHits, 99)) { pairs++; ok(avg(x) >= avg(y), `${t.name}'s ${p.name}: ${app.mon(x.me.dex).name} ranked over harder-hitting ${app.mon(y.me.dex).name}`); } } }
+    ok(pairs > 0, 'tie-break pairs checked'); }
   if (failures) { console.error(`${failures} of ${checks} checks failed`); process.exit(1); }
   console.log(`autoteam: ${checks} checks passed`);
 })().catch(e => { console.error(e); process.exit(1); });
