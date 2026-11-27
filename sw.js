@@ -1,11 +1,7 @@
 // Offline support: precache the app shell and every data file on install, then serve
 // network-first with the cache as fallback. Bump CACHE when shipping new files or data. The Emerald app shares this
 // origin (natendogames.github.io), so only this app's own old caches are deleted.
-<<<<<<< HEAD
 const CACHE = 'frlg-dex-v28'
-=======
-const CACHE = 'frlg-dex-v27'
->>>>>>> origin/main
 const SHELL = ['./', 'index.html', 'styles.css', 'app.js', 'features.js', 'tools.js', 'trackers.js', 'modes.js', 'saveimport.js', 'map.js', 'catchplan.js', 'builds.js', 'highvalue.js', 'grind.js', 'manifest.webmanifest', 'icons/icon.svg',
   'data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json',
   'data/team-plan.json', 'data/tms.json', 'data/extras.json', 'data/save-map.json', 'data/region-map.json', 'data/items.json', 'data/builds.json'];
