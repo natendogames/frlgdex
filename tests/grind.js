@@ -68,6 +68,14 @@ const ok = (c, m) => { checks++; if (!c) { failures++; if (failures < 40) consol
           if (r.picks.length === 2) ok(r.picks[0].score >= r.picks[1].score && r.picks[0].loc !== r.picks[1].loc, `${t.name}: ${app.mon(r.m.dex).name} picks in order, two places`);
         }
       }
+      // picking one team member on a place's training card shows the best matchup there for it, never a bad one
+      { const l = state.index.find(x => get('grindPicks')(get('locView')(state.locations[x.id]).encs.filter(e => encStage(x.id, e) <= app.stageOf(x.id))).length);
+        app.ctx.location.hash = `#/loc/${l.id}`; app.route(true);
+        ok(view.innerHTML.includes('data-trf='), `${l.id}: team member picker on the training card`);
+        const dex = +(view.innerHTML.match(/data-trf="(\d+)"/) || [])[1];
+        state.trainFor = dex; app.route(true);
+        ok(view.innerHTML.includes('class="grind trainfor"'), `${l.id}: best matchup shown for ${app.mon(dex).name}`);
+        state.trainFor = null; }
       app.ctx.location.hash = '#/tools/train'; app.route(true);
       ok(view.innerHTML.includes('Best for each team member'), 'Training spots page shows the best for each team member');
     }
