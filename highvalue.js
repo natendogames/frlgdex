@@ -50,7 +50,8 @@ function highValue() {
       const duels = team.map(n => duel(myBattler(n, p.level), foe)).sort(rankDuels), best = duels[0];
       // the same test the Battle plan uses to decide when to suggest a catch
       if (best && best.wins && (duels.some(d => d.se.length) || best.myHits <= 2)) continue;
-      for (const { c, f, d } of catchSuggestions(p, foe, stage, party)) {
+      // only the best catch for each of their Pokémon (the Battle plan lists it first)
+      for (const { c, f, d } of catchSuggestions(p, foe, stage, party, 1)) {
         if (isCaught(f.dex)) continue;
         const as = f.dex !== c.dex ? ` once it evolves into ${mon(f.dex).name}` : '';
         add(c.dex, u, `Battle plan: beats ${u.t.name}'s ${p.name}${as} (${d.mine.name}, ${hitsText(d.myHits)})`);
