@@ -794,6 +794,13 @@ def time_thing(loc, mapname, positions):
     if r is None: r = map_first.get(mapname)
     if r is None and map_stage(mapname) is not None: r = (map_stage(mapname), ('map', mapname))
     return r
+# Gifts that wait on a story flag set somewhere else: (place, gift) -> (place whose story point it waits for, why)
+GIFT_LATER = {
+    ('two-island', 'Moon Stone'): ('berry-forest', "After you rescue Lostelle in Three Island's Berry Forest"),
+    ('one-island', 'Rainbow Pass'): ('pokemon-league', "After the Hall of Fame: bring Celio the Ruby from Mt. Ember's Ruby Path"),
+}
+_gl_missing = [k for k in GIFT_LATER if not any(g['name'] == k[1] for g in locs[k[0]]['gifts'])]
+assert not _gl_missing, f'GIFT_LATER names no gift: {_gl_missing}'
 def mark_later(loc, thing, r):
     if not r: return False
     # someone who only turns up after you have been somewhere else is never there on the first trip
@@ -812,6 +819,14 @@ for loc in locs.values():
             for e in loc['encounters']:
                 if e['method'] in ('gift', 'trade', 'game-corner') and (e.get('notes') or '').startswith(g['name'] + ' · '):
                     e['after'], e['need'] = g['after'], g['need']
+    # gifts whose script waits on a story flag set somewhere else, which the map walk can't see (checked in the decomp
+    # scripts): later if that story point comes after this place's first trip
+    for g in loc['gifts']:
+        gl = GIFT_LATER.get((loc['id'], g['name']))
+        if not gl or g.get('later'): continue
+        st = order_pos[gl[0]] + 0.5
+        if st <= (order_pos[loc['id']] if gl[0] != loc['id'] else first_visit_until(loc['id'])): continue
+        g.update({'later': True, 'need': gl[1], 'after': gl[0], 'stage': st})
     for t in loc['trainers']:
         src = trainer_src.get((loc['id'], t['id']))
         if not src: continue

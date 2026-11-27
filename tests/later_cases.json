@@ -8,5 +8,7 @@
  ["route-10", "item", "Max Ether"],
  ["lavender-town", "gift", "Poké Flute"],
  ["pewter-city", "tutor", "Seismic Toss"],
- ["celadon-city", "tutor", "Softboiled"]
+ ["celadon-city", "tutor", "Softboiled"],
+ ["two-island", "gift", "Moon Stone"],
+ ["one-island", "gift", "Rainbow Pass"]
 ]
