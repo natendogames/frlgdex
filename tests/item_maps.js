@@ -84,6 +84,15 @@ const fail = m => fails.push(m);
     app.ctx.location.hash = `#/spot/${l.id}/${encodeURIComponent(a.id)}`; await renderSpot(l.id, a.id);
     if (!(app.view.innerHTML || '').includes('class="spotpulse"')) fail(`${l.id}: opening found ${a.name} shows no marker`);
     delete s.checks[`${l.id}:item:${a.id}`]; }
+  // a beaten trainer's card draws folded; one still to fight stays open
+  { const tk = app.get('trainerKey'), l = state.index.find(x => (state.locations[x.id].trainers || []).filter(t => !t.later).length > 1);
+    const [a, b] = state.locations[l.id].trainers.filter(t => !t.later), s = app.cur();
+    s.checks[tk(l.id, a)] = true;
+    app.ctx.location.hash = `#/loc/${l.id}`; app.route();
+    const h = app.view.innerHTML || '', card = k => (h.match(new RegExp(`<details class="card trainer[^>]*>(?=<summary><input[^>]*data-key="${k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}")`)) || [''])[0];
+    if (/ open>/.test(card(tk(l.id, a))) || !card(tk(l.id, a))) fail(`${l.id}: beaten trainer ${a.name} isn't folded`);
+    if (!/ open>/.test(card(tk(l.id, b)))) fail(`${l.id}: trainer ${b.name} to fight isn't open`);
+    delete s.checks[tk(l.id, a)]; }
   // every marker has a number or letter, and the key under the map lists it
   { const l = state.index.find(x => state.locations[x.id].mapCount && (state.locations[x.id].trainers || []).length && state.locations[x.id].items.length);
     app.ctx.location.hash = `#/spot/${l.id}/all`; await renderSpot(l.id, 'all');
