@@ -474,6 +474,7 @@ function renderLocation(id) {
   if (!encs.length) html += '<div class="empty">No Pokémon to catch here.</div>';
   else if (!now.length) html += '<div class="empty">Nothing to catch on your first visit.</div>';
   html += encList(now, false) + `</div>`;
+  if (typeof grindCard === 'function') html += grindCard(id, now, later);
   if (later.length) html += `<details class="later"><summary><h2>Pokémon: come back later (${new Set(later.map(e => e.dex)).size})</h2></summary><div class="card"><p class="note">You can't get these on your first visit. They open up later in the story.</p>${encList(later, true)}</div></details>`;
 
   const section = (title, list, kind, subFn) => {
