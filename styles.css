@@ -245,3 +245,4 @@ details.tiers { margin-top: 8px; }
 .spotkey summary{font-size:15px;font-weight:600;padding:8px 2px;cursor:pointer}
 .spotnum{display:inline-block;min-width:24px;padding:0 5px;margin-right:4px;border:1.5px solid var(--map-ink);border-radius:12px;text-align:center;font-size:13px;line-height:20px}
 .spotnum.trainer{border-color:var(--map-trainer);color:var(--map-trainer)}
+.spotlater{padding:10px 2px 4px;border-top:1px solid var(--line);margin-top:6px;font-size:15px}
