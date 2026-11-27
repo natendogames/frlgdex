@@ -47,6 +47,17 @@ const ok = (cond, msg) => { checks++; if (!cond) { failures++; if (failures < 40
           if (t && r.text.startsWith('Battle plan')) ok(app.catchableBy(app.battleStage(t, t.location)).some(c => c.dex === dex), `${st}: #${dex} can't be caught by ${t.name}`);
         }
       }
+      // one Battle plan catch per enemy Pokémon: the best one, not every option
+      const per = {};
+      for (const reasons of highValue().values()) for (const r of reasons) {
+        const m = /^Battle plan: beats (.*?)'s (.+?)(?: once it evolves into .*)? \(/.exec(r.text);
+        if (m) per[`${m[1]}|${m[2]}`] = (per[`${m[1]}|${m[2]}`] || 0) + 1;
+      }
+      for (const [key, n] of Object.entries(per)) {
+        const [bn, foe] = key.split('|'), t = ups.find(u => u.t.name === bn)?.t;
+        const copies = (get('hvParty')(t) || []).filter(p => p.name === foe).length;
+        ok(n <= copies, `${st} @${trainers[k].id}: ${n} Battle plan catches flagged for ${bn}'s ${foe}, expected at most ${copies}`);
+      }
     }
   }
   ok(flagged > 0, 'something is flagged somewhere');
