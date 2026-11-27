@@ -1,6 +1,6 @@
 'use strict';
 // "Show on map": every item has a drawn map with its tile marked (data/itemmaps, from scripts/mapdraw.py), every item
-// row and the "Before you leave" card link to it, and the map page renders for every item.
+// row links to it, and the map page renders for every item.
 // Run: node tests/item_maps.js
 const fs = require('fs'), path = require('path');
 const { loadApp } = require('./harness');
