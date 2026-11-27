@@ -203,7 +203,7 @@ function beforeYouLeave(loc) {
   if (!gifts.length) return '';
   const parts = [];
   if (gifts.length) parts.push(gifts.map(g => `<b>${esc(g.name)}</b> (${esc(g.from || 'gift')}${g.where && g.where !== 'Outside' ? `, ${esc(g.where)}` : ''})`).join(', '));
-  return `<div class="card note yleave"><b>Before you leave:</b> ${parts.join('; and ')}. They're easy to miss on a first visit.</div>`;
+  return `<div class="card note yleave" data-toc="Before you leave"><b>Before you leave:</b> ${parts.join('; and ')}. They're easy to miss on a first visit.</div>`;
 }
 
 // "Come back later" note for items: what you need first ("Needs Surf (HM03 ...)."), the side you have to come in from
@@ -427,16 +427,19 @@ function laterLast(html) {
 }
 // Lists on a place page follow its map: which map (in the order the map page shows them), then the map's own numbers
 // (things to collect) or letters (trainers), worked out at build time (scripts/mapdraw.py). Anything not on a map goes last.
-// A contents list at the top of a place page: one button per section heading (and "Come back later"), each scrolling
-// to it. Headings inside folded sections are left out.
+// A contents list at the top of a place page: one button per section heading (and "Come back later") and per card marked
+// data-toc, each scrolling to it. Headings inside folded sections are left out.
 function withToc(html) {
-  const re = /<details\b[^>]*>|<\/details>|<h2\b([^>]*)>([\s\S]*?)<\/h2>/g, out = [], items = [];
+  const re = /<details\b[^>]*>|<\/details>|<h2\b([^>]*)>([\s\S]*?)<\/h2>|<div\b[^>]*\bdata-toc="([^"]+)"[^>]*>/g, out = [], items = [];
   let depth = 0, from = 0, m;
   while ((m = re.exec(html))) {
     if (m[0] === '</details>') { depth--; continue; }
     if (m[0].startsWith('<details')) { depth++; continue; }
     if (depth) continue;
-    const id = `sec-${items.length}`, label = m[2].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s*\(.*$/, '').trim();
+    const id = `sec-${items.length}`;
+    // a card that stands as its own section (Best Pokémon to train on here, Before you leave) marks itself data-toc
+    if (m[3]) { items.push({ id, label: m[3] }); out.push(html.slice(from, m.index), m[0].replace('<div', `<div id="${id}"`)); from = re.lastIndex; continue; }
+    const label = m[2].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s*\(.*$/, '').trim();
     if (!label) continue;
     items.push({ id, label });
     out.push(html.slice(from, m.index), `<h2 id="${id}"${m[1]}>${m[2]}</h2>`);
@@ -466,7 +469,7 @@ function renderLocation(id) {
   let html = '';
   const steps = state.walk[id];
   if (loc.notes) html += `<div class="card note">${esc(loc.notes)}</div>`;
-  if (loc.mapCount && typeof spotLink === 'function') html += `<div class="card spotentry"><a class="tag catchlink spotlink" href="#/spot/${id}/all">Map: where every item and trainer is</a></div>`;
+  if (loc.mapCount && typeof spotLink === 'function') html += `<div class="card spotentry" data-toc="Map"><a class="tag catchlink spotlink" href="#/spot/${id}/all">Map: where every item and trainer is</a></div>`;
   if (steps?.length) {
     // the parts of steps about things you can't get yet (a gift behind a Cut tree) wait under "come back later"
     const split = steps.map(x => stepSplit(x, id));

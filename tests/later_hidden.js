@@ -43,10 +43,13 @@ function visible(h) {
       } }
     // the contents list at the top: one button per top-level section heading, each pointing at a heading on the page
     { const raw = app.view.innerHTML || '', jumps = [...raw.matchAll(/data-jump="([^"]+)"/g)].map(m => m[1]);
-      const heads = (raw.match(/<h2 id="sec-\d+"/g) || []).length;
+      const heads = (raw.match(/<(?:h2|div) id="sec-\d+"/g) || []).length;
+      // every section card (training, Before you leave, the map) is in the list too
+      for (const [cls, name] of [['grindcard', 'Best to train on here'], ['yleave', 'Before you leave'], ['spotentry', 'Map']])
+        if (raw.includes(`class="card ${cls}`) && heads >= 3 && !raw.includes(`>${name}</button>`)) fail(`${l.id}: "${name}" isn't in the contents list`);
       if (heads >= 3 && !raw.startsWith('<nav class="toc')) fail(`${l.id}: no contents list at the top`);
       if (jumps.length !== heads) fail(`${l.id}: contents list has ${jumps.length} entries for ${heads} sections`);
-      for (const j of jumps) if (!raw.includes(`<h2 id="${j}"`)) fail(`${l.id}: contents entry ${j} has no section`);
+      for (const j of jumps) if (!raw.includes(`id="${j}"`)) fail(`${l.id}: contents entry ${j} has no section`);
       if (raw.includes('class="laterhead"') && heads >= 3 && !/data-jump="[^"]+">Come back later</.test(raw)) fail(`${l.id}: contents list doesn't link to "Come back later"`);
       if (heads >= 3) tocs++; }
     const keys = new Set([...h.matchAll(/data-key="([^"]+)"/g)].map(m => m[1]));
