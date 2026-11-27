@@ -76,6 +76,35 @@ function grindFit(x, members, target) {
   }
   return (good.length ? `<div class="sub">${who}good for ${good.join(', ')}.</div>` : '') + (bad.length ? `<div class="sub bad">${good.length ? '' : who}Not for ${bad.join('; ')}.</div>` : '');
 }
+// Pick one team member to see the best matchup here for it: what it beats fastest for the most EXP, with no
+// super-effective move or type against it (the same rules as the Training spots page)
+function grindFor(members, now, target) {
+  if (!members.length) return '';
+  const sel = members.find(m => m.dex === state.trainFor);
+  let html = `<div class="note" style="margin-top:6px">Best here for:</div><div class="chips">${members.map(m =>
+    `<button class="chip ${sel === m ? 'on' : ''}" data-trf="${m.dex}">${esc(mon(m.dex).name)}</button>`).join('')}</div>`;
+  if (!sel) return html;
+  const opts = [];
+  for (const x of grindPicks(now, 99)) {
+    const v = grindVs(sel, x.e.dex, x.hi);
+    if (!v.ok) continue;
+    const risky = v.d.theirHits <= v.d.myHits + 1;
+    opts.push({ ...x, d: v.d, perTurn: x.exp / v.d.myHits, score: x.exp / v.d.myHits * (risky ? 0.7 : 1) });
+  }
+  opts.sort((a, b) => b.score - a.score || b.d.theirHits - a.d.theirHits || b.rate - a.rate);
+  const hurt = d => d.theirHits === Infinity ? "it can't hurt you" : d.theirHits >= d.myHits + 3 ? 'it barely scratches you' : d.theirHits <= d.myHits + 1 ? `watch out: it can hit back hard (${d.theirHits} hits beat you)` : `it needs ${d.theirHits} hits to beat you`;
+  html += `<div class="grind trainfor"><b>${esc(mon(sel.dex).name)}</b> <span class="note">Lv ${sel.level}${target && sel.from === 'plan' ? ` on the way to ${esc(target.name)}` : ''} · ${sel.me.moves.map(esc).join(', ')}</span>${opts.length
+    ? opts.slice(0, 2).map((o, k) => `<div class="sub">${k ? 'Or: ' : ''}<a href="#/mon/${o.e.dex}"><b>${esc(o.e.name)}</b></a> ${types(o.e.dex)} (${esc(METHOD_LABEL[o.e.method] || o.e.method)}, Lv ${o.lo === o.hi ? o.lo : `${o.lo}-${o.hi}`}${o.e.rate ? `, ${esc(o.e.rate)}` : ''}): ${esc(o.d.mine.name)}${o.d.mine.mult >= 2 ? ' (super effective)' : ''} ${hitsText(o.d.myHits)}, about ${Math.round(o.perTurn)} EXP a turn; ${hurt(o.d)}.</div>`).join('')
+    : `<div class="sub">Nothing here is a good matchup for it on this visit. <a href="#/tools/train">See the best places for it</a>.</div>`}</div>`;
+  return html;
+}
+// tapping a name picks it (tap again to clear)
+view.addEventListener('click', e => {
+  const b = e.target.closest && e.target.closest('[data-trf]');
+  if (!b) return;
+  state.trainFor = state.trainFor === +b.dataset.trf ? null : +b.dataset.trf;
+  const y = window.scrollY; route(true); window.scrollTo(0, y);
+});
 // The card on a location page: the best now, and a better spot here once more of the area opens up.
 function grindCard(locId, now, later = []) {
   const picks = grindPicks(now);
@@ -86,6 +115,7 @@ function grindCard(locId, now, later = []) {
     ? ` Seaglass's level cap (on by default) cuts EXP once your Pokémon pass about Lv ${tg.base}, so training past that is slow.` : ` Training to about Lv ${tg.ace} makes that battle much easier.`}</p>` : '';
   let html = `<div class="card grindcard"><b>Best Pokémon to train on here</b>${picks.length ? '' : '<p class="note">Nothing to battle here on your first visit.</p>'}`;
   const members = grindMembers(tg && tg.t);
+  html += grindFor(members, now, tg && tg.t);
   html += picks.map(x => grindRow(x, members, tg && tg.t)).join('') + cap;
   if (laterBest && (!picks.length || laterBest.exp > picks[0].exp * 1.25))
     html += `<details class="later"><summary>Better spot here: come back later</summary><p class="note">${esc(laterBest.e.name)} (${esc(METHOD_LABEL[laterBest.e.method] || laterBest.e.method)}, Lv ${laterBest.lo === laterBest.hi ? laterBest.lo : `${laterBest.lo}-${laterBest.hi}`}) gives about ${laterBest.exp} EXP a battle${typeof needText === 'function' && needText(laterBest.e) ? ` (${esc(needText(laterBest.e))})` : ''}.</p></details>`;
