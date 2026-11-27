@@ -955,7 +955,7 @@ function trainerCard(t, stage, opts = {}) {
   const key = trainerKey(opts.loc, t), done = !!s.checks[key];
   const rival = t.byStarter ? (mine ? `<p class="note">You picked ${esc(mine)}, so your rival has ${esc(RIVAL_OF[mine])}. <a href="#/loc/pallet-town">Change it in Oak's Lab</a>.</p>`
     : `<p class="note"><b>Pick your starter to see this team.</b> Your rival takes the one that beats yours. Which did you choose in Professor Oak's Lab?</p>${starterChips()}`) : '';
-  return `<details class="card trainer ${done ? 'checked' : ''}"${opts.open === false ? '' : ' open'}><summary><input type="checkbox" class="tcheck" data-key="${esc(key)}" ${done ? 'checked' : ''} aria-label="Defeated ${esc(head)}"><span class="tname">${opts.loc ? mapLbl(t, true) : ''}${esc(head)}</span> <span class="note">· ${esc(meta)}</span>${t.double ? ' <span class="tag">Double</span>' : ''}${t.rewards ? ' <span class="tag">Reward</span>' : ''}</summary>
+  return `<details class="card trainer ${done ? 'checked' : ''}"${opts.open === false || done ? '' : ' open'}><summary><input type="checkbox" class="tcheck" data-key="${esc(key)}" ${done ? 'checked' : ''} aria-label="Defeated ${esc(head)}"><span class="tname">${opts.loc ? mapLbl(t, true) : ''}${esc(head)}</span> <span class="note">· ${esc(meta)}</span>${t.double ? ' <span class="tag">Double</span>' : ''}${t.rewards ? ' <span class="tag">Reward</span>' : ''}</summary>
     ${info ? `<p class="note">${info}</p>` : ''}
     ${opts.loc && t.map && typeof spotLink === 'function' ? `<p>${spotLink(opts.loc, { id: 'trainer:' + t.id, map: true })}</p>` : ''}
     ${t.note && !t.byStarter ? `<p class="note">${esc(t.note)}</p>` : ''}${rival}${party ? opts.extra?.(party) || '' : ''}
@@ -1349,13 +1349,14 @@ function route(keepScroll) {
 }
 
 // Undo for the last checkbox: a toast at the bottom for a few seconds
+const UNDO_MS = 5000;
 let undoTimer = null;
 function showUndo(key, was, label) {
   let t = document.getElementById('toast');
   if (!t) { t = Object.assign(document.createElement('div'), { id: 'toast', className: 'toast' }); document.body.appendChild(t); }
   t.innerHTML = `<span>${esc(label)}</span><button class="btn small" id="undoBtn">Undo</button>`;
   t.hidden = false;
-  clearTimeout(undoTimer); undoTimer = setTimeout(() => { t.hidden = true; }, 5000);
+  clearTimeout(undoTimer); undoTimer = setTimeout(() => { t.hidden = true; }, UNDO_MS);
   document.getElementById('undoBtn').onclick = () => {
     const s = cur();
     if (key.startsWith('dex:')) { if (was) s.caught[key.slice(4)] = was; else delete s.caught[key.slice(4)]; }
@@ -1382,6 +1383,9 @@ view.addEventListener('change', e => {
   } else if (e.target.checked) s.checks[key] = true; else delete s.checks[key];
   save();
   e.target.closest('.row, .trainer')?.classList.toggle('checked', e.target.checked);
+  // a trainer you tick off folds away once the undo has gone (beaten trainers draw folded too)
+  const card = e.target.closest('details.trainer');
+  if (card && e.target.checked) setTimeout(() => { if (e.target.checked && card.isConnected) card.open = false; }, UNDO_MS);
   e.target.closest('.chip')?.classList.toggle('on', e.target.checked);
   updateLegCount(e.target);
   if (key.includes(':trainer:')) { const h = [...view.querySelectorAll('h2')].find(x => x.textContent.startsWith('Trainers (')); if (h) h.textContent = h.textContent.replace(/\(\d+\//, `(${view.querySelectorAll('.tcheck:checked').length}/`); }
