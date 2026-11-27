@@ -1,7 +1,7 @@
 // Offline support: precache the app shell and every data file on install, then serve
-// network-first with the cache as fallback. Bump CACHE when shipping new files or data. The Emerald app shares this
+// network-first (always asking the server, so a new version shows right away) with the cache as fallback. Bump CACHE when shipping new files or data. The Emerald app shares this
 // origin (natendogames.github.io), so only this app's own old caches are deleted.
-const CACHE = 'frlg-dex-v29'
+const CACHE = 'frlg-dex-v30'
 const SHELL = ['./', 'index.html', 'styles.css', 'app.js', 'features.js', 'tools.js', 'trackers.js', 'modes.js', 'saveimport.js', 'map.js', 'catchplan.js', 'builds.js', 'highvalue.js', 'grind.js', 'manifest.webmanifest', 'icons/icon.svg',
   'data/locations.json', 'data/pokedex.json', 'data/trainers.json', 'data/types.json', 'data/walkthrough.json', 'data/moves.json',
   'data/team-plan.json', 'data/tms.json', 'data/extras.json', 'data/save-map.json', 'data/region-map.json', 'data/items.json', 'data/builds.json'];
@@ -20,7 +20,7 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET' || !e.request.url.startsWith(self.location.origin)) return;
   e.respondWith(
-    fetch(e.request).then(res => {
+    fetch(e.request, { cache: 'no-cache' }).then(res => {
       if (res.ok) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)); }
       return res;
     }).catch(() => caches.match(e.request, { ignoreSearch: true }))
